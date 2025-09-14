@@ -1,0 +1,23 @@
+{
+  "name": "shs-pyqp-project",
+  "version": "1.0.0",
+  "description": "SHS Past Year Question Papers Project",
+  "main": "index.js",
+  "scripts": {
+    "vercel-build": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "dropbox": "^10.34.0",
+    "express": "^4.21.2",
+    "fs": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}

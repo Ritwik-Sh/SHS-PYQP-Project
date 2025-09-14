@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bg: #040b15;
+    --bg-secondary: #0c1420;
+    --primary: #93bbea;
+    --secondary: #921e1c;
+    --accent: #d6b329;
+    --text: #e5f0fa;
+}
+footer > h1 {
+    font-family: "Parisienne", cursive;
+    font-weight: bolder;
+}
+@media (min-width: 720px){
+    body {
+        background-color: var(--bg);
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        color: var(--text);
+    }
+    body > h1 {
+        margin-bottom: 5px;
+        color: var(--secondary);
+        text-shadow: var(--accent);
+    }
+    main {
+        display: flex;
+        color: var(--bg);
+        height: 84vb;
+    }
+    #left {
+        width: 50vi;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        overflow: scroll;
+    }
+    .fillout-embed-popup-button-45122879619980 {
+        width: 50vi !important;
+        background: var(--secondary) !important;
+        border-radius: 16px !important
+    }
+    #back {
+        display: none;
+        background: var(--secondary);
+        border: 2px solid var(--accent);
+        color: var(--text);
+        width: 38vi;
+        height: 8vi;
+        margin: 2vi;
+        transition: ease-in-out 100ms ;
+        border-radius: 16px;
+        padding: 0.5vi;
+        cursor: pointer;
+    } #back:hover {
+        scale: 1.1;
+    }
+    .classes, .subjects, .papers {
+        background: var(--primary);
+        width: 10vi;
+        height: 16vi;
+        margin: 2vi;
+        transition: ease-in-out 100ms ;
+        border-radius: 16px;
+        padding: 0.5vi;
+        cursor: pointer;
+        padding: 1vi;
+    } .classes:hover, .subjects:hover, .papers:hover {
+        scale: 1.2;
+    }
+    .classes > h2 {
+        font-size: 4vi
+    }
+    p {
+        font-family: "Urbanist", sans-serif;
+    }
+
+    .subjects > i {
+        scale: 3;
+        margin-top: 30%;
+    }
+    .subjects {display: none}
+
+    footer {
+        background: var(--secondary);
+        width: 80vi;
+        margin-left: 9vi;
+        border-radius: 16px;
+        padding-bottom: 1vi;
+    }
+    #logo {
+        width: 50vi;
+        vertical-align: middle;
+    }
+    #logo-img {
+        height: 24vi;
+        width: 24vi;
+        border: 8vi solid var(--accent);
+        border-radius: 100vb;
+        margin-top: 10%;
+        margin-bottom: 5%;
+    }
+    #noContribution {
+        color: var(--secondary);
+    }
+    .mobileOnly {
+        display: none;
+    }
+}
+@media (max-width: 719px) {
+    #logo {display: none}
+    body {
+        background: var(--bg);
+        text-align: center;
+    }
+    body > h1 {
+        color: var(--secondary)
+    }
+    #left {
+        height: 80vb;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        overflow: scroll;
+    }
+    #back {
+        display: none;
+        background: var(--secondary);
+        border: 2px solid var(--accent);
+        color: var(--text);
+        width: 72vi;
+        height: 8vi;
+        margin: 2vi;
+        transition: ease-in-out 100ms ;
+        border-radius: 16px;
+        padding: 0.5vi;
+        cursor: pointer;
+    } #back:hover {
+        scale: 1.2;
+    }
+    .classes, .subjects, .papers {
+        background: var(--primary);
+        width: 32vi;
+        height: 32vi;
+        margin: 2vi;
+        transition: ease-in-out 100ms ;
+        border-radius: 16px;
+        padding: 0.5vi;
+        padding-top: 6vi;
+        padding-bottom: 1vi;
+        cursor: pointer;
+    } .classes:hover, .subjects:hover, .papers:hover {
+        scale: 1.2;
+    }
+    .classes > h2 {
+        font-size: 8vi
+    }
+    .subjects > i {
+        scale: 3;
+        margin-top: 30%;
+    }
+    .subjects {display: none}
+    footer {
+        background: var(--secondary);
+        width: 95vi;
+        margin-left: 0.8vi;
+        border-radius: 16px;
+        text-align: center;
+        color: var(--text)
+    }
+    #noContribution {
+        color: var(--secondary);
+        text-shadow: var(--primary);
+    }
+}
+
+#loading {
+  width: 12vi;
+  height: 12vi;
+  border-radius: 50%;
+  display: none;
+  position: relative;
+  background: linear-gradient(0deg, rgba(255, 61, 0, 0.2) 33%, var(--accent) 100%);
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+#loading::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 11vi;
+  height: 11vi;
+  border-radius: 50%;
+  background: #263238;
+}
+@keyframes rotation {
+  0% { transform: rotate(0deg) }
+  100% { transform: rotate(360deg)}
+} 

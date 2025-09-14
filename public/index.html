@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHS PYQP Project</title>
+    <script src="https://kit.fontawesome.com/d63d2ac69c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/png" href="logo.png"/>
+    <meta name="google-site-verification" content="z94wJ_4xOiRqrtJEPWv8BbgFX9IoefDktld_xIwK8Nw" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>SHS-PYQP-Project</h1>
+    <main>
+        <div id="left">
+            <button id="back" onclick="window.location.reload()"><i style="scale: 3;" class="fa-solid fa-arrow-left"></i></button>
+            <br><div id="loading" class="loader"></div>
+            <div class="classes" name="6" onclick="loadSubjects(this.getAttribute(`name`))">
+                <h2>6</h2>
+                <p>Fun Begins</p>
+            </div>
+            <div class="classes" name="7" onclick="loadSubjects(this.getAttribute(`name`))">
+                <h2>7</h2>
+                <p>Fun Remains</p>
+            </div>
+            <div class="classes" name="8" onclick="loadSubjects(this.getAttribute(`name`))">
+                <h2>8</h2>
+                <p>Fun about to Finish</p>
+            </div>
+            <div class="classes" name="9" onclick="loadSubjects(this.getAttribute(`name`))">
+                <h2>9</h2>
+                <p>Fun Finishes</p>
+            </div>
+            <div class="classes" name="10" onclick="loadSubjects(this.getAttribute(`name`))">
+                <h2>10</h2>
+                <p>Dead...</p>
+            </div>
+            <div class="classes" name="11" onclick="loadSubjects(this.getAttribute(`name`))">
+                <h2>11</h2>
+                <p>Fun?</p>
+            </div>
+            
+            <div class="subjects c6 c7 c8 c9 c10 c11" name="Maths" onclick="fetchFiles(this.getAttribute(`name`))">
+                <i class="fa-solid fa-calculator"></i>
+                <h3>Maths</h3>
+            </div>
+            <div class="subjects c6 c7 c8 c9 c10 c11" name="Computer Applications" onclick="fetchFiles(this.getAttribute(`name`))">
+                <i class="fa-solid fa-computer"></i>
+                <h3>Computer Applications</h3>
+            </div>
+            <div class="subjects c9 c10 c11" name="Music" onclick="fetchFiles(this.getAttribute(`name`))">
+                <i class="fa-solid fa-music"></i>
+                <h3>Music</h3>
+            </div>
+            <div class="subjects c6 c7 c8" name="Robotics" onclick="fetchFiles(this.getAttribute(`name`))">
+                <i class="fa-solid fa-robot"></i>
+                <h3>Robotics</h3>
+            </div>
+            <div class="subjects c7 c8 c9 c10 c11" name="Physics" onclick="fetchFiles(this.getAttribute(`name`))">
+                <i class="fa-solid fa-magnet"></i>
+                <h3>Physics</h3>
+            </div>
+            <div class="subjects c7 c8 c9 c10 c11" name="Chemistry" onclick="fetchFiles(this.getAttribute(`name`))">
+                <i class="fa-solid fa-flask"></i>
+                <h3>Chemistry</h3>
+            </div>
+            <div class="subjects c7 c8 c9 c10 c11" name="Biology" onclick="fetchFiles(this.getAttribute(`name`))">
+                <i class="fa-solid fa-microscope"></i>
+                <h3>Biology</h3>
+            </div>
+            <div class="subjects c6 c7 c8 c9 c10 c11" name="English Literature" onclick="fetchFiles(this.getAttribute(`name`))">
+                <i class="fa-solid fa-a"></i>
+                <h3>English Literature</h3>
+            </div>
+            <div class="subjects c6 c7 c8 c9 c10 c11" name="English Language" onclick="fetchFiles(this.getAttribute(`name`))">
+                <i class="fa-solid fa-a"></i>
+                <h3>English Language</h3>
+            </div>
+            <div class="subjects c6 c7 c8 c9 c10 c11" name="Hindi" onclick="fetchFiles(this.getAttribute(`name`))">
+                <i class="fa-solid fa-gopuram"></i>
+                <h3>Hindi</h3>
+            </div>
+            <div class="subjects c6 c7 c8 c9 c10" name="History & Civics" onclick="fetchFiles(this.getAttribute(`name`))">
+                <i class="fa-solid fa-timeline"></i>
+                <h3>History & Civics</h3>
+            </div>
+            <div class="subjects c6 c7 c8 c9 c10" name="Geography" onclick="fetchFiles(this.getAttribute(`name`))">
+                <i class="fa-solid fa-globe"></i>
+                <h3>Geography</h3>
+            </div>
+            <div class="subjects c9 c10 c11" name="Environmental Science" onclick="fetchFiles(this.getAttribute(`name`))">
+                <i class="fa-solid fa-tree"></i>
+                <h3>EVS</h3>
+            </div>
+            <div class="subjects c9 c10" name="Art" onclick="fetchFiles(this.getAttribute(`name`))">
+                <i class="fa-solid fa-palette"></i>
+                <h3>Art</h3>
+            </div>
+            <div class="subjects c9 c10" name="Mass Communications" onclick="fetchFiles(this.getAttribute(`name`))">
+                <i class="fa-solid fa-comment"></i>
+                <h3>Mass Communications</h3>
+            </div>
+            <div class="subjects c9 c10" name="Physical Education" onclick="fetchFiles(this.getAttribute(`name`))">
+                <i class="fa-solid fa-baseball-bat-ball"></i>
+                <h3>Physical Education</h3>
+            </div>
+            <div class="subjects c6" name="Science" onclick="fetchFiles(this.getAttribute(`name`))">
+                <i class="fa-solid fa-flask-vial"></i>
+                <h3>Science</h3>
+            </div>
+            <div class="subjects c6 c7 c8" name="Sanskrit" onclick="fetchFiles(this.getAttribute(`name`))">
+                <i class="fa-solid fa-om"></i>
+                <h3>Sanskrit</h3>
+            </div>
+            <div class="subjects c6 c7 c8" name="French" onclick="fetchFiles(this.getAttribute(`name`))">
+                <i class="fa-solid fa-globe"></i>
+                <h3>French</h3>
+            </div>
+            
+        </div>
+        <div id="logo">
+            <img src="logo.png" id="logo-img">
+            <div data-fillout-id="fomnXDhaxYus" data-fillout-embed-type="popup" data-fillout-button-text="Contribute a Paper" data-fillout-dynamic-resize data-fillout-button-color="#921E1C" data-fillout-inherit-parameters data-fillout-popup-size="medium"></div><script src="https://server.fillout.com/embed/v1/"></script>
+        </div>
+    </main>
+    <div class="mobileOnly" data-fillout-id="fomnXDhaxYus" data-fillout-embed-type="popup" data-fillout-button-text="Contribute a Paper" data-fillout-dynamic-resize data-fillout-button-color="#921E1C" data-fillout-inherit-parameters data-fillout-popup-size="medium"></div><script src="https://server.fillout.com/embed/v1/"></script>
+    <footer>
+        <h1>Credits</h1>
+        <p>This Website was made By Ritwik Sharma</p>
+        <p>Idea by Mayukh Awasthi</p>
+        <br>
+        <h2>Note</h2>
+        <p>This project is not an Initiative by Sheiling House School</p>
+        <p>We do not own any rights to the Sheiling House Logo</p>
+    </footer>
+    <script src="/script.js"></script>
+    <script src="/files.js"></script>
+</body>  
+</html>
