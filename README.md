@@ -20,7 +20,7 @@ A web application for accessing Sheiling House School's Past Year Question Paper
 - **File Storage**: Dropbox API integration
 - **Frontend**: Vanilla JavaScript, HTML5, CSS3
 - **Styling**: Custom CSS with FontAwesome icons
-- **Deployment**: Configured for Vercel/Render
+- **Deployment**: Configured for Render
 
 ## 📁 Project Structure
 
