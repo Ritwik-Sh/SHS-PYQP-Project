@@ -25,7 +25,7 @@ function loadSubjects(grade) {
 const left = document.querySelector("#left");
 
 function redirect(link){
-      window.location.href = link;
+    window.open(link, '_blank').focus();
 }
 let subFiles = 0;
 async function fetchFiles(userSubject) {
@@ -50,6 +50,7 @@ async function fetchFiles(userSubject) {
              
             if (subject === userSubject) {
                 loader.style.display = "none";
+                // 'link' is now a server route (/watermarked?id=...) that does not expose the original Dropbox URL
                 left.innerHTML += `
                     <div class="papers" onclick="redirect('${link}')">
                         <h3>${testType}</h3>
