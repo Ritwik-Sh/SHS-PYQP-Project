@@ -224,13 +224,10 @@ app.get('/view', async (req, res) => {
     }
 });
 
-// No periodic in-memory cleanup needed — tokens are self-contained encrypted values.
-
-
 
 // Start the Express server
-app.listen(PORT, () => {
-    console.log(`🚀 Server running at http://localhost:${PORT}`);
-});
+// app.listen(PORT, () => {
+//     console.log(`🚀 Server running at http://localhost:${PORT}`);
+// });
 
 module.exports = app;
