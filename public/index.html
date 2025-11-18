@@ -1,51 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHS PYQP Project</title>
     <script src="https://kit.fontawesome.com/d63d2ac69c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/style.css">
-    <link rel="icon" type="image/png" href="logo.png"/>
+    <link rel="icon" type="image/png" href="logo.png" />
     <meta name="google-site-verification" content="z94wJ_4xOiRqrtJEPWv8BbgFX9IoefDktld_xIwK8Nw" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
 
     <!-- Primary Meta Tags -->
-<meta name="title" content="SHS PYQP Project - Sheiling House School Past Year Question Papers">
-<meta name="description" content="Access Sheiling House School past year question papers for classes 6-11. Download previous year exam papers for Mathematics, Science, English, Hindi, and all subjects. Created by students for students.">
+    <meta name="title" content="SHS PYQP Project - Sheiling House School Past Year Question Papers">
+    <meta name="description"
+        content="Access Sheiling House School past year question papers for classes 6-11. Download previous year exam papers for Mathematics, Science, English, Hindi, and all subjects. Created by students for students.">
 
-<!-- Keywords Meta Tag -->
-<meta name="keywords" content="SHS PYQP, Sheiling House School, past year question papers, previous year papers, SHS papers, class 6 papers, class 7 papers, class 8 papers, class 9 papers, class 10 papers, class 11 papers, ICSE papers, ISC papers, school exam papers, mathematics papers, science papers, physics papers, chemistry papers, biology papers, english papers, hindi papers, computer applications papers, student project, Ritwik Sharma, Mayukh Awasthi, free question papers, exam preparation, study materials, school resources, educational website">
+    <!-- Keywords Meta Tag -->
+    <meta name="keywords"
+        content="SHS PYQP, Sheiling House School, past year question papers, previous year papers, SHS papers, class 6 papers, class 7 papers, class 8 papers, class 9 papers, class 10 papers, class 11 papers, ICSE papers, ISC papers, school exam papers, mathematics papers, science papers, physics papers, chemistry papers, biology papers, english papers, hindi papers, computer applications papers, student project, Ritwik Sharma, Mayukh Awasthi, free question papers, exam preparation, study materials, school resources, educational website">
 
 
 
-<!-- Additional SEO Meta Tags -->
-<meta name="robots" content="index, follow">
-<meta name="language" content="English">
-<meta name="author" content="Ritwik Sharma, Mayukh Awasthi">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="author" content="Ritwik Sharma, Mayukh Awasthi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<!-- Educational Content Tags -->
-<meta name="educational-content" content="true">
-<meta name="target-audience" content="students, teachers, parents">
-<meta name="subject-area" content="education, exam preparation, study materials">
+    <!-- Educational Content Tags -->
+    <meta name="educational-content" content="true">
+    <meta name="target-audience" content="students, teachers, parents">
+    <meta name="subject-area" content="education, exam preparation, study materials">
 
-<!-- Location-based Tags -->
-<meta name="geo.region" content="IN">
-<meta name="geo.placename" content="India">
+    <!-- Location-based Tags -->
+    <meta name="geo.region" content="IN">
+    <meta name="geo.placename" content="India">
 
-<!-- Theme Color -->
-<meta name="theme-color" content="#921e1c">
-<meta name="msapplication-TileColor" content="#921e1c">
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#921e1c">
+    <meta name="msapplication-TileColor" content="#921e1c">
 
-<!-- Canonical Link -->
-<link rel="canonical" href="https://shs-pyqp-project.onrender.com/">
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://shs-pyqp-project.onrender.com/">
 
-<!-- Structured Data (JSON-LD) -->
-<script type="application/ld+json">
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
@@ -80,12 +83,15 @@
 }
 </script>
 </head>
+
 <body>
     <h1>SHS-PYQP-Project</h1>
     <main>
         <div id="left">
-            <button id="back" onclick="window.location.reload()"><i style="scale: 3;" class="fa-solid fa-arrow-left"></i></button>
-            <br><div id="loading" class="loader"></div>
+            <button id="back" onclick="window.location.reload()"><i style="scale: 3;"
+                    class="fa-solid fa-arrow-left"></i></button>
+            <br>
+            <div id="loading" class="loader"></div>
             <div class="classes" name="6" onclick="loadSubjects(this.getAttribute(`name`))">
                 <h2>6</h2>
                 <p>Fun Begins</p>
@@ -110,12 +116,13 @@
                 <h2>11</h2>
                 <p>Fun?</p>
             </div>
-            
+
             <div class="subjects c6 c7 c8 c9 c10 c11" name="Maths" onclick="fetchFiles(this.getAttribute(`name`))">
                 <i class="fa-solid fa-calculator"></i>
                 <h3>Maths</h3>
             </div>
-            <div class="subjects c6 c7 c8 c9 c10 c11" name="Computer Applications" onclick="fetchFiles(this.getAttribute(`name`))">
+            <div class="subjects c6 c7 c8 c9 c10 c11" name="Computer Applications"
+                onclick="fetchFiles(this.getAttribute(`name`))">
                 <i class="fa-solid fa-computer"></i>
                 <h3>Computer Applications</h3>
             </div>
@@ -139,11 +146,13 @@
                 <i class="fa-solid fa-microscope"></i>
                 <h3>Biology</h3>
             </div>
-            <div class="subjects c6 c7 c8 c9 c10 c11" name="English Literature" onclick="fetchFiles(this.getAttribute(`name`))">
+            <div class="subjects c6 c7 c8 c9 c10 c11" name="English Literature"
+                onclick="fetchFiles(this.getAttribute(`name`))">
                 <i class="fa-solid fa-a"></i>
                 <h3>English Literature</h3>
             </div>
-            <div class="subjects c6 c7 c8 c9 c10 c11" name="English Language" onclick="fetchFiles(this.getAttribute(`name`))">
+            <div class="subjects c6 c7 c8 c9 c10 c11" name="English Language"
+                onclick="fetchFiles(this.getAttribute(`name`))">
                 <i class="fa-solid fa-a"></i>
                 <h3>English Language</h3>
             </div>
@@ -151,7 +160,8 @@
                 <i class="fa-solid fa-gopuram"></i>
                 <h3>Hindi</h3>
             </div>
-            <div class="subjects c6 c7 c8 c9 c10" name="History & Civics" onclick="fetchFiles(this.getAttribute(`name`))">
+            <div class="subjects c6 c7 c8 c9 c10" name="History & Civics"
+                onclick="fetchFiles(this.getAttribute(`name`))">
                 <i class="fa-solid fa-timeline"></i>
                 <h3>History & Civics</h3>
             </div>
@@ -159,7 +169,8 @@
                 <i class="fa-solid fa-globe"></i>
                 <h3>Geography</h3>
             </div>
-            <div class="subjects c9 c10 c11" name="Environmental Science" onclick="fetchFiles(this.getAttribute(`name`))">
+            <div class="subjects c9 c10 c11" name="Environmental Science"
+                onclick="fetchFiles(this.getAttribute(`name`))">
                 <i class="fa-solid fa-tree"></i>
                 <h3>EVS</h3>
             </div>
@@ -187,27 +198,36 @@
                 <i class="fa-solid fa-globe"></i>
                 <h3>French</h3>
             </div>
-            
+
         </div>
         <div id="logo">
             <img src="logo.png" id="logo-img">
-            <div data-fillout-id="fomnXDhaxYus" data-fillout-embed-type="popup" data-fillout-button-text="Contribute a Paper" data-fillout-dynamic-resize data-fillout-button-color="#921E1C" data-fillout-inherit-parameters data-fillout-popup-size="medium"></div><script src="https://server.fillout.com/embed/v1/"></script>
+            <div data-fillout-id="fomnXDhaxYus" data-fillout-embed-type="popup"
+                data-fillout-button-text="Contribute a Paper" data-fillout-dynamic-resize
+                data-fillout-button-color="#921E1C" data-fillout-inherit-parameters data-fillout-popup-size="medium">
+            </div>
+            <script src="https://server.fillout.com/embed/v1/"></script>
         </div>
     </main>
-    <div class="mobileOnly" data-fillout-id="fomnXDhaxYus" data-fillout-embed-type="popup" data-fillout-button-text="Contribute a Paper" data-fillout-dynamic-resize data-fillout-button-color="#921E1C" data-fillout-inherit-parameters data-fillout-popup-size="medium"></div><script src="https://server.fillout.com/embed/v1/"></script>
+    <div class="mobileOnly" data-fillout-id="fomnXDhaxYus" data-fillout-embed-type="popup"
+        data-fillout-button-text="Contribute a Paper" data-fillout-dynamic-resize data-fillout-button-color="#921E1C"
+        data-fillout-inherit-parameters data-fillout-popup-size="medium"></div>
+    <script src="https://server.fillout.com/embed/v1/"></script>
     <footer>
-        <a style="color: white; font-size: 3rem; text-decoration: none;" href="https://github.com/Ritwik-Sh/SHS-PYQP-Project" class="fa-brands fa-github"></a>
+        <a style="color: white; font-size: 3rem; text-decoration: none;"
+            href="https://github.com/Ritwik-Sh/SHS-PYQP-Project" class="fa-brands fa-github"></a>
         <h1>Credits</h1>
         <p>This Website was made By Ritwik Sharma</p>
         <p>Idea by Mayukh Awasthi</p>
         <br>
-<p>a special thanks to Shhaurya Singh and Himansh Gupta for providing some of the papers</p>
-<br>
+        <p>a special thanks to Shhaurya Singh and Himansh Gupta for providing some of the papers</p>
+        <br>
         <h2>Note</h2>
         <p>This project is not an Initiative by Sheiling House School</p>
         <p>We do not own any rights to the Sheiling House Logo</p>
     </footer>
     <script src="/script.js"></script>
     <script src="/files.js"></script>
-</body>  
+</body>
+
 </html>
