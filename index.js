@@ -148,7 +148,7 @@ app.get('/view', async (req, res) => {
     // Accept either a raw source URL (legacy) or an encrypted token returned by /files
     const token = req.query.token;
     const source = req.query.source;
-    const text = req.query.text || 'shs-pyqp-project.onrender.com';
+    const text = req.query.text || 'shs-pyqp-project.vercel.app';
 
     let resolvedSource = source;
     if (!resolvedSource && token) {
@@ -156,7 +156,7 @@ app.get('/view', async (req, res) => {
     }
 
     if (!resolvedSource) {
-        return res.status(400).send('<center><h1><br><br>Session Expiered!</h1><br>.<h3>Please try again on <a href="https://shs-pyqp-project.onrender.com">https://shs-pyqp-project.onrender.com</a>.</h3></center>');
+        return res.status(400).send('<center><h1><br><br>Session Expired!</h1><br>.<h3>Please try again on <a href="https://shs-pyqp-project.vercel.app">https://shs-pyqp-project.vercel.app</a>.</h3></center>');
     }
 
     try {
