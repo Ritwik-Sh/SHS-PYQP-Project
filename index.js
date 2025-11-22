@@ -4,7 +4,6 @@ const { Dropbox } = require("dropbox");
 // PDF editing
 const { PDFDocument, StandardFonts, rgb, degrees } = require('pdf-lib');
 const crypto = require('crypto');
-
 console.clear();
 
 // Derive a 32-byte key from WATERMARK_SECRET environment variable (recommended) or create one in-memory.

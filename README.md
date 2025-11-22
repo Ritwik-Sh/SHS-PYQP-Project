@@ -16,6 +16,14 @@ A web application for accessing Sheiling House School's Past Year Question Paper
 - **Direct Downloads**: Seamless PDF downloads through Dropbox integration
 - **Contribution System**: Embedded form for users to contribute new papers
 
+## 👤 Credits
+- The website was made by Ritwik Sharma
+- The Idea of the website was given by Mayukh Awasthi
+
+## 🛑 Disclaimer
+- This website is not an initiative of Sheiling House School.
+- We do not own any rights to the Sheiling House School logo.
+
 ## 🚀 Tech Stack
 
 - **Backend**: Node.js with Express.js
