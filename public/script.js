@@ -1,13 +1,13 @@
 subjects = document.querySelectorAll(".subjects");
 classes = document.querySelectorAll(".classes");
 
-loadedClass = 0;
+let loadedClass = 0;
 
 let userClass = 0;
 
 function loadSubjects(grade) {
     userClass = grade;
-    cSub = "c" + grade;
+    let cSub = "c" + grade;
     document.querySelector(`#back`).style.display = "inline-block";
     classes.forEach(classss => {
         classss.style.display = "none"
@@ -60,7 +60,7 @@ async function fetchFiles(userSubject) {
                 subFiles++;
             }
         });
-        if (subFiles == 0) {
+        if (subFiles === 0) {
             loader.style.display = "none";
             left.innerHTML += `<h1 id="noContribution">No Contributions Yet!</h1>`;
         }
