@@ -220,16 +220,11 @@
 		"explanation": "charAt(1) returns the character at index 1, which is 'e'"
 	},
 	{
-		"question": "Which keyword is used to inherit a class?",
-		"options": [
-			"implements",
-			"extends",
-			"inherit",
-			"super"
-		],
-		"answer": 1,
-		"explanation": "extends keyword is used for class inheritance in Java"
-	},
+		"question": "What will be printed?\n```java\nint a = 5, b = 2;\nSystem.out.println(a / b);\nSystem.out.println((double) a / b);\n```",
+    		"options": ["2.5 2.5", "2 2.5", "2 2.0", "2.0 2.5"],
+     		"answer": 1,
+		"explanation": "First: integer division 5/2=2. Second: a is cast to double, so 5.0/2=2.5"
+    	},
 	{
 		"question": "What will be the output?\n```java\nint x = 10;\nint y = x > 5 ? 20 : 30;\nSystem.out.println(y);\n```",
 		"options": [
@@ -1089,17 +1084,6 @@
 		"explanation": "do-while executes once before checking condition. Prints 10, then x=9, condition false, exits"
 	},
 	{
-		"question": "Which keyword is used to create a subclass?",
-		"options": [
-			"extends",
-			"implements",
-			"inherits",
-			"derives"
-		],
-		"answer": 0,
-		"explanation": "extends keyword is used to create a subclass (inheritance)"
-	},
-	{
 		"question": "What is the output?\n```java\nString s = \"Programming\";\nSystem.out.println(s.indexOf('a'));```\n",
 		"options": [
 			"5",
@@ -1551,5 +1535,166 @@
 			"abstract"
 		],
 		"answer": 2
-	}
+	},
+	{
+		"question": "What will be the output of the following?\n```java\nfinal int a = 5;\na+= ++a;\nSystem.out.println(a++)",
+		"options": [
+			"10",
+			"11",
+			"12",
+			"Error"
+		],
+		"answer": 3,
+		"explanation": "'a' is a final/constant variable."
+	},
+	{
+    "question": "What will be the output?\n```java\npublic static void main(String args[]) {\n  int x = 10;\n  change(x);\n  System.out.println(x);\n}\nstatic void change(int x) {\n  x = 20;\n}\n```",
+    "options": ["10", "20", "Compilation error", "Runtime error"],
+    "answer": 0,
+    "explanation": "Java is pass-by-value for primitives. The method receives a copy of x, so changes don't affect the original variable"
+  },
+  {
+    "question": "What is the output?\n```java\npublic static void main(String args[]) {\n  int[] arr = {1, 2, 3};\n  change(arr);\n  System.out.println(arr[0]);\n}\nstatic void change(int[] a) {\n  a[0] = 99;\n}\n```",
+    "options": ["1", "99", "Compilation error", "Runtime error"],
+    "answer": 1,
+    "explanation": "Arrays are objects. The reference is passed by value, but both variables refer to the same array object in memory, so changes are reflected"
+  },
+  {
+    "question": "What will be the output?\n```java\nint[] a = {10, 20, 30};\nint[] b = a;\nb[0] = 50;\nSystem.out.println(a[0]);\n```",
+    "options": ["10", "50", "Compilation error", "ArrayIndexOutOfBoundsException"],
+    "answer": 1,
+    "explanation": "b = a makes both variables reference the same array object. Modifying through b affects a as well"
+  },
+  {
+    "question": "Which statement is correct about method overloading?\n```java\nvoid test(int a) { }\nvoid test(int b) { }\n```",
+    "options": ["Valid overloading", "Invalid - same parameter type", "Valid - different parameter names", "Depends on return type"],
+    "answer": 1,
+    "explanation": "Overloading requires different parameter types, count, or order - not just different parameter names"
+  },
+  {
+    "question": "What is the result?\n```java\nString s1 = \"Java\";\nString s2 = s1;\ns2 = \"Python\";\nSystem.out.println(s1);\n```",
+    "options": ["Java", "Python", "JavaPython", "Compilation error"],
+    "answer": 0,
+    "explanation": "s2 = 'Python' creates a new String reference. s1 still refers to 'Java' because String assignment doesn't modify the original object"
+  },
+  {
+    "question": "What will be printed?\n```java\nint i = 0;\nwhile(i < 3) {\n  i++;\n  System.out.print(i + \" \");\n}\n```",
+    "options": ["0 1 2 ", "1 2 3 ", "0 1 2 3 ", "1 2 "],
+    "answer": 1,
+    "explanation": "i is incremented before printing: prints 1, then 2, then 3. Loop exits when i becomes 3 and i < 3 is false"
+  },
+  {
+    "question": "Which of the following is true about this code?\n```java\nclass Test {\n  static int count = 0;\n  Test() { count++; }\n}\n```",
+    "options": ["Each object has its own count", "All objects share the same count", "Compilation error", "count cannot be accessed in constructor"],
+    "answer": 1,
+    "explanation": "Static variables belong to the class, not individual objects. All instances share the same static variable"
+  },
+  {
+    "question": "What is the output?\n```java\nint a = 5;\nif(a > 3)\n  if(a < 10)\n    System.out.println(\"A\");\nelse\n  System.out.println(\"B\");\n```",
+    "options": ["A", "B", "AB", "Compilation error"],
+    "answer": 0,
+    "explanation": "The else belongs to the nearest if (a < 10). Since both conditions are true, only 'A' prints. This is the dangling else problem"
+  },
+  {
+    "question": "What will be the output?\n```java\nfor(int i = 0; i < 5; i++) {\n  System.out.print(i + \" \");\n  i++;\n}\n```",
+    "options": ["0 1 2 3 4 ", "0 2 4 ", "0 2 4 6 ", "1 3 5 "],
+    "answer": 1,
+    "explanation": "i is incremented twice each iteration: once in loop body, once in for statement. Prints 0, 2, 4 then exits"
+  },
+  {
+    "question": "What is the result of this code?\n```java\nint x = 5;\nint y = 2;\nSystem.out.println(x / y);\nSystem.out.println(x % y);\n```",
+    "options": ["2.5 0", "2 1", "3 1", "2.5 1"],
+    "answer": 1,
+    "explanation": "Integer division: 5/2 = 2 (decimal part truncated). Modulus: 5%2 = 1 (remainder)"
+  },
+  {
+    "question": "What will be printed?\n```java\nString s = \"hello\";\ns.toUpperCase();\nSystem.out.println(s.charAt(0));\n```",
+    "options": ["H", "h", "HELLO", "Compilation error"],
+    "answer": 1,
+    "explanation": "toUpperCase() returns a new String but the result isn't assigned to s. s remains 'hello', so charAt(0) is 'h'"
+  },
+  {
+    "question": "What is the output?\n```java\nint[] arr = new int[3];\narr[0] = 10;\nSystem.out.println(arr[1]);\n```",
+    "options": ["0", "null", "Garbage value", "ArrayIndexOutOfBoundsException"],
+    "answer": 0,
+    "explanation": "Uninitialized int array elements are automatically set to 0, not garbage values or null"
+  },
+  {
+    "question": "Which is true about private members of a class?",
+    "options": ["Accessible in subclass", "Accessible in same package", "Accessible only within the same class", "Accessible everywhere"],
+    "answer": 2,
+    "explanation": "Private members are accessible only within the same class, not even in subclasses or same package"
+  },
+  {
+    "question": "What will be the output?\n```java\nfor(int i = 5; i > 0; i--) {\n  if(i == 3) continue;\n  System.out.print(i + \" \");\n}\n```",
+    "options": ["5 4 3 2 1 ", "5 4 2 1 ", "1 2 4 5 ", "5 4 "],
+    "answer": 1,
+    "explanation": "Loop counts down from 5. When i==3, continue skips the print. Output: 5 4 2 1"
+  },
+  {
+    "question": "What is the output?\n```java\nint[][] arr = {{1,2},{3,4,5},{6}};\nSystem.out.println(arr[1][2]);\n```",
+    "options": ["4", "5", "6", "ArrayIndexOutOfBoundsException"],
+    "answer": 1,
+    "explanation": "arr[1] is {3,4,5}, and arr[1][2] accesses the third element (index 2), which is 5"
+  },
+  {
+    "question": "What will be printed?\n```java\nint[] arr = {5, 10, 15, 20};\nfor(int i = 0; i < arr.length; i++)\n  arr[i] += 5;\nSystem.out.println(arr[2]);\n```",
+    "options": ["15", "20", "25", "10"],
+    "answer": 1,
+    "explanation": "Each element is increased by 5. arr[2] was 15, becomes 15+5 = 20"
+  },
+  {
+    "question": "What is the output?\n```java\nString[] names = {\"Alice\", \"Bob\", \"Charlie\"};\nnames[1] = \"David\";\nSystem.out.println(names[1]);\n```",
+    "options": ["Alice", "Bob", "David", "Charlie"],
+    "answer": 2,
+    "explanation": "names[1] which was 'Bob' is reassigned to 'David'. Arrays are mutable, so elements can be changed"
+  },
+  {
+    "question": "What happens here?\n```java\nint[] arr = {1, 2, 3};\narr = new int[]{4, 5};\nSystem.out.println(arr.length);\n```",
+    "options": ["3", "2", "5", "Compilation error"],
+    "answer": 1,
+    "explanation": "arr is reassigned to a new array of length 2. The old array {1,2,3} is no longer referenced"
+  },
+  {
+    "question": "What will be the output?\n```java\nint[] a = {10, 20};\nint[] b = {10, 20};\nSystem.out.println(a == b);\n```",
+    "options": ["true", "false", "Compilation error", "Runtime error"],
+    "answer": 1,
+    "explanation": "== compares references, not contents. a and b are different array objects, so comparison is false"
+  },
+  {
+    "question": "What is the result?\n```java\nint[] arr = {5, 10, 15};\nfor(int x : arr) {\n  x = x + 10;\n}\nSystem.out.println(arr[0]);\n```",
+    "options": ["5", "15", "10", "Compilation error"],
+    "answer": 0,
+    "explanation": "Enhanced for-loop creates a copy of each element in x. Modifying x doesn't change the original array"
+  },
+  {
+    "question": "What will be printed?\n```java\nint[][] matrix = new int[2][3];\nmatrix[0][0] = 5;\nSystem.out.println(matrix[0][1]);\n```",
+    "options": ["0", "5", "null", "Garbage value"],
+    "answer": 0,
+    "explanation": "2D array elements are initialized to 0 for int. Only matrix[0][0] was set to 5, others remain 0"
+  },
+  {
+    "question": "What is the output?\n```java\nString s = \"Java Programming\";\nString[] words = s.split(\" \");\nSystem.out.println(words.length);\n```",
+    "options": ["1", "2", "16", "17"],
+    "answer": 1,
+    "explanation": "split(' ') divides the string at space into an array: ['Java', 'Programming'], length is 2"
+  },
+  {
+    "question": "What will be the result?\n```java\nint[] arr = {1, 2, 3, 4, 5};\nSystem.out.println(arr[arr.length]);\n```",
+    "options": ["5", "0", "null", "ArrayIndexOutOfBoundsException"],
+    "answer": 3,
+    "explanation": "arr.length is 5, but valid indices are 0-4. Accessing arr[5] throws ArrayIndexOutOfBoundsException"
+  },
+  {
+    "question": "What is the output?\n```java\nint[] numbers = new int[5];\nSystem.out.println(numbers[0] + numbers[4]);\n```",
+    "options": ["0", "5", "null", "Compilation error"],
+    "answer": 0,
+    "explanation": "Both uninitialized int array elements are 0. 0 + 0 = 0"
+  },
+  {
+    "question": "What will be printed?\n```java\nchar[] chars = {'J', 'A', 'V', 'A'};\nSystem.out.println(chars);\n```",
+    "options": ["JAVA", "[C@15db9742", "J", "Compilation error"],
+    "answer": 0,
+    "explanation": "Printing a char array directly prints its contents as a string, unlike other array types which print hash codes"
+  }
 ]
