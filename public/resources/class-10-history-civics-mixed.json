@@ -598,5 +598,665 @@
     "options": ["General Assembly", "Security Council", "ICJ", "Security Council recommendation & GA approval"],
     "answer": 3,
     "explanation": "The UN Secretary-General is appointed by the General Assembly on the recommendation of the Security Council."
+  },
+  {
+    "question": "If the Lok Sabha and Rajya Sabha disagree on a Non-Money Bill, what is the constitutional remedy?",
+    "options": ["The President decides", "A Joint Sitting is called", "The Bill is scrapped", "The Supreme Court intervenes"],
+    "answer": 1,
+    "explanation": "When both houses disagree on a non-money bill, a Joint Sitting of Parliament is called to resolve the deadlock."
+  },
+  {
+    "question": "Which of these is a unique power of the Rajya Sabha?",
+    "options": ["Passing a No-Confidence Motion", "Introducing Money Bills", "Empowering Parliament to legislate on State List items", "Controlling the Budget"],
+    "answer": 2,
+    "explanation": "Under Article 249, only Rajya Sabha can empower Parliament to make laws on matters in the State List if it passes a resolution by 2/3rd majority."
+  },
+  {
+    "question": "The 'Quorum' for both houses of the Indian Parliament is:",
+    "options": ["1/5th", "1/10th", "1/3rd", "1/2"],
+    "answer": 1,
+    "explanation": "The quorum to constitute a meeting of either House of Parliament is one-tenth of the total number of members."
+  },
+  {
+    "question": "If a Minister loses a Vote of No-Confidence, who must resign?",
+    "options": ["Only that Minister", "The Prime Minister only", "The entire Council of Ministers", "The President"],
+    "answer": 2,
+    "explanation": "Under the principle of collective responsibility, if the Council of Ministers loses a vote of no-confidence, the entire Council must resign."
+  },
+  {
+    "question": "Who can dissolve the Lok Sabha before its five-year term expires?",
+    "options": ["The Speaker", "The Chief Justice", "The President on the advice of the PM", "The Rajya Sabha"],
+    "answer": 2,
+    "explanation": "The President can dissolve the Lok Sabha on the advice of the Prime Minister before its term expires."
+  },
+  {
+    "question": "Which motion is used to focus the House's attention on a matter of urgent public importance?",
+    "options": ["Adjournment Motion", "Censure Motion", "No-Confidence Motion", "Cut Motion"],
+    "answer": 0,
+    "explanation": "An Adjournment Motion is moved to draw attention to a definite matter of urgent public importance and adjourn the normal business."
+  },
+  {
+    "question": "The President of India is an integral part of Parliament because:",
+    "options": ["He presides over Lok Sabha", "No bill becomes law without his assent", "He is a member of Rajya Sabha", "He sits in the House daily"],
+    "answer": 1,
+    "explanation": "The President is an integral part of Parliament (Article 79) because no bill can become law without his assent."
+  },
+  {
+    "question": "The 'Casting Vote' in the Lok Sabha is exercised by:",
+    "options": ["The Prime Minister", "The President", "The Speaker", "The Leader of Opposition"],
+    "answer": 2,
+    "explanation": "The Speaker of Lok Sabha exercises the casting vote in case of a tie during voting."
+  },
+  {
+    "question": "Which body is known as the 'Permanent House'?",
+    "options": ["Lok Sabha", "Vidhan Sabha", "Rajya Sabha", "Cabinet"],
+    "answer": 2,
+    "explanation": "Rajya Sabha is called the Permanent House as it is never dissolved; one-third of its members retire every two years."
+  },
+  {
+    "question": "To be a member of the Rajya Sabha, a person must be at least:",
+    "options": ["25 years", "30 years", "35 years", "18 years"],
+    "answer": 1,
+    "explanation": "The minimum age requirement for membership of Rajya Sabha is 30 years, while for Lok Sabha it is 25 years."
+  },
+  {
+    "question": "The Supreme Court acts as the 'Guardian of the Constitution' through:",
+    "options": ["Advisory Jurisdiction", "Judicial Review", "Original Jurisdiction", "Criminal Jurisdiction"],
+    "answer": 1,
+    "explanation": "Through Judicial Review, the Supreme Court examines the constitutionality of laws and executive actions, thus guarding the Constitution."
+  },
+  {
+    "question": "A 'Writ' issued to a lower court to transfer a case to a higher court is:",
+    "options": ["Habeas Corpus", "Mandamus", "Certiorari", "Quo Warranto"],
+    "answer": 2,
+    "explanation": "Certiorari is issued by a higher court to a lower court to transfer a case or quash an order."
+  },
+  {
+    "question": "The retirement age of a High Court judge is:",
+    "options": ["60", "62", "65", "70"],
+    "answer": 1,
+    "explanation": "A High Court judge retires at the age of 62 years."
+  },
+  {
+    "question": "'Lok Adalats' were primarily established to:",
+    "options": ["Punish criminals", "Reduce the backlog of cases via compromise", "Overrule the Supreme Court", "Handle international disputes"],
+    "answer": 1,
+    "explanation": "Lok Adalats are alternative dispute resolution forums established to reduce the backlog of cases through amicable settlement."
+  },
+  {
+    "question": "The 'Appellate Jurisdiction' of the Supreme Court refers to:",
+    "options": ["Hearing fresh cases", "Hearing appeals against Lower Court judgments", "Giving advice to the President", "Issuing Writs"],
+    "answer": 1,
+    "explanation": "Appellate Jurisdiction means the Supreme Court hears appeals against judgments of lower courts and tribunals."
+  },
+  {
+    "question": "The immediate cause of the 1857 Revolt was:",
+    "options": ["Doctrine of Lapse", "Introduction of Enfield Rifles", "General Service Enlistment Act", "Annexation of Awadh"],
+    "answer": 1,
+    "explanation": "The immediate cause was the introduction of the Enfield rifle with cartridges greased with cow and pig fat, offensive to both Hindus and Muslims."
+  },
+  {
+    "question": "Which leader was the 'Brain' behind the 1857 revolt according to British records?",
+    "options": ["Nana Saheb", "Rani Lakshmibai", "Tantia Tope", "Azimullah Khan"],
+    "answer": 3,
+    "explanation": "Azimullah Khan, advisor to Nana Saheb, was considered by the British as the brain behind the planning of the 1857 revolt."
+  },
+  {
+    "question": "The first session of the INC (1885) was presided over by:",
+    "options": ["A.O. Hume", "W.C. Bonnerjee", "Dadabhai Naoroji", "Surendranath Banerjee"],
+    "answer": 1,
+    "explanation": "Womesh Chunder Bonnerjee was the first President of the Indian National Congress at its first session in Bombay in 1885."
+  },
+  {
+    "question": "The 'Drain of Wealth' theory was popularized by:",
+    "options": ["G.K. Gokhale", "Dadabhai Naoroji", "Bal Gangadhar Tilak", "Lala Lajpat Rai"],
+    "answer": 1,
+    "explanation": "Dadabhai Naoroji popularized the 'Drain of Wealth' theory in his book 'Poverty and Un-British Rule in India'."
+  },
+  {
+    "question": "The Partition of Bengal (1905) was intended by Lord Curzon to:",
+    "options": ["Improve administration", "Divide Hindus and Muslims", "Promote education", "Build new roads"],
+    "answer": 1,
+    "explanation": "Though officially for administrative reasons, the Partition of Bengal was seen as a divide-and-rule policy to separate Hindus and Muslims."
+  },
+  {
+    "question": "The 'Surat Split' of 1907 occurred between:",
+    "options": ["Congress and Muslim League", "Assertives and Early Nationalists", "British and Indians", "Mughals and Marathas"],
+    "answer": 1,
+    "explanation": "The Surat Split (1907) divided the Congress into Moderates (Early Nationalists) and Extremists (Assertives/Aggressive Nationalists)."
+  },
+  {
+    "question": "The main objective of the Khilafat Movement was:",
+    "options": ["To get Purna Swaraj", "To restore the Caliph of Turkey", "To protest the Salt Tax", "To support the Rowlatt Act"],
+    "answer": 1,
+    "explanation": "The Khilafat Movement (1919-1924) aimed to restore the Caliph of Turkey who was deposed after World War I."
+  },
+  {
+    "question": "Why did Gandhi withdraw the Non-Cooperation Movement?",
+    "options": ["Jallianwala Bagh Massacre", "Chauri Chaura incident", "Arrest of Nehru", "Failure of the movement"],
+    "answer": 1,
+    "explanation": "Gandhi withdrew the Non-Cooperation Movement in 1922 after the Chauri Chaura incident where protesters killed 22 policemen."
+  },
+  {
+    "question": "The Dandi March marked the beginning of:",
+    "options": ["Quit India Movement", "Civil Disobedience Movement", "Swadeshi Movement", "Home Rule League"],
+    "answer": 1,
+    "explanation": "The Dandi March (Salt March) in 1930 marked the beginning of the Civil Disobedience Movement."
+  },
+  {
+    "question": "The Cabinet Mission Plan (1946) rejected the demand for:",
+    "options": ["Interim Government", "Constituent Assembly", "A separate Pakistan", "Independence"],
+    "answer": 2,
+    "explanation": "The Cabinet Mission Plan rejected the demand for a separate Pakistan and instead proposed a weak federation."
+  },
+  {
+    "question": "The 'Immediate Cause' of World War I was:",
+    "options": ["Invasion of Poland", "Sarajevo Assassination", "Attack on Pearl Harbor", "Treaty of Versailles"],
+    "answer": 1,
+    "explanation": "The assassination of Archduke Franz Ferdinand at Sarajevo on June 28, 1914, was the immediate cause of World War I."
+  },
+  {
+    "question": "The Treaty of Versailles was seen as a 'Dictated Peace' by:",
+    "options": ["France", "Germany", "Italy", "England"],
+    "answer": 1,
+    "explanation": "Germany viewed the Treaty of Versailles as a 'dictated peace' or 'diktat' imposed without negotiation."
+  },
+  {
+    "question": "Mussolini's followers were known as:",
+    "options": ["Black Shirts", "Brown Shirts", "Red Army", "Nazis"],
+    "answer": 0,
+    "explanation": "Mussolini's fascist followers in Italy were known as 'Black Shirts' due to their uniform. Hitler's followers were 'Brown Shirts'."
+  },
+  {
+    "question": "The main objective of the United Nations is:",
+    "options": ["To start wars", "To maintain international peace", "To rule over small nations", "To collect taxes globally"],
+    "answer": 1,
+    "explanation": "The primary objective of the United Nations is to maintain international peace and security."
+  },
+  {
+    "question": "The 'Veto Power' in the UN is held by:",
+    "options": ["All members", "General Assembly", "Five permanent members of the Security Council", "The Secretariat"],
+    "answer": 2,
+    "explanation": "Veto power in the UN Security Council is held exclusively by the five permanent members: USA, UK, France, Russia, and China."
+  },
+  {
+    "question": "Which schedule of the Constitution deals with the disqualification of members on grounds of defection?",
+    "options": ["8th Schedule", "9th Schedule", "10th Schedule", "12th Schedule"],
+    "answer": 2,
+    "explanation": "The 10th Schedule, added by the 52nd Amendment (1985), contains provisions for disqualification on grounds of defection."
+  },
+  {
+    "question": "The concept of 'Rule of Law' was derived from:",
+    "options": ["USA", "France", "Britain", "Canada"],
+    "answer": 2,
+    "explanation": "The concept of Rule of Law was derived from Britain, particularly from A.V. Dicey's interpretation."
+  },
+  {
+    "question": "Which part of the Constitution deals with Directive Principles of State Policy?",
+    "options": ["Part II", "Part III", "Part IV", "Part V"],
+    "answer": 2,
+    "explanation": "Part IV of the Constitution (Articles 36-51) deals with Directive Principles of State Policy."
+  },
+  {
+    "question": "The Finance Commission is constituted every:",
+    "options": ["3 years", "5 years", "6 years", "10 years"],
+    "answer": 1,
+    "explanation": "The Finance Commission is constituted by the President every five years or earlier as required."
+  },
+  {
+    "question": "Who appoints the Comptroller and Auditor General of India?",
+    "options": ["Prime Minister", "Parliament", "President", "Chief Justice"],
+    "answer": 2,
+    "explanation": "The CAG is appointed by the President and can be removed only through impeachment by Parliament."
+  },
+  {
+    "question": "The Election Commission of India is a:",
+    "options": ["Constitutional body", "Statutory body", "Executive body", "Judicial body"],
+    "answer": 0,
+    "explanation": "The Election Commission is a constitutional body established under Article 324 of the Constitution."
+  },
+  {
+    "question": "Which amendment is known as the 'Mini Constitution'?",
+    "options": ["42nd Amendment", "44th Amendment", "52nd Amendment", "73rd Amendment"],
+    "answer": 0,
+    "explanation": "The 42nd Amendment (1976) is called the Mini Constitution due to its wide-ranging and comprehensive changes."
+  },
+  {
+    "question": "The Fundamental Duties were added by which amendment?",
+    "options": ["42nd Amendment", "44th Amendment", "52nd Amendment", "61st Amendment"],
+    "answer": 0,
+    "explanation": "Fundamental Duties were added to the Constitution by the 42nd Amendment in 1976 in Part IV-A."
+  },
+  {
+    "question": "The National Emergency can be proclaimed on grounds of:",
+    "options": ["War only", "Armed rebellion only", "War, external aggression or armed rebellion", "Financial instability"],
+    "answer": 2,
+    "explanation": "Article 352 allows National Emergency on grounds of war, external aggression, or armed rebellion."
+  },
+  {
+    "question": "The Preamble declares India as a:",
+    "options": ["Federal Republic", "Socialist Secular Democratic Republic", "Parliamentary Democracy", "Presidential Republic"],
+    "answer": 1,
+    "explanation": "The Preamble declares India as a Sovereign Socialist Secular Democratic Republic."
+  },
+  {
+    "question": "Which article abolishes untouchability?",
+    "options": ["Article 14", "Article 15", "Article 17", "Article 21"],
+    "answer": 2,
+    "explanation": "Article 17 abolishes untouchability and forbids its practice in any form."
+  },
+  {
+    "question": "The concept of Single Citizenship is borrowed from:",
+    "options": ["USA", "UK", "Canada", "Australia"],
+    "answer": 1,
+    "explanation": "India follows the concept of single citizenship borrowed from Britain, unlike USA which has dual citizenship."
+  },
+  {
+    "question": "Which article provides for free and compulsory education?",
+    "options": ["Article 21", "Article 21A", "Article 45", "Article 46"],
+    "answer": 1,
+    "explanation": "Article 21A, inserted by the 86th Amendment (2002), provides for free and compulsory education to children aged 6-14 years."
+  },
+  {
+    "question": "The Planning Commission was replaced by:",
+    "options": ["Finance Commission", "NITI Aayog", "Law Commission", "Election Commission"],
+    "answer": 1,
+    "explanation": "The Planning Commission was replaced by NITI Aayog (National Institution for Transforming India) in 2015."
+  },
+  {
+    "question": "Which writ literally means 'by what authority'?",
+    "options": ["Habeas Corpus", "Mandamus", "Quo Warranto", "Certiorari"],
+    "answer": 2,
+    "explanation": "Quo Warranto literally means 'by what authority' and questions a person's right to hold public office."
+  },
+  {
+    "question": "The concept of Judicial Review is borrowed from:",
+    "options": ["Britain", "USA", "France", "Ireland"],
+    "answer": 1,
+    "explanation": "The concept of Judicial Review is borrowed from the American Constitution."
+  },
+  {
+    "question": "Who was known as the 'Father of Indian Unrest'?",
+    "options": ["Dadabhai Naoroji", "Bal Gangadhar Tilak", "Lala Lajpat Rai", "Bipin Chandra Pal"],
+    "answer": 1,
+    "explanation": "Bal Gangadhar Tilak was called the 'Father of Indian Unrest' by British historian Valentine Chirol."
+  },
+  {
+    "question": "The Ilbert Bill controversy occurred during the tenure of:",
+    "options": ["Lord Ripon", "Lord Curzon", "Lord Dufferin", "Lord Lytton"],
+    "answer": 0,
+    "explanation": "The Ilbert Bill controversy (1883) occurred during Lord Ripon's tenure, seeking to allow Indian judges to try Europeans."
+  },
+  {
+    "question": "The Vernacular Press Act was enacted by:",
+    "options": ["Lord Lytton", "Lord Ripon", "Lord Curzon", "Lord Dalhousie"],
+    "answer": 0,
+    "explanation": "The Vernacular Press Act (1878) was enacted by Lord Lytton to curtail the freedom of the Indian press."
+  },
+  {
+    "question": "The Morley-Minto Reforms introduced:",
+    "options": ["Dyarchy", "Separate electorates", "Provincial autonomy", "Responsible government"],
+    "answer": 1,
+    "explanation": "The Morley-Minto Reforms (Indian Councils Act 1909) introduced separate electorates for Muslims."
+  },
+  {
+    "question": "The Lucknow Pact was signed in:",
+    "options": ["1906", "1916", "1919", "1920"],
+    "answer": 1,
+    "explanation": "The Lucknow Pact was signed in 1916 between the Congress and Muslim League, bringing Hindu-Muslim unity."
+  },
+  {
+    "question": "The Montagu-Chelmsford Reforms led to:",
+    "options": ["Complete independence", "Dyarchy in provinces", "Federation", "Dominion status"],
+    "answer": 1,
+    "explanation": "The Montagu-Chelmsford Reforms (1919) introduced dyarchy (dual government) in provinces."
+  },
+  {
+    "question": "Who gave the slogan 'Inquilab Zindabad'?",
+    "options": ["Bhagat Singh", "Chandrashekhar Azad", "Hasrat Mohani", "Subhash Chandra Bose"],
+    "answer": 2,
+    "explanation": "The slogan 'Inquilab Zindabad' (Long Live Revolution) was coined by Hasrat Mohani and popularized by Bhagat Singh."
+  },
+  {
+    "question": "The Poorna Swaraj resolution was passed at:",
+    "options": ["Calcutta Session 1928", "Lahore Session 1929", "Karachi Session 1931", "Bombay Session 1934"],
+    "answer": 1,
+    "explanation": "The Poorna Swaraj (Complete Independence) resolution was passed at the Lahore Session in December 1929."
+  },
+  {
+    "question": "The Government of India Act 1935 introduced:",
+    "options": ["Dyarchy at center", "Federal structure", "Cabinet system", "Presidential system"],
+    "answer": 1,
+    "explanation": "The Government of India Act 1935 provided for a federal structure with provincial autonomy."
+  },
+  {
+    "question": "The Cripps Mission came to India in:",
+    "options": ["1940", "1942", "1944", "1946"],
+    "answer": 1,
+    "explanation": "The Cripps Mission came to India in March 1942 to secure Indian cooperation in World War II."
+  },
+  {
+    "question": "The Indian Independence League was founded in:",
+    "options": ["Singapore", "Burma", "Thailand", "Japan"],
+    "answer": 2,
+    "explanation": "The Indian Independence League was founded in Thailand (then Siam) in 1942 by Rash Behari Bose."
+  },
+  {
+    "question": "Who presided over the Constituent Assembly?",
+    "options": ["Jawaharlal Nehru", "Dr. Rajendra Prasad", "Dr. B.R. Ambedkar", "Sardar Patel"],
+    "answer": 1,
+    "explanation": "Dr. Rajendra Prasad was the permanent President of the Constituent Assembly."
+  },
+  {
+    "question": "The Drafting Committee of the Constitution was headed by:",
+    "options": ["Jawaharlal Nehru", "Sardar Patel", "Dr. B.R. Ambedkar", "Dr. Rajendra Prasad"],
+    "answer": 2,
+    "explanation": "Dr. B.R. Ambedkar was the Chairman of the Drafting Committee of the Constitution."
+  },
+  {
+    "question": "How many times was the draft Constitution discussed?",
+    "options": ["Two readings", "Three readings", "Four readings", "Five readings"],
+    "answer": 1,
+    "explanation": "The draft Constitution was considered clause by clause in three readings before final adoption."
+  },
+  {
+    "question": "The Constitution was adopted on:",
+    "options": ["26 January 1950", "15 August 1947", "26 November 1949", "2 October 1949"],
+    "answer": 2,
+    "explanation": "The Constitution was adopted by the Constituent Assembly on 26 November 1949."
+  },
+  {
+    "question": "The Communal Award was announced by:",
+    "options": ["Lord Irwin", "Ramsay MacDonald", "Lord Mountbatten", "Clement Attlee"],
+    "answer": 1,
+    "explanation": "The Communal Award was announced by British Prime Minister Ramsay MacDonald in 1932."
+  },
+  {
+    "question": "The Poona Pact was signed between:",
+    "options": ["Gandhi and Jinnah", "Gandhi and Ambedkar", "Nehru and Patel", "Congress and Muslim League"],
+    "answer": 1,
+    "explanation": "The Poona Pact (1932) was signed between Gandhi and Dr. B.R. Ambedkar regarding representation for depressed classes."
+  },
+  {
+    "question": "The August Offer was made in:",
+    "options": ["1939", "1940", "1941", "1942"],
+    "answer": 1,
+    "explanation": "The August Offer was made by Viceroy Linlithgow in August 1940, promising dominion status after the war."
+  },
+  {
+    "question": "The Simla Conference was held in:",
+    "options": ["1942", "1944", "1945", "1946"],
+    "answer": 2,
+    "explanation": "The Simla Conference was convened by Viceroy Wavell in June 1945 but failed due to Jinnah's demands."
+  },
+  {
+    "question": "The principle of 'Self-Determination' was associated with:",
+    "options": ["Woodrow Wilson", "Lenin", "Churchill", "Roosevelt"],
+    "answer": 0,
+    "explanation": "The principle of Self-Determination was promoted by US President Woodrow Wilson in his Fourteen Points."
+  },
+  {
+    "question": "The Battle of Plassey was fought in:",
+    "options": ["1757", "1764", "1857", "1885"],
+    "answer": 0,
+    "explanation": "The Battle of Plassey was fought on 23 June 1757, marking the beginning of British rule in India."
+  },
+  {
+    "question": "The Permanent Settlement was introduced by:",
+    "options": ["Warren Hastings", "Lord Cornwallis", "Lord Wellesley", "Lord Dalhousie"],
+    "answer": 1,
+    "explanation": "The Permanent Settlement (1793) was introduced by Lord Cornwallis in Bengal, Bihar, and Orissa."
+  },
+  {
+    "question": "The Regulating Act was passed in:",
+    "options": ["1757", "1773", "1784", "1813"],
+    "answer": 1,
+    "explanation": "The Regulating Act of 1773 was the first step towards centralized administration in British India."
+  },
+  {
+    "question": "The first Factory Act was passed in:",
+    "options": ["1847", "1881", "1911", "1926"],
+    "answer": 1,
+    "explanation": "The first Factory Act in India was passed in 1881 to improve working conditions in factories."
+  },
+  {
+    "question": "The Ryotwari system was introduced in:",
+    "options": ["Bengal", "Madras and Bombay", "Punjab", "United Provinces"],
+    "answer": 1,
+    "explanation": "The Ryotwari system was introduced in Madras and Bombay presidencies where settlement was directly with cultivators."
+  },
+  {
+    "question": "The Mahalwari system was prevalent in:",
+    "options": ["Bengal", "Madras", "North-Western Provinces and Punjab", "Bombay"],
+    "answer": 2,
+    "explanation": "The Mahalwari system was introduced in North-Western Provinces, Punjab, and parts of Central India."
+  },
+  {
+    "question": "Who founded the Brahmo Samaj?",
+    "options": ["Swami Vivekananda", "Raja Ram Mohan Roy", "Dayananda Saraswati", "Keshab Chandra Sen"],
+    "answer": 1,
+    "explanation": "Raja Ram Mohan Roy founded the Brahmo Samaj in 1828 to reform Hindu society."
+  },
+  {
+    "question": "The Arya Samaj was founded by:",
+    "options": ["Raja Ram Mohan Roy", "Swami Vivekananda", "Dayananda Saraswati", "Ramakrishna Paramahansa"],
+    "answer": 2,
+    "explanation": "Swami Dayananda Saraswati founded the Arya Samaj in 1875 with the motto 'Back to the Vedas'."
+  },
+  {
+    "question": "The Aligarh Movement was started by:",
+    "options": ["Muhammad Ali", "Syed Ahmed Khan", "Maulana Azad", "Liaquat Ali Khan"],
+    "answer": 1,
+    "explanation": "Sir Syed Ahmed Khan started the Aligarh Movement to promote modern education among Muslims."
+  },
+  {
+    "question": "The Theosophical Society was founded by:",
+    "options": ["Annie Besant", "Madame Blavatsky and Colonel Olcott", "Vivekananda", "Ranade"],
+    "answer": 1,
+    "explanation": "The Theosophical Society was founded in 1875 in New York by Madame Blavatsky and Colonel Olcott."
+  },
+  {
+    "question": "The Prarthana Samaj was founded in:",
+    "options": ["Bengal", "Maharashtra", "Punjab", "Madras"],
+    "answer": 1,
+    "explanation": "The Prarthana Samaj was founded in Bombay (Maharashtra) in 1867 by Atmaram Pandurang."
+  },
+  {
+    "question": "The Satya Shodhak Samaj was founded by:",
+    "options": ["Gopal Krishna Gokhale", "Jyotiba Phule", "Bal Gangadhar Tilak", "Ranade"],
+    "answer": 1,
+    "explanation": "Jyotiba Phule founded the Satya Shodhak Samaj (Truth Seekers' Society) in 1873 to fight caste discrimination."
+  },
+  {
+    "question": "The Vande Mataram song was written by:",
+    "options": ["Rabindranath Tagore", "Bankim Chandra Chatterjee", "Muhammad Iqbal", "Sarojini Naidu"],
+    "answer": 1,
+    "explanation": "Vande Mataram was composed by Bankim Chandra Chatterjee in his novel Anandamath (1882)."
+  },
+  {
+    "question": "The Hunter Commission (1882) was related to:",
+    "options": ["Education", "Railways", "Revenue", "Military"],
+    "answer": 0,
+    "explanation": "The Hunter Commission (1882) was appointed to review the progress of education in India."
+  },
+  {
+    "question": "The first railway line in India was laid between:",
+    "options": ["Delhi and Agra", "Bombay and Thane", "Calcutta and Delhi", "Madras and Bangalore"],
+    "answer": 1,
+    "explanation": "The first railway line in India was laid between Bombay and Thane in 1853."
+  },
+  {
+    "question": "The Indian Councils Act of 1892 introduced:",
+    "options": ["Direct elections", "Indirect elections", "Universal suffrage", "Dyarchy"],
+    "answer": 1,
+    "explanation": "The Indian Councils Act of 1892 introduced the principle of indirect election to legislative councils."
+  },
+  {
+    "question": "The Minto-Morley Reforms are also known as:",
+    "options": ["Act of 1909", "Act of 1919", "Act of 1935", "Act of 1947"],
+    "answer": 0,
+    "explanation": "The Minto-Morley Reforms are enshrined in the Indian Councils Act of 1909."
+  },
+  {
+    "question": "The Battle of Buxar was fought in:",
+    "options": ["1757", "1764", "1767", "1775"],
+    "answer": 1,
+    "explanation": "The Battle of Buxar was fought on 22 October 1764 between the British and a confederation of Indian rulers."
+  },
+  {
+    "question": "The Treaty of Allahabad was signed in:",
+    "options": ["1757", "1764", "1765", "1773"],
+    "answer": 2,
+    "explanation": "The Treaty of Allahabad was signed in 1765 between Shah Alam II and Robert Clive, granting Diwani rights to the British."
+  },
+  {
+    "question": "The subsidiary alliance system was introduced by:",
+    "options": ["Lord Cornwallis", "Lord Wellesley", "Lord Dalhousie", "Warren Hastings"],
+    "answer": 1,
+    "explanation": "Lord Wellesley introduced the Subsidiary Alliance system in 1798 to expand British control."
+  },
+  {
+    "question": "The First Anglo-Mysore War was fought during:",
+    "options": ["1767-69", "1780-84", "1790-92", "1799"],
+    "answer": 0,
+    "explanation": "The First Anglo-Mysore War was fought between 1767-69 between the British and Hyder Ali."
+  },
+  {
+    "question": "Tipu Sultan was killed in the year:",
+    "options": ["1792", "1799", "1803", "1818"],
+    "answer": 1,
+    "explanation": "Tipu Sultan, the Tiger of Mysore, was killed in the Fourth Anglo-Mysore War in 1799."
+  },
+  {
+    "question": "The Third Battle of Panipat was fought in:",
+    "options": ["1526", "1556", "1761", "1857"],
+    "answer": 2,
+    "explanation": "The Third Battle of Panipat was fought in 1761 between the Marathas and Ahmad Shah Abdali."
+  },
+  {
+    "question": "The Santhal Rebellion occurred in:",
+    "options": ["1855-56", "1857-58", "1859-60", "1875-76"],
+    "answer": 0,
+    "explanation": "The Santhal Rebellion occurred in 1855-56 in present-day Jharkhand against British exploitation."
+  },
+  {
+    "question": "The Moplah Rebellion took place in:",
+    "options": ["Bengal", "Malabar", "Punjab", "Madras"],
+    "answer": 1,
+    "explanation": "The Moplah Rebellion (1921) took place in the Malabar region of Kerala."
+  },
+  {
+    "question": "The Bardoli Satyagraha was led by:",
+    "options": ["Gandhi", "Nehru", "Sardar Patel", "Rajendra Prasad"],
+    "answer": 2,
+    "explanation": "The Bardoli Satyagraha (1928) was led by Sardar Vallabhbhai Patel against increased land revenue."
+  },
+  {
+    "question": "The Kheda Satyagraha was related to:",
+    "options": ["Salt tax", "Land revenue", "Indigo cultivation", "Mill workers"],
+    "answer": 1,
+    "explanation": "The Kheda Satyagraha (1918) was organized by Gandhi against high land revenue during famine."
+  },
+  {
+    "question": "The Champaran Satyagraha was against:",
+    "options": ["Salt tax", "Indigo planters", "Land revenue", "Mill owners"],
+    "answer": 1,
+    "explanation": "The Champaran Satyagraha (1917) was Gandhi's first major movement in India against indigo planters' exploitation."
+  },
+  {
+    "question": "The Ahmedabad Mill Strike was in:",
+    "options": ["1917", "1918", "1919", "1920"],
+    "answer": 1,
+    "explanation": "The Ahmedabad Mill Strike was led by Gandhi in 1918 for better wages for mill workers."
+  },
+  {
+    "question": "The Rowlatt Satyagraha began in:",
+    "options": ["1918", "1919", "1920", "1921"],
+    "answer": 1,
+    "explanation": "The Rowlatt Satyagraha was launched by Gandhi in 1919 against the repressive Rowlatt Act."
+  },
+  {
+    "question": "The First Round Table Conference was held in:",
+    "options": ["1929", "1930", "1931", "1932"],
+    "answer": 1,
+    "explanation": "The First Round Table Conference was held in London in 1930, which Congress boycotted."
+  },
+  {
+    "question": "Gandhi attended which Round Table Conference?",
+    "options": ["First", "Second", "Third", "None"],
+    "answer": 1,
+    "explanation": "Gandhi attended the Second Round Table Conference in 1931 after the Gandhi-Irwin Pact."
+  },
+  {
+    "question": "The Muslim League was founded in:",
+    "options": ["1885", "1905", "1906", "1916"],
+    "answer": 2,
+    "explanation": "The All India Muslim League was founded in Dhaka in 1906 to protect Muslim interests."
+  },
+  {
+    "question": "Who founded the Indian National Army (INA)?",
+    "options": ["Subhash Bose", "Rash Behari Bose", "Mohan Singh", "Bhagat Singh"],
+    "answer": 2,
+    "explanation": "Captain Mohan Singh first formed the INA in 1942, which was later reorganized by Subhash Chandra Bose."
+  },
+  {
+    "question": "The Azad Hind Government was formed in:",
+    "options": ["1942", "1943", "1944", "1945"],
+    "answer": 1,
+    "explanation": "Subhash Chandra Bose formed the Azad Hind (Provisional Government of Free India) in Singapore in 1943."
+  },
+  {
+    "question": "The slogan 'Jai Hind' was given by:",
+    "options": ["Gandhi", "Nehru", "Subhash Chandra Bose", "Bhagat Singh"],
+    "answer": 2,
+    "explanation": "The slogan 'Jai Hind' was popularized by Subhash Chandra Bose and became the INA's war cry."
+  },
+  {
+    "question": "The INA trials were held at:",
+    "options": ["Delhi", "Red Fort Delhi", "Calcutta", "Bombay"],
+    "answer": 1,
+    "explanation": "The famous INA trials were held at the Red Fort in Delhi in 1945-46, sparking nationwide protests."
+  },
+  {
+    "question": "The Royal Indian Navy Mutiny occurred in:",
+    "options": ["1942", "1944", "1946", "1947"],
+    "answer": 2,
+    "explanation": "The Royal Indian Navy Mutiny occurred in February 1946 in Bombay, showing widespread discontent."
+  },
+  {
+    "question": "The Wavell Plan was proposed in:",
+    "options": ["1942", "1944", "1945", "1946"],
+    "answer": 2,
+    "explanation": "The Wavell Plan was proposed by Viceroy Wavell in 1945 at the Simla Conference."
+  },
+  {
+    "question": "The Mountbatten Plan was announced in:",
+    "options": ["February 1947", "June 1947", "August 1947", "September 1947"],
+    "answer": 1,
+    "explanation": "Lord Mountbatten announced his plan for partition on June 3, 1947."
+  },
+  {
+    "question": "India became independent on:",
+    "options": ["15 August 1946", "15 August 1947", "26 January 1950", "26 November 1949"],
+    "answer": 1,
+    "explanation": "India gained independence from British rule on 15 August 1947."
+  },
+  {
+    "question": "The first Prime Minister of India was:",
+    "options": ["Sardar Patel", "Jawaharlal Nehru", "Rajendra Prasad", "Maulana Azad"],
+    "answer": 1,
+    "explanation": "Jawaharlal Nehru became the first Prime Minister of independent India."
+  },
+  {
+    "question": "The first President of India was:",
+    "options": ["Jawaharlal Nehru", "Dr. Rajendra Prasad", "Dr. Radhakrishnan", "Rajagopalachari"],
+    "answer": 1,
+    "explanation": "Dr. Rajendra Prasad was the first President of India when the Constitution came into force in 1950."
+  },
+  {
+    "question": "C. Rajagopalachari became Governor-General in:",
+    "options": ["1947", "1948", "1949", "1950"],
+    "answer": 1,
+    "explanation": "C. Rajagopalachari became the first and last Indian Governor-General in June 1948."
   }
 ]

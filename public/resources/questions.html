@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java MCQ Quiz</title>
+    <title>MCQ Questions</title>
         <link rel="icon" type="image/png" href="../logo.png" />
     <style>
         :root {
@@ -556,7 +556,7 @@
             try {
                 const urlParams = new URLSearchParams(window.location.search);
                 topic = urlParams.get('topic') || 'default';
-
+                document.title = topic + " MCQ Quiz";
                 const response = await fetch(topic+".json");
                 questions = await response.json();
                 loadProgress();
