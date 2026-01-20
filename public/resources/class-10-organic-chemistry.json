@@ -1,0 +1,255 @@
+[
+    {
+        "question": "Conversion of ethanol to ethyl ethanoate is an example of:",
+        "options": [
+            "Esterification",
+            "Dehydrohalogenation",
+            "Catenation",
+            "Carboxylation"
+        ],
+        "answer": 0,
+        "explanation": "Ethanol reacts with ethanoic acid in the presence of concentrated sulphuric acid to form ethyl ethanoate. This reaction is called esterification."
+    },
+    {
+        "question": "Select the INCORRECT match:",
+        "options": [
+            "Lab preparation of methane : Decarboxylation",
+            "Ethene to ethyl alcohol : Dehydrohalogenation",
+            "Iodomethane to methane : Wurtz Reaction",
+            "NONE"
+        ],
+        "answer": 1,
+        "explanation": "Ethene is converted to ethyl alcohol by hydration, not dehydrohalogenation. Hence this match is incorrect."
+    },
+    {
+        "question": "Which homologous series does ethanol belong to?",
+        "options": [
+            "Alkanes",
+            "Alkenes",
+            "Alcohols",
+            "Carboxylic acids"
+        ],
+        "answer": 2,
+        "explanation": "Ethanol contains the –OH functional group, hence it is an alcohol."
+    },
+    {
+        "question": "The functional group present in ethanoic acid is:",
+        "options": [
+            "–OH",
+            "–CHO",
+            "–COOH",
+            "–CO–"
+        ],
+        "answer": 2,
+        "explanation": "Ethanoic acid contains the carboxyl (–COOH) group."
+    },
+    {
+        "question": "Which of the following is an unsaturated hydrocarbon?",
+        "options": [
+            "Ethane",
+            "Methane",
+            "Propene",
+            "Butane"
+        ],
+        "answer": 2,
+        "explanation": "Propene contains a double bond, making it unsaturated."
+    },
+    {
+        "question": "General formula of alkanes is:",
+        "options": [
+            "C<sub>n</sub>H<sub>2n</sub>",
+            "C<sub>n</sub>H<sub>2n+2</sub>",
+            "C<sub>n</sub>H<sub>2n−2</sub>",
+            "C<sub>n</sub>H<sub>n</sub>"
+        ],
+        "answer": 1,
+        "explanation": "Alkanes are saturated hydrocarbons with formula C<sub>n</sub>H<sub>2n+2</sub>."
+    },
+    {
+        "question": "Which reaction is used to prepare ethane from sodium ethanoate?",
+        "options": [
+            "Hydration",
+            "Decarboxylation",
+            "Cracking",
+            "Esterification"
+        ],
+        "answer": 1,
+        "explanation": "Decarboxylation of sodium ethanoate produces ethane."
+    },
+    {
+        "question": "Ethanol on oxidation with acidified potassium dichromate forms:",
+        "options": [
+            "Ethene",
+            "Ethanal",
+            "Ethanoic acid",
+            "Methanoic acid"
+        ],
+        "answer": 2,
+        "explanation": "Ethanol oxidises to ethanoic acid."
+    },
+    {
+        "question": "Which compound gives a fruity smell?",
+        "options": [
+            "Alcohol",
+            "Aldehyde",
+            "Ester",
+            "Ketone"
+        ],
+        "answer": 2,
+        "explanation": "Esters characteristically have fruity odours."
+    },
+    {
+        "question": "The catalyst used in esterification is:",
+        "options": [
+            "Dilute HCl",
+            "Concentrated H<sub>2</sub>SO<sub>4</sub>",
+            "NaOH",
+            "Zn"
+        ],
+        "answer": 1,
+        "explanation": "Concentrated H<sub>2</sub>SO<sub>4</sub> acts as a catalyst and dehydrating agent."
+    },
+    {
+        "question": "Which of the following will decolourise bromine water?",
+        "options": [
+            "Ethane",
+            "Methane",
+            "Ethene",
+            "Propane"
+        ],
+        "answer": 2,
+        "explanation": "Ethene undergoes addition reaction with bromine."
+    },
+    {
+        "question": "Ethanoic acid reacts with sodium bicarbonate to give:",
+        "options": [
+            "CO<sub>2</sub>",
+            "H<sub>2</sub>",
+            "O<sub>2</sub>",
+            "SO<sub>2</sub>"
+        ],
+        "answer": 0,
+        "explanation": "Carbon dioxide gas is evolved."
+    },
+    {
+        "question": "Which functional group is present in aldehydes?",
+        "options": [
+            "–CO–",
+            "–COOH",
+            "–CHO",
+            "–OH"
+        ],
+        "answer": 2,
+        "explanation": "Aldehydes contain the –CHO group."
+    },
+    {
+        "question": "The IUPAC name of acetic acid is:",
+        "options": [
+            "Methanoic acid",
+            "Ethanoic acid",
+            "Propanoic acid",
+            "Butanoic acid"
+        ],
+        "answer": 1,
+        "explanation": "Acetic acid is named ethanoic acid in IUPAC system."
+    },
+    {
+        "question": "Which compound is the simplest alkene?",
+        "options": [
+            "Ethane",
+            "Ethene",
+            "Propane",
+            "Methane"
+        ],
+        "answer": 1,
+        "explanation": "Ethene (C<sub>2</sub>H<sub>4</sub>) is the simplest alkene."
+    },
+    {
+        "question": "Which reaction converts ethene to ethanol?",
+        "options": [
+            "Oxidation",
+            "Hydrogenation",
+            "Hydration",
+            "Dehydration"
+        ],
+        "answer": 2,
+        "explanation": "Hydration adds water across the double bond."
+    },
+    {
+        "question": "Which of the following is NOT an organic compound?",
+        "options": [
+            "Methane",
+            "Urea",
+            "Carbon dioxide",
+            "Ethanol"
+        ],
+        "answer": 2,
+        "explanation": "CO<sub>2</sub> is an inorganic compound."
+    },
+    {
+        "question": "The suffix used for carboxylic acids is:",
+        "options": [
+            "–ol",
+            "–al",
+            "–one",
+            "–oic acid"
+        ],
+        "answer": 3,
+        "explanation": "Carboxylic acids use the suffix –oic acid."
+    },
+    {
+        "question": "Which compound undergoes addition reactions?",
+        "options": [
+            "Ethane",
+            "Propane",
+            "Ethene",
+            "Methane"
+        ],
+        "answer": 2,
+        "explanation": "Unsaturated hydrocarbons like ethene undergo addition."
+    },
+    {
+        "question": "Ethyl alcohol reacts with sodium to liberate:",
+        "options": [
+            "CO<sub>2</sub>",
+            "H<sub>2</sub>",
+            "O<sub>2</sub>",
+            "N<sub>2</sub>"
+        ],
+        "answer": 1,
+        "explanation": "Hydrogen gas is evolved."
+    },
+    {
+        "question": "Which is a dihydric alcohol?",
+        "options": [
+            "Methanol",
+            "Ethanol",
+            "Ethane-1,2-diol",
+            "Propanol"
+        ],
+        "answer": 2,
+        "explanation": "Ethane-1,2-diol contains two –OH groups."
+    },
+    {
+        "question": "Which compound contains a triple bond?",
+        "options": [
+            "Ethane",
+            "Ethene",
+            "Ethyne",
+            "Propane"
+        ],
+        "answer": 2,
+        "explanation": "Ethyne (C<sub>2</sub>H<sub>2</sub>) contains a triple bond."
+    },
+    {
+        "question": "Which is the correct formula of ethyne?",
+        "options": [
+            "C<sub>2</sub>H<sub>2</sub>",
+            "C<sub>2</sub>H<sub>4</sub>",
+            "C<sub>2</sub>H<sub>6</sub>",
+            "CH<sub>4</sub>"
+        ],
+        "answer": 0,
+        "explanation": "Ethyne has the molecular formula C<sub>2</sub>H<sub>2</sub>."
+    }
+]

@@ -252,13 +252,17 @@
             </div>
 
             <!-- Subject Items (Hidden by default) -->
-            <div class="quizzes" data-class="10" data-subject="java">
+            <div class="quizzes" data-class="10" data-subject="computer-applications">
                 <i class="fa-solid fa-code"></i>
-                <h3>Java Programming</h3>
+                <h3>Computer Applications</h3>
             </div>
             <div class="quizzes" data-class="10" data-subject="history">
                 <i class="fa-solid fa-timeline"></i>
                 <h3>History & Civics</h3>
+            </div>
+            <div class="quizzes" data-class="10" data-subject="chemistry">
+                <i class="fa-solid fa-timeline"></i>
+                <h3>Chemistry</h3>
             </div>
 
             <!-- Topic Items (Hidden by default) -->
@@ -270,6 +274,11 @@
                 <i class="fa-solid fa-timeline"></i>
                 <h3>History & Civics MCQ</h3>
             </div>
+            <div class="quizzes" data-subject-detail="chemistry-class-10">
+                <i class="fa-solid fa-timeline"></i>
+                <h3>Chemistry MCQ</h3>
+            </div>
+
         </div>
     </main>
 
@@ -295,13 +304,15 @@
         // Quiz mapping configuration
         const topicConfig = {
             'java-class-10': { file: 'class-10-java.json', name: 'Java Programming' },
-            'history-class-10': { file: 'class-10-history-civics-mixed.json', name: 'History & Civics' }
+            'history-class-10': { file: 'class-10-history-civics-mixed.json', name: 'History & Civics' },
+            'chemistry-class-10': { file: 'class-10-organic-chemistry.json', name: 'Organic Chemistry' }
         };
 
         const subjectConfig = {
             '10': [
-                { id: 'java', name: 'Java Programming', icon: 'fa-code' },
-                { id: 'history', name: 'History & Civics', icon: 'fa-timeline' }
+                { id: 'computer-applications', name: 'Computer Applications', icon: 'fa-code' },
+                { id: 'history', name: 'History & Civics', icon: 'fa-timeline' },
+                { id: 'chemistry', name: 'Chemistry', icon: 'fa-timeline' }
             ]
         };
 
