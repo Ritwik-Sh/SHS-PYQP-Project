@@ -22,6 +22,206 @@
         "explanation": "Ethene is converted to ethyl alcohol by hydration, not dehydrohalogenation. Hence this match is incorrect."
     },
     {
+        "question": "Unsaturated hydrocarbons-",
+        "options": [
+            "Decolourise bromine vapours",
+            "Undergo addition reactions",
+            "Have lesser carbon content than alkanes",
+            "All of the above"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "By product of the reaction between ethanol and sodium-",
+        "options": [
+            "Sodium hydroxide",
+            "Hydrogen gas",
+            "Oxygen gas",
+            "Acetaldehyde"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Select the incorrect statement",
+        "options": [
+            "Methane burns with a blue clean flame",
+            "Carboxylic acids have the functional group –COOH",
+            "But-2-ene is a chain isomer of butene",
+            "Methylated spirit means illicit alcohol, formed by improper distillation"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Which compound is used as a denaturing agent in industrial alcohol?",
+        "options": [
+            "Methanol",
+            "Acetone",
+            "Benzene",
+            "Formaldehyde"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Which hydrocarbon shows structural isomerism?",
+        "options": [
+            "Ethane",
+            "Propane",
+            "Butane",
+            "Methane"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "IUPAC name of H<sub>2</sub>C-CH<sub>2</sub>-CH<sub>2</sub>-COOH",
+        "options": [
+            "Butanal",
+            "Ethanoic acid",
+            "Propanoic acid",
+            "Butanoic acid"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Which of the following is a chain isomer of C5H12?",
+        "options": [
+            "2,2-dimethyl butane",
+            "2,3-methyl propane",
+            "2,2-dimethyl propane",
+            "3,3-dimethyl propane"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "In conversion of ethene to ethane, catalyst used is ___",
+        "options": [
+            "Palladium",
+            "Platinum",
+            "Nickel",
+            "All of the above"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Common name of ethan-1,2-dioic acid",
+        "options": [
+            "Ethanoic acid",
+            "Oxalic acid",
+            "Propanoic acid",
+            "2-butanoic acid"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Select the correct statement from the following:",
+        "options": [
+            "Saturated hydrocarbons are termed as olefins",
+            "Ethyne reacts with calcium carbide to form ethylene",
+            "Ethanol is used in horticulture industries as a refrigerating agent",
+            "Propanoic acid reacts with sodium bicarbonate to liberate carbon dioxide gas"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Which of these is not an example of substitution reaction?",
+        "options": [
+            "Nitration of benzene",
+            "Chlorination of ethane",
+            "Bromination of pentane",
+            "Hydrogenation of ethene"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Which of the following hydrocarbons will give sootier flame on burning?",
+        "options": [
+            "Methane",
+            "Ethane",
+            "Ethyne",
+            "Propane"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "What is the catenation property of carbon?",
+        "options": [
+            "Carbon can attract another carbon easily",
+            "Carbon can form long hydrogenated chains",
+            "Carbon can form long carbonated chains",
+            "Carbon has a tetravalency hence it can form long chains"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "What happens when hot, alcoholic and concentrated KOH reacts with ethyl bromide?",
+        "options": [
+            "Formation of ethanal",
+            "Formation of ethene",
+            "Formation of methanol",
+            "Formation of potassium bromide"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "What happens when butyne burns in oxygen?",
+        "options": [
+            "Blue clean flame is observed",
+            "Blue sooty flame is observed",
+            "Yellow non-sooty flame is observed",
+            "None of the above"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Test for alcohols-",
+        "options": [
+            "Effervescence of hydrogen",
+            "Effervescence of carbon dioxide",
+            "Effervescence of bromine",
+            "Effervescence of chlorine"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Which of the following is an aromatic compound?",
+        "options": [
+            "Cyclo-butane",
+            "Methanal",
+            "Toluene",
+            "Methane"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "What are aromatic compounds?",
+        "options": [
+            "Carboxylic acids having good smell",
+            "Compounds comprising more than 6 carbons",
+            "Compounds containing at least one C6H6 ring",
+            "Unsaturated hydrocarbons"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "CH4 + 3Cl2 → ?",
+        "options": [
+            "Carbon tetrachloride",
+            "Chloroform",
+            "Methyl chloride",
+            "Methyl benzoate"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Organic compound formed by dehydrohalogenation of ethyl bromide",
+        "options": [
+            "Ethane",
+            "Ethene",
+            "Ethyne",
+            "Ethanol"
+        ],
+        "answer": 1
+    },
+    {
         "question": "Which homologous series does ethanol belong to?",
         "options": [
             "Alkanes",
