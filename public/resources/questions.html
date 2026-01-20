@@ -461,7 +461,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Java MCQ Quiz</h1>
+            <h1>MCQ Quiz</h1>
             <div class="header-actions">
                 <button onclick="toggleMenu()">
                     <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -560,6 +560,7 @@
                 // Remove .json extension if present
                 topic = topic.replace('.json', '');
                 document.title = topic + " MCQ Quiz";
+                document.querySelector('.header h1').textContent = topic + " MCQ Quiz";
                 const response = await fetch(topic+".json");
                 questions = await response.json();
                 loadProgress();
