@@ -3241,7 +3241,7 @@
 		],
 		"answer": 1,
 		"explanation": "Two-pointer approach is O(n/2) = O(n) without creating new string"
-	},
+	},	
 	{
 		"question": "What is the scope of a variable declared inside a for loop?",
 		"options": [

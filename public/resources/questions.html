@@ -555,7 +555,10 @@
         async function loadQuestions() {
             try {
                 const urlParams = new URLSearchParams(window.location.search);
-                topic = urlParams.get('topic') || 'default';
+                // Support both 'topic' and 'quiz' parameters
+                topic = urlParams.get('quiz') || urlParams.get('topic') || 'default';
+                // Remove .json extension if present
+                topic = topic.replace('.json', '');
                 document.title = topic + " MCQ Quiz";
                 const response = await fetch(topic+".json");
                 questions = await response.json();
