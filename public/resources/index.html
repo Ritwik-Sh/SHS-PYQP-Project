@@ -264,6 +264,10 @@
                 <i class="fa-solid fa-flask"></i>
                 <h3>Chemistry</h3>
             </div>
+            <div class="quizzes" data-class="10" data-subject="environmental-science">
+                <i class="fa-solid fa-tree"></i>
+                <h3>Environmental Science</h3>
+            </div>
 
             <!-- Topic Items (Hidden by default) -->
             <div class="quizzes" data-subject-detail="java-class-10">
@@ -277,6 +281,10 @@
             <div class="quizzes" data-subject-detail="chemistry-class-10">
                 <i class="fa-solid fa-flask"></i>
                 <h3>Chemistry MCQ</h3>
+            </div>
+            <div class="quizzes" data-subject-detail="environmental-science-class-10">
+                <i class="fa-solid fa-tree"></i>
+                <h3>Environmental Science MCQ</h3>
             </div>
 
         </div>
@@ -305,14 +313,16 @@
         const topicConfig = {
             'java-class-10': { file: 'class-10-java.json', name: 'Java Programming' },
             'history-class-10': { file: 'class-10-history-civics-mixed.json', name: 'History & Civics' },
-            'chemistry-class-10': { file: 'class-10-organic-chemistry.json', name: 'Organic Chemistry' }
+            'chemistry-class-10': { file: 'class-10-organic-chemistry.json', name: 'Organic Chemistry' },
+            'environmental-science-class-10': { file: 'class-10-evs-mixed.json', name: 'Environmental Science' }
         };
 
         const subjectConfig = {
             '10': [
                 { id: 'computer-applications', name: 'Computer Applications', icon: 'fa-code' },
                 { id: 'history', name: 'History & Civics', icon: 'fa-timeline' },
-                { id: 'chemistry', name: 'Chemistry', icon: 'fa-timeline' }
+                { id: 'chemistry', name: 'Chemistry', icon: 'fa-timeline' },
+                { id: 'environmental-science', name: 'Environmental Science', icon: 'fa-tree' }
             ]
         };
 

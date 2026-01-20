@@ -156,10 +156,10 @@
     {
         "question": "Which compound is the simplest alkene?",
         "options": [
-            "Ethane",
+            "Butene",
             "Ethene",
-            "Propane",
-            "Methane"
+            "Propene",
+            "Methene"
         ],
         "answer": 1,
         "explanation": "Ethene (C<sub>2</sub>H<sub>4</sub>) is the simplest alkene."
