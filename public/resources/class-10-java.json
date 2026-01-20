@@ -759,17 +759,6 @@
 		"explanation": "do-while loop checks condition after execution, making it exit-controlled"
 	},
 	{
-		"question": "What is the output?\n```java\nint x = 10;\nSystem.out.println(x >> 1);\n```",
-		"options": [
-			"5",
-			"20",
-			"10",
-			"2"
-		],
-		"answer": 0,
-		"explanation": ">> is right shift operator. 10 >> 1 means 10 / 2^1 = 10 / 2 = 5"
-	},
-	{
 		"question": "Which of these is NOT a valid loop in Java?",
 		"options": [
 			"for loop",
@@ -790,17 +779,6 @@
 		],
 		"answer": 1,
 		"explanation": "length() counts all characters including space. 'Hello World' has 11 characters"
-	},
-	{
-		"question": "Which keyword is used to call parent class constructor?",
-		"options": [
-			"this",
-			"super",
-			"parent",
-			"base"
-		],
-		"answer": 1,
-		"explanation": "super() is used to call the parent class constructor"
 	},
 	{
 		"question": "What is the output?\n```java\nint a = 10;\nint b = ++a + a++;\nSystem.out.println(b);\n```",
@@ -1958,5 +1936,16 @@
       "Assertion is False and Reason is true"
     ],
     "answer": 0
+  },
+  {
+	"question": "```java\nchar[] c = {'a', 'b', '2', 'c', '6', '4'};```\nWhat will be the size of the array c?",
+	"options": [
+		"12 Bits",
+		"12 Bytes",
+		"24 Bits",
+		"24 Bytes"
+	],
+	"answer": 1,
+	"explanation": "Each char in Java occupies 2 bytes. With 6 characters, the total size is 6 * 2 = 12 bytes."
   }
 ]
