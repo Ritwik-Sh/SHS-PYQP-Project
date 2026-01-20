@@ -1486,7 +1486,7 @@
 		"explanation": "Prints 9, 8, skips 7 (continue), prints 6, then x=5 fails condition. Output: 9 8 6"
 	},
 	{
-		"question": "What will be the output of the following?\n```java\nfinal int a = 5;\na+= ++a;\nSystem.out.println(a++)",
+		"question": "What will be the output of the following?\n```java\nfinal int a = 5;\na+= ++a;\nSystem.out.println(a++)```",
 		"options": [
 			"10",
 			"11",
