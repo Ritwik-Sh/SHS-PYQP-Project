@@ -1527,8 +1527,8 @@
 	{
 		"question": "What will be the output?\n```java\nint[] a = {10, 20, 30};\nint[] b = a;\nb[0] = 50;\nSystem.out.println(a[0]);\n```",
 		"options": [
-			"50",
 			"10",
+			"50",
 			"Compilation error",
 			"ArrayIndexOutOfBoundsException"
 		],
