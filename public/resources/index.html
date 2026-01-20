@@ -41,21 +41,19 @@
 
         main {
             display: flex;
-            flex-direction: column;
             color: var(--text);
-            min-height: 75vh;
+            height: 84vb;
         }
 
         #left {
-            width: 100%;
+            width: 50vi;
+            height: 100%;
             display: flex;
             flex-wrap: wrap;
             text-align: center;
             justify-content: center;
             align-items: center;
-            overflow-y: auto;
-            padding: 40px 20px;
-            flex: 1;
+            overflow: scroll;
         }
 
         #back {
@@ -178,10 +176,10 @@
 
         footer {
             background: var(--secondary);
-            width: 90%;
-            margin: 20px auto;
+            width: 80vi;
+            margin-left: 9vi;
             border-radius: 16px;
-            padding: 20px;
+            padding: 1vi;
             text-align: center;
             color: var(--text);
         }
@@ -189,50 +187,123 @@
         footer > h1 {
             font-family: "Parisienne", cursive;
             font-weight: bolder;
-            font-size: 2rem;
-            margin-bottom: 10px;
         }
 
         footer a {
             color: white;
-            font-size: 2rem;
+            font-size: 3rem;
             text-decoration: none;
-            margin: 0 10px;
         }
 
         footer p {
             font-family: "Urbanist", sans-serif;
-            font-size: 0.95rem;
-            margin: 5px 0;
+        }
+
+        #logo {
+            width: 50vi;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        #logo-img {
+            height: 40vi;
+            width: 40vi;
+            border: 8vi solid var(--accent);
+            border-radius: 100vb;
+            margin-top: 10%;
+            margin-bottom: 5%;
+        }
+
+        .mobileOnly {
+            display: none;
+        }
+
+        .fillout-embed-popup-button-45122879619980 {
+            width: 50vi !important;
+            background: var(--secondary) !important;
+            border-radius: 16px !important
         }
 
         @media (max-width: 719px) {
+            #logo {
+                display: none;
+            }
+
+            body {
+                background: var(--bg);
+                text-align: center;
+            }
+
+            main {
+                flex-direction: column;
+            }
+
             #left {
+                height: 80vb;
+                display: flex;
+                flex-wrap: wrap;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                overflow: scroll;
                 width: 100%;
-                padding: 20px 10px;
+            }
+
+            #back {
+                display: none;
+                background: var(--secondary);
+                border: 2px solid var(--accent);
+                color: var(--text);
+                width: 72vi;
+                height: 8vi;
+                margin: 2vi;
+                transition: ease-in-out 100ms;
+                border-radius: 16px;
+                padding: 0.5vi;
+                cursor: pointer;
+            }
+
+            #back:hover {
+                scale: 1.2;
             }
 
             .classes, .quizzes {
+                background: var(--primary);
                 width: 32vi;
                 height: 32vi;
-                margin: 1.5vi;
+                margin: 2vi;
+                transition: ease-in-out 100ms;
+                border-radius: 16px;
+                padding: 0.5vi;
+                padding-top: 6vi;
+                padding-bottom: 1vi;
+                cursor: pointer;
+            }
+
+            .classes:hover, .quizzes:hover {
+                scale: 1.2;
             }
 
             .classes > h2 {
                 font-size: 8vi;
             }
 
-            #back {
-                width: 72vi;
-                height: 8vi;
-            }
-
             .quizzes > i {
-                scale: 2;
+                scale: 3;
+                margin-top: 30%;
             }
 
-            .quizzes > h3 {
-                font-size: 0.95rem;
+            footer {
+                background: var(--secondary);
+                width: 95vi;
+                margin-left: 0.8vi;
+                border-radius: 16px;
+                text-align: center;
+                color: var(--text);
+            }
+
+            .mobileOnly {
+                display: block;
             }
         }
     </style>
@@ -288,7 +359,20 @@
             </div>
 
         </div>
+        <div id="logo">
+            <img src="../logo.png" id="logo-img">
+            <div data-fillout-id="fomnXDhaxYus" data-fillout-embed-type="popup"
+                data-fillout-button-text="Contribute a Paper" data-fillout-dynamic-resize
+                data-fillout-button-color="#921E1C" data-fillout-inherit-parameters data-fillout-popup-size="medium">
+            </div>
+            <script src="https://server.fillout.com/embed/v1/"></script>
+        </div>
     </main>
+
+    <div class="mobileOnly" data-fillout-id="fomnXDhaxYus" data-fillout-embed-type="popup"
+        data-fillout-button-text="Contribute a Paper" data-fillout-dynamic-resize data-fillout-button-color="#921E1C"
+        data-fillout-inherit-parameters data-fillout-popup-size="medium"></div>
+    <script src="https://server.fillout.com/embed/v1/"></script>
 
     <footer>
         <a href="https://github.com/Ritwik-Sh/SHS-PYQP-Project" class="fa-brands fa-github"></a>
@@ -321,7 +405,7 @@
             '10': [
                 { id: 'computer-applications', name: 'Computer Applications', icon: 'fa-code' },
                 { id: 'history', name: 'History & Civics', icon: 'fa-timeline' },
-                { id: 'chemistry', name: 'Chemistry', icon: 'fa-timeline' },
+                { id: 'chemistry', name: 'Chemistry', icon: 'fa-flask' },
                 { id: 'environmental-science', name: 'Environmental Science', icon: 'fa-tree' }
             ]
         };

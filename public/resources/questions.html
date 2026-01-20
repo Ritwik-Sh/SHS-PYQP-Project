@@ -45,10 +45,18 @@
             flex-wrap: wrap;
         }
 
+        .header a#back-btn {
+            font-size: 1.5rem;
+            color: var(--text);
+            text-decoration: none;
+            
+        }
         .header h1 {
+            align-self: start;
             font-size: 1.5rem;
             font-weight: 500;
             color: var(--text);
+            margin-right: auto;
         }
 
         .header-actions {
@@ -269,6 +277,9 @@
         }
 
         button {
+        align-items: center;
+            display: flex;
+            gap: 10px;
             padding: 12px 24px;
             border: 1px solid rgba(147, 187, 234, 0.2);
             border-radius: 8px;
@@ -303,19 +314,23 @@
         /* Menu Overlay */
         .menu-overlay {
             position: fixed;
-            top: 0;
-            left: 0;
+            /* top: 0; */
             right: 0;
-            bottom: 0;
+            bottom: 100%;
+            width: 100vw;
+            height: 100vh;
             background: rgba(4, 11, 21, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
-            display: none;
+            /* display: none; */
             overflow-y: auto;
+            transition: all 0.1s ease;
         }
 
         .menu-overlay.active {
             display: block;
+            bottom: 0;
+            transition: all 0.1s ease;
         }
 
         .menu-content {
@@ -461,6 +476,7 @@
 <body>
     <div class="container">
         <div class="header">
+            <a id="back-btn" href="../resources/">↩</a>
             <h1>MCQ Quiz</h1>
             <div class="header-actions">
                 <button onclick="toggleMenu()">
