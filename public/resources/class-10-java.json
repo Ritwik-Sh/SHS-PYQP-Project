@@ -220,7 +220,7 @@
 		"explanation": "charAt(1) returns the character at index 1, which is 'e'"
 	},
 	{
-		"question": "What will be printed?\n```java\nint a = 5, b = 2;\nSystem.out.println(a / b);\nSystem.out.println((double) a / b);\n```",
+		"question": "What will be printed?\n```java\nint a = 5, b = 2;\nSystem.out.print(a / b);\nSystem.out.println(\" \" + (double) a / b);\n```",
 		"options": [
 			"2.5 2.5",
 			"2 2.5",
@@ -308,15 +308,15 @@
 		"explanation": "Parentheses () have the highest precedence among operators"
 	},
 	{
-		"question": "What will be the output?\n```java\nint a = 5, b = 10;\nSystem.out.println(a > b ? a : b);\n```",
+		"question": "What will be the output?\n```java\nint a = 5, b = 10;\nSystem.out.println(a++ > --b ? a : b--);\n```",
 		"options": [
 			"5",
-			"10",
-			"true",
+			"9",
+			"8",
 			"false"
 		],
 		"answer": 1,
-		"explanation": "a > b is false, so the ternary operator returns b which is 10"
+		"explanation": "a++ > --b is false (5 > 9 is false), so the ternary operator returns b which is 10"
 	},
 	{
 		"question": "Which method is used to find the length of a string?",
@@ -477,8 +477,8 @@
 		"options": [
 			"12345",
 			"1245",
-			"123",
-			"135"
+			"124",
+			"Error"
 		],
 		"answer": 1,
 		"explanation": "continue skips the current iteration when i==3, so 3 is not printed"
@@ -953,7 +953,7 @@
 			"5",
 			"6"
 		],
-		"answer": 1,
+		"answer": 0,
 		"explanation": "After replacing 's' with 'p', the string becomes \"Happinip\". indexOf('p', 3) starts searching from index 3 and finds 'p' at index 4."
 	},
 	{
@@ -1030,7 +1030,7 @@
 			"7",
 			"-1"
 		],
-		"answer": 1,
+		"answer": 0,
 		"explanation": "indexOf() returns the first occurrence of 'a' which is at index 6 (progr-a-mming)"
 	},
 	{
@@ -1165,24 +1165,26 @@
 		"answer": 2
 	},
 	{
-		"question": "What will be the output?\n```java\nchar ch = 'A';\nSystem.out.println(ch + 1);\n```",
+		"question": "What is the output?\n```java\nint sum = 0;\nfor(int i = 1; i <= 4; i++) {\n  for(int j = 1; j <= 2; j++) {\n    sum++;\n  }\n}\nSystem.out.println(sum);\n```",
 		"options": [
-			"A1",
-			"B",
-			"66",
-			"Compilation error"
+			"4",
+			"6",
+			"8",
+			"2"
 		],
-		"answer": 2
+		"answer": 2,
+		"explanation": "Outer loop runs 4 times, inner loop runs 2 times each. Total iterations = 4 * 2 = 8"
 	},
 	{
-		"question": "Which is NOT a primitive data type?",
+		"question": "What is the output?\n```java\nclass Parent {\n  int x = 10;\n}\nclass Child extends Parent {\n  int x = 20;\n  void show() {\n    System.out.println(x);\n    System.out.println(super.x);\n  }\n}\npublic static void main(String args[]) {\n  Child c = new Child();\n  c.show();\n}\n```",
 		"options": [
-			"int",
-			"boolean",
-			"String",
-			"char"
+			"10 10",
+			"20 20",
+			"20 10",
+			"10 20"
 		],
-		"answer": 2
+		"answer": 2,
+		"explanation": "x refers to Child's variable (20). super.x refers to Parent's variable (10)"
 	},
 	{
 		"question": "Which statement exits a loop immediately?",
@@ -1345,15 +1347,11 @@
 		"answer": 3,
 		"explanation": "float values need 'f' or 'F' suffix to be assigned (e.g., 5.0f)"
 	},
-	{
-		"question": "What will be the output?\n```java\nSystem.out.println(\"Java\" + 10 + 20);\n```",
-		"options": [
-			"Java1020",
-			"Java30",
-			"1020Java",
-			"Compilation error"
-		],
-		"answer": 0
+  {
+		"question": "What will be the output?\n```java\nString s1 = \"Java\";\nString s2 = \"Java\";\nif(s1.equals(s2))\n  System.out.println(\"Equal\");\nelse\n  System.out.println(\"Not Equal\");\n```",
+		"options": ["Equal", "Not Equal", "true", "false"],
+		"answer": 0,
+		"explanation": "equals() compares string content. Both strings contain 'Java', so they are equal"
 	},
 	{
 		"question": "Which variable is initialized only once?",
@@ -1466,24 +1464,26 @@
 		"answer": 2
 	},
 	{
-		"question": "What will be the output?\n```java\nSystem.out.println(10 == 10.0);\n```",
+		"question": "What will be the output?\n```java\nint a = 10, b = 5;\nint result = a > b ? a - b : a + b;\nSystem.out.println(result);\n```",
 		"options": [
-			"true",
-			"false",
-			"Compilation error",
-			"Runtime error"
+			"5",
+			"15",
+			"10",
+			"true"
 		],
-		"answer": 0
+		"answer": 0,
+		"explanation": "a > b is true, so ternary operator returns a - b = 10 - 5 = 5"
 	},
 	{
-		"question": "Which keyword stops inheritance?",
+		"question": "What is the result?\n```java\nint x = 10;\ndo {\n  x--;\n  if(x == 7) continue;\n  System.out.print(x + \" \");\n} while(x > 5);\n```",
 		"options": [
-			"static",
-			"private",
-			"final",
-			"abstract"
+			"9 8 6 5 ",
+			"9 8 7 6 5 ",
+			"9 8 6 ",
+			"10 9 8 7 6 5 "
 		],
-		"answer": 2
+		"answer": 2,
+		"explanation": "Prints 9, 8, skips 7 (continue), prints 6, then x=5 fails condition. Output: 9 8 6"
 	},
 	{
 		"question": "What will be the output of the following?\n```java\nfinal int a = 5;\na+= ++a;\nSystem.out.println(a++)",
