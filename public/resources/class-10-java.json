@@ -560,9 +560,14 @@
 		"answer": 2,
 		"explanation": "Abstract classes cannot be instantiated directly using new keyword"
 	},
-  {
+	{
 		"question": "What will be printed?\n```java\nint[] arr = {5, 3, 8, 1, 9};\nint max = arr[0];\nfor(int i = 1; i < arr.length; i++) {\n  if(arr[i] > max)\n    max = arr[i];\n}\nSystem.out.println(max);\n```",
-		"options": ["5", "8", "9", "1"],
+		"options": [
+			"5",
+			"8",
+			"9",
+			"1"
+		],
 		"answer": 2,
 		"explanation": "The code finds the maximum element in the array. Maximum is 9"
 	},
@@ -1342,9 +1347,14 @@
 		"answer": 3,
 		"explanation": "float values need 'f' or 'F' suffix to be assigned (e.g., 5.0f)"
 	},
-  {
+	{
 		"question": "What will be the output?\n```java\nString s1 = \"Java\";\nString s2 = \"Java\";\nif(s1.equals(s2))\n  System.out.println(\"Equal\");\nelse\n  System.out.println(\"Not Equal\");\n```",
-		"options": ["Equal", "Not Equal", "true", "false"],
+		"options": [
+			"Equal",
+			"Not Equal",
+			"true",
+			"false"
+		],
 		"answer": 0,
 		"explanation": "equals() compares string content. Both strings contain 'Java', so they are equal"
 	},
@@ -1366,7 +1376,7 @@
 			"13",
 			"No output"
 		],
-		"answer": 2
+		"answer": 1
 	},
 	{
 		"question": "What will be the output?\n```java\nchar c = 97;\nSystem.out.println(c);\n```",
@@ -1419,14 +1429,15 @@
 		"answer": 2
 	},
 	{
-		"question": "Which error occurs at runtime?",
+		"question": "What is the output?\n```java\nint n = 5, fact = 1;\nfor(int i = 1; i <= n; i++) {\n  fact *= i;\n}\nSystem.out.println(fact);\n```",
 		"options": [
-			"Syntax",
-			"Logical",
-			"Runtime",
-			"Compile-time"
+			"5",
+			"15",
+			"120",
+			"25"
 		],
-		"answer": 2
+		"answer": 2,
+		"explanation": "This calculates factorial of 5: 1*1*2*3*4*5 = 120"
 	},
 	{
 		"question": "What will be the output?\n```java\nint x = 5;\nx *= 3 + 2;\nSystem.out.println(x);\n```",
@@ -1472,9 +1483,9 @@
 	{
 		"question": "What is the result?\n```java\nint x = 10;\ndo {\n  x--;\n  if(x == 7) continue;\n  System.out.print(x + \" \");\n} while(x > 5);\n```",
 		"options": [
-			"9 8 6 5 ",
-			"9 8 7 6 5 ",
 			"9 8 6 ",
+			"9 8 7 6 5 ",
+			"9 8 6 5 ",
 			"10 9 8 7 6 5 "
 		],
 		"answer": 2,
@@ -1901,291 +1912,1356 @@
 		"explanation": "The literal 5.5 is treated as a double by default. Assigning it to a float variable without Explicit casting causes a compilation error."
 	},
 	{
-    "question": "What will be the output?\n```java\nint x = 10;\nint y = (x > 5) ? (x < 15 ? x : 15) : 5;\nSystem.out.println(y);\n```",
-    "options": ["5", "10", "15", "Compilation error"],
-    "answer": 1,
-    "explanation": "x > 5 is true, so evaluate second part. x < 15 is also true, so return x which is 10"
-  },
-  {
-    "question": "What is the output?\n```java\nString s = \"Programming\";\nint count = 0;\nfor(int i = 0; i < s.length(); i++) {\n  if(\"aeiou\".indexOf(s.charAt(i)) != -1)\n    count++;\n}\nSystem.out.println(count);\n```",
-    "options": ["2", "3", "4", "5"],
-    "answer": 1,
-    "explanation": "The code counts vowels: o, a, i = 3 vowels in 'Programming'"
-  },
-  {
-    "question": "What will be printed?\n```java\nint[] arr = {5, 2, 8, 1, 9};\nfor(int i = 0; i < arr.length - 1; i++) {\n  if(arr[i] > arr[i + 1]) {\n    int temp = arr[i];\n    arr[i] = arr[i + 1];\n    arr[i + 1] = temp;\n  }\n}\nSystem.out.println(arr[arr.length - 1]);\n```",
-    "options": ["1", "5", "8", "9"],
-    "answer": 3,
-    "explanation": "This performs one pass of bubble sort. The largest element (9) bubbles to the last position"
-  },
-  {
-    "question": "What is the result?\n```java\nclass Test {\n  void display(int x) { System.out.print(\"int \"); }\n  void display(Integer x) { System.out.print(\"Integer \"); }\n}\npublic static void main(String args[]) {\n  Test t = new Test();\n  t.display(5);\n}\n```",
-    "options": ["int ", "Integer ", "int Integer ", "Compilation error"],
-    "answer": 0,
-    "explanation": "5 is a primitive int literal, so the int version is called without autoboxing"
-  },
-  {
-    "question": "What will be the output?\n```java\nint a = 5, b = 10;\na = a ^ b;\nb = a ^ b;\na = a ^ b;\nSystem.out.println(a + \" \" + b);\n```",
-    "options": ["5 10", "10 5", "15 5", "Compilation error"],
-    "answer": 1,
-    "explanation": "This is the XOR swap trick. Values are swapped without a temp variable: a becomes 10, b becomes 5"
-  },
-  {
-    "question": "What is the output?\n```java\nString s = \"1234\";\nint sum = 0;\nfor(int i = 0; i < s.length(); i++) {\n  sum += Character.getNumericValue(s.charAt(i));\n}\nSystem.out.println(sum);\n```",
-    "options": ["1234", "10", "0", "Compilation error"],
-    "answer": 1,
-    "explanation": "getNumericValue converts each char to its numeric value: 1+2+3+4 = 10"
-  },
-  {
-    "question": "What will be printed?\n```java\nint x = 5;\nInteger y = x;\nInteger z = 5;\nSystem.out.println(y == z);\n```",
-    "options": ["true", "false", "Compilation error", "Runtime error"],
-    "answer": 0,
-    "explanation": "Integer caching: values -128 to 127 are cached. Both y and z refer to the same cached object"
-  },
-  {
-    "question": "What is the result?\n```java\nint[] arr = {10, 20, 30, 40};\nint temp = arr[0];\nfor(int i = 0; i < arr.length - 1; i++) {\n  arr[i] = arr[i + 1];\n}\narr[arr.length - 1] = temp;\nSystem.out.println(arr[0] + \" \" + arr[3]);\n```",
-    "options": ["10 10", "20 10", "10 40", "20 40"],
-    "answer": 1,
-    "explanation": "This is a left rotation. First element moves to last: arr becomes {20,30,40,10}"
-  },
-  {
-    "question": "What will be the output?\n```java\nString s1 = \"hello\";\nString s2 = \"HELLO\";\nSystem.out.println(s1.equalsIgnoreCase(s2));\n```",
-    "options": ["true", "false", "hello", "HELLO"],
-    "answer": 0,
-    "explanation": "equalsIgnoreCase() compares strings without considering case differences, returns true"
-  },
-  {
-    "question": "What is the output?\n```java\nint count = 0;\nfor(int i = 1; i <= 100; i++) {\n  if(i % 3 == 0 && i % 5 == 0)\n    count++;\n}\nSystem.out.println(count);\n```",
-    "options": ["6", "33", "20", "7"],
-    "answer": 0,
-    "explanation": "Counts numbers divisible by both 3 and 5 (i.e., divisible by 15): 15,30,45,60,75,90 = 6 numbers"
-  },
-  {
-    "question": "What will be printed?\n```java\nclass A {\n  int x = 10;\n}\nclass B extends A {\n  int x = 20;\n}\npublic static void main(String args[]) {\n  A obj = new B();\n  System.out.println(obj.x);\n}\n```",
-    "options": ["10", "20", "30", "Compilation error"],
-    "answer": 0,
-    "explanation": "Variable hiding, not overriding. Reference type (A) determines which variable is accessed, so 10"
-  },
-  {
-    "question": "What is the result?\n```java\nint[] a = {1, 2, 3};\nint[] b = a.clone();\nb[0] = 10;\nSystem.out.println(a[0]);\n```",
-    "options": ["1", "10", "Compilation error", "Runtime error"],
-    "answer": 0,
-    "explanation": "clone() creates a shallow copy for arrays. b is a new array, so changing b doesn't affect a"
-  },
-  {
-    "question": "What will be the output?\n```java\nString s = \"abcdef\";\nStringBuilder sb = new StringBuilder(s);\nsb.reverse();\nSystem.out.println(s);\n```",
-    "options": ["abcdef", "fedcba", "Compilation error", "Runtime error"],
-    "answer": 0,
-    "explanation": "String s is immutable and unchanged. Only StringBuilder sb is reversed, not the original string"
-  },
-  {
-    "question": "What is the output?\n```java\nint x = 10;\nswitch(x) {\n  default: System.out.print(\"Default \");\n  case 5: System.out.print(\"Five \");\n  case 10: System.out.print(\"Ten\");\n}\n```",
-    "options": ["Ten", "Default Five Ten", "Default Ten", "Five Ten"],
-    "answer": 1,
-    "explanation": "Matches case 10, but executes from default first (placed before), then falls through: Default Five Ten"
-  },
-  {
-    "question": "What will be printed?\n```java\nint[] arr = {5, 10, 15, 20, 25};\nint x = arr[2];\narr[2] = arr[4];\narr[4] = x;\nSystem.out.println(arr[2] + \" \" + arr[4]);\n```",
-    "options": ["15 25", "25 15", "15 15", "25 25"],
-    "answer": 1,
-    "explanation": "Swaps arr[2] and arr[4]: 15 and 25 are swapped, so arr[2]=25 and arr[4]=15"
-  },
-  {
-    "question": "What is the result?\n```java\nString s = \"Java\";\nchar[] ch = s.toCharArray();\nch[0] = 'P';\nSystem.out.println(s);\n```",
-    "options": ["Pava", "Java", "Compilation error", "Runtime error"],
-    "answer": 1,
-    "explanation": "toCharArray() creates a new array. Modifying the array doesn't change the original immutable string"
-  },
-  {
-    "question": "What will be the output?\n```java\nint result = 0;\nfor(int i = 1; i <= 5; i++) {\n  result = i % 2 == 0 ? result + i : result - i;\n}\nSystem.out.println(result);\n```",
-    "options": ["-3", "3", "0", "15"],
-    "answer": 0,
-    "explanation": "Loop: -1 (i=1), +1 (i=2), -2 (i=3), +2 (i=4), -3 (i=5). Final result = -3"
-  },
-  {
-    "question": "What is the output?\n```java\nclass Test {\n  static {\n    System.out.print(\"Static \");\n  }\n  Test() {\n    System.out.print(\"Constructor \");\n  }\n}\npublic static void main(String args[]) {\n  Test t1 = new Test();\n  Test t2 = new Test();\n}\n```",
-    "options": ["Static Constructor Constructor ", "Constructor Constructor Static ", "Static Static Constructor Constructor ", "Constructor Static Constructor Static "],
-    "answer": 0,
-    "explanation": "Static block executes once when class loads, then constructor for each object: Static Constructor Constructor"
-  },
-  {
-    "question": "What will be printed?\n```java\nint[] arr = {3, 1, 4, 1, 5};\nint unique = 0;\nfor(int i = 0; i < arr.length; i++) {\n  boolean found = false;\n  for(int j = 0; j < arr.length; j++) {\n    if(i != j && arr[i] == arr[j]) {\n      found = true;\n      break;\n    }\n  }\n  if(!found) unique++;\n}\nSystem.out.println(unique);\n```",
-    "options": ["2", "3", "4", "5"],
-    "answer": 1,
-    "explanation": "Counts unique elements (appear only once): 3, 4, 5 are unique. 1 appears twice. Count = 3"
-  },
-  {
-    "question": "What is the result?\n```java\nString s1 = \"abc\";\nString s2 = \"def\";\ns1.concat(s2);\nSystem.out.println(s1.length());\n```",
-    "options": ["3", "6", "Compilation error", "Runtime error"],
-    "answer": 0,
-    "explanation": "concat() returns a new string but result isn't assigned. s1 remains 'abc' with length 3"
-  },
-  {
-    "question": "What will be the output?\n```java\nint[][] mat = {{1,2},{3,4},{5,6}};\nint sum = 0;\nfor(int i = 0; i < mat.length; i++) {\n  sum += mat[i][0];\n}\nSystem.out.println(sum);\n```",
-    "options": ["6", "9", "15", "21"],
-    "answer": 1,
-    "explanation": "Sums first column elements: mat[0][0]=1, mat[1][0]=3, mat[2][0]=5. Sum = 9"
-  },
-  {
-    "question": "What is the output?\n```java\nboolean a = true;\nboolean b = false;\nboolean c = a || (b = true);\nSystem.out.println(b);\n```",
-    "options": ["true", "false", "Compilation error", "Runtime error"],
-    "answer": 1,
-    "explanation": "Short-circuit: a is true, so (b = true) is never evaluated. b remains false"
-  },
-  {
-    "question": "What will be printed?\n```java\nString s = \"Hello World\";\nString[] words = s.split(\" \");\nfor(int i = words.length - 1; i >= 0; i--) {\n  System.out.print(words[i] + \" \");\n}\n```",
-    "options": ["World Hello ", "Hello World ", "dlroW olleH ", "Compilation error"],
-    "answer": 0,
-    "explanation": "Splits into ['Hello', 'World'], then prints in reverse order: World Hello"
-  },
-  {
-    "question": "What is the result?\n```java\nint x = 100;\nint y = 200;\nint z = (x > y) ? x++ : y++;\nSystem.out.println(x + \" \" + y + \" \" + z);\n```",
-    "options": ["100 200 200", "100 201 200", "101 200 100", "100 200 100"],
-    "answer": 1,
-    "explanation": "x > y is false, so y++ is evaluated. z gets 200, then y becomes 201. Output: 100 201 200"
-  },
-  {
-    "question": "What will be the output?\n```java\nclass Animal {\n  void sound() { System.out.print(\"Animal \"); }\n}\nclass Dog extends Animal {\n  void sound() { System.out.print(\"Bark \"); }\n  void display() { \n    sound();\n    super.sound();\n  }\n}\npublic static void main(String args[]) {\n  Dog d = new Dog();\n  d.display();\n}\n```",
-    "options": ["Bark Animal ", "Animal Bark ", "Bark Bark ", "Animal Animal "],
-    "answer": 0,
-    "explanation": "sound() calls overridden method (Bark), super.sound() calls parent method (Animal)"
-  },
-  {
-    "question": "What is the output?\n```java\nint sum = 0;\nfor(int i = 10; i > 0; i /= 2) {\n  sum += i;\n}\nSystem.out.println(sum);\n```",
-    "options": ["15", "19", "10", "31"],
-    "answer": 1,
-    "explanation": "Loop with i values: 10, 5, 2, 1. Sum = 10+5+2+1 = 18. Wait, let me recalculate: 10+5+2+1 = 18. Actually with integer division: i=10, i=5 (10/2), i=2 (5/2), i=1 (2/2), i=0 (1/2). Sum = 10+5+2+1 = 18. Hmm, I need to verify this."
-  },
-  {
-    "question": "What will be printed?\n```java\nString s = \"aabbcc\";\nint count = 1;\nfor(int i = 1; i < s.length(); i++) {\n  if(s.charAt(i) != s.charAt(i-1))\n    count++;\n}\nSystem.out.println(count);\n```",
-    "options": ["1", "2", "3", "6"],
-    "answer": 2,
-    "explanation": "Counts distinct consecutive groups: 'aa', 'bb', 'cc' = 3 groups"
-  },
-  {
-    "question": "What is the result?\n```java\nint[] arr = {1, 2, 3, 4, 5};\nfor(int i = 0; i < arr.length / 2; i++) {\n  int temp = arr[i];\n  arr[i] = arr[arr.length - 1 - i];\n  arr[arr.length - 1 - i] = temp;\n}\nSystem.out.println(arr[0] + \" \" + arr[4]);\n```",
-    "options": ["1 5", "5 1", "3 3", "Compilation error"],
-    "answer": 1,
-    "explanation": "This reverses the array. First and last are swapped: arr becomes {5,4,3,2,1}"
-  },
-  {
-    "question": "What will be the output?\n```java\nclass Test {\n  int x;\n  Test(int x) {\n    x = x;\n  }\n}\npublic static void main(String args[]) {\n  Test t = new Test(10);\n  System.out.println(t.x);\n}\n```",
-    "options": ["10", "0", "Compilation error", "Runtime error"],
-    "answer": 1,
-    "explanation": "Without 'this', x = x assigns parameter to itself. Instance variable remains 0 (default value)"
-  },
-  {
-    "question": "What is the output?\n```java\nString s = \"12345\";\nint sum = 0;\nfor(char c : s.toCharArray()) {\n  sum += (c - '0');\n}\nSystem.out.println(sum);\n```",
-    "options": ["12345", "15", "5", "Compilation error"],
-    "answer": 1,
-    "explanation": "(c - '0') converts char digit to int. Sum = 1+2+3+4+5 = 15"
-  },
-  {
-    "question": "What will be printed?\n```java\nint x = 5;\nint y = 10;\nif(x++ > 5 || ++y > 10) {\n  System.out.println(x + \" \" + y);\n} else {\n  System.out.println(x + \" \" + y);\n}\n```",
-    "options": ["5 10", "6 10", "6 11", "5 11"],
-    "answer": 2,
-    "explanation": "x++ > 5 is false (uses 5, x becomes 6). ++y > 10 is evaluated (y becomes 11, true). Both modified: 6 11"
-  },
-  {
-    "question": "What is the result?\n```java\nString s = \"racecar\";\nboolean isPalindrome = true;\nfor(int i = 0; i < s.length() / 2; i++) {\n  if(s.charAt(i) != s.charAt(s.length() - 1 - i)) {\n    isPalindrome = false;\n    break;\n  }\n}\nSystem.out.println(isPalindrome);\n```",
-    "options": ["true", "false", "racecar", "Compilation error"],
-    "answer": 0,
-    "explanation": "Checks if string is palindrome. 'racecar' reads same forwards and backwards, so true"
-  },
-  {
-    "question": "What will be the output?\n```java\nint[] arr = {5, 5, 5, 5};\nboolean allSame = true;\nfor(int i = 1; i < arr.length; i++) {\n  if(arr[i] != arr[0]) {\n    allSame = false;\n    break;\n  }\n}\nSystem.out.println(allSame);\n```",
-    "options": ["true", "false", "5", "Compilation error"],
-    "answer": 0,
-    "explanation": "Checks if all elements are same. All elements are 5, so returns true"
-  },
-  {
-    "question": "What is the output?\n```java\nString s1 = \"Java\";\nString s2 = new String(\"Java\");\nString s3 = s2;\nSystem.out.println(s2 == s3);\nSystem.out.println(s1 == s2);\n```",
-    "options": ["true true", "true false", "false true", "false false"],
-    "answer": 1,
-    "explanation": "s2 == s3 is true (same reference). s1 == s2 is false (different objects - pool vs heap)"
-  },
-  {
-    "question": "What will be printed?\n```java\nint count = 0;\nfor(int i = 1; i <= 20; i++) {\n  if(i % 2 == 0 || i % 5 == 0)\n    count++;\n}\nSystem.out.println(count);\n```",
-    "options": ["10", "12", "14", "16"],
-    "answer": 2,
-    "explanation": "Counts numbers divisible by 2 OR 5: evens(10) + 5,15(not counted as even already) = 14"
-  },
-  {
-    "question": "What is the result?\n```java\nclass Box {\n  int length;\n  Box(int l) { length = l; }\n}\npublic static void main(String args[]) {\n  Box b1 = new Box(5);\n  Box b2 = new Box(5);\n  System.out.println(b1.length == b2.length);\n  System.out.println(b1 == b2);\n}\n```",
-    "options": ["true true", "true false", "false true", "false false"],
-    "answer": 1,
-    "explanation": "b1.length == b2.length compares values (true). b1 == b2 compares references (false - different objects)"
-  },
-  {
-    "question": "What will be the output?\n```java\nString s = \"Hello\";\nfor(int i = 0; i < s.length(); i++) {\n  if(i % 2 == 0)\n    System.out.print(s.charAt(i));\n}\n```",
-    "options": ["Hlo", "ell", "Hello", "el"],
-    "answer": 0,
-    "explanation": "Prints characters at even indices (0,2,4): H(0), l(2), o(4) = Hlo"
-  },
-  {
-    "question": "What is the output?\n```java\nint[] a = {10, 20, 30};\nint[] b = {10, 20, 30};\nboolean same = true;\nif(a.length != b.length) {\n  same = false;\n} else {\n  for(int i = 0; i < a.length; i++) {\n    if(a[i] != b[i]) {\n      same = false;\n      break;\n    }\n  }\n}\nSystem.out.println(same);\n```",
-    "options": ["true", "false", "Compilation error", "Runtime error"],
-    "answer": 0,
-    "explanation": "Compares array contents element by element. All elements match, so true"
-  },
-  {
-    "question": "What will be printed?\n```java\nString s = \"Programming\";\nint pos = s.indexOf('m');\nSystem.out.println(s.substring(pos));\n```",
-    "options": ["Programming", "gramming", "mming", "ming"],
-    "answer": 2,
-    "explanation": "indexOf('m') returns 6 (first 'm'). substring(6) extracts from index 6 to end: 'mming'"
-  },
-  {
-    "question": "What is the result?\n```java\nint x = 0;\nfor(int i = 0; i < 5; i++) {\n  x += i;\n  if(x > 5) break;\n}\nSystem.out.println(x);\n```",
-    "options": ["5", "6", "10", "3"],
-    "answer": 1,
-    "explanation": "Loop: x=0, x=1, x=3, x=6 (>5, breaks). Final x = 6"
-  },
-  {
-    "question": "What will be the output?\n```java\nclass A {\n  void show() { System.out.print(\"A\"); }\n}\nclass B extends A {\n  void show() { System.out.print(\"B\"); }\n  void display() { \n    this.show();\n  }\n}\npublic static void main(String args[]) {\n  B obj = new B();\n  obj.display();\n}\n```",
-    "options": ["A", "B", "AB", "Compilation error"],
-    "answer": 1,
-    "explanation": "this.show() calls the current object's (B) overridden method, printing 'B'"
-  },
-  {
-    "question": "What is the output?\n```java\nint[] arr = new int[5];\nfor(int i = 0; i < arr.length; i++) {\n  arr[i] = i * 2;\n}\nSystem.out.println(arr[3]);\n```",
-    "options": ["3", "6", "5", "0"],
-    "answer": 1,
-    "explanation": "arr[3] = 3 * 2 = 6"
-  },
-  {
-    "question": "What will be printed?\n```java\nString s = \"abcabc\";\nint first = s.indexOf('b');\nint last = s.lastIndexOf('b');\nSystem.out.println(last - first);\n```",
-    "options": ["0", "3", "4", "5"],
-    "answer": 1,
-    "explanation": "First 'b' at index 1, last 'b' at index 4. Difference = 4 - 1 = 3"
-  },
-  {
-    "question": "What is the result?\n```java\nboolean found = false;\nfor(int i = 1; i <= 10; i++) {\n  if(i * i == 49) {\n    found = true;\n    break;\n  }\n}\nSystem.out.println(found);\n```",
-    "options": ["true", "false", "49", "7"],
-    "answer": 1,
-    "explanation": "Searches for perfect square of 49 in range 1-10. 7*7=49 but 7 is not in the loop range, so false"
-  },
-  {
-    "question": "What will be the output?\n```java\nString s = \"Hello\";\nString result = \"\";\nfor(int i = s.length() - 1; i >= 0; i--) {\n  result = result + s.charAt(i);\n}\nSystem.out.println(result.equals(s));\n```",
-    "options": ["true", "false", "Hello", "olleH"],
-    "answer": 1,
-    "explanation": "result is reversed 'olleH'. Comparing with original 'Hello' returns false"
-  },
-  {
-    "question": "What is the output?\n```java\nint[][] arr = new int[3][2];\nfor(int i = 0; i < 3; i++) {\n  for(int j = 0; j < 2; j++) {\n    arr[i][j] = i + j;\n  }\n}\nSystem.out.println(arr[2][1]);\n```",
-    "options": ["1", "2", "3", "4"],
-    "answer": 2,
-    "explanation": "arr[2][1] = 2 + 1 = 3"
-  },
-  {
-    "question": "What will be printed?\n```java\nString s1 = \"Test\";\nString s2 = s1.toLowerCase();\nString s3 = s2.toUpperCase();\nSystem.out.println(s1 == s3);\nSystem.out.println(s1.equals(s3));\n```",
-    "options": ["true true", "true false", "false true", "false false"],
-    "answer": 2,
-    "explanation": "s1 == s3 is false (different objects). s1.equals(s3) is true (same content 'Test')"
-  },
-  {
-    "question": "What is the result?\n```java\nint product = 1;\nfor(int i = 1; i <= 5; i++) {\n  if(i == 3) continue;\n  product *= i;\n}\nSystem.out.println(product);\n```",
-    "options": ["120", "40", "24", "60"],
-    "answer": 1,
-    "explanation": "Multiplies 1*2*4*5 (skips 3) = 40"
-  }
+		"question": "What will be the output?\n```java\nint x = 10;\nint y = (x > 5) ? (x < 15 ? x : 15) : 5;\nSystem.out.println(y);\n```",
+		"options": [
+			"5",
+			"10",
+			"15",
+			"Compilation error"
+		],
+		"answer": 1,
+		"explanation": "x > 5 is true, so evaluate second part. x < 15 is also true, so return x which is 10"
+	},
+	{
+		"question": "What is the output?\n```java\nString s = \"Programming\";\nint count = 0;\nfor(int i = 0; i < s.length(); i++) {\n  if(\"aeiou\".indexOf(s.charAt(i)) != -1)\n    count++;\n}\nSystem.out.println(count);\n```",
+		"options": [
+			"2",
+			"3",
+			"4",
+			"5"
+		],
+		"answer": 1,
+		"explanation": "The code counts vowels: o, a, i = 3 vowels in 'Programming'"
+	},
+	{
+		"question": "What will be printed?\n```java\nint[] arr = {5, 2, 8, 1, 9};\nfor(int i = 0; i < arr.length - 1; i++) {\n  if(arr[i] > arr[i + 1]) {\n    int temp = arr[i];\n    arr[i] = arr[i + 1];\n    arr[i + 1] = temp;\n  }\n}\nSystem.out.println(arr[arr.length - 1]);\n```",
+		"options": [
+			"1",
+			"5",
+			"8",
+			"9"
+		],
+		"answer": 3,
+		"explanation": "This performs one pass of bubble sort. The largest element (9) bubbles to the last position"
+	},
+	{
+		"question": "What is the result?\n```java\nclass Test {\n  void display(int x) { System.out.print(\"int \"); }\n  void display(Integer x) { System.out.print(\"Integer \"); }\n}\npublic static void main(String args[]) {\n  Test t = new Test();\n  t.display(5);\n}\n```",
+		"options": [
+			"int ",
+			"Integer ",
+			"int Integer ",
+			"Compilation error"
+		],
+		"answer": 0,
+		"explanation": "5 is a primitive int literal, so the int version is called without autoboxing"
+	},
+	{
+		"question": "What will be the output?\n```java\nint a = 5, b = 10;\na = a ^ b;\nb = a ^ b;\na = a ^ b;\nSystem.out.println(a + \" \" + b);\n```",
+		"options": [
+			"5 10",
+			"10 5",
+			"15 5",
+			"Compilation error"
+		],
+		"answer": 1,
+		"explanation": "This is the XOR swap trick. Values are swapped without a temp variable: a becomes 10, b becomes 5"
+	},
+	{
+		"question": "What is the output?\n```java\nString s = \"1234\";\nint sum = 0;\nfor(int i = 0; i < s.length(); i++) {\n  sum += Character.getNumericValue(s.charAt(i));\n}\nSystem.out.println(sum);\n```",
+		"options": [
+			"1234",
+			"10",
+			"0",
+			"Compilation error"
+		],
+		"answer": 1,
+		"explanation": "getNumericValue converts each char to its numeric value: 1+2+3+4 = 10"
+	},
+	{
+		"question": "What will be printed?\n```java\nint x = 5;\nInteger y = x;\nInteger z = 5;\nSystem.out.println(y == z);\n```",
+		"options": [
+			"true",
+			"false",
+			"Compilation error",
+			"Runtime error"
+		],
+		"answer": 0,
+		"explanation": "Integer caching: values -128 to 127 are cached. Both y and z refer to the same cached object"
+	},
+	{
+		"question": "What is the result?\n```java\nint[] arr = {10, 20, 30, 40};\nint temp = arr[0];\nfor(int i = 0; i < arr.length - 1; i++) {\n  arr[i] = arr[i + 1];\n}\narr[arr.length - 1] = temp;\nSystem.out.println(arr[0] + \" \" + arr[3]);\n```",
+		"options": [
+			"10 10",
+			"20 10",
+			"10 40",
+			"20 40"
+		],
+		"answer": 1,
+		"explanation": "This is a left rotation. First element moves to last: arr becomes {20,30,40,10}"
+	},
+	{
+		"question": "What will be the output?\n```java\nString s1 = \"hello\";\nString s2 = \"HELLO\";\nSystem.out.println(s1.equalsIgnoreCase(s2));\n```",
+		"options": [
+			"true",
+			"false",
+			"hello",
+			"HELLO"
+		],
+		"answer": 0,
+		"explanation": "equalsIgnoreCase() compares strings without considering case differences, returns true"
+	},
+	{
+		"question": "What is the output?\n```java\nint count = 0;\nfor(int i = 1; i <= 100; i++) {\n  if(i % 3 == 0 && i % 5 == 0)\n    count++;\n}\nSystem.out.println(count);\n```",
+		"options": [
+			"6",
+			"33",
+			"20",
+			"7"
+		],
+		"answer": 0,
+		"explanation": "Counts numbers divisible by both 3 and 5 (i.e., divisible by 15): 15,30,45,60,75,90 = 6 numbers"
+	},
+	{
+		"question": "What will be printed?\n```java\nclass A {\n  int x = 10;\n}\nclass B extends A {\n  int x = 20;\n}\npublic static void main(String args[]) {\n  A obj = new B();\n  System.out.println(obj.x);\n}\n```",
+		"options": [
+			"10",
+			"20",
+			"30",
+			"Compilation error"
+		],
+		"answer": 0,
+		"explanation": "Variable hiding, not overriding. Reference type (A) determines which variable is accessed, so 10"
+	},
+	{
+		"question": "What is the result?\n```java\nint[] a = {1, 2, 3};\nint[] b = a.clone();\nb[0] = 10;\nSystem.out.println(a[0]);\n```",
+		"options": [
+			"1",
+			"10",
+			"Compilation error",
+			"Runtime error"
+		],
+		"answer": 0,
+		"explanation": "clone() creates a shallow copy for arrays. b is a new array, so changing b doesn't affect a"
+	},
+	{
+		"question": "What will be the output?\n```java\nString s = \"abcdef\";\nStringBuilder sb = new StringBuilder(s);\nsb.reverse();\nSystem.out.println(s);\n```",
+		"options": [
+			"abcdef",
+			"fedcba",
+			"Compilation error",
+			"Runtime error"
+		],
+		"answer": 0,
+		"explanation": "String s is immutable and unchanged. Only StringBuilder sb is reversed, not the original string"
+	},
+	{
+		"question": "What is the output?\n```java\nint x = 10;\nswitch(x) {\n  default: System.out.print(\"Default \");\n  case 5: System.out.print(\"Five \");\n  case 10: System.out.print(\"Ten\");\n}\n```",
+		"options": [
+			"Ten",
+			"Default Five Ten",
+			"Default Ten",
+			"Five Ten"
+		],
+		"answer": 1,
+		"explanation": "Matches case 10, but executes from default first (placed before), then falls through: Default Five Ten"
+	},
+	{
+		"question": "What will be printed?\n```java\nint[] arr = {5, 10, 15, 20, 25};\nint x = arr[2];\narr[2] = arr[4];\narr[4] = x;\nSystem.out.println(arr[2] + \" \" + arr[4]);\n```",
+		"options": [
+			"15 25",
+			"25 15",
+			"15 15",
+			"25 25"
+		],
+		"answer": 1,
+		"explanation": "Swaps arr[2] and arr[4]: 15 and 25 are swapped, so arr[2]=25 and arr[4]=15"
+	},
+	{
+		"question": "What is the result?\n```java\nString s = \"Java\";\nchar[] ch = s.toCharArray();\nch[0] = 'P';\nSystem.out.println(s);\n```",
+		"options": [
+			"Pava",
+			"Java",
+			"Compilation error",
+			"Runtime error"
+		],
+		"answer": 1,
+		"explanation": "toCharArray() creates a new array. Modifying the array doesn't change the original immutable string"
+	},
+	{
+		"question": "What will be the output?\n```java\nint result = 0;\nfor(int i = 1; i <= 5; i++) {\n  result = i % 2 == 0 ? result + i : result - i;\n}\nSystem.out.println(result);\n```",
+		"options": [
+			"-3",
+			"3",
+			"0",
+			"15"
+		],
+		"answer": 0,
+		"explanation": "Loop: -1 (i=1), +1 (i=2), -2 (i=3), +2 (i=4), -3 (i=5). Final result = -3"
+	},
+	{
+		"question": "What is the output?\n```java\nclass Test {\n  static {\n    System.out.print(\"Static \");\n  }\n  Test() {\n    System.out.print(\"Constructor \");\n  }\n}\npublic static void main(String args[]) {\n  Test t1 = new Test();\n  Test t2 = new Test();\n}\n```",
+		"options": [
+			"Static Constructor Constructor ",
+			"Constructor Constructor Static ",
+			"Static Static Constructor Constructor ",
+			"Constructor Static Constructor Static "
+		],
+		"answer": 0,
+		"explanation": "Static block executes once when class loads, then constructor for each object: Static Constructor Constructor"
+	},
+	{
+		"question": "What will be printed?\n```java\nint[] arr = {3, 1, 4, 1, 5};\nint unique = 0;\nfor(int i = 0; i < arr.length; i++) {\n  boolean found = false;\n  for(int j = 0; j < arr.length; j++) {\n    if(i != j && arr[i] == arr[j]) {\n      found = true;\n      break;\n    }\n  }\n  if(!found) unique++;\n}\nSystem.out.println(unique);\n```",
+		"options": [
+			"2",
+			"3",
+			"4",
+			"5"
+		],
+		"answer": 1,
+		"explanation": "Counts unique elements (appear only once): 3, 4, 5 are unique. 1 appears twice. Count = 3"
+	},
+	{
+		"question": "What is the result?\n```java\nString s1 = \"abc\";\nString s2 = \"def\";\ns1.concat(s2);\nSystem.out.println(s1.length());\n```",
+		"options": [
+			"3",
+			"6",
+			"Compilation error",
+			"Runtime error"
+		],
+		"answer": 0,
+		"explanation": "concat() returns a new string but result isn't assigned. s1 remains 'abc' with length 3"
+	},
+	{
+		"question": "What will be the output?\n```java\nint[][] mat = {{1,2},{3,4},{5,6}};\nint sum = 0;\nfor(int i = 0; i < mat.length; i++) {\n  sum += mat[i][0];\n}\nSystem.out.println(sum);\n```",
+		"options": [
+			"6",
+			"9",
+			"15",
+			"21"
+		],
+		"answer": 1,
+		"explanation": "Sums first column elements: mat[0][0]=1, mat[1][0]=3, mat[2][0]=5. Sum = 9"
+	},
+	{
+		"question": "What is the output?\n```java\nboolean a = true;\nboolean b = false;\nboolean c = a || (b = true);\nSystem.out.println(b);\n```",
+		"options": [
+			"true",
+			"false",
+			"Compilation error",
+			"Runtime error"
+		],
+		"answer": 1,
+		"explanation": "Short-circuit: a is true, so (b = true) is never evaluated. b remains false"
+	},
+	{
+		"question": "What will be printed?\n```java\nString s = \"Hello World\";\nString[] words = s.split(\" \");\nfor(int i = words.length - 1; i >= 0; i--) {\n  System.out.print(words[i] + \" \");\n}\n```",
+		"options": [
+			"World Hello ",
+			"Hello World ",
+			"dlroW olleH ",
+			"Compilation error"
+		],
+		"answer": 0,
+		"explanation": "Splits into ['Hello', 'World'], then prints in reverse order: World Hello"
+	},
+	{
+		"question": "What is the result?\n```java\nint x = 100;\nint y = 200;\nint z = (x > y) ? x++ : y++;\nSystem.out.println(x + \" \" + y + \" \" + z);\n```",
+		"options": [
+			"100 200 200",
+			"100 201 200",
+			"101 200 100",
+			"100 200 100"
+		],
+		"answer": 1,
+		"explanation": "x > y is false, so y++ is evaluated. z gets 200, then y becomes 201. Output: 100 201 200"
+	},
+	{
+		"question": "What will be the output?\n```java\nclass Animal {\n  void sound() { System.out.print(\"Animal \"); }\n}\nclass Dog extends Animal {\n  void sound() { System.out.print(\"Bark \"); }\n  void display() { \n    sound();\n    super.sound();\n  }\n}\npublic static void main(String args[]) {\n  Dog d = new Dog();\n  d.display();\n}\n```",
+		"options": [
+			"Bark Animal ",
+			"Animal Bark ",
+			"Bark Bark ",
+			"Animal Animal "
+		],
+		"answer": 0,
+		"explanation": "sound() calls overridden method (Bark), super.sound() calls parent method (Animal)"
+	},
+	{
+		"question": "What is the output?\n```java\nint sum = 0;\nfor(int i = 10; i > 0; i /= 2) {\n  sum += i;\n}\nSystem.out.println(sum);\n```",
+		"options": [
+			"15",
+			"19",
+			"10",
+			"31"
+		],
+		"answer": 1,
+		"explanation": "Loop with i values: 10, 5, 2, 1. Sum = 10+5+2+1 = 18. Wait, let me recalculate: 10+5+2+1 = 18. Actually with integer division: i=10, i=5 (10/2), i=2 (5/2), i=1 (2/2), i=0 (1/2). Sum = 10+5+2+1 = 18. Hmm, I need to verify this."
+	},
+	{
+		"question": "What will be printed?\n```java\nString s = \"aabbcc\";\nint count = 1;\nfor(int i = 1; i < s.length(); i++) {\n  if(s.charAt(i) != s.charAt(i-1))\n    count++;\n}\nSystem.out.println(count);\n```",
+		"options": [
+			"1",
+			"2",
+			"3",
+			"6"
+		],
+		"answer": 2,
+		"explanation": "Counts distinct consecutive groups: 'aa', 'bb', 'cc' = 3 groups"
+	},
+	{
+		"question": "What is the result?\n```java\nint[] arr = {1, 2, 3, 4, 5};\nfor(int i = 0; i < arr.length / 2; i++) {\n  int temp = arr[i];\n  arr[i] = arr[arr.length - 1 - i];\n  arr[arr.length - 1 - i] = temp;\n}\nSystem.out.println(arr[0] + \" \" + arr[4]);\n```",
+		"options": [
+			"1 5",
+			"5 1",
+			"3 3",
+			"Compilation error"
+		],
+		"answer": 1,
+		"explanation": "This reverses the array. First and last are swapped: arr becomes {5,4,3,2,1}"
+	},
+	{
+		"question": "What will be the output?\n```java\nclass Test {\n  int x;\n  Test(int x) {\n    x = x;\n  }\n}\npublic static void main(String args[]) {\n  Test t = new Test(10);\n  System.out.println(t.x);\n}\n```",
+		"options": [
+			"10",
+			"0",
+			"Compilation error",
+			"Runtime error"
+		],
+		"answer": 1,
+		"explanation": "Without 'this', x = x assigns parameter to itself. Instance variable remains 0 (default value)"
+	},
+	{
+		"question": "What is the output?\n```java\nString s = \"12345\";\nint sum = 0;\nfor(char c : s.toCharArray()) {\n  sum += (c - '0');\n}\nSystem.out.println(sum);\n```",
+		"options": [
+			"12345",
+			"15",
+			"5",
+			"Compilation error"
+		],
+		"answer": 1,
+		"explanation": "(c - '0') converts char digit to int. Sum = 1+2+3+4+5 = 15"
+	},
+	{
+		"question": "What will be printed?\n```java\nint x = 5;\nint y = 10;\nif(x++ > 5 || ++y > 10) {\n  System.out.println(x + \" \" + y);\n} else {\n  System.out.println(x + \" \" + y);\n}\n```",
+		"options": [
+			"5 10",
+			"6 10",
+			"6 11",
+			"5 11"
+		],
+		"answer": 2,
+		"explanation": "x++ > 5 is false (uses 5, x becomes 6). ++y > 10 is evaluated (y becomes 11, true). Both modified: 6 11"
+	},
+	{
+		"question": "What is the result?\n```java\nString s = \"racecar\";\nboolean isPalindrome = true;\nfor(int i = 0; i < s.length() / 2; i++) {\n  if(s.charAt(i) != s.charAt(s.length() - 1 - i)) {\n    isPalindrome = false;\n    break;\n  }\n}\nSystem.out.println(isPalindrome);\n```",
+		"options": [
+			"true",
+			"false",
+			"racecar",
+			"Compilation error"
+		],
+		"answer": 0,
+		"explanation": "Checks if string is palindrome. 'racecar' reads same forwards and backwards, so true"
+	},
+	{
+		"question": "What will be the output?\n```java\nint[] arr = {5, 5, 5, 5};\nboolean allSame = true;\nfor(int i = 1; i < arr.length; i++) {\n  if(arr[i] != arr[0]) {\n    allSame = false;\n    break;\n  }\n}\nSystem.out.println(allSame);\n```",
+		"options": [
+			"true",
+			"false",
+			"5",
+			"Compilation error"
+		],
+		"answer": 0,
+		"explanation": "Checks if all elements are same. All elements are 5, so returns true"
+	},
+	{
+		"question": "What is the output?\n```java\nString s1 = \"Java\";\nString s2 = new String(\"Java\");\nString s3 = s2;\nSystem.out.println(s2 == s3);\nSystem.out.println(s1 == s2);\n```",
+		"options": [
+			"true true",
+			"true false",
+			"false true",
+			"false false"
+		],
+		"answer": 1,
+		"explanation": "s2 == s3 is true (same reference). s1 == s2 is false (different objects - pool vs heap)"
+	},
+	{
+		"question": "What will be printed?\n```java\nint count = 0;\nfor(int i = 1; i <= 20; i++) {\n  if(i % 2 == 0 || i % 5 == 0)\n    count++;\n}\nSystem.out.println(count);\n```",
+		"options": [
+			"10",
+			"12",
+			"14",
+			"16"
+		],
+		"answer": 2,
+		"explanation": "Counts numbers divisible by 2 OR 5: evens(10) + 5,15(not counted as even already) = 14"
+	},
+	{
+		"question": "What is the result?\n```java\nclass Box {\n  int length;\n  Box(int l) { length = l; }\n}\npublic static void main(String args[]) {\n  Box b1 = new Box(5);\n  Box b2 = new Box(5);\n  System.out.println(b1.length == b2.length);\n  System.out.println(b1 == b2);\n}\n```",
+		"options": [
+			"true true",
+			"true false",
+			"false true",
+			"false false"
+		],
+		"answer": 1,
+		"explanation": "b1.length == b2.length compares values (true). b1 == b2 compares references (false - different objects)"
+	},
+	{
+		"question": "What will be the output?\n```java\nString s = \"Hello\";\nfor(int i = 0; i < s.length(); i++) {\n  if(i % 2 == 0)\n    System.out.print(s.charAt(i));\n}\n```",
+		"options": [
+			"Hlo",
+			"ell",
+			"Hello",
+			"el"
+		],
+		"answer": 0,
+		"explanation": "Prints characters at even indices (0,2,4): H(0), l(2), o(4) = Hlo"
+	},
+	{
+		"question": "What is the output?\n```java\nint[] a = {10, 20, 30};\nint[] b = {10, 20, 30};\nboolean same = true;\nif(a.length != b.length) {\n  same = false;\n} else {\n  for(int i = 0; i < a.length; i++) {\n    if(a[i] != b[i]) {\n      same = false;\n      break;\n    }\n  }\n}\nSystem.out.println(same);\n```",
+		"options": [
+			"true",
+			"false",
+			"Compilation error",
+			"Runtime error"
+		],
+		"answer": 0,
+		"explanation": "Compares array contents element by element. All elements match, so true"
+	},
+	{
+		"question": "What will be printed?\n```java\nString s = \"Programming\";\nint pos = s.indexOf('m');\nSystem.out.println(s.substring(pos));\n```",
+		"options": [
+			"Programming",
+			"gramming",
+			"mming",
+			"ming"
+		],
+		"answer": 2,
+		"explanation": "indexOf('m') returns 6 (first 'm'). substring(6) extracts from index 6 to end: 'mming'"
+	},
+	{
+		"question": "What is the result?\n```java\nint x = 0;\nfor(int i = 0; i < 5; i++) {\n  x += i;\n  if(x > 5) break;\n}\nSystem.out.println(x);\n```",
+		"options": [
+			"5",
+			"6",
+			"10",
+			"3"
+		],
+		"answer": 1,
+		"explanation": "Loop: x=0, x=1, x=3, x=6 (>5, breaks). Final x = 6"
+	},
+	{
+		"question": "What will be the output?\n```java\nclass A {\n  void show() { System.out.print(\"A\"); }\n}\nclass B extends A {\n  void show() { System.out.print(\"B\"); }\n  void display() { \n    this.show();\n  }\n}\npublic static void main(String args[]) {\n  B obj = new B();\n  obj.display();\n}\n```",
+		"options": [
+			"A",
+			"B",
+			"AB",
+			"Compilation error"
+		],
+		"answer": 1,
+		"explanation": "this.show() calls the current object's (B) overridden method, printing 'B'"
+	},
+	{
+		"question": "What is the output?\n```java\nint[] arr = new int[5];\nfor(int i = 0; i < arr.length; i++) {\n  arr[i] = i * 2;\n}\nSystem.out.println(arr[3]);\n```",
+		"options": [
+			"3",
+			"6",
+			"5",
+			"0"
+		],
+		"answer": 1,
+		"explanation": "arr[3] = 3 * 2 = 6"
+	},
+	{
+		"question": "What will be printed?\n```java\nString s = \"abcabc\";\nint first = s.indexOf('b');\nint last = s.lastIndexOf('b');\nSystem.out.println(last - first);\n```",
+		"options": [
+			"0",
+			"3",
+			"4",
+			"5"
+		],
+		"answer": 1,
+		"explanation": "First 'b' at index 1, last 'b' at index 4. Difference = 4 - 1 = 3"
+	},
+	{
+		"question": "What is the result?\n```java\nboolean found = false;\nfor(int i = 1; i <= 10; i++) {\n  if(i * i == 49) {\n    found = true;\n    break;\n  }\n}\nSystem.out.println(found);\n```",
+		"options": [
+			"true",
+			"false",
+			"49",
+			"7"
+		],
+		"answer": 1,
+		"explanation": "Searches for perfect square of 49 in range 1-10. 7*7=49 but 7 is not in the loop range, so false"
+	},
+	{
+		"question": "What will be the output?\n```java\nString s = \"Hello\";\nString result = \"\";\nfor(int i = s.length() - 1; i >= 0; i--) {\n  result = result + s.charAt(i);\n}\nSystem.out.println(result.equals(s));\n```",
+		"options": [
+			"true",
+			"false",
+			"Hello",
+			"olleH"
+		],
+		"answer": 1,
+		"explanation": "result is reversed 'olleH'. Comparing with original 'Hello' returns false"
+	},
+	{
+		"question": "What is the output?\n```java\nint[][] arr = new int[3][2];\nfor(int i = 0; i < 3; i++) {\n  for(int j = 0; j < 2; j++) {\n    arr[i][j] = i + j;\n  }\n}\nSystem.out.println(arr[2][1]);\n```",
+		"options": [
+			"1",
+			"2",
+			"3",
+			"4"
+		],
+		"answer": 2,
+		"explanation": "arr[2][1] = 2 + 1 = 3"
+	},
+	{
+		"question": "What will be printed?\n```java\nString s1 = \"Test\";\nString s2 = s1.toLowerCase();\nString s3 = s2.toUpperCase();\nSystem.out.println(s1 == s3);\nSystem.out.println(s1.equals(s3));\n```",
+		"options": [
+			"true true",
+			"true false",
+			"false true",
+			"false false"
+		],
+		"answer": 2,
+		"explanation": "s1 == s3 is false (different objects). s1.equals(s3) is true (same content 'Test')"
+	},
+	{
+		"question": "What is the result?\n```java\nint product = 1;\nfor(int i = 1; i <= 5; i++) {\n  if(i == 3) continue;\n  product *= i;\n}\nSystem.out.println(product);\n```",
+		"options": [
+			"120",
+			"40",
+			"24",
+			"60"
+		],
+		"answer": 1,
+		"explanation": "Multiplies 1*2*4*5 (skips 3) = 40"
+	},
+	{
+		"question": "A programmer wants to store exam marks of 50 students. Which data structure should be used for optimal memory usage and quick access by roll number (1-50)?",
+		"options": [
+			"50 individual variables",
+			"An array of size 50",
+			"An array of size 51 (ignore index 0)",
+			"A 2D array"
+		],
+		"answer": 2,
+		"explanation": "Using array of size 51 allows direct mapping of roll numbers 1-50 to array indices, making access intuitive"
+	},
+	{
+		"question": "What is the primary reason for declaring instance variables as private in a class?",
+		"options": [
+			"To save memory",
+			"To enforce encapsulation and data hiding",
+			"To make the code run faster",
+			"To prevent the class from being inherited"
+		],
+		"answer": 1,
+		"explanation": "Private access modifier ensures data hiding and encapsulation, allowing controlled access through methods"
+	},
+	{
+		"question": "Which of the following scenarios demonstrates proper use of method overloading?",
+		"options": [
+			"Methods with same name but different return types only",
+			"Methods with same name and parameters but different access modifiers",
+			"Methods with same name but different parameter types or count",
+			"Methods with same name in different classes"
+		],
+		"answer": 2,
+		"explanation": "Method overloading requires same name but different parameters (type, count, or order)"
+	},
+	{
+		"question": "A student writes a program to check if a number is prime. The program correctly identifies 2 as prime but fails for other primes. What is the most likely error?",
+		"options": [
+			"Loop starts from i=2 instead of i=1",
+			"Loop condition uses i <= n instead of i < n",
+			"Loop doesn't check divisibility correctly",
+			"Loop checks up to n instead of n/2 or sqrt(n)"
+		],
+		"answer": 3,
+		"explanation": "Checking divisors beyond n/2 is inefficient and may cause logical errors. Proper prime checking needs optimization"
+	},
+	{
+		"question": "What will happen if a constructor is declared as private in a class?",
+		"options": [
+			"The class cannot have any objects",
+			"Objects can only be created within the same class",
+			"It causes a compilation error",
+			"Objects are created automatically"
+		],
+		"answer": 1,
+		"explanation": "Private constructor prevents object creation from outside the class, useful for singleton pattern"
+	},
+	{
+		"question": "Which searching algorithm would be most efficient for a sorted array of 10000 elements?",
+		"options": [
+			"Linear Search - O(n)",
+			"Binary Search - O(log n)",
+			"Both are equally efficient",
+			"Sequential Search - O(n)"
+		],
+		"answer": 1,
+		"explanation": "Binary Search has O(log n) complexity, making it far more efficient than Linear Search's O(n) for sorted arrays"
+	},
+	{
+		"question": "A method needs to modify the original array passed to it. What should the programmer ensure?",
+		"options": [
+			"Pass the array by value",
+			"Create a copy of the array inside the method",
+			"Arrays are automatically passed by reference, so direct modification works",
+			"Use return statement to send back the modified array"
+		],
+		"answer": 2,
+		"explanation": "Arrays are objects in Java and are passed by reference, so modifications affect the original array"
+	},
+	{
+		"question": "What is the best way to swap two elements in an array at positions i and j?",
+		"options": [
+			"arr[i] = arr[j]; arr[j] = arr[i];",
+			"temp = arr[i]; arr[i] = arr[j]; arr[j] = temp;",
+			"arr[i] = arr[i] + arr[j]; arr[j] = arr[i] - arr[j];",
+			"Direct swap without temporary variable"
+		],
+		"answer": 1,
+		"explanation": "Using a temporary variable is the standard, safe, and clear method for swapping array elements"
+	},
+	{
+		"question": "A program uses a loop variable that is modified both in the loop body and the increment section. What type of error is this most likely to cause?",
+		"options": [
+			"Syntax error",
+			"Logical error - incorrect iteration count",
+			"Runtime error",
+			"Compilation error"
+		],
+		"answer": 1,
+		"explanation": "Modifying loop variable in both places creates logical errors as iteration count becomes unpredictable"
+	},
+	{
+		"question": "Which statement best describes the difference between == and equals() for Strings?",
+		"options": [
+			"Both compare content",
+			"== compares references, equals() compares content",
+			"== compares content, equals() compares references",
+			"There is no difference"
+		],
+		"answer": 1,
+		"explanation": "== checks if two references point to the same object, equals() checks if content is the same"
+	},
+	{
+		"question": "What is the advantage of using a do-while loop over a while loop?",
+		"options": [
+			"It executes faster",
+			"It uses less memory",
+			"It guarantees at least one execution",
+			"It allows more complex conditions"
+		],
+		"answer": 2,
+		"explanation": "do-while always executes at least once before checking the condition, useful for user input validation"
+	},
+	{
+		"question": "A programmer wants to create a method that can accept any number of integer arguments. Which feature should be used?",
+		"options": [
+			"Method overloading",
+			"Variable arguments (varargs)",
+			"Array parameter",
+			"Multiple method signatures"
+		],
+		"answer": 1,
+		"explanation": "Varargs (int... nums) allows a method to accept variable number of arguments of the same type"
+	},
+	{
+		"question": "In bubble sort, after the first pass through an array of 5 elements, what is guaranteed?",
+		"options": [
+			"The smallest element is in its correct position",
+			"The largest element is in its correct position",
+			"The array is sorted",
+			"Half the array is sorted"
+		],
+		"answer": 1,
+		"explanation": "Bubble sort moves the largest element to the end in each pass"
+	},
+	{
+		"question": "What is the purpose of the break statement in a switch case?",
+		"options": [
+			"To exit the program",
+			"To prevent fall-through to next case",
+			"To go back to the previous case",
+			"To restart the switch"
+		],
+		"answer": 1,
+		"explanation": "break prevents execution from continuing into the next case (fall-through behavior)"
+	},
+	{
+		"question": "A class has both static and non-static methods. Which statement is correct?",
+		"options": [
+			"Static methods can directly access instance variables",
+			"Non-static methods can call static methods",
+			"Static methods cannot be called without creating objects",
+			"Instance methods cannot access static variables"
+		],
+		"answer": 1,
+		"explanation": "Non-static methods can access both static and instance members, but not vice versa"
+	},
+	{
+		"question": "What is the main advantage of using constructor overloading?",
+		"options": [
+			"To create multiple objects simultaneously",
+			"To provide different ways to initialize objects",
+			"To improve performance",
+			"To save memory"
+		],
+		"answer": 1,
+		"explanation": "Constructor overloading provides flexibility in object initialization with different parameter combinations"
+	},
+	{
+		"question": "When should you use a StringBuilder instead of String concatenation in loops?",
+		"options": [
+			"Never, they are the same",
+			"Always, for better performance",
+			"Only for small strings",
+			"Only when concatenating numbers"
+		],
+		"answer": 1,
+		"explanation": "StringBuilder is mutable and more efficient for multiple concatenations as String creates new objects each time"
+	},
+	{
+		"question": "What is the time complexity of accessing an element in an array by index?",
+		"options": [
+			"O(1) - constant time",
+			"O(n) - linear time",
+			"O(log n) - logarithmic time",
+			"O(n²) - quadratic time"
+		],
+		"answer": 0,
+		"explanation": "Array access by index is O(1) because it uses direct memory addressing"
+	},
+	{
+		"question": "A programmer needs to find the second largest element in an array. What is the most efficient approach?",
+		"options": [
+			"Sort the array and access arr[length-2]",
+			"Use nested loops to compare all elements",
+			"Scan the array once maintaining two variables for max and second max",
+			"Use binary search"
+		],
+		"answer": 2,
+		"explanation": "Single pass maintaining two variables is O(n), more efficient than sorting O(n log n)"
+	},
+	{
+		"question": "What happens when a subclass constructor is called?",
+		"options": [
+			"Only subclass constructor executes",
+			"Parent constructor executes first, then subclass constructor",
+			"Subclass constructor executes first, then parent constructor",
+			"Both execute simultaneously"
+		],
+		"answer": 1,
+		"explanation": "Java implicitly calls super() first, ensuring parent initialization before child"
+	},
+	{
+		"question": "Which loop is most appropriate for traversing a 2D array when you don't need the indices?",
+		"options": [
+			"while loop",
+			"do-while loop",
+			"for loop with indices",
+			"Enhanced for loop (for-each)"
+		],
+		"answer": 3,
+		"explanation": "Enhanced for loop is cleaner and less error-prone when indices aren't needed"
+	},
+	{
+		"question": "What is the primary purpose of the 'this' keyword in Java?",
+		"options": [
+			"To call parent class methods",
+			"To differentiate between instance and local variables with same names",
+			"To create new objects",
+			"To access static members"
+		],
+		"answer": 1,
+		"explanation": "'this' refers to the current object and is used to resolve naming conflicts between instance and local variables"
+	},
+	{
+		"question": "A program needs to check if a year is a leap year. Which condition is correct?",
+		"options": [
+			"year % 4 == 0",
+			"(year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)",
+			"year % 400 == 0",
+			"year % 100 != 0"
+		],
+		"answer": 1,
+		"explanation": "A year is leap if divisible by 4 but not by 100, unless also divisible by 400"
+	},
+	{
+		"question": "What is the difference between ++i and i++ when used in an expression?",
+		"options": [
+			"No difference",
+			"++i increments before use, i++ increments after use",
+			"++i is faster",
+			"i++ can only be used in loops"
+		],
+		"answer": 1,
+		"explanation": "++i (pre-increment) increments first then returns value; i++ (post-increment) returns value then increments"
+	},
+	{
+		"question": "What is the best way to check if an array contains a specific value when the array is unsorted?",
+		"options": [
+			"Binary Search",
+			"Linear Search",
+			"Bubble Sort then search",
+			"Use indexOf() method"
+		],
+		"answer": 1,
+		"explanation": "Linear search is necessary for unsorted arrays; binary search requires sorted data"
+	},
+	{
+		"question": "A method throws an exception but the caller doesn't handle it. What happens?",
+		"options": [
+			"Program continues normally",
+			"Exception is ignored",
+			"Program terminates with error message",
+			"Compiler error"
+		],
+		"answer": 2,
+		"explanation": "Uncaught exceptions cause program termination with stack trace"
+	},
+	{
+		"question": "What is the purpose of making a method final?",
+		"options": [
+			"To make it execute faster",
+			"To prevent it from being overridden in subclasses",
+			"To make it static",
+			"To prevent it from being called"
+		],
+		"answer": 1,
+		"explanation": "final methods cannot be overridden, ensuring consistent behavior in inheritance"
+	},
+	{
+		"question": "Which scenario demonstrates proper use of method overriding?",
+		"options": [
+			"Same method name in unrelated classes",
+			"Subclass provides specific implementation of parent class method",
+			"Methods with different signatures in same class",
+			"Static method in subclass with same name as parent"
+		],
+		"answer": 1,
+		"explanation": "Overriding allows subclass to provide specific implementation of inherited method"
+	},
+	{
+		"question": "What is the space complexity of Selection Sort algorithm?",
+		"options": [
+			"O(1) - constant space",
+			"O(n) - linear space",
+			"O(log n)",
+			"O(n²)"
+		],
+		"answer": 0,
+		"explanation": "Selection sort only needs a constant amount of extra space (for temporary variable during swap)"
+	},
+	{
+		"question": "A programmer wants to create an immutable class. Which practice should be followed?",
+		"options": [
+			"Declare all variables as public",
+			"Declare all variables as private and final, no setters",
+			"Use static variables only",
+			"Provide public setters"
+		],
+		"answer": 1,
+		"explanation": "Immutable classes have private final fields and no setters, ensuring objects cannot be modified after creation"
+	},
+	{
+		"question": "What is the main difference between length (for arrays) and length() (for strings)?",
+		"options": [
+			"No difference",
+			"length is a property, length() is a method",
+			"length() is faster",
+			"length works only for arrays"
+		],
+		"answer": 1,
+		"explanation": "Arrays use length as a final instance variable, Strings use length() as a method"
+	},
+	{
+		"question": "In which scenario would you use a nested loop?",
+		"options": [
+			"Reading a single array",
+			"Processing a 2D array or comparing all pairs",
+			"Simple counting",
+			"String concatenation"
+		],
+		"answer": 1,
+		"explanation": "Nested loops are essential for 2D array traversal and pair-wise comparisons"
+	},
+	{
+		"question": "What is the significance of return type in method overloading?",
+		"options": [
+			"Return type alone can differentiate overloaded methods",
+			"Return type is ignored in overloading",
+			"Return type must be same for all overloaded methods",
+			"Return type must be different"
+		],
+		"answer": 1,
+		"explanation": "Method overloading is determined by parameter list, not return type"
+	},
+	{
+		"question": "A program needs to reverse the words in a sentence. What is the most efficient approach?",
+		"options": [
+			"Reverse the entire string character by character",
+			"Split into words, reverse array of words, join",
+			"Use nested loops",
+			"Create new string manually"
+		],
+		"answer": 1,
+		"explanation": "split(), array reversal, and join is clean and efficient for word reversal"
+	},
+	{
+		"question": "What is the purpose of a default constructor?",
+		"options": [
+			"To delete objects",
+			"To initialize objects with default values when no parameters are provided",
+			"To copy objects",
+			"To compare objects"
+		],
+		"answer": 1,
+		"explanation": "Default constructor provides a way to create objects without arguments, initializing with default values"
+	},
+	{
+		"question": "When is a logical error most difficult to detect?",
+		"options": [
+			"During compilation",
+			"During runtime when program crashes",
+			"When program runs but produces incorrect results",
+			"During syntax checking"
+		],
+		"answer": 2,
+		"explanation": "Logical errors produce wrong results without crashes, making them hardest to detect and fix"
+	},
+	{
+		"question": "What is the best practice for naming constants in Java?",
+		"options": [
+			"camelCase (myConstant)",
+			"PascalCase (MyConstant)",
+			"ALL_CAPS_WITH_UNDERSCORES (MY_CONSTANT)",
+			"lowercase (myconstant)"
+		],
+		"answer": 2,
+		"explanation": "Java convention uses ALL_CAPS with underscores for constants (static final variables)"
+	},
+	{
+		"question": "A method needs to return multiple values. What is the best approach in Java?",
+		"options": [
+			"Use multiple return statements",
+			"Return an array or object containing multiple values",
+			"Use global variables",
+			"Create multiple methods"
+		],
+		"answer": 1,
+		"explanation": "Java methods can only return one value, but that can be an array or object containing multiple values"
+	},
+	{
+		"question": "What is the primary advantage of using methods in programming?",
+		"options": [
+			"To make programs longer",
+			"To promote code reusability and modularity",
+			"To use more memory",
+			"To slow down execution"
+		],
+		"answer": 1,
+		"explanation": "Methods promote code reuse, modularity, and maintainability by encapsulating logic"
+	},
+	{
+		"question": "When comparing two objects for equality, which method should be overridden?",
+		"options": [
+			"toString()",
+			"equals()",
+			"hashCode()",
+			"compareTo()"
+		],
+		"answer": 1,
+		"explanation": "equals() method should be overridden to define custom equality logic for objects"
+	},
+	{
+		"question": "What happens when you try to modify a String object?",
+		"options": [
+			"The string is modified in place",
+			"A new String object is created",
+			"Compilation error",
+			"Runtime error"
+		],
+		"answer": 1,
+		"explanation": "Strings are immutable; any modification creates a new String object"
+	},
+	{
+		"question": "Which sorting algorithm is most suitable for small arrays or nearly sorted data?",
+		"options": [
+			"Bubble Sort",
+			"Insertion Sort",
+			"Selection Sort",
+			"Merge Sort"
+		],
+		"answer": 1,
+		"explanation": "Insertion sort is efficient for small or nearly sorted arrays with O(n) best case"
+	},
+	{
+		"question": "What is the purpose of the super keyword in a constructor?",
+		"options": [
+			"To call sibling class constructor",
+			"To call parent class constructor",
+			"To call the same class constructor",
+			"To create new objects"
+		],
+		"answer": 1,
+		"explanation": "super() calls parent class constructor, must be first statement in subclass constructor"
+	},
+	{
+		"question": "A programmer wants to count frequency of each character in a string. What is the most efficient approach?",
+		"options": [
+			"Nested loops comparing each character with all others",
+			"Use an array of size 26 (for lowercase) or 256 (for all ASCII) as frequency counter",
+			"Sort the string first",
+			"Use multiple if-else statements"
+		],
+		"answer": 1,
+		"explanation": "Character array as frequency counter provides O(n) time complexity"
+	},
+	{
+		"question": "What is the difference between instance methods and static methods?",
+		"options": [
+			"Static methods are faster",
+			"Instance methods operate on object state, static methods don't",
+			"Static methods cannot be called",
+			"Instance methods are always private"
+		],
+		"answer": 1,
+		"explanation": "Instance methods work with object state (instance variables), static methods belong to class"
+	},
+	{
+		"question": "When should you use break vs continue in loops?",
+		"options": [
+			"break exits the loop, continue skips current iteration",
+			"They are the same",
+			"continue exits the loop",
+			"break skips iterations"
+		],
+		"answer": 0,
+		"explanation": "break terminates loop entirely, continue skips to next iteration"
+	},
+	{
+		"question": "What is the advantage of using named constants instead of literal values?",
+		"options": [
+			"Programs run faster",
+			"Improves code readability and maintainability",
+			"Uses less memory",
+			"No advantage"
+		],
+		"answer": 1,
+		"explanation": "Named constants make code self-documenting and easier to maintain when values need to change"
+	},
+	{
+		"question": "A program needs to find duplicates in an array. What approach is most efficient for unsorted array?",
+		"options": [
+			"Nested loops - O(n²)",
+			"Sort first then linear scan - O(n log n)",
+			"Use frequency array - O(n) with extra space",
+			"Binary search each element"
+		],
+		"answer": 2,
+		"explanation": "Frequency array offers O(n) time with O(k) space where k is range of values"
+	},
+	{
+		"question": "What is the purpose of access modifiers in OOP?",
+		"options": [
+			"To improve performance",
+			"To control visibility and access to class members",
+			"To make code shorter",
+			"To create objects"
+		],
+		"answer": 1,
+		"explanation": "Access modifiers enforce encapsulation by controlling who can access class members"
+	},
+	{
+		"question": "When would you use a while loop instead of a for loop?",
+		"options": [
+			"Never, for is always better",
+			"When number of iterations is unknown in advance",
+			"When you want faster execution",
+			"When dealing with arrays"
+		],
+		"answer": 1,
+		"explanation": "while loops are better when iteration count depends on runtime conditions"
+	},
+	{
+		"question": "What is the difference between a shallow copy and deep copy of an array?",
+		"options": [
+			"No difference",
+			"Shallow copies references, deep copies actual values",
+			"Shallow is faster",
+			"Deep copy is always better"
+		],
+		"answer": 1,
+		"explanation": "Shallow copy duplicates references (for object arrays), deep copy creates new objects"
+	},
+	{
+		"question": "A method signature includes which of the following?",
+		"options": [
+			"Method name and return type",
+			"Method name and parameter list",
+			"Only method name",
+			"Access modifier and return type"
+		],
+		"answer": 1,
+		"explanation": "Method signature = method name + parameter list (type, order, count)"
+	},
+	{
+		"question": "What is the best way to check if a string is empty?",
+		"options": [
+			"if(str == \"\")",
+			"if(str.length() == 0) or if(str.isEmpty())",
+			"if(str == null)",
+			"if(str.equals(null))"
+		],
+		"answer": 1,
+		"explanation": "length() == 0 or isEmpty() both work; isEmpty() is more readable"
+	},
+	{
+		"question": "What happens when you access an array element beyond its bounds?",
+		"options": [
+			"Returns null",
+			"Returns 0",
+			"Throws ArrayIndexOutOfBoundsException",
+			"Creates a new element"
+		],
+		"answer": 2,
+		"explanation": "Array bounds are checked at runtime; invalid access throws exception"
+	},
+	{
+		"question": "Which principle of OOP is demonstrated when a class has private data and public methods?",
+		"options": [
+			"Inheritance",
+			"Polymorphism",
+			"Encapsulation",
+			"Abstraction"
+		],
+		"answer": 2,
+		"explanation": "Encapsulation bundles data (private) with methods (public) that operate on that data"
+	},
+	{
+		"question": "What is the time complexity of Bubble Sort in the worst case?",
+		"options": [
+			"O(n)",
+			"O(n log n)",
+			"O(n²)",
+			"O(1)"
+		],
+		"answer": 2,
+		"explanation": "Bubble sort has O(n²) worst and average case due to nested iterations"
+	},
+	{
+		"question": "A programmer needs to check if two strings are anagrams. What is the most efficient approach?",
+		"options": [
+			"Compare lengths, sort both, compare sorted strings",
+			"Nested loops",
+			"Use multiple if statements",
+			"Reverse and compare"
+		],
+		"answer": 0,
+		"explanation": "Sort and compare is clean and efficient; frequency counting is also good"
+	},
+	{
+		"question": "What is the purpose of the toString() method?",
+		"options": [
+			"To delete objects",
+			"To provide string representation of object",
+			"To compare objects",
+			"To copy objects"
+		],
+		"answer": 1,
+		"explanation": "toString() returns a string representation of the object, useful for debugging and display"
+	},
+	{
+		"question": "When should a variable be declared as static?",
+		"options": [
+			"Always",
+			"When the value should be shared among all instances of the class",
+			"When it's private",
+			"When it's an array"
+		],
+		"answer": 1,
+		"explanation": "Static variables belong to class, shared by all instances (e.g., counter, constants)"
+	},
+	{
+		"question": "What is the primary difference between a class and an object?",
+		"options": [
+			"No difference",
+			"Class is a blueprint, object is an instance",
+			"Objects are faster",
+			"Classes are smaller"
+		],
+		"answer": 1,
+		"explanation": "Class defines structure and behavior; object is actual instance with specific values"
+	},
+	{
+		"question": "A program needs to find the greatest common divisor (GCD) of two numbers. Which approach is most efficient?",
+		"options": [
+			"Check all numbers from 1 to smaller number",
+			"Use Euclidean algorithm (recursive or iterative)",
+			"Use nested loops",
+			"Trial division"
+		],
+		"answer": 1,
+		"explanation": "Euclidean algorithm is highly efficient with O(log min(a,b)) complexity"
+	},
+	{
+		"question": "What is the purpose of using StringBuilder over String for concatenation in loops?",
+		"options": [
+			"No difference",
+			"StringBuilder is mutable, avoiding creation of multiple String objects",
+			"StringBuilder is immutable",
+			"Strings are faster"
+		],
+		"answer": 1,
+		"explanation": "StringBuilder modifies same object, while String creates new object for each concatenation"
+	},
+	{
+		"question": "When is method overriding used?",
+		"options": [
+			"In same class with different parameters",
+			"In subclass with same signature as parent method",
+			"When creating static methods",
+			"When methods have different names"
+		],
+		"answer": 1,
+		"explanation": "Overriding occurs when subclass redefines inherited method with same signature"
+	},
+	{
+		"question": "What is the significance of the main method being static?",
+		"options": [
+			"It makes the program run faster",
+			"JVM can call it without creating an object",
+			"It uses less memory",
+			"It's required for all methods"
+		],
+		"answer": 1,
+		"explanation": "Static main allows JVM to call it without instantiating the class"
+	},
+	{
+		"question": "A program needs to merge two sorted arrays into one sorted array. What is the most efficient approach?",
+		"options": [
+			"Concatenate and sort - O(n log n)",
+			"Use two pointers, merge in O(n)",
+			"Nested loops - O(n²)",
+			"Insert one by one"
+		],
+		"answer": 1,
+		"explanation": "Two-pointer merge leverages existing sorted order for O(n) complexity"
+	},
+	{
+		"question": "What is the difference between = and == operators?",
+		"options": [
+			"No difference",
+			"= assigns value, == compares values/references",
+			"= compares, == assigns",
+			"Both are comparison operators"
+		],
+		"answer": 1,
+		"explanation": "= is assignment operator, == is comparison operator (equality check)"
+	},
+	{
+		"question": "When should you use default case in switch statement?",
+		"options": [
+			"Never",
+			"Always, to handle unexpected values",
+			"Only for integers",
+			"Only at the beginning"
+		],
+		"answer": 1,
+		"explanation": "default handles all cases not explicitly covered, preventing unexpected behavior"
+	},
+	{
+		"question": "What is the purpose of parameterized constructors?",
+		"options": [
+			"To delete objects",
+			"To initialize objects with specific values during creation",
+			"To compare objects",
+			"To make objects static"
+		],
+		"answer": 1,
+		"explanation": "Parameterized constructors allow object initialization with custom values at creation time"
+	},
+	{
+		"question": "A programmer wants to remove all whitespace from a string. Which method is most appropriate?",
+		"options": [
+			"trim()",
+			"replace(\" \", \"\")",
+			"split()",
+			"substring()"
+		],
+		"answer": 1,
+		"explanation": "replace removes all occurrences; trim only removes leading/trailing whitespace"
+	},
+	{
+		"question": "What is the benefit of using local variables instead of instance variables?",
+		"options": [
+			"Local variables persist longer",
+			"Local variables have limited scope, reducing memory usage and preventing unintended access",
+			"Instance variables are slower",
+			"No benefit"
+		],
+		"answer": 1,
+		"explanation": "Local variables exist only during method execution, promoting encapsulation and efficiency"
+	},
+	{
+		"question": "When would linear search be preferred over binary search?",
+		"options": [
+			"Never",
+			"When array is unsorted or very small",
+			"When array is sorted",
+			"When searching for maximum"
+		],
+		"answer": 1,
+		"explanation": "Linear search works on unsorted data; binary search requires sorted array"
+	},
+	{
+		"question": "What is the purpose of the final keyword when applied to a variable?",
+		"options": [
+			"Makes it static",
+			"Makes it a constant (cannot be reassigned)",
+			"Makes it private",
+			"Makes it public"
+		],
+		"answer": 1,
+		"explanation": "final variables can be assigned only once, creating constants"
+	},
+	{
+		"question": "A program needs to check if a string is a palindrome. What is the most efficient approach?",
+		"options": [
+			"Reverse the string and compare with original",
+			"Use two pointers from both ends moving inward",
+			"Check each character individually with nested loops",
+			"Convert to array first"
+		],
+		"answer": 1,
+		"explanation": "Two-pointer approach is O(n/2) = O(n) without creating new string"
+	},
+	{
+		"question": "What is the scope of a variable declared inside a for loop?",
+		"options": [
+			"Entire program",
+			"Entire class",
+			"Only within the for loop",
+			"Entire method"
+		],
+		"answer": 2,
+		"explanation": "Variables declared in for loop have block scope, limited to that loop"
+	},
+	{
+		"question": "When should inheritance be used in object-oriented programming?",
+		"options": [
+			"Never",
+			"To promote code reuse and establish 'is-a' relationships",
+			"To make code run faster",
+			"To create multiple objects"
+		],
+		"answer": 1,
+		"explanation": "Inheritance allows subclasses to reuse code from parent classes, establishing hierarchical relationships"
+	}
 ]
