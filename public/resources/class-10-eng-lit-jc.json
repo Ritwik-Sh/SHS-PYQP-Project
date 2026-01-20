@@ -8,84 +8,84 @@
       "He is requesting Cassius to let Messala speak now"
     ],
     "answer": 2,
-    "explanation": "Brutus restrains his emotions and asks Cassius to stop speaking about Portia’s death."
+    "explanation": "Brutus suppresses his grief and asks Cassius to stop referring to Portia’s death."
   },
   {
     "question": "What is the significance of “A hot friend cooling”?",
     "options": [
-      "Love after some time begins to sicken and decay",
-      "When a friend starts to drift apart, he/she assumes forced civility to us",
-      "One of our friends, who had been suffering from fever was now fine",
+      "Love naturally fades away with time",
+      "A once-warm friendship turns cold and formal",
+      "A friend recovering from illness",
       "None of these"
     ],
     "answer": 1,
-    "explanation": "It refers to a friendship losing warmth and turning into formal politeness."
+    "explanation": "It refers to the loss of warmth in friendship, replaced by forced politeness."
   },
   {
     "question": "Why does Brutus decide to march to Philippi?",
     "options": [
-      "He thought that Sardis was a plain area hence very unsafe",
-      "He wanted to act as a superior authority to Cassius",
-      "He believed that Sardians had grudged contributions to them",
-      "He thought that it would be really unpredictable for Antony and the team"
+      "Sardis was geographically unsafe",
+      "He wished to assert authority over Cassius",
+      "The people of Sardis were unwilling to support their army",
+      "He wanted to confuse Antony’s military strategy"
     ],
     "answer": 2,
-    "explanation": "Brutus believes attacking early will prevent Antony and Octavius from gaining strength."
+    "explanation": "Brutus feared lack of local support and wanted to prevent Antony from gaining strength through contributions."
   },
   {
     "question": "What is meant by “rash choler”?",
     "options": [
-      "Unpredictable behaviour",
-      "Nasty and cranky temper",
-      "Hasty and fiery temper",
-      "Sudden shift to infuriation"
+      "Careless behaviour",
+      "A permanently bad temper",
+      "A sudden and fiery outburst of anger",
+      "Mood swings caused by fear"
     ],
     "answer": 2,
-    "explanation": "‘Choler’ refers to anger; ‘rash choler’ means quick-tempered anger."
+    "explanation": "‘Rash choler’ means quick and impulsive anger."
   },
   {
     "question": "What was the difference in the letters received by Brutus and those received by Messala?",
     "options": [
-      "Messala’s letter said that Portia was alive unlike Brutus’ letter",
-      "Different number of deaths of conspirators",
-      "Messala’s letter mentioned Antony and Octavius preparing for battle, unlike Brutus’ letter",
+      "Messala’s letter claimed Portia was alive",
+      "They mentioned different numbers of dead conspirators",
+      "Messala’s letter alone spoke of Antony’s military movements",
       "Both b & c"
     ],
-    "answer": 3,
-    "explanation": "Messala’s letter reveals political and military details that Brutus conceals or already knows."
+    "answer": 1,
+    "explanation": "The letters differed in the reported deaths of the conspirators."
   },
   {
     "question": "With reference to the Ghost of Caesar, select the correct statement:",
     "options": [
-      "The ghost could possibly be a manifestation of Brutus’ underlying guilt",
-      "The ghost is a metaphor for how powerful Caesar is",
-      "The ghost is a reflection of Brutus’s past indiscretions",
+      "The ghost may be a manifestation of Brutus’ guilt",
+      "The ghost symbolises Caesar’s political power",
+      "The ghost reflects Brutus’ moral weakness",
       "Both a & b"
     ],
-    "answer": 3,
-    "explanation": "The ghost represents both Brutus’ guilt and Caesar’s enduring influence."
+    "answer": 0,
+    "explanation": "The ghost primarily represents Brutus’ inner guilt and disturbed conscience."
   },
   {
     "question": "What does Octavius mean by “Never, till three and thirty wounds of Caesar be avenged or till another Caesar adds slaughter to the sword of traitors”?",
     "options": [
-      "Octavius’s sword will not come down until Brutus dies",
-      "Octavius’s sword will not come down until all Caesar’s wounds are avenged",
-      "Octavius’s sword will not come down until he adds to the slaughter",
+      "Brutus alone must die",
+      "Caesar’s murder must be fully avenged",
+      "Further bloodshed will continue",
       "Both b & c"
     ],
     "answer": 3,
-    "explanation": "Octavius vows continuous violence until Caesar’s murder is fully avenged."
+    "explanation": "Octavius vows revenge and continued violence until Caesar’s murder is fully avenged."
   },
   {
     "question": "Brutus: “But this same day must end that work the Ides of March begun.” What does that work mean?",
     "options": [
-      "Never ending warfare",
-      "Destruction & bloodshed",
-      "Caesar’s death",
+      "An endless civil war",
+      "The destruction and bloodshed started by Caesar’s murder",
+      "Caesar’s assassination alone",
       "Antony’s rise to power"
     ],
-    "answer": 2,
-    "explanation": "The ‘work’ refers to Caesar’s assassination which began the chain of events."
+    "answer": 1,
+    "explanation": "Brutus refers to the cycle of violence and civil war begun on the Ides of March."
   },
   {
     "question": "Cassius: “… get higher on that hill, my sight was ever thick.” To whom does Cassius say this?",
@@ -101,35 +101,35 @@
   {
     "question": "What does Titinius mean when he says “Our day is gone”?",
     "options": [
-      "Night is approaching and they are about to lose",
-      "They will all die by night",
-      "Their time of happiness and fortune has ended",
-      "Cassius has finally died"
+      "Darkness has fallen",
+      "Death is inevitable tonight",
+      "Their fortune and success have ended",
+      "Cassius has died"
     ],
     "answer": 2,
-    "explanation": "It symbolizes the loss of luck and the turning of fortune against them."
+    "explanation": "Titinius believes their luck has completely turned against them."
   },
   {
     "question": "Why does Messala blame error for Cassius’ death?",
     "options": [
-      "Error is born from melancholy and leads to false conclusions",
-      "Cassius’s judgements were always full of errors",
-      "Error was responsible for Cassius’s sadness",
-      "Error killed Cassius’ mother"
+      "False judgement caused by confusion led to Cassius’ suicide",
+      "Cassius always made wrong decisions",
+      "Cassius suffered from sadness",
+      "Error was a personal enemy of Cassius"
     ],
     "answer": 0,
-    "explanation": "Cassius misinterprets the situation due to emotional confusion."
+    "explanation": "Cassius misjudged the situation due to error and confusion."
   },
   {
     "question": "What is Brutus trying to do when he says “Yet, Countrymen, O, yet hold up your hands!”?",
     "options": [
-      "He is asking them to surrender",
-      "He is motivating and encouraging his soldiers",
-      "He is asking them to applaud Cassius",
-      "He is ordering them to fight endlessly"
+      "Call for surrender",
+      "Encourage and motivate his soldiers",
+      "Demand applause",
+      "Order endless fighting"
     ],
     "answer": 1,
-    "explanation": "Brutus is rallying his troops and boosting their morale."
+    "explanation": "Brutus attempts to raise morale and inspire courage."
   },
   {
     "question": "Who is the speaker of: “And I am Brutus, Marcus Brutus, I, Brutus, my country’s friend.”?",
@@ -140,7 +140,7 @@
       "Cato Jr."
     ],
     "answer": 2,
-    "explanation": "Lucilius pretends to be Brutus to protect him."
+    "explanation": "Lucilius pretends to be Brutus to protect him from capture."
   },
   {
     "question": "Whom does Brutus ask to send Cassius’ body to Thasos?",
@@ -150,29 +150,29 @@
       "Messala",
       "Volumnius"
     ],
-    "answer": 2,
-    "explanation": "Brutus entrusts Messala with the responsibility."
+    "answer": 1,
+    "explanation": "Brutus instructs Labeo to carry Cassius’ body to Thasos."
   },
   {
     "question": "Who is the speaker and listener of “Fellow, wilt thou bestow thy time with me?”?",
     "options": [
-      "Octavius, Messala",
-      "Messala, Strato",
-      "Octavius, Strato",
-      "Strato, Messala"
+      "Octavius to Messala",
+      "Messala to Strato",
+      "Octavius to Strato",
+      "Strato to Messala"
     ],
-    "answer": 0,
-    "explanation": "Octavius addresses Messala after the battle."
+    "answer": 2,
+    "explanation": "Octavius addresses Strato after Brutus’ death."
   },
   {
     "question": "What is the significance of Brutus’ final speech “Farewell to you, you and you…”?",
     "options": [
-      "Brutus is leaving for Rome",
-      "Brutus wants to give up temporarily",
-      "Brutus is ready to die and end his life",
+      "He is returning to Rome",
+      "He is temporarily surrendering",
+      "He prepares himself for death",
       "None of these"
     ],
     "answer": 2,
-    "explanation": "The speech signals Brutus’ acceptance of death before committing suicide."
+    "explanation": "The speech shows Brutus’ calm acceptance before committing suicide."
   }
 ]
