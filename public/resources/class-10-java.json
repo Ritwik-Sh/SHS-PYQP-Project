@@ -825,28 +825,6 @@
 		"explanation": "Linear Search has a time complexity of O(n) as it may need to check each element"
 	},
 	{
-		"question": "What will be the output?\n```java\nSystem.out.println(5 & 3);\n```",
-		"options": [
-			"1",
-			"2",
-			"3",
-			"5"
-		],
-		"answer": 0,
-		"explanation": "& is bitwise AND. 5 (101) & 3 (011) = 1 (001)"
-	},
-	{
-		"question": "Which of these creates a two-dimensional array?",
-		"options": [
-			"int arr[][] = new int[3][4];",
-			"int[][] arr = new int[3][4];",
-			"int arr[][] = {{1,2},{3,4}};",
-			"All of the above"
-		],
-		"answer": 3,
-		"explanation": "All three syntaxes are valid for creating 2D arrays in Java"
-	},
-	{
 		"question": "What is the output?\n```java\nString s = null;\nSystem.out.println(s.length());\n```",
 		"options": [
 			"0",
@@ -968,7 +946,7 @@
 		"explanation": "String concatenation creates a new string 'JavaProgramming' and assigns it to s"
 	},
 	{
-		"question": "What will be the output of the following code?\n```java\nSystem.out.println(\"Happiness\".replace('s', 'p').indexOf('p, 3));\n```",
+		"question": "What will be the output of the following code?\n```java\nSystem.out.println(\"Happiness\".replace('s', 'p').indexOf('p', 3));\n```",
 		"options": [
 			"3",
 			"4",
@@ -1001,17 +979,6 @@
 		"explanation": "Ternary operator: x == 5 is true, so it returns 'Five'"
 	},
 	{
-		"question": "Which method is used to remove whitespace from both ends of a string?",
-		"options": [
-			"trim()",
-			"strip()",
-			"removeSpaces()",
-			"clean()"
-		],
-		"answer": 0,
-		"explanation": "trim() method removes leading and trailing whitespace from a string"
-	},
-	{
 		"question": "What will be the output?\njava\nint a = 10;\nif(a > 5 || a++ > 10)\n  System.out.println(a);\n",
 		"options": [
 			"10",
@@ -1021,17 +988,6 @@
 		],
 		"answer": 0,
 		"explanation": "a > 5 is true, so || short-circuits and a++ is not evaluated. a remains 10"
-	},
-	{
-		"question": "Which of these creates an object of a class?",
-		"options": [
-			"new keyword",
-			"create keyword",
-			"object keyword",
-			"instance keyword"
-		],
-		"answer": 0,
-		"explanation": "new keyword is used to create objects in Java"
 	},
 	{
 		"question": "What is the output?\njava\nSystem.out.println(\"Hello\".compareTo(\"Hello\"));\n",
@@ -1816,136 +1772,137 @@
 		"explanation": "Printing a char array directly prints its contents as a string, unlike other array types which print hash codes"
 	},
 	{
-    "question": "Assertion: Printing a char array using System.out.println() displays its contents as characters.\nReason: The println() method is overloaded to handle char arrays differently from other array types.",
-    "options": [
-      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
-      "Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
-      "Assertion is True and Reason is false",
-      "Assertion is False and Reason is true"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Assertion: Strings in Java are immutable.\nReason: Any operation that modifies a String actually creates a new String object in memory.",
-    "options": [
-      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
-      "Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
-      "Assertion is True and Reason is false",
-      "Assertion is False and Reason is true"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Assertion: A static method cannot directly access instance variables of a class.\nReason: Static methods belong to the class and not to any particular object.",
-    "options": [
-      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
-      "Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
-      "Assertion is True and Reason is false",
-      "Assertion is False and Reason is true"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Assertion: The expression x = x++ + ++x is valid in Java.\nReason: Java follows a strict left-to-right evaluation order for operands.",
-    "options": [
-      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
-      "Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
-      "Assertion is True and Reason is false",
-      "Assertion is False and Reason is true"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Assertion: Local variables in Java are automatically initialized to default values.\nReason: Java initializes all variables during object creation.",
-    "options": [
-      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
-      "Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
-      "Assertion is True and Reason is false",
-      "Assertion is False and Reason is true"
-    ],
-    "answer": 3,
-    "reason": "Local variables must be explicitly initialized; only instance and static variables get default values."
-  },
-  {
-    "question": "Assertion: The comparison \"Java\" == \"Java\" may return true.\nReason: String literals are stored in the String Constant Pool.",
-    "options": [
-      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
-      "Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
-      "Assertion is True and Reason is false",
-      "Assertion is False and Reason is true"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Assertion: An ArrayIndexOutOfBoundsException occurs at runtime.\nReason: Array index checking is performed during program execution.",
-    "options": [
-      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
-      "Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
-      "Assertion is True and Reason is false",
-      "Assertion is False and Reason is true"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Assertion: The output of the following code is 75.\n```java\nSystem.out.println(10 + 'A');\n```\nReason: During arithmetic operations, characters are converted to their ASCII values.",
-    "options": [
-      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
-      "Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
-      "Assertion is True and Reason is false",
-      "Assertion is False and Reason is true"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Assertion: Constructors are inherited by subclasses in Java.\nReason: A subclass can call a superclass constructor using the super keyword.",
-    "options": [
-      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
-      "Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
-      "Assertion is True and Reason is false",
-      "Assertion is False and Reason is true"
-    ],
-    "answer": 3,
-    "reason": "Constructors are NOT inherited, but can be invoked using super()."
-  },
-  {
-    "question": "Assertion: Method overloading is an example of compile-time polymorphism.\nReason: The compiler decides which overloaded method to call based on method signatures.",
-    "options": [
-      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
-      "Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
-      "Assertion is True and Reason is false",
-      "Assertion is False and Reason is true"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Assertion: The keyword this can be used inside a static method.\nReason: Static methods do not belong to any object instance.",
-    "options": [
-      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
-      "Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
-      "Assertion is True and Reason is false",
-      "Assertion is False and Reason is true"
-    ],
-    "answer": 3
-  },
-    {
-    "question": "Assertion: A do-while loop executes its body at least once.\nReason: The loop condition is tested after executing the loop body.",
-    "options": [
-      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
-      "Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
-      "Assertion is True and Reason is false",
-      "Assertion is False and Reason is true"
-    ],
-    "answer": 0
-  },
-  {
-	"question": "```java\nchar[] c = {'a', 'b', '2', 'c', '6', '4'};```\nWhat will be the size of the array c?",
-	"options": [
-		"12 Bits",
-		"12 Bytes",
-		"24 Bits",
-		"24 Bytes"
-	],
-	"answer": 1,
-	"explanation": "Each char in Java occupies 2 bytes. With 6 characters, the total size is 6 * 2 = 12 bytes."
-  }
+		"question": "Assertion: Printing a char array using System.out.println() displays its contents as characters.\nReason: The println() method is overloaded to handle char arrays differently from other array types.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0
+	},
+	{
+		"question": "Assertion: Strings in Java are immutable.\nReason: Any operation that modifies a String actually creates a new String object in memory.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0
+	},
+	{
+		"question": "Assertion: A static method cannot directly access instance variables of a class.\nReason: Static methods belong to the class and not to any particular object.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0
+	},
+	{
+		"question": "Assertion: The expression x = x++ + ++x is valid in Java.\nReason: Java follows a strict left-to-right evaluation order for operands.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0
+	},
+	{
+		"question": "Assertion: Local variables in Java are automatically initialized to default values.\nReason: Java initializes all variables during object creation.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 3,
+		"reason": "Local variables must be explicitly initialized; only instance and static variables get default values."
+	},
+	{
+		"question": "Assertion: The comparison \"Java\" == \"Java\" may return true.\nReason: String literals are stored in the String Constant Pool.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0
+	},
+	{
+		"question": "Assertion: An ArrayIndexOutOfBoundsException occurs at runtime.\nReason: Array index checking is performed during program execution.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0
+	},
+	{
+		"question": "Assertion: The output of the following code is 75.\n```java\nSystem.out.println(10 + 'A');\n```\nReason: During arithmetic operations, characters are converted to their ASCII values.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0
+	},
+	{
+		"question": "Assertion: Constructors are inherited by subclasses in Java.\nReason: A subclass can call a superclass constructor using the super keyword.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 3,
+		"reason": "Constructors are NOT inherited, but can be invoked using super()."
+	},
+	{
+		"question": "Assertion: Method overloading is an example of compile-time polymorphism.\nReason: The compiler decides which overloaded method to call based on method signatures.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0
+	},
+	{
+		"question": "Assertion: The keyword this can be used inside a static method.\nReason: Static methods do not belong to any object instance.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 3
+	},
+	{
+		"question": "```java\nchar[] c = {'a', 'b', '2', 'c', '6', '4'};```\nWhat will be the size of the array c?",
+		"options": [
+			"12 Bits",
+			"12 Bytes",
+			"24 Bits",
+			"24 Bytes"
+		],
+		"answer": 1,
+		"explanation": "Each char in Java occupies 2 bytes. With 6 characters, the total size is 6 * 2 = 12 bytes."
+	},
+	{
+		"question": "Predict the output.\n```Java\nfloat f = 5.5;\nSystem.out.println(f++ - --f);\n```",
+		"options": [
+			"-1.0",
+			"0.0",
+			"1.0",
+			"Error"
+		],
+		"answer": 3,
+		"explanation": "The literal 5.5 is treated as a double by default. Assigning it to a float variable without Explicit casting causes a compilation error."
+	}
 ]
