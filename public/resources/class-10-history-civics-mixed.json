@@ -1,0 +1,602 @@
+[
+  {
+    "question": "A Joint Sitting of Parliament is presided over by:",
+    "options": ["Vice-President", "President", "Speaker of Lok Sabha", "Deputy Chairman of Rajya Sabha"],
+    "answer": 2,
+    "explanation": "The Speaker of Lok Sabha presides over joint sittings when both houses meet together to resolve disagreements on a bill."
+  },
+  {
+    "question": "In which situation can Rajya Sabha delay a Money Bill?",
+    "options": ["7 days", "14 days", "30 days", "It cannot delay it"],
+    "answer": 1,
+    "explanation": "Rajya Sabha can delay a Money Bill for a maximum of 14 days only."
+  },
+  {
+    "question": "Which Article deals with the collective responsibility of the Council of Ministers?",
+    "options": ["Article 74", "Article 75(3)", "Article 76", "Article 77"],
+    "answer": 1,
+    "explanation": "Article 75(3) states that the Council of Ministers is collectively responsible to the Lok Sabha."
+  },
+  {
+    "question": "Which is not a legislative power of Parliament?",
+    "options": ["Impeachment of President", "Approval of Emergency", "Removal of Judges", "Appointment of Governors"],
+    "answer": 3,
+    "explanation": "Appointment of Governors is an executive power of the President, not a legislative power of Parliament."
+  },
+  {
+    "question": "The maximum strength of Lok Sabha is fixed under:",
+    "options": ["Representation of People Act", "Presidential Order", "Article 81", "Election Commission rules"],
+    "answer": 2,
+    "explanation": "Article 81 of the Constitution fixes the maximum strength of Lok Sabha at 552 members."
+  },
+  {
+    "question": "Which vote reduces a demand for grant by ₹1?",
+    "options": ["Token Cut", "Economy Cut", "Policy Cut", "Guillotine"],
+    "answer": 0,
+    "explanation": "A Token Cut motion reduces the demand for grant by a token amount of ₹1 to ventilate a specific grievance."
+  },
+  {
+    "question": "The Prime Minister holds office:",
+    "options": ["For five years", "During the pleasure of President", "As long as he enjoys Lok Sabha confidence", "Until Rajya Sabha dissolves"],
+    "answer": 2,
+    "explanation": "The Prime Minister holds office as long as he/she commands the confidence of the Lok Sabha."
+  },
+  {
+    "question": "Which motion cannot be moved in Rajya Sabha?",
+    "options": ["Adjournment Motion", "Censure Motion", "No-Confidence Motion", "Calling Attention Motion"],
+    "answer": 2,
+    "explanation": "No-Confidence Motion can only be moved in Lok Sabha as the Council of Ministers is responsible only to it."
+  },
+  {
+    "question": "Which body certifies a bill as a Money Bill?",
+    "options": ["President", "Finance Minister", "Speaker of Lok Sabha", "Vice-President"],
+    "answer": 2,
+    "explanation": "The Speaker of Lok Sabha has the final authority to certify whether a bill is a Money Bill or not."
+  },
+  {
+    "question": "Which power of the President is discretionary?",
+    "options": ["Appointing PM", "Assenting to bills", "Issuing ordinances", "Declaring Emergency"],
+    "answer": 0,
+    "explanation": "Appointing the PM when no party has a clear majority is a discretionary power of the President."
+  },
+  {
+    "question": "A bill pending in Lok Sabha lapses when:",
+    "options": ["President resigns", "Lok Sabha is dissolved", "Rajya Sabha is dissolved", "PM resigns"],
+    "answer": 1,
+    "explanation": "All bills pending in Lok Sabha lapse when the Lok Sabha is dissolved, except those pending in Rajya Sabha."
+  },
+  {
+    "question": "The impeachment of the President requires:",
+    "options": ["Simple majority", "Absolute majority", "Special majority", "Unanimous vote"],
+    "answer": 2,
+    "explanation": "Impeachment of the President requires a special majority (2/3rd of members present and voting) in both houses."
+  },
+  {
+    "question": "Who administers oath to the President?",
+    "options": ["Prime Minister", "Chief Justice of India", "Vice-President", "Speaker"],
+    "answer": 1,
+    "explanation": "The Chief Justice of India administers the oath of office to the President."
+  },
+  {
+    "question": "Which emergency suspends Article 19 automatically?",
+    "options": ["National Emergency", "State Emergency", "Financial Emergency", "None"],
+    "answer": 0,
+    "explanation": "During National Emergency proclaimed on grounds of war or external aggression, Article 19 is automatically suspended."
+  },
+  {
+    "question": "The Council of Ministers is collectively responsible to:",
+    "options": ["President", "Rajya Sabha", "Lok Sabha", "Supreme Court"],
+    "answer": 2,
+    "explanation": "Article 75(3) mandates that the Council of Ministers is collectively responsible to the Lok Sabha."
+  },
+  {
+    "question": "Who is the ex-officio Chairman of Rajya Sabha?",
+    "options": ["President", "Prime Minister", "Vice-President", "Speaker"],
+    "answer": 2,
+    "explanation": "The Vice-President of India is the ex-officio Chairman of the Rajya Sabha."
+  },
+  {
+    "question": "Which bill does not require President's prior recommendation?",
+    "options": ["Money Bill", "Constitutional Amendment Bill", "Finance Bill", "Ordinary Bill"],
+    "answer": 1,
+    "explanation": "Constitutional Amendment Bills do not require the President's prior recommendation for introduction."
+  },
+  {
+    "question": "The Zero Hour begins at:",
+    "options": ["10 a.m.", "11 a.m.", "12 noon", "After Question Hour"],
+    "answer": 3,
+    "explanation": "Zero Hour is an informal device that starts immediately after Question Hour at around 12 noon."
+  },
+  {
+    "question": "Which committee scrutinizes government expenditure?",
+    "options": ["Estimates Committee", "Public Accounts Committee", "Rules Committee", "Ethics Committee"],
+    "answer": 1,
+    "explanation": "The Public Accounts Committee examines accounts showing appropriation of sums granted by Parliament."
+  },
+  {
+    "question": "Ordinances cease to operate after:",
+    "options": ["6 weeks", "3 months", "6 months", "1 year"],
+    "answer": 0,
+    "explanation": "An ordinance must be approved by Parliament within 6 weeks of reassembly, otherwise it ceases to operate."
+  },
+  {
+    "question": "Which motion is regarded as a vote of disapproval?",
+    "options": ["Adjournment Motion", "Cut Motion", "No-Confidence Motion", "Privilege Motion"],
+    "answer": 2,
+    "explanation": "A No-Confidence Motion expresses lack of confidence in the government and is a direct vote of disapproval."
+  },
+  {
+    "question": "Who decides whether a bill is a Money Bill?",
+    "options": ["Parliament", "Supreme Court", "Speaker (final)", "President"],
+    "answer": 2,
+    "explanation": "The Speaker's decision on whether a bill is a Money Bill is final and cannot be questioned in any court."
+  },
+  {
+    "question": "Rajya Sabha can initiate:",
+    "options": ["Money Bill", "No-Confidence Motion", "Constitutional Amendment Bill", "Budget"],
+    "answer": 2,
+    "explanation": "Constitutional Amendment Bills can be introduced in either house, including Rajya Sabha."
+  },
+  {
+    "question": "What happens if President returns a non-money bill?",
+    "options": ["Bill lapses", "Parliament must drop it", "Parliament may reconsider", "Supreme Court decides"],
+    "answer": 2,
+    "explanation": "When the President returns a non-money bill, Parliament must reconsider it. If passed again, the President must give assent."
+  },
+  {
+    "question": "The maximum life of Rajya Sabha is:",
+    "options": ["5 years", "6 years", "Permanent", "10 years"],
+    "answer": 2,
+    "explanation": "Rajya Sabha is a permanent house that is never dissolved; 1/3rd members retire every two years."
+  },
+  {
+    "question": "Which is a parliamentary device?",
+    "options": ["Ordinance", "Veto", "Question Hour", "Judicial Review"],
+    "answer": 2,
+    "explanation": "Question Hour is a parliamentary device where members ask questions to ministers about government functioning."
+  },
+  {
+    "question": "Who controls parliamentary proceedings?",
+    "options": ["Prime Minister", "Speaker", "President", "Cabinet Secretary"],
+    "answer": 1,
+    "explanation": "The Speaker (in Lok Sabha) and Chairman (in Rajya Sabha) control their respective house proceedings."
+  },
+  {
+    "question": "Which is not a form of cut motion?",
+    "options": ["Economy Cut", "Policy Cut", "Token Cut", "Guillotine Cut"],
+    "answer": 3,
+    "explanation": "Guillotine is a device to expedite voting on demands, not a type of cut motion. The three types are Token, Economy, and Policy cuts."
+  },
+  {
+    "question": "The resignation of PM means:",
+    "options": ["New PM only", "Cabinet continues", "Entire Council resigns", "President resigns"],
+    "answer": 2,
+    "explanation": "The resignation or death of the Prime Minister leads to the resignation of the entire Council of Ministers."
+  },
+  {
+    "question": "Which article makes the President part of Parliament?",
+    "options": ["Article 52", "Article 74", "Article 79", "Article 85"],
+    "answer": 2,
+    "explanation": "Article 79 states that Parliament consists of the President and two Houses (Lok Sabha and Rajya Sabha)."
+  },
+  {
+    "question": "Which writ questions the legality of a person's claim to office?",
+    "options": ["Mandamus", "Certiorari", "Quo Warranto", "Habeas Corpus"],
+    "answer": 2,
+    "explanation": "Quo Warranto questions by what authority a person holds a public office."
+  },
+  {
+    "question": "Advisory jurisdiction is mentioned in:",
+    "options": ["Article 124", "Article 131", "Article 143", "Article 226"],
+    "answer": 2,
+    "explanation": "Article 143 empowers the President to seek the Supreme Court's opinion on matters of public importance."
+  },
+  {
+    "question": "Which court can punish for contempt of itself?",
+    "options": ["Only Supreme Court", "Only High Court", "Both", "District Court"],
+    "answer": 2,
+    "explanation": "Both the Supreme Court and High Courts have the power to punish for contempt of themselves."
+  },
+  {
+    "question": "The Chief Justice of India is appointed by:",
+    "options": ["Prime Minister", "President", "Parliament", "Collegium only"],
+    "answer": 1,
+    "explanation": "The President appoints the Chief Justice of India, usually the senior-most judge of the Supreme Court."
+  },
+  {
+    "question": "Which jurisdiction settles Centre-State disputes?",
+    "options": ["Appellate", "Original", "Advisory", "Revisional"],
+    "answer": 1,
+    "explanation": "The Supreme Court has original jurisdiction in disputes between the Centre and States or between States."
+  },
+  {
+    "question": "A High Court judge can be removed by:",
+    "options": ["Governor", "President alone", "Parliament impeachment", "Supreme Court order"],
+    "answer": 2,
+    "explanation": "A High Court judge can be removed only through impeachment by Parliament on grounds of proven misbehavior or incapacity."
+  },
+  {
+    "question": "Judicial Review means:",
+    "options": ["Reviewing elections", "Reviewing executive actions", "Reviewing laws for constitutionality", "Reviewing judgments"],
+    "answer": 2,
+    "explanation": "Judicial Review is the power of courts to examine laws and executive actions for their constitutionality."
+  },
+  {
+    "question": "Lok Adalat awards are:",
+    "options": ["Appealable", "Non-binding", "Final and binding", "Temporary"],
+    "answer": 2,
+    "explanation": "Awards given by Lok Adalats are deemed to be decrees of civil courts and are final and binding."
+  },
+  {
+    "question": "Which writ enforces a public duty?",
+    "options": ["Mandamus", "Habeas Corpus", "Certiorari", "Prohibition"],
+    "answer": 0,
+    "explanation": "Mandamus commands a public authority to perform a duty it is legally bound to perform."
+  },
+  {
+    "question": "Which is not a qualification for SC judge?",
+    "options": ["Citizen of India", "Judge of HC for 5 years", "Advocate for 10 years", "Age below 65"],
+    "answer": 3,
+    "explanation": "Age below 65 is not a qualification but the retirement age. One must be a citizen and have served as HC judge for 5 years or advocate for 10 years."
+  },
+  {
+    "question": "PIL aims to:",
+    "options": ["Delay justice", "Protect public interest", "Help government", "Replace legislature"],
+    "answer": 1,
+    "explanation": "Public Interest Litigation (PIL) is filed to protect public interest and the rights of disadvantaged groups."
+  },
+  {
+    "question": "The power of Judicial Review was borrowed from:",
+    "options": ["UK", "USA", "France", "Canada"],
+    "answer": 1,
+    "explanation": "The concept of Judicial Review was borrowed from the United States Constitution."
+  },
+  {
+    "question": "Which court can issue writs for Fundamental Rights only?",
+    "options": ["District Court", "High Court", "Supreme Court", "Lok Adalat"],
+    "answer": 2,
+    "explanation": "Under Article 32, the Supreme Court can issue writs only for enforcement of Fundamental Rights. High Courts under Article 226 can issue writs for both FRs and other purposes."
+  },
+  {
+    "question": "Retirement age of SC judge is:",
+    "options": ["60", "62", "65", "70"],
+    "answer": 2,
+    "explanation": "A Supreme Court judge retires at the age of 65 years."
+  },
+  {
+    "question": "Which jurisdiction allows SC to hear election disputes?",
+    "options": ["Original", "Appellate", "Advisory", "Review"],
+    "answer": 1,
+    "explanation": "The Supreme Court hears election disputes in its appellate jurisdiction when appeals are filed from High Court decisions."
+  },
+  {
+    "question": "Who appoints High Court judges?",
+    "options": ["Governor", "Chief Minister", "President with consultation", "Parliament"],
+    "answer": 2,
+    "explanation": "The President appoints High Court judges after consultation with the Chief Justice of India, Governor, and Chief Justice of the High Court."
+  },
+  {
+    "question": "Which writ prevents lower courts from exceeding jurisdiction?",
+    "options": ["Certiorari", "Mandamus", "Prohibition", "Quo Warranto"],
+    "answer": 2,
+    "explanation": "Prohibition prevents lower courts or tribunals from exceeding their jurisdiction or acting contrary to law."
+  },
+  {
+    "question": "Independence of judiciary is ensured by:",
+    "options": ["Fixed tenure", "High salaries", "Difficult removal", "All of these"],
+    "answer": 3,
+    "explanation": "Judicial independence is ensured through security of tenure, fixed salaries, difficult removal process, and other safeguards."
+  },
+  {
+    "question": "Which article guarantees equality before law?",
+    "options": ["Article 14", "Article 19", "Article 21", "Article 32"],
+    "answer": 0,
+    "explanation": "Article 14 guarantees equality before law and equal protection of laws to all persons."
+  },
+  {
+    "question": "Article 32 is called:",
+    "options": ["Heart of Constitution", "Soul of Constitution", "Backbone of Constitution", "Basic structure"],
+    "answer": 0,
+    "explanation": "Dr. B.R. Ambedkar called Article 32 (Right to Constitutional Remedies) the heart and soul of the Constitution."
+  },
+  {
+    "question": "The Revolt of 1857 failed mainly due to:",
+    "options": ["Lack of planning", "Poor leadership", "Lack of unity", "British brutality"],
+    "answer": 2,
+    "explanation": "The 1857 Revolt failed primarily due to lack of unity among different regions, communities, and leaders."
+  },
+  {
+    "question": "The real objective of the Doctrine of Lapse was:",
+    "options": ["Administrative reform", "Expansion of territory", "Indian welfare", "Military control"],
+    "answer": 1,
+    "explanation": "The Doctrine of Lapse, introduced by Lord Dalhousie, was primarily used to expand British territory by annexing states without natural heirs."
+  },
+  {
+    "question": "The INC was founded primarily to:",
+    "options": ["Demand independence", "Promote armed struggle", "Create political awareness", "Support British rule"],
+    "answer": 2,
+    "explanation": "The Indian National Congress (1885) was initially founded to create political awareness and provide a platform for educated Indians."
+  },
+  {
+    "question": "Who called INC a 'microscopic minority'?",
+    "options": ["Curzon", "Dufferin", "Canning", "Dalhousie"],
+    "answer": 0,
+    "explanation": "Lord Curzon dismissed the INC as representing only a 'microscopic minority' of Indians."
+  },
+  {
+    "question": "Swadeshi Movement began after:",
+    "options": ["1905 Partition", "1907 Surat Split", "1911 Annulment", "1919 Rowlatt Act"],
+    "answer": 0,
+    "explanation": "The Swadeshi Movement was launched in response to the Partition of Bengal in 1905."
+  },
+  {
+    "question": "The Moderates believed in:",
+    "options": ["Violent struggle", "Constitutional agitation", "Boycott only", "Mass revolution"],
+    "answer": 1,
+    "explanation": "The Moderates believed in constitutional methods like petitions, prayers, and persuasion to achieve their goals."
+  },
+  {
+    "question": "Who introduced the slogan 'Swaraj is my birthright'?",
+    "options": ["Gokhale", "Tilak", "Naoroji", "Patel"],
+    "answer": 1,
+    "explanation": "Bal Gangadhar Tilak popularized the slogan 'Swaraj is my birthright and I shall have it'."
+  },
+  {
+    "question": "The Home Rule Movement aimed at:",
+    "options": ["Complete independence", "Dominion status", "Provincial autonomy", "Armed rebellion"],
+    "answer": 1,
+    "explanation": "The Home Rule Movement (1916) aimed at achieving self-government or dominion status within the British Empire."
+  },
+  {
+    "question": "Which act introduced dyarchy?",
+    "options": ["1909 Act", "1919 Act", "1935 Act", "1947 Act"],
+    "answer": 1,
+    "explanation": "The Government of India Act 1919 (Montagu-Chelmsford Reforms) introduced dyarchy in provinces."
+  },
+  {
+    "question": "Rowlatt Act allowed:",
+    "options": ["Trial by jury", "Detention without trial", "Freedom of press", "Provincial autonomy"],
+    "answer": 1,
+    "explanation": "The Rowlatt Act (1919) allowed the British government to imprison people without trial for up to two years."
+  },
+  {
+    "question": "Jallianwala Bagh massacre occurred in:",
+    "options": ["Delhi", "Lahore", "Amritsar", "Kanpur"],
+    "answer": 2,
+    "explanation": "The Jallianwala Bagh massacre took place in Amritsar on April 13, 1919."
+  },
+  {
+    "question": "The Non-Cooperation Movement included:",
+    "options": ["Armed revolt", "Boycott of schools", "Participation in councils", "Support of British courts"],
+    "answer": 1,
+    "explanation": "The Non-Cooperation Movement (1920-22) included boycott of schools, colleges, courts, and foreign goods."
+  },
+  {
+    "question": "The Chauri Chaura incident involved:",
+    "options": ["Army firing", "Police station burning", "Student protest", "Railway sabotage"],
+    "answer": 1,
+    "explanation": "The Chauri Chaura incident (1922) involved protesters burning a police station, killing 22 policemen, leading Gandhi to withdraw the Non-Cooperation Movement."
+  },
+  {
+    "question": "Simon Commission was opposed because:",
+    "options": ["It reduced Indian seats", "No Indian member", "It supported Muslims", "It delayed reforms"],
+    "answer": 1,
+    "explanation": "The Simon Commission (1928) was opposed because it had no Indian members, leading to nationwide protests."
+  },
+  {
+    "question": "The Nehru Report demanded:",
+    "options": ["Complete independence", "Dominion status", "Separate electorates", "Armed struggle"],
+    "answer": 1,
+    "explanation": "The Nehru Report (1928) demanded dominion status for India within the British Commonwealth."
+  },
+  {
+    "question": "Lahore Session (1929) declared:",
+    "options": ["Non-Cooperation", "Civil Disobedience", "Purna Swaraj", "Quit India"],
+    "answer": 2,
+    "explanation": "The Lahore Session of INC in 1929, presided by Jawaharlal Nehru, declared Purna Swaraj (complete independence) as its goal."
+  },
+  {
+    "question": "The Salt March violated:",
+    "options": ["Rowlatt Act", "Salt Law", "Arms Act", "Press Act"],
+    "answer": 1,
+    "explanation": "Gandhi's Dandi March (1930) was undertaken to break the Salt Law that gave the British monopoly over salt production."
+  },
+  {
+    "question": "Gandhi-Irwin Pact resulted in:",
+    "options": ["End of CDM", "Release of prisoners", "Round Table participation", "All of these"],
+    "answer": 3,
+    "explanation": "The Gandhi-Irwin Pact (1931) led to withdrawal of Civil Disobedience Movement, release of prisoners, and Gandhi's participation in the Second Round Table Conference."
+  },
+  {
+    "question": "Quit India Movement was launched in:",
+    "options": ["1939", "1940", "1942", "1945"],
+    "answer": 2,
+    "explanation": "The Quit India Movement was launched by Gandhi on August 8, 1942, with the slogan 'Do or Die'."
+  },
+  {
+    "question": "Cabinet Mission proposed:",
+    "options": ["Immediate partition", "Weak centre", "Strong provinces", "British domination"],
+    "answer": 1,
+    "explanation": "The Cabinet Mission Plan (1946) proposed a weak federal centre with strong provinces, rejecting the demand for Pakistan."
+  },
+  {
+    "question": "Direct Action Day was called by:",
+    "options": ["INC", "Muslim League", "British", "Cabinet Mission"],
+    "answer": 1,
+    "explanation": "Direct Action Day (August 16, 1946) was called by the Muslim League under Jinnah to press for Pakistan."
+  },
+  {
+    "question": "The Constituent Assembly first met in:",
+    "options": ["1946", "1947", "1948", "1950"],
+    "answer": 0,
+    "explanation": "The Constituent Assembly first met on December 9, 1946, under the presidency of Dr. Rajendra Prasad."
+  },
+  {
+    "question": "The Indian Independence Act was passed in:",
+    "options": ["1946", "1947", "1948", "1950"],
+    "answer": 1,
+    "explanation": "The Indian Independence Act was passed by the British Parliament in July 1947."
+  },
+  {
+    "question": "Who was the first Governor-General of free India?",
+    "options": ["Nehru", "Mountbatten", "Rajagopalachari", "Patel"],
+    "answer": 1,
+    "explanation": "Lord Mountbatten served as the first Governor-General of independent India until June 1948."
+  },
+  {
+    "question": "Partition resulted primarily in:",
+    "options": ["Economic growth", "Mass migration", "Political unity", "Peace"],
+    "answer": 1,
+    "explanation": "The partition of India in 1947 resulted in one of the largest mass migrations in history, with widespread violence and displacement."
+  },
+  {
+    "question": "INA was formed by:",
+    "options": ["Subhash Bose", "Rash Behari Bose", "Mohan Singh", "Tilak"],
+    "answer": 2,
+    "explanation": "The Indian National Army (INA) was first formed by Captain Mohan Singh in 1942, later reorganized by Subhash Chandra Bose."
+  },
+  {
+    "question": "The Cripps Mission failed due to:",
+    "options": ["Rejection by INC", "British rigidity", "World War II", "Muslim League support"],
+    "answer": 0,
+    "explanation": "The Cripps Mission (1942) failed primarily because the Indian National Congress rejected its proposals."
+  },
+  {
+    "question": "The Objective Resolution was moved by:",
+    "options": ["Patel", "Nehru", "Ambedkar", "Rajendra Prasad"],
+    "answer": 1,
+    "explanation": "Jawaharlal Nehru moved the Objectives Resolution in the Constituent Assembly on December 13, 1946."
+  },
+  {
+    "question": "Which movement had maximum mass participation?",
+    "options": ["Swadeshi", "Non-Cooperation", "Civil Disobedience", "Quit India"],
+    "answer": 3,
+    "explanation": "The Quit India Movement (1942) saw the maximum mass participation, becoming a truly mass movement across India."
+  },
+  {
+    "question": "The Indian Constitution came into force on:",
+    "options": ["15 Aug 1947", "26 Jan 1950", "26 Nov 1949", "2 Oct 1950"],
+    "answer": 1,
+    "explanation": "The Constitution of India came into force on January 26, 1950, which is celebrated as Republic Day."
+  },
+  {
+    "question": "WWI alliances were:",
+    "options": ["Axis & Allies", "Triple Entente & Triple Alliance", "NATO & Warsaw", "UNO & League"],
+    "answer": 1,
+    "explanation": "World War I was fought between the Triple Entente (Britain, France, Russia) and Triple Alliance (Germany, Austria-Hungary, Italy)."
+  },
+  {
+    "question": "Treaty of Versailles imposed:",
+    "options": ["Heavy reparations on Germany", "Disarmament of France", "Partition of Britain", "Independence to colonies"],
+    "answer": 0,
+    "explanation": "The Treaty of Versailles (1919) imposed harsh terms on Germany, including heavy war reparations and territorial losses."
+  },
+  {
+    "question": "League of Nations failed mainly due to:",
+    "options": ["Weak structure", "Absence of USA", "No army", "All of these"],
+    "answer": 3,
+    "explanation": "The League of Nations failed due to weak organizational structure, USA's non-membership, lack of military force, and inability to prevent aggression."
+  },
+  {
+    "question": "Nazism emerged in:",
+    "options": ["Italy", "Germany", "Japan", "Russia"],
+    "answer": 1,
+    "explanation": "Nazism, led by Adolf Hitler, emerged in Germany in the 1920s and came to power in 1933."
+  },
+  {
+    "question": "Hitler became Chancellor in:",
+    "options": ["1929", "1932", "1933", "1935"],
+    "answer": 2,
+    "explanation": "Adolf Hitler became Chancellor of Germany on January 30, 1933."
+  },
+  {
+    "question": "The Weimar Republic was:",
+    "options": ["Dictatorship", "Communist state", "Democratic government", "Military rule"],
+    "answer": 2,
+    "explanation": "The Weimar Republic (1919-1933) was Germany's democratic government established after World War I."
+  },
+  {
+    "question": "Appeasement policy was followed by:",
+    "options": ["Germany", "Britain & France", "Italy", "USSR"],
+    "answer": 1,
+    "explanation": "Britain and France followed the policy of appeasement towards Hitler's aggressive expansion in the 1930s."
+  },
+  {
+    "question": "WWII began with:",
+    "options": ["Pearl Harbor", "Invasion of Poland", "Battle of Britain", "Fall of France"],
+    "answer": 1,
+    "explanation": "World War II began on September 1, 1939, when Germany invaded Poland."
+  },
+  {
+    "question": "Fascism emphasized:",
+    "options": ["Democracy", "Individual liberty", "Extreme nationalism", "Social equality"],
+    "answer": 2,
+    "explanation": "Fascism emphasized extreme nationalism, militarism, totalitarianism, and opposition to democracy and communism."
+  },
+  {
+    "question": "UNO replaced:",
+    "options": ["NATO", "League of Nations", "Warsaw Pact", "EU"],
+    "answer": 1,
+    "explanation": "The United Nations Organization (UNO) was established in 1945 to replace the failed League of Nations."
+  },
+  {
+    "question": "UN headquarters is in:",
+    "options": ["Geneva", "Paris", "New York", "Vienna"],
+    "answer": 2,
+    "explanation": "The United Nations headquarters is located in New York City, USA."
+  },
+  {
+    "question": "Veto can be used in:",
+    "options": ["General Assembly", "ICJ", "Security Council", "Secretariat"],
+    "answer": 2,
+    "explanation": "Veto power can be exercised by the five permanent members in the UN Security Council."
+  },
+  {
+    "question": "IMF mainly deals with:",
+    "options": ["Peacekeeping", "Health", "Monetary stability", "Education"],
+    "answer": 2,
+    "explanation": "The International Monetary Fund (IMF) deals with international monetary cooperation and financial stability."
+  },
+  {
+    "question": "UNESCO focuses on:",
+    "options": ["Trade", "Culture & education", "Military", "Finance"],
+    "answer": 1,
+    "explanation": "UNESCO (United Nations Educational, Scientific and Cultural Organization) focuses on education, science, and culture."
+  },
+  {
+    "question": "Cold War was between:",
+    "options": ["USA & UK", "USSR & USA", "Germany & France", "China & Japan"],
+    "answer": 1,
+    "explanation": "The Cold War (1947-1991) was an ideological and geopolitical conflict between the USSR and USA."
+  },
+  {
+    "question": "Non-Aligned Movement was led by:",
+    "options": ["USA", "USSR", "India", "UK"],
+    "answer": 2,
+    "explanation": "India, along with Yugoslavia and Egypt, played a leading role in founding the Non-Aligned Movement in 1961."
+  },
+  {
+    "question": "The Berlin Wall symbolized:",
+    "options": ["Peace", "Unity", "Division", "Freedom"],
+    "answer": 2,
+    "explanation": "The Berlin Wall (1961-1989) symbolized the division between communist East and democratic West during the Cold War."
+  },
+  {
+    "question": "Globalization promotes:",
+    "options": ["Isolation", "Protectionism", "Economic interdependence", "Military rule"],
+    "answer": 2,
+    "explanation": "Globalization promotes economic interdependence through increased trade, investment, and cultural exchange."
+  },
+  {
+    "question": "European Union was formed mainly for:",
+    "options": ["Military expansion", "Economic integration", "Colonization", "Cultural dominance"],
+    "answer": 1,
+    "explanation": "The European Union was formed primarily for economic integration and cooperation among European nations."
+  },
+  {
+    "question": "The UN Secretary-General is appointed by:",
+    "options": ["General Assembly", "Security Council", "ICJ", "Security Council recommendation & GA approval"],
+    "answer": 3,
+    "explanation": "The UN Secretary-General is appointed by the General Assembly on the recommendation of the Security Council."
+  }
+]
