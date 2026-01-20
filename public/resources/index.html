@@ -75,7 +75,14 @@
             scale: 1.1;
         }
 
-        .classes, .quizzes {
+        #content {
+            width: 100%;
+            display: flex;
+            flex-wrap: inherit;
+            justify-content: inherit;
+        }
+
+        .card {
             background: var(--primary);
             width: 12vi;
             height: 16vi;
@@ -91,34 +98,35 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
-        .classes:hover, .quizzes:hover {
+        .card:hover {
             scale: 1.2;
             box-shadow: 0 8px 12px rgba(147, 187, 234, 0.4);
         }
 
-        .classes > h2 {
+        .card.class-card > h2 {
             font-size: 4vi;
             color: var(--bg);
             font-weight: 600;
         }
 
-        .classes > p {
+        .card.class-card > p {
             font-size: 0.8rem;
             color: rgba(4, 11, 21, 0.7);
             font-weight: 500;
         }
 
-        .quizzes {
+        .card.subject-card,
+        .card.topic-card {
             background: linear-gradient(135deg, var(--primary), rgba(147, 187, 234, 0.8));
         }
 
-        .quizzes > i {
+        .card > i {
             scale: 2.5;
             margin-bottom: 10%;
             color: var(--bg);
         }
 
-        .quizzes > h3 {
+        .card > h3 {
             font-size: 1.1rem;
             color: var(--bg);
             font-weight: 600;
@@ -129,14 +137,6 @@
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
-        }
-
-        .quizzes:hover h3 {
-            color: var(--bg);
-        }
-
-        .quizzes {
-            display: none;
         }
 
         #loading {
@@ -168,7 +168,7 @@
             100% { transform: rotate(360deg) }
         }
 
-        #noQuizzes {
+        #noContent {
             color: var(--secondary);
             font-size: 1.2rem;
             font-weight: 500;
@@ -315,49 +315,7 @@
             <button id="back" onclick="window.location.reload()"><i style="scale: 3;" class="fa-solid fa-arrow-left"></i></button>
             <br>
             <div id="loading" class="loader"></div>
-
-            <!-- Class Selection -->
-            <div class="classes" name="10" onclick="loadSubjects(this.getAttribute('name'))">
-                <h2>10</h2>
-                <p>Class X</p>
-            </div>
-
-            <!-- Subject Items (Hidden by default) -->
-            <div class="quizzes" data-class="10" data-subject="computer-applications">
-                <i class="fa-solid fa-code"></i>
-                <h3>Computer Applications</h3>
-            </div>
-            <div class="quizzes" data-class="10" data-subject="history">
-                <i class="fa-solid fa-timeline"></i>
-                <h3>History & Civics</h3>
-            </div>
-            <div class="quizzes" data-class="10" data-subject="chemistry">
-                <i class="fa-solid fa-flask"></i>
-                <h3>Chemistry</h3>
-            </div>
-            <div class="quizzes" data-class="10" data-subject="environmental-science">
-                <i class="fa-solid fa-tree"></i>
-                <h3>Environmental Science</h3>
-            </div>
-
-            <!-- Topic Items (Hidden by default) -->
-            <div class="quizzes" data-subject-detail="java-class-10">
-                <i class="fa-solid fa-code"></i>
-                <h3>Java MCQ Quiz</h3>
-            </div>
-            <div class="quizzes" data-subject-detail="history-class-10">
-                <i class="fa-solid fa-timeline"></i>
-                <h3>History & Civics MCQ</h3>
-            </div>
-            <div class="quizzes" data-subject-detail="chemistry-class-10">
-                <i class="fa-solid fa-flask"></i>
-                <h3>Chemistry MCQ</h3>
-            </div>
-            <div class="quizzes" data-subject-detail="environmental-science-class-10">
-                <i class="fa-solid fa-tree"></i>
-                <h3>Environmental Science MCQ</h3>
-            </div>
-
+            <div id="content"></div>
         </div>
         <div id="logo">
             <img src="../logo.png" id="logo-img">
@@ -388,119 +346,120 @@
     </footer>
 
     <script>
-        const quizzes = document.querySelectorAll(".quizzes");
-        const classes = document.querySelectorAll(".classes");
-        let loadedClass = 0;
-        let loadedSubject = null;
-
-        // Quiz mapping configuration
-        const topicConfig = {
-            'java-class-10': { file: 'class-10-java.json', name: 'Java Programming' },
-            'history-class-10': { file: 'class-10-history-civics-mixed.json', name: 'History & Civics' },
-            'chemistry-class-10': { file: 'class-10-organic-chemistry.json', name: 'Organic Chemistry' },
-            'environmental-science-class-10': { file: 'class-10-evs-mixed.json', name: 'Environmental Science' }
-        };
-
-        const subjectConfig = {
-            '10': [
-                { id: 'computer-applications', name: 'Computer Applications', icon: 'fa-code' },
-                { id: 'history', name: 'History & Civics', icon: 'fa-timeline' },
-                { id: 'chemistry', name: 'Chemistry', icon: 'fa-flask' },
-                { id: 'environmental-science', name: 'Environmental Science', icon: 'fa-tree' }
-            ]
-        };
-
-        function loadSubjects(selectedClass) {
-            const left = document.querySelector("#left");
-            const loader = document.querySelector("#loading");
+        // ===== SIMPLE QUIZ CONFIGURATION =====
+        // Just add your quizzes here!
+        const QUIZZES = [
+            {
+                class: 10,
+                subject: 'Computer Applications',
+                icon: 'fa-code',
+                topics: [
+                    { name: 'Java MCQ', file: 'class-10-java.json' }
+                ]
+            },
+            {
+                class: 10,
+                subject: 'History & Civics',
+                icon: 'fa-timeline',
+                topics: [
+                    { name: 'History & Civics MCQ', file: 'class-10-history-civics-mixed.json' }
+                ]
+            },
+            {
+                class: 10,
+                subject: 'Chemistry',
+                icon: 'fa-flask',
+                topics: [
+                    { name: 'Organic Chemistry MCQ', file: 'class-10-organic-chemistry.json' }
+                ]
+            },
+            {
+                class: 10,
+                subject: 'Environmental Science',
+                icon: 'fa-tree',
+                topics: [
+                    { name: 'Environmental Science MCQ', file: 'class-10-evs-mixed.json' }
+                ]
+            },
+            {
+                class: 10,
+                subject: 'Biology',
+                icon: 'fa-dna',
+                topics: [
+                    { name: 'Plant Physiology MCQ', file: 'class-10-bio-plant-physiology.json' },
+                    { name: 'Reproduction in Humans', file: 'class-10-bio-reproduction.json'}
+                ]
+            }
+        ];
+        function renderClasses() {
+            const content = document.getElementById('content');
+            content.innerHTML = '';
             
-            loadedClass = selectedClass;
-            loadedSubject = null;
-            document.querySelector(`#back`).style.display = "inline-block";
+            const classes = [...new Set(QUIZZES.map(q => q.class))].sort((a, b) => a - b);
             
-            // Hide class buttons
+            if (classes.length === 0) {
+                content.innerHTML = '<h1 id="noContent">No Classes Available!</h1>';
+                return;
+            }
+
             classes.forEach(cls => {
-                cls.style.display = "none";
+                const card = document.createElement('div');
+                card.className = 'card class-card';
+                card.innerHTML = `<h2>${cls}</h2><p>Class ${cls}</p>`;
+                card.onclick = () => renderSubjects(cls);
+                content.appendChild(card);
             });
-
-            // Clear and hide quiz items
-            quizzes.forEach(quiz => {
-                quiz.style.display = "none";
-            });
-
-            loader.style.display = "inline-block";
-
-            // Load available subjects for selected class
-            const availableSubjects = subjectConfig[selectedClass];
-            
-            if (availableSubjects && availableSubjects.length > 0) {
-                loader.style.display = "none";
-                
-                availableSubjects.forEach(subject => {
-                    const subjectCard = document.createElement('div');
-                    subjectCard.className = 'quizzes';
-                    subjectCard.innerHTML = `
-                        <i class="fa-solid ${subject.icon}"></i>
-                        <h3>${subject.name}</h3>
-                    `;
-                    subjectCard.onclick = () => loadTopics(selectedClass, subject.id);
-                    subjectCard.style.display = "flex";
-                    
-                    left.appendChild(subjectCard);
-                });
-            } else {
-                loader.style.display = "none";
-                left.innerHTML += `<h1 id="noQuizzes">No Subjects Available!</h1>`;
-            }
         }
 
-        function loadTopics(selectedClass, selectedSubject) {
-            const left = document.querySelector("#left");
-            const loader = document.querySelector("#loading");
-            
-            loadedClass = selectedClass;
-            loadedSubject = selectedSubject;
-            
-            // Remove all dynamically created subject cards
-            document.querySelectorAll('.quizzes').forEach(q => {
-                if (q.style.display === 'flex') {
-                    q.remove();
-                }
-            });
+        function renderSubjects(cls) {
+            const content = document.getElementById('content');
+            content.innerHTML = '';
+            document.querySelector('#back').style.display = 'inline-block';
 
-            // Remove error message if any
-            const errorMsg = document.getElementById('noQuizzes');
-            if (errorMsg) errorMsg.remove();
-
-            loader.style.display = "inline-block";
-
-            // Build topic key
-            const topicKey = `${selectedSubject}-class-${selectedClass}`;
-            const topicInfo = topicConfig[topicKey];
+            const subjects = QUIZZES.filter(q => q.class === cls);
             
-            if (topicInfo) {
-                loader.style.display = "none";
-                
-                const topicCard = document.createElement('div');
-                topicCard.className = 'quizzes';
-                topicCard.innerHTML = `
-                    <i class="fa-solid fa-clipboard-list"></i>
-                    <h3>${topicInfo.name}</h3>
+            if (subjects.length === 0) {
+                content.innerHTML = '<h1 id="noContent">No Subjects Available!</h1>';
+                return;
+            }
+
+            subjects.forEach(subject => {
+                const card = document.createElement('div');
+                card.className = 'card subject-card';
+                card.innerHTML = `
+                    <i class="fa-solid ${subject.icon}"></i>
+                    <h3>${subject.subject}</h3>
                 `;
-                topicCard.onclick = () => startQuiz(topicInfo.file);
-                topicCard.style.display = "flex";
-                
-                left.appendChild(topicCard);
-            } else {
-                loader.style.display = "none";
-                left.innerHTML += `<h1 id="noQuizzes">No Topics Available!</h1>`;
-            }
+                card.onclick = () => renderTopics(cls, subject);
+                content.appendChild(card);
+            });
         }
 
-        function startQuiz(quizFile) {
-            // Navigate to questions.html with query parameter for quiz selection
-            window.open(`questions.html?topic=${quizFile}`, '_blank');
+        function renderTopics(cls, subject) {
+            const content = document.getElementById('content');
+            content.innerHTML = '';
+
+            if (subject.topics.length === 0) {
+                content.innerHTML = '<h1 id="noContent">No Topics Available!</h1>';
+                return;
+            }
+
+            subject.topics.forEach(topic => {
+                const card = document.createElement('div');
+                card.className = 'card topic-card';
+                card.innerHTML = `
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <h3>${topic.name}</h3>
+                `;
+                card.onclick = () => {
+                    window.open(`questions.html?topic=${topic.file}`, '_blank');
+                };
+                content.appendChild(card);
+            });
         }
+
+        // Initialize
+        renderClasses();
     </script>
 </body>
 </html>

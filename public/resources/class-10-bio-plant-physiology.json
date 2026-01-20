@@ -1,0 +1,290 @@
+[
+  {
+    "question": "The process by which root hairs absorb water from soil is mainly",
+    "options": ["Imbibition", "Osmosis", "Diffusion", "Active transport"],
+    "answer": 1,
+    "explanation": "Root hairs absorb water by osmosis due to concentration difference."
+  },
+  {
+    "question": "Root pressure is maximum when",
+    "options": ["Transpiration is high", "Atmosphere is dry", "Soil is moist and transpiration is low", "Plant is wilting"],
+    "answer": 2,
+    "explanation": "Root pressure builds up more when water is available but transpiration pull is low."
+  },
+  {
+    "question": "Plasmolysis occurs when a plant cell is placed in",
+    "options": ["Hypotonic solution", "Isotonic solution", "Hypertonic solution", "Distilled water"],
+    "answer": 2,
+    "explanation": "Hypertonic solution causes water to leave the cell, leading to shrinkage of protoplasm."
+  },
+  {
+    "question": "The force mainly responsible for ascent of sap in tall trees is",
+    "options": ["Root pressure", "Transpiration pull", "Capillary action", "Imbibition"],
+    "answer": 1,
+    "explanation": "Cohesion-tension theory / transpiration pull is the main force in tall plants."
+  },
+  {
+    "question": "Which structure in roots increases surface area for absorption?",
+    "options": ["Xylem", "Phloem", "Root hairs", "Cortex"],
+    "answer": 2,
+    "explanation": "Root hairs massively increase surface area for water and mineral absorption."
+  },
+  {
+    "question": "Transpiration is defined as",
+    "options": ["Loss of water in liquid form", "Loss of water vapour from aerial parts", "Absorption of water", "Guttation"],
+    "answer": 1,
+    "explanation": "Transpiration is loss of water as vapour mainly through stomata."
+  },
+  {
+    "question": "The main function of transpiration is to",
+    "options": ["Cool the plant", "Create transpiration pull for ascent of sap", "Both A and B", "Supply oxygen"],
+    "answer": 2,
+    "explanation": "It helps in ascent of sap and also cools the plant."
+  },
+  {
+    "question": "Which factor increases the rate of transpiration the most?",
+    "options": ["High humidity", "Low wind speed", "High temperature and low humidity", "Cloudy day"],
+    "answer": 2,
+    "explanation": "High temp + low humidity creates steep vapour pressure gradient."
+  },
+  {
+    "question": "Guttation occurs through",
+    "options": ["Stomata", "Hydathodes", "Lenticels", "Cuticle"],
+    "answer": 1,
+    "explanation": "Guttation is exudation of liquid water through hydathodes."
+  },
+  {
+    "question": "Potometer is used to measure",
+    "options": ["Photosynthesis rate", "Transpiration rate", "Respiration rate", "Root pressure"],
+    "answer": 1,
+    "explanation": "Ganong's potometer measures water uptake which ≈ transpiration."
+  },
+  {
+    "question": "Photosynthesis mainly occurs in",
+    "options": ["Xylem", "Phloem", "Chloroplasts", "Mitochondria"],
+    "answer": 2,
+    "explanation": "Chloroplasts contain chlorophyll for light reactions."
+  },
+  {
+    "question": "The green pigment essential for photosynthesis is",
+    "options": ["Xanthophyll", "Chlorophyll", "Carotene", "Anthocyanin"],
+    "answer": 1,
+    "explanation": "Chlorophyll absorbs light mainly in blue and red wavelengths."
+  },
+  {
+    "question": "During photosynthesis, oxygen is released from",
+    "options": ["Carbon dioxide", "Water", "Glucose", "Starch"],
+    "answer": 1,
+    "explanation": "Water splits in light reaction releasing O₂."
+  },
+  {
+    "question": "The end product of photosynthesis that is stored in leaves is",
+    "options": ["Glucose", "Starch", "Proteins", "Fats"],
+    "answer": 1,
+    "explanation": "Glucose is converted to starch for storage."
+  },
+  {
+    "question": "Which experiment proves CO₂ is necessary for photosynthesis?",
+    "options": ["Starch test on leaf", "KOH in bell jar experiment", "Variegated leaf experiment", "Destarched leaf test"],
+    "answer": 1,
+    "explanation": "KOH absorbs CO₂, preventing photosynthesis and starch formation."
+  },
+  {
+    "question": "The site of light reaction in chloroplast is",
+    "options": ["Stroma", "Thylakoid membrane", "Grana", "Both B and C"],
+    "answer": 3,
+    "explanation": "Light reaction occurs in thylakoid membranes of grana."
+  },
+  {
+    "question": "Dark reaction of photosynthesis occurs in",
+    "options": ["Thylakoid", "Stroma", "Envelope", "Intermembrane space"],
+    "answer": 1,
+    "explanation": "Calvin cycle (dark reaction) takes place in stroma."
+  },
+  {
+    "question": "Which gas is used in photosynthesis?",
+    "options": ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"],
+    "answer": 2,
+    "explanation": "CO₂ is fixed to form carbohydrates."
+  },
+  {
+    "question": "The process that converts solar energy into chemical energy is",
+    "options": ["Respiration", "Photosynthesis", "Transpiration", "Digestion"],
+    "answer": 1,
+    "explanation": "Photosynthesis traps light energy into glucose."
+  },
+  {
+    "question": "Wilting of plants occurs due to",
+    "options": ["Excess water", "Loss of turgidity", "High root pressure", "Low transpiration"],
+    "answer": 1,
+    "explanation": "Excessive transpiration leads to loss of turgor pressure."
+  },
+  {
+    "question": "Active transport in roots requires",
+    "options": ["Energy (ATP)", "No energy", "Only diffusion", "Sunlight"],
+    "answer": 0,
+    "explanation": "Minerals move against concentration gradient using ATP."
+  },
+  {
+    "question": "The tissue mainly responsible for conduction of water is",
+    "options": ["Phloem", "Xylem", "Parenchyma", "Collenchyma"],
+    "answer": 1,
+    "explanation": "Xylem conducts water and minerals upward."
+  },
+  {
+    "question": "Stomata open during day due to",
+    "options": ["Influx of K+ ions", "Efflux of K+ ions", "CO₂ accumulation", "High O₂"],
+    "answer": 0,
+    "explanation": "Potassium influx increases osmotic pressure, opening guard cells."
+  },
+  {
+    "question": "Which is NOT a factor affecting transpiration?",
+    "options": ["Light intensity", "Wind velocity", "Soil temperature", "Atmospheric pressure"],
+    "answer": 2,
+    "explanation": "Soil temperature has minimal direct effect compared to others."
+  },
+  {
+    "question": "The carbon cycle involves release of CO₂ during",
+    "options": ["Photosynthesis", "Respiration", "Both", "None"],
+    "answer": 1,
+    "explanation": "Respiration releases CO₂ back into atmosphere."
+  },
+  {
+    "question": "Auxins are mainly involved in",
+    "options": ["Cell division", "Phototropism", "Wilting", "Guttation"],
+    "answer": 1,
+    "explanation": "Auxins cause bending towards light (phototropism)."
+  },
+  {
+    "question": "Which hormone promotes abscission?",
+    "options": ["Auxin", "Gibberellin", "Abscisic acid", "Cytokinin"],
+    "answer": 2,
+    "explanation": "ABA promotes leaf fall and closes stomata during stress."
+  },
+  {
+    "question": "Turgidity helps plants in",
+    "options": ["Wilting", "Maintaining shape and support", "Reducing absorption", "Increasing plasmolysis"],
+    "answer": 1,
+    "explanation": "Turgor pressure keeps non-woody plants erect."
+  },
+  {
+    "question": "Deplasmolysis occurs when plasmolysed cell is placed in",
+    "options": ["Hypertonic solution", "Hypotonic solution", "Isotonic solution", "Air"],
+    "answer": 1,
+    "explanation": "Water enters, protoplasm regains original shape."
+  },
+  {
+    "question": "Which experiment shows chlorophyll is necessary for photosynthesis?",
+    "options": ["Variegated leaf starch test", "KOH experiment", "Destarched leaf", "Hydrilla experiment"],
+    "answer": 0,
+    "explanation": "Only green parts form starch in variegated leaf."
+  },
+  {
+    "question": "The optimum temperature for photosynthesis is around",
+    "options": ["10-15°C", "25-35°C", "45-50°C", "0-5°C"],
+    "answer": 1,
+    "explanation": "Enzyme activity peaks around 25-35°C."
+  },
+  {
+    "question": "Lenticels help in",
+    "options": ["Gaseous exchange and transpiration", "Only photosynthesis", "Water absorption", "Food transport"],
+    "answer": 0,
+    "explanation": "Lenticels allow lenticular transpiration and gas exchange."
+  },
+  {
+    "question": "Which is a C4 plant example?",
+    "options": ["Wheat", "Rice", "Maize", "Pea"],
+    "answer": 2,
+    "explanation": "Maize shows Kranz anatomy (though not deeply in ICSE)."
+  },
+  {
+    "question": "Bleeding in plants occurs due to",
+    "options": ["Root pressure", "Transpiration pull", "Guttation", "Photosynthesis"],
+    "answer": 0,
+    "explanation": "Positive root pressure causes bleeding when stem is cut."
+  },
+  {
+    "question": "The first stable product of CO₂ fixation is",
+    "options": ["Glucose", "Phosphoglycerate", "Starch", "Sucrose"],
+    "answer": 1,
+    "explanation": "PGA is first in Calvin cycle."
+  },
+  {
+    "question": "Which process requires light?",
+    "options": ["Calvin cycle", "Light reaction", "Both", "None"],
+    "answer": 1,
+    "explanation": "Light reaction needs light for photolysis."
+  },
+  {
+    "question": "Cuticular transpiration occurs through",
+    "options": ["Stomata", "Cuticle", "Lenticels", "Hydathodes"],
+    "answer": 1,
+    "explanation": "Cuticle allows some water loss, more in thin cuticle plants."
+  },
+  {
+    "question": "Osmotic pressure is due to",
+    "options": ["Solvent", "Solute particles", "Cell wall", "Membrane"],
+    "answer": 1,
+    "explanation": "More solute = higher osmotic pressure."
+  },
+  {
+    "question": "Which movement is geotropism?",
+    "options": ["Towards light", "Towards gravity", "Towards water", "Towards touch"],
+    "answer": 1,
+    "explanation": "Roots show positive geotropism."
+  },
+  {
+    "question": "Gibberellins help in",
+    "options": ["Stem elongation", "Leaf fall", "Closing stomata", "Fruit ripening"],
+    "answer": 0,
+    "explanation": "Gibberellins promote cell elongation and stem growth."
+  },
+  {
+    "question": "The rise of sap is against gravity due to",
+    "options": ["Diffusion", "Cohesion and adhesion", "Root pressure only", "Active transport"],
+    "answer": 1,
+    "explanation": "Cohesion-tension theory explains it."
+  },
+  {
+    "question": "Which is NOT needed for photosynthesis?",
+    "options": ["Light", "CO₂", "Water", "Nitrogen"],
+    "answer": 3,
+    "explanation": "N is for proteins but not directly in photosynthesis equation."
+  },
+  {
+    "question": "Starch test uses",
+    "options": ["Iodine solution", "Benedict's", "Fehling's", "Biuret"],
+    "answer": 0,
+    "explanation": "Iodine turns blue-black with starch."
+  },
+  {
+    "question": "Hydathodes are found in",
+    "options": ["Leaves tips/margins", "Stem", "Roots", "Flowers"],
+    "answer": 0,
+    "explanation": "For guttation in herbaceous plants."
+  },
+  {
+    "question": "Passive absorption of water is due to",
+    "options": ["Transpiration pull", "Root pressure", "Active transport", "Imbibition"],
+    "answer": 0,
+    "explanation": "Major part is passive via transpiration pull."
+  },
+  {
+    "question": "Cytokinins help in",
+    "options": ["Cell division", "Wilting", "Abscission", "Tropism"],
+    "answer": 0,
+    "explanation": "Promote cell division and delay senescence."
+  },
+  {
+    "question": "Which condition causes highest transpiration?",
+    "options": ["High humidity", "Low temperature", "Dry wind", "Rainy day"],
+    "answer": 2,
+    "explanation": "Dry wind removes humid air around leaf."
+  },
+  {
+    "question": "The process opposite to photosynthesis is",
+    "options": ["Transpiration", "Respiration", "Guttation", "Absorption"],
+    "answer": 1,
+    "explanation": "Respiration releases energy and CO₂."
+  }
+]
