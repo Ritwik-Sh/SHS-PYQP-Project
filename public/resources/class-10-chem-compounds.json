@@ -1,0 +1,332 @@
+[
+   {
+      "question":"Nitric acid is collected by:",
+      "options":[
+         "Downward displacement of air",
+         "Downward displacement of water",
+         "Upward displacement of air",
+         "Upward displacement of water"
+      ],
+      "answer":0,
+      "explanation":"Nitric acid (aqueous) is collected by downward displacement of air."
+   },
+   {
+      "question":"Drying agent used in the lab preparation of Hydrogen Chloride:",
+      "options":[
+         "Calcium oxide",
+         "Phosphorus pentoxide",
+         "Conc. Sulphuric acid",
+         "Either (a) or (b)"
+      ],
+      "answer":2,
+      "explanation":"HCl gas is not dried using CaO or P2O5; conc. H2SO4 is suitable."
+   },
+   {
+      "question":"What is the optimum temperature required for thermal dissociation of Hydrogen chloride?",
+      "options":[
+         "Less than 500°C",
+         "More than 500°C",
+         "3000°C",
+         "More than 1000°C"
+      ],
+      "answer":0,
+      "explanation":"Thermal dissociation of HCl requires very high temperatures (up to 500°C)"
+   },
+   {
+      "question":"Which of these do not conduct electricity?",
+      "options":[
+         "Dry hydrogen chloride",
+         "Liquefied hydrogen chloride",
+         "Anhydrous hydrochloric acid",
+         "Both (a) & (b)"
+      ],
+      "answer":3,
+      "explanation":"Dry HCl gas and liquefied HCl do not conduct electricity due to lack of free ions."
+   },
+   {
+      "question":"A: Azeotrope means a temperature at which a mixture of 2 or more liquids keeps boiling\nB: Azeotrope of hydrochloric acid is 110°C",
+      "options":[
+         "A is true B is false",
+         "A is false B is true",
+         "Both are true",
+         "Both are false"
+      ],
+      "answer":2,
+      "explanation":"An azeotrope is a constant‑boiling mixture; HCl–water forms an azeotrope boiling near 110°C."
+   },
+   {
+      "question":"Silver chloride reacts with HCl acid to….. :",
+      "options":[
+         "Give a silvery ppt of AgCl",
+         "Give a thick curdy white ppt of AgCl",
+         "Give a thick ppt of AgCl",
+         "NO REACTION takes place"
+      ],
+      "answer":3,
+      "explanation":"AgCl is insoluble and does not react further with HCl; no reaction occurs on adding HCl to AgCl."
+   },
+   {
+      "question":"Select the incorrect statement:",
+      "options":[
+         "Manganese dioxide is not a basic gas.",
+         "HCl turns methyl orange yellow",
+         "AgNO3 is used as a test for HCl acid",
+         "None of these"
+      ],
+      "answer":1,
+      "explanation":"Methyl orange turns red or pink in acid; saying HCl turns it yellow is incorrect."
+   },
+   {
+      "question":"The process is termed as  and the gas collected is . The drying agent used for the collection of gas is . The gas turns  litmus .",
+      "options":[
+         "Ostwald process, Nitric acid, Quicklime, blue, red",
+         "Haber’s Process, Ammonia, Conc. H2SO4, red, blue",
+         "Haber’s Process, Ammonia, Quicklime, red, blue",
+         "Haber’s Process, Ammonia, Quicklime, blue, red"
+      ],
+      "answer":2,
+      "explanation":"Haber process produces ammonia; drying agent is quicklime and ammonia turns red litmus blue."
+   },
+   {
+      "question":"State the favourable conditions for manufacture of ammonia:",
+      "options":[
+         "Temperature – 450-500C",
+         "High pressure of about 100 atm",
+         "Catalyst – iron",
+         "Both (a) & (c)"
+      ],
+      "answer":0,
+      "explanation":"Finely divided iron is the word, not just iron, hence the answer is only the first one."
+   },
+   {
+      "question":"What does the fountain experiment of ammonia gas prove?",
+      "options":[
+         "Ammonia is highly soluble in water",
+         "Ammonia is basic in nature",
+         "Ammonia turns red litmus blue",
+         "All of the above"
+      ],
+      "answer":3,
+      "explanation":"The fountain experiment demonstrates ammonia's high solubility and basic nature, and it turns red litmus blue."
+   },
+   {
+      "question":"Select the incorrect statement:",
+      "options":[
+         "Ammonia burns with a greenish yellow flame.",
+         "Ammonia forms an explosive mixture with water.",
+         "Catalytic oxidation of ammonia is an exothermic reaction",
+         "Ammonia is a nitrogen hydride."
+      ],
+      "answer":1,
+      "explanation":"Ammonia does not form an explosive mixture with water; explosive mixtures occur with air/oxygen."
+   },
+   {
+      "question":"A: When ammonia reacts with excess chlorine, Ammonium chloride is formed.\nB: Ammonia accepts protons to form ions.",
+      "options":[
+         "A is true B is false",
+         "A is false B is true",
+         "Both are true",
+         "Both are false"
+      ],
+      "answer":1,
+      "explanation":"Ammonia gives Nitrogen trichloride with excess chlorine / ammonia accepts protons to form NH4+."
+   },
+   {
+      "question":"Name the main compound formed due to the following reaction: (Temperature – 150C and Pressure – 150 atm)\nAmmonia + Carbon dioxide",
+      "options":[
+         "Ammonium nitrite",
+         "Urea",
+         "Ammonium nitrate",
+         "Nitrous acid"
+      ],
+      "answer":1,
+      "explanation":"Under high temperature and pressure ammonia and CO2 react to form urea."
+   },
+   {
+      "question":"Why is lab prepared Nitric acid Yellow in colour?",
+      "options":[
+         "Due to presence of nitrogen oxide",
+         "Due to dissolution of Nitrogen dioxide",
+         "Due to the burning effect",
+         "Due to high temperature"
+      ],
+      "answer":1,
+      "explanation":"Dissolved nitrogen dioxide (NO2) imparts a yellow colour to laboratory‑prepared nitric acid."
+   },
+   {
+      "question":"Valency of Nitrogen in Nitric acid",
+      "options":[
+         "5",
+         "4",
+         "6",
+         "7"
+      ],
+      "answer":0,
+      "explanation":"In HNO3, nitrogen has oxidation state/valency +5."
+   },
+   {
+      "question":"Which metal doesn’t react with nitric acid?",
+      "options":[
+         "Silver",
+         "Copper",
+         "Platinum",
+         "Both a & c"
+      ],
+      "answer":2,
+      "explanation":"Platinum is inert to nitric acid; silver and copper do react with nitric acid."
+   },
+   {
+      "question":"In Ostwald process, conversion of nitrogen dioxide to nitric acid takes place in:",
+      "options":[
+         "Oxidation Chamber",
+         "Catalytic chamber",
+         "Absorption tower",
+         "Dilution tank"
+      ],
+      "answer":2,
+      "explanation":"NO2 is absorbed in the absorption tower to form nitric acid."
+   },
+   {
+      "question":"Select the incorrect statement",
+      "options":[
+         "Nitric acid is heavier than water",
+         "Nitric acid is hygroscopic in nature",
+         "Nitric acid is a volatile acid",
+         "Nitric acid is deliquescent in nature"
+      ],
+      "answer":3,
+      "explanation":"Deliquescence refers to solids that absorb moisture and dissolve; nitric acid is a liquid, so calling it deliquescent is incorrect."
+   },
+   {
+      "question":"Main product formed of reaction between Iron and hot dilute nitric acid",
+      "options":[
+         "Ferrous nitrate",
+         "Ferric nitrate",
+         "Ferrous nitrite",
+         "Ferric nitrite"
+      ],
+      "answer":1,
+      "explanation":"Hot dilute HNO3 oxidizes iron to ferric nitrate."
+   },
+   {
+      "question":"Which of these metals become passive when treated with conc. Nitric acid?",
+      "options":[
+         "Mercury",
+         "Cobalt",
+         "Aluminium",
+         "Both b & c"
+      ],
+      "answer":3,
+      "explanation":"Cobalt and aluminium can become passive in concentrated nitric acid."
+   },
+   {
+      "question":"Composition of aqua regia",
+      "options":[
+         "1 part of conc. HCl and 3 parts of conc. nitric acid",
+         "3 parts of nitric acid and 1 part of Conc. Sulphuric acid",
+         "1 part of conc. Nitric acid and 3 parts of conc. HCl",
+         "3 parts of nitric acid and 3 parts of dil. HCl"
+      ],
+      "answer":2,
+      "explanation":"Aqua regia is 1 part concentrated HNO3 to 3 parts concentrated HCl."
+   },
+   {
+      "question":"Chemical name of brown ring",
+      "options":[
+         "Nitrosyl chloride",
+         "Nitroso ferric sulphate",
+         "Nitrosyl sulphate",
+         "Nitroso ferrous sulphate"
+      ],
+      "answer":3,
+      "explanation":"The brown ring complex formed in the test for nitrates is nitroso ferrous sulphate."
+   },
+   {
+      "question":"A metal nitrate which decrepitates on heating",
+      "options":[
+         "Mercuric nitrate",
+         "Potassium nitrate",
+         "Calcium nitrate",
+         "Zinc nitrate"
+      ],
+      "answer":0,
+      "explanation":"Mercuric nitrate decomposes violently (decrepitates) on heating."
+   },
+   {
+      "question":"A metal nitrate which liberates oxygen as the only gas on heating",
+      "options":[
+         "Mercuric nitrate",
+         "Potassium nitrate",
+         "Calcium nitrate",
+         "Zinc nitrate"
+      ],
+      "answer":1,
+      "explanation":"Potassium nitrate decomposes to nitrite and releases oxygen."
+   },
+   {
+      "question":"Common name of CaSO4.2H2O",
+      "options":[
+         "Barytes",
+         "Gypsum",
+         "Epsom salt",
+         "Kiserite"
+      ],
+      "answer":1,
+      "explanation":"CaSO4·2H2O is commonly known as gypsum."
+   },
+   {
+      "question":"Which of these is not involved in contact process?",
+      "options":[
+         "Electrostatic precipitator",
+         "Converter",
+         "Dilution tank",
+         "None of these"
+      ],
+      "answer":3,
+      "explanation":"All of these devices are involved."
+   },
+   {
+      "question":"A: Catalyst used in catalytic oxidation of sulphur dioxide is Vanadium oxide\nB: Platinum is used because it reacts with sulphur dioxide.",
+      "options":[
+         "A is true B is false",
+         "A is false B is true",
+         "Both are true",
+         "Both are false"
+      ],
+      "answer":0,
+      "explanation":"V2O5 is the catalyst; platinum is expensive hence not used/ can be poisoned by impurities."
+   },
+   {
+      "question":"What happens when oxalic acid reacts with Conc. Sulphuric acid?",
+      "options":[
+         "Formation of carbon dioxide and water",
+         "Formation of oxygen and carbon dioxide",
+         "Fomation of Oxygen and Water",
+         "Formation of Carbon dioxide, oxygen and water"
+      ],
+      "answer":3,
+      "explanation":"Conc. H2SO4 oxidizes oxalic acid producing CO2 , O2 and water."
+   },
+   {
+      "question":"What do you observe when conc. Sulphuric acid reacts with Sulphur?",
+      "options":[
+         "Formation of sulphur metal",
+         "Formation of sulphur dioxide",
+         "Formation of sulphuric acid",
+         "None of these"
+      ],
+      "answer":1,
+      "explanation":"Conc. H2SO4 oxidizes sulfur to sulfur dioxide (SO2)."
+   },
+   {
+      "question":"A: Dil. Sulphuric acid evolves sulphur dioxide from metal hydrogen sulphites\nB: Sulphur dioxide so formed shows a temporary bleaching property due to its oxidising nature.",
+      "options":[
+         "A is true B is false",
+         "A is false B is true",
+         "Both are true",
+         "Both are false"
+      ],
+      "answer":0,
+      "explanation":"A is true; B is false because SO2 bleaches by its reducing (not oxidizing) action, so the bleaching is temporary."
+   }
+]
