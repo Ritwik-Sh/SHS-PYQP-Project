@@ -1712,17 +1712,6 @@
 		"explanation": "== compares references, not contents. a and b are different array objects, so comparison is false"
 	},
 	{
-		"question": "What is the result?\n```java\nint[] arr = {5, 10, 15};\nfor(int x : arr) {\n  x = x + 10;\n}\nSystem.out.println(arr[0]);\n```",
-		"options": [
-			"5",
-			"15",
-			"10",
-			"Compilation error"
-		],
-		"answer": 0,
-		"explanation": "Enhanced for-loop creates a copy of each element in x. Modifying x doesn't change the original array"
-	},
-	{
 		"question": "What will be printed?\n```java\nint[][] matrix = new int[2][3];\nmatrix[0][0] = 5;\nSystem.out.println(matrix[0][1]);\n```",
 		"options": [
 			"0",
@@ -2878,6 +2867,17 @@
 		],
 		"answer": 1,
 		"explanation": "equals() method should be overridden to define custom equality logic for objects"
+	},
+	{
+		"question": "What is the output of the following? \n```java\nfor(int i = 3; i <= 15 || i % 5 == 0; i += 3);\n\tSystem.out.println(i);\n```",
+		"options": [
+			"3",
+			"15",
+			"18",
+			"Compilation error"
+		],
+		"answer": 3,
+		"explanation": "The semicolon after the for loop creates an empty loop body. 'i' is not accessible outside the loop, causing a compilation error"
 	},
 	{
 		"question": "What happens when you try to modify a String object?",

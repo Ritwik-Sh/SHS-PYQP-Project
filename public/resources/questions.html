@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MCQ Questions</title>
-        <link rel="icon" type="image/png" href="../logo.png" />
+    <link rel="icon" type="image/png" href="../logo.png" />
     <style>
         :root {
             --bg: #040b15;
@@ -49,8 +49,8 @@
             font-size: 1.5rem;
             color: var(--text);
             text-decoration: none;
-            
         }
+        
         .header h1 {
             align-self: start;
             font-size: 1.5rem;
@@ -147,16 +147,6 @@
             color: var(--primary);
             font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
         }
-        /* pre {
-            margin: 16px 0;
-            border-radius: 8px;
-        }
-
-        code {
-            font-family: 'Cascadia Code', 'SF Mono', monospace;
-            font-size: 0.1rem;
-        } */
-
 
         /* Options */
         .options {
@@ -174,6 +164,8 @@
             cursor: pointer;
             transition: all 0.2s ease;
             font-size: 0.95rem;
+            position: relative;
+            padding-left: 60px;
         }
 
         .option:hover:not(.disabled) {
@@ -200,11 +192,6 @@
             opacity: 0.6;
         }
 
-        .option {
-    position: relative;
-    padding-left: 60px; /* space for the circle */
-}
-
         /* Circle */
         .option::before {
             content: attr(data-index);
@@ -212,49 +199,100 @@
             left: 16px;
             top: 50%;
             transform: translateY(-50%);
-
             width: 26px;
             height: 26px;
             border-radius: 50%;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             font-size: 0.75rem;
             font-weight: 600;
-
             color: var(--text);
             border: 1px solid rgba(147, 187, 234, 0.3);
         }
 
-        /* Convert 0,1,2,3 → A,B,C,D */
         .option[data-index="0"]::before { content: "A"; }
         .option[data-index="1"]::before { content: "B"; }
         .option[data-index="2"]::before { content: "C"; }
         .option[data-index="3"]::before { content: "D"; }
 
-        /* Selected */
         .option.selected::before {
             background: var(--primary);
             color: var(--bg);
             border-color: var(--primary);
         }
 
-        /* Correct */
         .option.correct::before {
             background: #4ade80;
             color: #052e16;
             border-color: #4ade80;
         }
 
-        /* Incorrect */
         .option.incorrect::before {
             background: var(--secondary);
             color: #fff;
             border-color: var(--secondary);
         }
 
+        /* Fill-in-the-Blank Styles */
+        .fib-container {
+            margin-bottom: 32px;
+        }
+
+        .fib-input {
+            width: 100%;
+            padding: 16px 20px;
+            background: var(--bg-secondary);
+            border: 1px solid rgba(147, 187, 234, 0.2);
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: all 0.2s ease;
+        }
+
+        .fib-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(147, 187, 234, 0.05);
+        }
+
+        .fib-input:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .fib-input.correct {
+            border-color: #4ade80;
+            background: rgba(74, 222, 128, 0.05);
+        }
+
+        .fib-input.incorrect {
+            border-color: var(--secondary);
+            background: rgba(146, 30, 28, 0.05);
+        }
+
+        .fib-answer-display {
+            margin-top: 12px;
+            padding: 12px 16px;
+            background: rgba(74, 222, 128, 0.05);
+            border: 1px solid #4ade80;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .fib-answer-display.show {
+            display: block;
+        }
+
+        .fib-answer-label {
+            color: #4ade80;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
 
         /* Explanation */
         .explanation {
@@ -285,8 +323,28 @@
             gap: 12px;
         }
 
+        .keyboard-hint {
+            font-size: 0.75rem;
+            color: rgba(229, 240, 250, 0.4);
+            text-align: center;
+            margin-top: 16px;
+            padding: 12px;
+            background: rgba(147, 187, 234, 0.02);
+            border-radius: 8px;
+        }
+
+        .keyboard-hint kbd {
+            background: var(--bg-secondary);
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid rgba(147, 187, 234, 0.2);
+            font-family: inherit;
+            font-size: 0.7rem;
+            margin: 0 2px;
+        }
+
         button {
-        align-items: center;
+            align-items: center;
             display: flex;
             gap: 10px;
             padding: 12px 24px;
@@ -323,7 +381,6 @@
         /* Menu Overlay */
         .menu-overlay {
             position: fixed;
-            /* top: 0; */
             right: 0;
             bottom: 100%;
             width: 100vw;
@@ -331,7 +388,6 @@
             background: rgba(4, 11, 21, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
-            /* display: none; */
             overflow-y: auto;
             transition: all 0.1s ease;
         }
@@ -471,9 +527,10 @@
             .controls {
                 flex-direction: column;
             }
+            
             .controls button {
-		  	width: 100%;
-		 }
+                width: 100%;
+            }
 
             .question-grid {
                 grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
@@ -521,6 +578,13 @@
             <div class="question-number" id="questionNumber">Question 1</div>
             <div class="question-text" id="questionText"></div>
             <div class="options" id="options"></div>
+            <div class="fib-container" id="fibContainer" style="display: none;">
+                <input type="text" id="fibInput" class="fib-input" placeholder="Enter your answer here...">
+                <div class="fib-answer-display" id="fibAnswer">
+                    <div class="fib-answer-label">Correct Answer:</div>
+                    <div id="fibAnswerText"></div>
+                </div>
+            </div>
             <div class="explanation" id="explanation">
                 <div class="explanation-title">Explanation</div>
                 <div id="explanationText"></div>
@@ -531,6 +595,9 @@
                     <button id="submitBtn" onclick="submitAnswer()" disabled>Submit</button>
                     <button class="btn-primary" id="nextBtn" onclick="nextQuestion()" style="display: none;">Next →</button>
                 </div>
+            </div>
+            <div class="keyboard-hint" id="keyboardHint">
+                <kbd>←</kbd> Previous • <kbd>→</kbd> Next • <kbd>Enter</kbd> Submit/Next
             </div>
         </div>
 
@@ -565,6 +632,7 @@
             <div class="question-grid" id="questionGrid"></div>
         </div>
     </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script>
     <script>
@@ -576,13 +644,73 @@
         let incorrectCount = 0;
         let topic = 'default';
 
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            // Don't interfere when typing in input
+            if (e.target.tagName === 'INPUT') {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    const submitBtn = document.getElementById('submitBtn');
+                    const nextBtn = document.getElementById('nextBtn');
+                    if (submitBtn.style.display !== 'none' && !submitBtn.disabled) {
+                        submitAnswer();
+                    } else if (nextBtn.style.display !== 'none') {
+                        nextQuestion();
+                    }
+                }
+                return;
+            }
+
+            // Prevent default for navigation keys
+            if (['ArrowLeft', 'ArrowRight', 'Enter', ' ', '1', '2', '3', '4', 'a', 'b', 'c', 'd'].includes(e.key)) {
+                e.preventDefault();
+            }
+
+            const question = questions[currentQuestionIndex];
+            const isAnswered = userAnswers.hasOwnProperty(currentQuestionIndex);
+            const isFIB = question && question.type === 'fib';
+
+            // Navigation
+            if (e.key === 'ArrowLeft') {
+                previousQuestion();
+            } else if (e.key === 'ArrowRight') {
+                if (isAnswered) {
+                    nextQuestion();
+                }
+            } else if (e.key === 'Enter' || e.key === ' ') {
+                const submitBtn = document.getElementById('submitBtn');
+                const nextBtn = document.getElementById('nextBtn');
+                if (submitBtn.style.display !== 'none' && !submitBtn.disabled) {
+                    submitAnswer();
+                } else if (nextBtn.style.display !== 'none') {
+                    nextQuestion();
+                }
+            }
+
+            // MCQ answer selection (1-4 or A-D)
+            if (!isFIB && !isAnswered) {
+                let optionIndex = -1;
+                if (e.key === '1' || e.key.toLowerCase() === 'a') optionIndex = 0;
+                else if (e.key === '2' || e.key.toLowerCase() === 'b') optionIndex = 1;
+                else if (e.key === '3' || e.key.toLowerCase() === 'c') optionIndex = 2;
+                else if (e.key === '4' || e.key.toLowerCase() === 'd') optionIndex = 3;
+
+                if (optionIndex >= 0 && optionIndex < question.options.length) {
+                    selectOption(optionIndex);
+                }
+            }
+
+            // Focus FIB input when starting to type
+            if (isFIB && !isAnswered && e.key.length === 1 && !e.ctrlKey && !e.metaKey) {
+                document.getElementById('fibInput').focus();
+            }
+        });
+
         // Load questions from JSON file
         async function loadQuestions() {
             try {
                 const urlParams = new URLSearchParams(window.location.search);
-                // Support both 'topic' and 'quiz' parameters
                 topic = urlParams.get('quiz') || urlParams.get('topic') || 'default';
-                // Remove .json extension if present
                 topic = topic.replace('.json', '');
                 document.title = topic + " MCQ Quiz";
                 document.querySelector('.header h1').textContent = topic + " MCQ Quiz";
@@ -612,7 +740,6 @@
             )}; max-age=${60 * 60 * 24 * 30}; path=/`;
         }
 
-
         function loadProgress() {
             const cookie = document.cookie
                 .split('; ')
@@ -637,7 +764,6 @@
             }
         }
 
-
         function resetProgress() {
             if (confirm('Are you sure you want to reset all progress?')) {
                 document.cookie = `quizProgress_${topic}=; max-age=0; path=/`;
@@ -661,6 +787,9 @@
                     '<pre><code class="language-none">$1</code></pre>');
         }
 
+        function normalizeAnswer(answer) {
+            return answer.toString().trim().toLowerCase();
+        }
 
         function loadQuestion() {
             if (questions.length === 0) return;
@@ -668,6 +797,9 @@
             const question = questions[currentQuestionIndex];
             const questionText = document.getElementById('questionText');
             const optionsDiv = document.getElementById('options');
+            const fibContainer = document.getElementById('fibContainer');
+            const fibInput = document.getElementById('fibInput');
+            const fibAnswer = document.getElementById('fibAnswer');
             const explanation = document.getElementById('explanation');
             
             document.getElementById('questionNumber').textContent = `Question ${currentQuestionIndex + 1}`;
@@ -675,33 +807,80 @@
             
             questionText.innerHTML = formatCode(question.question);
             
-            optionsDiv.innerHTML = '';
             const isAnswered = userAnswers.hasOwnProperty(currentQuestionIndex);
-            
-            question.options.forEach((option, index) => {
-                const optionDiv = document.createElement('div');
-                optionDiv.className = 'option';
-                optionDiv.dataset.index = index;
+            const isFIB = question.type === 'fib';
 
+            // Reset displays
+            optionsDiv.innerHTML = '';
+            fibInput.value = '';
+            fibInput.className = 'fib-input';
+            fibAnswer.classList.remove('show');
+            
+            // Update keyboard hint
+            const keyboardHint = document.getElementById('keyboardHint');
+            if (isFIB) {
+                keyboardHint.innerHTML = '<kbd>←</kbd> Previous • <kbd>→</kbd> Next • <kbd>Enter</kbd> Submit';
+            } else {
+                keyboardHint.innerHTML = '<kbd>1-4</kbd> or <kbd>A-D</kbd> Select • <kbd>←</kbd> Previous • <kbd>→</kbd> Next • <kbd>Enter</kbd> Submit';
+            }
+            
+            if (isFIB) {
+                // Fill-in-the-blank question
+                optionsDiv.style.display = 'none';
+                fibContainer.style.display = 'block';
                 
                 if (isAnswered) {
-                    optionDiv.classList.add('disabled');
-                    if (index === question.answer) {
-                        optionDiv.classList.add('correct');
+                    fibInput.value = userAnswers[currentQuestionIndex];
+                    fibInput.disabled = true;
+                    
+                    const correctAnswer = Array.isArray(question.answer) ? question.answer[0] : question.answer;
+                    const isCorrect = Array.isArray(question.answer) 
+                        ? question.answer.some(ans => normalizeAnswer(ans) === normalizeAnswer(userAnswers[currentQuestionIndex]))
+                        : normalizeAnswer(correctAnswer) === normalizeAnswer(userAnswers[currentQuestionIndex]);
+                    
+                    fibInput.classList.add(isCorrect ? 'correct' : 'incorrect');
+                    
+                    if (!isCorrect) {
+                        document.getElementById('fibAnswerText').textContent = 
+                            Array.isArray(question.answer) ? question.answer.join(' or ') : correctAnswer;
+                        fibAnswer.classList.add('show');
                     }
-                    if (index === userAnswers[currentQuestionIndex] && index !== question.answer) {
-                        optionDiv.classList.add('incorrect');
+                } else {
+                    fibInput.disabled = false;
+                    fibInput.focus(); // Auto-focus for keyboard input
+                    fibInput.oninput = () => {
+                        document.getElementById('submitBtn').disabled = fibInput.value.trim() === '';
+                    };
+                }
+            } else {
+                // Multiple choice question
+                fibContainer.style.display = 'none';
+                optionsDiv.style.display = 'flex';
+                
+                question.options.forEach((option, index) => {
+                    const optionDiv = document.createElement('div');
+                    optionDiv.className = 'option';
+                    optionDiv.dataset.index = index;
+                    
+                    if (isAnswered) {
+                        optionDiv.classList.add('disabled');
+                        if (index === question.answer) {
+                            optionDiv.classList.add('correct');
+                        }
+                        if (index === userAnswers[currentQuestionIndex] && index !== question.answer) {
+                            optionDiv.classList.add('incorrect');
+                        }
                     }
-                }
-                
-                optionDiv.innerHTML = `${option}`;
-                
-                if (!isAnswered) {
-                    optionDiv.onclick = () => selectOption(index);
-                }
-                
-                optionsDiv.appendChild(optionDiv);
-            });
+                    
+                    optionDiv.innerHTML = `${option}`;
+                    
+                    if (!isAnswered) {
+                        optionDiv.onclick = () => selectOption(index);
+                    }
+                    
+                    optionsDiv.appendChild(optionDiv);
+                });
+            }
             
             if (isAnswered) {
                 document.getElementById('explanationText').innerHTML = formatCode(question.explanation || 'No explanation provided.');
@@ -729,7 +908,6 @@
             if (window.Prism) {
                 Prism.highlightAll();
             }
-
         }
 
         function selectOption(index) {
@@ -744,22 +922,50 @@
         }
 
         function submitAnswer() {
-            if (selectedAnswer === null || userAnswers.hasOwnProperty(currentQuestionIndex)) return;
+            if (userAnswers.hasOwnProperty(currentQuestionIndex)) return;
             
             const question = questions[currentQuestionIndex];
-            const options = document.querySelectorAll('.option');
+            const isFIB = question.type === 'fib';
             
-            userAnswers[currentQuestionIndex] = selectedAnswer;
-            
-            options.forEach(opt => opt.classList.add('disabled'));
-            
-            if (selectedAnswer === question.answer) {
-                options[selectedAnswer].classList.add('correct');
-                correctCount++;
+            if (isFIB) {
+                const fibInput = document.getElementById('fibInput');
+                const userAnswer = fibInput.value.trim();
+                
+                if (!userAnswer) return;
+                
+                userAnswers[currentQuestionIndex] = userAnswer;
+                
+                const correctAnswer = Array.isArray(question.answer) ? question.answer[0] : question.answer;
+                const isCorrect = Array.isArray(question.answer)
+                    ? question.answer.some(ans => normalizeAnswer(ans) === normalizeAnswer(userAnswer))
+                    : normalizeAnswer(correctAnswer) === normalizeAnswer(userAnswer);
+                
+                fibInput.disabled = true;
+                fibInput.classList.add(isCorrect ? 'correct' : 'incorrect');
+                
+                if (isCorrect) {
+                    correctCount++;
+                } else {
+                    incorrectCount++;
+                    document.getElementById('fibAnswerText').textContent = 
+                        Array.isArray(question.answer) ? question.answer.join(' or ') : correctAnswer;
+                    document.getElementById('fibAnswer').classList.add('show');
+                }
             } else {
-                options[selectedAnswer].classList.add('incorrect');
-                options[question.answer].classList.add('correct');
-                incorrectCount++;
+                if (selectedAnswer === null) return;
+                
+                const options = document.querySelectorAll('.option');
+                userAnswers[currentQuestionIndex] = selectedAnswer;
+                options.forEach(opt => opt.classList.add('disabled'));
+                
+                if (selectedAnswer === question.answer) {
+                    options[selectedAnswer].classList.add('correct');
+                    correctCount++;
+                } else {
+                    options[selectedAnswer].classList.add('incorrect');
+                    options[question.answer].classList.add('correct');
+                    incorrectCount++;
+                }
             }
             
             updateStats();
@@ -842,11 +1048,18 @@
                 
                 if (userAnswers.hasOwnProperty(index)) {
                     const question = questions[index];
-                    if (userAnswers[index] === question.answer) {
-                        item.classList.add('correct');
+                    const isFIB = question.type === 'fib';
+                    let isCorrect;
+                    
+                    if (isFIB) {
+                        isCorrect = Array.isArray(question.answer)
+                            ? question.answer.some(ans => normalizeAnswer(ans) === normalizeAnswer(userAnswers[index]))
+                            : normalizeAnswer(question.answer) === normalizeAnswer(userAnswers[index]);
                     } else {
-                        item.classList.add('incorrect');
+                        isCorrect = userAnswers[index] === question.answer;
                     }
+                    
+                    item.classList.add(isCorrect ? 'correct' : 'incorrect');
                 }
                 
                 item.onclick = () => {
@@ -872,11 +1085,18 @@
                 
                 if (userAnswers.hasOwnProperty(index)) {
                     const question = questions[index];
-                    if (userAnswers[index] === question.answer) {
-                        item.classList.add('correct');
+                    const isFIB = question.type === 'fib';
+                    let isCorrect;
+                    
+                    if (isFIB) {
+                        isCorrect = Array.isArray(question.answer)
+                            ? question.answer.some(ans => normalizeAnswer(ans) === normalizeAnswer(userAnswers[index]))
+                            : normalizeAnswer(question.answer) === normalizeAnswer(userAnswers[index]);
                     } else {
-                        item.classList.add('incorrect');
+                        isCorrect = userAnswers[index] === question.answer;
                     }
+                    
+                    item.classList.add(isCorrect ? 'correct' : 'incorrect');
                 }
             });
         }

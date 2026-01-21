@@ -397,6 +397,14 @@
                 topics: [
                     { name: 'Julius Caesar MCQ', file: 'class-10-eng-lit-jc.json' }
                 ]
+            },
+            {
+                class: 10,
+                subject: 'English Language',
+                icon: 'fa-pen-nib',
+                topics: [
+                    { name: 'Prepositions FIBs', file: 'class-10-eng-lang-prepositions.json' }
+                ]
             }
         ];
         function renderClasses() {
@@ -460,7 +468,7 @@
                     <h3>${topic.name}</h3>
                 `;
                 card.onclick = () => {
-                    window.open(`questions.html?topic=${topic.file}`, '_blank');
+                    window.open(`/resources/questions.html?topic=${topic.file}`, '_blank');
                 };
                 content.appendChild(card);
             });

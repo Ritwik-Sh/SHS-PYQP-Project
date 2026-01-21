@@ -1,455 +1,332 @@
 [
-    {
-        "question": "Conversion of ethanol to ethyl ethanoate is an example of:",
-        "options": [
-            "Esterification",
-            "Dehydrohalogenation",
-            "Catenation",
-            "Carboxylation"
-        ],
-        "answer": 0,
-        "explanation": "Ethanol reacts with ethanoic acid in the presence of concentrated sulphuric acid to form ethyl ethanoate. This reaction is called esterification."
-    },
-    {
-        "question": "Select the CORRECT match:",
-        "options": [
-            "Lab preparation of methane : Decarboxylation",
-            "Ethene to ethyl alcohol : Hydration",
-            "Iodomethane to methane : Wurtz Reaction",
-            "NONE"
-        ],
-        "answer": 1,
-        "explanation": "Ethene is converted to ethyl alcohol by hydration, not dehydrohalogenation. Hence this match is incorrect."
-    },
-    {
-        "question": "Unsaturated hydrocarbons-",
-        "options": [
-            "Decolourise bromine vapours",
-            "Undergo addition reactions",
-            "Have lesser carbon content than alkanes",
-            "All of the above"
-        ],
-        "answer": 3
-    },
-    {
-        "question": "By product of the reaction between ethanol and sodium-",
-        "options": [
-            "Sodium hydroxide",
-            "Hydrogen gas",
-            "Oxygen gas",
-            "Acetaldehyde"
-        ],
-        "answer": 1
-    },
-    {
-        "question": "Select the incorrect statement",
-        "options": [
-            "Methane burns with a blue clean flame",
-            "Carboxylic acids have the functional group –COOH",
-            "But-2-ene is a chain isomer of butene",
-            "Methylated spirit means illicit alcohol, formed by improper distillation"
-        ],
-        "answer": 2
-    },
-    {
-        "question": "Which compound is used as a denaturing agent in industrial alcohol?",
-        "options": [
-            "Methanol",
-            "Acetone",
-            "Benzene",
-            "Formaldehyde"
-        ],
-        "answer": 0
-    },
-    {
-        "question": "Which hydrocarbon shows structural isomerism?",
-        "options": [
-            "Ethane",
-            "Propane",
-            "Butane",
-            "Methane"
-        ],
-        "answer": 2
-    },
-    {
-        "question": "IUPAC name of H<sub>2</sub>C-CH<sub>2</sub>-CH<sub>2</sub>-COOH",
-        "options": [
-            "Butanal",
-            "Ethanoic acid",
-            "Propanoic acid",
-            "Butanoic acid"
-        ],
-        "answer": 3
-    },
-    {
-        "question": "Which of the following is a chain isomer of C5H12?",
-        "options": [
-            "2,2-dimethyl butane",
-            "2,3-methyl propane",
-            "2,2-dimethyl propane",
-            "3,3-dimethyl propane"
-        ],
-        "answer": 2
-    },
-    {
-        "question": "In conversion of ethene to ethane, catalyst used is ___",
-        "options": [
-            "Palladium",
-            "Platinum",
-            "Nickel",
-            "All of the above"
-        ],
-        "answer": 3
-    },
-    {
-        "question": "Common name of ethan-1,2-dioic acid",
-        "options": [
-            "Ethanoic acid",
-            "Oxalic acid",
-            "Propanoic acid",
-            "2-butanoic acid"
-        ],
-        "answer": 1
-    },
-    {
-        "question": "Select the correct statement from the following:",
-        "options": [
-            "Saturated hydrocarbons are termed as olefins",
-            "Ethyne reacts with calcium carbide to form ethylene",
-            "Ethanol is used in horticulture industries as a refrigerating agent",
-            "Propanoic acid reacts with sodium bicarbonate to liberate carbon dioxide gas"
-        ],
-        "answer": 3
-    },
-    {
-        "question": "Which of these is not an example of substitution reaction?",
-        "options": [
-            "Nitration of benzene",
-            "Chlorination of ethane",
-            "Bromination of pentane",
-            "Hydrogenation of ethene"
-        ],
-        "answer": 3
-    },
-    {
-        "question": "Which of the following hydrocarbons will give sootier flame on burning?",
-        "options": [
-            "Methane",
-            "Ethane",
-            "Ethyne",
-            "Propane"
-        ],
-        "answer": 2
-    },
-    {
-        "question": "What is the catenation property of carbon?",
-        "options": [
-            "Carbon can attract another carbon easily",
-            "Carbon can form long hydrogenated chains",
-            "Carbon can form long carbonated chains",
-            "Carbon has a tetravalency hence it can form long chains"
-        ],
-        "answer": 2
-    },
-    {
-        "question": "What happens when hot, alcoholic and concentrated KOH reacts with ethyl bromide?",
-        "options": [
-            "Formation of ethanal",
-            "Formation of ethene",
-            "Formation of methanol",
-            "Formation of potassium bromide"
-        ],
-        "answer": 1
-    },
-    {
-        "question": "What happens when butyne burns in oxygen?",
-        "options": [
-            "Blue clean flame is observed",
-            "Blue sooty flame is observed",
-            "Yellow non-sooty flame is observed",
-            "None of the above"
-        ],
-        "answer": 1
-    },
-    {
-        "question": "Test for alcohols-",
-        "options": [
-            "Effervescence of hydrogen",
-            "Effervescence of carbon dioxide",
-            "Effervescence of bromine",
-            "Effervescence of chlorine"
-        ],
-        "answer": 0
-    },
-    {
-        "question": "Which of the following is an aromatic compound?",
-        "options": [
-            "Cyclo-butane",
-            "Methanal",
-            "Toluene",
-            "Methane"
-        ],
-        "answer": 2
-    },
-    {
-        "question": "What are aromatic compounds?",
-        "options": [
-            "Carboxylic acids having good smell",
-            "Compounds comprising more than 6 carbons",
-            "Compounds containing at least one C6H6 ring",
-            "Unsaturated hydrocarbons"
-        ],
-        "answer": 2
-    },
-    {
-        "question": "CH4 + 3Cl2 → ?",
-        "options": [
-            "Carbon tetrachloride",
-            "Chloroform",
-            "Methyl chloride",
-            "Methyl benzoate"
-        ],
-        "answer": 1
-    },
-    {
-        "question": "Organic compound formed by dehydrohalogenation of ethyl bromide",
-        "options": [
-            "Ethane",
-            "Ethene",
-            "Ethyne",
-            "Ethanol"
-        ],
-        "answer": 1
-    },
-    {
-        "question": "Which homologous series does ethanol belong to?",
-        "options": [
-            "Alkanes",
-            "Alkenes",
-            "Alcohols",
-            "Carboxylic acids"
-        ],
-        "answer": 2,
-        "explanation": "Ethanol contains the –OH functional group, hence it is an alcohol."
-    },
-    {
-        "question": "The functional group present in ethanoic acid is:",
-        "options": [
-            "–OH",
-            "–CHO",
-            "–COOH",
-            "–CO–"
-        ],
-        "answer": 2,
-        "explanation": "Ethanoic acid contains the carboxyl (–COOH) group."
-    },
-    {
-        "question": "Which of the following is an unsaturated hydrocarbon?",
-        "options": [
-            "Ethane",
-            "Methane",
-            "Propene",
-            "Butane"
-        ],
-        "answer": 2,
-        "explanation": "Propene contains a double bond, making it unsaturated."
-    },
-    {
-        "question": "General formula of alkanes is:",
-        "options": [
-            "C<sub>n</sub>H<sub>2n</sub>",
-            "C<sub>n</sub>H<sub>2n+2</sub>",
-            "C<sub>n</sub>H<sub>2n−2</sub>",
-            "C<sub>n</sub>H<sub>n</sub>"
-        ],
-        "answer": 1,
-        "explanation": "Alkanes are saturated hydrocarbons with formula C<sub>n</sub>H<sub>2n+2</sub>."
-    },
-    {
-        "question": "Which reaction is used to prepare ethane from sodium ethanoate?",
-        "options": [
-            "Hydration",
-            "Decarboxylation",
-            "Cracking",
-            "Esterification"
-        ],
-        "answer": 1,
-        "explanation": "Decarboxylation of sodium ethanoate produces ethane."
-    },
-    {
-        "question": "Ethanol on oxidation with acidified potassium dichromate forms:",
-        "options": [
-            "Ethene",
-            "Ethanal",
-            "Ethanoic acid",
-            "Methanoic acid"
-        ],
-        "answer": 2,
-        "explanation": "Ethanol oxidises to ethanoic acid."
-    },
-    {
-        "question": "Which compound gives a fruity smell?",
-        "options": [
-            "Alcohol",
-            "Aldehyde",
-            "Ester",
-            "Ketone"
-        ],
-        "answer": 2,
-        "explanation": "Esters characteristically have fruity odours."
-    },
-    {
-        "question": "The catalyst used in esterification is:",
-        "options": [
-            "Dilute HCl",
-            "Concentrated H<sub>2</sub>SO<sub>4</sub>",
-            "NaOH",
-            "Zn"
-        ],
-        "answer": 1,
-        "explanation": "Concentrated H<sub>2</sub>SO<sub>4</sub> acts as a catalyst and dehydrating agent."
-    },
-    {
-        "question": "Which of the following will decolourise bromine water?",
-        "options": [
-            "Ethane",
-            "Methane",
-            "Ethene",
-            "Propane"
-        ],
-        "answer": 2,
-        "explanation": "Ethene undergoes addition reaction with bromine."
-    },
-    {
-        "question": "Ethanoic acid reacts with sodium bicarbonate to give:",
-        "options": [
-            "CO<sub>2</sub>",
-            "H<sub>2</sub>",
-            "O<sub>2</sub>",
-            "SO<sub>2</sub>"
-        ],
-        "answer": 0,
-        "explanation": "Carbon dioxide gas is evolved."
-    },
-    {
-        "question": "Which functional group is present in aldehydes?",
-        "options": [
-            "–CO–",
-            "–COOH",
-            "–CHO",
-            "–OH"
-        ],
-        "answer": 2,
-        "explanation": "Aldehydes contain the –CHO group."
-    },
-    {
-        "question": "The IUPAC name of acetic acid is:",
-        "options": [
-            "Methanoic acid",
-            "Ethanoic acid",
-            "Propanoic acid",
-            "Butanoic acid"
-        ],
-        "answer": 1,
-        "explanation": "Acetic acid is named ethanoic acid in IUPAC system."
-    },
-    {
-        "question": "Which compound is the simplest alkene?",
-        "options": [
-            "Butene",
-            "Ethene",
-            "Propene",
-            "Methene"
-        ],
-        "answer": 1,
-        "explanation": "Ethene (C<sub>2</sub>H<sub>4</sub>) is the simplest alkene."
-    },
-    {
-        "question": "Which reaction converts ethene to ethanol?",
-        "options": [
-            "Oxidation",
-            "Hydrogenation",
-            "Hydration",
-            "Dehydration"
-        ],
-        "answer": 2,
-        "explanation": "Hydration adds water across the double bond."
-    },
-    {
-        "question": "Which of the following is NOT an organic compound?",
-        "options": [
-            "Methane",
-            "Urea",
-            "Carbon dioxide",
-            "Ethanol"
-        ],
-        "answer": 2,
-        "explanation": "CO<sub>2</sub> is an inorganic compound."
-    },
-    {
-        "question": "The suffix used for carboxylic acids is:",
-        "options": [
-            "–ol",
-            "–al",
-            "–one",
-            "–oic acid"
-        ],
-        "answer": 3,
-        "explanation": "Carboxylic acids use the suffix –oic acid."
-    },
-    {
-        "question": "Which compound undergoes addition reactions?",
-        "options": [
-            "Ethane",
-            "Propane",
-            "Ethene",
-            "Methane"
-        ],
-        "answer": 2,
-        "explanation": "Unsaturated hydrocarbons like ethene undergo addition."
-    },
-    {
-        "question": "Ethyl alcohol reacts with sodium to liberate:",
-        "options": [
-            "CO<sub>2</sub>",
-            "H<sub>2</sub>",
-            "O<sub>2</sub>",
-            "N<sub>2</sub>"
-        ],
-        "answer": 1,
-        "explanation": "Hydrogen gas is evolved."
-    },
-    {
-        "question": "Which is a dihydric alcohol?",
-        "options": [
-            "Methanol",
-            "Ethanol",
-            "Ethane-1,2-diol",
-            "Propanol"
-        ],
-        "answer": 2,
-        "explanation": "Ethane-1,2-diol contains two –OH groups."
-    },
-    {
-        "question": "Which compound contains a triple bond?",
-        "options": [
-            "Ethane",
-            "Ethene",
-            "Ethyne",
-            "Propane"
-        ],
-        "answer": 2,
-        "explanation": "Ethyne (C<sub>2</sub>H<sub>2</sub>) contains a triple bond."
-    },
-    {
-        "question": "Which is the correct formula of ethyne?",
-        "options": [
-            "C<sub>2</sub>H<sub>2</sub>",
-            "C<sub>2</sub>H<sub>4</sub>",
-            "C<sub>2</sub>H<sub>6</sub>",
-            "CH<sub>4</sub>"
-        ],
-        "answer": 0,
-        "explanation": "Ethyne has the molecular formula C<sub>2</sub>H<sub>2</sub>."
-    }
+   {
+      "question":"Nitric acid is collected by:",
+      "options":[
+         "Downward displacement of air",
+         "Downward displacement of water",
+         "Upward displacement of air",
+         "Upward displacement of water"
+      ],
+      "answer":0,
+      "explanation":"Nitric acid (aqueous) is collected by downward displacement of air."
+   },
+   {
+      "question":"Drying agent used in the lab preparation of Hydrogen Chloride:",
+      "options":[
+         "Calcium oxide",
+         "Phosphorus pentoxide",
+         "Conc. Sulphuric acid",
+         "Either (a) or (b)"
+      ],
+      "answer":2,
+      "explanation":"HCl gas is not dried using CaO or P2O5; conc. H2SO4 is suitable."
+   },
+   {
+      "question":"What is the optimum temperature required for thermal dissociation of Hydrogen chloride?",
+      "options":[
+         "Less than 500°C",
+         "More than 500°C",
+         "3000°C",
+         "More than 1000°C"
+      ],
+      "answer":0,
+      "explanation":"Thermal dissociation of HCl requires very high temperatures (up to 500°C)"
+   },
+   {
+      "question":"Which of these do not conduct electricity?",
+      "options":[
+         "Dry hydrogen chloride",
+         "Liquefied hydrogen chloride",
+         "Anhydrous hydrochloric acid",
+         "Both (a) & (b)"
+      ],
+      "answer":3,
+      "explanation":"Dry HCl gas and liquefied HCl do not conduct electricity due to lack of free ions."
+   },
+   {
+      "question":"A: Azeotrope means a temperature at which a mixture of 2 or more liquids keeps boiling\nB: Azeotrope of hydrochloric acid is 110°C",
+      "options":[
+         "A is true B is false",
+         "A is false B is true",
+         "Both are true",
+         "Both are false"
+      ],
+      "answer":2,
+      "explanation":"An azeotrope is a constant‑boiling mixture; HCl–water forms an azeotrope boiling near 110°C."
+   },
+   {
+      "question":"Silver chloride reacts with HCl acid to….. :",
+      "options":[
+         "Give a silvery ppt of AgCl",
+         "Give a thick curdy white ppt of AgCl",
+         "Give a thick ppt of AgCl",
+         "NO REACTION takes place"
+      ],
+      "answer":3,
+      "explanation":"AgCl is insoluble and does not react further with HCl; no reaction occurs on adding HCl to AgCl."
+   },
+   {
+      "question":"Select the incorrect statement:",
+      "options":[
+         "Manganese dioxide is not a basic gas.",
+         "HCl turns methyl orange yellow",
+         "AgNO3 is used as a test for HCl acid",
+         "None of these"
+      ],
+      "answer":1,
+      "explanation":"Methyl orange turns red or pink in acid; saying HCl turns it yellow is incorrect."
+   },
+   {
+      "question":"The process is termed as  and the gas collected is . The drying agent used for the collection of gas is . The gas turns  litmus .",
+      "options":[
+         "Ostwald process, Nitric acid, Quicklime, blue, red",
+         "Haber’s Process, Ammonia, Conc. H2SO4, red, blue",
+         "Haber’s Process, Ammonia, Quicklime, red, blue",
+         "Haber’s Process, Ammonia, Quicklime, blue, red"
+      ],
+      "answer":2,
+      "explanation":"Haber process produces ammonia; drying agent is quicklime and ammonia turns red litmus blue."
+   },
+   {
+      "question":"State the favourable conditions for manufacture of ammonia:",
+      "options":[
+         "Temperature – 450-500C",
+         "High pressure of about 100 atm",
+         "Catalyst – iron",
+         "Both (a) & (c)"
+      ],
+      "answer":0,
+      "explanation":"Finely divided iron is the word, not just iron, hence the answer is only the first one."
+   },
+   {
+      "question":"What does the fountain experiment of ammonia gas prove?",
+      "options":[
+         "Ammonia is highly soluble in water",
+         "Ammonia is basic in nature",
+         "Ammonia turns red litmus blue",
+         "All of the above"
+      ],
+      "answer":3,
+      "explanation":"The fountain experiment demonstrates ammonia's high solubility and basic nature, and it turns red litmus blue."
+   },
+   {
+      "question":"Select the incorrect statement:",
+      "options":[
+         "Ammonia burns with a greenish yellow flame.",
+         "Ammonia forms an explosive mixture with water.",
+         "Catalytic oxidation of ammonia is an exothermic reaction",
+         "Ammonia is a nitrogen hydride."
+      ],
+      "answer":1,
+      "explanation":"Ammonia does not form an explosive mixture with water; explosive mixtures occur with air/oxygen."
+   },
+   {
+      "question":"A: When ammonia reacts with excess chlorine, Ammonium chloride is formed.\nB: Ammonia accepts protons to form ions.",
+      "options":[
+         "A is true B is false",
+         "A is false B is true",
+         "Both are true",
+         "Both are false"
+      ],
+      "answer":1,
+      "explanation":"Ammonia gives Nitrogen trichloride with excess chlorine / ammonia accepts protons to form NH4+."
+   },
+   {
+      "question":"Name the main compound formed due to the following reaction: (Temperature – 150C and Pressure – 150 atm)\nAmmonia + Carbon dioxide",
+      "options":[
+         "Ammonium nitrite",
+         "Urea",
+         "Ammonium nitrate",
+         "Nitrous acid"
+      ],
+      "answer":1,
+      "explanation":"Under high temperature and pressure ammonia and CO2 react to form urea."
+   },
+   {
+      "question":"Why is lab prepared Nitric acid Yellow in colour?",
+      "options":[
+         "Due to presence of nitrogen oxide",
+         "Due to dissolution of Nitrogen dioxide",
+         "Due to the burning effect",
+         "Due to high temperature"
+      ],
+      "answer":1,
+      "explanation":"Dissolved nitrogen dioxide (NO2) imparts a yellow colour to laboratory‑prepared nitric acid."
+   },
+   {
+      "question":"Valency of Nitrogen in Nitric acid",
+      "options":[
+         "5",
+         "4",
+         "6",
+         "7"
+      ],
+      "answer":0,
+      "explanation":"In HNO3, nitrogen has oxidation state/valency +5."
+   },
+   {
+      "question":"Which metal doesn’t react with nitric acid?",
+      "options":[
+         "Silver",
+         "Copper",
+         "Platinum",
+         "Both a & c"
+      ],
+      "answer":2,
+      "explanation":"Platinum is inert to nitric acid; silver and copper do react with nitric acid."
+   },
+   {
+      "question":"In Ostwald process, conversion of nitrogen dioxide to nitric acid takes place in:",
+      "options":[
+         "Oxidation Chamber",
+         "Catalytic chamber",
+         "Absorption tower",
+         "Dilution tank"
+      ],
+      "answer":2,
+      "explanation":"NO2 is absorbed in the absorption tower to form nitric acid."
+   },
+   {
+      "question":"Select the incorrect statement",
+      "options":[
+         "Nitric acid is heavier than water",
+         "Nitric acid is hygroscopic in nature",
+         "Nitric acid is a volatile acid",
+         "Nitric acid is deliquescent in nature"
+      ],
+      "answer":3,
+      "explanation":"Deliquescence refers to solids that absorb moisture and dissolve; nitric acid is a liquid, so calling it deliquescent is incorrect."
+   },
+   {
+      "question":"Main product formed of reaction between Iron and hot dilute nitric acid",
+      "options":[
+         "Ferrous nitrate",
+         "Ferric nitrate",
+         "Ferrous nitrite",
+         "Ferric nitrite"
+      ],
+      "answer":1,
+      "explanation":"Hot dilute HNO3 oxidizes iron to ferric nitrate."
+   },
+   {
+      "question":"Which of these metals become passive when treated with conc. Nitric acid?",
+      "options":[
+         "Mercury",
+         "Cobalt",
+         "Aluminium",
+         "Both b & c"
+      ],
+      "answer":3,
+      "explanation":"Cobalt and aluminium can become passive in concentrated nitric acid."
+   },
+   {
+      "question":"Composition of aqua regia",
+      "options":[
+         "1 part of conc. HCl and 3 parts of conc. nitric acid",
+         "3 parts of nitric acid and 1 part of Conc. Sulphuric acid",
+         "1 part of conc. Nitric acid and 3 parts of conc. HCl",
+         "3 parts of nitric acid and 3 parts of dil. HCl"
+      ],
+      "answer":2,
+      "explanation":"Aqua regia is 1 part concentrated HNO3 to 3 parts concentrated HCl."
+   },
+   {
+      "question":"Chemical name of brown ring",
+      "options":[
+         "Nitrosyl chloride",
+         "Nitroso ferric sulphate",
+         "Nitrosyl sulphate",
+         "Nitroso ferrous sulphate"
+      ],
+      "answer":3,
+      "explanation":"The brown ring complex formed in the test for nitrates is nitroso ferrous sulphate."
+   },
+   {
+      "question":"A metal nitrate which decrepitates on heating",
+      "options":[
+         "Mercuric nitrate",
+         "Potassium nitrate",
+         "Calcium nitrate",
+         "Zinc nitrate"
+      ],
+      "answer":0,
+      "explanation":"Mercuric nitrate decomposes violently (decrepitates) on heating."
+   },
+   {
+      "question":"A metal nitrate which liberates oxygen as the only gas on heating",
+      "options":[
+         "Mercuric nitrate",
+         "Potassium nitrate",
+         "Calcium nitrate",
+         "Zinc nitrate"
+      ],
+      "answer":1,
+      "explanation":"Potassium nitrate decomposes to nitrite and releases oxygen."
+   },
+   {
+      "question":"Common name of CaSO4.2H2O",
+      "options":[
+         "Barytes",
+         "Gypsum",
+         "Epsom salt",
+         "Kiserite"
+      ],
+      "answer":1,
+      "explanation":"CaSO4·2H2O is commonly known as gypsum."
+   },
+   {
+      "question":"Which of these is not involved in contact process?",
+      "options":[
+         "Electrostatic precipitator",
+         "Converter",
+         "Dilution tank",
+         "None of these"
+      ],
+      "answer":3,
+      "explanation":"All of these devices are involved."
+   },
+   {
+      "question":"A: Catalyst used in catalytic oxidation of sulphur dioxide is Vanadium oxide\nB: Platinum is used because it reacts with sulphur dioxide.",
+      "options":[
+         "A is true B is false",
+         "A is false B is true",
+         "Both are true",
+         "Both are false"
+      ],
+      "answer":0,
+      "explanation":"V2O5 is the catalyst; platinum is expensive hence not used/ can be poisoned by impurities."
+   },
+   {
+      "question":"What happens when oxalic acid reacts with Conc. Sulphuric acid?",
+      "options":[
+         "Formation of carbon dioxide and water",
+         "Formation of oxygen and carbon dioxide",
+         "Fomation of Oxygen and Water",
+         "Formation of Carbon dioxide, oxygen and water"
+      ],
+      "answer":3,
+      "explanation":"Conc. H2SO4 oxidizes oxalic acid producing CO2 , O2 and water."
+   },
+   {
+      "question":"What do you observe when conc. Sulphuric acid reacts with Sulphur?",
+      "options":[
+         "Formation of sulphur metal",
+         "Formation of sulphur dioxide",
+         "Formation of sulphuric acid",
+         "None of these"
+      ],
+      "answer":1,
+      "explanation":"Conc. H2SO4 oxidizes sulfur to sulfur dioxide (SO2)."
+   },
+   {
+      "question":"A: Dil. Sulphuric acid evolves sulphur dioxide from metal hydrogen sulphites\nB: Sulphur dioxide so formed shows a temporary bleaching property due to its oxidising nature.",
+      "options":[
+         "A is true B is false",
+         "A is false B is true",
+         "Both are true",
+         "Both are false"
+      ],
+      "answer":0,
+      "explanation":"A is true; B is false because SO2 bleaches by its reducing (not oxidizing) action, so the bleaching is temporary."
+   }
 ]
