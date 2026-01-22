@@ -1,0 +1,133 @@
+[
+  {
+    "question": "Ravi was born with an extra little finger in his right hands. The biological name of this hereditary trait is:",
+    "options": [
+      "Camptodactyly",
+      "Polydactyly",
+      "Down Syndrome",
+      "Hypertrichosis"
+    ],
+    "answer": 1,
+    "explanation": "Polydactyly is the condition of having extra fingers or toes. Camptodactyly is permanent bending of fingers, Down Syndrome is a chromosomal disorder, and Hypertrichosis is excessive hair growth."
+  },
+  {
+    "question": "Select the correct statement:",
+    "options": [
+      "Allele stands for genes occupying the same loci & position.",
+      "Colour blindness is an example of disease cause from holandric genes.",
+      "Albinism is an X-linked inheritance",
+      "Mutation is variation in physiological traits of a human"
+    ],
+    "answer": 0,
+    "explanation": "Alleles are alternative forms of a gene that occupy the same locus on homologous chromosomes. Colour blindness is X-linked (not holandric/Y-linked), albinism is autosomal recessive (not X-linked), and mutation is a change in genetic material, not just physiological variation."
+  },
+  {
+    "question": "Phenotypic ratio of F2 Generation: (for one character)",
+    "options": [
+      "1:2:1",
+      "100% dominant",
+      "3:1",
+      "Can't say"
+    ],
+    "answer": 2,
+    "explanation": "In a monohybrid cross, the F2 generation shows a phenotypic ratio of 3:1 (3 dominant : 1 recessive). The genotypic ratio is 1:2:1."
+  },
+  {
+    "question": "Susheel, a colour-blind man marries Susheela, a colour-blind woman. With reference to this, choose the correct alternative:",
+    "options": [
+      "25% sons will be carriers",
+      "50% children will either be carriers or will have normal vision.",
+      "All daughters born of them will be colourblind",
+      "All sons born of them will be colourblind"
+    ],
+    "answer": 2,
+    "explanation": "Since colour blindness is X-linked recessive, a colour-blind man (XcY) and colour-blind woman (XcXc) will produce all colour-blind daughters (XcXc) and all colour-blind sons (XcY). Males cannot be carriers as they have only one X chromosome."
+  },
+  {
+    "question": "The disease in which blood fails to clot",
+    "options": [
+      "Thalassemia",
+      "Sickle cell anaemia",
+      "Haemophilia",
+      "Down syndrome"
+    ],
+    "answer": 2,
+    "explanation": "Haemophilia is a genetic disorder where blood fails to clot properly due to lack of clotting factors. Thalassemia and sickle cell anaemia are blood disorders affecting hemoglobin, while Down syndrome is a chromosomal disorder."
+  },
+  {
+    "question": "The alternative forms of a character",
+    "options": [
+      "Allele",
+      "Gene",
+      "Phenotype",
+      "Traits"
+    ],
+    "answer": 3,
+    "explanation": "Traits are the alternative forms of a character (e.g., tall vs short, red vs white). Alleles are alternative forms of a gene, gene is the hereditary unit, and phenotype is the observable expression."
+  },
+  {
+    "question": "Which Law of inheritance is only applicable for F1 generation?",
+    "options": [
+      "Dominance",
+      "Segregation",
+      "Independent assortment",
+      "None"
+    ],
+    "answer": 0,
+    "explanation": "The Law of Dominance is most clearly observed in the F1 generation where only the dominant trait is expressed. Segregation and independent assortment are observed in F2 and subsequent generations."
+  },
+  {
+    "question": "Biological name of the plant Mendel selected to perform his experiments on",
+    "options": [
+      "Biston Betularia",
+      "Pisum sativum",
+      "Black peppered pea",
+      "Sweet pea"
+    ],
+    "answer": 1,
+    "explanation": "Pisum sativum is the garden pea that Mendel used for his genetic experiments. Biston betularia is the peppered moth, not a plant."
+  },
+  {
+    "question": "Why did Mendel specifically choose Pisum Sativum for his experiments?",
+    "options": [
+      "No other varieties were available, so there was less chance of contrasting traits.",
+      "They performed autogamy",
+      "Large reproductive life of these plants",
+      "Both a & b"
+    ],
+    "answer": 1,
+    "explanation": "Mendel chose garden peas because they are self-pollinating (autogamy), have distinct contrasting traits, short life cycle, produce many offspring, and are easy to cross-pollinate artificially. Option 'a' is incorrect as many varieties with contrasting traits were available."
+  },
+  {
+    "question": "Neha performed an experiment on sweet pea plants having axial flowers with round seeds and terminal flowers with wrinkled seeds (AARR & aarr respectively). With reference to this answer the following:\n\nPhenotype of F1 generation",
+    "options": [
+      "100% dominant",
+      "100% recessive",
+      "75% dominant, 25% recessive",
+      "50% dominant, 50% recessive"
+    ],
+    "answer": 0,
+    "explanation": "When AARR (homozygous dominant) is crossed with aarr (homozygous recessive), all F1 offspring will have the genotype AaRr, expressing both dominant traits (axial flowers and round seeds). Therefore, 100% of F1 will show dominant phenotype."
+  },
+  {
+    "question": "Neha performed an experiment on sweet pea plants having axial flowers with round seeds and terminal flowers with wrinkled seeds (AARR & aarr respectively). With reference to this answer the following:\n\nGenotypic ratio of F2 progeny",
+    "options": [
+      "1:3",
+      "3:1",
+      "1:2:1",
+      "Very complex"
+    ],
+    "answer": 3,
+    "explanation": "In a dihybrid cross (AaRr × AaRr), the F2 generation produces a complex genotypic ratio of 1:2:1:2:4:2:1:2:1 for the nine different genotype combinations (AARR, AARr, AArr, AaRR, AaRr, Aarr, aaRR, aaRr, aarr). The phenotypic ratio is simpler at 9:3:3:1."
+  },
+  {
+    "question": "Neha performed an experiment on sweet pea plants having axial flowers with round seeds and terminal flowers with wrinkled seeds (AARR & aarr respectively). With reference to this answer the following:\n\nLaw of inheritance applicable in this question:",
+    "options": [
+      "Dominance",
+      "Segregation",
+      "Independent assortment"
+    ],
+    "answer": 2,
+    "explanation": "This is a dihybrid cross involving two different characters (flower position and seed shape). The Law of Independent Assortment states that alleles of different genes assort independently during gamete formation. While dominance and segregation also apply, independent assortment is the specific law demonstrated by this two-character cross."
+  }
+]

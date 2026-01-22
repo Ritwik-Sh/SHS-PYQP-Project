@@ -208,5 +208,17 @@
     "type": "fib",
     "answer": "from",
     "explanation": "'died from' is used for external causes"
+  },
+  {
+    "question": "The tired traveler sat __ the shade of the tree.",
+    "type": "fib",
+    "answer": "in",
+    "explanation": "'sat in the shade' is the correct prepositional usage."
+  },
+  {
+    "question": "He is an engineer __ heart.",
+    "type": "fib",
+    "answer": "at",
+    "explanation": "'At heart' (idiom): Basically; fundamentally; in one's true nature."
   }
 ]
