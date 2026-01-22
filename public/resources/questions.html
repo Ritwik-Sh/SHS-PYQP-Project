@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MCQ Questions</title>
+    <title>SHS-PYQP-Project Quizzes</title>
     <link rel="icon" type="image/png" href="../logo.png" />
     <style>
         :root {
@@ -543,7 +543,7 @@
     <div class="container">
         <div class="header">
             <a id="back-btn" href="../resources/">↩</a>
-            <h1>MCQ Quiz</h1>
+            <h1>Quiz</h1>
             <div class="header-actions">
                 <button onclick="toggleMenu()">
                     <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -712,8 +712,8 @@
                 const urlParams = new URLSearchParams(window.location.search);
                 topic = urlParams.get('quiz') || urlParams.get('topic') || 'default';
                 topic = topic.replace('.json', '');
-                document.title = topic + " MCQ Quiz";
-                document.querySelector('.header h1').textContent = topic + " MCQ Quiz";
+                document.title = topic + " Quiz";
+                document.querySelector('.header h1').textContent = topic + " Quiz";
                 const response = await fetch(topic+".json");
                 questions = await response.json();
                 loadProgress();
