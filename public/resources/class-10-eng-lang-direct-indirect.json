@@ -1,0 +1,362 @@
+[
+  {
+    "question": "He said, \"I am tired.\"",
+    "options": ["He said that he is tired", "He said that he was tired", "He says that he was tired", "He told that he was tired"],
+    "answer": 1,
+    "explanation": "When converting direct speech to indirect speech, the present tense 'am' changes to past tense 'was', and 'said' is followed by 'that'."
+  },
+  {
+    "question": "She said, \"I have finished my work.\"",
+    "options": ["She said that she has finished her work", "She said that she had finished her work", "She told she finished her work", "She says she had finished her work"],
+    "answer": 1,
+    "explanation": "Present perfect 'have finished' changes to past perfect 'had finished' in indirect speech."
+  },
+  {
+    "question": "Rahul said, \"I will help you.\"",
+    "options": ["Rahul said that he would help me", "Rahul said that he will help you", "Rahul told that he would help you", "Rahul says he would help me"],
+    "answer": 0,
+    "explanation": "'Will' changes to 'would', and 'you' changes to 'me' when the listener is the reporter."
+  },
+  {
+    "question": "The teacher said, \"The earth moves around the sun.\"",
+    "options": ["The teacher said that the earth moved around the sun", "The teacher said that the earth moves around the sun", "The teacher said earth had moved around the sun", "The teacher told that earth moves around the sun"],
+    "answer": 1,
+    "explanation": "Universal truths and scientific facts remain in present tense even in indirect speech."
+  },
+  {
+    "question": "She said to me, \"Where are you going?\"",
+    "options": ["She asked me where was I going", "She asked me where I was going", "She asked me where am I going", "She asked me where I am going"],
+    "answer": 1,
+    "explanation": "In indirect interrogative sentences, the word order becomes statement form: subject + verb."
+  },
+  {
+    "question": "He said, \"Do you like coffee?\"",
+    "options": ["He asked whether I liked coffee", "He asked that I liked coffee", "He asked do I like coffee", "He asked whether I like coffee"],
+    "answer": 0,
+    "explanation": "Yes/No questions use 'whether' or 'if', and present tense changes to past tense."
+  },
+  {
+    "question": "She said, \"Open the door.\"",
+    "options": ["She said to open the door", "She ordered me to open the door", "She ordered that I open the door", "She told me open the door"],
+    "answer": 1,
+    "explanation": "Commands in direct speech are converted using 'ordered/asked/requested + to + verb'."
+  },
+  {
+    "question": "He said to me, \"Don't waste time.\"",
+    "options": ["He advised me not waste time", "He advised me not to waste time", "He told me to not waste time", "He said me don't waste time"],
+    "answer": 1,
+    "explanation": "Negative commands use 'not to' before the verb in indirect speech."
+  },
+  {
+    "question": "She said, \"Alas! I am ruined.\"",
+    "options": ["She exclaimed that she is ruined", "She exclaimed with sorrow that she was ruined", "She said sadly that she is ruined", "She cried that she was ruined"],
+    "answer": 1,
+    "explanation": "Exclamations expressing sorrow use 'exclaimed with sorrow' or 'exclaimed sorrowfully'."
+  },
+  {
+    "question": "He said, \"What a beautiful painting!\"",
+    "options": ["He exclaimed that the painting was beautiful", "He exclaimed joyfully the painting was beautiful", "He said the painting was beautiful", "He exclaimed what a beautiful painting it was"],
+    "answer": 0,
+    "explanation": "Exclamatory sentences are converted using 'exclaimed that' followed by the statement."
+  },
+  {
+    "question": "She said, \"May God bless you!\"",
+    "options": ["She prayed that God may bless you", "She prayed that God bless me", "She prayed that God might bless me", "She said God may bless you"],
+    "answer": 2,
+    "explanation": "Wishes and prayers use 'prayed that' and 'may' changes to 'might'."
+  },
+  {
+    "question": "He said, \"Let us go for a walk.\"",
+    "options": ["He suggested that they go for a walk", "He ordered them to go for a walk", "He requested them to go for a walk", "He said they should go for a walk"],
+    "answer": 0,
+    "explanation": "'Let us' indicates a suggestion, converted using 'suggested that'."
+  },
+  {
+    "question": "She said, \"Please help me.\"",
+    "options": ["She requested me help her", "She requested me to help her", "She said please help me", "She asked me help her"],
+    "answer": 1,
+    "explanation": "Polite requests with 'please' use 'requested + to + verb'."
+  },
+  {
+    "question": "He said, \"I was playing football.\"",
+    "options": ["He said that he has been playing football", "He said that he had been playing football", "He said that he was playing football", "He says that he was playing football"],
+    "answer": 1,
+    "explanation": "Past continuous 'was playing' changes to past perfect continuous 'had been playing'."
+  },
+  {
+    "question": "She said, \"We have been waiting for hours.\"",
+    "options": ["She said that they were waiting for hours", "She said that they had been waiting for hours", "She told that they had waited for hours", "She says they were waiting for hours"],
+    "answer": 1,
+    "explanation": "Present perfect continuous changes to past perfect continuous in indirect speech."
+  },
+  {
+    "question": "He said, \"I can solve this problem.\"",
+    "options": ["He said that he could solve that problem", "He said that he can solve this problem", "He told that he could solve the problem", "He says he could solve that problem"],
+    "answer": 0,
+    "explanation": "'Can' changes to 'could', and 'this' changes to 'that' in indirect speech."
+  },
+  {
+    "question": "She said, \"I must leave now.\"",
+    "options": ["She said that she must leave then", "She said that she had to leave then", "She told she must leave now", "She says she had to leave then"],
+    "answer": 1,
+    "explanation": "'Must' changes to 'had to', and 'now' changes to 'then'."
+  },
+  {
+    "question": "He said, \"I may come tomorrow.\"",
+    "options": ["He said that he may come the next day", "He said that he might come the next day", "He said he might come tomorrow", "He told he may come the next day"],
+    "answer": 1,
+    "explanation": "'May' changes to 'might', and 'tomorrow' changes to 'the next day'."
+  },
+  {
+    "question": "She said, \"How clever you are!\"",
+    "options": ["She exclaimed that he was clever", "She said that he was clever", "She exclaimed how clever he was", "She exclaimed joyfully that he was clever"],
+    "answer": 3,
+    "explanation": "Exclamations of admiration use 'exclaimed joyfully that'."
+  },
+  {
+    "question": "He said, \"Is this your book?\"",
+    "options": ["He asked if that was my book", "He asked whether this is your book", "He asked if this was your book", "He asked whether that was my book"],
+    "answer": 0,
+    "explanation": "Yes/No questions use 'if/whether', 'this' changes to 'that', and 'your' changes to 'my'."
+  },
+  {
+    "question": "He said, \"I have lost my keys.\"",
+    "options": ["He said that he lost his keys", "He said that he had lost his keys", "He said that he has lost his keys", "He told that he had lost his keys"],
+    "answer": 1,
+    "explanation": "Present perfect 'have lost' changes to past perfect 'had lost' in indirect speech."
+  },
+  {
+    "question": "She said to him, \"Why are you late?\"",
+    "options": ["She asked him why he was late", "She asked him why is he late", "She asked him why he had been late", "She asked him why was he late"],
+    "answer": 0,
+    "explanation": "Wh-questions maintain the question word but follow statement word order in indirect speech."
+  },
+  {
+    "question": "The boy said, \"I am reading a book.\"",
+    "options": ["The boy said that he was reading a book", "The boy said that he is reading a book", "The boy says that he was reading a book", "The boy told that he was reading a book"],
+    "answer": 0,
+    "explanation": "Present continuous 'am reading' changes to past continuous 'was reading'."
+  },
+  {
+    "question": "She said, \"I shall return tomorrow.\"",
+    "options": ["She said that she will return the next day", "She said that she would return the next day", "She said that she shall return tomorrow", "She told she would return tomorrow"],
+    "answer": 1,
+    "explanation": "'Shall' changes to 'would', and 'tomorrow' changes to 'the next day'."
+  },
+  {
+    "question": "He said, \"We were playing chess.\"",
+    "options": ["He said that they were playing chess", "He said that they had been playing chess", "He said that they had played chess", "He says that they were playing chess"],
+    "answer": 1,
+    "explanation": "Past continuous 'were playing' changes to past perfect continuous 'had been playing'."
+  },
+  {
+    "question": "She said, \"I did not understand the lesson.\"",
+    "options": ["She said that she did not understand the lesson", "She said that she had not understood the lesson", "She says she did not understand the lesson", "She told she had not understood the lesson"],
+    "answer": 1,
+    "explanation": "Simple past 'did not understand' changes to past perfect 'had not understood'."
+  },
+  {
+    "question": "He said, \"I can lift this box.\"",
+    "options": ["He said that he could lift that box", "He said that he can lift this box", "He told that he could lift the box", "He says he could lift that box"],
+    "answer": 0,
+    "explanation": "'Can' changes to 'could', and 'this' changes to 'that'."
+  },
+  {
+    "question": "She said, \"I may visit you today.\"",
+    "options": ["She said that she might visit me that day", "She said that she may visit you today", "She said that she might visit you today", "She told that she may visit me that day"],
+    "answer": 0,
+    "explanation": "'May' changes to 'might', 'you' to 'me', and 'today' to 'that day'."
+  },
+  {
+    "question": "He said, \"I must complete this work.\"",
+    "options": ["He said that he must complete that work", "He said that he had to complete that work", "He says he had to complete that work", "He told that he had completed that work"],
+    "answer": 1,
+    "explanation": "'Must' changes to 'had to', and 'this' changes to 'that'."
+  },
+  {
+    "question": "She said, \"Let us start the meeting.\"",
+    "options": ["She ordered them to start the meeting", "She suggested that they should start the meeting", "She requested them to start the meeting", "She said they started the meeting"],
+    "answer": 1,
+    "explanation": "'Let us' indicates a suggestion, converted using 'suggested that they should'."
+  },
+  {
+    "question": "He said, \"Please do not disturb me.\"",
+    "options": ["He requested not to disturb him", "He requested me not disturb him", "He requested me not to disturb him", "He said not disturb him"],
+    "answer": 2,
+    "explanation": "Polite negative requests use 'requested + object + not to + verb'."
+  },
+  {
+    "question": "She said, \"How foolish I have been!\"",
+    "options": ["She exclaimed that she has been foolish", "She exclaimed with regret that she had been foolish", "She exclaimed regretfully that she was foolish", "She said that she had been foolish"],
+    "answer": 1,
+    "explanation": "Exclamations of regret use 'exclaimed with regret' or 'exclaimed regretfully'."
+  },
+  {
+    "question": "He said, \"What a terrible accident!\"",
+    "options": ["He exclaimed that the accident was terrible", "He said that the accident was terrible", "He exclaimed sadly the accident was terrible", "He exclaimed what a terrible accident it was"],
+    "answer": 0,
+    "explanation": "Exclamatory sentences are converted using 'exclaimed that'."
+  },
+  {
+    "question": "She said, \"Are you feeling better now?\"",
+    "options": ["She asked whether he is feeling better then", "She asked whether he was feeling better then", "She asked if he had been feeling better", "She asked if he is feeling better now"],
+    "answer": 1,
+    "explanation": "Yes/No questions use 'whether/if', present continuous changes to past continuous, and 'now' to 'then'."
+  },
+  {
+    "question": "He said, \"I have been waiting here since morning.\"",
+    "options": ["He said that he was waiting there since morning", "He said that he had been waiting there since morning", "He said that he has been waiting here since morning", "He told that he had waited there since morning"],
+    "answer": 1,
+    "explanation": "Present perfect continuous changes to past perfect continuous, and 'here' changes to 'there'."
+  },
+  {
+    "question": "She said, \"Will you help me?\"",
+    "options": ["She asked whether he will help her", "She asked whether he would help her", "She asked him will he help her", "She asked if he helps her"],
+    "answer": 1,
+    "explanation": "'Will' changes to 'would', and pronouns change according to context."
+  },
+  {
+    "question": "He said, \"Don't make a noise.\"",
+    "options": ["He ordered not to make a noise", "He ordered them not make a noise", "He ordered them not to make a noise", "He said them don't make a noise"],
+    "answer": 2,
+    "explanation": "Negative commands use 'ordered + object + not to + verb'."
+  },
+  {
+    "question": "She said, \"Alas! I have failed the test.\"",
+    "options": ["She exclaimed that she has failed the test", "She exclaimed with sorrow that she had failed the test", "She exclaimed sadly that she failed the test", "She said she had failed the test"],
+    "answer": 1,
+    "explanation": "'Alas' indicates sorrow, so we use 'exclaimed with sorrow', and tense changes to past perfect."
+  },
+  {
+    "question": "He said, \"What is your name?\"",
+    "options": ["He asked what is my name", "He asked what my name was", "He asked what was my name", "He asked me what was my name"],
+    "answer": 3,
+    "explanation": "Wh-questions use 'asked + object + question word + statement order'."
+  },
+  {
+    "question": "She said, \"The sun rises in the east.\"",
+    "options": ["She said that the sun rose in the east", "She said that the sun rises in the east", "She told that the sun rises in the east", "She says the sun rose in the east"],
+    "answer": 1,
+    "explanation": "Universal truths remain in present tense even in indirect speech."
+  },
+  {
+    "question": "He said, \"I had completed the work before sunset.\"",
+    "options": ["He said that he completed the work before sunset", "He said that he had completed the work before sunset", "He said that he has completed the work before sunset", "He told that he had completed the work before sunset"],
+    "answer": 1,
+    "explanation": "Past perfect tense remains unchanged in indirect speech."
+  },
+  {
+    "question": "She said, \"We will not attend the function.\"",
+    "options": ["She said that they will not attend the function", "She said that they would not attend the function", "She said that they had not attended the function", "She told they would not attend the function"],
+    "answer": 1,
+    "explanation": "'Will not' changes to 'would not' in indirect speech."
+  },
+  {
+    "question": "He said to her, \"Where did you keep the file?\"",
+    "options": ["He asked her where she kept the file", "He asked her where she had kept the file", "He asked her where did she keep the file", "He asked her where had she kept the file"],
+    "answer": 1,
+    "explanation": "Simple past in questions changes to past perfect in indirect speech."
+  },
+  {
+    "question": "She said, \"I was feeling unwell yesterday.\"",
+    "options": ["She said that she had been feeling unwell the previous day", "She said that she was feeling unwell the previous day", "She said that she had felt unwell yesterday", "She told she had been feeling unwell the previous day"],
+    "answer": 0,
+    "explanation": "Past continuous changes to past perfect continuous, and 'yesterday' to 'the previous day'."
+  },
+  {
+    "question": "He said, \"You must finish your homework today.\"",
+    "options": ["He said that I must finish my homework that day", "He said that I had to finish my homework that day", "He told that I must finish my homework today", "He said I had to finish my homework today"],
+    "answer": 1,
+    "explanation": "'Must' changes to 'had to', and 'today' changes to 'that day'."
+  },
+  {
+    "question": "She said, \"Let me help you with the project.\"",
+    "options": ["She offered to help me with the project", "She requested me to help her with the project", "She ordered me to help with the project", "She suggested that I help her with the project"],
+    "answer": 0,
+    "explanation": "'Let me' indicates an offer, converted using 'offered to'."
+  },
+  {
+    "question": "He said, \"How strange this story is!\"",
+    "options": ["He exclaimed that the story was strange", "He exclaimed how strange the story was", "He exclaimed with surprise that the story was strange", "He said that the story was strange"],
+    "answer": 2,
+    "explanation": "Exclamations of surprise use 'exclaimed with surprise that'."
+  },
+  {
+    "question": "She said, \"May you succeed in life!\"",
+    "options": ["She prayed that I may succeed in life", "She prayed that I might succeed in life", "She said that I might succeed in life", "She prayed that you might succeed in life"],
+    "answer": 1,
+    "explanation": "Wishes/prayers use 'prayed that', 'may' changes to 'might', and 'you' to 'I'."
+  },
+  {
+    "question": "He said, \"Is it raining outside?\"",
+    "options": ["He asked if it is raining outside", "He asked whether it was raining outside", "He asked whether it had been raining outside", "He asked is it raining outside"],
+    "answer": 1,
+    "explanation": "Yes/No questions use 'whether/if', and present continuous changes to past continuous."
+  },
+  {
+    "question": "She said, \"I do not know the answer.\"",
+    "options": ["She said that she did not know the answer", "She said that she had not known the answer", "She says that she did not know the answer", "She told that she did not know the answer"],
+    "answer": 0,
+    "explanation": "Simple present negative 'do not know' changes to simple past 'did not know'."
+  },
+  {
+    "question": "He writes a letter.",
+    "options": ["A letter is written by him", "A letter was written by him", "A letter has been written by him", "A letter is being written by him"],
+    "answer": 0,
+    "explanation": "Simple present active voice changes to simple present passive: is/are + past participle."
+  },
+  {
+    "question": "She is cooking food.",
+    "options": ["Food is cooked by her", "Food has been cooked by her", "Food is being cooked by her", "Food was being cooked by her"],
+    "answer": 2,
+    "explanation": "Present continuous active changes to present continuous passive: is/are being + past participle."
+  },
+  {
+    "question": "They have completed the work.",
+    "options": ["The work has been completed by them", "The work was completed by them", "The work is completed by them", "The work had been completed by them"],
+    "answer": 0,
+    "explanation": "Present perfect active changes to present perfect passive: has/have been + past participle."
+  },
+  {
+    "question": "The police caught the thief.",
+    "options": ["The thief is caught by the police", "The thief was caught by the police", "The thief has been caught by the police", "The thief had been caught by the police"],
+    "answer": 1,
+    "explanation": "Simple past active changes to simple past passive: was/were + past participle."
+  },
+  {
+    "question": "He will finish the task.",
+    "options": ["The task is finished by him", "The task will be finished by him", "The task will have been finished by him", "The task has been finished by him"],
+    "answer": 1,
+    "explanation": "Simple future active changes to simple future passive: will be + past participle."
+  },
+  {
+    "question": "She had written a letter.",
+    "options": ["A letter is written by her", "A letter was written by her", "A letter had been written by her", "A letter has been written by her"],
+    "answer": 2,
+    "explanation": "Past perfect active changes to past perfect passive: had been + past participle."
+  },
+  {
+    "question": "Someone stole my wallet.",
+    "options": ["My wallet is stolen", "My wallet was stolen", "My wallet has been stolen", "My wallet had been stolen"],
+    "answer": 1,
+    "explanation": "Simple past active changes to simple past passive. 'By someone' is usually omitted in passive."
+  },
+  {
+    "question": "They are painting the house.",
+    "options": ["The house is painted by them", "The house has been painted by them", "The house is being painted by them", "The house was being painted by them"],
+    "answer": 2,
+    "explanation": "Present continuous active changes to present continuous passive: is/are being + past participle."
+  },
+  {
+    "question": "The teacher praised the student.",
+    "options": ["The student is praised by the teacher", "The student was praised by the teacher", "The student has been praised by the teacher", "The student had been praised by the teacher"],
+    "answer": 1,
+    "explanation": "Simple past active changes to simple past passive: was/were + past participle."
+  },
+  {
+    "question": "She can solve the problem.",
+    "options": ["The problem can be solved by her", "The problem could be solved by her", "The problem is solved by her", "The problem was solved by her"],
+    "answer": 0,
+    "explanation": "Modal 'can' in active changes to 'can be' + past participle in passive voice."
+  }
+]
