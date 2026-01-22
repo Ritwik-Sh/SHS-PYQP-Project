@@ -196,6 +196,17 @@
     "type": "fib",
     "answer": "around",
     "explanation": "'Bring the patient around' means to help an unconscious person regain consciousness, often after fainting, anesthesia, or a medical episode"
-  }  
-
+  },
+  {
+    "question": "She died __ cancer.",
+    "type": "fib",
+    "answer": "of",
+    "explanation": "'died of' is used for diseases/illnesses"
+  },
+  {
+    "question": "She died __ overspeeding",
+    "type": "fib",
+    "answer": "from",
+    "explanation": "'died from' is used for external causes"
+  }
 ]
