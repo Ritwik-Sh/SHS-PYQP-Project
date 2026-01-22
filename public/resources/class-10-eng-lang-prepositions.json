@@ -2,7 +2,7 @@
   {
     "question": "Radha was amused ___ his joke.",
     "type": "fib",
-    "answer": "at",
+    "answer": ["at", "by"],
     "explanation": "The correct preposition used with 'amused' is 'at'."
   },
   {
@@ -178,5 +178,24 @@
     "type": "fib",
     "answer": "to",
     "explanation": "'Exception to' is the correct prepositional usage."
-  }
+  },
+  {
+    "question": "She was confined __ bed with fever",
+    "type": "fib",
+    "answer": "to",
+    "explanation": "'confined to' is the correct prepositional usage."
+  },
+  {
+    "question": "He takes __ his father.",
+    "type": "fib",
+    "answer": "after",
+    "explanation": "'takes after' means to resemble"
+  },
+  {
+    "question": "The doctors managed to bring the patient __.",
+    "type": "fib",
+    "answer": "around",
+    "explanation": "'Bring the patient around' means to help an unconscious person regain consciousness, often after fainting, anesthesia, or a medical episode"
+  }  
+
 ]
