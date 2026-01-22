@@ -135,7 +135,7 @@
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
-            -webkit-line-clamp: 2;
+            /* -webkit-line-clamp: 2; */
             -webkit-box-orient: vertical;
         }
 
@@ -312,7 +312,7 @@
     <h1>SHS-PYQP Quizzes</h1>
     <main>
         <div id="left">
-            <button id="back" onclick="window.location.reload()"><i style="scale: 3;" class="fa-solid fa-arrow-left"></i></button>
+            <button id="back"><i style="scale: 3;" class="fa-solid fa-arrow-left"></i></button>
             <br>
             <div id="loading" class="loader"></div>
             <div id="content"></div>
@@ -347,7 +347,6 @@
 
     <script>
         // ===== SIMPLE QUIZ CONFIGURATION =====
-        // Just add your quizzes here!
         const QUIZZES = [
             {
                 class: 10,
@@ -357,14 +356,6 @@
                     { name: 'Java MCQ', file: 'class-10-java.json' }
                 ]
             },
-            // {
-            //     class: 10,
-            //     subject: 'History & Civics',
-            //     icon: 'fa-timeline',
-            //     topics: [
-            //         { name: 'History & Civics MCQ', file: 'class-10-history-civics-mixed.json' }
-            //     ]
-            // },
             {
                 class: 10,
                 subject: 'Chemistry',
@@ -407,9 +398,38 @@
                 ]
             }
         ];
+
+        // Navigation state management
+        let navigationState = {
+            view: 'classes', // 'classes', 'subjects', or 'topics'
+            currentClass: null,
+            currentSubject: null
+        };
+
+        // Back button handler
+        document.getElementById('back').addEventListener('click', handleBack);
+
+        function handleBack() {
+            if (navigationState.view === 'topics') {
+                // Go back to subjects view
+                renderSubjects(navigationState.currentClass);
+            } else if (navigationState.view === 'subjects') {
+                // Go back to classes view
+                renderClasses();
+            }
+        }
+
         function renderClasses() {
             const content = document.getElementById('content');
             content.innerHTML = '';
+            document.querySelector('#back').style.display = 'none';
+            
+            // Update navigation state
+            navigationState = {
+                view: 'classes',
+                currentClass: null,
+                currentSubject: null
+            };
             
             const classes = [...new Set(QUIZZES.map(q => q.class))].sort((a, b) => a - b);
             
@@ -431,6 +451,13 @@
             const content = document.getElementById('content');
             content.innerHTML = '';
             document.querySelector('#back').style.display = 'inline-block';
+
+            // Update navigation state
+            navigationState = {
+                view: 'subjects',
+                currentClass: cls,
+                currentSubject: null
+            };
 
             const subjects = QUIZZES.filter(q => q.class === cls);
             
@@ -454,6 +481,13 @@
         function renderTopics(cls, subject) {
             const content = document.getElementById('content');
             content.innerHTML = '';
+
+            // Update navigation state
+            navigationState = {
+                view: 'topics',
+                currentClass: cls,
+                currentSubject: subject
+            };
 
             if (subject.topics.length === 0) {
                 content.innerHTML = '<h1 id="noContent">No Topics Available!</h1>';
