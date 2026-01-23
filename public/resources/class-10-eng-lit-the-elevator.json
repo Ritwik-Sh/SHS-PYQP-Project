@@ -60,18 +60,6 @@
     "explanation": "The story is a psychological thriller that builds suspense and explores fear and paranoia."
   },
   {
-    "question": "The fat lady presses which button in the final scene?",
-    "options": ["6", "3", "9", "14"],
-    "answer": 3,
-    "explanation": "In the climactic final scene, the fat lady presses the button for the fourteenth floor."
-  },
-  {
-    "question": "The 14th floor is significant because:",
-    "options": ["It doesn't exist in the building", "It is Martin's floor", "It is the basement", "It is the father's office"],
-    "answer": 0,
-    "explanation": "The fourteenth floor doesn't exist in the building, adding a supernatural and mysterious element to the story."
-  },
-  {
     "question": "Martin's main internal conflict is:",
     "options": ["Hatred for his father", "Fear versus courage", "School problems", "Financial issues"],
     "answer": 1,
@@ -156,12 +144,6 @@
     "explanation": "The fat lady's repeated appearances in the elevator escalate Martin's fear and paranoia."
   },
   {
-    "question": "The climax occurs when:",
-    "options": ["Martin moves in", "The lady presses 14", "Martin talks to his father", "The elevator opens"],
-    "answer": 1,
-    "explanation": "The story reaches its climax when the fat lady presses the button for the non-existent fourteenth floor."
-  },
-  {
     "question": "Martin's personality can be described as:",
     "options": ["Bold", "Reckless", "Timid and anxious", "Aggressive"],
     "answer": 2,
@@ -214,12 +196,6 @@
     "options": ["Creates a safe space", "Reflects Martin's mental state", "Shows luxury", "Is unimportant"],
     "answer": 1,
     "explanation": "The claustrophobic building setting mirrors and reflects Martin's trapped, anxious mental state."
-  },
-  {
-    "question": "The 14th floor adds a sense of:",
-    "options": ["Realism", "Comedy", "Supernatural mystery", "Romance"],
-    "answer": 2,
-    "explanation": "The impossible fourteenth floor introduces supernatural and mysterious elements to the psychological thriller."
   },
   {
     "question": "The story suggests that fear can:",
