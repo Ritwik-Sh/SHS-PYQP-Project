@@ -2,7 +2,10 @@
   {
     "question": "Radha was amused ___ his joke.",
     "type": "fib",
-    "answer": ["at", "by"],
+    "answer": [
+      "at",
+      "by"
+    ],
     "explanation": "The correct preposition used with 'amused' is 'at'."
   },
   {
@@ -221,104 +224,604 @@
     "answer": "at",
     "explanation": "'At heart' (idiom): Basically; fundamentally; in one's true nature."
   },
-  {"question":"She sat ___ the chair.","answer":"on","type":"fib","explanation":"We use 'on' for sitting on a surface."},
-  {"question":"The book is ___ the table.","answer":"on","type":"fib","explanation":"'On' is used when something rests on a surface."},
-  {"question":"He walked ___ the park.","answer":"through","type":"fib","explanation":"'Through' shows movement within an area."},
-  {"question":"The keys are ___ the drawer.","answer":"in","type":"fib","explanation":"'In' shows something enclosed."},
-  {"question":"The cat jumped ___ the bed.","answer":"onto","type":"fib","explanation":"'Onto' shows movement to a surface."},
-  {"question":"We traveled ___ car.","answer":"by","type":"fib","explanation":"'By' is used with modes of transport."},
-  {"question":"He put the letter ___ the envelope.","answer":"into","type":"fib","explanation":"'Into' shows movement inside."},
-  {"question":"The dog ran ___ the garden to catch the ball on the other side.","answer":"across","type":"fib","explanation":"'Across' shows movement from one side to another."},
-  {"question":"The meeting starts ___ 9 AM.","answer":"at","type":"fib","explanation":"'At' is used for exact time."},
-  {"question":"They met ___ the airport.","answer":"at","type":"fib","explanation":"'At' is used for specific places."},
-  {"question":"She is interested ___ music.","answer":"in","type":"fib","explanation":"'Interested in' is a fixed expression."},
-  {"question":"The picture hangs ___ the wall.","answer":"on","type":"fib","explanation":"'On' is used for items attached to surfaces."},
-  {"question":"The kids are playing ___ the street.","answer":"in","type":"fib","explanation":"'In' is used for enclosed or defined areas."},
-  {"question":"I will meet you ___ Monday.","answer":"on","type":"fib","explanation":"'On' is used for days."},
-  {"question":"He is good ___ math.","answer":"at","type":"fib","explanation":"'Good at' is a fixed usage."},
-  {"question":"The train passes ___ the tunnel.","answer":"through","type":"fib","explanation":"'Through' shows movement inside something."},
-  {"question":"The clock is ___ the wall.","answer":"on","type":"fib","explanation":"'On' shows attachment."},
-  {"question":"The car stopped ___ the signal.","answer":"at","type":"fib","explanation":"'At' is used for specific points."},
-  {"question":"He dived ___ the pool.","answer":"into","type":"fib","explanation":"'Into' shows movement inside."},
-  {"question":"She broke ___ in the middle of the prayer meeting.","answer":"in","type":"fib","explanation":"'Break in' means interrupt."},
-  {"question":"They are arriving ___ a few minutes.","answer":"in","type":"fib","explanation":"'In' is used for a period of time."},
-  {"question":"The shop is ___ the corner.","answer":"at","type":"fib","explanation":"'At the corner' is idiomatic usage."},
-  {"question":"I live ___ my parents.","answer":"with","type":"fib","explanation":"'With' shows companionship."},
-  {"question":"The hotel is ___ the river.","answer":"near","type":"fib","explanation":"'Near' shows closeness."},
-  {"question":"The children ran ___ the playground.","answer":"into","type":"fib","explanation":"'Into' shows movement inside."},
-  {"question":"He climbed ___ the ladder.","answer":"up","type":"fib","explanation":"'Up' shows upward movement."},
-  {"question":"The battery of my torch was running ___ .","answer":"out","type":"fib","explanation":"'Run out' means get exhausted."},
-  {"question":"I was born ___ April.","answer":"in","type":"fib","explanation":"'In' is used for months."},
-  {"question":"Militants broke into ___ the hotel.","answer":"—","type":"fib","explanation":"'Broke into' already includes the preposition."},
-  {"question":"The book is ___ the shelf.","answer":"on","type":"fib","explanation":"'On' is used for surfaces."},
-  {"question":"The manager turned ___ my request.","answer":"down","type":"fib","explanation":"'Turn down' means reject."},
-  {"question":"She leaned ___ the door.","answer":"against","type":"fib","explanation":"'Against' shows support or contact."},
-  {"question":"He sat ___ me at the table.","answer":"beside","type":"fib","explanation":"'Beside' means next to."},
-  {"question":"She is married ___ John.","answer":"to","type":"fib","explanation":"'Married to' is correct usage."},
-  {"question":"The house is ___ the hill.","answer":"on","type":"fib","explanation":"'On' shows position on a surface."},
-  {"question":"He parked his car ___ the garage.","answer":"in","type":"fib","explanation":"'In' shows enclosure."},
-  {"question":"The road goes ___ the town.","answer":"through","type":"fib","explanation":"'Through' shows passage inside."},
-  {"question":"We watched TV ___ the evening.","answer":"in","type":"fib","explanation":"'In' is used with parts of the day."},
-  {"question":"He kept his wallet ___ his pocket.","answer":"in","type":"fib","explanation":"'In' shows something inside."},
-  {"question":"The school is ___ the city center.","answer":"in","type":"fib","explanation":"'In' shows location within an area."},
-  {"question":"I put my bag ___ the floor.","answer":"on","type":"fib","explanation":"'On' shows contact with surface."},
-  {"question":"The sun is shining ___ the sky.","answer":"in","type":"fib","explanation":"'In the sky' is standard usage."},
-  {"question":"The train arrives ___ platform 5.","answer":"at","type":"fib","explanation":"'At' is used for specific points."},
-  {"question":"The flowers are ___ the vase.","answer":"in","type":"fib","explanation":"'In' shows enclosure."},
-  {"question":"We walked ___ the bridge.","answer":"across","type":"fib","explanation":"'Across' shows movement from one side to another."},
-  {"question":"The gift is ___ the box.","answer":"in","type":"fib","explanation":"'In' shows something inside."},
-  {"question":"He came ___ across his friend at the market.","answer":"—","type":"fib","explanation":"'Came across' is already complete."},
-  {"question":"She hid ___ the bed.","answer":"under","type":"fib","explanation":"'Under' shows position below."},
-  {"question":"The keys are ___ my bag.","answer":"in","type":"fib","explanation":"'In' shows enclosure."},
-  {"question":"The car is parked ___ the tree.","answer":"under","type":"fib","explanation":"'Under' shows position below."},
-  {"question":"She waited ___ the station.","answer":"at","type":"fib","explanation":"'At' is used for specific locations."},
-  {"question":"The book is ___ my bag.","answer":"in","type":"fib","explanation":"'In' shows enclosure."},
-  {"question":"The shoes are ___ the bed.","answer":"under","type":"fib","explanation":"'Under' shows position below."},
-  {"question":"Cholera has broken ___ in the city.","answer":"out","type":"fib","explanation":"'Break out' means spread suddenly."},
-  {"question":"He works ___ a bank.","answer":"in","type":"fib","explanation":"'In' shows place of work."},
-  {"question":"She stood ___ me.","answer":"behind","type":"fib","explanation":"'Behind' shows position at the back."},
-  {"question":"The train passed ___ the tunnel.","answer":"through","type":"fib","explanation":"'Through' shows movement inside."},
-  {"question":"The restaurant is ___ the street.","answer":"on","type":"fib","explanation":"'On' is used for roads and streets."},
-  {"question":"We went ___ a trip.","answer":"on","type":"fib","explanation":"'Go on a trip' is correct usage."},
-  {"question":"The gift is ___ the table.","answer":"on","type":"fib","explanation":"'On' shows surface contact."},
-  {"question":"They are sitting ___ the bench.","answer":"on","type":"fib","explanation":"'On' shows surface contact."},
-  {"question":"He jumped ___ the pool.","answer":"into","type":"fib","explanation":"'Into' shows movement inside."},
-  {"question":"The chair is ___ the desk.","answer":"under","type":"fib","explanation":"'Under' shows position below."},
-  {"question":"The ball fell ___ the well.","answer":"into","type":"fib","explanation":"'Into' shows movement inside."},
-  {"question":"She walked ___ the garden.","answer":"through","type":"fib","explanation":"'Through' shows movement inside."},
-  {"question":"The dog is sleeping ___ the couch.","answer":"on","type":"fib","explanation":"'On' shows surface contact."},
-  {"question":"My sister's husband is engaged ___ business.","answer":"in","type":"fib","explanation":"'Engaged in' is correct usage."},
-  {"question":"The bus stopped ___ the station.","answer":"at","type":"fib","explanation":"'At' shows specific place."},
-  {"question":"The train goes ___ the tunnel.","answer":"through","type":"fib","explanation":"'Through' shows movement inside."},
-  {"question":"The shop is ___ the street.","answer":"on","type":"fib","explanation":"'On' is used with streets."},
-  {"question":"She left her bag ___ the chair.","answer":"on","type":"fib","explanation":"'On' shows surface contact."},
-  {"question":"The school is ___ the lake.","answer":"near","type":"fib","explanation":"'Near' shows closeness."},
-  {"question":"He is sitting ___ the sofa.","answer":"on","type":"fib","explanation":"'On' shows surface contact."},
-  {"question":"The flowers are ___ the garden.","answer":"in","type":"fib","explanation":"'In' shows location within."},
-  {"question":"The painting is ___ the wall.","answer":"on","type":"fib","explanation":"'On' shows attachment."},
-  {"question":"The kids played ___ the tree.","answer":"under","type":"fib","explanation":"'Under' shows position below."},
-  {"question":"Open the book ___ page.","answer":"at","type":"fib","explanation":"'At page' is standard usage."},
-  {"question":"The dog ran ___ the street.","answer":"across","type":"fib","explanation":"'Across' shows movement from one side to another."},
-  {"question":"She sat ___ the rock.","answer":"on","type":"fib","explanation":"'On' shows surface contact."},
-  {"question":"The wallet is ___ his pocket.","answer":"in","type":"fib","explanation":"'In' shows enclosure."},
-  {"question":"The airplane flew ___ the clouds.","answer":"above","type":"fib","explanation":"'Above' shows higher position."},
-  {"question":"The bus stopped ___ the hotel.","answer":"at","type":"fib","explanation":"'At' shows specific place."},
-  {"question":"I came ___ my teacher at the party.","answer":"across","type":"fib","explanation":"'Came across' means met unexpectedly."},
-  {"question":"He hid the money ___ the drawer.","answer":"in","type":"fib","explanation":"'In' shows enclosure."},
-  {"question":"The train arrived ___ the station.","answer":"at","type":"fib","explanation":"'At' is used for specific places."},
-  {"question":"The birds sat ___ the roof.","answer":"on","type":"fib","explanation":"'On' shows surface contact."},
-  {"question":"100 rupees note is ___ the envelope.","answer":"in","type":"fib","explanation":"'In' shows enclosure."},
-  {"question":"The glass is ___ the shelf.","answer":"on","type":"fib","explanation":"'On' shows surface contact."},
-  {"question":"The car is ___ the garage.","answer":"in","type":"fib","explanation":"'In' shows enclosure."},
-  {"question":"The cat sat ___ the window sill.","answer":"on","type":"fib","explanation":"'On' shows surface contact."},
-  {"question":"The gift is ___ the bag.","answer":"in","type":"fib","explanation":"'In' shows enclosure."},
-  {"question":"The people stood ___ the stage.","answer":"on","type":"fib","explanation":"'On' shows surface contact."},
-  {"question":"The forest abounds ___ tigers.","answer":"with","type":"fib","explanation":"'Abounds with' is correct usage."},
-  {"question":"The sun set ___ the horizon.","answer":"below","type":"fib","explanation":"'Below' shows lower position."},
-  {"question":"She walked ___ the river.","answer":"along","type":"fib","explanation":"'Along' shows movement beside."},
-  {"question":"The bus ran ___ the man.","answer":"over","type":"fib","explanation":"'Run over' means hit."},
-  {"question":"The cake is ___ the fridge.","answer":"in","type":"fib","explanation":"'In' shows enclosure."},
-  {"question":"Take ___ your shoes before entering the temple.","answer":"off","type":"fib","explanation":"'Take off' means remove."},
-  {"question":"She disposed ___ her old clothes.","answer":"of","type":"fib","explanation":"'Dispose of' is correct usage."},
-  {"question":"The students handed ___ the project to their teacher.","answer":"in","type":"fib","explanation":"'Hand in' means submit."}
+  {
+    "question": "She sat ___ the chair.",
+    "answer": "on",
+    "type": "fib",
+    "explanation": "We use 'on' for sitting on a surface."
+  },
+  {
+    "question": "The book is ___ the table.",
+    "answer": "on",
+    "type": "fib",
+    "explanation": "'On' is used when something rests on a surface."
+  },
+  {
+    "question": "He walked ___ the park.",
+    "answer": "through",
+    "type": "fib",
+    "explanation": "'Through' shows movement within an area."
+  },
+  {
+    "question": "The keys are ___ the drawer.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'In' shows something enclosed."
+  },
+  {
+    "question": "The cat jumped ___ the bed.",
+    "answer": "onto",
+    "type": "fib",
+    "explanation": "'Onto' shows movement to a surface."
+  },
+  {
+    "question": "We traveled ___ car.",
+    "answer": "by",
+    "type": "fib",
+    "explanation": "'By' is used with modes of transport."
+  },
+  {
+    "question": "He put the letter ___ the envelope.",
+    "answer": "into",
+    "type": "fib",
+    "explanation": "'Into' shows movement inside."
+  },
+  {
+    "question": "The dog ran ___ the garden to catch the ball on the other side.",
+    "answer": "across",
+    "type": "fib",
+    "explanation": "'Across' shows movement from one side to another."
+  },
+  {
+    "question": "The meeting starts ___ 9 AM.",
+    "answer": "at",
+    "type": "fib",
+    "explanation": "'At' is used for exact time."
+  },
+  {
+    "question": "They met ___ the airport.",
+    "answer": "at",
+    "type": "fib",
+    "explanation": "'At' is used for specific places."
+  },
+  {
+    "question": "She is interested ___ music.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'Interested in' is a fixed expression."
+  },
+  {
+    "question": "The picture hangs ___ the wall.",
+    "answer": "on",
+    "type": "fib",
+    "explanation": "'On' is used for items attached to surfaces."
+  },
+  {
+    "question": "The kids are playing ___ the street.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'In' is used for enclosed or defined areas."
+  },
+  {
+    "question": "I will meet you ___ Monday.",
+    "answer": "on",
+    "type": "fib",
+    "explanation": "'On' is used for days."
+  },
+  {
+    "question": "He is good ___ math.",
+    "answer": "at",
+    "type": "fib",
+    "explanation": "'Good at' is a fixed usage."
+  },
+  {
+    "question": "The train passes ___ the tunnel.",
+    "answer": "through",
+    "type": "fib",
+    "explanation": "'Through' shows movement inside something."
+  },
+  {
+    "question": "The clock is ___ the wall.",
+    "answer": "on",
+    "type": "fib",
+    "explanation": "'On' shows attachment."
+  },
+  {
+    "question": "The car stopped ___ the signal.",
+    "answer": "at",
+    "type": "fib",
+    "explanation": "'At' is used for specific points."
+  },
+  {
+    "question": "He dived ___ the pool.",
+    "answer": "into",
+    "type": "fib",
+    "explanation": "'Into' shows movement inside."
+  },
+  {
+    "question": "She broke ___ in the middle of the prayer meeting.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'Break in' means interrupt."
+  },
+  {
+    "question": "They are arriving ___ a few minutes.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'In' is used for a period of time."
+  },
+  {
+    "question": "The shop is ___ the corner.",
+    "answer": "at",
+    "type": "fib",
+    "explanation": "'At the corner' is idiomatic usage."
+  },
+  {
+    "question": "I live ___ my parents.",
+    "answer": "with",
+    "type": "fib",
+    "explanation": "'With' shows companionship."
+  },
+  {
+    "question": "The hotel is ___ the river.",
+    "answer": "near",
+    "type": "fib",
+    "explanation": "'Near' shows closeness."
+  },
+  {
+    "question": "The children ran ___ the playground.",
+    "answer": "into",
+    "type": "fib",
+    "explanation": "'Into' shows movement inside."
+  },
+  {
+    "question": "He climbed ___ the ladder.",
+    "answer": "up",
+    "type": "fib",
+    "explanation": "'Up' shows upward movement."
+  },
+  {
+    "question": "The battery of my torch was running ___ .",
+    "answer": "out",
+    "type": "fib",
+    "explanation": "'Run out' means get exhausted."
+  },
+  {
+    "question": "I was born ___ April.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'In' is used for months."
+  },
+  {
+    "question": "Militants broke into ___ the hotel.",
+    "answer": "—",
+    "type": "fib",
+    "explanation": "'Broke into' already includes the preposition."
+  },
+  {
+    "question": "The book is ___ the shelf.",
+    "answer": "on",
+    "type": "fib",
+    "explanation": "'On' is used for surfaces."
+  },
+  {
+    "question": "The manager turned ___ my request.",
+    "answer": "down",
+    "type": "fib",
+    "explanation": "'Turn down' means reject."
+  },
+  {
+    "question": "She leaned ___ the door.",
+    "answer": "against",
+    "type": "fib",
+    "explanation": "'Against' shows support or contact."
+  },
+  {
+    "question": "He sat ___ me at the table.",
+    "answer": "beside",
+    "type": "fib",
+    "explanation": "'Beside' means next to."
+  },
+  {
+    "question": "She is married ___ John.",
+    "answer": "to",
+    "type": "fib",
+    "explanation": "'Married to' is correct usage."
+  },
+  {
+    "question": "The house is ___ the hill.",
+    "answer": "on",
+    "type": "fib",
+    "explanation": "'On' shows position on a surface."
+  },
+  {
+    "question": "He parked his car ___ the garage.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'In' shows enclosure."
+  },
+  {
+    "question": "The road goes ___ the town.",
+    "answer": "through",
+    "type": "fib",
+    "explanation": "'Through' shows passage inside."
+  },
+  {
+    "question": "We watched TV ___ the evening.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'In' is used with parts of the day."
+  },
+  {
+    "question": "He kept his wallet ___ his pocket.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'In' shows something inside."
+  },
+  {
+    "question": "The school is ___ the city center.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'In' shows location within an area."
+  },
+  {
+    "question": "I put my bag ___ the floor.",
+    "answer": "on",
+    "type": "fib",
+    "explanation": "'On' shows contact with surface."
+  },
+  {
+    "question": "The sun is shining ___ the sky.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'In the sky' is standard usage."
+  },
+  {
+    "question": "The train arrives ___ platform 5.",
+    "answer": "at",
+    "type": "fib",
+    "explanation": "'At' is used for specific points."
+  },
+  {
+    "question": "The flowers are ___ the vase.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'In' shows enclosure."
+  },
+  {
+    "question": "We walked ___ the bridge.",
+    "answer": "across",
+    "type": "fib",
+    "explanation": "'Across' shows movement from one side to another."
+  },
+  {
+    "question": "The gift is ___ the box.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'In' shows something inside."
+  },
+  {
+    "question": "He came ___ across his friend at the market.",
+    "answer": "—",
+    "type": "fib",
+    "explanation": "'Came across' is already complete."
+  },
+  {
+    "question": "She hid ___ the bed.",
+    "answer": "under",
+    "type": "fib",
+    "explanation": "'Under' shows position below."
+  },
+  {
+    "question": "The keys are ___ my bag.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'In' shows enclosure."
+  },
+  {
+    "question": "The car is parked ___ the tree.",
+    "answer": "under",
+    "type": "fib",
+    "explanation": "'Under' shows position below."
+  },
+  {
+    "question": "She waited ___ the station.",
+    "answer": "at",
+    "type": "fib",
+    "explanation": "'At' is used for specific locations."
+  },
+  {
+    "question": "The book is ___ my bag.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'In' shows enclosure."
+  },
+  {
+    "question": "The shoes are ___ the bed.",
+    "answer": "under",
+    "type": "fib",
+    "explanation": "'Under' shows position below."
+  },
+  {
+    "question": "Cholera has broken ___ in the city.",
+    "answer": "out",
+    "type": "fib",
+    "explanation": "'Break out' means spread suddenly."
+  },
+  {
+    "question": "He works ___ a bank.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'In' shows place of work."
+  },
+  {
+    "question": "She stood ___ me.",
+    "answer": "behind",
+    "type": "fib",
+    "explanation": "'Behind' shows position at the back."
+  },
+  {
+    "question": "The train passed ___ the tunnel.",
+    "answer": "through",
+    "type": "fib",
+    "explanation": "'Through' shows movement inside."
+  },
+  {
+    "question": "The restaurant is ___ the street.",
+    "answer": "on",
+    "type": "fib",
+    "explanation": "'On' is used for roads and streets."
+  },
+  {
+    "question": "We went ___ a trip.",
+    "answer": "on",
+    "type": "fib",
+    "explanation": "'Go on a trip' is correct usage."
+  },
+  {
+    "question": "The gift is ___ the table.",
+    "answer": "on",
+    "type": "fib",
+    "explanation": "'On' shows surface contact."
+  },
+  {
+    "question": "They are sitting ___ the bench.",
+    "answer": "on",
+    "type": "fib",
+    "explanation": "'On' shows surface contact."
+  },
+  {
+    "question": "He jumped ___ the pool.",
+    "answer": "into",
+    "type": "fib",
+    "explanation": "'Into' shows movement inside."
+  },
+  {
+    "question": "The chair is ___ the desk.",
+    "answer": "under",
+    "type": "fib",
+    "explanation": "'Under' shows position below."
+  },
+  {
+    "question": "The ball fell ___ the well.",
+    "answer": "into",
+    "type": "fib",
+    "explanation": "'Into' shows movement inside."
+  },
+  {
+    "question": "She walked ___ the garden.",
+    "answer": "through",
+    "type": "fib",
+    "explanation": "'Through' shows movement inside."
+  },
+  {
+    "question": "The dog is sleeping ___ the couch.",
+    "answer": "on",
+    "type": "fib",
+    "explanation": "'On' shows surface contact."
+  },
+  {
+    "question": "My sister's husband is engaged ___ business.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'Engaged in' is correct usage."
+  },
+  {
+    "question": "The bus stopped ___ the station.",
+    "answer": "at",
+    "type": "fib",
+    "explanation": "'At' shows specific place."
+  },
+  {
+    "question": "The train goes ___ the tunnel.",
+    "answer": "through",
+    "type": "fib",
+    "explanation": "'Through' shows movement inside."
+  },
+  {
+    "question": "The shop is ___ the street.",
+    "answer": "on",
+    "type": "fib",
+    "explanation": "'On' is used with streets."
+  },
+  {
+    "question": "She left her bag ___ the chair.",
+    "answer": "on",
+    "type": "fib",
+    "explanation": "'On' shows surface contact."
+  },
+  {
+    "question": "The school is ___ the lake.",
+    "answer": "near",
+    "type": "fib",
+    "explanation": "'Near' shows closeness."
+  },
+  {
+    "question": "He is sitting ___ the sofa.",
+    "answer": "on",
+    "type": "fib",
+    "explanation": "'On' shows surface contact."
+  },
+  {
+    "question": "The flowers are ___ the garden.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'In' shows location within."
+  },
+  {
+    "question": "The painting is ___ the wall.",
+    "answer": "on",
+    "type": "fib",
+    "explanation": "'On' shows attachment."
+  },
+  {
+    "question": "The kids played ___ the tree.",
+    "answer": "under",
+    "type": "fib",
+    "explanation": "'Under' shows position below."
+  },
+  {
+    "question": "Open the book ___ page.",
+    "answer": "at",
+    "type": "fib",
+    "explanation": "'At page' is standard usage."
+  },
+  {
+    "question": "The dog ran ___ the street.",
+    "answer": "across",
+    "type": "fib",
+    "explanation": "'Across' shows movement from one side to another."
+  },
+  {
+    "question": "She sat ___ the rock.",
+    "answer": "on",
+    "type": "fib",
+    "explanation": "'On' shows surface contact."
+  },
+  {
+    "question": "The wallet is ___ his pocket.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'In' shows enclosure."
+  },
+  {
+    "question": "The airplane flew ___ the clouds.",
+    "answer": "above",
+    "type": "fib",
+    "explanation": "'Above' shows higher position."
+  },
+  {
+    "question": "The bus stopped ___ the hotel.",
+    "answer": "at",
+    "type": "fib",
+    "explanation": "'At' shows specific place."
+  },
+  {
+    "question": "I came ___ my teacher at the party.",
+    "answer": "across",
+    "type": "fib",
+    "explanation": "'Came across' means met unexpectedly."
+  },
+  {
+    "question": "He hid the money ___ the drawer.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'In' shows enclosure."
+  },
+  {
+    "question": "The train arrived ___ the station.",
+    "answer": "at",
+    "type": "fib",
+    "explanation": "'At' is used for specific places."
+  },
+  {
+    "question": "The birds sat ___ the roof.",
+    "answer": "on",
+    "type": "fib",
+    "explanation": "'On' shows surface contact."
+  },
+  {
+    "question": "100 rupees note is ___ the envelope.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'In' shows enclosure."
+  },
+  {
+    "question": "The glass is ___ the shelf.",
+    "answer": "on",
+    "type": "fib",
+    "explanation": "'On' shows surface contact."
+  },
+  {
+    "question": "The car is ___ the garage.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'In' shows enclosure."
+  },
+  {
+    "question": "The cat sat ___ the window sill.",
+    "answer": "on",
+    "type": "fib",
+    "explanation": "'On' shows surface contact."
+  },
+  {
+    "question": "The gift is ___ the bag.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'In' shows enclosure."
+  },
+  {
+    "question": "The people stood ___ the stage.",
+    "answer": "on",
+    "type": "fib",
+    "explanation": "'On' shows surface contact."
+  },
+  {
+    "question": "The forest abounds ___ tigers.",
+    "answer": "with",
+    "type": "fib",
+    "explanation": "'Abounds with' is correct usage."
+  },
+  {
+    "question": "The sun set ___ the horizon.",
+    "answer": "below",
+    "type": "fib",
+    "explanation": "'Below' shows lower position."
+  },
+  {
+    "question": "She walked ___ the river.",
+    "answer": "along",
+    "type": "fib",
+    "explanation": "'Along' shows movement beside."
+  },
+  {
+    "question": "The bus ran ___ the man.",
+    "answer": "over",
+    "type": "fib",
+    "explanation": "'Run over' means hit."
+  },
+  {
+    "question": "The cake is ___ the fridge.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'In' shows enclosure."
+  },
+  {
+    "question": "Take ___ your shoes before entering the temple.",
+    "answer": "off",
+    "type": "fib",
+    "explanation": "'Take off' means remove."
+  },
+  {
+    "question": "She disposed ___ her old clothes.",
+    "answer": "of",
+    "type": "fib",
+    "explanation": "'Dispose of' is correct usage."
+  },
+  {
+    "question": "The students handed ___ the project to their teacher.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'Hand in' means submit."
+  }
 ]

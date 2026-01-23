@@ -1,275 +1,402 @@
 [
-  {
-    "question": "The blood vessel which supplies oxygenated blood to kidneys",
-    "type": "fib",
-    "answer": ["Renal Artery", "Renal artery"],
-    "explanation": "The renal artery branches from the abdominal aorta and carries oxygenated blood to the kidneys for filtration."
-  },
-  {
-    "question": "Structure which guards the opening of posterior vena cava",
-    "type": "fib",
-    "answer": ["Eustachius valve", "Eustachian valve"],
-    "explanation": "The Eustachian valve is a remnant valve that guards the opening of the inferior (posterior) vena cava into the right atrium."
-  },
-  {
-    "question": "Muscular like projection arising from the ventricular wall",
-    "type": "fib",
-    "answer": ["Chordae Tendinae", "Chordae tendinae"],
-    "explanation": "Chordae tendinae are tendon-like cords that connect the papillary muscles to the tricuspid and mitral valves in the heart."
-  },
-  {
-    "question": "The chamber of heart having thickest walls",
-    "type": "fib",
-    "answer": ["Left ventricle", "Left Ventricle"],
-    "explanation": "The left ventricle has the thickest walls as it needs to pump blood throughout the entire body with high pressure."
-  },
-  {
-    "question": "Contracted phase of heart",
-    "type": "fib",
-    "answer": ["Systole"],
-    "explanation": "Systole is the phase of the cardiac cycle when the heart muscle contracts and pumps blood from the chambers."
-  },
-  {
-    "question": "Sound produced due to closure of semilunar valves",
-    "type": "fib",
-    "answer": ["Dup", "DUP"],
-    "explanation": "The 'dup' sound is the second heart sound produced when the aortic and pulmonary semilunar valves close."
-  },
-  {
-    "question": "Circulation of deoxygenated blood from right ventricle to left auricle",
-    "type": "fib",
-    "answer": ["Pulmonary circulation", "Pulmonary Circulation"],
-    "explanation": "Pulmonary circulation carries deoxygenated blood from the right ventricle to the lungs and returns oxygenated blood to the left atrium."
-  },
-  {
-    "question": "The largest sized leucocytes",
-    "type": "fib",
-    "answer": ["Monocytes"],
-    "explanation": "Monocytes are the largest type of white blood cells and can differentiate into macrophages and dendritic cells."
-  },
-  {
-    "question": "Mineral ion required for clotting of blood",
-    "type": "fib",
-    "answer": ["Calcium ion", "Calcium", "Ca2+", "Ca"],
-    "explanation": "Calcium ions (Ca²⁺) are essential for the blood clotting cascade and are required at multiple steps in coagulation."
-  },
-  {
-    "question": "Retention of excess of water in the body",
-    "type": "fib",
-    "answer": ["Oedema", "Edema"],
-    "explanation": "Oedema (or edema) is the accumulation of excess fluid in body tissues, causing swelling."
-  },
-  {
-    "question": "Place where ultrafiltration takes place",
-    "type": "fib",
-    "answer": ["Glomerulus"],
-    "explanation": "Ultrafiltration occurs in the glomerulus, a network of capillaries in the nephron where blood is filtered."
-  },
-  {
-    "question": "Notch present in the inner concavity of the kidneys",
-    "type": "fib",
-    "answer": ["Hilum", "Hilus"],
-    "explanation": "The hilum is the concave notch on the medial side of the kidney where blood vessels, nerves, and ureter enter and exit."
-  },
-  {
-    "question": "The structure which guards the opening of urinary bladder",
-    "type": "fib",
-    "answer": ["Sphincter muscle", "Sphincter", "Urethral sphincter"],
-    "explanation": "The sphincter muscles control the opening and closing of the urinary bladder, regulating urination."
-  },
-  {
-    "question": "The organ in humans where urea is produced",
-    "type": "fib",
-    "answer": ["Liver"],
-    "explanation": "The liver produces urea through the ornithine cycle by converting toxic ammonia into less toxic urea."
-  },
-  {
-    "question": "The pigment which gives colour to urine",
-    "type": "fib",
-    "answer": ["Urochrome"],
-    "explanation": "Urochrome is a yellow pigment that results from the breakdown of hemoglobin and gives urine its characteristic color."
-  },
-  {
-    "question": "Part of the uriniferous tubule where sodium ions and inorganic salts are absorbed from the nephric filtrate",
-    "type": "fib",
-    "answer": ["PCT", "Proximal convoluted tubule", "Proximal Convoluted Tubule"],
-    "explanation": "The proximal convoluted tubule (PCT) is responsible for reabsorbing about 65% of filtered sodium, water, and other nutrients."
-  },
-  {
-    "question": "Hormone responsible for urine output regulation",
-    "type": "fib",
-    "answer": ["Vasopressin", "ADH", "Anti-diuretic hormone", "Antidiuretic hormone"],
-    "explanation": "Vasopressin (ADH) is secreted by the pituitary gland and regulates water reabsorption in the kidneys, controlling urine volume."
-  },
-  {
-    "question": "Disease in which excess of urea is retained in the blood due to nephron failure",
-    "type": "fib",
-    "answer": ["Uraemia", "Uremia"],
-    "explanation": "Uraemia is a condition where urea and other nitrogenous waste products accumulate in the blood due to kidney failure."
-  },
-  {
-    "question": "Organs which maintain acid-base balance in the body",
-    "type": "fib",
-    "answer": ["Kidneys"],
-    "explanation": "The kidneys maintain acid-base balance by regulating the excretion of hydrogen ions and reabsorption of bicarbonate."
-  },
-  {
-    "question": "Structures which secrete testosterone",
-    "type": "fib",
-    "answer": ["Interstitial cells", "Leydig cells", "Leydig Cells", "Interstitial Cells"],
-    "explanation": "Interstitial cells (Leydig cells) are located in the testes and produce the male hormone testosterone."
-  },
-  {
-    "question": "White fibrous connective tissue layer encapsulating the testis",
-    "type": "fib",
-    "answer": ["Tunica albuginea", "Tunica Albuginea"],
-    "explanation": "The tunica albuginea is a dense white fibrous capsule that covers each testis and provides structural support."
-  },
-  {
-    "question": "A condition in which testis fail to descend and hence, degenerate",
-    "type": "fib",
-    "answer": ["Cryptorchidism"],
-    "explanation": "Cryptorchidism is the failure of one or both testes to descend into the scrotum, which can lead to infertility if untreated."
-  },
-  {
-    "question": "Gland which secretes a milky alkaline fluid which increases the motility of sperms",
-    "type": "fib",
-    "answer": ["Prostate gland", "Prostate", "Prostate Gland"],
-    "explanation": "The prostate gland secretes a milky, slightly alkaline fluid that neutralizes acidic conditions and enhances sperm motility."
-  },
-  {
-    "question": "Structure present behind the narrow lower side of urinary bladder one on either side",
-    "type": "fib",
-    "answer": ["Seminal vesicle", "Seminal Vesicle", "Seminal vesicles"],
-    "explanation": "Seminal vesicles are paired glands located behind the bladder that secrete fluid rich in fructose for sperm energy."
-  },
-  {
-    "question": "A condition in which penile erection fails to take place during the time of copulation",
-    "type": "fib",
-    "answer": ["Impotency", "Impotence", "Erectile dysfunction"],
-    "explanation": "Impotency (erectile dysfunction) is the inability to achieve or maintain an erection sufficient for sexual intercourse."
-  },
-  {
-    "question": "Enzyme secreted by acrosome of human sperm",
-    "type": "fib",
-    "answer": ["Hyaluronidase"],
-    "explanation": "Hyaluronidase is an enzyme released from the acrosome that helps sperm penetrate the zona pellucida of the egg."
-  },
-  {
-    "question": "The structure through which each ovary is attached with the uterus",
-    "type": "fib",
-    "answer": ["Ovarian ligament", "Ovarian Ligament"],
-    "explanation": "The ovarian ligament is a fibrous ligament that connects the ovary to the lateral surface of the uterus."
-  },
-  {
-    "question": "The process of rupture of graafian follicle releasing the egg",
-    "type": "fib",
-    "answer": ["Ovulation"],
-    "explanation": "Ovulation is the release of a mature egg from the Graafian follicle in the ovary, typically occurring mid-menstrual cycle."
-  },
-  {
-    "question": "Hormone secreted by corpus luteum",
-    "type": "fib",
-    "answer": ["Progesterone"],
-    "explanation": "The corpus luteum secretes progesterone, which prepares and maintains the uterine lining for potential pregnancy."
-  },
-  {
-    "question": "The inner lining of the uterus",
-    "type": "fib",
-    "answer": ["Endometrium"],
-    "explanation": "The endometrium is the inner mucous membrane lining of the uterus that thickens during the menstrual cycle."
-  },
-  {
-    "question": "Female external genitalia",
-    "type": "fib",
-    "answer": ["Vulva"],
-    "explanation": "The vulva refers to the external female genitalia, including the labia, clitoris, and vaginal opening."
-  },
-  {
-    "question": "Grounded substance bounded by oolemma",
-    "type": "fib",
-    "answer": ["Ooplasm"],
-    "explanation": "Ooplasm is the cytoplasm of an egg cell (ovum), enclosed by the plasma membrane called oolemma."
-  },
-  {
-    "question": "Attainment of sexual maturity",
-    "type": "fib",
-    "answer": ["Puberty"],
-    "explanation": "Puberty is the period during which adolescents reach sexual maturity and become capable of reproduction."
-  },
-  {
-    "question": "Onset of menstruation in a young woman",
-    "type": "fib",
-    "answer": ["Menarche"],
-    "explanation": "Menarche is the first occurrence of menstruation, marking the beginning of reproductive capability in females."
-  },
-  {
-    "question": "Fusion of male and female pronuclei",
-    "type": "fib",
-    "answer": ["Amphimixis"],
-    "explanation": "Amphimixis is the fusion of male and female pronuclei during fertilization, forming a diploid zygote."
-  },
-  {
-    "question": "Outer layer of blastocyst",
-    "type": "fib",
-    "answer": ["Trophoblast"],
-    "explanation": "The trophoblast is the outer cell layer of the blastocyst that forms the placenta and embryonic membranes."
-  },
-  {
-    "question": "Structure which connects the foetus and uterine wall of the mother through placenta",
-    "type": "fib",
-    "answer": ["Umbilical cord", "Umbilical Cord"],
-    "explanation": "The umbilical cord contains blood vessels that connect the fetus to the placenta, providing nutrients and oxygen."
-  },
-  {
-    "question": "Developing organism in a fertilised egg",
-    "type": "fib",
-    "answer": ["Embryo"],
-    "explanation": "An embryo is the early stage of development from fertilization through the first 8 weeks of pregnancy."
-  },
-  {
-    "question": "Hormone which helps in swift childbirth",
-    "type": "fib",
-    "answer": ["Oxytocin"],
-    "explanation": "Oxytocin stimulates uterine contractions during labor and helps in milk ejection during breastfeeding."
-  },
-  {
-    "question": "Outermost embryonic membrane",
-    "type": "fib",
-    "answer": ["Chorion"],
-    "explanation": "The chorion is the outermost fetal membrane that contributes to the formation of the placenta."
-  },
-  {
-    "question": "Twins produced from 1 zygote",
-    "type": "fib",
-    "answer": ["Identical twins", "Monozygotic twins", "Identical Twins"],
-    "explanation": "Identical (monozygotic) twins develop from a single fertilized egg that splits into two embryos."
-  },
-  {
-    "question": "Partially attached twins",
-    "type": "fib",
-    "answer": ["Siamese twins", "Conjoined twins", "Siamese Twins"],
-    "explanation": "Siamese (conjoined) twins are identical twins whose bodies remain physically connected after birth."
-  },
-  {
-    "question": "Granule-like substance at the head of the sperm",
-    "type": "fib",
-    "answer": ["Acrosome"],
-    "explanation": "The acrosome is a cap-like structure containing enzymes that help the sperm penetrate the egg during fertilization."
-  },
-  {
-    "question": "Complete cessation of menstrual cycle",
-    "type": "fib",
-    "answer": ["Menopause"],
-    "explanation": "Menopause is the permanent cessation of menstruation, typically occurring between ages 45-55."
-  },
-  {
-    "question": "The exact site of fertilisation",
-    "type": "fib",
-    "answer": ["Ampulla", "Ampulla of fallopian tube", "Fallopian tube"],
-    "explanation": "Fertilization typically occurs in the ampulla, the widest section of the fallopian tube."
-  },
-  {
+    {
+        "question": "The blood vessel which supplies oxygenated blood to kidneys",
+        "type": "fib",
+        "answer": [
+            "Renal Artery",
+            "Renal artery"
+        ],
+        "explanation": "The renal artery branches from the abdominal aorta and carries oxygenated blood to the kidneys for filtration."
+    },
+    {
+        "question": "Structure which guards the opening of posterior vena cava",
+        "type": "fib",
+        "answer": [
+            "Eustachius valve",
+            "Eustachian valve"
+        ],
+        "explanation": "The Eustachian valve is a remnant valve that guards the opening of the inferior (posterior) vena cava into the right atrium."
+    },
+    {
+        "question": "Muscular like projection arising from the ventricular wall",
+        "type": "fib",
+        "answer": [
+            "Chordae Tendinae",
+            "Chordae tendinae"
+        ],
+        "explanation": "Chordae tendinae are tendon-like cords that connect the papillary muscles to the tricuspid and mitral valves in the heart."
+    },
+    {
+        "question": "The chamber of heart having thickest walls",
+        "type": "fib",
+        "answer": [
+            "Left ventricle",
+            "Left Ventricle"
+        ],
+        "explanation": "The left ventricle has the thickest walls as it needs to pump blood throughout the entire body with high pressure."
+    },
+    {
+        "question": "Contracted phase of heart",
+        "type": "fib",
+        "answer": [
+            "Systole"
+        ],
+        "explanation": "Systole is the phase of the cardiac cycle when the heart muscle contracts and pumps blood from the chambers."
+    },
+    {
+        "question": "Sound produced due to closure of semilunar valves",
+        "type": "fib",
+        "answer": [
+            "Dup",
+            "DUP"
+        ],
+        "explanation": "The 'dup' sound is the second heart sound produced when the aortic and pulmonary semilunar valves close."
+    },
+    {
+        "question": "Circulation of deoxygenated blood from right ventricle to left auricle",
+        "type": "fib",
+        "answer": [
+            "Pulmonary circulation",
+            "Pulmonary Circulation"
+        ],
+        "explanation": "Pulmonary circulation carries deoxygenated blood from the right ventricle to the lungs and returns oxygenated blood to the left atrium."
+    },
+    {
+        "question": "The largest sized leucocytes",
+        "type": "fib",
+        "answer": [
+            "Monocytes"
+        ],
+        "explanation": "Monocytes are the largest type of white blood cells and can differentiate into macrophages and dendritic cells."
+    },
+    {
+        "question": "Mineral ion required for clotting of blood",
+        "type": "fib",
+        "answer": [
+            "Calcium ion",
+            "Calcium",
+            "Ca2+",
+            "Ca"
+        ],
+        "explanation": "Calcium ions (Ca²⁺) are essential for the blood clotting cascade and are required at multiple steps in coagulation."
+    },
+    {
+        "question": "Retention of excess of water in the body",
+        "type": "fib",
+        "answer": [
+            "Oedema",
+            "Edema"
+        ],
+        "explanation": "Oedema (or edema) is the accumulation of excess fluid in body tissues, causing swelling."
+    },
+    {
+        "question": "Place where ultrafiltration takes place",
+        "type": "fib",
+        "answer": [
+            "Glomerulus"
+        ],
+        "explanation": "Ultrafiltration occurs in the glomerulus, a network of capillaries in the nephron where blood is filtered."
+    },
+    {
+        "question": "Notch present in the inner concavity of the kidneys",
+        "type": "fib",
+        "answer": [
+            "Hilum",
+            "Hilus"
+        ],
+        "explanation": "The hilum is the concave notch on the medial side of the kidney where blood vessels, nerves, and ureter enter and exit."
+    },
+    {
+        "question": "The structure which guards the opening of urinary bladder",
+        "type": "fib",
+        "answer": [
+            "Sphincter muscle",
+            "Sphincter",
+            "Urethral sphincter"
+        ],
+        "explanation": "The sphincter muscles control the opening and closing of the urinary bladder, regulating urination."
+    },
+    {
+        "question": "The organ in humans where urea is produced",
+        "type": "fib",
+        "answer": [
+            "Liver"
+        ],
+        "explanation": "The liver produces urea through the ornithine cycle by converting toxic ammonia into less toxic urea."
+    },
+    {
+        "question": "The pigment which gives colour to urine",
+        "type": "fib",
+        "answer": [
+            "Urochrome"
+        ],
+        "explanation": "Urochrome is a yellow pigment that results from the breakdown of hemoglobin and gives urine its characteristic color."
+    },
+    {
+        "question": "Part of the uriniferous tubule where sodium ions and inorganic salts are absorbed from the nephric filtrate",
+        "type": "fib",
+        "answer": [
+            "PCT",
+            "Proximal convoluted tubule",
+            "Proximal Convoluted Tubule"
+        ],
+        "explanation": "The proximal convoluted tubule (PCT) is responsible for reabsorbing about 65% of filtered sodium, water, and other nutrients."
+    },
+    {
+        "question": "Hormone responsible for urine output regulation",
+        "type": "fib",
+        "answer": [
+            "Vasopressin",
+            "ADH",
+            "Anti-diuretic hormone",
+            "Antidiuretic hormone"
+        ],
+        "explanation": "Vasopressin (ADH) is secreted by the pituitary gland and regulates water reabsorption in the kidneys, controlling urine volume."
+    },
+    {
+        "question": "Disease in which excess of urea is retained in the blood due to nephron failure",
+        "type": "fib",
+        "answer": [
+            "Uraemia",
+            "Uremia"
+        ],
+        "explanation": "Uraemia is a condition where urea and other nitrogenous waste products accumulate in the blood due to kidney failure."
+    },
+    {
+        "question": "Organs which maintain acid-base balance in the body",
+        "type": "fib",
+        "answer": [
+            "Kidneys"
+        ],
+        "explanation": "The kidneys maintain acid-base balance by regulating the excretion of hydrogen ions and reabsorption of bicarbonate."
+    },
+    {
+        "question": "Structures which secrete testosterone",
+        "type": "fib",
+        "answer": [
+            "Interstitial cells",
+            "Leydig cells",
+            "Leydig Cells",
+            "Interstitial Cells"
+        ],
+        "explanation": "Interstitial cells (Leydig cells) are located in the testes and produce the male hormone testosterone."
+    },
+    {
+        "question": "White fibrous connective tissue layer encapsulating the testis",
+        "type": "fib",
+        "answer": [
+            "Tunica albuginea",
+            "Tunica Albuginea"
+        ],
+        "explanation": "The tunica albuginea is a dense white fibrous capsule that covers each testis and provides structural support."
+    },
+    {
+        "question": "A condition in which testis fail to descend and hence, degenerate",
+        "type": "fib",
+        "answer": [
+            "Cryptorchidism"
+        ],
+        "explanation": "Cryptorchidism is the failure of one or both testes to descend into the scrotum, which can lead to infertility if untreated."
+    },
+    {
+        "question": "Gland which secretes a milky alkaline fluid which increases the motility of sperms",
+        "type": "fib",
+        "answer": [
+            "Prostate gland",
+            "Prostate",
+            "Prostate Gland"
+        ],
+        "explanation": "The prostate gland secretes a milky, slightly alkaline fluid that neutralizes acidic conditions and enhances sperm motility."
+    },
+    {
+        "question": "Structure present behind the narrow lower side of urinary bladder one on either side",
+        "type": "fib",
+        "answer": [
+            "Seminal vesicle",
+            "Seminal Vesicle",
+            "Seminal vesicles"
+        ],
+        "explanation": "Seminal vesicles are paired glands located behind the bladder that secrete fluid rich in fructose for sperm energy."
+    },
+    {
+        "question": "A condition in which penile erection fails to take place during the time of copulation",
+        "type": "fib",
+        "answer": [
+            "Impotency",
+            "Impotence",
+            "Erectile dysfunction"
+        ],
+        "explanation": "Impotency (erectile dysfunction) is the inability to achieve or maintain an erection sufficient for sexual intercourse."
+    },
+    {
+        "question": "Enzyme secreted by acrosome of human sperm",
+        "type": "fib",
+        "answer": [
+            "Hyaluronidase"
+        ],
+        "explanation": "Hyaluronidase is an enzyme released from the acrosome that helps sperm penetrate the zona pellucida of the egg."
+    },
+    {
+        "question": "The structure through which each ovary is attached with the uterus",
+        "type": "fib",
+        "answer": [
+            "Ovarian ligament",
+            "Ovarian Ligament"
+        ],
+        "explanation": "The ovarian ligament is a fibrous ligament that connects the ovary to the lateral surface of the uterus."
+    },
+    {
+        "question": "The process of rupture of graafian follicle releasing the egg",
+        "type": "fib",
+        "answer": [
+            "Ovulation"
+        ],
+        "explanation": "Ovulation is the release of a mature egg from the Graafian follicle in the ovary, typically occurring mid-menstrual cycle."
+    },
+    {
+        "question": "Hormone secreted by corpus luteum",
+        "type": "fib",
+        "answer": [
+            "Progesterone"
+        ],
+        "explanation": "The corpus luteum secretes progesterone, which prepares and maintains the uterine lining for potential pregnancy."
+    },
+    {
+        "question": "The inner lining of the uterus",
+        "type": "fib",
+        "answer": [
+            "Endometrium"
+        ],
+        "explanation": "The endometrium is the inner mucous membrane lining of the uterus that thickens during the menstrual cycle."
+    },
+    {
+        "question": "Female external genitalia",
+        "type": "fib",
+        "answer": [
+            "Vulva"
+        ],
+        "explanation": "The vulva refers to the external female genitalia, including the labia, clitoris, and vaginal opening."
+    },
+    {
+        "question": "Grounded substance bounded by oolemma",
+        "type": "fib",
+        "answer": [
+            "Ooplasm"
+        ],
+        "explanation": "Ooplasm is the cytoplasm of an egg cell (ovum), enclosed by the plasma membrane called oolemma."
+    },
+    {
+        "question": "Attainment of sexual maturity",
+        "type": "fib",
+        "answer": [
+            "Puberty"
+        ],
+        "explanation": "Puberty is the period during which adolescents reach sexual maturity and become capable of reproduction."
+    },
+    {
+        "question": "Onset of menstruation in a young woman",
+        "type": "fib",
+        "answer": [
+            "Menarche"
+        ],
+        "explanation": "Menarche is the first occurrence of menstruation, marking the beginning of reproductive capability in females."
+    },
+    {
+        "question": "Fusion of male and female pronuclei",
+        "type": "fib",
+        "answer": [
+            "Amphimixis"
+        ],
+        "explanation": "Amphimixis is the fusion of male and female pronuclei during fertilization, forming a diploid zygote."
+    },
+    {
+        "question": "Outer layer of blastocyst",
+        "type": "fib",
+        "answer": [
+            "Trophoblast"
+        ],
+        "explanation": "The trophoblast is the outer cell layer of the blastocyst that forms the placenta and embryonic membranes."
+    },
+    {
+        "question": "Structure which connects the foetus and uterine wall of the mother through placenta",
+        "type": "fib",
+        "answer": [
+            "Umbilical cord",
+            "Umbilical Cord"
+        ],
+        "explanation": "The umbilical cord contains blood vessels that connect the fetus to the placenta, providing nutrients and oxygen."
+    },
+    {
+        "question": "Developing organism in a fertilised egg",
+        "type": "fib",
+        "answer": [
+            "Embryo"
+        ],
+        "explanation": "An embryo is the early stage of development from fertilization through the first 8 weeks of pregnancy."
+    },
+    {
+        "question": "Hormone which helps in swift childbirth",
+        "type": "fib",
+        "answer": [
+            "Oxytocin"
+        ],
+        "explanation": "Oxytocin stimulates uterine contractions during labor and helps in milk ejection during breastfeeding."
+    },
+    {
+        "question": "Outermost embryonic membrane",
+        "type": "fib",
+        "answer": [
+            "Chorion"
+        ],
+        "explanation": "The chorion is the outermost fetal membrane that contributes to the formation of the placenta."
+    },
+    {
+        "question": "Twins produced from 1 zygote",
+        "type": "fib",
+        "answer": [
+            "Identical twins",
+            "Monozygotic twins",
+            "Identical Twins"
+        ],
+        "explanation": "Identical (monozygotic) twins develop from a single fertilized egg that splits into two embryos."
+    },
+    {
+        "question": "Partially attached twins",
+        "type": "fib",
+        "answer": [
+            "Siamese twins",
+            "Conjoined twins",
+            "Siamese Twins"
+        ],
+        "explanation": "Siamese (conjoined) twins are identical twins whose bodies remain physically connected after birth."
+    },
+    {
+        "question": "Granule-like substance at the head of the sperm",
+        "type": "fib",
+        "answer": [
+            "Acrosome"
+        ],
+        "explanation": "The acrosome is a cap-like structure containing enzymes that help the sperm penetrate the egg during fertilization."
+    },
+    {
+        "question": "Complete cessation of menstrual cycle",
+        "type": "fib",
+        "answer": [
+            "Menopause"
+        ],
+        "explanation": "Menopause is the permanent cessation of menstruation, typically occurring between ages 45-55."
+    },
+    {
+        "question": "The exact site of fertilisation",
+        "type": "fib",
+        "answer": [
+            "Ampulla",
+            "Ampulla of fallopian tube",
+            "Fallopian tube"
+        ],
+        "explanation": "Fertilization typically occurs in the ampulla, the widest section of the fallopian tube."
+    },
+    {
         "question": "The primary reproductive organ in human males is:",
         "options": [
             "Penis",
@@ -519,7 +646,7 @@
             "35 days",
             "40 days"
         ],
-        "answer": 1,
+        "answer": 1
     },
     {
         "question": "If fertilization does not occur, the endometrium sheds causing:",
