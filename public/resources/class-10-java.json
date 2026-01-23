@@ -1065,12 +1065,12 @@
 		"answer": 2
 	},
 	{
-		"question": "What will be the output?\n```java\nint x = 5;\nSystem.out.println(x++ + ++x);\n```",
+		"question": "What will be the output?\n```java\nint x = 5;\nSystem.out.println(x++ / ++x);\n```",
 		"options": [
-			"11",
+			"1",
+			"0",
 			"12",
-			"13",
-			"10"
+			"0.7142857143"
 		],
 		"answer": 1
 	},
@@ -1105,12 +1105,12 @@
 		"answer": 3
 	},
 	{
-		"question": "Which loop always executes at least once?",
+		"question": "Which loop can work with only 1 parameter?",
 		"options": [
 			"for",
 			"while",
-			"do-while",
-			"enhanced for"
+			"Both a and b",
+			"None"
 		],
 		"answer": 2
 	},
