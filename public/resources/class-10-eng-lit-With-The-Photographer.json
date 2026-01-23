@@ -1,482 +1,1102 @@
 [
   {
     "question": "Martin is afraid of:",
-    "options": ["Heights", "Darkness", "The elevator", "Strangers"],
+    "options": [
+      "Heights",
+      "Darkness",
+      "The elevator",
+      "Strangers"
+    ],
     "answer": 2,
     "explanation": "Martin's primary fear throughout the story is the elevator, which becomes a source of psychological terror for him."
   },
   {
     "question": "Martin lives on the:",
-    "options": ["Sixth floor", "Tenth floor", "Twelfth floor", "Fourteenth floor"],
+    "options": [
+      "Sixth floor",
+      "Tenth floor",
+      "Twelfth floor",
+      "Fourteenth floor"
+    ],
     "answer": 2,
     "explanation": "Martin lives on the twelfth floor, which forces him to regularly confront his fear of the elevator."
   },
   {
     "question": "The elevator is described as:",
-    "options": ["Spacious and bright", "Small and claustrophobic", "Fast and smooth", "Decorative and modern"],
+    "options": [
+      "Spacious and bright",
+      "Small and claustrophobic",
+      "Fast and smooth",
+      "Decorative and modern"
+    ],
     "answer": 1,
     "explanation": "The elevator's small, claustrophobic nature intensifies Martin's fear and sense of confinement."
   },
   {
     "question": "Martin's father is physically:",
-    "options": ["Thin and weak", "Short and nervous", "Large and strong", "Small and quiet"],
+    "options": [
+      "Thin and weak",
+      "Short and nervous",
+      "Large and strong",
+      "Small and quiet"
+    ],
     "answer": 2,
     "explanation": "Martin's father is portrayed as large and strong, contrasting sharply with Martin's small, fearful nature."
   },
   {
     "question": "Martin is physically:",
-    "options": ["Tall and muscular", "Small and thin", "Heavy and strong", "Athletic and confident"],
+    "options": [
+      "Tall and muscular",
+      "Small and thin",
+      "Heavy and strong",
+      "Athletic and confident"
+    ],
     "answer": 1,
     "explanation": "Martin is described as small and thin, which contributes to his feelings of vulnerability and powerlessness."
   },
   {
     "question": "Martin's father believes fear is:",
-    "options": ["Natural and healthy", "A sign of weakness", "A serious illness", "A mystery"],
+    "options": [
+      "Natural and healthy",
+      "A sign of weakness",
+      "A serious illness",
+      "A mystery"
+    ],
     "answer": 1,
     "explanation": "The father views fear as weakness rather than a natural human emotion that needs understanding and empathy."
   },
   {
     "question": "The fat lady usually enters on the:",
-    "options": ["First floor", "Sixth floor", "Twelfth floor", "Fourteenth floor"],
+    "options": [
+      "First floor",
+      "Sixth floor",
+      "Twelfth floor",
+      "Fourteenth floor"
+    ],
     "answer": 1,
     "explanation": "The fat lady first gets on the elevator at the sixth floor, marking the beginning of Martin's intensified fear."
   },
   {
     "question": "The fat lady frightens Martin mainly because she:",
-    "options": ["Talks loudly", "Laughs at him", "Stares at him silently", "Pushes him"],
+    "options": [
+      "Talks loudly",
+      "Laughs at him",
+      "Stares at him silently",
+      "Pushes him"
+    ],
     "answer": 2,
     "explanation": "The fat lady's silent, intense staring makes Martin extremely uncomfortable and frightened."
   },
   {
     "question": "Martin starts taking the stairs because:",
-    "options": ["He wants exercise", "The elevator breaks", "He wants to avoid the lady", "His father orders him"],
+    "options": [
+      "He wants exercise",
+      "The elevator breaks",
+      "He wants to avoid the lady",
+      "His father orders him"
+    ],
     "answer": 2,
     "explanation": "Martin starts taking the stairs to avoid encountering the fat lady in the elevator."
   },
   {
     "question": "The father's attitude toward Martin's fear is:",
-    "options": ["Sympathetic", "Dismissive", "Curious", "Fearful"],
+    "options": [
+      "Sympathetic",
+      "Dismissive",
+      "Curious",
+      "Fearful"
+    ],
     "answer": 1,
     "explanation": "The father dismisses Martin's fears as weakness and doesn't show emotional understanding or empathy."
   },
   {
     "question": "The genre of the story is:",
-    "options": ["Comedy", "Historical fiction", "Psychological suspense", "Romance"],
+    "options": [
+      "Comedy",
+      "Historical fiction",
+      "Psychological suspense",
+      "Romance"
+    ],
     "answer": 2,
     "explanation": "The story is a psychological suspense/thriller that builds tension and explores fear and paranoia."
   },
   {
     "question": "The elevator symbolizes:",
-    "options": ["Wealth", "Freedom", "Fear and confinement", "Success"],
+    "options": [
+      "Wealth",
+      "Freedom",
+      "Fear and confinement",
+      "Success"
+    ],
     "answer": 2,
     "explanation": "The elevator symbolizes Martin's fears and sense of confinement, both physical and psychological."
   },
   {
     "question": "Martin envies his father because his father:",
-    "options": ["Is rich", "Is fearless", "Is funny", "Is popular"],
+    "options": [
+      "Is rich",
+      "Is fearless",
+      "Is funny",
+      "Is popular"
+    ],
     "answer": 1,
     "explanation": "Martin envies his father's fearlessness and confidence, qualities he feels he lacks."
   },
   {
     "question": "The story is written in:",
-    "options": ["First person", "Third person", "Diary form", "Letter form"],
+    "options": [
+      "First person",
+      "Third person",
+      "Diary form",
+      "Letter form"
+    ],
     "answer": 1,
     "explanation": "The story is narrated in third person, allowing an objective view of Martin's fears and experiences."
   },
   {
     "question": "The building setting contributes mainly to:",
-    "options": ["Humor", "Romance", "Suspense", "Adventure"],
+    "options": [
+      "Humor",
+      "Romance",
+      "Suspense",
+      "Adventure"
+    ],
     "answer": 2,
     "explanation": "The claustrophobic building setting creates and enhances the suspenseful, tense atmosphere of the story."
   },
   {
     "question": "The repeated elevator rides create:",
-    "options": ["Comedy", "Suspense", "Excitement", "Relief"],
+    "options": [
+      "Comedy",
+      "Suspense",
+      "Excitement",
+      "Relief"
+    ],
     "answer": 1,
     "explanation": "Each elevator ride builds suspense as the reader anticipates another frightening encounter."
   },
   {
     "question": "The fat lady's smile is:",
-    "options": ["Friendly", "Motherly", "Unsettling", "Apologetic"],
+    "options": [
+      "Friendly",
+      "Motherly",
+      "Unsettling",
+      "Apologetic"
+    ],
     "answer": 2,
     "explanation": "The fat lady's smile is ambiguous and unsettling rather than warm or friendly."
   },
   {
     "question": "Martin feels inferior mainly because of his:",
-    "options": ["Age", "Size", "Intelligence", "Wealth"],
+    "options": [
+      "Age",
+      "Size",
+      "Intelligence",
+      "Wealth"
+    ],
     "answer": 1,
     "explanation": "Martin's small physical size contributes to his feelings of inferiority and vulnerability."
   },
   {
     "question": "The father represents:",
-    "options": ["Vulnerability", "Fear", "Authority and strength", "Mystery"],
+    "options": [
+      "Vulnerability",
+      "Fear",
+      "Authority and strength",
+      "Mystery"
+    ],
     "answer": 2,
     "explanation": "The father symbolizes authority and physical strength, contrasting with Martin's weakness."
   },
   {
     "question": "The mood of the story is:",
-    "options": ["Cheerful", "Calm", "Suspenseful", "Romantic"],
+    "options": [
+      "Cheerful",
+      "Calm",
+      "Suspenseful",
+      "Romantic"
+    ],
     "answer": 2,
     "explanation": "The story maintains a consistently suspenseful and tense mood throughout."
   },
   {
     "question": "Martin's fear is mostly:",
-    "options": ["Logical and proven", "Psychological", "Caused by injury", "Forced by others"],
+    "options": [
+      "Logical and proven",
+      "Psychological",
+      "Caused by injury",
+      "Forced by others"
+    ],
     "answer": 1,
     "explanation": "Martin's fear is primarily psychological, rooted in anxiety rather than any actual danger."
   },
   {
     "question": "The fat lady is described as:",
-    "options": ["Tiny", "Athletic", "Enormous", "Elegant"],
+    "options": [
+      "Tiny",
+      "Athletic",
+      "Enormous",
+      "Elegant"
+    ],
     "answer": 2,
     "explanation": "The fat lady is described as enormous, which makes her presence in the small elevator even more intimidating."
   },
   {
     "question": "The lady's silence makes her:",
-    "options": ["Funny", "Less important", "More frightening", "Kind"],
+    "options": [
+      "Funny",
+      "Less important",
+      "More frightening",
+      "Kind"
+    ],
     "answer": 2,
     "explanation": "The fat lady's ominous silence makes her more frightening than if she spoke or explained herself."
   },
   {
     "question": "The father compares fear to:",
-    "options": ["Strength", "Weakness", "Success", "Experience"],
+    "options": [
+      "Strength",
+      "Weakness",
+      "Success",
+      "Experience"
+    ],
     "answer": 1,
     "explanation": "The father dismisses fear as weakness rather than acknowledging it as a legitimate emotion."
   },
   {
     "question": "Martin's internal conflict is between:",
-    "options": ["School and home", "Courage and fear", "Rich and poor", "Truth and lies"],
+    "options": [
+      "School and home",
+      "Courage and fear",
+      "Rich and poor",
+      "Truth and lies"
+    ],
     "answer": 1,
     "explanation": "Martin's central struggle is between his overwhelming fear and his desire to be brave like his father."
   },
   {
     "question": "The climax occurs when the lady:",
-    "options": ["Talks to Martin", "Smiles", "Presses the 14th floor button", "Leaves the elevator"],
+    "options": [
+      "Talks to Martin",
+      "Smiles",
+      "Presses the 14th floor button",
+      "Leaves the elevator"
+    ],
     "answer": 2,
     "explanation": "The story reaches its climax when the fat lady presses the button for the non-existent fourteenth floor."
   },
   {
     "question": "The 14th floor is important because:",
-    "options": ["It is Martin's floor", "It does not exist", "It is the basement", "It is the father's office"],
+    "options": [
+      "It is Martin's floor",
+      "It does not exist",
+      "It is the basement",
+      "It is the father's office"
+    ],
     "answer": 1,
     "explanation": "The fourteenth floor doesn't exist in the building, adding a supernatural and mysterious element to the story."
   },
   {
     "question": "The ending of the story is:",
-    "options": ["Clearly explained", "Humorous", "Open and mysterious", "Happy"],
+    "options": [
+      "Clearly explained",
+      "Humorous",
+      "Open and mysterious",
+      "Happy"
+    ],
     "answer": 2,
     "explanation": "The story has an open ending that leaves the reader in suspense about what happens to Martin."
   },
   {
     "question": "Martin feels trapped because of:",
-    "options": ["School", "His father", "The elevator and his fear", "His friends"],
+    "options": [
+      "School",
+      "His father",
+      "The elevator and his fear",
+      "His friends"
+    ],
     "answer": 2,
     "explanation": "Martin feels trapped by both the physical elevator and his overwhelming psychological fear of it."
   },
   {
     "question": "The lady appears repeatedly to:",
-    "options": ["Help Martin", "Increase suspense", "Provide humor", "End the story"],
+    "options": [
+      "Help Martin",
+      "Increase suspense",
+      "Provide humor",
+      "End the story"
+    ],
     "answer": 1,
     "explanation": "The fat lady's repeated appearances escalate tension and suspense throughout the story."
   },
   {
     "question": "The father fails to understand:",
-    "options": ["The building", "Martin's fear", "The elevator", "The lady"],
+    "options": [
+      "The building",
+      "Martin's fear",
+      "The elevator",
+      "The lady"
+    ],
     "answer": 1,
     "explanation": "The father lacks emotional understanding and fails to comprehend the depth of Martin's legitimate fears."
   },
   {
     "question": "Martin avoids eye contact because he:",
-    "options": ["Is angry", "Is embarrassed and afraid", "Is bored", "Is distracted"],
+    "options": [
+      "Is angry",
+      "Is embarrassed and afraid",
+      "Is bored",
+      "Is distracted"
+    ],
     "answer": 1,
     "explanation": "Martin's avoidance of eye contact reveals his embarrassment about his fear and his discomfort."
   },
   {
     "question": "The elevator's 'close, dark feeling' suggests:",
-    "options": ["Comfort", "Warmth", "Claustrophobia", "Beauty"],
+    "options": [
+      "Comfort",
+      "Warmth",
+      "Claustrophobia",
+      "Beauty"
+    ],
     "answer": 2,
     "explanation": "The description of the close, dark elevator creates a strong sense of claustrophobia and confinement."
   },
   {
     "question": "The story mainly explores:",
-    "options": ["Friendship", "War", "Fear", "Romance"],
+    "options": [
+      "Friendship",
+      "War",
+      "Fear",
+      "Romance"
+    ],
     "answer": 2,
     "explanation": "The central theme of the story is fear and how it affects individuals psychologically."
   },
   {
     "question": "Martin's weakness is emphasized through:",
-    "options": ["Dialogue", "Setting", "Physical contrast", "Humor"],
+    "options": [
+      "Dialogue",
+      "Setting",
+      "Physical contrast",
+      "Humor"
+    ],
     "answer": 2,
     "explanation": "The physical contrast between Martin's small frame and his father's large size emphasizes Martin's weakness."
   },
   {
     "question": "The father believes courage means:",
-    "options": ["Ignoring fear", "Running away", "Talking about fear", "Avoiding problems"],
+    "options": [
+      "Ignoring fear",
+      "Running away",
+      "Talking about fear",
+      "Avoiding problems"
+    ],
     "answer": 0,
     "explanation": "The father thinks courage means ignoring or dismissing fear rather than understanding and addressing it."
   },
   {
     "question": "The tension increases because:",
-    "options": ["The elevator breaks", "The lady behaves strangely", "The father moves out", "Martin shouts"],
+    "options": [
+      "The elevator breaks",
+      "The lady behaves strangely",
+      "The father moves out",
+      "Martin shouts"
+    ],
     "answer": 1,
     "explanation": "Tension builds as the fat lady's strange, silent behavior becomes increasingly unsettling and mysterious."
   },
   {
     "question": "The fat lady may symbolize:",
-    "options": ["Wealth", "Safety", "Martin's growing fear", "Friendship"],
+    "options": [
+      "Wealth",
+      "Safety",
+      "Martin's growing fear",
+      "Friendship"
+    ],
     "answer": 2,
     "explanation": "The fat lady represents Martin's fears growing larger, more threatening, and more inescapable over time."
   },
   {
     "question": "The story ends without:",
-    "options": ["Suspense", "Explanation", "Conflict", "Symbolism"],
+    "options": [
+      "Suspense",
+      "Explanation",
+      "Conflict",
+      "Symbolism"
+    ],
     "answer": 1,
     "explanation": "The story ends without explanation, leaving readers to wonder what happened to Martin on the fourteenth floor."
   },
   {
     "question": "The father's physical dominance contrasts with Martin's:",
-    "options": ["Intelligence", "Strength", "Confidence", "Size"],
+    "options": [
+      "Intelligence",
+      "Strength",
+      "Confidence",
+      "Size"
+    ],
     "answer": 3,
     "explanation": "The contrast between the father's large size and Martin's small size highlights their differences."
   },
   {
     "question": "Martin takes the stairs mainly because:",
-    "options": ["He enjoys exercise", "He wants independence", "He fears meeting the lady", "He is punished"],
+    "options": [
+      "He enjoys exercise",
+      "He wants independence",
+      "He fears meeting the lady",
+      "He is punished"
+    ],
     "answer": 2,
     "explanation": "Martin chooses the stairs specifically to avoid encountering the frightening fat lady in the elevator."
   },
   {
     "question": "The atmosphere inside the elevator is:",
-    "options": ["Bright", "Spacious", "Claustrophobic", "Comfortable"],
+    "options": [
+      "Bright",
+      "Spacious",
+      "Claustrophobic",
+      "Comfortable"
+    ],
     "answer": 2,
     "explanation": "The elevator's atmosphere is claustrophobic, intensifying Martin's fear and sense of being trapped."
   },
   {
     "question": "The father's personality can be described as:",
-    "options": ["Emotionally sensitive", "Overprotective", "Practical but insensitive", "Fearful"],
+    "options": [
+      "Emotionally sensitive",
+      "Overprotective",
+      "Practical but insensitive",
+      "Fearful"
+    ],
     "answer": 2,
     "explanation": "The father is practical in his advice but insensitive to Martin's emotional needs and legitimate fears."
   },
   {
     "question": "The lady's repeated appearances create:",
-    "options": ["Comedy", "Predictability", "Psychological tension", "Relief"],
+    "options": [
+      "Comedy",
+      "Predictability",
+      "Psychological tension",
+      "Relief"
+    ],
     "answer": 2,
     "explanation": "Each appearance of the fat lady increases the psychological tension and Martin's paranoia."
   },
   {
     "question": "Martin feels powerless mainly because:",
-    "options": ["He is younger", "He is smaller", "He is poor", "He is alone"],
+    "options": [
+      "He is younger",
+      "He is smaller",
+      "He is poor",
+      "He is alone"
+    ],
     "answer": 1,
     "explanation": "Martin's small physical size is the main reason he feels powerless and vulnerable."
   },
   {
     "question": "The story's ending suggests:",
-    "options": ["Martin conquers fear", "The father saves him", "Fear may have a supernatural dimension", "The lady disappears"],
+    "options": [
+      "Martin conquers fear",
+      "The father saves him",
+      "Fear may have a supernatural dimension",
+      "The lady disappears"
+    ],
     "answer": 2,
     "explanation": "The impossible fourteenth floor suggests that fear may transcend the rational and have supernatural dimensions."
   },
   {
     "question": "The building setting reflects:",
-    "options": ["Wealth", "Comfort", "Martin's mental state", "Safety"],
+    "options": [
+      "Wealth",
+      "Comfort",
+      "Martin's mental state",
+      "Safety"
+    ],
     "answer": 2,
     "explanation": "The claustrophobic building setting mirrors and reflects Martin's trapped, anxious mental state."
   },
   {
     "question": "The elevator acts as a:",
-    "options": ["Safe space", "Symbolic trap", "Playground", "Classroom"],
+    "options": [
+      "Safe space",
+      "Symbolic trap",
+      "Playground",
+      "Classroom"
+    ],
     "answer": 1,
     "explanation": "The elevator functions as a symbolic trap, representing Martin's psychological confinement and fear."
   },
   {
     "question": "The primary conflict is:",
-    "options": ["Man vs nature", "Martin vs his father", "Martin vs his fear", "Father vs lady"],
+    "options": [
+      "Man vs nature",
+      "Martin vs his father",
+      "Martin vs his fear",
+      "Father vs lady"
+    ],
     "answer": 2,
     "explanation": "The main conflict is Martin's internal struggle against his overwhelming fear and anxiety."
   },
   {
     "question": "The overall effect of the story is to leave the reader:",
-    "options": ["Relaxed", "Laughing", "Uneasy and thoughtful", "Inspired"],
+    "options": [
+      "Relaxed",
+      "Laughing",
+      "Uneasy and thoughtful",
+      "Inspired"
+    ],
     "answer": 2,
     "explanation": "The story's suspenseful mood and unresolved ending leave readers feeling uneasy and thoughtful about fear."
   },
   {
     "question": "Assertion: Martin's fear is largely psychological. Reason: No physical harm occurs in the elevator before the climax.",
-    "options": ["Both Assertion and Reason are true, and Reason is the correct explanation", "Both Assertion and Reason are true, but Reason is NOT the correct explanation", "Assertion is true, Reason is false", "Assertion is false, Reason is true"],
+    "options": [
+      "Both Assertion and Reason are true, and Reason is the correct explanation",
+      "Both Assertion and Reason are true, but Reason is NOT the correct explanation",
+      "Assertion is true, Reason is false",
+      "Assertion is false, Reason is true"
+    ],
     "answer": 0,
     "explanation": "Both statements are true. Martin's fear is psychological, and the reason correctly explains this - no actual physical harm has occurred."
   },
   {
     "question": "Assertion: The father represents emotional maturity. Reason: He understands and validates Martin's fear.",
-    "options": ["Both Assertion and Reason are true, and Reason is the correct explanation", "Both Assertion and Reason are true, but Reason is NOT the correct explanation", "Assertion is true, Reason is false", "Assertion is false, Reason is true"],
+    "options": [
+      "Both Assertion and Reason are true, and Reason is the correct explanation",
+      "Both Assertion and Reason are true, but Reason is NOT the correct explanation",
+      "Assertion is true, Reason is false",
+      "Assertion is false, Reason is true"
+    ],
     "answer": 2,
     "explanation": "The assertion is somewhat true, but the reason is false - he does NOT understand or validate Martin's fear; he dismisses it."
   },
   {
     "question": "Assertion: The elevator functions as a symbol of confinement. Reason: It is described as small, dark, and suffocating.",
-    "options": ["Both Assertion and Reason are true, and Reason is the correct explanation", "Both Assertion and Reason are true, but Reason is NOT the correct explanation", "Assertion is true, Reason is false", "Assertion is false, Reason is true"],
+    "options": [
+      "Both Assertion and Reason are true, and Reason is the correct explanation",
+      "Both Assertion and Reason are true, but Reason is NOT the correct explanation",
+      "Assertion is true, Reason is false",
+      "Assertion is false, Reason is true"
+    ],
     "answer": 0,
     "explanation": "Both are true, and the reason correctly explains the assertion. The physical description makes the elevator a symbol of confinement."
   },
   {
     "question": "Assertion: Martin envies his father. Reason: His father appears fearless and physically dominant.",
-    "options": ["Both Assertion and Reason are true, and Reason is the correct explanation", "Both Assertion and Reason are true, but Reason is NOT the correct explanation", "Assertion is true, Reason is false", "Assertion is false, Reason is true"],
+    "options": [
+      "Both Assertion and Reason are true, and Reason is the correct explanation",
+      "Both Assertion and Reason are true, but Reason is NOT the correct explanation",
+      "Assertion is true, Reason is false",
+      "Assertion is false, Reason is true"
+    ],
     "answer": 0,
     "explanation": "Both are true, and the reason explains the assertion. Martin envies his father precisely because of his fearlessness and dominance."
   },
   {
     "question": "Assertion: The fat lady is openly aggressive. Reason: She threatens Martin verbally.",
-    "options": ["Both Assertion and Reason are true, and Reason is the correct explanation", "Both Assertion and Reason are true, but Reason is NOT the correct explanation", "Assertion is true, Reason is false", "Assertion is false, Reason is true"],
+    "options": [
+      "Both Assertion and Reason are true, and Reason is the correct explanation",
+      "Both Assertion and Reason are true, but Reason is NOT the correct explanation",
+      "Assertion is true, Reason is false",
+      "Assertion is false, Reason is true"
+    ],
     "answer": 3,
     "explanation": "Both are false. The fat lady is NOT openly aggressive; she is silent. She does not threaten Martin verbally."
   },
   {
     "question": "Assertion: Suspense builds gradually in the story. Reason: The lady's repeated silent appearances intensify unease.",
-    "options": ["Both Assertion and Reason are true, and Reason is the correct explanation", "Both Assertion and Reason are true, but Reason is NOT the correct explanation", "Assertion is true, Reason is false", "Assertion is false, Reason is true"],
+    "options": [
+      "Both Assertion and Reason are true, and Reason is the correct explanation",
+      "Both Assertion and Reason are true, but Reason is NOT the correct explanation",
+      "Assertion is true, Reason is false",
+      "Assertion is false, Reason is true"
+    ],
     "answer": 0,
     "explanation": "Both are true, and the reason explains the assertion. Gradual suspense is built through the lady's repeated silent appearances."
   },
   {
     "question": "Assertion: The 14th floor introduces a supernatural element. Reason: It does not exist in the building directory.",
-    "options": ["Both Assertion and Reason are true, and Reason is the correct explanation", "Both Assertion and Reason are true, but Reason is NOT the correct explanation", "Assertion is true, Reason is false", "Assertion is false, Reason is true"],
+    "options": [
+      "Both Assertion and Reason are true, and Reason is the correct explanation",
+      "Both Assertion and Reason are true, but Reason is NOT the correct explanation",
+      "Assertion is true, Reason is false",
+      "Assertion is false, Reason is true"
+    ],
     "answer": 0,
     "explanation": "Both are true, and the reason explains the assertion. The supernatural element comes from the floor's non-existence."
   },
   {
     "question": "Assertion: Martin conquers his fear completely. Reason: He begins using the stairs.",
-    "options": ["Both Assertion and Reason are true, and Reason is the correct explanation", "Both Assertion and Reason are true, but Reason is NOT the correct explanation", "Assertion is true, Reason is false", "Assertion is false, Reason is true"],
+    "options": [
+      "Both Assertion and Reason are true, and Reason is the correct explanation",
+      "Both Assertion and Reason are true, but Reason is NOT the correct explanation",
+      "Assertion is true, Reason is false",
+      "Assertion is false, Reason is true"
+    ],
     "answer": 3,
     "explanation": "The assertion is false - Martin doesn't conquer his fear. The reason is true - he uses stairs, but this shows avoidance, not conquest."
   },
   {
     "question": "Assertion: The father equates fear with weakness. Reason: He believes courage means ignoring fear.",
-    "options": ["Both Assertion and Reason are true, and Reason is the correct explanation", "Both Assertion and Reason are true, but Reason is NOT the correct explanation", "Assertion is true, Reason is false", "Assertion is false, Reason is true"],
+    "options": [
+      "Both Assertion and Reason are true, and Reason is the correct explanation",
+      "Both Assertion and Reason are true, but Reason is NOT the correct explanation",
+      "Assertion is true, Reason is false",
+      "Assertion is false, Reason is true"
+    ],
     "answer": 0,
     "explanation": "Both are true, and the reason explains the assertion. The father views fear as weakness because he believes courage means ignoring fear."
   },
   {
     "question": "Assertion: Silence is used as a tool of tension. Reason: The lady speaks very little in the story.",
-    "options": ["Both Assertion and Reason are true, and Reason is the correct explanation", "Both Assertion and Reason are true, but Reason is NOT the correct explanation", "Assertion is true, Reason is false", "Assertion is false, Reason is true"],
+    "options": [
+      "Both Assertion and Reason are true, and Reason is the correct explanation",
+      "Both Assertion and Reason are true, but Reason is NOT the correct explanation",
+      "Assertion is true, Reason is false",
+      "Assertion is false, Reason is true"
+    ],
     "answer": 0,
     "explanation": "Both are true, and the reason explains the assertion. The tension is created precisely because the lady remains silent."
   },
   {
     "question": "Assertion: Physical size symbolizes power in the story. Reason: Larger characters dominate Martin psychologically.",
-    "options": ["Both Assertion and Reason are true, and Reason is the correct explanation", "Both Assertion and Reason are true, but Reason is NOT the correct explanation", "Assertion is true, Reason is false", "Assertion is false, Reason is true"],
+    "options": [
+      "Both Assertion and Reason are true, and Reason is the correct explanation",
+      "Both Assertion and Reason are true, but Reason is NOT the correct explanation",
+      "Assertion is true, Reason is false",
+      "Assertion is false, Reason is true"
+    ],
     "answer": 0,
     "explanation": "Both are true, and the reason explains the assertion. Physical size represents power because larger characters psychologically dominate Martin."
   },
   {
     "question": "Assertion: The story ends with clarity and resolution. Reason: The father explains the 14th floor logically.",
-    "options": ["Both Assertion and Reason are true, and Reason is the correct explanation", "Both Assertion and Reason are true, but Reason is NOT the correct explanation", "Assertion is true, Reason is false", "Assertion is false, Reason is true"],
+    "options": [
+      "Both Assertion and Reason are true, and Reason is the correct explanation",
+      "Both Assertion and Reason are true, but Reason is NOT the correct explanation",
+      "Assertion is true, Reason is false",
+      "Assertion is false, Reason is true"
+    ],
     "answer": 3,
     "explanation": "Both are false. The story ends with mystery and no resolution, and the father does not explain the 14th floor."
   },
   {
     "question": "Assertion: Martin's imagination intensifies his fear. Reason: He expects something terrible to happen.",
-    "options": ["Both Assertion and Reason are true, and Reason is the correct explanation", "Both Assertion and Reason are true, but Reason is NOT the correct explanation", "Assertion is true, Reason is false", "Assertion is false, Reason is true"],
+    "options": [
+      "Both Assertion and Reason are true, and Reason is the correct explanation",
+      "Both Assertion and Reason are true, but Reason is NOT the correct explanation",
+      "Assertion is true, Reason is false",
+      "Assertion is false, Reason is true"
+    ],
     "answer": 0,
     "explanation": "Both are true, and the reason explains the assertion. His expectation of something terrible happening intensifies his fear."
   },
   {
     "question": "Assertion: The father's strength resolves the conflict. Reason: He protects Martin in the final scene.",
-    "options": ["Both Assertion and Reason are true, and Reason is the correct explanation", "Both Assertion and Reason are true, but Reason is NOT the correct explanation", "Assertion is true, Reason is false", "Assertion is false, Reason is true"],
+    "options": [
+      "Both Assertion and Reason are true, and Reason is the correct explanation",
+      "Both Assertion and Reason are true, but Reason is NOT the correct explanation",
+      "Assertion is true, Reason is false",
+      "Assertion is false, Reason is true"
+    ],
     "answer": 3,
     "explanation": "Both are false. The father's strength does not resolve the conflict, and he does not protect Martin in the final scene."
   },
   {
     "question": "Assertion: The fat lady may represent Martin's internal fears. Reason: She appears whenever his anxiety peaks.",
-    "options": ["Both Assertion and Reason are true, and Reason is the correct explanation", "Both Assertion and Reason are true, but Reason is NOT the correct explanation", "Assertion is true, Reason is false", "Assertion is false, Reason is true"],
+    "options": [
+      "Both Assertion and Reason are true, and Reason is the correct explanation",
+      "Both Assertion and Reason are true, but Reason is NOT the correct explanation",
+      "Assertion is true, Reason is false",
+      "Assertion is false, Reason is true"
+    ],
     "answer": 0,
     "explanation": "Both are true, and the reason explains the assertion. Her appearances coincide with Martin's anxiety peaks, suggesting she represents his fears."
   },
   {
     "question": "Assertion: The story critiques rigid masculinity. Reason: The father dismisses emotional vulnerability.",
-    "options": ["Both Assertion and Reason are true, and Reason is the correct explanation", "Both Assertion and Reason are true, but Reason is NOT the correct explanation", "Assertion is true, Reason is false", "Assertion is false, Reason is true"],
+    "options": [
+      "Both Assertion and Reason are true, and Reason is the correct explanation",
+      "Both Assertion and Reason are true, but Reason is NOT the correct explanation",
+      "Assertion is true, Reason is false",
+      "Assertion is false, Reason is true"
+    ],
     "answer": 0,
     "explanation": "Both are true, and the reason explains the assertion. The critique of rigid masculinity is shown through the father's dismissal of vulnerability."
   },
   {
     "question": "Assertion: The elevator becomes more frightening over time. Reason: Its physical structure changes dramatically.",
-    "options": ["Both Assertion and Reason are true, and Reason is the correct explanation", "Both Assertion and Reason are true, but Reason is NOT the correct explanation", "Assertion is true, Reason is false", "Assertion is false, Reason is true"],
+    "options": [
+      "Both Assertion and Reason are true, and Reason is the correct explanation",
+      "Both Assertion and Reason are true, but Reason is NOT the correct explanation",
+      "Assertion is true, Reason is false",
+      "Assertion is false, Reason is true"
+    ],
     "answer": 2,
     "explanation": "The assertion is true - the elevator does become more frightening. But the reason is false - its structure doesn't change."
   },
   {
     "question": "Assertion: The mood of the story is consistently cheerful. Reason: The narrative uses humorous dialogue.",
-    "options": ["Both Assertion and Reason are true, and Reason is the correct explanation", "Both Assertion and Reason are true, but Reason is NOT the correct explanation", "Assertion is true, Reason is false", "Assertion is false, Reason is true"],
+    "options": [
+      "Both Assertion and Reason are true, and Reason is the correct explanation",
+      "Both Assertion and Reason are true, but Reason is NOT the correct explanation",
+      "Assertion is true, Reason is false",
+      "Assertion is false, Reason is true"
+    ],
     "answer": 3,
     "explanation": "Both are false. The mood is suspenseful, not cheerful, and the narrative does not use humorous dialogue."
   },
   {
     "question": "Assertion: The climax occurs when the 14th floor button is pressed. Reason: It introduces the impossible element.",
-    "options": ["Both Assertion and Reason are true, and Reason is the correct explanation", "Both Assertion and Reason are true, but Reason is NOT the correct explanation", "Assertion is true, Reason is false", "Assertion is false, Reason is true"],
+    "options": [
+      "Both Assertion and Reason are true, and Reason is the correct explanation",
+      "Both Assertion and Reason are true, but Reason is NOT the correct explanation",
+      "Assertion is true, Reason is false",
+      "Assertion is false, Reason is true"
+    ],
     "answer": 0,
     "explanation": "Both are true, and the reason explains the assertion. The climax is the 14th floor button press because it introduces impossibility."
   },
   {
     "question": "Assertion: Martin's fear is entirely irrational. Reason: There is no strange behaviour by the lady.",
-    "options": ["Both Assertion and Reason are true, and Reason is the correct explanation", "Both Assertion and Reason are true, but Reason is NOT the correct explanation", "Assertion is true, Reason is false", "Assertion is false, Reason is true"],
+    "options": [
+      "Both Assertion and Reason are true, and Reason is the correct explanation",
+      "Both Assertion and Reason are true, but Reason is NOT the correct explanation",
+      "Assertion is true, Reason is false",
+      "Assertion is false, Reason is true"
+    ],
     "answer": 2,
     "explanation": "The assertion is debatable/true, but the reason is false - the lady does behave strangely (staring, pressing non-existent floor)."
   },
   {
     "question": "Statements: 1. The elevator creates a claustrophobic atmosphere. 2. The building setting reflects Martin's inner state. 3. The setting is irrelevant to the theme.",
-    "options": ["1 and 2 only", "2 and 3 only", "1 and 3 only", "1, 2 and 3"],
+    "options": [
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
+    ],
     "answer": 0,
     "explanation": "Statements 1 and 2 are correct. The elevator creates claustrophobia and the setting reflects Martin's mental state. Statement 3 is false."
   },
   {
     "question": "Statements: 1. The father shows emotional sensitivity. 2. The father values strength over vulnerability. 3. The father dismisses fear.",
-    "options": ["1 and 2 only", "2 and 3 only", "1 and 3 only", "1, 2 and 3"],
+    "options": [
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
+    ],
     "answer": 1,
     "explanation": "Statements 2 and 3 are correct. The father values strength over vulnerability and dismisses fear. Statement 1 is false - he lacks sensitivity."
   },
   {
     "question": "Statements: 1. The fat lady's silence increases suspense. 2. Her physical size contrasts with Martin's. 3. She openly explains her intentions.",
-    "options": ["1 and 2 only", "2 and 3 only", "1 and 3 only", "1, 2 and 3"],
+    "options": [
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
+    ],
     "answer": 0,
     "explanation": "Statements 1 and 2 are correct. Her silence creates suspense and her size contrasts with Martin's. Statement 3 is false - she never explains."
   },
   {
     "question": "Statements: 1. The 14th floor adds mystery. 2. It challenges realism. 3. It resolves the plot.",
-    "options": ["1 and 2 only", "2 and 3 only", "1 and 3 only", "1, 2 and 3"],
+    "options": [
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
+    ],
     "answer": 0,
     "explanation": "Statements 1 and 2 are correct. The 14th floor adds mystery and challenges realism. Statement 3 is false - it doesn't resolve anything."
   },
   {
     "question": "Statements: 1. Martin feels physically inferior. 2. Martin feels emotionally supported. 3. Martin feels isolated.",
-    "options": ["1 and 2 only", "2 and 3 only", "1 and 3 only", "1, 2 and 3"],
+    "options": [
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
+    ],
     "answer": 2,
     "explanation": "Statements 1 and 3 are correct. Martin feels physically inferior and isolated. Statement 2 is false - he lacks emotional support."
   },
   {
     "question": "Statements: 1. Repetition is used as a literary device. 2. The elevator rides become predictable but tense. 3. Suspense decreases with repetition.",
-    "options": ["1 and 2 only", "2 and 3 only", "1 and 3 only", "1, 2 and 3"],
+    "options": [
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
+    ],
     "answer": 0,
     "explanation": "Statements 1 and 2 are correct. Repetition is a literary device and rides are predictable but tense. Statement 3 is false - suspense increases."
   },
   {
     "question": "Statements: 1. The lady's smile is ambiguous. 2. Ambiguity increases fear. 3. She is clearly friendly.",
-    "options": ["1 and 2 only", "2 and 3 only", "1 and 3 only", "1, 2 and 3"],
+    "options": [
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
+    ],
     "answer": 0,
     "explanation": "Statements 1 and 2 are correct. Her smile is ambiguous, which increases fear. Statement 3 is false - she's not clearly friendly."
   },
   {
     "question": "Statements: 1. The father symbolizes traditional masculinity. 2. Fear is portrayed as shameful. 3. Fear is celebrated in the story.",
-    "options": ["1 and 2 only", "2 and 3 only", "1 and 3 only", "1, 2 and 3"],
+    "options": [
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
+    ],
     "answer": 0,
     "explanation": "Statements 1 and 2 are correct. The father represents traditional masculinity and views fear as shameful. Statement 3 is false."
   },
   {
     "question": "Statements: 1. Martin avoids confrontation. 2. Taking the stairs is indirect avoidance. 3. Taking the stairs shows full courage.",
-    "options": ["1 and 2 only", "2 and 3 only", "1 and 3 only", "1, 2 and 3"],
+    "options": [
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
+    ],
     "answer": 0,
     "explanation": "Statements 1 and 2 are correct. Martin avoids confrontation and taking stairs is avoidance. Statement 3 is false - it's not courage."
   },
   {
     "question": "Statements: 1. The story uses psychological tension. 2. There is explicit violence. 3. Atmosphere creates fear.",
-    "options": ["1 and 2 only", "2 and 3 only", "1 and 3 only", "1, 2 and 3"],
+    "options": [
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
+    ],
     "answer": 2,
     "explanation": "Statements 1 and 3 are correct. The story uses psychological tension and atmosphere creates fear. Statement 2 is false - no explicit violence."
+  },
+  {
+    "question": "The story ‘With the Photograph’ is penned by:",
+    "options": [
+      "Katherine Mansfield",
+      "Stephen Leacock",
+      "W.Somerset Maugham",
+      "Alphonse Daudet"
+    ],
+    "answer": 1,
+    "explanation": "The humorous story 'With the Photograph' was written by Stephen Leacock."
+  },
+  {
+    "question": "The photographer looked at the narrator:",
+    "options": [
+      "cheerfully",
+      "with enthusiasm",
+      "without enthusiasm",
+      "indifferently"
+    ],
+    "answer": 2,
+    "explanation": "The photographer examined the narrator without enthusiasm, showing little interest."
+  },
+  {
+    "question": "The narrator was asked to wait for:",
+    "options": [
+      "15 minutes",
+      "30 minutes",
+      "one hour",
+      "45 minutes"
+    ],
+    "answer": 2,
+    "explanation": "The narrator was told to wait for one hour before being photographed."
+  },
+  {
+    "question": "The studio was:",
+    "options": [
+      "well-furnished",
+      "quite modern",
+      "dimly lighted",
+      "very big"
+    ],
+    "answer": 2,
+    "explanation": "The studio was described as dimly lighted, creating a dull atmosphere."
+  },
+  {
+    "question": "The photographer had the looks of:",
+    "options": [
+      "a sick man",
+      "an angry man",
+      "a natural scientist",
+      "a crooked politician"
+    ],
+    "answer": 2,
+    "explanation": "The narrator compared the photographer’s appearance to that of a natural scientist."
+  },
+  {
+    "question": "The second visit to the photographer was paid by the narrator:",
+    "options": [
+      "next day",
+      "the same evening",
+      "next Saturday",
+      "after a fortnight"
+    ],
+    "answer": 2,
+    "explanation": "The narrator returned to the photographer the next Saturday."
+  },
+  {
+    "question": "The narrator’s face was found to be:",
+    "options": [
+      "quite ugly",
+      "quite attractive",
+      "quite wrong",
+      "very innocent"
+    ],
+    "answer": 2,
+    "explanation": "The photographer judged the narrator’s face to be quite wrong."
+  },
+  {
+    "question": "While waiting for the photographer the narrator:",
+    "options": [
+      "read the latest news",
+      "read a journal for the infants",
+      "listened to the music",
+      "kept writing something in his diary"
+    ],
+    "answer": 1,
+    "explanation": "The narrator passed the time by reading a journal for infants."
+  },
+  {
+    "question": "What was the age of the narrator when he went to the photographer?",
+    "options": [
+      "fifty",
+      "forty",
+      "thirty",
+      "forty five"
+    ],
+    "answer": 1,
+    "explanation": "The narrator was forty years old when he went to the photographer."
+  },
+  {
+    "question": "The Delphide is a process employed by the photographer to:",
+    "options": [
+      "add new features",
+      "remove unwanted features",
+      "adjust body posture",
+      "show attractive teeth"
+    ],
+    "answer": 0,
+    "explanation": "The Delphide process was used to add new features to the photograph."
+  },
+  {
+    "question": "Which process is used to remove unwanted features?",
+    "options": [
+      "Delphide",
+      "Drawing",
+      "Sulphide",
+      "All of these"
+    ],
+    "answer": 2,
+    "explanation": "The Sulphide process was used to remove unwanted features."
+  },
+  {
+    "question": "What was the narrator’s purpose of getting a photograph?",
+    "options": [
+      "for marriage",
+      "for parents",
+      "for friends",
+      "All of these"
+    ],
+    "answer": 2,
+    "explanation": "The narrator wanted the photograph mainly for his friends."
+  },
+  {
+    "question": "Why did the narrator want to give his photograph to his friends?",
+    "options": [
+      "for making a collage for the college magazine",
+      "for remembrance after his death",
+      "for making his identity card",
+      "All of these"
+    ],
+    "answer": 1,
+    "explanation": "The narrator wanted his friends to keep his photograph as remembrance after his death."
+  },
+  {
+    "question": "Why did the narrator suggest that the photographer keep the photo for himself and his friends?",
+    "options": [
+      "to show his talent",
+      "for record purpose",
+      "for showing that he photographed a famous writer",
+      "All of these"
+    ],
+    "answer": 0,
+    "explanation": "The narrator suggested the photographer keep the photo to show his talent."
+  },
+  {
+    "question": "What does the phrase ‘broke into tears’ mean?",
+    "options": [
+      "to break something",
+      "to start crying",
+      "to enter a restricted area",
+      "to earn profit"
+    ],
+    "answer": 1,
+    "explanation": "The phrase ‘broke into tears’ means to start crying."
+  },
+  {
+    "question": "Which of these magazines the narrator did NOT read while waiting?",
+    "options": [
+      "Ladies Companion",
+      "Girls Companion",
+      "Girls Magazine",
+      "Infants Journal"
+    ],
+    "answer": 1,
+    "explanation": "The narrator did not read Girls Companion magazine."
+  },
+  {
+    "question": "The photographer rolled a machine into the middle of the room and crawled into it from behind. The machine was:",
+    "options": [
+      "Clothes dryer",
+      "Camera",
+      "Telescope",
+      "Radio set"
+    ],
+    "answer": 1,
+    "explanation": "The machine referred to was a camera."
+  },
+  {
+    "question": "Which of the following is the most suitable for something that is three-quarters fuller?",
+    "options": [
+      "100 percent more",
+      "25 percent less",
+      "75 percent more",
+      "75 percent less"
+    ],
+    "answer": 2,
+    "explanation": "Three-quarters fuller means 75 percent more."
+  },
+  {
+    "question": "Find a suitable antonym of ‘ceased’:",
+    "options": [
+      "started",
+      "ended",
+      "stopped",
+      "culminate"
+    ],
+    "answer": 0,
+    "explanation": "The antonym of ‘ceased’ is ‘started’."
+  },
+  {
+    "question": "Which body feature was not mentioned anywhere in the story?",
+    "options": [
+      "ears",
+      "cheeks",
+      "mouth",
+      "eyes"
+    ],
+    "answer": 1,
+    "explanation": "Cheeks were not mentioned anywhere in the story."
   }
 ]
