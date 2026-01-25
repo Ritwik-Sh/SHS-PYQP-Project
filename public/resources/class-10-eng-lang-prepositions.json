@@ -400,8 +400,8 @@
     "explanation": "'In' is used for months."
   },
   {
-    "question": "Militants broke into ___ the hotel.",
-    "answer": "—",
+    "question": "Militants broke ___ the hotel.",
+    "answer": "into",
     "type": "fib",
     "explanation": "'Broke into' already includes the preposition."
   },
