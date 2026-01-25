@@ -507,8 +507,8 @@
     "explanation": "'In' shows something inside."
   },
   {
-    "question": "He came ___ across his friend at the market.",
-    "answer": "—",
+    "question": "He came ___ his friend at the market.",
+    "answer": "across",
     "type": "fib",
     "explanation": "'Came across' is already complete."
   },
@@ -562,7 +562,7 @@
   },
   {
     "question": "She stood ___ me.",
-    "answer": "behind",
+    "answer": ["behind", "before", "by"],
     "type": "fib",
     "explanation": "'Behind' shows position at the back."
   },
@@ -658,9 +658,8 @@
   },
   {
     "question": "The school is ___ the lake.",
-    "answer": "near",
-    "type": "fib",
-    "explanation": "'Near' shows closeness."
+    "answer": ["near", "by", "beside"],
+    "type": "fib"
   },
   {
     "question": "He is sitting ___ the sofa.",
@@ -712,7 +711,7 @@
   },
   {
     "question": "The airplane flew ___ the clouds.",
-    "answer": "above",
+    "answer": ["above", "through"],
     "type": "fib",
     "explanation": "'Above' shows higher position."
   },
