@@ -467,7 +467,7 @@
   },
   {
     "question": "The school is ___ the city center.",
-    "answer": "in",
+    "answer": ["in", "near"],
     "type": "fib",
     "explanation": "'In' shows location within an area."
   },
@@ -485,9 +485,8 @@
   },
   {
     "question": "The train arrives ___ platform 5.",
-    "answer": "at",
-    "type": "fib",
-    "explanation": "'At' is used for specific points."
+    "answer": ["at", "on"],
+    "type": "fib"
   },
   {
     "question": "The flowers are ___ the vase.",
