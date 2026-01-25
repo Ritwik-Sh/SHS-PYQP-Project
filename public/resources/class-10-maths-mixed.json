@@ -108,10 +108,9 @@
     "explanation": "TSA of 2 hemispheres = 2(3πr²) = 6πr². CSA of sphere = 4πr². Ratio = 6πr²:4πr² = 3:2."
   },
   {
-    "question": "Select the incorrect statement if r is a positive integer: If p>q then p/r __ q/r.",
+    "question": "If r is a positive integer: If p>q then p/r __ q/r.",
     "type": "fib",
-    "answer": "=",
-    "explanation": "The statement 'If p>q then p/r = q/r' is incorrect. The correct relationship is p/r > q/r when dividing both sides of an inequality by a positive number."
+    "answer": ">"
   },
   {
     "question": "A tilted cylindrical vessel with base diameter 7 cm contains a liquid. When placed vertically the height of liquid in the vessel is 3.5 cm. The area of the wet surface when cylinder is placed vertically on a flat surface is __ cm².",
