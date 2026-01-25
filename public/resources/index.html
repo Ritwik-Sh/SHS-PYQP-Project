@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHS PYQP - Quizzes</title>
     <script src="https://kit.fontawesome.com/d63d2ac69c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/style.css">
-    <link rel="icon" type="image/png" href="../logo.png" />
     <style>
         :root {
             --bg: #040b15;
@@ -42,11 +40,11 @@
         main {
             display: flex;
             color: var(--text);
-            height: 84vb;
+            height: 84vh;
         }
 
         #left {
-            width: 50vi;
+            width: 50vw;
             height: 100%;
             display: flex;
             flex-wrap: wrap;
@@ -61,12 +59,12 @@
             background: var(--secondary);
             border: 2px solid var(--accent);
             color: var(--text);
-            width: 38vi;
-            height: 8vi;
-            margin: 2vi;
+            width: 38vw;
+            height: 8vh;
+            margin: 2vh;
             transition: ease-in-out 100ms;
             border-radius: 16px;
-            padding: 0.5vi;
+            padding: 0.5vh;
             cursor: pointer;
             font-size: 1.2rem;
         }
@@ -84,12 +82,12 @@
 
         .card {
             background: var(--primary);
-            width: 12vi;
-            height: 16vi;
-            margin: 2vi;
+            width: 12vw;
+            height: 20vh;
+            margin: 2vh;
             transition: ease-in-out 100ms;
             border-radius: 16px;
-            padding: 1vi;
+            padding: 1vh;
             cursor: pointer;
             display: flex;
             flex-direction: column;
@@ -104,7 +102,7 @@
         }
 
         .card.class-card > h2 {
-            font-size: 4vi;
+            font-size: 4vw;
             color: var(--bg);
             font-weight: 600;
         }
@@ -135,13 +133,13 @@
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
-            /* -webkit-line-clamp: 2; */
+            -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
         }
 
         #loading {
-            width: 12vi;
-            height: 12vi;
+            width: 12vw;
+            height: 12vh;
             border-radius: 50%;
             display: none;
             position: relative;
@@ -157,8 +155,8 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            width: 11vi;
-            height: 11vi;
+            width: 11vw;
+            height: 11vh;
             border-radius: 50%;
             background: #263238;
         }
@@ -176,10 +174,10 @@
 
         footer {
             background: var(--secondary);
-            width: 80vi;
-            margin-left: 9vi;
+            width: 80vw;
+            margin-left: 9vw;
             border-radius: 16px;
-            padding: 1vi;
+            padding: 1vh;
             text-align: center;
             color: var(--text);
         }
@@ -200,15 +198,15 @@
         }
 
         #logo {
-            width: 50vi;
+            width: 50vw;
             vertical-align: middle;
             text-align: center;
         }
 
         #logo-img {
-            height: 40vi;
-            width: 40vi;
-            border: 8vi solid var(--accent);
+            height: 40vw;
+            width: 40vw;
+            border: 8vw solid var(--accent);
             border-radius: 100vb;
             margin-top: 10%;
             margin-bottom: 5%;
@@ -219,34 +217,29 @@
         }
 
         .fillout-embed-popup-button-45122879619980 {
-            width: 50vi !important;
+            width: 50vw !important;
             background: var(--secondary) !important;
             border-radius: 16px !important
         }
 
-        @media (max-width: 719px) {
-            #logo {
-                display: none;
-            }
-
-            body {
-                background: var(--bg);
-                text-align: center;
+        @media (max-width: 768px) {
+            body > h1 {
+                font-size: 1.5rem;
+                padding: 15px;
             }
 
             main {
                 flex-direction: column;
+                height: auto;
+                min-height: 70vh;
             }
 
             #left {
-                height: 80vb;
-                display: flex;
-                flex-wrap: wrap;
-                text-align: center;
-                justify-content: center;
-                align-items: center;
-                overflow: scroll;
                 width: 100%;
+                height: auto;
+                min-height: 60vh;
+                padding: 20px 10px;
+                overflow: visible;
             }
 
             #back {
@@ -254,56 +247,119 @@
                 background: var(--secondary);
                 border: 2px solid var(--accent);
                 color: var(--text);
-                width: 72vi;
-                height: 8vi;
-                margin: 2vi;
-                transition: ease-in-out 100ms;
+                width: 90%;
+                max-width: 300px;
+                height: 50px;
+                margin: 10px auto 20px;
+                transition: ease-in-out 200ms;
                 border-radius: 16px;
-                padding: 0.5vi;
+                padding: 10px;
                 cursor: pointer;
+                font-size: 1.1rem;
             }
 
             #back:hover {
-                scale: 1.2;
+                transform: scale(1.05);
             }
 
-            .classes, .quizzes {
-                background: var(--primary);
-                width: 32vi;
-                height: 32vi;
-                margin: 2vi;
-                transition: ease-in-out 100ms;
-                border-radius: 16px;
-                padding: 0.5vi;
-                padding-top: 6vi;
-                padding-bottom: 1vi;
-                cursor: pointer;
+            #content {
+                gap: 15px;
+                padding: 10px;
             }
 
-            .classes:hover, .quizzes:hover {
-                scale: 1.2;
+            .card {
+                width: calc(50% - 10px);
+                min-width: 130px;
+                max-width: 160px;
+                height: 150px;
+                margin: 0;
+                padding: 15px;
             }
 
-            .classes > h2 {
-                font-size: 8vi;
+            .card:hover {
+                transform: scale(1.05);
             }
 
-            .quizzes > i {
-                scale: 3;
-                margin-top: 30%;
+            .card.class-card > h2 {
+                font-size: 3rem;
             }
 
-            footer {
-                background: var(--secondary);
-                width: 95vi;
-                margin-left: 0.8vi;
-                border-radius: 16px;
-                text-align: center;
-                color: var(--text);
+            .card.class-card > p {
+                font-size: 0.85rem;
+            }
+
+            .card > i {
+                font-size: 2rem;
+                scale: 1;
+                margin-bottom: 12px;
+            }
+
+            .card > h3 {
+                font-size: 0.9rem;
+                -webkit-line-clamp: 3;
+            }
+
+            #loading {
+                width: 80px;
+                height: 80px;
+            }
+
+            #loading::after {
+                width: 70px;
+                height: 70px;
+            }
+
+            #logo {
+                display: none;
             }
 
             .mobileOnly {
                 display: block;
+                text-align: center;
+                padding: 20px;
+            }
+
+            footer {
+                width: 90%;
+                margin: 20px auto;
+                padding: 20px 15px;
+            }
+
+            footer a {
+                font-size: 2.5rem;
+            }
+
+            footer h1 {
+                font-size: 1.5rem;
+            }
+
+            footer h2 {
+                font-size: 1.2rem;
+            }
+
+            footer p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .card {
+                width: calc(50% - 8px);
+                min-width: 120px;
+                max-width: 140px;
+                height: 140px;
+            }
+
+            .card.class-card > h2 {
+                font-size: 2.5rem;
+            }
+
+            .card > i {
+                font-size: 1.8rem;
+            }
+
+            .card > h3 {
+                font-size: 0.85rem;
             }
         }
     </style>
@@ -346,7 +402,6 @@
     </footer>
 
     <script>
-        // ===== SIMPLE QUIZ CONFIGURATION =====
         const QUIZZES = [
             {
                 class: 10,
@@ -403,22 +458,18 @@
             }
         ];
 
-        // Navigation state management
         let navigationState = {
-            view: 'classes', // 'classes', 'subjects', or 'topics'
+            view: 'classes',
             currentClass: null,
             currentSubject: null
         };
 
-        // Back button handler
         document.getElementById('back').addEventListener('click', handleBack);
 
         function handleBack() {
             if (navigationState.view === 'topics') {
-                // Go back to subjects view
                 renderSubjects(navigationState.currentClass);
             } else if (navigationState.view === 'subjects') {
-                // Go back to classes view
                 renderClasses();
             }
         }
@@ -428,7 +479,6 @@
             content.innerHTML = '';
             document.querySelector('#back').style.display = 'none';
             
-            // Update navigation state
             navigationState = {
                 view: 'classes',
                 currentClass: null,
@@ -456,7 +506,6 @@
             content.innerHTML = '';
             document.querySelector('#back').style.display = 'inline-block';
 
-            // Update navigation state
             navigationState = {
                 view: 'subjects',
                 currentClass: cls,
@@ -486,7 +535,6 @@
             const content = document.getElementById('content');
             content.innerHTML = '';
 
-            // Update navigation state
             navigationState = {
                 view: 'topics',
                 currentClass: cls,
@@ -512,7 +560,6 @@
             });
         }
 
-        // Initialize
         renderClasses();
     </script>
 </body>
