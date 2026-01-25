@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +30,7 @@
             line-height: 1.6;
         }
 
-        body > h1 {
+        body>h1 {
             margin-bottom: 5px;
             color: var(--secondary);
             text-shadow: var(--accent);
@@ -101,13 +102,13 @@
             box-shadow: 0 8px 12px rgba(147, 187, 234, 0.4);
         }
 
-        .card.class-card > h2 {
+        .card.class-card>h2 {
             font-size: 4vw;
             color: var(--bg);
             font-weight: 600;
         }
 
-        .card.class-card > p {
+        .card.class-card>p {
             font-size: 0.8rem;
             color: rgba(4, 11, 21, 0.7);
             font-weight: 500;
@@ -118,13 +119,13 @@
             background: linear-gradient(135deg, var(--primary), rgba(147, 187, 234, 0.8));
         }
 
-        .card > i {
+        .card>i {
             scale: 2.5;
             margin-bottom: 10%;
             color: var(--bg);
         }
 
-        .card > h3 {
+        .card>h3 {
             font-size: 1.1rem;
             color: var(--bg);
             font-weight: 600;
@@ -162,8 +163,13 @@
         }
 
         @keyframes rotation {
-            0% { transform: rotate(0deg) }
-            100% { transform: rotate(360deg) }
+            0% {
+                transform: rotate(0deg)
+            }
+
+            100% {
+                transform: rotate(360deg)
+            }
         }
 
         #noContent {
@@ -182,7 +188,7 @@
             color: var(--text);
         }
 
-        footer > h1 {
+        footer>h1 {
             font-family: "Parisienne", cursive;
             font-weight: bolder;
         }
@@ -223,7 +229,7 @@
         }
 
         @media (max-width: 768px) {
-            body > h1 {
+            body>h1 {
                 font-size: 1.5rem;
                 padding: 15px;
             }
@@ -280,21 +286,21 @@
                 transform: scale(1.05);
             }
 
-            .card.class-card > h2 {
+            .card.class-card>h2 {
                 font-size: 3rem;
             }
 
-            .card.class-card > p {
+            .card.class-card>p {
                 font-size: 0.85rem;
             }
 
-            .card > i {
+            .card>i {
                 font-size: 2rem;
                 scale: 1;
                 margin-bottom: 12px;
             }
 
-            .card > h3 {
+            .card>h3 {
                 font-size: 0.9rem;
                 -webkit-line-clamp: 3;
             }
@@ -350,20 +356,21 @@
                 height: 140px;
             }
 
-            .card.class-card > h2 {
+            .card.class-card>h2 {
                 font-size: 2.5rem;
             }
 
-            .card > i {
+            .card>i {
                 font-size: 1.8rem;
             }
 
-            .card > h3 {
+            .card>h3 {
                 font-size: 0.85rem;
             }
         }
     </style>
 </head>
+
 <body>
     <h1>SHS-PYQP Quizzes</h1>
     <main>
@@ -433,7 +440,7 @@
                 icon: 'fa-dna',
                 topics: [
                     { name: 'Plant Physiology MCQ', file: 'class-10-bio-plant-physiology.json' },
-                    { name: 'Reproduction in Humans MCQ', file: 'class-10-bio-reproduction.json'},
+                    { name: 'Reproduction in Humans MCQ', file: 'class-10-bio-reproduction.json' },
                     { name: 'Genetics MCQ', file: 'class-10-bio-genetics.json' },
                     { name: 'Human Anatomy', file: 'class-10-bio-human-anatomy.json' }
                 ]
@@ -454,6 +461,14 @@
                 topics: [
                     { name: 'Prepositions FIBs', file: 'class-10-eng-lang-prepositions.json' },
                     { name: 'Direct Indirect Speech MCQ', file: 'class-10-eng-lang-direct-indirect.json' }
+                ]
+            },
+            {
+                class: 10,
+                subject: 'Mathematics',
+                icon: 'fa-square-root-variable',
+                topics: [
+                    { name: 'Mixed Bag', file: 'class-10-maths-mixed.json' }
                 ]
             }
         ];
@@ -478,15 +493,15 @@
             const content = document.getElementById('content');
             content.innerHTML = '';
             document.querySelector('#back').style.display = 'none';
-            
+
             navigationState = {
                 view: 'classes',
                 currentClass: null,
                 currentSubject: null
             };
-            
+
             const classes = [...new Set(QUIZZES.map(q => q.class))].sort((a, b) => a - b);
-            
+
             if (classes.length === 0) {
                 content.innerHTML = '<h1 id="noContent">No Classes Available!</h1>';
                 return;
@@ -513,7 +528,7 @@
             };
 
             const subjects = QUIZZES.filter(q => q.class === cls);
-            
+
             if (subjects.length === 0) {
                 content.innerHTML = '<h1 id="noContent">No Subjects Available!</h1>';
                 return;
@@ -563,4 +578,5 @@
         renderClasses();
     </script>
 </body>
+
 </html>

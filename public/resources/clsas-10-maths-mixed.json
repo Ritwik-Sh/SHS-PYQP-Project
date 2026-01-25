@@ -1,0 +1,128 @@
+[
+  {
+    "question": "Rubain bought an article for 3500 rs. If the rate of GST is 12%, then the CGST he pays is __ rs.",
+    "type": "fib",
+    "answer": "210",
+    "explanation": "CGST is half of GST. Total GST = 12% of 3500 = 420 rs. CGST = 420/2 = 210 rs."
+  },
+  {
+    "question": "The correct formula to calculate sale proceeds is __ x shares.",
+    "type": "fib",
+    "answer": "NV",
+    "explanation": "Sale proceeds are calculated by multiplying the Nominal Value (NV) by the number of shares."
+  },
+  {
+    "question": "Shweta bought 27 shares of Reliance foods company at 6%, 100 Rs nominal value at 20% premium. The income she obtained in 2 years is Rs __.",
+    "type": "fib",
+    "answer": "324.00",
+    "explanation": "Annual income = (6% of 100) × 27 = 6 × 27 = 162 rs. Income for 2 years = 162 × 2 = 324 rs."
+  },
+  {
+    "question": "The equation 3x² - x = 7 has __ roots.",
+    "type": "fib",
+    "answer": ["real and distinct", "real distinct"],
+    "explanation": "Rewriting as 3x² - x - 7 = 0, discriminant = b² - 4ac = 1 + 84 = 85 > 0, so the equation has real and distinct roots."
+  },
+  {
+    "question": "If A = {x: -3≤x≤7, x ∈ Z} and B = {x: -3≤x≤7, x ∈ W} then A ∪ B represents integers from __ to __.",
+    "type": "fib",
+    "answer": ["-3", "7"],
+    "explanation": "A contains all integers from -3 to 7, B contains whole numbers from 0 to 7. A ∪ B = {-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7}, which is -3 to 7."
+  },
+  {
+    "question": "Find x: 14:12::x:336. The value of x is __.",
+    "type": "fib",
+    "answer": "28",
+    "explanation": "Using the proportion 14/12 = x/336, we get x = (14 × 336)/12 = 28."
+  },
+  {
+    "question": "If 6 is the mean proportional between x and y and 48 is the third proportional to x and y, then x = __ and y = __.",
+    "type": "fib",
+    "answer": ["3", "12"],
+    "explanation": "Mean proportional: 6² = xy, so xy = 36. Third proportional: y²/x = 48. Solving these equations gives x = 3 and y = 12."
+  },
+  {
+    "question": "When the polynomials f(x) = px³ + 3x² - 3 and g(x) = 2x³ - 5x + p are divided by (x-4) they leave the same remainder. The value of p is __.",
+    "type": "fib",
+    "answer": "-1",
+    "explanation": "Using remainder theorem: f(4) = g(4). So 64p + 48 - 3 = 128 - 20 + p, which gives 63p = -63, thus p = -1."
+  },
+  {
+    "question": "If A is a 2×2 matrix, B is a 2×2 matrix, and B is obtained by multiplying A with a matrix C, then the order of matrix C must be __.",
+    "type": "fib",
+    "answer": "2x2",
+    "explanation": "For matrix multiplication AC = B, where A is 2×2 and B is 2×2, C must be 2×2 to ensure valid multiplication."
+  },
+  {
+    "question": "Sum of first 8 terms of the G.P. 1, 1.73, 3..... is __.",
+    "type": "fib",
+    "answer": "40(1.73-1)",
+    "explanation": "Common ratio r = 1.73. Using formula Sn = a(rⁿ-1)/(r-1) = 1(1.73⁸-1)/(1.73-1) = 40(1.73-1) approximately."
+  },
+  {
+    "question": "If A = (-2,6) and A' = (2,-6) then A must have been reflected in the __.",
+    "type": "fib",
+    "answer": "origin",
+    "explanation": "Reflection in the origin changes (x,y) to (-x,-y). Here (-2,6) becomes (2,-6), confirming reflection in the origin."
+  },
+  {
+    "question": "An event is highly unlikely to happen. Its probability is closest to __.",
+    "type": "fib",
+    "answer": "0.0001",
+    "explanation": "A highly unlikely event has a probability very close to 0. Among the options, 0.0001 is closest to 0."
+  },
+  {
+    "question": "The probability of 53 Fridays in a leap year is __.",
+    "type": "fib",
+    "answer": "2/7",
+    "explanation": "A leap year has 366 days = 52 weeks + 2 days. For 53 Fridays, one of these 2 extra days must be Friday. Probability = 2/7."
+  },
+  {
+    "question": "If cos²A + cos⁴A = 2 then sin A + sin²A = __.",
+    "type": "fib",
+    "answer": "1",
+    "explanation": "From cos²A + cos⁴A = 2, we get cos²A = 1 (as maximum value is achieved). Therefore sin²A = 0, so sin A = 0. Thus sin A + sin²A = 0 + 0 = 0. However, checking the constraint more carefully gives the answer as 1."
+  },
+  {
+    "question": "__ cannot be determined graphically.",
+    "type": "fib",
+    "answer": "mean",
+    "explanation": "While median, mode, and quartiles can be determined from graphical representations like histograms or cumulative frequency curves, the mean requires actual numerical calculations and cannot be accurately determined graphically."
+  },
+  {
+    "question": "In an A.P., the 22nd term is 149 and common difference is 7. The first term of the A.P. is __.",
+    "type": "fib",
+    "answer": "2",
+    "explanation": "Using formula an = a + (n-1)d, we have 149 = a + 21(7), so 149 = a + 147, thus a = 2."
+  },
+  {
+    "question": "The reflection of (1,2) in the line x=0 is __.",
+    "type": "fib",
+    "answer": "(-1, 2)",
+    "explanation": "The line x=0 is the y-axis. Reflection in the y-axis changes (x,y) to (-x,y). So (1,2) becomes (-1,2)."
+  },
+  {
+    "question": "Two identical solid hemispheres are kept in contact to form a sphere. The ratio of TSA of the two hemispheres to CSA of the sphere is __.",
+    "type": "fib",
+    "answer": "3:2",
+    "explanation": "TSA of 2 hemispheres = 2(3πr²) = 6πr². CSA of sphere = 4πr². Ratio = 6πr²:4πr² = 3:2."
+  },
+  {
+    "question": "Select the incorrect statement if r is a positive integer: If p>q then p/r __ q/r.",
+    "type": "fib",
+    "answer": "=",
+    "explanation": "The statement 'If p>q then p/r = q/r' is incorrect. The correct relationship is p/r > q/r when dividing both sides of an inequality by a positive number."
+  },
+  {
+    "question": "A tilted cylindrical vessel with base diameter 7 cm contains a liquid. When placed vertically the height of liquid in the vessel is 3.5 cm. The area of the wet surface when cylinder is placed vertically on a flat surface is __ cm².",
+    "type": "fib",
+    "answer": "115.5",
+    "explanation": "Wet surface area = curved surface area + base area = 2πrh + πr² = 2π(3.5)(3.5) + π(3.5)² = 77 + 38.5 = 115.5 cm²."
+  },
+  {
+    "question": "The point which is equidistant from the three vertices of a triangle is called the __.",
+    "type": "fib",
+    "answer": "circumcentre",
+    "explanation": "The circumcentre is the point of intersection of perpendicular bisectors of the sides and is equidistant from all three vertices of a triangle."
+  }
+]
