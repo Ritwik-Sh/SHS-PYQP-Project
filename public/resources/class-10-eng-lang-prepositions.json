@@ -352,7 +352,10 @@
   },
   {
     "question": "The shop is ___ the corner.",
-    "answer": "at",
+    "answer": [
+      "at",
+      "around"
+    ],
     "type": "fib",
     "explanation": "'At the corner' is idiomatic usage."
   },
@@ -370,7 +373,11 @@
   },
   {
     "question": "The children ran ___ the playground.",
-    "answer": "into",
+    "answer": [
+      "into",
+      "around",
+      "across"
+    ],
     "type": "fib",
     "explanation": "'Into' shows movement inside."
   },
