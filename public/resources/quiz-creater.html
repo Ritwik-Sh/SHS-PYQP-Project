@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz JSON Creator</title>
+    <style>
+        :root {
+            --bg: #040b15;
+            --bg-secondary: #0c1420;
+            --bg-card: #0f1825;
+            --primary: #93bbea;
+            --secondary: #921e1c;
+            --accent: #d6b329;
+            --text: #e5f0fa;
+            --text-muted: rgba(229, 240, 250, 0.6);
+            --border: rgba(147, 187, 234, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animated gradient background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 20% 50%, rgba(147, 187, 234, 0.03) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(214, 179, 41, 0.02) 0%, transparent 50%);
+            animation: gradientShift 20s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-10%, -10%); }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 48px 32px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header with glassmorphism */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 48px;
+            padding: 24px 32px;
+            background: rgba(15, 24, 37, 0.6);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 16px rgba(147, 187, 234, 0.3);
+        }
+
+        .header h1 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--text), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+
+        /* Modern card design */
+        .panel {
+            background: rgba(15, 24, 37, 0.5);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 32px;
+            border: 1px solid var(--border);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .panel:hover {
+            border-color: rgba(147, 187, 234, 0.3);
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3);
+        }
+
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .panel-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .panel-title::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: linear-gradient(180deg, var(--primary), var(--accent));
+            border-radius: 2px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            letter-spacing: 0.3px;
+        }
+
+        /* Modern input styling */
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 14px 18px;
+            background: rgba(12, 20, 32, 0.6);
+            border: 1.5px solid var(--border);
+            border-radius: 12px;
+            color: var(--text);
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(12, 20, 32, 0.8);
+            box-shadow: 0 0 0 4px rgba(147, 187, 234, 0.1);
+            transform: translateY(-1px);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .options-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .option-item {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            padding: 12px;
+            background: rgba(12, 20, 32, 0.4);
+            border-radius: 12px;
+            border: 1.5px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .option-item:hover {
+            border-color: var(--border);
+            background: rgba(12, 20, 32, 0.6);
+        }
+
+        .option-item input[type="text"] {
+            flex: 1;
+            background: transparent;
+            border: none;
+            padding: 8px 12px;
+        }
+
+        .option-item input[type="text"]:focus {
+            box-shadow: none;
+            transform: none;
+        }
+
+        .option-item input[type="radio"] {
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+            accent-color: var(--primary);
+        }
+
+        .option-label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--primary);
+            min-width: 28px;
+            text-align: center;
+        }
+
+        /* Modern button styling */
+        button {
+            padding: 12px 24px;
+            border: 1.5px solid var(--border);
+            border-radius: 12px;
+            background: rgba(15, 24, 37, 0.6);
+            backdrop-filter: blur(10px);
+            color: var(--text);
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(147, 187, 234, 0.1);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        button:hover:not(:disabled) {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(147, 187, 234, 0.2);
+        }
+
+        button:active:not(:disabled) {
+            transform: translateY(0);
+        }
+
+        button span {
+            position: relative;
+            z-index: 1;
+        }
+
+        button.btn-primary {
+            background: linear-gradient(135deg, var(--primary), #7aa8d8);
+            color: var(--bg);
+            border-color: transparent;
+            font-weight: 600;
+            box-shadow: 0 4px 16px rgba(147, 187, 234, 0.3);
+        }
+
+        button.btn-primary:hover:not(:disabled) {
+            box-shadow: 0 6px 24px rgba(147, 187, 234, 0.4);
+            transform: translateY(-2px);
+        }
+
+        button.btn-secondary {
+            background: linear-gradient(135deg, var(--accent), #c4a526);
+            color: var(--bg);
+            border-color: transparent;
+            font-weight: 600;
+            box-shadow: 0 4px 16px rgba(214, 179, 41, 0.3);
+        }
+
+        button.btn-secondary:hover:not(:disabled) {
+            box-shadow: 0 6px 24px rgba(214, 179, 41, 0.4);
+        }
+
+        button:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        .question-list {
+            max-height: 450px;
+            overflow-y: auto;
+            padding-right: 8px;
+        }
+
+        .question-list::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .question-list::-webkit-scrollbar-track {
+            background: rgba(12, 20, 32, 0.3);
+            border-radius: 10px;
+        }
+
+        .question-list::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 10px;
+        }
+
+        /* Modern question cards */
+        .question-card {
+            background: rgba(12, 20, 32, 0.4);
+            padding: 20px;
+            border-radius: 16px;
+            margin-bottom: 12px;
+            border: 1.5px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .question-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background: linear-gradient(180deg, var(--primary), var(--accent));
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .question-card:hover {
+            border-color: var(--border);
+            background: rgba(12, 20, 32, 0.6);
+            transform: translateX(4px);
+        }
+
+        .question-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .question-card.active {
+            border-color: var(--primary);
+            background: rgba(147, 187, 234, 0.08);
+            box-shadow: 0 4px 16px rgba(147, 187, 234, 0.2);
+        }
+
+        .question-card.active::before {
+            transform: scaleY(1);
+        }
+
+        .question-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .question-number {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .question-type {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--bg);
+            background: linear-gradient(135deg, var(--accent), #c4a526);
+            padding: 4px 10px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .question-preview {
+            font-size: 0.9rem;
+            color: var(--text);
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* JSON output with syntax highlighting feel */
+        .json-output {
+            background: rgba(4, 11, 21, 0.8);
+            padding: 24px;
+            border-radius: 16px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+            font-size: 0.85rem;
+            max-height: 500px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+            border: 1.5px solid var(--border);
+            color: #a8d4ff;
+            line-height: 1.6;
+        }
+
+        .json-output::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .json-output::-webkit-scrollbar-track {
+            background: rgba(12, 20, 32, 0.3);
+            border-radius: 10px;
+        }
+
+        .json-output::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 10px;
+        }
+
+        .keyboard-hint {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: 24px;
+            padding: 16px 24px;
+            background: rgba(15, 24, 37, 0.4);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+        }
+
+        .keyboard-hint kbd {
+            background: rgba(12, 20, 32, 0.8);
+            padding: 4px 8px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            font-family: inherit;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin: 0 3px;
+            color: var(--primary);
+        }
+
+        .answer-inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .answer-input-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .answer-input-group input {
+            flex: 1;
+        }
+
+        .btn-small {
+            padding: 8px 16px;
+            font-size: 0.8rem;
+        }
+
+        .delete-btn {
+            background: rgba(146, 30, 28, 0.2);
+            border-color: rgba(146, 30, 28, 0.3);
+            color: #ff6b6b;
+        }
+
+        .delete-btn:hover:not(:disabled) {
+            background: rgba(146, 30, 28, 0.3);
+            border-color: var(--secondary);
+            box-shadow: 0 4px 16px rgba(146, 30, 28, 0.3);
+        }
+
+        .code-toggle {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            padding: 10px 14px;
+            background: rgba(12, 20, 32, 0.3);
+            border-radius: 10px;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .code-toggle:hover {
+            border-color: var(--border);
+            background: rgba(12, 20, 32, 0.5);
+        }
+
+        .code-toggle input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: var(--primary);
+        }
+
+        .code-toggle label {
+            cursor: pointer;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            user-select: none;
+        }
+
+        .code-help {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+            padding: 8px 12px;
+            background: rgba(147, 187, 234, 0.05);
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-muted);
+        }
+
+        .empty-state-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            opacity: 0.3;
+        }
+
+        /* Floating action button effect */
+        .fab-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        @media (max-width: 1200px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 24px 16px;
+            }
+
+            .header {
+                padding: 20px;
+                border-radius: 16px;
+            }
+
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .panel {
+                padding: 24px 20px;
+                border-radius: 16px;
+            }
+
+            .header-actions {
+                width: 100%;
+            }
+
+            .header-actions button {
+                flex: 1;
+            }
+
+            .fab-group {
+                flex-direction: column;
+            }
+
+            .fab-group button {
+                width: 100%;
+            }
+        }
+
+        /* Smooth animations */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .panel, .question-card {
+            animation: slideIn 0.4s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-left">
+                <div class="logo">📝</div>
+                <h1>Quiz JSON Creator</h1>
+            </div>
+            <div class="header-actions">
+                <button onclick="testQuiz()"><span>🧪 Test Quiz</span></button>
+                <button class="btn-secondary" onclick="copyJSON()"><span>📋 Copy JSON</span></button>
+                <button class="btn-primary" onclick="downloadJSON()"><span>⬇️ Download</span></button>
+            </div>
+        </div>
+
+        <div class="main-grid">
+            <!-- Question Editor -->
+            <div class="panel">
+                <div class="panel-header">
+                    <h2 class="panel-title">Question Editor</h2>
+                    <button class="btn-primary" onclick="addQuestion()"><span>+ New Question</span></button>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Question Type</label>
+                    <select id="questionType" onchange="updateQuestionTypeUI()">
+                        <option value="mcq">Multiple Choice (MCQ)</option>
+                        <option value="fib">Fill in the Blank (FIB)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Question Text</label>
+                    <div class="code-toggle">
+                        <input type="checkbox" id="questionCodeToggle" onchange="updateCodeHelp('question')">
+                        <label for="questionCodeToggle">Contains code block</label>
+                    </div>
+                    <textarea id="questionText" rows="4" placeholder="Enter your question here..."></textarea>
+                    <div class="code-help" id="questionCodeHelp" style="display: none;">
+                        💡 Wrap code with ```java or ``` for syntax highlighting
+                    </div>
+                </div>
+
+                <div class="form-group" id="mcqOptions">
+                    <label class="form-label">Options (Select correct answer)</label>
+                    <div class="options-list">
+                        <div class="option-item">
+                            <span class="option-label">A</span>
+                            <input type="text" id="option0" placeholder="Option A">
+                            <input type="radio" name="correctAnswer" value="0">
+                        </div>
+                        <div class="option-item">
+                            <span class="option-label">B</span>
+                            <input type="text" id="option1" placeholder="Option B">
+                            <input type="radio" name="correctAnswer" value="1">
+                        </div>
+                        <div class="option-item">
+                            <span class="option-label">C</span>
+                            <input type="text" id="option2" placeholder="Option C">
+                            <input type="radio" name="correctAnswer" value="2">
+                        </div>
+                        <div class="option-item">
+                            <span class="option-label">D</span>
+                            <input type="text" id="option3" placeholder="Option D">
+                            <input type="radio" name="correctAnswer" value="3">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group" id="fibAnswer" style="display: none;">
+                    <label class="form-label">Correct Answer(s)</label>
+                    <div class="answer-inputs" id="answerInputs">
+                        <div class="answer-input-group">
+                            <input type="text" class="fib-answer" placeholder="Answer (case-insensitive)">
+                            <button class="btn-small" onclick="addAlternativeAnswer()"><span>+ Alternative</span></button>
+                        </div>
+                    </div>
+                    <div class="code-help">💡 Add multiple answers for variations (e.g., "true", "True", "TRUE")</div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Explanation</label>
+                    <div class="code-toggle">
+                        <input type="checkbox" id="explanationCodeToggle" onchange="updateCodeHelp('explanation')">
+                        <label for="explanationCodeToggle">Contains code block</label>
+                    </div>
+                    <textarea id="explanation" rows="3" placeholder="Explain the correct answer..."></textarea>
+                    <div class="code-help" id="explanationCodeHelp" style="display: none;">
+                        💡 Wrap code with ```java or ``` for syntax highlighting
+                    </div>
+                </div>
+
+                <div class="fab-group">
+                    <button class="btn-primary" onclick="saveCurrentQuestion()" style="flex: 1;"><span>💾 Save Question</span></button>
+                    <button class="delete-btn" onclick="deleteCurrentQuestion()" id="deleteBtn" style="display: none;"><span>🗑️ Delete</span></button>
+                </div>
+            </div>
+
+            <!-- Question List & JSON Output -->
+            <div>
+                <div class="panel" style="margin-bottom: 32px;">
+                    <div class="panel-header">
+                        <h2 class="panel-title">Questions (<span id="questionCount">0</span>)</h2>
+                        <button onclick="clearAll()"><span>Clear All</span></button>
+                    </div>
+                    <div class="question-list" id="questionList">
+                        <div class="empty-state">
+                            <div class="empty-state-icon">📋</div>
+                            <p>No questions yet. Create your first question!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2 class="panel-title">JSON Output</h2>
+                    </div>
+                    <div class="json-output" id="jsonOutput">[]</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="keyboard-hint">
+            <kbd>Ctrl</kbd>+<kbd>S</kbd> Save Question • <kbd>Ctrl</kbd>+<kbd>N</kbd> New Question • <kbd>Ctrl</kbd>+<kbd>D</kbd> Download
+        </div>
+    </div>
+
+    <script>
+        let questions = [];
+        let currentEditIndex = -1;
+
+        // Load from cookies on start
+        loadFromCookie();
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey || e.metaKey) {
+                if (e.key === 's') {
+                    e.preventDefault();
+                    saveCurrentQuestion();
+                } else if (e.key === 'n') {
+                    e.preventDefault();
+                    addQuestion();
+                } else if (e.key === 'd') {
+                    e.preventDefault();
+                    downloadJSON();
+                }
+            }
+        });
+
+        function updateQuestionTypeUI() {
+            const type = document.getElementById('questionType').value;
+            document.getElementById('mcqOptions').style.display = type === 'mcq' ? 'block' : 'none';
+            document.getElementById('fibAnswer').style.display = type === 'fib' ? 'block' : 'none';
+        }
+
+        function updateCodeHelp(field) {
+            const toggle = document.getElementById(field + 'CodeToggle');
+            const help = document.getElementById(field + 'CodeHelp');
+            help.style.display = toggle.checked ? 'block' : 'none';
+        }
+
+        function addAlternativeAnswer() {
+            const container = document.getElementById('answerInputs');
+            const newInput = document.createElement('div');
+            newInput.className = 'answer-input-group';
+            newInput.innerHTML = `
+                <input type="text" class="fib-answer" placeholder="Alternative answer">
+                <button class="btn-small delete-btn" onclick="this.parentElement.remove()"><span>✕</span></button>
+            `;
+            container.appendChild(newInput);
+        }
+
+        function addQuestion() {
+            currentEditIndex = -1;
+            clearForm();
+            document.getElementById('deleteBtn').style.display = 'none';
+            updateQuestionList();
+        }
+
+        function saveCurrentQuestion() {
+            const type = document.getElementById('questionType').value;
+            const questionText = document.getElementById('questionText').value.trim();
+            const explanation = document.getElementById('explanation').value.trim();
+
+            if (!questionText) {
+                alert('Please enter a question text');
+                return;
+            }
+
+            const question = {
+                question: questionText,
+                explanation: explanation || 'No explanation provided.'
+            };
+
+            if (type === 'mcq') {
+                const options = [
+                    document.getElementById('option0').value.trim(),
+                    document.getElementById('option1').value.trim(),
+                    document.getElementById('option2').value.trim(),
+                    document.getElementById('option3').value.trim()
+                ];
+
+                if (options.some(opt => !opt)) {
+                    alert('Please fill in all options');
+                    return;
+                }
+
+                const correctAnswer = document.querySelector('input[name="correctAnswer"]:checked');
+                if (!correctAnswer) {
+                    alert('Please select the correct answer');
+                    return;
+                }
+
+                question.options = options;
+                question.answer = parseInt(correctAnswer.value);
+            } else {
+                const answerInputs = document.querySelectorAll('.fib-answer');
+                const answers = Array.from(answerInputs)
+                    .map(input => input.value.trim())
+                    .filter(val => val);
+
+                if (answers.length === 0) {
+                    alert('Please enter at least one answer');
+                    return;
+                }
+
+                question.type = 'fib';
+                question.answer = answers.length === 1 ? answers[0] : answers;
+            }
+
+            if (currentEditIndex >= 0) {
+                questions[currentEditIndex] = question;
+            } else {
+                questions.push(question);
+            }
+
+            saveToCookie();
+            updateJSON();
+            updateQuestionList();
+            addQuestion();
+        }
+
+        function deleteCurrentQuestion() {
+            if (currentEditIndex >= 0 && confirm('Delete this question?')) {
+                questions.splice(currentEditIndex, 1);
+                saveToCookie();
+                updateJSON();
+                updateQuestionList();
+                addQuestion();
+            }
+        }
+
+        function editQuestion(index) {
+            currentEditIndex = index;
+            const question = questions[index];
+
+            document.getElementById('questionText').value = question.question;
+            document.getElementById('explanation').value = question.explanation || '';
+
+            if (question.type === 'fib') {
+                document.getElementById('questionType').value = 'fib';
+                updateQuestionTypeUI();
+
+                const answerContainer = document.getElementById('answerInputs');
+                answerContainer.innerHTML = '';
+
+                const answers = Array.isArray(question.answer) ? question.answer : [question.answer];
+                answers.forEach((ans, i) => {
+                    const group = document.createElement('div');
+                    group.className = 'answer-input-group';
+                    group.innerHTML = `
+                        <input type="text" class="fib-answer" value="${ans}" placeholder="Answer">
+                        ${i === 0 
+                            ? '<button class="btn-small" onclick="addAlternativeAnswer()"><span>+ Alternative</span></button>'
+                            : '<button class="btn-small delete-btn" onclick="this.parentElement.remove()"><span>✕</span></button>'
+                        }
+                    `;
+                    answerContainer.appendChild(group);
+                });
+            } else {
+                document.getElementById('questionType').value = 'mcq';
+                updateQuestionTypeUI();
+
+                question.options.forEach((opt, i) => {
+                    document.getElementById(`option${i}`).value = opt;
+                });
+
+                document.querySelectorAll('input[name="correctAnswer"]')[question.answer].checked = true;
+            }
+
+            document.getElementById('deleteBtn').style.display = 'inline-flex';
+            updateQuestionList();
+        }
+
+        function clearForm() {
+            document.getElementById('questionText').value = '';
+            document.getElementById('explanation').value = '';
+            document.getElementById('option0').value = '';
+            document.getElementById('option1').value = '';
+            document.getElementById('option2').value = '';
+            document.getElementById('option3').value = '';
+            document.querySelectorAll('input[name="correctAnswer"]').forEach(r => r.checked = false);
+            
+            const answerContainer = document.getElementById('answerInputs');
+            answerContainer.innerHTML = `
+                <div class="answer-input-group">
+                    <input type="text" class="fib-answer" placeholder="Answer (case-insensitive)">
+                    <button class="btn-small" onclick="addAlternativeAnswer()"><span>+ Alternative</span></button>
+                </div>
+            `;
+
+            document.getElementById('questionCodeToggle').checked = false;
+            document.getElementById('explanationCodeToggle').checked = false;
+            updateCodeHelp('question');
+            updateCodeHelp('explanation');
+        }
+
+        function updateQuestionList() {
+            const list = document.getElementById('questionList');
+            document.getElementById('questionCount').textContent = questions.length;
+
+            if (questions.length === 0) {
+                list.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">📋</div>
+                        <p>No questions yet. Create your first question!</p>
+                    </div>
+                `;
+                return;
+            }
+
+            list.innerHTML = questions.map((q, i) => `
+                <div class="question-card ${i === currentEditIndex ? 'active' : ''}" onclick="editQuestion(${i})">
+                    <div class="question-card-header">
+                        <span class="question-number">Q${i + 1}</span>
+                        <span class="question-type">${q.type === 'fib' ? 'FIB' : 'MCQ'}</span>
+                    </div>
+                    <div class="question-preview">${q.question}</div>
+                </div>
+            `).join('');
+        }
+
+        function updateJSON() {
+            const output = document.getElementById('jsonOutput');
+            output.textContent = JSON.stringify(questions, null, 2);
+        }
+
+        function copyJSON() {
+            const json = JSON.stringify(questions, null, 2);
+            navigator.clipboard.writeText(json).then(() => {
+                alert('JSON copied to clipboard!');
+            });
+        }
+
+        function downloadJSON() {
+            const json = JSON.stringify(questions, null, 2);
+            const blob = new Blob([json], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'quiz.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function testQuiz() {
+            if (questions.length === 0) {
+                alert('Add some questions first!');
+                return;
+            }
+            
+            const json = JSON.stringify(questions);
+            localStorage.setItem('testQuizData', json);
+            window.open('about:blank', '_blank');
+        }
+
+        function clearAll() {
+            if (confirm('Clear all questions? This cannot be undone.')) {
+                questions = [];
+                saveToCookie();
+                updateJSON();
+                updateQuestionList();
+                addQuestion();
+            }
+        }
+
+        function saveToCookie() {
+            document.cookie = `quizCreator=${encodeURIComponent(JSON.stringify(questions))}; max-age=${60 * 60 * 24 * 365}; path=/`;
+        }
+
+        function loadFromCookie() {
+            const cookie = document.cookie
+                .split('; ')
+                .find(row => row.startsWith('quizCreator='));
+
+            if (cookie) {
+                try {
+                    questions = JSON.parse(decodeURIComponent(cookie.split('=')[1]));
+                    updateJSON();
+                    updateQuestionList();
+                } catch (e) {
+                    console.warn('Failed to load saved questions');
+                }
+            }
+        }
+
+        // Initialize
+        updateQuestionTypeUI();
+        updateJSON();
+    </script>
+</body>
+</html>
