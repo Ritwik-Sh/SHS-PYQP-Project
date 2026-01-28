@@ -1879,7 +1879,7 @@
 		"answer": 3
 	},
 	{
-		"question": "```java\nchar[] c = {'a', 'b', '2', 'c', '6', '4'};```\nWhat will be the size of the array c?",
+		"question": "\n```java\nchar[] c = {'a', 'b', '2', 'c', '6', '4'};\n```\nWhat will be the size of the array c?",
 		"options": [
 			"12 Bits",
 			"12 Bytes",
