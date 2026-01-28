@@ -15,6 +15,8 @@
             --secondary: #921e1c;
             --accent: #d6b329;
             --text: #e5f0fa;
+            --success: #4ade80;
+            --warning: #fbbf24;
         }
 
         * {
@@ -34,15 +36,18 @@
         body>h1 {
             margin-bottom: 5px;
             color: var(--secondary);
-            text-shadow: var(--accent);
             text-align: center;
             padding: 20px;
+            font-size: 2rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         main {
             display: flex;
             color: var(--text);
-            height: 84vh;
+            min-height: 84vh;
+            gap: 20px;
+            padding: 0 20px;
         }
 
         #left {
@@ -52,8 +57,9 @@
             flex-wrap: wrap;
             text-align: center;
             justify-content: center;
-            align-items: center;
-            overflow: scroll;
+            align-items: flex-start;
+            overflow-y: auto;
+            padding: 10px;
         }
 
         #back {
@@ -72,76 +78,162 @@
         }
 
         #back:hover {
-            scale: 1.1;
+            scale: 1.05;
+            background: rgba(146, 30, 28, 0.8);
         }
 
         #content {
             width: 100%;
             display: flex;
-            flex-wrap: inherit;
-            justify-content: inherit;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
         }
 
         .card {
-            background: var(--primary);
-            width: 12vw;
-            height: 20vh;
-            margin: 2vh;
-            transition: ease-in-out 100ms;
+            background: linear-gradient(135deg, rgba(147, 187, 234, 0.1), rgba(147, 187, 234, 0.05));
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(147, 187, 234, 0.2);
+            width: 280px;
+            min-height: 200px;
+            transition: all 300ms ease;
             border-radius: 16px;
-            padding: 1vh;
+            padding: 20px;
             cursor: pointer;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            opacity: 0;
+            transition: opacity 300ms ease;
         }
 
         .card:hover {
-            scale: 1.2;
-            box-shadow: 0 8px 12px rgba(147, 187, 234, 0.4);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(147, 187, 234, 0.3);
+            border-color: var(--primary);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card.class-card {
+            background: linear-gradient(135deg, var(--primary), rgba(147, 187, 234, 0.7));
         }
 
         .card.class-card>h2 {
-            font-size: 4vw;
+            font-size: 3.5rem;
             color: var(--bg);
-            font-weight: 600;
+            font-weight: 700;
+            margin-bottom: 8px;
         }
 
         .card.class-card>p {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             color: rgba(4, 11, 21, 0.7);
             font-weight: 500;
         }
 
         .card.subject-card,
         .card.topic-card {
-            background: linear-gradient(135deg, var(--primary), rgba(147, 187, 234, 0.8));
+            background: linear-gradient(135deg, rgba(147, 187, 234, 0.15), rgba(147, 187, 234, 0.05));
         }
 
         .card>i {
-            scale: 2.5;
-            margin-bottom: 10%;
-            color: var(--bg);
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
         }
 
         .card>h3 {
             font-size: 1.1rem;
-            color: var(--bg);
+            color: var(--text);
             font-weight: 600;
             text-align: center;
             word-wrap: break-word;
+            margin-bottom: 12px;
+        }
+
+        /* Progress indicators */
+        .progress-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: var(--success);
+            color: var(--bg);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .progress-badge.incomplete {
+            background: var(--warning);
+        }
+
+        .progress-badge.not-started {
+            background: rgba(147, 187, 234, 0.3);
+            color: var(--text);
+        }
+
+        .quiz-stats {
+            width: 100%;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(147, 187, 234, 0.2);
+        }
+
+        .quiz-stats-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+            color: rgba(229, 240, 250, 0.7);
+        }
+
+        .quiz-stats-row span:last-child {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            height: 6px;
+            background: rgba(147, 187, 234, 0.1);
+            border-radius: 3px;
             overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
+            margin-top: 8px;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--success), var(--primary));
+            border-radius: 3px;
+            transition: width 400ms ease;
+        }
+
+        .progress-bar-fill.incomplete {
+            background: linear-gradient(90deg, var(--warning), var(--accent));
         }
 
         #loading {
-            width: 12vw;
-            height: 12vh;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             display: none;
             position: relative;
@@ -157,10 +249,10 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            width: 11vw;
-            height: 11vh;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
-            background: #263238;
+            background: var(--bg);
         }
 
         @keyframes rotation {
@@ -182,9 +274,9 @@
         footer {
             background: var(--secondary);
             width: 80vw;
-            margin-left: 9vw;
+            margin: 40px auto 20px;
             border-radius: 16px;
-            padding: 1vh;
+            padding: 20px;
             text-align: center;
             color: var(--text);
         }
@@ -208,25 +300,42 @@
             width: 50vw;
             vertical-align: middle;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
         }
 
         #logo-img {
-            height: 40vw;
-            width: 40vw;
-            border: 8vw solid var(--accent);
-            border-radius: 100vb;
-            margin-top: 10%;
-            margin-bottom: 5%;
+            height: 350px;
+            width: 350px;
+            border: 20px solid var(--accent);
+            border-radius: 50%;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
 
         .mobileOnly {
             display: none;
         }
 
-        .fillout-embed-popup-button-45122879619980 {
-            width: 50vw !important;
-            background: var(--secondary) !important;
-            border-radius: 16px !important
+        .reset-all-btn {
+            background: var(--secondary);
+            border: 2px solid var(--accent);
+            color: var(--text);
+            padding: 12px 24px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 20px auto;
+            display: block;
+            transition: all 200ms ease;
+        }
+
+        .reset-all-btn:hover {
+            background: rgba(146, 30, 28, 0.8);
+            transform: scale(1.05);
         }
 
         @media (max-width: 768px) {
@@ -237,87 +346,51 @@
 
             main {
                 flex-direction: column;
-                height: auto;
-                min-height: 70vh;
+                min-height: auto;
+                padding: 10px;
             }
 
             #left {
                 width: 100%;
-                height: auto;
-                min-height: 60vh;
-                padding: 20px 10px;
-                overflow: visible;
+                padding: 10px;
             }
 
             #back {
-                display: none;
-                background: var(--secondary);
-                border: 2px solid var(--accent);
-                color: var(--text);
                 width: 90%;
                 max-width: 300px;
                 height: 50px;
                 margin: 10px auto 20px;
-                transition: ease-in-out 200ms;
-                border-radius: 16px;
-                padding: 10px;
-                cursor: pointer;
                 font-size: 1.1rem;
-            }
-
-            #back:hover {
-                transform: scale(1.05);
-            }
-
-            #content {
-                gap: 15px;
-                padding: 10px;
             }
 
             .card {
                 width: calc(50% - 10px);
-                min-width: 130px;
-                max-width: 160px;
-                height: 150px;
-                margin: 0;
+                min-width: 140px;
+                max-width: 180px;
+                min-height: 180px;
                 padding: 15px;
             }
 
-            .card:hover {
-                transform: scale(1.05);
-            }
-
             .card.class-card>h2 {
-                font-size: 3rem;
-            }
-
-            .card.class-card>p {
-                font-size: 0.85rem;
+                font-size: 2.5rem;
             }
 
             .card>i {
                 font-size: 2rem;
-                scale: 1;
-                margin-bottom: 12px;
             }
 
             .card>h3 {
                 font-size: 0.9rem;
-                -webkit-line-clamp: 3;
-            }
-
-            #loading {
-                width: 80px;
-                height: 80px;
-            }
-
-            #loading::after {
-                width: 70px;
-                height: 70px;
             }
 
             #logo {
                 display: none;
+            }
+
+            #logo-img {
+                height: 250px;
+                width: 250px;
+                border-width: 15px;
             }
 
             .mobileOnly {
@@ -328,24 +401,11 @@
 
             footer {
                 width: 90%;
-                margin: 20px auto;
                 padding: 20px 15px;
             }
 
             footer a {
                 font-size: 2.5rem;
-            }
-
-            footer h1 {
-                font-size: 1.5rem;
-            }
-
-            footer h2 {
-                font-size: 1.2rem;
-            }
-
-            footer p {
-                font-size: 0.9rem;
             }
         }
 
@@ -354,11 +414,11 @@
                 width: calc(50% - 8px);
                 min-width: 120px;
                 max-width: 140px;
-                height: 140px;
+                min-height: 160px;
             }
 
             .card.class-card>h2 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
 
             .card>i {
@@ -376,18 +436,21 @@
     <h1>SHS-PYQP Quizzes</h1>
     <main>
         <div id="left">
-            <button id="back"><i style="scale: 3;" class="fa-solid fa-arrow-left"></i></button>
+            <button id="back"><i style="font-size: 1.5rem;" class="fa-solid fa-arrow-left"></i> Back</button>
             <br>
             <div id="loading" class="loader"></div>
             <div id="content"></div>
         </div>
         <div id="logo">
-            <img src="../logo.png" id="logo-img">
+            <img src="../logo.png" id="logo-img" alt="SHS Logo">
             <div data-fillout-id="fomnXDhaxYus" data-fillout-embed-type="popup"
                 data-fillout-button-text="Contribute a Paper" data-fillout-dynamic-resize
                 data-fillout-button-color="#921E1C" data-fillout-inherit-parameters data-fillout-popup-size="medium">
             </div>
             <script src="https://server.fillout.com/embed/v1/"></script>
+            <button class="reset-all-btn" onclick="resetAllProgress()">
+                <i class="fa-solid fa-rotate-left"></i> Reset All Progress
+            </button>
         </div>
     </main>
 
@@ -489,6 +552,74 @@
             }
         }
 
+        // Cookie functions
+        function getQuizProgress(topicFile) {
+            const topic = topicFile.replace('.json', '');
+            const cookie = document.cookie
+                .split('; ')
+                .find(row => row.startsWith(`quizProgress_${topic}=`));
+
+            if (!cookie) return null;
+
+            try {
+                const progress = JSON.parse(
+                    decodeURIComponent(cookie.split('=')[1])
+                );
+                return progress;
+            } catch (e) {
+                console.warn('Corrupt quiz cookie');
+                return null;
+            }
+        }
+
+        function calculateProgress(progress, totalQuestions) {
+            if (!progress) return { percentage: 0, status: 'not-started' };
+            
+            const answeredCount = Object.keys(progress.userAnswers || {}).length;
+            const percentage = totalQuestions > 0 ? (answeredCount / totalQuestions) * 100 : 0;
+            
+            let status = 'not-started';
+            if (percentage === 100) status = 'complete';
+            else if (percentage > 0) status = 'incomplete';
+            
+            return { percentage, status, ...progress };
+        }
+
+        async function getQuizTotalQuestions(topicFile) {
+            try {
+                const response = await fetch(topicFile);
+                const questions = await response.json();
+                return questions.length;
+            } catch (error) {
+                console.warn('Could not load quiz questions:', topicFile);
+                return 0;
+            }
+        }
+
+        function resetAllProgress() {
+            if (confirm('Are you sure you want to reset ALL quiz progress? This action cannot be undone.')) {
+                // Get all cookies and delete quiz progress cookies
+                const cookies = document.cookie.split(';');
+                for (let cookie of cookies) {
+                    const cookieName = cookie.split('=')[0].trim();
+                    if (cookieName.startsWith('quizProgress_')) {
+                        document.cookie = `${cookieName}=; max-age=0; path=/`;
+                    }
+                }
+                
+                alert('All progress has been reset!');
+                
+                // Reload current view
+                if (navigationState.view === 'topics') {
+                    renderTopics(navigationState.currentClass, navigationState.currentSubject);
+                } else if (navigationState.view === 'subjects') {
+                    renderSubjects(navigationState.currentClass);
+                } else {
+                    renderClasses();
+                }
+            }
+        }
+
         function renderClasses() {
             const content = document.getElementById('content');
             content.innerHTML = '';
@@ -546,7 +677,7 @@
             });
         }
 
-        function renderTopics(cls, subject) {
+        async function renderTopics(cls, subject) {
             const content = document.getElementById('content');
             content.innerHTML = '';
 
@@ -561,18 +692,90 @@
                 return;
             }
 
-            subject.topics.forEach(topic => {
+            // Render cards with loading state
+            for (const topic of subject.topics) {
                 const card = document.createElement('div');
                 card.className = 'card topic-card';
                 card.innerHTML = `
                     <i class="fa-solid fa-clipboard-list"></i>
                     <h3>${topic.name}</h3>
+                    <div class="quiz-stats">
+                        <div class="quiz-stats-row">
+                            <span>Loading...</span>
+                        </div>
+                    </div>
                 `;
                 card.onclick = () => {
                     window.open(`/resources/questions.html?topic=${topic.file}`, '_blank');
                 };
                 content.appendChild(card);
-            });
+
+                // Load progress asynchronously
+                loadTopicProgress(card, topic);
+            }
+        }
+
+        async function loadTopicProgress(card, topic) {
+            const totalQuestions = await getQuizTotalQuestions(topic.file);
+            const progress = getQuizProgress(topic.file);
+            const progressData = calculateProgress(progress, totalQuestions);
+
+            const answeredCount = Object.keys(progress?.userAnswers || {}).length;
+            const correctCount = progress?.correctCount || 0;
+            const percentage = progressData.percentage;
+
+            let badgeHTML = '';
+            if (progressData.status === 'complete') {
+                badgeHTML = `<div class="progress-badge">Complete</div>`;
+            } else if (progressData.status === 'incomplete') {
+                badgeHTML = `<div class="progress-badge incomplete">In Progress</div>`;
+            } else {
+                badgeHTML = `<div class="progress-badge not-started">Not Started</div>`;
+            }
+
+            let statsHTML = '';
+            if (progressData.status !== 'not-started') {
+                statsHTML = `
+                    <div class="quiz-stats">
+                        <div class="quiz-stats-row">
+                            <span>Progress:</span>
+                            <span>${answeredCount}/${totalQuestions}</span>
+                        </div>
+                        <div class="quiz-stats-row">
+                            <span>Score:</span>
+                            <span>${correctCount}/${answeredCount}</span>
+                        </div>
+                        <div class="quiz-stats-row">
+                            <span>Accuracy:</span>
+                            <span>${answeredCount > 0 ? Math.round((correctCount / answeredCount) * 100) : 0}%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill ${progressData.status === 'complete' ? '' : 'incomplete'}" 
+                                 style="width: ${percentage}%"></div>
+                        </div>
+                    </div>
+                `;
+            } else {
+                statsHTML = `
+                    <div class="quiz-stats">
+                        <div class="quiz-stats-row">
+                            <span>Questions:</span>
+                            <span>${totalQuestions}</span>
+                        </div>
+                        <div class="quiz-stats-row">
+                            <span>Status:</span>
+                            <span>Ready to start</span>
+                        </div>
+                    </div>
+                `;
+            }
+
+            card.innerHTML = `
+                ${badgeHTML}
+                <i class="fa-solid fa-clipboard-list"></i>
+                <h3>${topic.name}</h3>
+                ${statsHTML}
+            `;
         }
 
         renderClasses();
