@@ -115,6 +115,30 @@
             border-color: var(--primary);
         }
 
+        /* Status bar for quiz cards */
+        .card.topic-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: rgba(147, 187, 234, 0.3);
+            transition: all 300ms ease;
+        }
+
+        .card.topic-card.complete::before {
+            background: linear-gradient(90deg, var(--success), #22c55e);
+        }
+
+        .card.topic-card.incomplete::before {
+            background: linear-gradient(90deg, var(--warning), var(--accent));
+        }
+
+        .card.topic-card.not-started::before {
+            background: rgba(147, 187, 234, 0.3);
+        }
+
         .card.class-card {
             background: linear-gradient(135deg, var(--primary), rgba(147, 187, 234, 0.7));
         }
@@ -152,28 +176,7 @@
             margin-bottom: 12px;
         }
 
-        /* Progress indicators */
-        .progress-badge {
-            position: absolute;
-            top: 12px;
-            right: 12px;
-            background: var(--success);
-            color: var(--bg);
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        .progress-badge.incomplete {
-            background: var(--warning);
-        }
-
-        .progress-badge.not-started {
-            background: rgba(147, 187, 234, 0.3);
-            color: var(--text);
-        }
+        /* Progress indicators - removed badge, using top bar instead */
 
         .quiz-stats {
             width: 100%;
@@ -294,7 +297,7 @@
         #logo-img {
             height: 350px;
             width: 350px;
-            border: 500px solid var(--accent);
+            border: 200px solid var(--accent);
             border-radius: 50%;
             margin-bottom: 30px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -708,19 +711,18 @@
             const correctCount = progress?.correctCount || 0;
             const percentage = progressData.percentage;
 
-            let badgeHTML = '';
-            if (progressData.status === 'complete') {
-                badgeHTML = `<div class="progress-badge">Complete</div>`;
-            } else if (progressData.status === 'incomplete') {
-                badgeHTML = `<div class="progress-badge incomplete">In Progress</div>`;
-            } else {
-                badgeHTML = `<div class="progress-badge not-started">Not Started</div>`;
-            }
+            // Add status class to card for top bar styling
+            card.classList.add(progressData.status);
 
             let statsHTML = '';
             if (progressData.status !== 'not-started') {
+                const statusText = progressData.status === 'complete' ? 'Complete' : 'In Progress';
                 statsHTML = `
                     <div class="quiz-stats">
+                        <div class="quiz-stats-row">
+                            <span>Status:</span>
+                            <span>${statusText}</span>
+                        </div>
                         <div class="quiz-stats-row">
                             <span>Progress:</span>
                             <span>${answeredCount}/${totalQuestions}</span>
@@ -743,19 +745,18 @@
                 statsHTML = `
                     <div class="quiz-stats">
                         <div class="quiz-stats-row">
-                            <span>Questions:</span>
-                            <span>${totalQuestions}</span>
+                            <span>Status:</span>
+                            <span>Not Started</span>
                         </div>
                         <div class="quiz-stats-row">
-                            <span>Status:</span>
-                            <span>Ready to start</span>
+                            <span>Questions:</span>
+                            <span>${totalQuestions}</span>
                         </div>
                     </div>
                 `;
             }
 
             card.innerHTML = `
-                ${badgeHTML}
                 <i class="fa-solid fa-clipboard-list"></i>
                 <h3>${topic.name}</h3>
                 ${statsHTML}
