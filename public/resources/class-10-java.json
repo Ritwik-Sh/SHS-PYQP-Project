@@ -1777,7 +1777,7 @@
 		"answer": 0
 	},
 	{
-		"question": "Assertion: Strings in Java are immutable.\n\nReason: Any operation that modifies a String actually creates a new String object in memory.",
+		"question": "Assertion: Strings in Java are immutable.\nReason: Any operation that modifies a String actually creates a new String object in memory.",
 		"options": [
 			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
 			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",

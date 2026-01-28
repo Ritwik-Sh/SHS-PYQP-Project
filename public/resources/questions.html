@@ -784,7 +784,9 @@
                 .replace(/```java\n([\s\S]*?)\n```/g,
                     '<pre><code class="language-java">$1</code></pre>')
                 .replace(/```([\s\S]*?)```/g,
-                    '<pre><code class="language-none">$1</code></pre>');
+                    '<pre><code class="language-none">$1</code></pre>')
+                .replace("\n", "<br>")
+                .replace("\t", "&emsp;");
         }
 
         function normalizeAnswer(answer) {
