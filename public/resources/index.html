@@ -95,7 +95,7 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(147, 187, 234, 0.2);
             width: 170px;
-            min-height: 140px;
+            min-height: 160px;
             transition: all 300ms ease;
             border-radius: 16px;
             padding: 20px;
@@ -109,26 +109,10 @@
             overflow: hidden;
         }
 
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            opacity: 0;
-            transition: opacity 300ms ease;
-        }
-
         .card:hover {
             transform: translateY(-8px);
             box-shadow: 0 12px 24px rgba(147, 187, 234, 0.3);
             border-color: var(--primary);
-        }
-
-        .card:hover::before {
-            opacity: 1;
         }
 
         .card.class-card {
