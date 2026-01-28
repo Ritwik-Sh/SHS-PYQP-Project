@@ -1945,15 +1945,14 @@
 		"explanation": "5 is a primitive int literal, so the int version is called without autoboxing"
 	},
 	{
-		"question": "What will be the output?\n```java\nint a = 5, b = 10;\na = a ^ b;\nb = a ^ b;\na = a ^ b;\nSystem.out.println(a + \" \" + b);\n```",
+		"question": "What is the aim of the following function?\n```java\nvoid Sample(int[] arr, int a, int b) {\n\tarr[a] += arr[b];\n\tarr[b] = arr[a] - arr[b];\n\tarr[a] = arr[a] - arr[b];\n}\n```",
 		"options": [
-			"5 10",
-			"10 5",
-			"15 5",
-			"Compilation error"
+			"To swap the values of Two Variables",
+			"To Swap the values of two Array Elements",
+			"Two store the values of two Array Elements",
+			"The Method is pointless."
 		],
-		"answer": 1,
-		"explanation": "This is the XOR swap trick. Values are swapped without a temp variable: a becomes 10, b becomes 5"
+		"answer": 1
 	},
 	{
 		"question": "What is the output?\n```java\nString s = \"1234\";\nint sum = 0;\nfor(int i = 0; i < s.length(); i++) {\n  sum += Character.getNumericValue(s.charAt(i));\n}\nSystem.out.println(sum);\n```",

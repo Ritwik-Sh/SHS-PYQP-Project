@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,15 +42,22 @@
             width: 200%;
             height: 200%;
             background: radial-gradient(circle at 20% 50%, rgba(147, 187, 234, 0.03) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(214, 179, 41, 0.02) 0%, transparent 50%);
+                radial-gradient(circle at 80% 80%, rgba(214, 179, 41, 0.02) 0%, transparent 50%);
             animation: gradientShift 20s ease-in-out infinite;
             pointer-events: none;
             z-index: 0;
         }
 
         @keyframes gradientShift {
-            0%, 100% { transform: translate(0, 0); }
-            50% { transform: translate(-10%, -10%); }
+
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(-10%, -10%);
+            }
         }
 
         .container {
@@ -627,17 +635,20 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
-        .panel, .question-card {
+        .panel,
+        .question-card {
             animation: slideIn 0.4s ease-out;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="header">
@@ -711,7 +722,8 @@
                     <div class="answer-inputs" id="answerInputs">
                         <div class="answer-input-group">
                             <input type="text" class="fib-answer" placeholder="Answer (case-insensitive)">
-                            <button class="btn-small" onclick="addAlternativeAnswer()"><span>+ Alternative</span></button>
+                            <button class="btn-small" onclick="addAlternativeAnswer()"><span>+
+                                    Alternative</span></button>
                         </div>
                     </div>
                     <div class="code-help">💡 Add multiple answers for variations (e.g., "true", "True", "TRUE")</div>
@@ -730,8 +742,10 @@
                 </div>
 
                 <div class="fab-group">
-                    <button class="btn-primary" onclick="saveCurrentQuestion()" style="flex: 1;"><span>💾 Save Question</span></button>
-                    <button class="delete-btn" onclick="deleteCurrentQuestion()" id="deleteBtn" style="display: none;"><span>🗑️ Delete</span></button>
+                    <button class="btn-primary" onclick="saveCurrentQuestion()" style="flex: 1;"><span>💾 Save
+                            Question</span></button>
+                    <button class="delete-btn" onclick="deleteCurrentQuestion()" id="deleteBtn"
+                        style="display: none;"><span>🗑️ Delete</span></button>
                 </div>
             </div>
 
@@ -760,7 +774,8 @@
         </div>
 
         <div class="keyboard-hint">
-            <kbd>Ctrl</kbd>+<kbd>S</kbd> Save Question • <kbd>Ctrl</kbd>+<kbd>N</kbd> New Question • <kbd>Ctrl</kbd>+<kbd>D</kbd> Download
+            <kbd>Ctrl</kbd>+<kbd>S</kbd> Save Question • <kbd>Ctrl</kbd>+<kbd>N</kbd> New Question •
+            <kbd>Ctrl</kbd>+<kbd>D</kbd> Download
         </div>
     </div>
 
@@ -910,7 +925,7 @@
                     group.className = 'answer-input-group';
                     group.innerHTML = `
                         <input type="text" class="fib-answer" value="${ans}" placeholder="Answer">
-                        ${i === 0 
+                        ${i === 0
                             ? '<button class="btn-small" onclick="addAlternativeAnswer()"><span>+ Alternative</span></button>'
                             : '<button class="btn-small delete-btn" onclick="this.parentElement.remove()"><span>✕</span></button>'
                         }
@@ -940,7 +955,7 @@
             document.getElementById('option2').value = '';
             document.getElementById('option3').value = '';
             document.querySelectorAll('input[name="correctAnswer"]').forEach(r => r.checked = false);
-            
+
             const answerContainer = document.getElementById('answerInputs');
             answerContainer.innerHTML = `
                 <div class="answer-input-group">
@@ -1008,7 +1023,7 @@
                 alert('Add some questions first!');
                 return;
             }
-            
+
             const json = JSON.stringify(questions);
             localStorage.setItem('testQuizData', json);
             window.open('about:blank', '_blank');
@@ -1049,4 +1064,5 @@
         updateJSON();
     </script>
 </body>
+
 </html>
