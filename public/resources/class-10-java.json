@@ -1890,7 +1890,7 @@
 		"explanation": "Each char in Java occupies 2 bytes. With 6 characters, the total size is 6 * 2 = 12 bytes."
 	},
 	{
-		"question": "Predict the output.\n```Java\nfloat f = 5.5;\nSystem.out.println(f++ - --f);\n```",
+		"question": "Predict the output.\n```java\nfloat f = 5.5;\nSystem.out.println(f++ - --f);\n```",
 		"options": [
 			"-1.0",
 			"0.0",
