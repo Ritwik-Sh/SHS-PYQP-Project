@@ -363,7 +363,7 @@
             background: rgba(147, 187, 234, 0.05);
         }
 
-        button.btn-primary {
+        button.btn-primary, button#submitBtn:enabled {
             background: var(--primary);
             color: var(--bg);
             border-color: var(--primary);
@@ -591,10 +591,8 @@
             </div>
             <div class="controls">
                 <button id="prevBtn" onclick="previousQuestion()">← Previous</button>
-                <div style="display: flex; gap: 12px;">
-                    <button id="submitBtn" onclick="submitAnswer()" disabled>Submit</button>
-                    <button class="btn-primary" id="nextBtn" onclick="nextQuestion()" style="display: none;">Next →</button>
-                </div>
+                <button id="submitBtn" onclick="submitAnswer()" disabled style="flex: 1;">Submit</button>
+                <button class="" id="nextBtn" onclick="nextQuestion()">Next →</button>
             </div>
             <div class="keyboard-hint" id="keyboardHint">
                 <kbd>←</kbd> Previous • <kbd>→</kbd> Next • <kbd>Enter</kbd> Submit/Next
@@ -652,9 +650,9 @@
                     e.preventDefault();
                     const submitBtn = document.getElementById('submitBtn');
                     const nextBtn = document.getElementById('nextBtn');
-                    if (submitBtn.style.display !== 'none' && !submitBtn.disabled) {
+                    if (!submitBtn.disabled) {
                         submitAnswer();
-                    } else if (nextBtn.style.display !== 'none') {
+                    } else {
                         nextQuestion();
                     }
                 }
@@ -674,15 +672,12 @@
             if (e.key === 'ArrowLeft') {
                 previousQuestion();
             } else if (e.key === 'ArrowRight') {
-                if (isAnswered) {
-                    nextQuestion();
-                }
+                nextQuestion();
             } else if (e.key === 'Enter' || e.key === ' ') {
                 const submitBtn = document.getElementById('submitBtn');
-                const nextBtn = document.getElementById('nextBtn');
-                if (submitBtn.style.display !== 'none' && !submitBtn.disabled) {
+                if (!submitBtn.disabled) {
                     submitAnswer();
-                } else if (nextBtn.style.display !== 'none') {
+                } else {
                     nextQuestion();
                 }
             }
@@ -852,6 +847,7 @@
                     fibInput.focus(); // Auto-focus for keyboard input
                     fibInput.oninput = () => {
                         document.getElementById('submitBtn').disabled = fibInput.value.trim() === '';
+                        nextBtn.classList.remove('btn-primary');
                     };
                 }
             } else {
@@ -890,18 +886,17 @@
                 }
                 document.getElementById('explanationText').innerHTML = formatCode(question.explanation);
                 explanation.classList.add('show');
-                document.getElementById('submitBtn').style.display = 'none';
-                document.getElementById('nextBtn').style.display = 'inline-block';
+                document.getElementById('submitBtn').disabled = true;
+                nextBtn.classList.add('btn-primary');
             } else {
                 explanation.classList.remove('show');
-                document.getElementById('submitBtn').style.display = 'inline-block';
                 document.getElementById('submitBtn').disabled = true;
-                document.getElementById('nextBtn').style.display = 'none';
+                nextBtn.classList.remove('btn-primary');
             }
             
             document.getElementById('prevBtn').disabled = currentQuestionIndex === 0;
             
-            if (currentQuestionIndex === questions.length - 1 && isAnswered) {
+            if (currentQuestionIndex === questions.length - 1 && Object.keys(userAnswers).length === questions.length) {
                 document.getElementById('nextBtn').textContent = 'View Results';
             } else {
                 document.getElementById('nextBtn').textContent = 'Next →';
@@ -924,6 +919,8 @@
             
             selectedAnswer = index;
             document.getElementById('submitBtn').disabled = false;
+
+            nextBtn.classList.remove('btn-primary');
         }
 
         function submitAnswer() {
@@ -980,9 +977,8 @@
             document.getElementById('explanationText').innerHTML = formatCode(question.explanation || 'No explanation provided.');
             explanation.classList.add('show');
             
-            document.getElementById('submitBtn').style.display = 'none';
-            document.getElementById('nextBtn').style.display = 'inline-block';
-            
+            document.getElementById('submitBtn').disabled = true;
+            nextBtn.classList.add('btn-primary');
             if (currentQuestionIndex === questions.length - 1) {
                 document.getElementById('nextBtn').textContent = 'View Results';
             }
@@ -995,7 +991,7 @@
                 currentQuestionIndex++;
                 saveProgress();
                 loadQuestion();
-            } else {
+            } else if (Object.keys(userAnswers).length === questions.length) {
                 showResults();
             }
         }
