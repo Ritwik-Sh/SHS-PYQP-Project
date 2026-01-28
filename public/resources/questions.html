@@ -885,7 +885,10 @@
             }
             
             if (isAnswered) {
-                document.getElementById('explanationText').innerHTML = formatCode(question.explanation || 'No explanation provided.');
+                if (!question.explanation) {
+                    document.getElementById('explanation').style.display = "none";
+                }
+                document.getElementById('explanationText').innerHTML = formatCode(question.explanation);
                 explanation.classList.add('show');
                 document.getElementById('submitBtn').style.display = 'none';
                 document.getElementById('nextBtn').style.display = 'inline-block';

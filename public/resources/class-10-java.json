@@ -2806,14 +2806,14 @@
 		"options": [
 			"To delete objects",
 			"To initialize objects with default values when no parameters are provided",
-			"To copy objects",
-			"To compare objects"
+			"To overwrite Objects",
+			"To act as a default function that runs automatically on object creation."
 		],
 		"answer": 1,
 		"explanation": "Default constructor provides a way to create objects without arguments, initializing with default values"
 	},
 	{
-		"question": "When is a logical error most difficult to detect?",
+		"question": "When is an error most difficult to detect?",
 		"options": [
 			"During compilation",
 			"During runtime when program crashes",
@@ -2821,7 +2821,7 @@
 			"During syntax checking"
 		],
 		"answer": 2,
-		"explanation": "Logical errors produce wrong results without crashes, making them hardest to detect and fix"
+		"explanation": "Logical errors produce wrong results without crashes, making them hardest to detect and fix. The Compiler tells you the error in the case of a syntax, or even runtime error. But you have to figure out the error yourself in the case of a logical one."
 	},
 	{
 		"question": "What is the best practice for naming constants in Java?",
