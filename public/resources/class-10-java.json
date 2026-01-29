@@ -572,17 +572,6 @@
 		"explanation": "The code finds the maximum element in the array. Maximum is 9"
 	},
 	{
-		"question": "What is the output?\n```java\nboolean b = true;\nSystem.out.println(!b);\n```",
-		"options": [
-			"true",
-			"false",
-			"1",
-			"0"
-		],
-		"answer": 1,
-		"explanation": "! is the NOT operator. !true = false"
-	},
-	{
 		"question": "Which method is used in the process of inputting a character from console using Scanner?",
 		"options": [
 			"readChar()",
