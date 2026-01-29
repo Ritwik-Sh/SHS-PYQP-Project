@@ -44,7 +44,7 @@
 		"explanation": "Both s1 and s2 refer to the same String literal in the string pool, so == returns true"
 	},
 	{
-		"question": "The ```java compareTo()``` method is used to compare Strings _______.",
+		"question": "The \n```java\ncompareTo()``` method is used to compare Strings _______.",
 		"options": [
 			"Lengthwise only",
 			"Character wise only",
@@ -830,7 +830,7 @@
 			"10",
 			"13",
 			"25",
-			"15"
+			"Compilation Error"
 		],
 		"answer": 2,
 		"explanation": "x *= 2 + 3 is evaluated as x = x * (2 + 3) = 5 * 5 = 25"
@@ -1421,7 +1421,7 @@
 		"question": "What will be the output?\n```java\nint x = 5;\nx *= 3 + 2;\nSystem.out.println(x);\n```",
 		"options": [
 			"25",
-			"15",
+			"17",
 			"10",
 			"Compilation error"
 		],
@@ -1445,7 +1445,8 @@
 			"Runtime error",
 			"No Error"
 		],
-		"answer": 2
+		"answer": 2,
+		"explanation": "Dividing by zero causes ArithmeticException: Division by Zero at runtime"
 	},
 	{
 		"question": "What will be the output?\n```java\nint a = 10, b = 5;\nint result = a > b ? a - b : a + b;\nSystem.out.println(result);\n```",

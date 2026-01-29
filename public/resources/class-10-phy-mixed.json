@@ -1,0 +1,109 @@
+[
+  {
+    "question": "A uniform metre rule is acted upon by 2 equal and opposite forces. The type of movement it will produce:",
+    "explanation": "2 equal and opposite forces produce a rotational movement (moment of couple)",
+    "options": [
+      "centripetal",
+      "translational",
+      "rotational",
+      "both b & c"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "CG of a body depends on which of the following?",
+    "explanation": "No explanation provided.",
+    "options": [
+      "Distribution of mass",
+      "Shape of the body",
+      "Material of the body",
+      "both a & b"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "UCM is a/an _______ motion (constant/accelerated/centripetal)",
+    "explanation": "No explanation provided.",
+    "type": "fib",
+    "answer": "Accelerated"
+  },
+  {
+    "question": "For the same kinetic energy of a body, what should be the change it its velocity if mass is quadrupled? (halved/doubled/unchanged/become 1/4th)",
+    "explanation": "No explanation provided.",
+    "type": "fib",
+    "answer": "doubled"
+  },
+  {
+    "question": "Calculate the kinetic energy of a body of mass 100 g and momentum 20 kg m/s \n(Mention your answer in this format: n J, where n is the numerical value of your answer.",
+    "explanation": "No explanation provided.",
+    "type": "fib",
+    "answer": "2000 J"
+  },
+  {
+    "question": "Select the correct statements:\n1.\tThe SI unit or electrical energy is Watt\n2.\tThe CGS unit of work is dyne cm\n3.\tElectron Volt is a unit of energy\n4.\tSI unit of electrical power is Watt",
+    "explanation": "No explanation provided.",
+    "options": [
+      "1&3",
+      "2&4",
+      "3&4",
+      "1&4"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "The conversion of energy in a thermoelectric power plant-",
+    "explanation": "No explanation provided.",
+    "options": [
+      "Chemical --> Thermal --> Electrical --> Mechanical",
+      "Chemical --> Thermal --> mechanical --> electrical",
+      "Electrical --> Thermal --> Mechanical --> Chemical",
+      "Can't say"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "A: Work energy theorem describes the equivalence between velocity, force and energy\nB: According to W.E.T: W = ma x (v2-u2)/2a",
+    "explanation": "No explanation provided.",
+    "options": [
+      "Both are true",
+      "Both are false",
+      "A is true B is false",
+      "A is false B is true"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "A: K.E. is equal to the work that a moving body can do before obtaining a position of rest\nB: K.E. can change into any form of energy",
+    "explanation": "No explanation provided.",
+    "options": [
+      "Both are true",
+      "Both are false",
+      "A is true B is false",
+      "A is false B is true"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Human forearm belongs to the same class of lever as _______ (wheelbarrow/shears/tongs)",
+    "explanation": "No explanation provided.",
+    "type": "fib",
+    "answer": "tongs"
+  },
+  {
+    "question": "(Seesaw/cricket bat/nut cracker) act as a speed gainer",
+    "explanation": "No explanation provided.",
+    "type": "fib",
+    "answer": "cricket bat"
+  },
+  {
+    "question": "The conversion of heat energy to electrical energy takes place in:",
+    "explanation": "No explanation provided.",
+    "options": [
+      "Thermocouple",
+      "Heater",
+      "Toaster",
+      "None"
+    ],
+    "answer": 0
+  }
+]
