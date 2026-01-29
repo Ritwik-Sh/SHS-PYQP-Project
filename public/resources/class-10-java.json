@@ -572,17 +572,6 @@
 		"explanation": "The code finds the maximum element in the array. Maximum is 9"
 	},
 	{
-		"question": "Which keyword is used to refer to current object?",
-		"options": [
-			"this",
-			"super",
-			"current",
-			"self"
-		],
-		"answer": 0,
-		"explanation": "this keyword refers to the current object instance"
-	},
-	{
 		"question": "What is the output?\n```java\nboolean b = true;\nSystem.out.println(!b);\n```",
 		"options": [
 			"true",
@@ -2164,17 +2153,6 @@
 		"explanation": "x > y is false, so y++ is evaluated. z gets 200, then y becomes 201. Output: 100 201 200"
 	},
 	{
-		"question": "What will be the output?\n```java\nclass Animal {\n  void sound() { System.out.print(\"Animal \"); }\n}\nclass Dog extends Animal {\n  void sound() { System.out.print(\"Bark \"); }\n  void display() { \n    sound();\n    super.sound();\n  }\n}\npublic static void main(String args[]) {\n  Dog d = new Dog();\n  d.display();\n}\n```",
-		"options": [
-			"Bark Animal ",
-			"Animal Bark ",
-			"Bark Bark ",
-			"Animal Animal "
-		],
-		"answer": 0,
-		"explanation": "sound() calls overridden method (Bark), super.sound() calls parent method (Animal)"
-	},
-	{
 		"question": "What is the output?\n```java\nint sum = 0;\nfor(int i = 10; i > 0; i /= 2) {\n  sum += i;\n}\nSystem.out.println(sum);\n```",
 		"options": [
 			"15",
@@ -2637,17 +2615,6 @@
 		"explanation": "Single pass maintaining two variables is O(n), more efficient than sorting O(n log n)"
 	},
 	{
-		"question": "What happens when a subclass constructor is called?",
-		"options": [
-			"Only subclass constructor executes",
-			"Parent constructor executes first, then subclass constructor",
-			"Subclass constructor executes first, then parent constructor",
-			"Both execute simultaneously"
-		],
-		"answer": 1,
-		"explanation": "Java implicitly calls super() first, ensuring parent initialization before child"
-	},
-	{
 		"question": "Which loop is most appropriate for traversing a 2D array when you don't need the indices?",
 		"options": [
 			"while loop",
@@ -2899,17 +2866,6 @@
 		],
 		"answer": 1,
 		"explanation": "Insertion sort is efficient for small or nearly sorted arrays with O(n) best case"
-	},
-	{
-		"question": "What is the purpose of the super keyword in a constructor?",
-		"options": [
-			"To call sibling class constructor",
-			"To call parent class constructor",
-			"To call the same class constructor",
-			"To create new objects"
-		],
-		"answer": 1,
-		"explanation": "super() calls parent class constructor, must be first statement in subclass constructor"
 	},
 	{
 		"question": "A programmer wants to count frequency of each character in a string. What is the most efficient approach?",
@@ -4341,14 +4297,1148 @@
 		"answer": 1,
 		"explanation": "To transpose in-place, swap only when i < j to avoid swapping twice (which reverses the swap). For a 3x3 matrix, swap 3 pairs: (0,1), (0,2), (1,2). Option (a) would swap twice, undoing the transpose."
 	},
-	  {
-    "question": "🧠 THE BRAIN-TEASER - A challenging question that requires careful tracing:\n```java\npublic class Puzzle {\n  public static void main(String[] args) {\n    int[] numbers = {12, 7, 18, 5, 23, 9, 14};\n    int sum = 0;\n    int count = 0;\n    \n    for(int i = 0; i < numbers.length; i++) {\n      if(numbers[i] % 2 != 0) {\n        sum += numbers[i];\n        count++;\n      }\n    }\n    \n    int result = 0;\n    for(int i = 1; i <= count; i++) {\n      result += i * 2;\n    }\n    \n    System.out.println(result + sum / ++count);\n  }\n}\n```\nWhat is the output?",
+	{
+		"question": "🧠 THE BRAIN-TEASER - A challenging question that requires careful tracing:\n```java\npublic class Puzzle {\n  public static void main(String[] args) {\n    int[] numbers = {12, 7, 18, 5, 23, 9, 14};\n    int sum = 0;\n    int count = 0;\n    \n    for(int i = 0; i < numbers.length; i++) {\n      if(numbers[i] % 2 != 0) {\n        sum += numbers[i];\n        count++;\n      }\n    }\n    \n    int result = 0;\n    for(int i = 1; i <= count; i++) {\n      result += i * 2;\n    }\n    \n    System.out.println(result + sum / ++count);\n  }\n}\n```\nWhat is the output?",
 		"options": [
-		"28.8",
-		"28",
-		"31.8",
-		"31"
+			"28.8",
+			"28",
+			"31.8",
+			"31"
 		],
 		"answer": 1
-	}
+	},
+	{
+		"question": "What enables Java to be a \"Write Once, Run Anywhere\" language?",
+		"options": [
+			"Java Compiler",
+			"Java Virtual Machine (JVM)",
+			"Java Development Kit (JDK)",
+			"Java Runtime Environment (JRE)"
+		],
+		"answer": 1
+	},
+	{
+		"question": "Which of the following happens automatically in Java during autoboxing?",
+		"options": [
+			"A primitive type is automatically converted to a corresponding wrapper class object.",
+			"Both autoboxing and unboxing occur at the same time",
+			"An object is automatically converted to a string representation.",
+			"A string is automatically converted to a primitive type."
+		],
+		"answer": 0
+	},
+	{
+		"question": "Consider the following program segment where the statements are jumbled, choose the correct order of statements to find the sum of the odd factors of a number.\n```Java\nvoid sum(int n) {\n\tsum+=i; // 1\n\tfor(int i = 1; i <=n; i++) { // 2\n\t\tint sum = 0; // 3; \n\t}\n\tif(n%i==0 && i%2!=0) // 4\n}\nSystem.out.println(sum); // 5\n}\n```\n",
+		"options": [
+			"2, 3, 4, 1, 5",
+			"3, 2, 4, 1, 5",
+			"2, 4, 1, 3, 5",
+			"3, 4, 2, 1, 5"
+		],
+		"answer": 1
+	},
+	{
+		"question": "Assertion: The == operator compares the content of two String objects.\nReason: String is a primitive data type in Java.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is False and Reason is false",
+			"Assertion is True and Reason is false"
+		],
+		"answer": 2,
+		"explanation": "== compares references, not content. Use .equals() for content comparison. String is a reference type, not primitive."
+	},
+	{
+		"question": "Assertion: A constructor must have the same name as the class.\nReason: Constructors are used to initialize objects when they are created.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 1,
+		"explanation": "Constructors must have the same name as the class. They initialize objects. Both are true but independent facts."
+	},
+	{
+		"question": "Assertion: The charAt() method throws StringIndexOutOfBoundsException if the index is negative.\nReason: String indices in Java start from 0.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "charAt() throws exception for negative or out-of-bounds indices. Valid indices are 0 to length-1."
+	},
+	{
+		"question": "Assertion: The break statement can be used to exit from a switch statement.\nReason: Without break, execution falls through to the next case in the switch.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "Break exits switch preventing fall-through. Without break, subsequent cases execute regardless of match."
+	},
+	{
+		"question": "Assertion: Arrays in Java have a fixed size once declared.\nReason: The length of an array is stored in the length property.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 1,
+		"explanation": "Array size is fixed after creation. Arrays have length property. Both true but reason doesn't explain fixed size."
+	},
+	{
+		"question": "Assertion: A final variable can be modified after initialization.\nReason: The final keyword makes a variable constant.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is False and Reason is true",
+			"Assertion is True and Reason is false"
+		],
+		"answer": 2,
+		"explanation": "Final variables cannot be modified once initialized (assertion false). Final makes variables constant (reason true)."
+	},
+	{
+		"question": "Assertion: Local variables must be initialized before use.\nReason: Java automatically initializes all variables with default values.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 2,
+		"explanation": "Local variables must be explicitly initialized. Only instance and class variables get default values automatically."
+	},
+	{
+		"question": "Assertion: The compareTo() method returns 0 when two strings are equal.\nReason: compareTo() performs lexicographic comparison of strings.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "compareTo() returns 0 for equal strings, positive if first is greater, negative if smaller lexicographically."
+	},
+	{
+		"question": "Assertion: A class can have multiple constructors with different parameters.\nReason: Constructor overloading allows different ways to create objects.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "Multiple constructors with different parameter lists (constructor overloading) provide flexibility in object creation."
+	},
+	{
+		"question": "Assertion: The length() method can be used with both String and arrays.\nReason: Both String and arrays are objects in Java.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is False and Reason is true",
+			"Assertion is True and Reason is false"
+		],
+		"answer": 2,
+		"explanation": "Arrays use 'length' property (no parentheses), String uses length() method. Both are objects but access differently."
+	},
+	{
+		"question": "Assertion: The expression (x > y) ? x : y returns the maximum of x and y.\nReason: The ternary operator evaluates the condition and returns one of two values.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "Ternary operator (? :) returns x if x > y is true, else y. Returns the maximum value."
+	},
+	{
+		"question": "Assertion: The substring() method with one parameter returns the substring from that index to the end.\nReason: The substring() method always requires two parameters.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 2,
+		"explanation": "substring(int beginIndex) returns from beginIndex to end. There's also a two-parameter version."
+	},
+	{
+		"question": "Assertion: Static methods can access instance variables directly.\nReason: Static methods belong to the class rather than individual objects.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is False and Reason is true",
+			"Assertion is True and Reason is false"
+		],
+		"answer": 2,
+		"explanation": "Static methods cannot access instance variables directly. They belong to class, not objects with instance variables."
+	},
+	{
+		"question": "Assertion: The indexOf() method returns -1 if the character is not found.\nReason: Valid string indices cannot be negative in Java.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "indexOf() returns -1 for not found because valid indices are 0 onwards. -1 indicates absence."
+	},
+	{
+		"question": "Assertion: Method overloading is resolved at compile time.\nReason: The compiler determines which method to call based on the number and type of arguments.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "Method overloading is compile-time polymorphism. Compiler selects method based on method signature (parameters)."
+	},
+	{
+		"question": "Assertion: The toUpperCase() method modifies the original String.\nReason: All String methods that change content return new String objects.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is False and Reason is true",
+			"Assertion is True and Reason is false"
+		],
+		"answer": 2,
+		"explanation": "toUpperCase() doesn't modify original String (immutable). It returns new String. String immutability is the reason."
+	},
+	{
+		"question": "Assertion: A for loop can have multiple update expressions.\nReason: The for loop syntax allows comma-separated expressions in the update section.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "For loop allows multiple updates: for(int i=0, j=10; i<j; i++, j--). Comma separates expressions."
+	},
+	{
+		"question": "Assertion: The equals() method compares object references.\nReason: The default equals() method is inherited from the Object class.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is False and Reason is true",
+			"Assertion is True and Reason is false"
+		],
+		"answer": 2,
+		"explanation": "Default equals() compares references (true for Object), but String overrides it to compare content. String.equals() compares content."
+	},
+	{
+		"question": "Assertion: Array indices start from 0 in Java.\nReason: The first element is accessed using index 1.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 2,
+		"explanation": "Array indices start from 0 (assertion true). First element is arr[0], not arr[1] (reason false)."
+	},
+	{
+		"question": "Assertion: The trim() method removes all whitespace from a string.\nReason: Whitespace includes spaces, tabs, and newlines.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is False and Reason is true",
+			"Assertion is True and Reason is false"
+		],
+		"answer": 2,
+		"explanation": "trim() only removes leading and trailing whitespace, not from middle. Whitespace definition is correct."
+	},
+	{
+		"question": "Assertion: Constructors cannot be declared as static.\nReason: Constructors are called using the new keyword to create instances.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "Constructors create instances, incompatible with static (class-level). Static contradicts instance creation purpose."
+	},
+	{
+		"question": "Assertion: The continue statement terminates the loop execution.\nReason: Continue skips the current iteration and moves to the next iteration.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is False and Reason is true",
+			"Assertion is True and Reason is false"
+		],
+		"answer": 2,
+		"explanation": "Continue skips current iteration, doesn't terminate loop (assertion false). Reason correctly describes continue."
+	},
+	{
+		"question": "Assertion: Binary search requires the array to be sorted.\nReason: Binary search divides the search space in half each iteration.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "Binary search needs sorted array to correctly divide search space. It compares middle element and eliminates half."
+	},
+	{
+		"question": "Assertion: Java is pass-by-value for all parameters.\nReason: When passing objects, the object itself is copied to the method.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 2,
+		"explanation": "Java is pass-by-value (true), but for objects, the reference value is copied, not the object itself."
+	},
+	{
+		"question": "Assertion: The replace() method replaces all occurrences of a character.\nReason: String methods return new String objects due to immutability.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 1,
+		"explanation": "replace() replaces all occurrences (true). Returns new String due to immutability (true). Both true but independent."
+	},
+	{
+		"question": "Assertion: A class can have only one constructor.\nReason: Constructors are special methods used to initialize objects.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is False and Reason is true",
+			"Assertion is True and Reason is false"
+		],
+		"answer": 2,
+		"explanation": "A class can have multiple constructors through overloading. Constructors do initialize objects."
+	},
+	{
+		"question": "Assertion: The default access modifier allows access within the same package.\nReason: Default access is also known as package-private access.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "Default (no modifier) restricts access to same package, hence called package-private."
+	},
+	{
+		"question": "Assertion: The Math.pow() method returns a double value.\nReason: Power operations may result in floating-point values.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "Math.pow() returns double to accommodate fractional exponents and large/decimal results."
+	},
+	{
+		"question": "Assertion: An empty string is the same as a null string.\nReason: Both represent the absence of string content.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is False and Reason is false",
+			"Assertion is True and Reason is false"
+		],
+		"answer": 2,
+		"explanation": "Empty string (\"\") is an object with length 0. null means no object exists. They are different."
+	},
+	{
+		"question": "Assertion: The modulus operator (%) can be used with floating-point numbers.\nReason: Modulus operation returns the remainder after division.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 1,
+		"explanation": "% works with float/double (e.g., 5.5 % 2.0 = 1.5). Returns remainder. Both true but independent."
+	},
+	{
+		"question": "Assertion: The startsWith() method is case-sensitive.\nReason: Java String comparison methods are case-sensitive by default.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "startsWith() is case-sensitive. String methods like equals(), compareTo() are case-sensitive by default."
+	},
+	{
+		"question": "Assertion: A two-dimensional array is an array of arrays.\nReason: 2D arrays must have the same number of columns in each row.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 2,
+		"explanation": "2D arrays are arrays of arrays (true). Rows can have different lengths in Java (jagged arrays), reason false."
+	},
+	{
+		"question": "Assertion: The concat() method can join multiple strings in a single call.\nReason: concat() accepts variable number of string arguments.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is False and Reason is false",
+			"Assertion is True and Reason is false"
+		],
+		"answer": 2,
+		"explanation": "concat() takes only one String parameter. Must chain: s1.concat(s2).concat(s3) for multiple."
+	},
+	{
+		"question": "Assertion: The Character.isDigit() method returns true for digits 0-9.\nReason: Digit characters have ASCII values 48-57.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "isDigit() checks if character is '0'-'9'. These correspond to ASCII 48-57."
+	},
+	{
+		"question": "Assertion: The toLowerCase() method affects only uppercase letters.\nReason: Lowercase letters and digits remain unchanged by toLowerCase().",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "toLowerCase() converts only uppercase to lowercase. Other characters (lowercase, digits, symbols) unchanged."
+	},
+	{
+		"question": "Assertion: Arrays are dynamic data structures.\nReason: Array size can be changed after creation.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is False and Reason is false",
+			"Assertion is True and Reason is false"
+		],
+		"answer": 2,
+		"explanation": "Arrays are static - fixed size after creation. Cannot resize arrays in Java."
+	},
+	{
+		"question": "Assertion: Encapsulation is achieved by making variables private.\nReason: Private variables can only be accessed within the same class.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "Encapsulation hides data (private variables) accessible only within class, controlled through public methods."
+	},
+	{
+		"question": "Assertion: The logical AND operator (&&) uses short-circuit evaluation.\nReason: If the first operand is false, the second is not evaluated.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "Short-circuit evaluation in && stops at first false operand since result will be false regardless."
+	},
+	{
+		"question": "Assertion: The equalsIgnoreCase() method converts strings to lowercase before comparison.\nReason: This method compares strings without considering case differences.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is False and Reason is true",
+			"Assertion is True and Reason is false"
+		],
+		"answer": 2,
+		"explanation": "equalsIgnoreCase() performs case-insensitive comparison without converting strings. Compares characters ignoring case."
+	},
+	{
+		"question": "Assertion: The finally block always executes even if an exception occurs.\nReason: The finally block contains cleanup code that must run.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "Finally ensures cleanup code executes regardless of exception, return, or break statements."
+	},
+	{
+		"question": "Assertion: Bubble sort is more efficient than insertion sort.\nReason: Bubble sort makes fewer comparisons than insertion sort.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is False and Reason is false",
+			"Assertion is True and Reason is false"
+		],
+		"answer": 2,
+		"explanation": "Bubble sort is generally less efficient. Both have O(n²) average case, but insertion sort is better for nearly sorted data."
+	},
+	{
+		"question": "Assertion: The lastIndexOf() method searches for a character from the end.\nReason: This method returns the index of the last occurrence.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "lastIndexOf() searches backward from end and returns position of last occurrence."
+	},
+	{
+		"question": "Assertion: Variables declared inside a loop are accessible outside the loop.\nReason: Loops do not create a separate scope in Java.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is False and Reason is false",
+			"Assertion is True and Reason is false"
+		],
+		"answer": 2,
+		"explanation": "Variables inside loops are local to loop scope. Loops create scope - variables not accessible outside."
+	},
+	{
+		"question": "Assertion: The instanceof operator checks if an object belongs to a specific class.\nReason: This operator returns true if the object is an instance of the specified type.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "instanceof verifies type compatibility. Returns true if object is instance of the specified class or its subclass."
+	},
+	{
+		"question": "Assertion: The toCharArray() method converts a string into a character array.\nReason: Character arrays allow modification of individual characters.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 1,
+		"explanation": "toCharArray() converts String to char[]. Char arrays are mutable. Both true but independent facts."
+	},
+	{
+		"question": "Assertion: The Math.random() method returns a value between 0.0 and 1.0.\nReason: Random numbers are always integers in Java.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 2,
+		"explanation": "Math.random() returns double [0.0, 1.0). Need to multiply and cast for integers (reason false)."
+	},
+	{
+		"question": "Assertion: Nested loops are required to process two-dimensional arrays.\nReason: 2D arrays use row and column indices for element access.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "2D array requires row index (i) and column index (j), necessitating nested loops."
+	},
+	{
+		"question": "Assertion: Method overloading can be achieved by changing only the return type.\nReason: Return type is part of the method signature.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is False and Reason is false",
+			"Assertion is True and Reason is false"
+		],
+		"answer": 2,
+		"explanation": "Method signature includes name and parameters only, not return type. Cannot overload by return type alone."
+	},
+	{
+		"question": "Assertion: The split() method divides a string based on a delimiter.\nReason: The method returns an array of substrings.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "split() divides string using delimiter pattern and returns String array. E.g., \"a,b,c\".split(\",\") returns [\"a\",\"b\",\"c\"]."
+	},
+	{
+		"question": "Assertion: The Character.isLetter() method returns true for both uppercase and lowercase letters.\nReason: This method checks if a character is an alphabet.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "isLetter() returns true for all letters (A-Z, a-z). It checks if character is alphabetic."
+	},
+	{
+		"question": "Assertion: Linear search works on both sorted and unsorted arrays.\nReason: Linear search compares each element sequentially.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "Linear search checks each element one by one, working regardless of sorted/unsorted order."
+	},
+	{
+		"question": "Assertion: The endsWith() method is useful for checking file extensions.\nReason: File names typically have extensions at the end.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "endsWith() checks if string ends with suffix, perfect for validating extensions: filename.endsWith(\".pdf\")."
+	},
+	{
+		"question": "Assertion: The do-while loop executes at least once.\nReason: The condition is checked after the loop body executes.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "do-while executes body first, then checks condition. Guarantees at least one execution."
+	},
+	{
+		"question": "Assertion: Selection sort makes fewer swaps than bubble sort.\nReason: Selection sort finds the minimum and places it in correct position each iteration.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "Selection sort makes O(n) swaps (one per iteration). Bubble sort makes O(n²) swaps."
+	},
+	{
+		"question": "Assertion: The Math.ceil() method rounds a number up to the nearest integer.\nReason: Ceiling function returns the smallest integer greater than or equal to the input.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "Math.ceil() rounds up: ceil(4.1)=5.0, ceil(-4.9)=-4.0. Returns smallest integer ≥ input."
+	},
+	{
+		"question": "Assertion: The contains() method performs case-sensitive searching.\nReason: Java String methods are case-sensitive by default.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "contains() is case-sensitive. String methods like equals(), contains() are case-sensitive by default."
+	},
+	{
+		"question": "Assertion: Polymorphism allows a parent class reference to point to a child class object.\nReason: This is called upcasting in Java.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 1,
+		"explanation": "Parent reference to child object is allowed (true). This is upcasting (true). Both true but independent concepts."
+	},
+	{
+		"question": "Assertion: The Math.abs() method returns the absolute value.\nReason: Absolute value is always non-negative.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "abs() converts to positive: abs(-5)=5, abs(5)=5. Returns magnitude, always non-negative."
+	},
+	{
+		"question": "Assertion: String literals are stored in the String pool.\nReason: The String pool saves memory by reusing identical String literals.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "String literals are stored in a special memory area called String pool. This pool reuses identical strings to save memory."
+	},
+	{
+		"question": "Assertion: Array elements are stored in contiguous memory.\nReason: Contiguous storage enables constant time array access.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "Arrays store consecutively, enabling direct calculation: address = base + (index × size), providing O(1) access."
+	},
+	{
+		"question": "Assertion: The System.out.println() method automatically calls toString() on objects.\nReason: Every class has a toString() method.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "println() implicitly calls toString(). All classes inherit toString() from Object class."
+	},
+	{
+		"question": "Assertion: The conditional operator (?:) is the only ternary operator in Java.\nReason: Ternary operators require exactly three operands.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "?: is Java's only ternary operator with three operands: condition ? value1 : value2."
+	},
+	{
+		"question": "Assertion: Inheritance promotes code reusability.\nReason: A subclass can use methods and fields from its parent class.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "Inheritance enables reuse by allowing subclass to inherit non-private members from parent."
+	},
+	{
+		"question": "Assertion: The Math.floor() method always returns an integer.\nReason: Floor function rounds down to the nearest whole number.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is False and Reason is true",
+			"Assertion is True and Reason is false"
+		],
+		"answer": 2,
+		"explanation": "floor() returns double type (e.g., 4.0), not int. Does round down to whole number."
+	},
+	{
+		"question": "Assertion: Static variables are shared among all instances of a class.\nReason: Static variables belong to the class, not individual objects.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "Static variables are class-level, shared by all instances. Single copy exists for the class."
+	},
+	{
+		"question": "Assertion: The while loop may not execute even once.\nReason: The condition is checked before entering the loop body.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "while loop checks condition first. If false initially, body never executes (zero iterations possible)."
+	},
+	{
+		"question": "Assertion: The length property of an array can be modified.\nReason: Arrays have fixed size in Java.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is False and Reason is true",
+			"Assertion is True and Reason is false"
+		],
+		"answer": 2,
+		"explanation": "Array length is final/read-only, cannot be modified. Arrays have fixed size after creation."
+	},
+	{
+		"question": "Assertion: Exception handling improves program reliability.\nReason: Try-catch blocks prevent program crashes by handling errors gracefully.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "Exception handling catches errors preventing crashes, allowing recovery and maintaining program flow."
+	},
+	{
+		"question": "Assertion: The valueOf() method converts a string to its corresponding primitive type.\nReason: Each wrapper class has a valueOf() method.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 1,
+		"explanation": "valueOf() converts String to wrapper object (not primitive directly). Wrapper classes have valueOf(). Both true but independent."
+	},
+	{
+		"question": "Assertion: The new keyword is required to create objects in Java.\nReason: new allocates memory for the object on the heap.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "new keyword creates objects by allocating heap memory and calling constructor."
+	},
+	{
+		"question": "Assertion: Method overriding requires the same method signature in child class.\nReason: Method signature includes method name and parameter list.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "Overriding requires same signature (name + parameters) as parent method. Signature definition is correct."
+	},
+	{
+		"question": "Assertion: The Math.sqrt() method can work with negative numbers.\nReason: Square root of negative numbers results in NaN (Not a Number).",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 1,
+		"explanation": "Math.sqrt() accepts negative input (true), returns NaN for negative (true). Both true but method does 'work'."
+	},
+	{
+		"question": "Assertion: Private methods can be inherited by subclasses.\nReason: Private members are accessible only within the declaring class.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is False and Reason is true",
+			"Assertion is True and Reason is false"
+		],
+		"answer": 2,
+		"explanation": "Private methods are not inherited. Private members accessible only in declaring class (prevents inheritance)."
+	},
+	{
+		"question": "Assertion: The Character.isWhitespace() method returns true for spaces and tabs.\nReason: Whitespace characters include space, tab, newline, and carriage return.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "isWhitespace() returns true for space, tab, newline, etc. Whitespace definition is correct."
+	},
+	{
+		"question": "Assertion: The switch statement requires a break in each case.\nReason: Without break, execution falls through to subsequent cases.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is False and Reason is true",
+			"Assertion is True and Reason is false"
+		],
+		"answer": 2,
+		"explanation": "Break is not required but recommended. Without break, fall-through occurs (reason true)."
+	},
+	{
+		"question": "Assertion: Insertion sort is efficient for small datasets.\nReason: Insertion sort has O(n²) time complexity in the worst case.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 1,
+		"explanation": "Insertion sort is efficient for small/nearly sorted data (true). Has O(n²) worst case (true). Both true but independent."
+	},
+	{
+		"question": "Assertion: The Math.max() method returns the larger of two numbers.\nReason: This method compares two values and returns the maximum.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "Math.max(a, b) compares two values and returns the larger one."
+	},
+	{
+		"question": "Assertion: The default constructor is automatically provided if no constructor is defined.\nReason: Every class must have at least one constructor.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "Compiler provides default constructor if none defined. Every class needs constructor for object creation."
+	},
+	{
+		"question": "Assertion: The equalsIgnoreCase() method is more efficient than converting to lowercase and comparing.\nReason: equalsIgnoreCase() performs character-by-character comparison without creating new objects.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "equalsIgnoreCase() is more efficient as it compares characters directly without creating new String objects."
+	},
+	{
+		"question": "Assertion: A class can have multiple methods with the same name.\nReason: Method overloading allows methods with same name but different parameters.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "Method overloading permits multiple methods with same name but different parameter lists (number, type, or order)."
+	},
+	{
+		"question": "Assertion: The Character.isUpperCase() method returns true only for English uppercase letters.\nReason: This method checks for uppercase letters in any language supported by Unicode.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is False and Reason is true",
+			"Assertion is True and Reason is false"
+		],
+		"answer": 2,
+		"explanation": "isUpperCase() works with Unicode uppercase letters from any language, not just English A-Z."
+	},
+	{
+		"question": "Assertion: The logical OR operator (||) uses short-circuit evaluation.\nReason: If the first operand is true, the second operand is not evaluated.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "Short-circuit || stops at first true operand since result will be true regardless."
+	},
+	{
+		"question": "Assertion: Constructor parameters can have the same names as instance variables.\nReason: Local parameters shadow instance variables with the same name.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 1,
+		"explanation": "Parameters can have same names as instance variables (true). Shadowing occurs (true). Both true but independent concepts."
+	},
+	{
+		"question": "Assertion: The Math.min() method can compare two floating-point numbers.\nReason: Math methods are overloaded to work with different numeric types.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "Math.min() has overloaded versions for int, long, float, double. Can compare floating-point numbers."
+	},
+	{
+		"question": "Assertion: A class with all private constructors cannot be instantiated from outside.\nReason: Private constructors are used in the Singleton design pattern.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 1,
+		"explanation": "Private constructors prevent external instantiation (true). Used in Singleton (true). Both true, related but reason doesn't explain assertion."
+	},
+	{
+		"question": "Assertion: The replace() method is case-sensitive.\nReason: String comparison in Java is case-sensitive by default.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "replace() performs case-sensitive replacement. String operations are case-sensitive by default in Java."
+	},
+	{
+		"question": "Assertion: Array initialization can be done without specifying the size.\nReason: The size is automatically determined from the number of elements provided.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "int[] arr = {1,2,3} doesn't specify size. Compiler determines size from initialization values provided."
+	},
+	{
+		"question": "Assertion: The Character.toLowerCase() method converts only uppercase letters.\nReason: Characters that are not uppercase remain unchanged.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "Character.toLowerCase() converts uppercase to lowercase. Non-uppercase characters remain unchanged."
+	},
+	{
+		"question": "Assertion: The Math.round() method returns a long value.\nReason: Rounding can result in large integer values requiring long data type.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "Math.round() returns long (for double input) to accommodate full range of rounded values."
+	},
+	{
+		"question": "Assertion: Strings created using new keyword are always different objects.\nReason: The new keyword allocates memory on the heap for each object.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "new String() creates new object in heap each time, bypassing string pool. Each allocation creates separate object."
+	},
+	{
+		"question": "Assertion: The equals() method of String class compares content.\nReason: String class overrides the equals() method from Object class.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
+			"Assertion is True and Reason is false",
+			"Assertion is False and Reason is true"
+		],
+		"answer": 0,
+		"explanation": "String.equals() compares character content. String overrides Object.equals() to provide content comparison instead of reference."
+	},
+	{
+		"question": "Assertion: Method overloading depends on return type.\nReason: Java allows methods with same name and parameters if return type differs.",
+		"options": [
+		"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+		"Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
+		"Assertion is true and Reason is false",
+		"Assertion is false and Reason is true"
+		],
+		"answer": 3
+	},
+	  {
+    "question": "Assertion: ++x increments the value of x before it is used.\nReason: Prefix increment have a lower precedence than postfix increment.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
+      "Assertion is true and Reason is false",
+      "Assertion is false and Reason is true"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Assertion: a += b is equivalent to a = b + a.\nReason: Compound assignment operators perform implicit type casting if needed.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
+      "Assertion is true and Reason is false",
+      "Assertion is false and Reason is true"
+    ],
+    "answer": 0
+  },
+
+  {
+    "question": "Assertion: The do-while loop executes at least once.\nReason: The loop condition is checked after executing the loop body.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
+      "Assertion is true and Reason is false",
+      "Assertion is false and Reason is true"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Assertion: break exits only the current loop.\nReason: break transfers control to the statement immediately after the loop.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
+      "Assertion is true and Reason is false",
+      "Assertion is false and Reason is true"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Assertion: continue terminates the loop.\nReason: continue skips the remaining statements of the current iteration.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
+      "Assertion is true and Reason is false",
+      "Assertion is false and Reason is true"
+    ],
+    "answer": 3
+  },
+
+  {
+    "question": "Assertion: Strings in Java are immutable.\nReason: Any modification to a String creates a new String object.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
+      "Assertion is true and Reason is false",
+      "Assertion is false and Reason is true"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Assertion: s.concat(\"Java\") modifies the original string s.\nReason: String methods always modify existing objects.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
+      "Assertion is true and Reason is false",
+      "Assertion is false and Reason is true"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Assertion: equals() compares the contents of two String objects.\nReason: == compares references, not values.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
+      "Assertion is true and Reason is false",
+      "Assertion is false and Reason is true"
+    ],
+    "answer": 0
+  },
+
+  {
+    "question": "Assertion: Arrays in Java are objects.\nReason: Arrays are stored in heap memory.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
+      "Assertion is true and Reason is false",
+      "Assertion is false and Reason is true"
+    ],
+    "answer": 0
+  }
 ]
