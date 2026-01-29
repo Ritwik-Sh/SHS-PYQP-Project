@@ -1012,7 +1012,7 @@
 		"explanation": "do-while executes once before checking condition. Prints 10, then x=9, condition false, exits"
 	},
 	{
-		"question": "What is the output?\n```Java\nString s = \"Programming\";\nSystem.out.println(s.indexOf('a'));\n```\n",
+		"question": "What is the output?\n```java\nString s = \"Programming\";\nSystem.out.println(s.indexOf('a'));\n```\n",
 		"options": [
 			"5",
 			"6",
@@ -4328,7 +4328,7 @@
 		"answer": 0
 	},
 	{
-		"question": "Consider the following program segment where the statements are jumbled, choose the correct order of statements to find the sum of the odd factors of a number.\n```Java\nvoid sum(int n) {\n\tsum+=i; // 1\n\tfor(int i = 1; i <=n; i++) { // 2\n\t\tint sum = 0; // 3; \n\t}\n\tif(n%i==0 && i%2!=0) // 4\n}\nSystem.out.println(sum); // 5\n}\n```\n",
+		"question": "Consider the following program segment where the statements are jumbled, choose the correct order of statements to find the sum of the odd factors of a number.\n```java\nvoid sum(int n) {\n\tsum+=i; // 1\n\tfor(int i = 1; i <=n; i++) { // 2\n\t\tint sum = 0; // 3; \n\t}\n\tif(n%i==0 && i%2!=0) // 4\n}\nSystem.out.println(sum); // 5\n}\n```\n",
 		"options": [
 			"2, 3, 4, 1, 5",
 			"3, 2, 4, 1, 5",
@@ -5341,104 +5341,101 @@
 	{
 		"question": "Assertion: Method overloading depends on return type.\nReason: Java allows methods with same name and parameters if return type differs.",
 		"options": [
-		"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
-		"Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
-		"Assertion is true and Reason is false",
-		"Assertion is false and Reason is true"
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
+			"Assertion is true and Reason is false",
+			"Assertion is false and Reason is true"
 		],
 		"answer": 3
 	},
-	  {
-    "question": "Assertion: ++x increments the value of x before it is used.\nReason: Prefix increment have a lower precedence than postfix increment.",
-    "options": [
-      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
-      "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
-      "Assertion is true and Reason is false",
-      "Assertion is false and Reason is true"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Assertion: a += b is equivalent to a = b + a.\nReason: Compound assignment operators perform implicit type casting if needed.",
-    "options": [
-      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
-      "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
-      "Assertion is true and Reason is false",
-      "Assertion is false and Reason is true"
-    ],
-    "answer": 0
-  },
-
-  {
-    "question": "Assertion: The do-while loop executes at least once.\nReason: The loop condition is checked after executing the loop body.",
-    "options": [
-      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
-      "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
-      "Assertion is true and Reason is false",
-      "Assertion is false and Reason is true"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Assertion: break exits only the current loop.\nReason: break transfers control to the statement immediately after the loop.",
-    "options": [
-      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
-      "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
-      "Assertion is true and Reason is false",
-      "Assertion is false and Reason is true"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Assertion: continue terminates the loop.\nReason: continue skips the remaining statements of the current iteration.",
-    "options": [
-      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
-      "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
-      "Assertion is true and Reason is false",
-      "Assertion is false and Reason is true"
-    ],
-    "answer": 3
-  },
-
-  {
-    "question": "Assertion: Strings in Java are immutable.\nReason: Any modification to a String creates a new String object.",
-    "options": [
-      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
-      "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
-      "Assertion is true and Reason is false",
-      "Assertion is false and Reason is true"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Assertion: s.concat(\"Java\") modifies the original string s.\nReason: String methods always modify existing objects.",
-    "options": [
-      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
-      "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
-      "Assertion is true and Reason is false",
-      "Assertion is false and Reason is true"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Assertion: equals() compares the contents of two String objects.\nReason: == compares references, not values.",
-    "options": [
-      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
-      "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
-      "Assertion is true and Reason is false",
-      "Assertion is false and Reason is true"
-    ],
-    "answer": 0
-  },
-
-  {
-    "question": "Assertion: Arrays in Java are objects.\nReason: Arrays are stored in heap memory.",
-    "options": [
-      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
-      "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
-      "Assertion is true and Reason is false",
-      "Assertion is false and Reason is true"
-    ],
-    "answer": 0
-  }
+	{
+		"question": "Assertion: ++x increments the value of x before it is used.\nReason: Prefix increment have a lower precedence than postfix increment.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
+			"Assertion is true and Reason is false",
+			"Assertion is false and Reason is true"
+		],
+		"answer": 2
+	},
+	{
+		"question": "Assertion: a += b is equivalent to a = b + a.\nReason: Compound assignment operators perform implicit type casting if needed.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
+			"Assertion is true and Reason is false",
+			"Assertion is false and Reason is true"
+		],
+		"answer": 0
+	},
+	{
+		"question": "Assertion: The do-while loop executes at least once.\nReason: The loop condition is checked after executing the loop body.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
+			"Assertion is true and Reason is false",
+			"Assertion is false and Reason is true"
+		],
+		"answer": 0
+	},
+	{
+		"question": "Assertion: break exits only the current loop.\nReason: break transfers control to the statement immediately after the loop.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
+			"Assertion is true and Reason is false",
+			"Assertion is false and Reason is true"
+		],
+		"answer": 0
+	},
+	{
+		"question": "Assertion: continue terminates the loop.\nReason: continue skips the remaining statements of the current iteration.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
+			"Assertion is true and Reason is false",
+			"Assertion is false and Reason is true"
+		],
+		"answer": 3
+	},
+	{
+		"question": "Assertion: Strings in Java are immutable.\nReason: Any modification to a String creates a new String object.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
+			"Assertion is true and Reason is false",
+			"Assertion is false and Reason is true"
+		],
+		"answer": 0
+	},
+	{
+		"question": "Assertion: s.concat(\"Java\") modifies the original string s.\nReason: String methods always modify existing objects.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
+			"Assertion is true and Reason is false",
+			"Assertion is false and Reason is true"
+		],
+		"answer": 3
+	},
+	{
+		"question": "Assertion: equals() compares the contents of two String objects.\nReason: == compares references, not values.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
+			"Assertion is true and Reason is false",
+			"Assertion is false and Reason is true"
+		],
+		"answer": 0
+	},
+	{
+		"question": "Assertion: Arrays in Java are objects.\nReason: Arrays are stored in heap memory.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
+			"Assertion is true and Reason is false",
+			"Assertion is false and Reason is true"
+		],
+		"answer": 0
+	}
 ]
