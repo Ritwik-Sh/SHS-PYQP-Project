@@ -5174,14 +5174,14 @@
 		"explanation": "Math.max(a, b) compares two values and returns the larger one."
 	},
 	{
-		"question": "Assertion: The default constructor is automatically provided if no constructor is defined.\nReason: Every class must have at least one constructor.",
+		"question": "Assertion: The default constructor is automatically provided if no constructor is defined.\nReason: Every class must have at least one constructor defined.",
 		"options": [
 			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
 			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
 			"Assertion is True and Reason is false",
 			"Assertion is False and Reason is true"
 		],
-		"answer": 0,
+		"answer": 2,
 		"explanation": "Compiler provides default constructor if none defined. Every class needs constructor for object creation."
 	},
 	{
@@ -5196,14 +5196,14 @@
 		"explanation": "equalsIgnoreCase() is more efficient as it compares characters directly without creating new String objects."
 	},
 	{
-		"question": "Assertion: A class can have multiple methods with the same name.\nReason: Method overloading allows methods with same name but different parameters.",
+		"question": "Assertion: A class can have multiple methods with the same name.\nReason: Method overloading allows methods with same name but different return types.",
 		"options": [
 			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
 			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
 			"Assertion is True and Reason is false",
 			"Assertion is False and Reason is true"
 		],
-		"answer": 0,
+		"answer": 2,
 		"explanation": "Method overloading permits multiple methods with same name but different parameter lists (number, type, or order)."
 	},
 	{
@@ -5251,15 +5251,14 @@
 		"explanation": "Math.min() has overloaded versions for int, long, float, double. Can compare floating-point numbers."
 	},
 	{
-		"question": "Assertion: A class with all private constructors cannot be instantiated from outside.\nReason: Private constructors are used in the Singleton design pattern.",
+		"question": "Assertion: Java is platform-independent.\nReason: Java programs are compiled into bytecode which runs on the JVM.",
 		"options": [
-			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
-			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
-			"Assertion is True and Reason is false",
-			"Assertion is False and Reason is true"
+		"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+		"Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
+		"Assertion is true and Reason is false",
+		"Assertion is false and Reason is true"
 		],
-		"answer": 1,
-		"explanation": "Private constructors prevent external instantiation (true). Used in Singleton (true). Both true, related but reason doesn't explain assertion."
+		"answer": 0
 	},
 	{
 		"question": "Assertion: The replace() method is case-sensitive.\nReason: String comparison in Java is case-sensitive by default.",
@@ -5273,14 +5272,14 @@
 		"explanation": "replace() performs case-sensitive replacement. String operations are case-sensitive by default in Java."
 	},
 	{
-		"question": "Assertion: Array initialization can be done without specifying the size.\nReason: The size is automatically determined from the number of elements provided.",
+		"question": "Assertion: Array initialization can be done without specifying the length.\nReason: The length is automatically determined from the size provided.",
 		"options": [
 			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
 			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
 			"Assertion is True and Reason is false",
-			"Assertion is False and Reason is true"
+			"Assertion is False and Reason is false"
 		],
-		"answer": 0,
+		"answer": 3,
 		"explanation": "int[] arr = {1,2,3} doesn't specify size. Compiler determines size from initialization values provided."
 	},
 	{
@@ -5426,5 +5425,15 @@
 			"Assertion is false and Reason is true"
 		],
 		"answer": 0
-	}
+	},
+	{
+		"question": "Assertion: char c = 65; will store 'a'.\nReason: char data type stores Unicode values.",
+		"options": [
+		"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+		"Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
+		"Assertion is true and Reason is false",
+		"Assertion is false and Reason is true"
+		],
+		"answer": 3
+	},
 ]
