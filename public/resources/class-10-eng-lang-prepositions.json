@@ -238,9 +238,8 @@
   },
   {
     "question": "He walked ___ the park.",
-    "answer": "through",
-    "type": "fib",
-    "explanation": "'Through' shows movement within an area."
+    "answer": ["through", "across", "in"],
+    "type": "fib"
   },
   {
     "question": "The keys are ___ the drawer.",
@@ -567,12 +566,6 @@
     "explanation": "'Behind' shows position at the back."
   },
   {
-    "question": "The train passed ___ the tunnel.",
-    "answer": "through",
-    "type": "fib",
-    "explanation": "'Through' shows movement inside."
-  },
-  {
     "question": "The restaurant is ___ the street.",
     "answer": "on",
     "type": "fib",
@@ -583,12 +576,6 @@
     "answer": "on",
     "type": "fib",
     "explanation": "'Go on a trip' is correct usage."
-  },
-  {
-    "question": "The gift is ___ the table.",
-    "answer": "on",
-    "type": "fib",
-    "explanation": "'On' shows surface contact."
   },
   {
     "question": "They are sitting ___ the bench.",
@@ -616,9 +603,8 @@
   },
   {
     "question": "She walked ___ the garden.",
-    "answer": "through",
-    "type": "fib",
-    "explanation": "'Through' shows movement inside."
+    "answer": ["through", "around", "to"],
+    "type": "fib"
   },
   {
     "question": "The dog is sleeping ___ the couch.",
@@ -634,15 +620,9 @@
   },
   {
     "question": "The bus stopped ___ the station.",
-    "answer": "at",
+    "answer": ["at", "outside"],
     "type": "fib",
     "explanation": "'At' shows specific place."
-  },
-  {
-    "question": "The train goes ___ the tunnel.",
-    "answer": "through",
-    "type": "fib",
-    "explanation": "'Through' shows movement inside."
   },
   {
     "question": "The shop is ___ the street.",
@@ -828,5 +808,11 @@
     "answer": "in",
     "type": "fib",
     "explanation": "'Hand in' means submit."
+  },
+  {
+    "question": "We realized our mistakes as soon as we turned ___ the assignment",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'Turn in' means to submit."
   }
 ]
