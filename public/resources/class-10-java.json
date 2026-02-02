@@ -1043,14 +1043,15 @@
 		"answer": 2
 	},
 	{
-		"question": "What will be the output?\n```java\nint x = 5;\nSystem.out.println(x++ / ++x);\n```",
+		"question": "In the statement: \n```java\nSystem.out.println();\n, What is 'out'?",
 		"options": [
-			"1",
-			"0",
-			"12",
-			"0.7142857143"
+			"A class",
+			"An object",
+			"A method",
+			"A constant literal"
 		],
-		"answer": 1
+		"answer": 1,
+		"explanation": "In System class, 'out' is an object of PrintStream class in Java"
 	},
 	{
 		"question": "Which method is called automatically when an object is created?",
@@ -2374,15 +2375,14 @@
 		"explanation": "arr[2][1] = 2 + 1 = 3"
 	},
 	{
-		"question": "What will be printed?\n```java\nString s1 = \"Test\";\nString s2 = s1.toLowerCase();\nString s3 = s2.toUpperCase();\nSystem.out.println(s1 == s3);\nSystem.out.println(s1.equals(s3));\n```",
+		"question": "When using a nested for loop to print the borders of a square, what should the condition before printing the symbol be?",
 		"options": [
-			"true true",
-			"true false",
-			"false true",
-			"false false"
+			"i == j || i + j == n-1",
+			"i % 2 == 0 || j % 2 == 0",
+			"i == 0 || i == n-1 || j == 0 || j == n-1",
+			"i + j < n"
 		],
-		"answer": 2,
-		"explanation": "s1 == s3 is false (different objects). s1.equals(s3) is true (same content 'Test')"
+		"answer": 2
 	},
 	{
 		"question": "What is the result?\n```java\nint product = 1;\nfor(int i = 1; i <= 5; i++) {\n  if(i == 3) continue;\n  product *= i;\n}\nSystem.out.println(product);\n```",
@@ -4922,15 +4922,15 @@
 		"explanation": "Selection sort makes O(n) swaps (one per iteration). Bubble sort makes O(n²) swaps."
 	},
 	{
-		"question": "Assertion: The Math.ceil() method rounds a number up to the nearest integer.\nReason: Ceiling function returns the smallest integer greater than or equal to the input.",
+		"question": "Assertion: The Math.ceil() method rounds a decimal up to the nearest int.\nReason: Ceiling function returns the smallest integer greater than or equal to the input.",
 		"options": [
 			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
 			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
 			"Assertion is True and Reason is false",
 			"Assertion is False and Reason is true"
 		],
-		"answer": 0,
-		"explanation": "Math.ceil() rounds up: ceil(4.1)=5.0, ceil(-4.9)=-4.0. Returns smallest integer ≥ input."
+		"answer": 2,
+		"explanation": "Math.ceil() returns double, not int. It rounds up to nearest integer value but type remains double."
 	},
 	{
 		"question": "Assertion: The contains() method performs case-sensitive searching.\nReason: Java String methods are case-sensitive by default.",
@@ -4955,14 +4955,14 @@
 		"explanation": "Parent reference to child object is allowed (true). This is upcasting (true). Both true but independent concepts."
 	},
 	{
-		"question": "Assertion: The Math.abs() method returns the absolute value.\nReason: Absolute value is always non-negative.",
+		"question": "Assertion: The Math.abs() method returns the absolute value.\nReason: Absolute value is always an Integer.",
 		"options": [
 			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
 			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
 			"Assertion is True and Reason is false",
 			"Assertion is False and Reason is true"
 		],
-		"answer": 0,
+		"answer": 2,
 		"explanation": "abs() converts to positive: abs(-5)=5, abs(5)=5. Returns magnitude, always non-negative."
 	},
 	{
@@ -5219,14 +5219,14 @@
 		"explanation": "isUpperCase() works with Unicode uppercase letters from any language, not just English A-Z."
 	},
 	{
-		"question": "Assertion: The logical OR operator (||) uses short-circuit evaluation.\nReason: If the first operand is true, the second operand is not evaluated.",
+		"question": "Assertion: The logical OR operator (||) uses short-circuit evaluation.\nReason: The operator checks and compares both the operands before returning a value.",
 		"options": [
 			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
 			"Both Assertion and Reason are true and Reason is the not correct explanation of Assertion",
 			"Assertion is True and Reason is false",
 			"Assertion is False and Reason is true"
 		],
-		"answer": 0,
+		"answer": 2,
 		"explanation": "Short-circuit || stops at first true operand since result will be true regardless."
 	},
 	{
@@ -5254,10 +5254,10 @@
 	{
 		"question": "Assertion: Java is platform-independent.\nReason: Java programs are compiled into bytecode which runs on the JVM.",
 		"options": [
-		"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
-		"Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
-		"Assertion is true and Reason is false",
-		"Assertion is false and Reason is true"
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
+			"Assertion is true and Reason is false",
+			"Assertion is false and Reason is true"
 		],
 		"answer": 0
 	},
@@ -5430,10 +5430,10 @@
 	{
 		"question": "Assertion: char c = 65; will store 'a'.\nReason: char data type stores Unicode values.",
 		"options": [
-		"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
-		"Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
-		"Assertion is true and Reason is false",
-		"Assertion is false and Reason is true"
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true but Reason is not the correct explanation of Assertion",
+			"Assertion is true and Reason is false",
+			"Assertion is false and Reason is true"
 		],
 		"answer": 3
 	}
