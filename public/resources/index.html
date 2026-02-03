@@ -439,7 +439,7 @@
     </footer>
 
     <script>
-        const QUIZZES = [
+        const RESOURCES = [
             {
                 class: 10,
                 subject: 'Computer Applications',
@@ -581,7 +581,7 @@
                 currentSubject: null
             };
 
-            const classes = [...new Set(QUIZZES.map(q => q.class))].sort((a, b) => a - b);
+            const classes = [...new Set(RESOURCES.map(q => q.class))].sort((a, b) => a - b);
 
             if (classes.length === 0) {
                 content.innerHTML = '<h1 id="noContent">No Classes Available!</h1>';
@@ -608,7 +608,7 @@
                 currentSubject: null
             };
 
-            const subjects = QUIZZES.filter(q => q.class === cls);
+            const subjects = RESOURCES.filter(q => q.class === cls);
 
             if (subjects.length === 0) {
                 content.innerHTML = '<h1 id="noContent">No Subjects Available!</h1>';
@@ -656,7 +656,9 @@
                     </div>
                 `;
                 card.onclick = () => {
-                    window.open(`/resources/questions.html?topic=${topic.file}`, '_blank');
+                    if (!topic.file.startsWith('http')) window.open(`/resources/questions.html?topic=${topic.file}`, '_blank');
+                    else window.open(topic.file, '_blank');
+                    
                 };
                 content.appendChild(card);
 
