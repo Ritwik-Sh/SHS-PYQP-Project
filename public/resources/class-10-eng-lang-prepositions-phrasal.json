@@ -1,0 +1,302 @@
+[
+  {
+    "question": "The young child bore ____ the first prize.",
+    "type": "fib",
+    "answer": "away",
+    "explanation": "'Bore away' means won or carried off as a prize."
+  },
+  {
+    "question": "The house broke ___ from the stable.",
+    "type": "fib",
+    "answer": ["loose", "free"],
+    "explanation": "'Broke loose' or 'broke free' means escaped or got away from confinement."
+  },
+  {
+    "question": "Let us not call __ the past events.",
+    "type": "fib",
+    "answer": "up",
+    "explanation": "'Call up' means to recall or remember past events."
+  },
+  {
+    "question": "Unbalanced diet brings ___ many diseases.",
+    "type": "fib",
+    "answer": ["on", "about"],
+    "explanation": "'Brings on' or 'brings about' means causes or results in."
+  },
+  {
+    "question": "The police broke ___ the meeting.",
+    "type": "fib",
+    "answer": "up",
+    "explanation": "'Broke up' means dispersed or ended forcibly."
+  },
+  {
+    "question": "He has called ___ you to make a speech.",
+    "type": "fib",
+    "answer": ["on", "upon"],
+    "explanation": "'Called on/upon' means requested or invited someone to do something."
+  },
+  {
+    "question": "Your behaviour says you were well brought __.",
+    "type": "fib",
+    "answer": "up",
+    "explanation": "'Brought up' means raised or reared with good manners."
+  },
+  {
+    "question": "You must carry ___ all my orders.",
+    "type": "fib",
+    "answer": "out",
+    "explanation": "'Carry out' means execute or implement."
+  },
+  {
+    "question": "The Rangers team carried the day ___ the city cricket match.",
+    "type": "fib",
+    "answer": "in",
+    "explanation": "'Carried the day in' means won or was victorious in a contest."
+  },
+  {
+    "question": "I came ___ an oldie today.",
+    "type": "fib",
+    "answer": "across",
+    "explanation": "'Came across' means encountered or found by chance."
+  },
+  {
+    "question": "I don't know how has this all come ____.",
+    "type": "fib",
+    "answer": "about",
+    "explanation": "'Come about' means happened or occurred."
+  },
+  {
+    "question": "The rain has just come ___. It won't stop too soon.",
+    "type": "fib",
+    "answer": "on",
+    "explanation": "'Come on' means started or begun."
+  },
+  {
+    "question": "Let us strive to cut ___ on harmful foods.",
+    "type": "fib",
+    "answer": ["down", "back"],
+    "explanation": "'Cut down on' or 'cut back on' means reduce consumption or use."
+  },
+  {
+    "question": "My coat button just came __.",
+    "type": "fib",
+    "answer": "off",
+    "explanation": "'Came off' means became detached or separated."
+  },
+  {
+    "question": "Soon after the rains, Himansh's roof fell __.",
+    "type": "fib",
+    "answer": "in",
+    "explanation": "'Fell in' means collapsed or caved in."
+  },
+  {
+    "question": "Vansh was greatly cut ___ by his doggy's death.",
+    "type": "fib",
+    "answer": "up",
+    "explanation": "'Cut up' means deeply distressed or upset."
+  },
+  {
+    "question": "Ayush keeps cutting __ our conversation.",
+    "type": "fib",
+    "answer": ["in", "into"],
+    "explanation": "'Cutting in' or 'cutting into' means interrupting."
+  },
+  {
+    "question": "John Keats was cut ___ in his prime.",
+    "type": "fib",
+    "answer": "off",
+    "explanation": "'Cut off' means died prematurely or before expected time."
+  },
+  {
+    "question": "Due to lack of support, Shreya's scheme fell ____.",
+    "type": "fib",
+    "answer": "through",
+    "explanation": "'Fell through' means failed or did not materialize."
+  },
+  {
+    "question": "Why did you have to tell __ me to the teacher?",
+    "type": "fib",
+    "answer": "on",
+    "explanation": "'Tell on' means inform against or report someone's wrongdoing."
+  },
+  {
+    "question": "The mob fell ___ the thieves and killed them.",
+    "type": "fib",
+    "answer": ["upon", "on"],
+    "explanation": "'Fell upon/on' means attacked violently."
+  },
+  {
+    "question": "He gave ___ this news in the society.",
+    "type": "fib",
+    "answer": "out",
+    "explanation": "'Gave out' means announced or made public."
+  },
+  {
+    "question": "The pens are going ___ 120 euros each.",
+    "type": "fib",
+    "answer": "for",
+    "explanation": "'Going for' means being sold at a particular price."
+  },
+  {
+    "question": "The gun went ___ all of a sudden.",
+    "type": "fib",
+    "answer": "off",
+    "explanation": "'Went off' means fired or exploded."
+  },
+  {
+    "question": "Rohini is lying __ with flu.",
+    "type": "fib",
+    "answer": ["down", "up"],
+    "explanation": "'Lying down/up with' means confined to bed due to illness."
+  },
+  {
+    "question": "The case was held ___ till the next day.",
+    "type": "fib",
+    "answer": "over",
+    "explanation": "'Held over' means postponed or deferred."
+  },
+  {
+    "question": "Don't keep ___ anything from me. I'm trustworthy enough.",
+    "type": "fib",
+    "answer": "back",
+    "explanation": "'Keep back' means withhold or conceal information."
+  },
+  {
+    "question": "The hood of the car kept me __ the rain.",
+    "type": "fib",
+    "answer": "from",
+    "explanation": "'Kept from' means protected or shielded from."
+  },
+  {
+    "question": "Seems like our food supplies won't hold __ for long.",
+    "type": "fib",
+    "answer": "out",
+    "explanation": "'Hold out' means last or endure."
+  },
+  {
+    "question": "Keep __ until you are tired.",
+    "type": "fib",
+    "answer": "on",
+    "explanation": "'Keep on' means continue doing something."
+  },
+  {
+    "question": "I hear he is laying __ money.",
+    "type": "fib",
+    "answer": ["by", "up"],
+    "explanation": "'Laying by/up' means saving or putting aside money."
+  },
+  {
+    "question": "She was mistaken ___ a thief.",
+    "type": "fib",
+    "answer": "for",
+    "explanation": "'Mistaken for' means wrongly identified as someone else."
+  },
+  {
+    "question": "His students look __ to him.",
+    "type": "fib",
+    "answer": "up",
+    "explanation": "'Look up to' means respect or admire."
+  },
+  {
+    "question": "Since he's not here, you want to make __?",
+    "type": "fib",
+    "answer": "do",
+    "explanation": "'Make do' means manage or get by with what is available."
+  },
+  {
+    "question": "The watchman quickly made ___ the thief.",
+    "type": "fib",
+    "answer": "after",
+    "explanation": "'Made after' means chased or pursued."
+  },
+  {
+    "question": "Make __ luggage to the porter.",
+    "type": "fib",
+    "answer": "over",
+    "explanation": "'Make over' means hand over or transfer to someone."
+  },
+  {
+    "question": "He narrowly passed ___ as a physician.",
+    "type": "fib",
+    "answer": "off",
+    "explanation": "'Passed off' means succeeded in being accepted or recognized as something."
+  },
+  {
+    "question": "I have passed ___ terrible days.",
+    "type": "fib",
+    "answer": "through",
+    "explanation": "'Passed through' means experienced or endured."
+  },
+  {
+    "question": "My brother has unfortunately run ___ debt.",
+    "type": "fib",
+    "answer": "into",
+    "explanation": "'Run into' means incurred or accumulated (debt)."
+  },
+  {
+    "question": "I am sorry to put you __ so much trouble.",
+    "type": "fib",
+    "answer": "to",
+    "explanation": "'Put to' means cause or subject someone to difficulty."
+  },
+  {
+    "question": "Your thoughts are always running ___ food.",
+    "type": "fib",
+    "answer": ["on", "upon"],
+    "explanation": "'Running on/upon' means dwelling on or constantly thinking about."
+  },
+  {
+    "question": "I could easily understand and see ____ the magician's trick.",
+    "type": "fib",
+    "answer": "through",
+    "explanation": "'See through' means understand the true nature or detect deception."
+  },
+  {
+    "question": "Cheating gives way __ criminals.",
+    "type": "fib",
+    "answer": "to",
+    "explanation": "'Gives way to' means leads to or results in."
+  },
+  {
+    "question": "He saw __ our comfort in every possible way.",
+    "type": "fib",
+    "answer": "to",
+    "explanation": "'Saw to' means attended to or took care of."
+  },
+  {
+    "question": "I have set __ some money for my entertainment also.",
+    "type": "fib",
+    "answer": ["aside", "by"],
+    "explanation": "'Set aside/by' means saved or reserved for future use."
+  },
+  {
+    "question": "The winter season has set __.",
+    "type": "fib",
+    "answer": "in",
+    "explanation": "'Set in' means begun or started (especially of a season or condition)."
+  },
+  {
+    "question": "He turned __ to be a man of worth.",
+    "type": "fib",
+    "answer": "out",
+    "explanation": "'Turned out' means proved to be or became eventually."
+  },
+  {
+    "question": "He took __ drinking and thus ruined his life.",
+    "type": "fib",
+    "answer": "to",
+    "explanation": "'Took to' means started doing something habitually, especially a bad habit."
+  },
+  {
+    "question": "I do care ___ you.",
+    "type": "fib",
+    "answer": ["for", "about"],
+    "explanation": "'Care for' or 'care about' means have affection or concern for someone."
+  },
+  {
+    "question": "It is not meet to go __ looks.",
+    "type": "fib",
+    "answer": "by",
+    "explanation": "'Go by' means judge or form opinions based on."
+  }
+]
