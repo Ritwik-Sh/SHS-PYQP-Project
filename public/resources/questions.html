@@ -931,16 +931,18 @@
                 fibContainer.style.display = 'none';
                 passageFibContainer.style.display = 'block';
                 
-                // Parse the passage and create display blanks
+                // Parse the passage and auto-number blanks
                 const passage = question.passage;
-                const blanks = passage.match(/\((\d+)\)\s*________/g) || [];
                 let passageHTML = passage;
+                let blankCounter = 0;
+                const blankNumbers = [];
                 
-                // Replace blanks with display-only spans
-                blanks.forEach((blank) => {
-                    const blankNumber = blank.match(/\((\d+)\)/)[1];
-                    const replacement = `(<span style="color: rgba(229, 240, 250, 0.5);">${blankNumber}</span>) <span class="passage-blank-display">________</span>`;
-                    passageHTML = passageHTML.replace(blank, replacement);
+                // Replace all ________ with numbered blanks
+                passageHTML = passageHTML.replace(/________/g, () => {
+                    const num = blankCounter;
+                    blankNumbers.push(num);
+                    blankCounter++;
+                    return `(<span style="color: rgba(229, 240, 250, 0.5);">${num}</span>) <span class="passage-blank-display">________</span>`;
                 });
                 
                 passageContent.innerHTML = passageHTML;
@@ -949,8 +951,7 @@
                 const passageInputs = document.getElementById('passageInputs');
                 passageInputs.innerHTML = '';
                 
-                blanks.forEach((blank) => {
-                    const blankNumber = blank.match(/\((\d+)\)/)[1];
+                blankNumbers.forEach((blankNumber) => {
                     const inputGroup = document.createElement('div');
                     inputGroup.className = 'passage-input-group';
                     
@@ -980,12 +981,11 @@
                     const userAnswer = userAnswers[currentQuestionIndex];
                     const correctAnswers = question.answer;
                     
-                    blanks.forEach((blank) => {
-                        const blankNumber = blank.match(/\((\d+)\)/)[1];
+                    blankNumbers.forEach((blankNumber) => {
                         const input = document.getElementById(`passageBlank${blankNumber}`);
                         const answerDiv = document.getElementById(`passageAnswer${blankNumber}`);
-                        const userVal = userAnswer[parseInt(blankNumber)];
-                        const correctVal = correctAnswers[parseInt(blankNumber)];
+                        const userVal = userAnswer[blankNumber];
+                        const correctVal = correctAnswers[blankNumber];
                         
                         input.value = userVal;
                         input.disabled = true;
@@ -1004,8 +1004,7 @@
                     });
                 } else {
                     // Set up input event listeners
-                    blanks.forEach((blank) => {
-                        const blankNumber = blank.match(/\((\d+)\)/)[1];
+                    blankNumbers.forEach((blankNumber) => {
                         const input = document.getElementById(`passageBlank${blankNumber}`);
                         input.oninput = () => {
                             // Check if all blanks are filled

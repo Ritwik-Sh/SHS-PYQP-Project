@@ -2,7 +2,7 @@
   {
     "type": "passageFib",
     "question": "Complete the verb forms in the passage below:",
-    "passage": "The shop (0) was (be) tiny and dark. I (1) ________ (enter) cautiously, noticing that a layer of dust (2) ________ (settle) on every surface. \"I (3) ________ (wait) for you,\" a voice rasped from the corner. An old man (4) ________ (sit) behind a desk, clutching a box. If I (5) ________ (be) braver, I would have asked him how he knew my name. He (6) ________ (open) the lid to reveal a ring that (7) ________ (belong) to my grandfather. I realized then that my journey (8) ________ (only just begin).",
+    "passage": "The shop ________ (be) tiny and dark. I ________ (enter) cautiously, noticing that a layer of dust ________ (settle) on every surface. \"I ________ (wait) for you,\" a voice rasped from the corner. An old man ________ (sit) behind a desk, clutching a box. If I ________ (be) braver, I would have asked him how he knew my name. He ________ (open) the lid to reveal a ring that ________ (belong) to my grandfather. I realized then that my journey ________ (only just begin).",
     "answer": {
       "0": "was",
       "1": "entered",
@@ -19,7 +19,7 @@
   {
     "type": "passageFib",
     "question": "Complete the verb forms in the passage below:",
-    "passage": "The experiment (0) has been (be) a success so far. Until last week, the team (1) ________ (struggle) to stabilize the compound. However, once the temperature (2) ________ (lower) to absolute zero, the molecules (3) ________ (start) to behave predictably. Dr. Aris (4) ________ (believe) that if they (5) ________ (continue) at this pace, they (6) ________ (publish) their findings by June. Currently, the lab (7) ________ (monitor) by security to ensure no data (8) ________ (leak).",
+    "passage": "The experiment ________ (be) a success so far. Until last week, the team ________ (struggle) to stabilize the compound. However, once the temperature ________ (lower) to absolute zero, the molecules ________ (start) to behave predictably. Dr. Aris ________ (believe) that if they ________ (continue) at this pace, they ________ (publish) their findings by June. Currently, the lab ________ (monitor) by security to ensure no data ________ (leak).",
     "answer": {
       "0": "has been",
       "1": ["had been struggling", "struggled"],
@@ -36,7 +36,7 @@
   {
     "type": "passageFib",
     "question": "Complete the verb forms in the passage below:",
-    "passage": "The train (0) pulled (pull) out of the station at midnight. By the time I (1) ________ (realize) I was on the wrong platform, the doors (2) ________ (lock) firmly. I (3) ________ (try) to signal the guard, but he (4) ________ (vanish). I (5) ________ (wander) through the carriages for an hour when I suddenly (6) ________ (hear) a faint whistle. I wish I (7) ________ (listen) to the porter's warning earlier. Now, I (8) ________ (trap) in a moving tomb.",
+    "passage": "The train ________ (pull) out of the station at midnight. By the time I ________ (realize) I was on the wrong platform, the doors ________ (lock) firmly. I ________ (try) to signal the guard, but he ________ (vanish). I ________ (wander) through the carriages for an hour when I suddenly ________ (hear) a faint whistle. I wish I ________ (listen) to the porter's warning earlier. Now, I ________ (trap) in a moving tomb.",
     "answer": {
       "0": "pulled",
       "1": "realized",
@@ -53,7 +53,7 @@
   {
     "type": "passageFib",
     "question": "Complete the verb forms in the passage below:",
-    "passage": "The fire (0) raged (rage) through the valley for three days. Before the rain (1) ________ (arrive), nearly half the forest (2) ________ (turn) to ash. The villagers (3) ________ (evacuate) to the nearby hills where they (4) ________ (watch) their homes disappear. If the fire department (5) ________ (act) sooner, the damage (6) ________ (minimize). Now, the community (7) ________ (rebuild) what was lost, hoping that such a tragedy (8) ________ (never recur).",
+    "passage": "The fire ________ (rage) through the valley for three days. Before the rain ________ (arrive), nearly half the forest ________ (turn) to ash. The villagers ________ (evacuate) to the nearby hills where they ________ (watch) their homes disappear. If the fire department ________ (act) sooner, the damage ________ (minimize). Now, the community ________ (rebuild) what was lost, hoping that such a tragedy ________ (never recur).",
     "answer": {
       "0": "raged",
       "1": "arrived",
@@ -70,24 +70,25 @@
   {
     "type": "passageFib",
     "question": "Complete the verb forms in the passage below:",
-    "passage": "She (0) felt (feel) nervous as she walked in. She (1) ________ (prepare) for this interview for months. The panel (2) ________ (consist) of five grim-looking experts. \"Why (3) ________ you ________ (choose) this career?\" the chairman asked. Before she (4) ________ (can) answer, the phone (5) ________ (ring). It (6) ________ (be) an emergency. The interview (7) ________ (postpone), and she (8) ________ (tell) to come back the following Monday.",
+    "passage": "She ________ (feel) nervous as she walked in. She ________ (prepare) for this interview for months. The panel ________ (consist) of five grim-looking experts. \"Why ________ you ________ (choose) this career?\" the chairman asked. Before she ________ (can) answer, the phone ________ (ring). It ________ (be) an emergency. The interview ________ (postpone), and she ________ (tell) to come back the following Monday.",
     "answer": {
       "0": "felt",
       "1": ["had been preparing", "had prepared"],
       "2": "consisted",
-      "3": ["did", "choose"],
-      "4": "could",
-      "5": "rang",
-      "6": "was",
-      "7": ["was postponed", "got postponed"],
-      "8": ["was told", "got told"]
+      "3": "did",
+      "4": "choose",
+      "5": "could",
+      "6": "rang",
+      "7": "was",
+      "8": ["was postponed", "got postponed"],
+      "9": ["was told", "got told"]
     },
-    "explanation": "Past narrative with questions: (0) felt - past simple; (1) had been preparing - past perfect continuous; (2) consisted - past simple; (3) did...choose - past simple question; (4) could - past modal; (5) rang - past simple; (6) was - past simple; (7) was postponed - past simple passive; (8) was told - past simple passive."
+    "explanation": "Past narrative with questions: (0) felt - past simple; (1) had been preparing - past perfect continuous; (2) consisted - past simple; (3-4) did...choose - past simple question split into two blanks; (5) could - past modal; (6) rang - past simple; (7) was - past simple; (8) was postponed - past simple passive; (9) was told - past simple passive."
   },
   {
     "type": "passageFib",
     "question": "Complete the verb forms in the passage below:",
-    "passage": "By the time the race (0) started (start), Arjun (1) ________ (warm) up for nearly two hours. He (2) ________ (know) that if he (3) ________ (win) this gold medal, he (4) ________ (become) a national hero. He (5) ________ (train) relentlessly since he was twelve. As the whistle (6) ________ (blow), he (7) ________ (sprint) forward. Years of hard work (8) ________ (finally pay) off.",
+    "passage": "By the time the race ________ (start), Arjun ________ (warm) up for nearly two hours. He ________ (know) that if he ________ (win) this gold medal, he ________ (become) a national hero. He ________ (train) relentlessly since he was twelve. As the whistle ________ (blow), he ________ (sprint) forward. Years of hard work ________ (finally pay) off.",
     "answer": {
       "0": "started",
       "1": ["had been warming", "had warmed"],
@@ -104,7 +105,7 @@
   {
     "type": "passageFib",
     "question": "Complete the verb forms in the passage below:",
-    "passage": "The ice (0) is (be) dangerously thin this year. The explorers (1) ________ (warn) by the locals before they (2) ________ (set) out. Had they (3) ________ (heed) the advice, they (4) ________ (not be) in this crisis now. One of the sledges (5) ________ (sink) into the slush yesterday. They (6) ________ (wait) for a rescue chopper for ten hours now. If the wind (7) ________ (pick) up, the mission (8) ________ (abandon).",
+    "passage": "The ice ________ (be) dangerously thin this year. The explorers ________ (warn) by the locals before they ________ (set) out. Had they ________ (heed) the advice, they ________ (not be) in this crisis now. One of the sledges ________ (sink) into the slush yesterday. They ________ (wait) for a rescue chopper for ten hours now. If the wind ________ (pick) up, the mission ________ (abandon).",
     "answer": {
       "0": "is",
       "1": ["were warned", "had been warned"],
@@ -121,7 +122,7 @@
   {
     "type": "passageFib",
     "question": "Complete the verb forms in the passage below:",
-    "passage": "The museum (0) discovered (discover) the theft at dawn. The masterpiece (1) ________ (remove) from its frame with surgical precision. The security cameras (2) ________ (tamper) with the previous night. The police (3) ________ (suspect) that an insider (4) ________ (help) the thieves. Unless the painting (5) ________ (recover) soon, the curator (6) ________ (resign). Currently, every exit (7) ________ (watch) by undercover agents.",
+    "passage": "The museum ________ (discover) the theft at dawn. The masterpiece ________ (remove) from its frame with surgical precision. The security cameras ________ (tamper) with the previous night. The police ________ (suspect) that an insider ________ (help) the thieves. Unless the painting ________ (recover) soon, the curator ________ (resign). Currently, every exit ________ (watch) by undercover agents.",
     "answer": {
       "0": "discovered",
       "1": ["had been removed", "was removed"],
@@ -137,7 +138,7 @@
   {
     "type": "passageFib",
     "question": "Complete the verb forms in the passage below:",
-    "passage": "I (0) have never run (run) a marathon before today. By the twenty-mile mark, my legs (1) ________ (feel) like lead. I (2) ________ (think) about quitting when a spectator (3) ________ (hand) me a bottle of water. That small gesture (4) ________ (give) me the strength I (5) ________ (need). If I (6) ________ (not stop) for that drink, I (7) ________ (collapse). I am glad I (8) ________ (persevere).",
+    "passage": "I ________ (run) a marathon before today. By the twenty-mile mark, my legs ________ (feel) like lead. I ________ (think) about quitting when a spectator ________ (hand) me a bottle of water. That small gesture ________ (give) me the strength I ________ (need). If I ________ (not stop) for that drink, I ________ (collapse). I am glad I ________ (persevere).",
     "answer": {
       "0": "have never run",
       "1": ["felt", "were feeling"],
@@ -154,7 +155,7 @@
   {
     "type": "passageFib",
     "question": "Complete the verb forms in the passage below:",
-    "passage": "The countdown (0) began (begin) at T-minus ten. The astronauts (1) ________ (strap) into their seats long before the engines (2) ________ (ignite). This mission (3) ________ (take) three years to plan. Once the rocket (4) ________ (break) the atmosphere, the crew (5) ________ (experience) weightlessness. They (6) ________ (conduct) experiments for the next six months. It (7) ________ (hope) that their findings (8) ________ (revolutionize) space travel.",
+    "passage": "The countdown ________ (begin) at T-minus ten. The astronauts ________ (strap) into their seats long before the engines ________ (ignite). This mission ________ (take) three years to plan. Once the rocket ________ (break) the atmosphere, the crew ________ (experience) weightlessness. They ________ (conduct) experiments for the next six months. It ________ (hope) that their findings ________ (revolutionize) space travel.",
     "answer": {
       "0": "began",
       "1": ["had been strapped", "were strapped"],
