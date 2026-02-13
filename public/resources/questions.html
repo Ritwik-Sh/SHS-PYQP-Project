@@ -300,20 +300,48 @@
             border: 1px solid rgba(147, 187, 234, 0.1);
             border-radius: 8px;
             padding: 24px;
-            margin-bottom: 32px;
+            margin-bottom: 24px;
             line-height: 2;
             font-size: 1rem;
         }
 
-        .passage-blank {
+        .passage-blank-display {
             display: inline-block;
-            min-width: 120px;
-            padding: 4px 12px;
+            min-width: 100px;
+            padding: 2px 8px;
             background: var(--bg);
             border: 1px solid rgba(147, 187, 234, 0.3);
             border-radius: 4px;
             margin: 0 4px;
-            vertical-align: middle;
+            font-size: 0.9rem;
+            color: rgba(229, 240, 250, 0.5);
+            text-align: center;
+        }
+
+        .passage-inputs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .passage-input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .passage-input-label {
+            font-size: 0.875rem;
+            color: rgba(229, 240, 250, 0.7);
+        }
+
+        .passage-blank {
+            width: 100%;
+            padding: 12px 16px;
+            background: var(--bg-secondary);
+            border: 1px solid rgba(147, 187, 234, 0.3);
+            border-radius: 4px;
             font-family: inherit;
             font-size: 0.95rem;
             color: var(--text);
@@ -338,49 +366,22 @@
 
         .passage-blank:disabled {
             cursor: not-allowed;
+            opacity: 0.8;
         }
 
-        .passage-blank-number {
-            display: inline-block;
-            font-size: 0.75rem;
-            color: rgba(229, 240, 250, 0.5);
-            margin-right: 2px;
-        }
-
-        .passage-answers {
+        .passage-blank-answer {
             display: none;
-            margin-top: 24px;
-            padding: 20px;
-            background: rgba(74, 222, 128, 0.05);
-            border: 1px solid #4ade80;
-            border-radius: 8px;
+            font-size: 0.85rem;
+            color: #4ade80;
+            margin-top: 4px;
         }
 
-        .passage-answers.show {
+        .passage-blank-answer.show {
             display: block;
         }
 
-        .passage-answers-title {
-            font-size: 0.875rem;
-            color: #4ade80;
-            margin-bottom: 12px;
-            font-weight: 500;
-        }
-
-        .passage-answer-item {
-            font-size: 0.9rem;
-            padding: 4px 0;
-            color: var(--text);
-        }
-
-        .passage-answer-item .answer-number {
+        .passage-blank-answer-label {
             color: rgba(229, 240, 250, 0.5);
-            margin-right: 8px;
-        }
-
-        .passage-answer-item .answer-text {
-            color: #4ade80;
-            font-weight: 500;
         }
 
         /* Explanation */
@@ -676,10 +677,7 @@
             </div>
             <div class="passage-fib-container" id="passageFibContainer" style="display: none;">
                 <div class="passage-container" id="passageContent"></div>
-                <div class="passage-answers" id="passageAnswers">
-                    <div class="passage-answers-title">Correct Answers:</div>
-                    <div id="passageAnswersContent"></div>
-                </div>
+                <div class="passage-inputs" id="passageInputs"></div>
             </div>
             <div class="explanation" id="explanation">
                 <div class="explanation-title">Explanation</div>
@@ -895,7 +893,6 @@
             const fibAnswer = document.getElementById('fibAnswer');
             const passageFibContainer = document.getElementById('passageFibContainer');
             const passageContent = document.getElementById('passageContent');
-            const passageAnswers = document.getElementById('passageAnswers');
             const explanation = document.getElementById('explanation');
             
             document.getElementById('questionNumber').textContent = `Question ${currentQuestionIndex + 1}`;
@@ -912,7 +909,6 @@
             fibInput.value = '';
             fibInput.className = 'fib-input';
             fibAnswer.classList.remove('show');
-            passageAnswers.classList.remove('show');
             
             // Update keyboard hint
             const keyboardHint = document.getElementById('keyboardHint');
@@ -928,29 +924,60 @@
                 fibContainer.style.display = 'none';
                 passageFibContainer.style.display = 'block';
                 
-                // Parse the passage and create input fields
+                // Parse the passage and create display blanks
                 const passage = question.passage;
                 const blanks = passage.match(/\((\d+)\)\s*________/g) || [];
                 let passageHTML = passage;
                 
-                blanks.forEach((blank, idx) => {
+                // Replace blanks with display-only spans
+                blanks.forEach((blank) => {
                     const blankNumber = blank.match(/\((\d+)\)/)[1];
-                    const inputId = `passageBlank${blankNumber}`;
-                    const replacement = `(<span class="passage-blank-number">${blankNumber}</span>) <input type="text" id="${inputId}" class="passage-blank" data-index="${blankNumber}">`;
+                    const replacement = `(<span style="color: rgba(229, 240, 250, 0.5);">${blankNumber}</span>) <span class="passage-blank-display">________</span>`;
                     passageHTML = passageHTML.replace(blank, replacement);
                 });
                 
                 passageContent.innerHTML = passageHTML;
                 
+                // Create input fields below
+                const passageInputs = document.getElementById('passageInputs');
+                passageInputs.innerHTML = '';
+                
+                blanks.forEach((blank) => {
+                    const blankNumber = blank.match(/\((\d+)\)/)[1];
+                    const inputGroup = document.createElement('div');
+                    inputGroup.className = 'passage-input-group';
+                    
+                    const label = document.createElement('label');
+                    label.className = 'passage-input-label';
+                    label.textContent = `(${blankNumber})`;
+                    label.htmlFor = `passageBlank${blankNumber}`;
+                    
+                    const input = document.createElement('input');
+                    input.type = 'text';
+                    input.id = `passageBlank${blankNumber}`;
+                    input.className = 'passage-blank';
+                    input.dataset.index = blankNumber;
+                    input.placeholder = 'Enter your answer...';
+                    
+                    const answerDiv = document.createElement('div');
+                    answerDiv.className = 'passage-blank-answer';
+                    answerDiv.id = `passageAnswer${blankNumber}`;
+                    
+                    inputGroup.appendChild(label);
+                    inputGroup.appendChild(input);
+                    inputGroup.appendChild(answerDiv);
+                    passageInputs.appendChild(inputGroup);
+                });
+                
                 // Restore or set up inputs
                 if (isAnswered) {
                     const userAnswer = userAnswers[currentQuestionIndex];
                     const correctAnswers = question.answer;
-                    let allCorrect = true;
                     
-                    blanks.forEach((blank, idx) => {
+                    blanks.forEach((blank) => {
                         const blankNumber = blank.match(/\((\d+)\)/)[1];
                         const input = document.getElementById(`passageBlank${blankNumber}`);
+                        const answerDiv = document.getElementById(`passageAnswer${blankNumber}`);
                         const userVal = userAnswer[parseInt(blankNumber)];
                         const correctVal = correctAnswers[parseInt(blankNumber)];
                         
@@ -962,22 +989,16 @@
                             : normalizeAnswer(correctVal) === normalizeAnswer(userVal);
                         
                         input.classList.add(isCorrect ? 'correct' : 'incorrect');
-                        if (!isCorrect) allCorrect = false;
+                        
+                        if (!isCorrect) {
+                            const displayAnswer = Array.isArray(correctVal) ? correctVal.join(' or ') : correctVal;
+                            answerDiv.innerHTML = `<span class="passage-blank-answer-label">Correct: </span>${displayAnswer}`;
+                            answerDiv.classList.add('show');
+                        }
                     });
-                    
-                    if (!allCorrect) {
-                        // Show correct answers
-                        let answersHTML = '';
-                        correctAnswers.forEach((answer, idx) => {
-                            const displayAnswer = Array.isArray(answer) ? answer.join(' or ') : answer;
-                            answersHTML += `<div class="passage-answer-item"><span class="answer-number">(${idx})</span> <span class="answer-text">${displayAnswer}</span></div>`;
-                        });
-                        document.getElementById('passageAnswersContent').innerHTML = answersHTML;
-                        passageAnswers.classList.add('show');
-                    }
                 } else {
                     // Set up input event listeners
-                    blanks.forEach((blank, idx) => {
+                    blanks.forEach((blank) => {
                         const blankNumber = blank.match(/\((\d+)\)/)[1];
                         const input = document.getElementById(`passageBlank${blankNumber}`);
                         input.oninput = () => {
@@ -1135,21 +1156,19 @@
                     input.disabled = true;
                     input.classList.add(isCorrect ? 'correct' : 'incorrect');
                     
-                    if (!isCorrect) allCorrect = false;
+                    if (!isCorrect) {
+                        allCorrect = false;
+                        const answerDiv = document.getElementById(`passageAnswer${index}`);
+                        const displayAnswer = Array.isArray(correctVal) ? correctVal.join(' or ') : correctVal;
+                        answerDiv.innerHTML = `<span class="passage-blank-answer-label">Correct: </span>${displayAnswer}`;
+                        answerDiv.classList.add('show');
+                    }
                 });
                 
                 if (allCorrect) {
                     correctCount++;
                 } else {
                     incorrectCount++;
-                    // Show correct answers
-                    let answersHTML = '';
-                    correctAnswers.forEach((answer, idx) => {
-                        const displayAnswer = Array.isArray(answer) ? answer.join(' or ') : answer;
-                        answersHTML += `<div class="passage-answer-item"><span class="answer-number">(${idx})</span> <span class="answer-text">${displayAnswer}</span></div>`;
-                    });
-                    document.getElementById('passageAnswersContent').innerHTML = answersHTML;
-                    document.getElementById('passageAnswers').classList.add('show');
                 }
             } else if (isFIB) {
                 const fibInput = document.getElementById('fibInput');
