@@ -953,6 +953,11 @@
                 passageInputs.innerHTML = '';
                 
                 blankNumbers.forEach((blankNumber) => {
+                    // Skip creating input for this blank if it's not in the answer object (it's a hint)
+                    if (!question.answer.hasOwnProperty(blankNumber.toString())) {
+                        return;
+                    }
+                    
                     const inputGroup = document.createElement('div');
                     inputGroup.className = 'passage-input-group';
                     
@@ -983,6 +988,11 @@
                     const correctAnswers = question.answer;
                     
                     blankNumbers.forEach((blankNumber) => {
+                        // Skip if this blank is not in the answer object (it's a hint)
+                        if (!question.answer.hasOwnProperty(blankNumber.toString())) {
+                            return;
+                        }
+                        
                         const input = document.getElementById(`passageBlank${blankNumber}`);
                         const answerDiv = document.getElementById(`passageAnswer${blankNumber}`);
                         const userVal = userAnswer ? userAnswer[blankNumber] : '';
@@ -1011,6 +1021,11 @@
                 } else {
                     // Set up input event listeners
                     blankNumbers.forEach((blankNumber) => {
+                        // Skip if this blank is not in the answer object (it's a hint)
+                        if (!question.answer.hasOwnProperty(blankNumber.toString())) {
+                            return;
+                        }
+                        
                         const input = document.getElementById(`passageBlank${blankNumber}`);
                         input.oninput = () => {
                             // Check if all blanks are filled

@@ -2,9 +2,8 @@
   {
     "type": "passageFib",
     "question": "Complete the verb forms in the passage below:",
-    "passage": "The shop ________ (be) tiny and dark. I ________ (enter) cautiously, noticing that a layer of dust ________ (settle) on every surface. \"I ________ (wait) for you,\" a voice rasped from the corner. An old man ________ (sit) behind a desk, clutching a box. If I ________ (be) braver, I would have asked him how he knew my name. He ________ (open) the lid to reveal a ring that ________ (belong) to my grandfather. I realized then that my journey ________ (only just begin).",
+    "passage": "The shop (0) was (be) tiny and dark. I ________ (enter) cautiously, noticing that a layer of dust ________ (settle) on every surface. \"I ________ (wait) for you,\" a voice rasped from the corner. An old man ________ (sit) behind a desk, clutching a box. If I ________ (be) braver, I would have asked him how he knew my name. He ________ (open) the lid to reveal a ring that ________ (belong) to my grandfather. I realized then that my journey ________ (only just begin).",
     "answer": {
-      "0": "was",
       "1": "entered",
       "2": ["had settled", "settled"],
       "3": ["have been waiting", "have waited"],
@@ -14,14 +13,13 @@
       "7": ["had belonged", "belonged"],
       "8": ["had only just begun", "was only just beginning"]
     },
-    "explanation": "Past tenses: (0) was - past simple description; (1) entered - past simple action; (2) had settled - past perfect; (3) have been waiting - present perfect continuous; (4) was sitting/sat - past continuous/simple; (5) had been - past perfect in conditional; (6) opened - past simple; (7) had belonged - past perfect; (8) had only just begun - past perfect."
+    "explanation": "Past tenses: (0) was - example answer; (1) entered - past simple action; (2) had settled - past perfect; (3) have been waiting - present perfect continuous; (4) was sitting/sat - past continuous/simple; (5) had been - past perfect in conditional; (6) opened - past simple; (7) had belonged - past perfect; (8) had only just begun - past perfect."
   },
   {
     "type": "passageFib",
     "question": "Complete the verb forms in the passage below:",
-    "passage": "The experiment ________ (be) a success so far. Until last week, the team ________ (struggle) to stabilize the compound. However, once the temperature ________ (lower) to absolute zero, the molecules ________ (start) to behave predictably. Dr. Aris ________ (believe) that if they ________ (continue) at this pace, they ________ (publish) their findings by June. Currently, the lab ________ (monitor) by security to ensure no data ________ (leak).",
+    "passage": "The experiment (0) has been (be) a success so far. Until last week, the team ________ (struggle) to stabilize the compound. However, once the temperature ________ (lower) to absolute zero, the molecules ________ (start) to behave predictably. Dr. Aris ________ (believe) that if they ________ (continue) at this pace, they ________ (publish) their findings by June. Currently, the lab ________ (monitor) by security to ensure no data ________ (leak).",
     "answer": {
-      "0": "has been",
       "1": ["had been struggling", "struggled"],
       "2": ["was lowered", "had been lowered"],
       "3": "started",
@@ -31,14 +29,13 @@
       "7": ["is being monitored", "is monitored"],
       "8": ["leaks", "is leaked"]
     },
-    "explanation": "Mixed tenses: (0) has been - present perfect; (1) had been struggling - past perfect continuous; (2) was lowered - past simple passive; (3) started - past simple; (4) believes - present simple; (5) continue - present simple in conditional; (6) will publish - future simple; (7) is being monitored - present continuous passive; (8) leaks - present simple."
+    "explanation": "Mixed tenses: (0) has been - example answer; (1) had been struggling - past perfect continuous; (2) was lowered - past simple passive; (3) started - past simple; (4) believes - present simple; (5) continue - present simple in conditional; (6) will publish - future simple; (7) is being monitored - present continuous passive; (8) leaks - present simple."
   },
   {
     "type": "passageFib",
     "question": "Complete the verb forms in the passage below:",
-    "passage": "The train ________ (pull) out of the station at midnight. By the time I ________ (realize) I was on the wrong platform, the doors ________ (lock) firmly. I ________ (try) to signal the guard, but he ________ (vanish). I ________ (wander) through the carriages for an hour when I suddenly ________ (hear) a faint whistle. I wish I ________ (listen) to the porter's warning earlier. Now, I ________ (trap) in a moving tomb.",
+    "passage": "The train (0) pulled (pull) out of the station at midnight. By the time I ________ (realize) I was on the wrong platform, the doors ________ (lock) firmly. I ________ (try) to signal the guard, but he ________ (vanish). I ________ (wander) through the carriages for an hour when I suddenly ________ (hear) a faint whistle. I wish I ________ (listen) to the porter's warning earlier. Now, I ________ (trap) in a moving tomb.",
     "answer": {
-      "0": "pulled",
       "1": "realized",
       "2": ["had locked", "had been locked"],
       "3": "tried",
@@ -48,14 +45,13 @@
       "7": ["had listened", "listened"],
       "8": ["am trapped", "was trapped"]
     },
-    "explanation": "Past narrative: (0) pulled - past simple; (1) realized - past simple; (2) had locked - past perfect; (3) tried - past simple; (4) had vanished - past perfect; (5) had been wandering - past perfect continuous; (6) heard - past simple; (7) had listened - past perfect in wish; (8) am trapped - present simple passive."
+    "explanation": "Past narrative: (0) pulled - example answer; (1) realized - past simple; (2) had locked - past perfect; (3) tried - past simple; (4) had vanished - past perfect; (5) had been wandering - past perfect continuous; (6) heard - past simple; (7) had listened - past perfect in wish; (8) am trapped - present simple passive."
   },
   {
     "type": "passageFib",
     "question": "Complete the verb forms in the passage below:",
-    "passage": "The fire ________ (rage) through the valley for three days. Before the rain ________ (arrive), nearly half the forest ________ (turn) to ash. The villagers ________ (evacuate) to the nearby hills where they ________ (watch) their homes disappear. If the fire department ________ (act) sooner, the damage ________ (minimize). Now, the community ________ (rebuild) what was lost, hoping that such a tragedy ________ (never recur).",
+    "passage": "The fire (0) raged (rage) through the valley for three days. Before the rain ________ (arrive), nearly half the forest ________ (turn) to ash. The villagers ________ (evacuate) to the nearby hills where they ________ (watch) their homes disappear. If the fire department ________ (act) sooner, the damage ________ (minimize). Now, the community ________ (rebuild) what was lost, hoping that such a tragedy ________ (never recur).",
     "answer": {
-      "0": "raged",
       "1": "arrived",
       "2": ["had turned", "had been turned"],
       "3": ["were evacuated", "evacuated"],
@@ -65,14 +61,13 @@
       "7": ["is rebuilding", "are rebuilding"],
       "8": ["will never recur", "never recurs"]
     },
-    "explanation": "Past and present: (0) raged - past simple; (1) arrived - past simple; (2) had turned - past perfect; (3) were evacuated - past simple passive; (4) watched - past simple; (5) had acted - past perfect in conditional; (6) would have been minimized - conditional perfect passive; (7) is rebuilding - present continuous; (8) will never recur - future simple."
+    "explanation": "Past and present: (0) raged - example answer; (1) arrived - past simple; (2) had turned - past perfect; (3) were evacuated - past simple passive; (4) watched - past simple; (5) had acted - past perfect in conditional; (6) would have been minimized - conditional perfect passive; (7) is rebuilding - present continuous; (8) will never recur - future simple."
   },
   {
     "type": "passageFib",
     "question": "Complete the verb forms in the passage below:",
-    "passage": "She ________ (feel) nervous as she walked in. She ________ (prepare) for this interview for months. The panel ________ (consist) of five grim-looking experts. \"Why ________ you ________ (choose) this career?\" the chairman asked. Before she ________ (can) answer, the phone ________ (ring). It ________ (be) an emergency. The interview ________ (postpone), and she ________ (tell) to come back the following Monday.",
+    "passage": "She (0) felt (feel) nervous as she walked in. She ________ (prepare) for this interview for months. The panel ________ (consist) of five grim-looking experts. \"Why ________ you ________ (choose) this career?\" the chairman asked. Before she ________ (can) answer, the phone ________ (ring). It ________ (be) an emergency. The interview ________ (postpone), and she ________ (tell) to come back the following Monday.",
     "answer": {
-      "0": "felt",
       "1": ["had been preparing", "had prepared"],
       "2": "consisted",
       "3": "did",
@@ -83,14 +78,13 @@
       "8": ["was postponed", "got postponed"],
       "9": ["was told", "got told"]
     },
-    "explanation": "Past narrative with questions: (0) felt - past simple; (1) had been preparing - past perfect continuous; (2) consisted - past simple; (3-4) did...choose - past simple question split into two blanks; (5) could - past modal; (6) rang - past simple; (7) was - past simple; (8) was postponed - past simple passive; (9) was told - past simple passive."
+    "explanation": "Past narrative: (0) felt - example answer; (1) had been preparing - past perfect continuous; (2) consisted - past simple; (3-4) did...choose - past simple question; (5) could - past modal; (6) rang - past simple; (7) was - past simple; (8) was postponed - past simple passive; (9) was told - past simple passive."
   },
   {
     "type": "passageFib",
     "question": "Complete the verb forms in the passage below:",
-    "passage": "By the time the race ________ (start), Arjun ________ (warm) up for nearly two hours. He ________ (know) that if he ________ (win) this gold medal, he ________ (become) a national hero. He ________ (train) relentlessly since he was twelve. As the whistle ________ (blow), he ________ (sprint) forward. Years of hard work ________ (finally pay) off.",
+    "passage": "By the time the race (0) started (start), Arjun ________ (warm) up for nearly two hours. He ________ (know) that if he ________ (win) this gold medal, he ________ (become) a national hero. He ________ (train) relentlessly since he was twelve. As the whistle ________ (blow), he ________ (sprint) forward. Years of hard work ________ (finally pay) off.",
     "answer": {
-      "0": "started",
       "1": ["had been warming", "had warmed"],
       "2": "knew",
       "3": ["won", "could win"],
@@ -100,14 +94,13 @@
       "7": "sprinted",
       "8": ["were finally paying", "finally paid", "had finally paid"]
     },
-    "explanation": "Past narrative with conditionals: (0) started - past simple; (1) had been warming - past perfect continuous; (2) knew - past simple; (3) won - past simple in conditional; (4) would become - conditional; (5) had been training - past perfect continuous; (6) blew - past simple; (7) sprinted - past simple; (8) were finally paying - past continuous."
+    "explanation": "Past narrative: (0) started - example answer; (1) had been warming - past perfect continuous; (2) knew - past simple; (3) won - past simple in conditional; (4) would become - conditional; (5) had been training - past perfect continuous; (6) blew - past simple; (7) sprinted - past simple; (8) were finally paying - past continuous."
   },
   {
     "type": "passageFib",
     "question": "Complete the verb forms in the passage below:",
-    "passage": "The ice ________ (be) dangerously thin this year. The explorers ________ (warn) by the locals before they ________ (set) out. Had they ________ (heed) the advice, they ________ (not be) in this crisis now. One of the sledges ________ (sink) into the slush yesterday. They ________ (wait) for a rescue chopper for ten hours now. If the wind ________ (pick) up, the mission ________ (abandon).",
+    "passage": "The ice (0) is (be) dangerously thin this year. The explorers ________ (warn) by the locals before they ________ (set) out. Had they ________ (heed) the advice, they ________ (not be) in this crisis now. One of the sledges ________ (sink) into the slush yesterday. They ________ (wait) for a rescue chopper for ten hours now. If the wind ________ (pick) up, the mission ________ (abandon).",
     "answer": {
-      "0": "is",
       "1": ["were warned", "had been warned"],
       "2": "set",
       "3": "heeded",
@@ -117,14 +110,13 @@
       "7": ["picks", "should pick"],
       "8": ["will be abandoned", "will have to be abandoned"]
     },
-    "explanation": "Mixed tenses with conditionals: (0) is - present simple; (1) were warned - past simple passive; (2) set - past simple; (3) heeded - past perfect in inverted conditional; (4) would not be - conditional; (5) sank - past simple; (6) have been waiting - present perfect continuous; (7) picks - present simple in conditional; (8) will be abandoned - future passive."
+    "explanation": "Mixed tenses: (0) is - example answer; (1) were warned - past simple passive; (2) set - past simple; (3) heeded - past perfect in inverted conditional; (4) would not be - conditional; (5) sank - past simple; (6) have been waiting - present perfect continuous; (7) picks - present simple in conditional; (8) will be abandoned - future passive."
   },
   {
     "type": "passageFib",
     "question": "Complete the verb forms in the passage below:",
-    "passage": "The museum ________ (discover) the theft at dawn. The masterpiece ________ (remove) from its frame with surgical precision. The security cameras ________ (tamper) with the previous night. The police ________ (suspect) that an insider ________ (help) the thieves. Unless the painting ________ (recover) soon, the curator ________ (resign). Currently, every exit ________ (watch) by undercover agents.",
+    "passage": "The museum (0) discovered (discover) the theft at dawn. The masterpiece ________ (remove) from its frame with surgical precision. The security cameras ________ (tamper) with the previous night. The police ________ (suspect) that an insider ________ (help) the thieves. Unless the painting ________ (recover) soon, the curator ________ (resign). Currently, every exit ________ (watch) by undercover agents.",
     "answer": {
-      "0": "discovered",
       "1": ["had been removed", "was removed"],
       "2": ["had been tampered", "were tampered"],
       "3": "suspect",
@@ -133,14 +125,13 @@
       "6": ["will resign", "must resign"],
       "7": ["is being watched", "is watched"]
     },
-    "explanation": "Past and present with passive: (0) discovered - past simple; (1) had been removed - past perfect passive; (2) had been tampered - past perfect passive; (3) suspect - present simple; (4) helped - past simple; (5) is recovered - present simple passive in conditional; (6) will resign - future simple; (7) is being watched - present continuous passive."
+    "explanation": "Past and present with passive: (0) discovered - example answer; (1) had been removed - past perfect passive; (2) had been tampered - past perfect passive; (3) suspect - present simple; (4) helped - past simple; (5) is recovered - present simple passive in conditional; (6) will resign - future simple; (7) is being watched - present continuous passive."
   },
   {
     "type": "passageFib",
     "question": "Complete the verb forms in the passage below:",
-    "passage": "I ________ (run) a marathon before today. By the twenty-mile mark, my legs ________ (feel) like lead. I ________ (think) about quitting when a spectator ________ (hand) me a bottle of water. That small gesture ________ (give) me the strength I ________ (need). If I ________ (not stop) for that drink, I ________ (collapse). I am glad I ________ (persevere).",
+    "passage": "I (0) have never run (run) a marathon before today. By the twenty-mile mark, my legs ________ (feel) like lead. I ________ (think) about quitting when a spectator ________ (hand) me a bottle of water. That small gesture ________ (give) me the strength I ________ (need). If I ________ (not stop) for that drink, I ________ (collapse). I am glad I ________ (persevere).",
     "answer": {
-      "0": "have never run",
       "1": ["felt", "were feeling"],
       "2": ["was thinking", "thought"],
       "3": "handed",
@@ -150,14 +141,13 @@
       "7": ["would have collapsed", "could have collapsed"],
       "8": "persevered"
     },
-    "explanation": "Present perfect and past narrative: (0) have never run - present perfect; (1) felt - past simple; (2) was thinking - past continuous; (3) handed - past simple; (4) gave - past simple; (5) needed - past simple; (6) had not stopped - past perfect in conditional; (7) would have collapsed - conditional perfect; (8) persevered - past simple."
+    "explanation": "Present perfect and past: (0) have never run - example answer; (1) felt - past simple; (2) was thinking - past continuous; (3) handed - past simple; (4) gave - past simple; (5) needed - past simple; (6) had not stopped - past perfect in conditional; (7) would have collapsed - conditional perfect; (8) persevered - past simple."
   },
   {
     "type": "passageFib",
     "question": "Complete the verb forms in the passage below:",
-    "passage": "The countdown ________ (begin) at T-minus ten. The astronauts ________ (strap) into their seats long before the engines ________ (ignite). This mission ________ (take) three years to plan. Once the rocket ________ (break) the atmosphere, the crew ________ (experience) weightlessness. They ________ (conduct) experiments for the next six months. It ________ (hope) that their findings ________ (revolutionize) space travel.",
+    "passage": "The countdown (0) began (begin) at T-minus ten. The astronauts ________ (strap) into their seats long before the engines ________ (ignite). This mission ________ (take) three years to plan. Once the rocket ________ (break) the atmosphere, the crew ________ (experience) weightlessness. They ________ (conduct) experiments for the next six months. It ________ (hope) that their findings ________ (revolutionize) space travel.",
     "answer": {
-      "0": "began",
       "1": ["had been strapped", "were strapped"],
       "2": "ignited",
       "3": ["had taken", "took"],
@@ -167,6 +157,6 @@
       "7": ["is hoped", "was hoped"],
       "8": ["will revolutionize", "could revolutionize"]
     },
-    "explanation": "Past and future: (0) began - past simple; (1) had been strapped - past perfect passive; (2) ignited - past simple; (3) had taken - past perfect; (4) breaks - present simple after 'once'; (5) will experience - future simple; (6) will conduct - future simple; (7) is hoped - present simple passive; (8) will revolutionize - future simple."
+    "explanation": "Past and future: (0) began - example answer; (1) had been strapped - past perfect passive; (2) ignited - past simple; (3) had taken - past perfect; (4) breaks - present simple after 'once'; (5) will experience - future simple; (6) will conduct - future simple; (7) is hoped - present simple passive; (8) will revolutionize - future simple."
   }
 ]
