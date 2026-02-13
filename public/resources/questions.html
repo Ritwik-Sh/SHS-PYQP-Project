@@ -886,6 +886,7 @@
         }
 
         function normalizeAnswer(answer) {
+            if (!answer) return '';
             return answer.toString().trim().toLowerCase();
         }
 
@@ -984,11 +985,16 @@
                     blankNumbers.forEach((blankNumber) => {
                         const input = document.getElementById(`passageBlank${blankNumber}`);
                         const answerDiv = document.getElementById(`passageAnswer${blankNumber}`);
-                        const userVal = userAnswer[blankNumber];
-                        const correctVal = correctAnswers[blankNumber];
+                        const userVal = userAnswer ? userAnswer[blankNumber] : '';
+                        const correctVal = correctAnswers ? correctAnswers[blankNumber] : '';
                         
-                        input.value = userVal;
+                        input.value = userVal || '';
                         input.disabled = true;
+                        
+                        if (!correctVal) {
+                            // If no correct answer defined for this blank, skip validation
+                            return;
+                        }
                         
                         const isCorrect = Array.isArray(correctVal)
                             ? correctVal.some(ans => normalizeAnswer(ans) === normalizeAnswer(userVal))
@@ -996,7 +1002,7 @@
                         
                         input.classList.add(isCorrect ? 'correct' : 'incorrect');
                         
-                        if (!isCorrect) {
+                        if (!isCorrect && correctVal) {
                             const displayAnswer = Array.isArray(correctVal) ? correctVal.join(' or ') : correctVal;
                             answerDiv.innerHTML = `<span class="passage-blank-answer-label">Correct: </span>${displayAnswer}`;
                             answerDiv.classList.add('show');
@@ -1154,6 +1160,12 @@
                     const userVal = userAnswer[index];
                     const correctVal = correctAnswers[index];
                     
+                    if (!correctVal) {
+                        // If no correct answer defined for this blank, skip validation
+                        input.disabled = true;
+                        return;
+                    }
+                    
                     const isCorrect = Array.isArray(correctVal)
                         ? correctVal.some(ans => normalizeAnswer(ans) === normalizeAnswer(userVal))
                         : normalizeAnswer(correctVal) === normalizeAnswer(userVal);
@@ -1303,14 +1315,18 @@
                         // Check if all blanks are correct
                         const userAnswer = userAnswers[index];
                         const correctAnswers = question.answer;
-                        isCorrect = Object.keys(correctAnswers).every(key => {
-                            const correctVal = correctAnswers[key];
-                            const userVal = userAnswer[key];
-                            if (!userVal) return false; // Safety check
-                            return Array.isArray(correctVal)
-                                ? correctVal.some(ans => normalizeAnswer(ans) === normalizeAnswer(userVal))
-                                : normalizeAnswer(correctVal) === normalizeAnswer(userVal);
-                        });
+                        if (!userAnswer || !correctAnswers) {
+                            isCorrect = false;
+                        } else {
+                            isCorrect = Object.keys(correctAnswers).every(key => {
+                                const correctVal = correctAnswers[key];
+                                const userVal = userAnswer[key];
+                                if (!userVal || !correctVal) return false; // Safety check
+                                return Array.isArray(correctVal)
+                                    ? correctVal.some(ans => normalizeAnswer(ans) === normalizeAnswer(userVal))
+                                    : normalizeAnswer(correctVal) === normalizeAnswer(userVal);
+                            });
+                        }
                     } else if (isFIB) {
                         isCorrect = Array.isArray(question.answer)
                             ? question.answer.some(ans => normalizeAnswer(ans) === normalizeAnswer(userAnswers[index]))
@@ -1353,14 +1369,18 @@
                         // Check if all blanks are correct
                         const userAnswer = userAnswers[index];
                         const correctAnswers = question.answer;
-                        isCorrect = Object.keys(correctAnswers).every(key => {
-                            const correctVal = correctAnswers[key];
-                            const userVal = userAnswer[key];
-                            if (!userVal) return false; // Safety check
-                            return Array.isArray(correctVal)
-                                ? correctVal.some(ans => normalizeAnswer(ans) === normalizeAnswer(userVal))
-                                : normalizeAnswer(correctVal) === normalizeAnswer(userVal);
-                        });
+                        if (!userAnswer || !correctAnswers) {
+                            isCorrect = false;
+                        } else {
+                            isCorrect = Object.keys(correctAnswers).every(key => {
+                                const correctVal = correctAnswers[key];
+                                const userVal = userAnswer[key];
+                                if (!userVal || !correctVal) return false; // Safety check
+                                return Array.isArray(correctVal)
+                                    ? correctVal.some(ans => normalizeAnswer(ans) === normalizeAnswer(userVal))
+                                    : normalizeAnswer(correctVal) === normalizeAnswer(userVal);
+                            });
+                        }
                     } else if (isFIB) {
                         isCorrect = Array.isArray(question.answer)
                             ? question.answer.some(ans => normalizeAnswer(ans) === normalizeAnswer(userAnswers[index]))
