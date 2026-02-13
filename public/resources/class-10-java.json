@@ -1258,10 +1258,10 @@
 	{
 		"question": "Which conversion causes loss of precision?",
 		"options": [
-			"int → double",
-			"float → double",
-			"double → int",
-			"byte → int"
+			"int -> double",
+			"float -> double",
+			"double -> int",
+			"byte -> int"
 		],
 		"answer": 2
 	},
@@ -4288,7 +4288,7 @@
 		"explanation": "To transpose in-place, swap only when i < j to avoid swapping twice (which reverses the swap). For a 3x3 matrix, swap 3 pairs: (0,1), (0,2), (1,2). Option (a) would swap twice, undoing the transpose."
 	},
 	{
-		"question": "🧠 THE BRAIN-TEASER - A challenging question that requires careful tracing:\n```java\npublic class Puzzle {\n  public static void main(String[] args) {\n    int[] numbers = {12, 7, 18, 5, 23, 9, 14};\n    int sum = 0;\n    int count = 0;\n    \n    for(int i = 0; i < numbers.length; i++) {\n      if(numbers[i] % 2 != 0) {\n        sum += numbers[i];\n        count++;\n      }\n    }\n    \n    int result = 0;\n    for(int i = 1; i <= count; i++) {\n      result += i * 2;\n    }\n    \n    System.out.println(result + sum / ++count);\n  }\n}\n```\nWhat is the output?",
+		"question": "A challenging question that requires careful tracing:\n```java\npublic class Puzzle {\n  public static void main(String[] args) {\n    int[] numbers = {12, 7, 18, 5, 23, 9, 14};\n    int sum = 0;\n    int count = 0;\n    \n    for(int i = 0; i < numbers.length; i++) {\n      if(numbers[i] % 2 != 0) {\n        sum += numbers[i];\n        count++;\n      }\n    }\n    \n    int result = 0;\n    for(int i = 1; i <= count; i++) {\n      result += i * 2;\n    }\n    \n    System.out.println(result + sum / ++count);\n  }\n}\n```\nWhat is the output?",
 		"options": [
 			"28.8",
 			"28",

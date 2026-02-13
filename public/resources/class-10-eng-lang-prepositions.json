@@ -1008,16 +1008,15 @@
     "explanation": "'Mistaken for' means wrongly identified as someone else."
   },
   {
-    "question": "His students look __ to him.",
+    "question": "His students look ___ to him.",
     "type": "fib",
     "answer": "up",
     "explanation": "'Look up to' means respect or admire."
   },
   {
-    "question": "Since he's not here, you want to make __?",
+    "question": "Since he's not here, you want to make ___?",
     "type": "fib",
-    "answer": "do",
-    "explanation": "'Make do' means manage or get by with what is available."
+    "answer": ["out", "up"]
   },
   {
     "question": "The watchman quickly made ___ the thief.",
@@ -1026,7 +1025,7 @@
     "explanation": "'Made after' means chased or pursued."
   },
   {
-    "question": "Make __ luggage to the porter.",
+    "question": "Make ___ luggage to the porter.",
     "type": "fib",
     "answer": "over",
     "explanation": "'Make over' means hand over or transfer to someone."
@@ -1110,307 +1109,307 @@
     "explanation": "'Care for' or 'care about' means have affection or concern for someone."
   },
   {
-    "question": "It is not meet to go __ looks.",
+    "question": "It is not meet to go ___ looks.",
     "type": "fib",
     "answer": "by",
     "explanation": "'Go by' means judge or form opinions based on."
   },
   {
-    "question": "The teacher asked the students to carry _____ with their work despite the disturbance.",
+    "question": "The teacher asked the students to carry ___ with their work despite the disturbance.",
     "type": "fib",
     "answer": "on",
     "explanation": "'Carry on' means continue doing something."
   },
   {
-    "question": "He carried _____ his threat without any warning.",
+    "question": "He carried ____ his threat without any warning.",
     "type": "fib",
     "answer": "out",
     "explanation": "'Carried out' means executed or implemented."
   },
   {
-    "question": "The match was called _____ due to heavy rain.",
+    "question": "The match was called ___ due to heavy rain.",
     "type": "fib",
     "answer": "off",
     "explanation": "'Called off' means cancelled or abandoned."
   },
   {
-    "question": "The committee decided to look _____ the complaint thoroughly.",
+    "question": "The committee decided to look ___ the complaint thoroughly.",
     "type": "fib",
     "answer": "into",
     "explanation": "'Look into' means investigate or examine."
   },
   {
-    "question": "He looked _____ the documents before signing them.",
+    "question": "He looked ___ the documents before signing them.",
     "type": "fib",
     "answer": ["over", "through"],
     "explanation": "'Looked over' or 'looked through' means reviewed or examined carefully."
   },
   {
-    "question": "She turned _____ the offer as it did not suit her requirements.",
+    "question": "She turned ___ the offer as it did not suit her requirements.",
     "type": "fib",
     "answer": "down",
     "explanation": "'Turned down' means rejected or refused."
   },
   {
-    "question": "He turned _____ late for the meeting without any explanation.",
+    "question": "He turned ___ late for the meeting without any explanation.",
     "type": "fib",
     "answer": "up",
     "explanation": "'Turned up' means arrived or appeared."
   },
   {
-    "question": "The issue was brought _____ during the staff meeting.",
+    "question": "The issue was brought ___ during the staff meeting.",
     "type": "fib",
     "answer": "up",
     "explanation": "'Brought up' means raised or mentioned for discussion."
   },
   {
-    "question": "The reforms brought _____ significant changes in the system.",
+    "question": "The reforms brought ___ significant changes in the system.",
     "type": "fib",
     "answer": "about",
     "explanation": "'Brought about' means caused or resulted in."
   },
   {
-    "question": "A fire broke _____ in the warehouse at midnight.",
+    "question": "A fire broke ___ in the warehouse at midnight.",
     "type": "fib",
     "answer": "out",
     "explanation": "'Broke out' means started suddenly (especially of fire, war, or disease)."
   },
   {
-    "question": "The meeting was put _____ till next week.",
+    "question": "The meeting was put ___ till next week.",
     "type": "fib",
     "answer": "off",
     "explanation": "'Put off' means postponed or delayed."
   },
   {
-    "question": "She could no longer put _____ his arrogance.",
+    "question": "She could no longer put ___ his arrogance.",
     "type": "fib",
     "answer": ["up with", "with"],
     "explanation": "'Put up with' means tolerate or endure."
   },
   {
-    "question": "The new manager took _____ the company last year.",
+    "question": "The new manager took ___ the company last year.",
     "type": "fib",
     "answer": "over",
     "explanation": "'Took over' means assumed control or responsibility."
   },
   {
-    "question": "She decided to take _____ painting as a hobby.",
+    "question": "She decided to take ___ painting as a hobby.",
     "type": "fib",
     "answer": "up",
     "explanation": "'Take up' means start doing something as a new activity or interest."
   },
   {
-    "question": "He ran _____ an old friend while travelling abroad.",
+    "question": "He ran ___ an old friend while travelling abroad.",
     "type": "fib",
     "answer": ["into", "across"],
     "explanation": "'Ran into' or 'ran across' means met by chance or encountered."
   },
   {
-    "question": "We ran out _____ petrol in the middle of the highway.",
+    "question": "We ran out ___ petrol in the middle of the highway.",
     "type": "fib",
     "answer": "of",
     "explanation": "'Ran out of' means exhausted the supply of something."
   },
   {
-    "question": "He gave _____ smoking after repeated warnings.",
+    "question": "He gave ___ smoking after repeated warnings.",
     "type": "fib",
     "answer": "up",
     "explanation": "'Gave up' means stopped or quit doing something."
   },
   {
-    "question": "She finally gave _____ to the pressure.",
+    "question": "She finally gave ___ to the pressure.",
     "type": "fib",
     "answer": "in",
     "explanation": "'Gave in' means yielded or surrendered."
   },
   {
-    "question": "They made _____ their differences after years of hostility.",
+    "question": "They made ___ their differences after years of hostility.",
     "type": "fib",
     "answer": "up",
     "explanation": "'Made up' means reconciled or resolved differences."
   },
   {
-    "question": "He held _____ the truth despite severe questioning.",
+    "question": "He held ___ the truth despite severe questioning.",
     "type": "fib",
     "answer": "back",
     "explanation": "'Held back' means withheld or concealed."
   },
   {
-    "question": "He fell _____ the trap laid by the fraudster.",
+    "question": "He fell ___ the trap laid by the fraudster.",
     "type": "fib",
     "answer": ["into", "for"],
     "explanation": "'Fell into' or 'fell for' means was deceived by or became victim to."
   },
   {
-    "question": "The friends fell _____ over a trivial issue.",
+    "question": "The friends fell ___ over a trivial issue.",
     "type": "fib",
     "answer": "out",
     "explanation": "'Fell out' means quarreled or had a disagreement."
   },
   {
-    "question": "She went _____ a difficult phase in her life.",
+    "question": "She went ___ a difficult phase in her life.",
     "type": "fib",
     "answer": "through",
     "explanation": "'Went through' means experienced or endured."
   },
   {
-    "question": "The teacher went _____ the answers in class.",
+    "question": "The teacher went ___ the answers in class.",
     "type": "fib",
     "answer": ["over", "through"],
     "explanation": "'Went over' or 'went through' means reviewed or discussed."
   },
   {
-    "question": "He decided to cut _____ unnecessary expenses.",
+    "question": "He decided to cut ___ unnecessary expenses.",
     "type": "fib",
     "answer": ["down", "down on"],
     "explanation": "'Cut down' or 'cut down on' means reduce or decrease."
   },
   {
-    "question": "The village was cut _____ from the city due to floods.",
+    "question": "The village was cut ___ from the city due to floods.",
     "type": "fib",
     "answer": "off",
     "explanation": "'Cut off' means isolated or separated from."
   },
   {
-    "question": "They went to the station to see _____ their relatives.",
+    "question": "They went to the station to see ___ their relatives.",
     "type": "fib",
     "answer": "off",
     "explanation": "'See off' means say goodbye to someone who is leaving on a journey."
   },
   {
-    "question": "A committee was set _____ to investigate the matter.",
+    "question": "A committee was set ___ to investigate the matter.",
     "type": "fib",
     "answer": "up",
     "explanation": "'Set up' means established or formed."
   },
   {
-    "question": "He set _____ some money for emergencies.",
+    "question": "He set ___ some money for emergencies.",
     "type": "fib",
     "answer": ["aside", "by"],
     "explanation": "'Set aside' or 'set by' means saved or reserved."
   },
   {
-    "question": "This abbreviation stands _____ the name of the organisation.",
+    "question": "This abbreviation stands ___ the name of the organisation.",
     "type": "fib",
     "answer": "for",
     "explanation": "'Stands for' means represents or denotes."
   },
   {
-    "question": "She stood _____ her friend during the crisis.",
+    "question": "She stood ___ her friend during the crisis.",
     "type": "fib",
     "answer": "by",
     "explanation": "'Stood by' means supported or remained loyal to."
   },
   {
-    "question": "The workers walked _____ in protest against the decision.",
+    "question": "The workers walked ___ in protest against the decision.",
     "type": "fib",
     "answer": "out",
     "explanation": "'Walked out' means left in protest or as a strike."
   },
   {
-    "question": "The principal called _____ the names from the attendance register.",
+    "question": "The principal called ___ the names from the attendance register.",
     "type": "fib",
     "answer": "out",
     "explanation": "'Called out' means read aloud or announced."
   },
   {
-    "question": "The plane took _____ on time despite bad weather.",
+    "question": "The plane took ___ on time despite bad weather.",
     "type": "fib",
     "answer": "off",
     "explanation": "'Took off' means departed or left the ground (for aircraft)."
   },
   {
-    "question": "The factory was closed _____ after years of losses.",
+    "question": "The factory was closed ___ after years of losses.",
     "type": "fib",
     "answer": "down",
     "explanation": "'Closed down' means shut permanently or ceased operations."
   },
   {
-    "question": "The teacher pointed _____ the errors in his essay.",
+    "question": "The teacher pointed ___ the errors in his essay.",
     "type": "fib",
     "answer": "out",
     "explanation": "'Pointed out' means indicated or drew attention to."
   },
   {
-    "question": "He got _____ the exam with very high marks.",
+    "question": "He got ___ the exam with very high marks.",
     "type": "fib",
     "answer": "through",
     "explanation": "'Got through' means passed or succeeded in."
   },
   {
-    "question": "She got _____ her fear of public speaking gradually.",
+    "question": "She got ___ her fear of public speaking gradually.",
     "type": "fib",
     "answer": "over",
     "explanation": "'Got over' means overcame or recovered from."
   },
   {
-    "question": "The leader stepped _____ to address the gathering.",
+    "question": "The leader stepped ___ to address the gathering.",
     "type": "fib",
     "answer": ["forward", "up"],
     "explanation": "'Stepped forward' or 'stepped up' means came forward or volunteered."
   },
   {
-    "question": "He stepped _____ the role of mediator during the dispute.",
+    "question": "He stepped ___ the role of mediator during the dispute.",
     "type": "fib",
     "answer": "into",
     "explanation": "'Stepped into' means assumed or took on (a role)."
   },
   {
-    "question": "The chairman laid _____ strict rules for the employees.",
+    "question": "The chairman laid ___ strict rules for the employees.",
     "type": "fib",
     "answer": "down",
     "explanation": "'Laid down' means established or prescribed (rules or regulations)."
   },
   {
-    "question": "She laid _____ some money for future needs.",
+    "question": "She laid ___ some money for future needs.",
     "type": "fib",
     "answer": ["aside", "by"],
     "explanation": "'Laid aside' or 'laid by' means saved or put away."
   },
   {
-    "question": "The teacher let _____ a sigh of relief after the results.",
+    "question": "The teacher let ___ a sigh of relief after the results.",
     "type": "fib",
     "answer": "out",
     "explanation": "'Let out' means released or uttered (a sound)."
   },
   {
-    "question": "The guard would not let anyone _____ without an identity card.",
+    "question": "The guard would not let anyone ___ without an identity card.",
     "type": "fib",
     "answer": "in",
     "explanation": "'Let in' means allow to enter."
   },
   {
-    "question": "The issue cropped _____ unexpectedly during the meeting.",
+    "question": "The issue cropped ___ unexpectedly during the meeting.",
     "type": "fib",
     "answer": "up",
     "explanation": "'Cropped up' means appeared or arose unexpectedly."
   },
   {
-    "question": "He broke _____ his studies due to financial difficulties.",
+    "question": "He broke ___ his studies due to financial difficulties.",
     "type": "fib",
     "answer": "off",
     "explanation": "'Broke off' means discontinued or stopped abruptly."
   },
   {
-    "question": "She broke _____ tears on hearing the news.",
+    "question": "She broke ___ tears on hearing the news.",
     "type": "fib",
     "answer": "into",
     "explanation": "'Broke into' means suddenly started (crying, laughing, etc.)."
   },
   {
-    "question": "The minister spoke _____ against corruption openly.",
+    "question": "The minister spoke ___ against corruption openly.",
     "type": "fib",
     "answer": ["out", "up"],
     "explanation": "'Spoke out' or 'spoke up' means expressed opinions boldly or publicly."
   },
   {
-    "question": "The child spoke _____ of turn and was reprimanded.",
+    "question": "The child spoke ___ of turn and was reprimanded.",
     "type": "fib",
     "answer": "out",
     "explanation": "'Spoke out of turn' means spoke when not appropriate or without permission."
   },
   {
-    "question": "The agreement fell _____ after long negotiations.",
+    "question": "The agreement fell ___ after long negotiations.",
     "type": "fib",
     "answer": "through",
     "explanation": "'Fell through' means failed to materialize or was not completed."

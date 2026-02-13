@@ -294,6 +294,95 @@
             margin-bottom: 4px;
         }
 
+        /* Passage FIB */
+        .passage-container {
+            background: var(--bg-secondary);
+            border: 1px solid rgba(147, 187, 234, 0.1);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 32px;
+            line-height: 2;
+            font-size: 1rem;
+        }
+
+        .passage-blank {
+            display: inline-block;
+            min-width: 120px;
+            padding: 4px 12px;
+            background: var(--bg);
+            border: 1px solid rgba(147, 187, 234, 0.3);
+            border-radius: 4px;
+            margin: 0 4px;
+            vertical-align: middle;
+            font-family: inherit;
+            font-size: 0.95rem;
+            color: var(--text);
+            transition: all 0.2s ease;
+        }
+
+        .passage-blank:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(147, 187, 234, 0.05);
+        }
+
+        .passage-blank.correct {
+            border-color: #4ade80;
+            background: rgba(74, 222, 128, 0.05);
+        }
+
+        .passage-blank.incorrect {
+            border-color: var(--secondary);
+            background: rgba(146, 30, 28, 0.05);
+        }
+
+        .passage-blank:disabled {
+            cursor: not-allowed;
+        }
+
+        .passage-blank-number {
+            display: inline-block;
+            font-size: 0.75rem;
+            color: rgba(229, 240, 250, 0.5);
+            margin-right: 2px;
+        }
+
+        .passage-answers {
+            display: none;
+            margin-top: 24px;
+            padding: 20px;
+            background: rgba(74, 222, 128, 0.05);
+            border: 1px solid #4ade80;
+            border-radius: 8px;
+        }
+
+        .passage-answers.show {
+            display: block;
+        }
+
+        .passage-answers-title {
+            font-size: 0.875rem;
+            color: #4ade80;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .passage-answer-item {
+            font-size: 0.9rem;
+            padding: 4px 0;
+            color: var(--text);
+        }
+
+        .passage-answer-item .answer-number {
+            color: rgba(229, 240, 250, 0.5);
+            margin-right: 8px;
+        }
+
+        .passage-answer-item .answer-text {
+            color: #4ade80;
+            font-weight: 500;
+        }
+
         /* Explanation */
         .explanation {
             padding: 20px;
@@ -585,6 +674,13 @@
                     <div id="fibAnswerText"></div>
                 </div>
             </div>
+            <div class="passage-fib-container" id="passageFibContainer" style="display: none;">
+                <div class="passage-container" id="passageContent"></div>
+                <div class="passage-answers" id="passageAnswers">
+                    <div class="passage-answers-title">Correct Answers:</div>
+                    <div id="passageAnswersContent"></div>
+                </div>
+            </div>
             <div class="explanation" id="explanation">
                 <div class="explanation-title">Explanation</div>
                 <div id="explanationText"></div>
@@ -797,6 +893,9 @@
             const fibContainer = document.getElementById('fibContainer');
             const fibInput = document.getElementById('fibInput');
             const fibAnswer = document.getElementById('fibAnswer');
+            const passageFibContainer = document.getElementById('passageFibContainer');
+            const passageContent = document.getElementById('passageContent');
+            const passageAnswers = document.getElementById('passageAnswers');
             const explanation = document.getElementById('explanation');
             
             document.getElementById('questionNumber').textContent = `Question ${currentQuestionIndex + 1}`;
@@ -806,25 +905,95 @@
             
             const isAnswered = userAnswers.hasOwnProperty(currentQuestionIndex);
             const isFIB = question.type === 'fib';
+            const isPassageFib = question.type === 'passageFib';
 
             // Reset displays
             optionsDiv.innerHTML = '';
             fibInput.value = '';
             fibInput.className = 'fib-input';
             fibAnswer.classList.remove('show');
+            passageAnswers.classList.remove('show');
             
             // Update keyboard hint
             const keyboardHint = document.getElementById('keyboardHint');
-            if (isFIB) {
+            if (isFIB || isPassageFib) {
                 keyboardHint.innerHTML = '<kbd>←</kbd> Previous • <kbd>→</kbd> Next • <kbd>Enter</kbd> Submit';
             } else {
                 keyboardHint.innerHTML = '<kbd>1-4</kbd> or <kbd>A-D</kbd> Select • <kbd>←</kbd> Previous • <kbd>→</kbd> Next • <kbd>Enter</kbd> Submit';
             }
             
-            if (isFIB) {
+            if (isPassageFib) {
+                // Passage fill-in-the-blank question
+                optionsDiv.style.display = 'none';
+                fibContainer.style.display = 'none';
+                passageFibContainer.style.display = 'block';
+                
+                // Parse the passage and create input fields
+                const passage = question.passage;
+                const blanks = passage.match(/\((\d+)\)\s*________/g) || [];
+                let passageHTML = passage;
+                
+                blanks.forEach((blank, idx) => {
+                    const blankNumber = blank.match(/\((\d+)\)/)[1];
+                    const inputId = `passageBlank${blankNumber}`;
+                    const replacement = `(<span class="passage-blank-number">${blankNumber}</span>) <input type="text" id="${inputId}" class="passage-blank" data-index="${blankNumber}">`;
+                    passageHTML = passageHTML.replace(blank, replacement);
+                });
+                
+                passageContent.innerHTML = passageHTML;
+                
+                // Restore or set up inputs
+                if (isAnswered) {
+                    const userAnswer = userAnswers[currentQuestionIndex];
+                    const correctAnswers = question.answer;
+                    let allCorrect = true;
+                    
+                    blanks.forEach((blank, idx) => {
+                        const blankNumber = blank.match(/\((\d+)\)/)[1];
+                        const input = document.getElementById(`passageBlank${blankNumber}`);
+                        const userVal = userAnswer[parseInt(blankNumber)];
+                        const correctVal = correctAnswers[parseInt(blankNumber)];
+                        
+                        input.value = userVal;
+                        input.disabled = true;
+                        
+                        const isCorrect = Array.isArray(correctVal)
+                            ? correctVal.some(ans => normalizeAnswer(ans) === normalizeAnswer(userVal))
+                            : normalizeAnswer(correctVal) === normalizeAnswer(userVal);
+                        
+                        input.classList.add(isCorrect ? 'correct' : 'incorrect');
+                        if (!isCorrect) allCorrect = false;
+                    });
+                    
+                    if (!allCorrect) {
+                        // Show correct answers
+                        let answersHTML = '';
+                        correctAnswers.forEach((answer, idx) => {
+                            const displayAnswer = Array.isArray(answer) ? answer.join(' or ') : answer;
+                            answersHTML += `<div class="passage-answer-item"><span class="answer-number">(${idx})</span> <span class="answer-text">${displayAnswer}</span></div>`;
+                        });
+                        document.getElementById('passageAnswersContent').innerHTML = answersHTML;
+                        passageAnswers.classList.add('show');
+                    }
+                } else {
+                    // Set up input event listeners
+                    blanks.forEach((blank, idx) => {
+                        const blankNumber = blank.match(/\((\d+)\)/)[1];
+                        const input = document.getElementById(`passageBlank${blankNumber}`);
+                        input.oninput = () => {
+                            // Check if all blanks are filled
+                            const allFilled = Array.from(document.querySelectorAll('.passage-blank'))
+                                .every(inp => inp.value.trim() !== '');
+                            document.getElementById('submitBtn').disabled = !allFilled;
+                            nextBtn.classList.remove('btn-primary');
+                        };
+                    });
+                }
+            } else if (isFIB) {
                 // Fill-in-the-blank question
                 optionsDiv.style.display = 'none';
                 fibContainer.style.display = 'block';
+                passageFibContainer.style.display = 'none';
                 
                 if (isAnswered) {
                     fibInput.value = userAnswers[currentQuestionIndex];
@@ -853,6 +1022,7 @@
             } else {
                 // Multiple choice question
                 fibContainer.style.display = 'none';
+                passageFibContainer.style.display = 'none';
                 optionsDiv.style.display = 'flex';
                 
                 question.options.forEach((option, index) => {
@@ -928,8 +1098,60 @@
             
             const question = questions[currentQuestionIndex];
             const isFIB = question.type === 'fib';
+            const isPassageFib = question.type === 'passageFib';
             
-            if (isFIB) {
+            if (isPassageFib) {
+                // Collect all passage blank answers
+                const blankInputs = document.querySelectorAll('.passage-blank');
+                const userAnswer = {};
+                let allFilled = true;
+                
+                blankInputs.forEach(input => {
+                    const index = parseInt(input.dataset.index);
+                    const value = input.value.trim();
+                    if (!value) {
+                        allFilled = false;
+                    }
+                    userAnswer[index] = value;
+                });
+                
+                if (!allFilled) return;
+                
+                userAnswers[currentQuestionIndex] = userAnswer;
+                
+                // Check each blank
+                let allCorrect = true;
+                const correctAnswers = question.answer;
+                
+                blankInputs.forEach(input => {
+                    const index = parseInt(input.dataset.index);
+                    const userVal = userAnswer[index];
+                    const correctVal = correctAnswers[index];
+                    
+                    const isCorrect = Array.isArray(correctVal)
+                        ? correctVal.some(ans => normalizeAnswer(ans) === normalizeAnswer(userVal))
+                        : normalizeAnswer(correctVal) === normalizeAnswer(userVal);
+                    
+                    input.disabled = true;
+                    input.classList.add(isCorrect ? 'correct' : 'incorrect');
+                    
+                    if (!isCorrect) allCorrect = false;
+                });
+                
+                if (allCorrect) {
+                    correctCount++;
+                } else {
+                    incorrectCount++;
+                    // Show correct answers
+                    let answersHTML = '';
+                    correctAnswers.forEach((answer, idx) => {
+                        const displayAnswer = Array.isArray(answer) ? answer.join(' or ') : answer;
+                        answersHTML += `<div class="passage-answer-item"><span class="answer-number">(${idx})</span> <span class="answer-text">${displayAnswer}</span></div>`;
+                    });
+                    document.getElementById('passageAnswersContent').innerHTML = answersHTML;
+                    document.getElementById('passageAnswers').classList.add('show');
+                }
+            } else if (isFIB) {
                 const fibInput = document.getElementById('fibInput');
                 const userAnswer = fibInput.value.trim();
                 
@@ -1050,9 +1272,21 @@
                 if (userAnswers.hasOwnProperty(index)) {
                     const question = questions[index];
                     const isFIB = question.type === 'fib';
+                    const isPassageFib = question.type === 'passageFib';
                     let isCorrect;
                     
-                    if (isFIB) {
+                    if (isPassageFib) {
+                        // Check if all blanks are correct
+                        const userAnswer = userAnswers[index];
+                        const correctAnswers = question.answer;
+                        isCorrect = Object.keys(correctAnswers).every(key => {
+                            const correctVal = correctAnswers[key];
+                            const userVal = userAnswer[key];
+                            return Array.isArray(correctVal)
+                                ? correctVal.some(ans => normalizeAnswer(ans) === normalizeAnswer(userVal))
+                                : normalizeAnswer(correctVal) === normalizeAnswer(userVal);
+                        });
+                    } else if (isFIB) {
                         isCorrect = Array.isArray(question.answer)
                             ? question.answer.some(ans => normalizeAnswer(ans) === normalizeAnswer(userAnswers[index]))
                             : normalizeAnswer(question.answer) === normalizeAnswer(userAnswers[index]);
@@ -1087,9 +1321,21 @@
                 if (userAnswers.hasOwnProperty(index)) {
                     const question = questions[index];
                     const isFIB = question.type === 'fib';
+                    const isPassageFib = question.type === 'passageFib';
                     let isCorrect;
                     
-                    if (isFIB) {
+                    if (isPassageFib) {
+                        // Check if all blanks are correct
+                        const userAnswer = userAnswers[index];
+                        const correctAnswers = question.answer;
+                        isCorrect = Object.keys(correctAnswers).every(key => {
+                            const correctVal = correctAnswers[key];
+                            const userVal = userAnswer[key];
+                            return Array.isArray(correctVal)
+                                ? correctVal.some(ans => normalizeAnswer(ans) === normalizeAnswer(userVal))
+                                : normalizeAnswer(correctVal) === normalizeAnswer(userVal);
+                        });
+                    } else if (isFIB) {
                         isCorrect = Array.isArray(question.answer)
                             ? question.answer.some(ans => normalizeAnswer(ans) === normalizeAnswer(userAnswers[index]))
                             : normalizeAnswer(question.answer) === normalizeAnswer(userAnswers[index]);
