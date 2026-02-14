@@ -200,7 +200,7 @@
   {
     "question": "Since he's not here, you want to make __?",
     "type": "fib",
-    "answer": "do",
+    "answer": ["do", "out"],
     "explanation": "'Make do' means manage or get by with what is available."
   },
   {
