@@ -5,6 +5,8 @@ const { Dropbox } = require("dropbox");
 const { PDFDocument, StandardFonts, rgb, degrees } = require('pdf-lib');
 const fontkit = require('@pdf-lib/fontkit');
 const crypto = require('crypto');
+const htmlPdf = require('html-pdf-node');
+const fs = require('fs').promises;
 console.clear();
 
 // Derive a 32-byte key from WATERMARK_SECRET environment variable (recommended) or create one in-memory.
@@ -224,16 +226,14 @@ app.get('/view', async (req, res) => {
     }
 });
 
-app.get('/printQuiz', (req, res) => {
-    // Create a pdf from html
+app.get('/printQuiz', async (req, res) => {
 
-    
 });
 
 
 // Start the Express server
-// app.listen(PORT, () => {
-//     console.log(`🚀 Server running at http://localhost:${PORT}`);
-// });
+app.listen(PORT, () => {
+    console.log(`🚀 Server running at http://localhost:${PORT}`);
+});
 
-module.exports = app;
+// module.exports = app;

@@ -1,0 +1,596 @@
+[
+  {
+    "question": "The thief broke _______ the house at midnight.",
+    "answer": "into",
+    "type": "fib",
+    "explanation": "'Break into' means to enter forcibly or illegally."
+  },
+  {
+    "question": "The war broke _______ between the two nations.",
+    "answer": "out",
+    "type": "fib",
+    "explanation": "'Break out' means to start suddenly (used for wars, fires, epidemics)."
+  },
+  {
+    "question": "She broke _______ when she heard the tragic news.",
+    "answer": "down",
+    "type": "fib",
+    "explanation": "'Break down' means to lose control emotionally or to collapse."
+  },
+  {
+    "question": "Our car broke _______ on the way to the airport.",
+    "answer": "down",
+    "type": "fib",
+    "explanation": "'Break down' means to stop functioning (for machines or vehicles)."
+  },
+  {
+    "question": "The publishers are bringing _______ a new edition of the book.",
+    "answer": "out",
+    "type": "fib",
+    "explanation": "'Bring out' means to publish or release."
+  },
+  {
+    "question": "His courage brought him _______ the crisis.",
+    "answer": "through",
+    "type": "fib",
+    "explanation": "'Bring through' means to help survive a difficult situation."
+  },
+  {
+    "question": "The nurse brought the patient _______ with a glass of water.",
+    "answer": "round",
+    "type": "fib",
+    "explanation": "'Bring round' means to restore consciousness."
+  },
+  {
+    "question": "Education brings _______ a great change in one's personality.",
+    "answer": "about",
+    "type": "fib",
+    "explanation": "'Bring about' means to cause or make something happen."
+  },
+  {
+    "question": "The strike was called _______ after the meeting.",
+    "answer": "off",
+    "type": "fib",
+    "explanation": "'Call off' means to cancel."
+  },
+  {
+    "question": "The situation calls _______ immediate action.",
+    "answer": "for",
+    "type": "fib",
+    "explanation": "'Call for' means to require or demand."
+  },
+  {
+    "question": "He called _______ me yesterday at my office.",
+    "answer": "on",
+    "type": "fib",
+    "explanation": "'Call on' means to visit someone."
+  },
+  {
+    "question": "The teacher called _______ an explanation for my absence.",
+    "answer": "for",
+    "type": "fib",
+    "explanation": "'Call for' means to demand or request."
+  },
+  {
+    "question": "He carried _______ the first prize in the competition.",
+    "answer": "off",
+    "type": "fib",
+    "explanation": "'Carry off' means to win or achieve successfully."
+  },
+  {
+    "question": "Please carry _______ with your work.",
+    "answer": "on",
+    "type": "fib",
+    "explanation": "'Carry on' means to continue."
+  },
+  {
+    "question": "The soldiers carried _______ the orders of their general.",
+    "answer": "out",
+    "type": "fib",
+    "explanation": "'Carry out' means to execute or perform."
+  },
+  {
+    "question": "The plan fell _______ for want of money.",
+    "answer": "through",
+    "type": "fib",
+    "explanation": "'Fall through' means to fail or not happen as planned."
+  },
+  {
+    "question": "I fell _______ with my friend over a small matter.",
+    "answer": "out",
+    "type": "fib",
+    "explanation": "'Fall out' means to quarrel or have a disagreement."
+  },
+  {
+    "question": "The leaves fall _______ the trees in autumn.",
+    "answer": "from",
+    "type": "fib",
+    "explanation": "'Fall from' indicates the source or origin of the falling."
+  },
+  {
+    "question": "He finds it hard to get _______ with his neighbors.",
+    "answer": "along",
+    "type": "fib",
+    "explanation": "'Get along with' means to have a friendly relationship."
+  },
+  {
+    "question": "I cannot get _______ this difficult habit.",
+    "answer": ["over", "rid of"],
+    "type": "fib",
+    "explanation": "'Get over' or 'get rid of' means to overcome or eliminate."
+  },
+  {
+    "question": "The news of his success soon got _______.",
+    "answer": ["around", "about"],
+    "type": "fib",
+    "explanation": "'Get around/about' means to spread or become known."
+  },
+  {
+    "question": "He got _______ the bus at the wrong stop.",
+    "answer": "off",
+    "type": "fib",
+    "explanation": "'Get off' means to leave a vehicle."
+  },
+  {
+    "question": "The police are looking _______ the matter.",
+    "answer": "into",
+    "type": "fib",
+    "explanation": "'Look into' means to investigate."
+  },
+  {
+    "question": "I am looking _______ my lost keys.",
+    "answer": "for",
+    "type": "fib",
+    "explanation": "'Look for' means to search for something."
+  },
+  {
+    "question": "We should not look _______ upon the poor.",
+    "answer": "down",
+    "type": "fib",
+    "explanation": "'Look down upon' means to despise or consider inferior."
+  },
+  {
+    "question": "I am looking forward _______ meeting you.",
+    "answer": "to",
+    "type": "fib",
+    "explanation": "'Look forward to' means to anticipate with pleasure."
+  },
+  {
+    "question": "Please put _______ the candle.",
+    "answer": "out",
+    "type": "fib",
+    "explanation": "'Put out' means to extinguish."
+  },
+  {
+    "question": "Never put _______ till tomorrow what you can do today.",
+    "answer": "off",
+    "type": "fib",
+    "explanation": "'Put off' means to postpone or delay."
+  },
+  {
+    "question": "I cannot put up _______ his rudeness.",
+    "answer": "with",
+    "type": "fib",
+    "explanation": "'Put up with' means to tolerate or endure."
+  },
+  {
+    "question": "He put _______ his best clothes for the party.",
+    "answer": "on",
+    "type": "fib",
+    "explanation": "'Put on' means to wear or dress in."
+  },
+  {
+    "question": "We set _______ for the mountains at dawn.",
+    "answer": ["out", "off"],
+    "type": "fib",
+    "explanation": "'Set out/off' means to begin a journey."
+  },
+  {
+    "question": "The rains have set _______ early this year.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'Set in' means to begin and seem likely to continue."
+  },
+  {
+    "question": "He has set _______ a small shop in the village.",
+    "answer": "up",
+    "type": "fib",
+    "explanation": "'Set up' means to establish or start."
+  },
+  {
+    "question": "The company has set _______ some money for emergencies.",
+    "answer": "aside",
+    "type": "fib",
+    "explanation": "'Set aside' means to save or reserve."
+  },
+  {
+    "question": "The plane took _______ at 10 AM.",
+    "answer": "off",
+    "type": "fib",
+    "explanation": "'Take off' means to leave the ground (for aircraft)."
+  },
+  {
+    "question": "He takes _______ his father in appearance.",
+    "answer": "after",
+    "type": "fib",
+    "explanation": "'Take after' means to resemble."
+  },
+  {
+    "question": "Don't be taken _______ by his smooth talk.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'Be taken in' means to be deceived or fooled."
+  },
+  {
+    "question": "He has taken _______ gardening as a hobby.",
+    "answer": ["up", "to"],
+    "type": "fib",
+    "explanation": "'Take up' or 'take to' means to start doing something as a hobby."
+  },
+  {
+    "question": "The request was turned _______.",
+    "answer": "down",
+    "type": "fib",
+    "explanation": "'Turn down' means to reject or refuse."
+  },
+  {
+    "question": "He turned _______ to be a thief.",
+    "answer": "out",
+    "type": "fib",
+    "explanation": "'Turn out' means to prove to be or become known."
+  },
+  {
+    "question": "Turn _______ the lights before you go to bed.",
+    "answer": "off",
+    "type": "fib",
+    "explanation": "'Turn off' means to switch off or extinguish."
+  },
+  {
+    "question": "He turned _______ late for the meeting.",
+    "answer": "up",
+    "type": "fib",
+    "explanation": "'Turn up' means to arrive or appear."
+  },
+  {
+    "question": "He is addicted _______ gambling.",
+    "answer": "to",
+    "type": "fib",
+    "explanation": "'Addicted to' shows dependence on something."
+  },
+  {
+    "question": "She is capable _______ doing great things.",
+    "answer": "of",
+    "type": "fib",
+    "explanation": "'Capable of' shows ability or potential."
+  },
+  {
+    "question": "I am fond _______ sweets.",
+    "answer": "of",
+    "type": "fib",
+    "explanation": "'Fond of' means to have a liking for."
+  },
+  {
+    "question": "He is tired _______ waiting for the bus.",
+    "answer": "of",
+    "type": "fib",
+    "explanation": "'Tired of' means weary or bored with."
+  },
+  {
+    "question": "We must abide _______ the rules.",
+    "answer": "by",
+    "type": "fib",
+    "explanation": "'Abide by' means to obey or follow."
+  },
+  {
+    "question": "He was acquitted _______ the charge of theft.",
+    "answer": "of",
+    "type": "fib",
+    "explanation": "'Acquitted of' means declared not guilty of."
+  },
+  {
+    "question": "I am angry _______ him for lying.",
+    "answer": "with",
+    "type": "fib",
+    "explanation": "'Angry with' is used for people."
+  },
+  {
+    "question": "He was angry _______ my behavior.",
+    "answer": "at",
+    "type": "fib",
+    "explanation": "'Angry at' is used for things or situations."
+  },
+  {
+    "question": "Compare this book _______ that one.",
+    "answer": "with",
+    "type": "fib",
+    "explanation": "'Compare with' is used when examining similarities and differences."
+  },
+  {
+    "question": "Poets compare the face _______ the moon.",
+    "answer": "to",
+    "type": "fib",
+    "explanation": "'Compare to' is used for metaphorical likeness."
+  },
+  {
+    "question": "He died _______ malaria.",
+    "answer": "of",
+    "type": "fib",
+    "explanation": "'Die of' is used for diseases."
+  },
+  {
+    "question": "He died _______ overwork.",
+    "answer": "from",
+    "type": "fib",
+    "explanation": "'Die from' is used for external causes."
+  },
+  {
+    "question": "I differ _______ you on this point.",
+    "answer": ["from", "with"],
+    "type": "fib",
+    "explanation": "'Differ from/with' means to disagree or have a different opinion."
+  },
+  {
+    "question": "This pen differs _______ that one.",
+    "answer": "from",
+    "type": "fib",
+    "explanation": "'Differ from' shows distinction or difference in characteristics."
+  },
+  {
+    "question": "He is blind _______ one eye.",
+    "answer": "in",
+    "type": "fib",
+    "explanation": "'Blind in' refers to physical blindness."
+  },
+  {
+    "question": "He is blind _______ his son's faults.",
+    "answer": "to",
+    "type": "fib",
+    "explanation": "'Blind to' means unable to see or recognize (metaphorical)."
+  },
+  {
+    "question": "I am grateful _______ you for your help.",
+    "answer": "to",
+    "type": "fib",
+    "explanation": "'Grateful to' is used for the person you thank."
+  },
+  {
+    "question": "He is popular _______ his students.",
+    "answer": ["with", "among"],
+    "type": "fib",
+    "explanation": "'Popular with/among' shows being liked by a group."
+  },
+  {
+    "question": "She is proficient _______ English.",
+    "answer": ["in", "at"],
+    "type": "fib",
+    "explanation": "'Proficient in/at' means skilled in something."
+  },
+  {
+    "question": "We must abstain _______ smoking.",
+    "answer": "from",
+    "type": "fib",
+    "explanation": "'Abstain from' means to refrain or avoid."
+  },
+  {
+    "question": "He apologized _______ the teacher _______ his mistake.",
+    "answer": ["to", "for"],
+    "type": "fib",
+    "explanation": "'Apologize to' (person) 'for' (reason)."
+  },
+  {
+    "question": "I am confident _______ my success.",
+    "answer": ["of", "about"],
+    "type": "fib",
+    "explanation": "'Confident of/about' shows self-assurance."
+  },
+  {
+    "question": "He is senior _______ me by two years.",
+    "answer": "to",
+    "type": "fib",
+    "explanation": "'Senior to' indicates higher rank or age."
+  },
+  {
+    "question": "Beware _______ pickpockets.",
+    "answer": "of",
+    "type": "fib",
+    "explanation": "'Beware of' means to be cautious about."
+  },
+  {
+    "question": "He is exempt _______ paying the tax.",
+    "answer": "from",
+    "type": "fib",
+    "explanation": "'Exempt from' means free from an obligation."
+  },
+  {
+    "question": "I am indebted _______ you for your kindness.",
+    "answer": "to",
+    "type": "fib",
+    "explanation": "'Indebted to' means owing gratitude to someone."
+  },
+  {
+    "question": "He persisted _______ his efforts.",
+    "answer": ["in", "with"],
+    "type": "fib",
+    "explanation": "'Persist in/with' means to continue steadfastly."
+  },
+  {
+    "question": "I rely _______ your word.",
+    "answer": ["on", "upon"],
+    "type": "fib",
+    "explanation": "'Rely on/upon' means to depend on or trust."
+  },
+  {
+    "question": "He recovered _______ his illness.",
+    "answer": "from",
+    "type": "fib",
+    "explanation": "'Recover from' means to get better after illness or hardship."
+  },
+  {
+    "question": "She is gifted _______ a fine voice.",
+    "answer": "with",
+    "type": "fib",
+    "explanation": "'Gifted with' means naturally talented with."
+  },
+  {
+    "question": "I am envious _______ his wealth.",
+    "answer": "of",
+    "type": "fib",
+    "explanation": "'Envious of' means jealous of."
+  },
+  {
+    "question": "He is eligible _______ the post.",
+    "answer": "for",
+    "type": "fib",
+    "explanation": "'Eligible for' means qualified for."
+  },
+  {
+    "question": "Hard work is the key _______ success.",
+    "answer": "to",
+    "type": "fib",
+    "explanation": "'Key to' means the essential factor for achieving something."
+  },
+  {
+    "question": "He is very kind _______ animals.",
+    "answer": "to",
+    "type": "fib",
+    "explanation": "'Kind to' shows compassion toward."
+  },
+  {
+    "question": "She is married _______ a doctor.",
+    "answer": "to",
+    "type": "fib",
+    "explanation": "'Married to' indicates spouse."
+  },
+  {
+    "question": "I have no taste _______ music.",
+    "answer": "for",
+    "type": "fib",
+    "explanation": "'Taste for' means liking or appreciation for."
+  },
+  {
+    "question": "He acted _______ my advice.",
+    "answer": ["on", "upon"],
+    "type": "fib",
+    "explanation": "'Act on/upon' means to follow or take action based on."
+  },
+  {
+    "question": "He is an heir _______ a large fortune.",
+    "answer": "to",
+    "type": "fib",
+    "explanation": "'Heir to' means one who inherits."
+  },
+  {
+    "question": "We were prevented _______ entering the room.",
+    "answer": "from",
+    "type": "fib",
+    "explanation": "'Prevented from' means stopped from doing something."
+  },
+  {
+    "question": "I am satisfied _______ your performance.",
+    "answer": "with",
+    "type": "fib",
+    "explanation": "'Satisfied with' means pleased or content with."
+  },
+  {
+    "question": "He is superior _______ him in intelligence.",
+    "answer": "to",
+    "type": "fib",
+    "explanation": "'Superior to' indicates better than."
+  },
+  {
+    "question": "Do not meddle _______ my private affairs.",
+    "answer": ["with", "in"],
+    "type": "fib",
+    "explanation": "'Meddle with/in' means to interfere."
+  },
+  {
+    "question": "He was shocked _______ the news.",
+    "answer": ["at", "by"],
+    "type": "fib",
+    "explanation": "'Shocked at/by' shows being disturbed or surprised."
+  },
+  {
+    "question": "I am ashamed _______ your conduct.",
+    "answer": "of",
+    "type": "fib",
+    "explanation": "'Ashamed of' means feeling embarrassed about."
+  },
+  {
+    "question": "He is short _______ money.",
+    "answer": "of",
+    "type": "fib",
+    "explanation": "'Short of' means lacking or deficient in."
+  },
+  {
+    "question": "Success depends _______ hard work.",
+    "answer": ["on", "upon"],
+    "type": "fib",
+    "explanation": "'Depend on/upon' means to be determined by."
+  },
+  {
+    "question": "He was charged _______ murder.",
+    "answer": "with",
+    "type": "fib",
+    "explanation": "'Charged with' means accused of a crime."
+  },
+  {
+    "question": "I am sure _______ my facts.",
+    "answer": ["of", "about"],
+    "type": "fib",
+    "explanation": "'Sure of/about' means certain or confident."
+  },
+  {
+    "question": "He jumped _______ the river.",
+    "answer": "into",
+    "type": "fib",
+    "explanation": "'Jump into' indicates movement into water."
+  },
+  {
+    "question": "There is no remedy _______ this disease.",
+    "answer": "for",
+    "type": "fib",
+    "explanation": "'Remedy for' means cure or solution for."
+  },
+  {
+    "question": "He is good _______ Mathematics.",
+    "answer": "at",
+    "type": "fib",
+    "explanation": "'Good at' means skilled in."
+  },
+  {
+    "question": "I was astonished _______ his bravery.",
+    "answer": ["at", "by"],
+    "type": "fib",
+    "explanation": "'Astonished at/by' means amazed or surprised."
+  },
+  {
+    "question": "He is certain _______ passing.",
+    "answer": ["of", "about"],
+    "type": "fib",
+    "explanation": "'Certain of/about' means sure or confident."
+  },
+  {
+    "question": "I was alarmed _______ the sound.",
+    "answer": ["at", "by"],
+    "type": "fib",
+    "explanation": "'Alarmed at/by' means frightened or disturbed."
+  },
+  {
+    "question": "He is sympathetic _______ the poor.",
+    "answer": ["to", "towards"],
+    "type": "fib",
+    "explanation": "'Sympathetic to/towards' shows compassion for."
+  },
+  {
+    "question": "He is worthy _______ praise.",
+    "answer": "of",
+    "type": "fib",
+    "explanation": "'Worthy of' means deserving."
+  },
+  {
+    "question": "Do not yield _______ temptation.",
+    "answer": "to",
+    "type": "fib",
+    "explanation": "'Yield to' means to give in or surrender to."
+  }
+]
