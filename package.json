@@ -19,7 +19,8 @@
     "fs": "^0.0.1-security",
     "highlight.js": "^11.11.1",
     "html-pdf-node": "^1.0.8",
-    "pdf-lib": "^1.17.1"
+    "pdf-lib": "^1.17.1",
+    "vercel": "^50.17.1"
   },
   "devDependencies": {
     "nodemon": "^3.0.3"

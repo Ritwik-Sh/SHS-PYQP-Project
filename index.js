@@ -7,6 +7,7 @@ const fontkit = require('@pdf-lib/fontkit');
 const crypto = require('crypto');
 const htmlPdf = require('html-pdf-node');
 const fs = require('fs').promises;
+const { execSync } = require('child_process');
 console.clear();
 
 // Derive a 32-byte key from WATERMARK_SECRET environment variable (recommended) or create one in-memory.
@@ -226,8 +227,141 @@ app.get('/view', async (req, res) => {
     }
 });
 
+// Print Quiz endpoint: generates a printable PDF version of a quiz
+// Query params:
+// - topic: the quiz filename (without .json extension)
 app.get('/printQuiz', async (req, res) => {
+    const topic = req.query.topic;
+    
+    if (!topic) {
+        return res.status(400).send(`
+            <html>
+                <head>
+                    <style>
+                        body {
+                            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+                            max-width: 600px;
+                            margin: 100px auto;
+                            padding: 20px;
+                            text-align: center;
+                        }
+                        h1 { color: #d97706; }
+                        p { color: #6b6561; }
+                        code { 
+                            background: #faf8f6; 
+                            padding: 2px 6px; 
+                            border-radius: 3px; 
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h1>Error: Missing topic parameter</h1>
+                    <p>Please specify a quiz topic using <code>?topic=filename</code></p>
+                    <p>Example: <code>/printQuiz?topic=class-10-java</code></p>
+                </body>
+            </html>
+        `);
+    }
 
+    try {
+        // Read the quiz JSON file
+        const quizFilePath = path.join(__dirname, 'public', 'resources', `${topic}.json`);
+        let quizData;
+        
+        try {
+            const fileContent = await fs.readFile(quizFilePath, 'utf8');
+            quizData = JSON.parse(fileContent);
+        } catch (fileError) {
+            throw new Error(`Quiz file not found: ${topic}.json`);
+        }
+
+        // For Vercel serverless, use /tmp directory
+        const tmpDir = '/tmp';
+        const timestamp = Date.now();
+        const tempDataPath = path.join(tmpDir, `${topic}_${timestamp}_data.json`);
+        const outputPdfPath = path.join(tmpDir, `${topic}_${timestamp}_quiz.pdf`);
+        
+        // Write quiz data to temp file
+        await fs.writeFile(tempDataPath, JSON.stringify(quizData));
+
+        // Path to Python script (should be in same directory as index.js)
+        const pythonScriptPath = path.join(__dirname, 'generate_quiz_pdf.py');
+        
+        // Path to custom font (optional)
+        const fontPath = path.join(__dirname, 'public', 'resources', 'JetBrainsMono-Regular.ttf');
+        const fontExists = await fs.access(fontPath).then(() => true).catch(() => false);
+        
+        // Execute Python script
+        console.log('🔄 Generating quiz PDF:', topic);
+        
+        const pythonCommand = fontExists 
+            ? `python3 ${pythonScriptPath} ${tempDataPath} ${topic} ${outputPdfPath} ${fontPath}`
+            : `python3 ${pythonScriptPath} ${tempDataPath} ${topic} ${outputPdfPath}`;
+        
+        execSync(pythonCommand, {
+            stdio: 'pipe',
+            encoding: 'utf8'
+        });
+
+        // Read generated PDF
+        const pdfBuffer = await fs.readFile(outputPdfPath);
+
+        console.log('✅ Quiz PDF generated successfully:', topic);
+        
+        // Send PDF to client
+        res.setHeader('Content-Type', 'application/pdf');
+        res.setHeader('Content-Disposition', `attachment; filename="${topic}_quiz.pdf"`);
+        res.send(pdfBuffer);
+
+        // Cleanup temp files (async, don't wait)
+        setTimeout(async () => {
+            await fs.unlink(tempDataPath).catch(() => {});
+            await fs.unlink(outputPdfPath).catch(() => {});
+        }, 1000);
+
+    } catch (error) {
+        console.error('❌ Error generating quiz PDF:', error);
+        res.status(500).send(`
+            <html>
+                <head>
+                    <style>
+                        body {
+                            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+                            max-width: 600px;
+                            margin: 100px auto;
+                            padding: 20px;
+                        }
+                        h1 { color: #d97706; }
+                        .error { 
+                            background: #fef3c7; 
+                            padding: 15px; 
+                            border-left: 3px solid #d97706;
+                            margin: 20px 0;
+                            border-radius: 6px;
+                        }
+                        code { 
+                            background: #faf8f6; 
+                            padding: 2px 6px; 
+                            border-radius: 3px; 
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h1>Error generating quiz PDF</h1>
+                    <div class="error">
+                        <strong>Error:</strong> ${error.message}
+                    </div>
+                    <p>Please ensure:</p>
+                    <ul style="text-align: left; color: #6b6561;">
+                        <li>The quiz file exists at: <code>/public/resources/${topic}.json</code></li>
+                        <li>Python 3 is installed with reportlab</li>
+                        <li>The generate_quiz_pdf.py script is in the same directory</li>
+                    </ul>
+                    <p><a href="/resources/">← Back to Resources</a></p>
+                </body>
+            </html>
+        `);
+    }
 });
 
 
