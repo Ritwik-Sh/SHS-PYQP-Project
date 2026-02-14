@@ -264,60 +264,586 @@ app.get('/printQuiz', async (req, res) => {
     }
 
     try {
-        // Read the quiz JSON file
-        const quizFilePath = path.join(__dirname, 'public', 'resources', `${topic}.json`);
-        let quizData;
-        
-        try {
-            const fileContent = await fs.readFile(quizFilePath, 'utf8');
-            quizData = JSON.parse(fileContent);
-        } catch (fileError) {
-            throw new Error(`Quiz file not found: ${topic}.json`);
-        }
-
-        // For Vercel serverless, use /tmp directory
-        const tmpDir = '/tmp';
-        const timestamp = Date.now();
-        const tempDataPath = path.join(tmpDir, `${topic}_${timestamp}_data.json`);
-        const outputPdfPath = path.join(tmpDir, `${topic}_${timestamp}_quiz.pdf`);
-        
-        // Write quiz data to temp file
-        await fs.writeFile(tempDataPath, JSON.stringify(quizData));
-
-        // Path to Python script (should be in same directory as index.js)
-        const pythonScriptPath = path.join(__dirname, 'generate_quiz_pdf.py');
-        
-        // Path to custom font (optional)
-        const fontPath = path.join(__dirname, 'public', 'resources', 'JetBrainsMono-Regular.ttf');
-        const fontExists = await fs.access(fontPath).then(() => true).catch(() => false);
-        
-        // Execute Python script
         console.log('🔄 Generating quiz PDF:', topic);
         
-        const pythonCommand = fontExists 
-            ? `python3 ${pythonScriptPath} ${tempDataPath} ${topic} ${outputPdfPath} ${fontPath}`
-            : `python3 ${pythonScriptPath} ${tempDataPath} ${topic} ${outputPdfPath}`;
+        // Read the quiz JSON file
+        const quizFilePath = path.join(__dirname, 'public', 'resources', `${topic}.json`);
+        const quizData = JSON.parse(await fs.readFile(quizFilePath, 'utf8'));
+
+        // Create a new PDF document
+        const pdfDoc = await PDFDocument.create();
         
-        execSync(pythonCommand, {
-            stdio: 'pipe',
-            encoding: 'utf8'
+        // Embed fonts
+        const helveticaFont = await pdfDoc.embedFont(StandardFonts.Helvetica);
+        const helveticaBold = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
+        const courierFont = await pdfDoc.embedFont(StandardFonts.Courier);
+        
+        // Try to load custom font
+        let customFont = null;
+        try {
+            const fontPath = path.join(__dirname, 'public', 'resources', 'JetBrainsMono-Regular.ttf');
+            const fontBytes = await fs.readFile(fontPath);
+            customFont = await pdfDoc.embedFont(fontBytes);
+        } catch (e) {
+            console.log('⚠️  JetBrains Mono not found, using Courier for code');
+        }
+        
+        const codeFont = customFont || courierFont;
+
+        // Color scheme
+        const COLOR_TEXT = rgb(0.102, 0.086, 0.078); // #1a1614
+        const COLOR_TEXT_SECONDARY = rgb(0.420, 0.396, 0.380); // #6b6561
+        const COLOR_ACCENT = rgb(0.851, 0.467, 0.024); // #d97706
+        const COLOR_BORDER = rgb(0.906, 0.898, 0.882); // #e7e5e4
+        const COLOR_CODE_BG = rgb(0.980, 0.973, 0.965); // #faf8f6
+        const COLOR_ANSWER_BG = rgb(0.996, 0.953, 0.780); // #fef3c7
+
+        // Page settings
+        const pageWidth = 612; // 8.5 inches
+        const pageHeight = 792; // 11 inches
+        const margin = 54; // 0.75 inches
+        const contentWidth = pageWidth - (margin * 2);
+        
+        let currentY = pageHeight - margin;
+        let currentPage = pdfDoc.addPage([pageWidth, pageHeight]);
+        let pageNumber = 1;
+
+        // Helper function to add footer
+        const addFooter = (page, pageNum) => {
+            const footerY = 36; // 0.5 inches from bottom
+            
+            // Footer line
+            page.drawLine({
+                start: { x: margin, y: footerY + 18 },
+                end: { x: pageWidth - margin, y: footerY + 18 },
+                thickness: 0.5,
+                color: COLOR_BORDER
+            });
+            
+            // Left: Project name
+            page.drawText('SHS-PYQP-Project Resources', {
+                x: margin,
+                y: footerY,
+                size: 8,
+                font: helveticaFont,
+                color: COLOR_TEXT_SECONDARY
+            });
+            
+            // Center: URL
+            const url = 'https://shs-pyqp-project.vercel.app';
+            const urlWidth = helveticaFont.widthOfTextAtSize(url, 8);
+            page.drawText(url, {
+                x: (pageWidth - urlWidth) / 2,
+                y: footerY,
+                size: 8,
+                font: helveticaFont,
+                color: COLOR_TEXT_SECONDARY
+            });
+            
+            // Right: Topic
+            const topicDisplay = topic.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+            const topicWidth = helveticaFont.widthOfTextAtSize(topicDisplay, 8);
+            page.drawText(topicDisplay, {
+                x: pageWidth - margin - topicWidth,
+                y: footerY,
+                size: 8,
+                font: helveticaFont,
+                color: COLOR_TEXT_SECONDARY
+            });
+            
+            // Page number
+            const pageText = `Page ${pageNum}`;
+            const pageTextWidth = helveticaFont.widthOfTextAtSize(pageText, 9);
+            page.drawText(pageText, {
+                x: pageWidth - margin - pageTextWidth,
+                y: footerY + 30,
+                size: 9,
+                font: helveticaFont,
+                color: COLOR_TEXT
+            });
+        };
+
+        // Helper function to clean text for PDF
+        const cleanText = (text) => {
+            if (!text) return '';
+            return String(text)
+                .replace(/\n/g, ' ')
+                .replace(/\r/g, '')
+                .replace(/\t/g, '    ')
+                .replace(/```(java|javascript|python|cpp|c\+\+|html|css)?\s*/gi, '')
+                .replace(/```/g, '')
+                .trim();
+        };
+
+        // Helper function to check if we need a new page
+        const checkNewPage = (spaceNeeded) => {
+            if (currentY - spaceNeeded < 80) { // 80 = margin + footer space
+                addFooter(currentPage, pageNumber);
+                currentPage = pdfDoc.addPage([pageWidth, pageHeight]);
+                currentY = pageHeight - margin;
+                pageNumber++;
+                return true;
+            }
+            return false;
+        };
+
+        // Helper function to draw wrapped text
+        const drawWrappedText = (text, x, y, maxWidth, fontSize, font, color = COLOR_TEXT) => {
+            text = cleanText(text); // Clean text before processing
+            const words = text.split(' ');
+            let line = '';
+            let localY = y;
+            const lineHeight = fontSize * 1.4;
+            
+            for (let i = 0; i < words.length; i++) {
+                const testLine = line + words[i] + ' ';
+                const testWidth = font.widthOfTextAtSize(testLine, fontSize);
+                
+                if (testWidth > maxWidth && line !== '') {
+                    checkNewPage(lineHeight + 10);
+                    currentPage.drawText(line.trim(), {
+                        x: x,
+                        y: currentY,
+                        size: fontSize,
+                        font: font,
+                        color: color
+                    });
+                    currentY -= lineHeight;
+                    line = words[i] + ' ';
+                } else {
+                    line = testLine;
+                }
+            }
+            
+            if (line.trim() !== '') {
+                checkNewPage(lineHeight + 10);
+                currentPage.drawText(line.trim(), {
+                    x: x,
+                    y: currentY,
+                    size: fontSize,
+                    font: font,
+                    color: color
+                });
+                currentY -= lineHeight;
+            }
+        };
+
+        // Helper function to draw code block with syntax highlighting
+        const drawCodeBlock = (code, x, y, maxWidth) => {
+            const fontSize = 8;
+            const lineHeight = fontSize * 1.5;
+            const padding = 0;
+            
+            // Clean code - remove language identifiers
+            code = code.replace(/\`\`\`java/g, '').trim();
+            const lines = code.split('\n');
+            
+            // Calculate block height
+            const blockHeight = (lines.length * lineHeight) + (padding * 2) + 4;
+            checkNewPage(blockHeight + 10);
+            
+            // Draw background with proper positioning
+            currentPage.drawRectangle({
+                x: x,
+                y: currentY - blockHeight + padding,
+                width: maxWidth,
+                height: blockHeight,
+                color: COLOR_CODE_BG,
+                borderColor: COLOR_BORDER,
+                borderWidth: 1
+            });
+            
+            // Syntax highlighting colors
+            const syntaxColors = {
+                keyword: rgb(0.529, 0.267, 0.529), // Purple for keywords
+                string: rgb(0.133, 0.545, 0.133),   // Green for strings
+                comment: rgb(0.502, 0.502, 0.502),  // Gray for comments
+                method: rgb(0.855, 0.647, 0.125),   // Orange for methods
+                type: rgb(0.000, 0.502, 0.502),     // Teal for types like String, int
+                default: COLOR_TEXT
+            };
+            
+            // Java keywords
+            const keywords = new Set([
+                'abstract', 'assert', 'boolean', 'break', 'byte', 'case', 'catch', 'char',
+                'class', 'const', 'continue', 'default', 'do', 'double', 'else', 'enum',
+                'extends', 'final', 'finally', 'float', 'for', 'goto', 'if', 'implements',
+                'import', 'instanceof', 'int', 'interface', 'long', 'native', 'new', 'package',
+                'private', 'protected', 'public', 'return', 'short', 'static', 'strictfp',
+                'super', 'switch', 'synchronized', 'this', 'throw', 'throws', 'transient',
+                'try', 'void', 'volatile', 'while', 'true', 'false', 'null'
+            ]);
+            
+            // Common Java types and classes
+            const types = new Set([
+                'String', 'Integer', 'Double', 'Float', 'Boolean', 'Character',
+                'Long', 'Short', 'Byte', 'Object', 'System', 'Math', 'Scanner'
+            ]);
+            
+            // Draw code lines with basic syntax highlighting
+            let codeY = currentY - padding - lineHeight;
+            for (const line of lines) {
+                if (codeY < 80) {
+                    addFooter(currentPage, pageNumber);
+                    currentPage = pdfDoc.addPage([pageWidth, pageHeight]);
+                    currentY = pageHeight - margin;
+                    pageNumber++;
+                    
+                    // Redraw background on new page
+                    const remainingLines = lines.length - lines.indexOf(line);
+                    const remainingHeight = (remainingLines * lineHeight) + (padding * 2);
+                    currentPage.drawRectangle({
+                        x: x,
+                        y: currentY - remainingHeight + padding,
+                        width: maxWidth,
+                        height: remainingHeight,
+                        color: COLOR_CODE_BG,
+                        borderColor: COLOR_BORDER,
+                        borderWidth: 1
+                    });
+                    
+                    codeY = currentY - padding - lineHeight;
+                }
+                
+                let trimmedLine = line.replace(/\t/g, '    '); // Convert tabs to spaces
+                let currentX = x + padding;
+                
+                // Simple tokenization for syntax highlighting
+                const tokens = trimmedLine.split(/(\s+|[(){}\[\];,.])/);
+                
+                for (let t = 0; t < tokens.length; t++) {
+                    const token = tokens[t];
+                    const nextToken = tokens[t + 1];
+                    
+                    if (!token || token.match(/^\s+$/)) {
+                        // Whitespace - just advance position
+                        currentX += codeFont.widthOfTextAtSize(token, fontSize);
+                        continue;
+                    }
+                    
+                    let color = syntaxColors.default;
+                    
+                    // Determine token color
+                    if (keywords.has(token)) {
+                        color = syntaxColors.keyword;
+                    } else if (types.has(token)) {
+                        color = syntaxColors.type;
+                    } else if (token.match(/^".*"$|^'.*'$/)) {
+                        color = syntaxColors.string;
+                    } else if (token.match(/^\/\//)) {
+                        color = syntaxColors.comment;
+                    } else if (nextToken === '(') {
+                        // Method call - word followed by opening parenthesis
+                        color = syntaxColors.method;
+                    }
+                    
+                    currentPage.drawText(token, {
+                        x: currentX,
+                        y: codeY,
+                        size: fontSize,
+                        font: codeFont,
+                        color: color
+                    });
+                    
+                    currentX += codeFont.widthOfTextAtSize(token, fontSize);
+                }
+                
+                codeY -= lineHeight;
+            }
+            
+            currentY = codeY - padding;
+        };
+
+        // Title Page
+        currentY = pageHeight - 150;
+        const topicDisplay = topic.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+        const titleText = `${topicDisplay} Quiz`;
+        const titleWidth = helveticaBold.widthOfTextAtSize(titleText, 24);
+        
+        currentPage.drawText(titleText, {
+            x: (pageWidth - titleWidth) / 2,
+            y: currentY,
+            size: 24,
+            font: helveticaBold,
+            color: COLOR_TEXT
+        });
+        
+        currentY -= 50;
+        const subtitleText = 'SHS-PYQP-Project';
+        const subtitleWidth = helveticaFont.widthOfTextAtSize(subtitleText, 11);
+        currentPage.drawText(subtitleText, {
+            x: (pageWidth - subtitleWidth) / 2,
+            y: currentY,
+            size: 11,
+            font: helveticaFont,
+            color: COLOR_TEXT_SECONDARY
+        });
+        
+        currentY -= 30;
+        const countText = `Total Questions: ${quizData.length}`;
+        const countWidth = helveticaFont.widthOfTextAtSize(countText, 11);
+        currentPage.drawText(countText, {
+            x: (pageWidth - countWidth) / 2,
+            y: currentY,
+            size: 11,
+            font: helveticaFont,
+            color: COLOR_TEXT_SECONDARY
         });
 
-        // Read generated PDF
-        const pdfBuffer = await fs.readFile(outputPdfPath);
-
-        console.log('✅ Quiz PDF generated successfully:', topic);
+        // Add footer to title page
+        addFooter(currentPage, pageNumber);
         
-        // Send PDF to client
-        res.setHeader('Content-Type', 'application/pdf');
-        res.setHeader('Content-Disposition', `attachment; filename="${topic}_quiz.pdf"`);
-        res.send(pdfBuffer);
+        // New page for questions
+        currentPage = pdfDoc.addPage([pageWidth, pageHeight]);
+        currentY = pageHeight - margin;
+        pageNumber++;
 
-        // Cleanup temp files (async, don't wait)
-        setTimeout(async () => {
-            await fs.unlink(tempDataPath).catch(() => {});
-            await fs.unlink(outputPdfPath).catch(() => {});
-        }, 1000);
+        // Questions Section
+        const sectionTitle = 'QUESTIONS';
+        const sectionWidth = helveticaBold.widthOfTextAtSize(sectionTitle, 18);
+        currentPage.drawText(sectionTitle, {
+            x: (pageWidth - sectionWidth) / 2,
+            y: currentY,
+            size: 18,
+            font: helveticaBold,
+            color: COLOR_ACCENT
+        });
+        currentY -= 40;
+
+        // Draw questions
+        for (let i = 0; i < quizData.length; i++) {
+            const question = quizData[i];
+            const qNum = i + 1;
+            
+            checkNewPage(60);
+            
+            // Question number and text
+            let qText = cleanText(question.question || '');
+            
+            // Check if question has code blocks (check original text)
+            if ((question.question || '').includes('```')) {
+                const parts = (question.question || '').split('```');
+                for (let j = 0; j < parts.length; j++) {
+                    if (j % 2 === 0) {
+                        // Regular text
+                        if (parts[j].trim()) {
+                            const prefix = j === 0 ? `Q${qNum}. ` : '';
+                            drawWrappedText(prefix + parts[j].trim(), margin, currentY, contentWidth, 10, helveticaFont);
+                        }
+                    } else {
+                        // Code block with indentation
+                        currentY -= 8;
+                        drawCodeBlock(parts[j], margin + 20, currentY, contentWidth - 40);
+                        currentY -= 8;
+                    }
+                }
+            } else {
+                drawWrappedText(`Q${qNum}. ${qText}`, margin, currentY, contentWidth, 10, helveticaFont);
+            }
+            
+            currentY -= 12;
+            
+            // Options or answer space
+            if (question.type === 'mcq' || question.options) {
+                const options = question.options || [];
+                for (let j = 0; j < options.length; j++) {
+                    const letter = String.fromCharCode(65 + j); // A, B, C, D
+                    checkNewPage(25);
+                    drawWrappedText(`   ${letter}) ${cleanText(options[j])}`, margin + 20, currentY, contentWidth - 20, 9, helveticaFont);
+                    currentY -= 4;
+                }
+            } else if (question.type === 'fib') {
+                checkNewPage(25);
+                currentPage.drawText('Answer: _________________________________', {
+                    x: margin + 20,
+                    y: currentY,
+                    size: 9,
+                    font: helveticaFont,
+                    color: COLOR_TEXT
+                });
+                currentY -= 20;
+            } else if (question.type === 'passageFib') {
+                let passage = cleanText(question.passage || '');
+                let blankNum = 0;
+                // Re-add blanks that were removed by cleanText
+                const originalPassage = question.passage || '';
+                const blanks = (originalPassage.match(/________/g) || []).length;
+                for (let b = 0; b < blanks; b++) {
+                    passage = passage.replace('________', `(${b}) ________`);
+                }
+                
+                checkNewPage(40);
+                // Draw passage background
+                const passageLines = passage.split('\n').length;
+                const passageHeight = passageLines * 16 + 24;
+                
+                currentPage.drawRectangle({
+                    x: margin,
+                    y: currentY - passageHeight,
+                    width: contentWidth,
+                    height: passageHeight,
+                    color: COLOR_CODE_BG,
+                    borderColor: COLOR_BORDER,
+                    borderWidth: 1
+                });
+                
+                currentY -= 12;
+                drawWrappedText(passage, margin + 12, currentY, contentWidth - 24, 9, helveticaFont);
+            }
+            
+            currentY -= 12;
+        }
+
+        // Answer Key Section
+        addFooter(currentPage, pageNumber);
+        currentPage = pdfDoc.addPage([pageWidth, pageHeight]);
+        currentY = pageHeight - margin;
+        pageNumber++;
+
+        const answerTitle = 'ANSWER KEY';
+        const answerWidth = helveticaBold.widthOfTextAtSize(answerTitle, 18);
+        currentPage.drawText(answerTitle, {
+            x: (pageWidth - answerWidth) / 2,
+            y: currentY,
+            size: 18,
+            font: helveticaBold,
+            color: COLOR_ACCENT
+        });
+        currentY -= 40;
+
+        // Draw answer table
+        const cellHeight = 30;
+        const col1Width = 80;
+        const col2Width = contentWidth - col1Width;
+        
+        // Header row
+        checkNewPage(cellHeight + 10);
+        currentPage.drawRectangle({
+            x: margin,
+            y: currentY - cellHeight,
+            width: contentWidth,
+            height: cellHeight,
+            color: COLOR_ACCENT
+        });
+        
+        currentPage.drawText('Question', {
+            x: margin + (col1Width - helveticaBold.widthOfTextAtSize('Question', 10)) / 2,
+            y: currentY - 18,
+            size: 10,
+            font: helveticaBold,
+            color: rgb(1, 1, 1)
+        });
+        
+        currentPage.drawText('Answer', {
+            x: margin + col1Width + 10,
+            y: currentY - 18,
+            size: 10,
+            font: helveticaBold,
+            color: rgb(1, 1, 1)
+        });
+        
+        currentY -= cellHeight;
+
+        // Answer rows
+        for (let i = 0; i < quizData.length; i++) {
+            const question = quizData[i];
+            const qNum = i + 1;
+            let answerText = '';
+            
+            if (question.type === 'mcq' || question.options) {
+                const answerIdx = question.answer || 0;
+                const letter = String.fromCharCode(65 + answerIdx);
+                const optionText = cleanText((question.options[answerIdx] || '').substring(0, 80));
+                answerText = `${letter}) ${optionText}`;
+            } else if (question.type === 'fib') {
+                const answer = question.answer;
+                answerText = cleanText(Array.isArray(answer) ? answer.join(' / ') : String(answer));
+            } else if (question.type === 'passageFib') {
+                const answers = question.answer || {};
+                const parts = [];
+                for (const [key, val] of Object.entries(answers)) {
+                    const v = Array.isArray(val) ? val.join(' / ') : val;
+                    parts.push(`(${key}) ${v}`);
+                }
+                answerText = cleanText(parts.join(', ').substring(0, 120));
+            }
+            
+            const rowHeight = Math.max(cellHeight, Math.ceil(answerText.length / 60) * 15 + 15);
+            checkNewPage(rowHeight + 5);
+            
+            // Alternating row colors
+            const bgColor = i % 2 === 0 ? COLOR_ANSWER_BG : rgb(1, 1, 1);
+            
+            currentPage.drawRectangle({
+                x: margin,
+                y: currentY - rowHeight,
+                width: contentWidth,
+                height: rowHeight,
+                color: bgColor,
+                borderColor: COLOR_BORDER,
+                borderWidth: 0.5
+            });
+            
+            // Question number (centered)
+            const qText = `Q${qNum}`;
+            const qTextWidth = helveticaBold.widthOfTextAtSize(qText, 9);
+            currentPage.drawText(qText, {
+                x: margin + (col1Width - qTextWidth) / 2,
+                y: currentY - 18,
+                size: 9,
+                font: helveticaBold,
+                color: COLOR_TEXT
+            });
+            
+            // Answer text (wrapped if needed)
+            const answerY = currentY - 18;
+            const words = answerText.split(' ');
+            let line = '';
+            let localY = answerY;
+            
+            for (const word of words) {
+                const testLine = line + word + ' ';
+                const testWidth = helveticaFont.widthOfTextAtSize(testLine, 9);
+                
+                if (testWidth > col2Width - 20 && line !== '') {
+                    currentPage.drawText(line.trim(), {
+                        x: margin + col1Width + 10,
+                        y: localY,
+                        size: 9,
+                        font: helveticaFont,
+                        color: COLOR_TEXT
+                    });
+                    localY -= 13;
+                    line = word + ' ';
+                } else {
+                    line = testLine;
+                }
+            }
+            
+            if (line.trim()) {
+                currentPage.drawText(line.trim(), {
+                    x: margin + col1Width + 10,
+                    y: localY,
+                    size: 9,
+                    font: helveticaFont,
+                    color: COLOR_TEXT
+                });
+            }
+            
+            currentY -= rowHeight;
+        }
+
+        // Add footer to last page
+        addFooter(currentPage, pageNumber);
+
+        // Save PDF
+        const pdfBytes = await pdfDoc.save();
+        
+        console.log('✅ Quiz PDF generated successfully:', topic);
+
+        res.setHeader('Content-Type', 'application/pdf');
+        res.setHeader('Content-Disposition', `inline; filename="${topic}_quiz.pdf"`);
+        res.send(Buffer.from(pdfBytes));
 
     } catch (error) {
         console.error('❌ Error generating quiz PDF:', error);
@@ -344,6 +870,7 @@ app.get('/printQuiz', async (req, res) => {
                             padding: 2px 6px; 
                             border-radius: 3px; 
                         }
+                        ul { text-align: left; color: #6b6561; }
                     </style>
                 </head>
                 <body>
@@ -352,10 +879,9 @@ app.get('/printQuiz', async (req, res) => {
                         <strong>Error:</strong> ${error.message}
                     </div>
                     <p>Please ensure:</p>
-                    <ul style="text-align: left; color: #6b6561;">
+                    <ul>
                         <li>The quiz file exists at: <code>/public/resources/${topic}.json</code></li>
-                        <li>Python 3 is installed with reportlab</li>
-                        <li>The generate_quiz_pdf.py script is in the same directory</li>
+                        <li>All required packages are installed: <code>pdf-lib</code></li>
                     </ul>
                     <p><a href="/resources/">← Back to Resources</a></p>
                 </body>

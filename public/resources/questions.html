@@ -642,6 +642,12 @@
             <a id="back-btn" href="../resources/">↩</a>
             <h1>Quiz</h1>
             <div class="header-actions">
+                <button onclick="printQuiz()">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+                    </svg>
+                    Print
+                </button>
                 <button onclick="toggleMenu()">
                     <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -1407,6 +1413,10 @@
                     item.classList.add(isCorrect ? 'correct' : 'incorrect');
                 }
             });
+        }
+
+        function printQuiz() {
+            window.open(`/printQuiz?topic=${topic}`, '_blank');
         }
 
         // Initialize
