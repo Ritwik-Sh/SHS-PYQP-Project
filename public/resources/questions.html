@@ -667,8 +667,8 @@
 
         <div class="stats-bar">
             <div class="stat">
-                <span class="stat-label">Progress</span>
-                <span class="stat-value"><span id="currentQuestion">1</span>/<span id="totalQuestions">X</span></span>
+                <span class="stat-label">Accuracy</span>
+                <span class="stat-value" id="accuracy">--%</span>
             </div>
             <div class="stat">
                 <span class="stat-label">Correct</span>
@@ -828,7 +828,6 @@
                 loadProgress();
                 initQuestionGrid();
                 loadQuestion();
-                document.getElementById('totalQuestions').textContent = questions.length;
             } catch (error) {
                 document.getElementById('questionText').innerHTML = 
                     '<p style="color: var(--secondary);">Error loading questions. Topic Not Found.</p>';
@@ -917,7 +916,6 @@
             const explanation = document.getElementById('explanation');
             
             document.getElementById('questionNumber').textContent = `Question ${currentQuestionIndex + 1}`;
-            document.getElementById('currentQuestion').textContent = currentQuestionIndex + 1;
             
             questionText.innerHTML = formatCode(question.question);
             
@@ -1120,11 +1118,13 @@
             }
             
             if (isAnswered) {
-                if (!question.explanation) {
-                    document.getElementById('explanation').style.display = "none";
+                // Show explanation only if it exists and is not empty
+                if (question.explanation && question.explanation.trim() !== '') {
+                    document.getElementById('explanationText').innerHTML = formatCode(question.explanation);
+                    explanation.classList.add('show');
+                } else {
+                    explanation.classList.remove('show');
                 }
-                document.getElementById('explanationText').innerHTML = formatCode(question.explanation);
-                explanation.classList.add('show');
                 document.getElementById('submitBtn').disabled = true;
                 nextBtn.classList.add('btn-primary');
             } else {
@@ -1269,8 +1269,13 @@
             saveProgress();
             
             const explanation = document.getElementById('explanation');
-            document.getElementById('explanationText').innerHTML = formatCode(question.explanation || 'No explanation provided.');
-            explanation.classList.add('show');
+            // Show explanation only if it exists and is not empty
+            if (question.explanation && question.explanation.trim() !== '') {
+                document.getElementById('explanationText').innerHTML = formatCode(question.explanation);
+                explanation.classList.add('show');
+            } else {
+                explanation.classList.remove('show');
+            }
             
             document.getElementById('submitBtn').disabled = true;
             nextBtn.classList.add('btn-primary');
@@ -1302,6 +1307,14 @@
         function updateStats() {
             document.getElementById('correct').textContent = correctCount;
             document.getElementById('incorrect').textContent = incorrectCount;
+            
+            // Calculate and display accuracy
+            const totalAnswered = correctCount + incorrectCount;
+            let accuracy = '--';
+            if (totalAnswered > 0) {
+                accuracy = Math.round((correctCount / totalAnswered) * 100) + '%';
+            }
+            document.getElementById('accuracy').textContent = accuracy;
         }
 
         function updateProgress() {
