@@ -318,6 +318,13 @@
             text-align: center;
             white-space: nowrap;
         }
+        
+        .passage-blank-display.example {
+            color: var(--text);
+            background: rgba(147, 187, 234, 0.1);
+            border-color: var(--primary);
+            font-weight: 500;
+        }
 
         .passage-inputs {
             display: grid;
@@ -949,6 +956,15 @@
                     const num = blankCounter;
                     blankNumbers.push(num);
                     blankCounter++;
+                    
+                    // For blank (0), check if there's an answer to pre-fill
+                    if (num === 0 && question.answer && question.answer['0']) {
+                        const exampleAnswer = Array.isArray(question.answer['0']) 
+                            ? question.answer['0'][0] 
+                            : question.answer['0'];
+                        return `(<span style="color: rgba(229, 240, 250, 0.5);">${num}</span>) <span class="passage-blank-display example">${exampleAnswer}</span>`;
+                    }
+                    
                     return `(<span style="color: rgba(229, 240, 250, 0.5);">${num}</span>) <span class="passage-blank-display">________</span>`;
                 });
                 

@@ -531,7 +531,9 @@
 
         // Cookie functions
         function getQuizProgress(topicFile) {
-            const topic = topicFile.replace('.json', '');
+            // Normalize the topic name - remove .json if present
+            const topic = topicFile.replace(/\.json$/, '');
+            
             const cookie = document.cookie
                 .split('; ')
                 .find(row => row.startsWith(`quizProgress_${topic}=`));
@@ -544,7 +546,7 @@
                 );
                 return progress;
             } catch (e) {
-                console.warn('Corrupt quiz cookie');
+                console.warn('Corrupt quiz cookie for topic:', topic);
                 return null;
             }
         }
@@ -559,16 +561,22 @@
             if (percentage === 100) status = 'complete';
             else if (percentage > 0) status = 'incomplete';
             
-            return { percentage, status, ...progress };
+            return { percentage, status, answeredCount, ...progress };
         }
 
         async function getQuizTotalQuestions(topicFile) {
             try {
-                const response = await fetch(topicFile);
+                // Ensure the file has .json extension for fetching
+                const jsonFile = topicFile.endsWith('.json') ? topicFile : `${topicFile}.json`;
+                const response = await fetch(jsonFile);
+                if (!response.ok) {
+                    console.warn('Could not load quiz questions:', jsonFile, 'Status:', response.status);
+                    return 0;
+                }
                 const questions = await response.json();
                 return questions.length;
             } catch (error) {
-                console.warn('Could not load quiz questions:', topicFile);
+                console.warn('Error loading quiz questions:', topicFile, error);
                 return 0;
             }
         }
@@ -659,9 +667,11 @@
                     </div>
                 `;
                 card.onclick = () => {
-                    if (!topic.file.startsWith('http')) window.open(`/resources/questions.html?topic=${topic.file}`, '_blank');
-                    else window.open(topic.file, '_blank');
-                    
+                    if (!topic.file.startsWith('http')) {
+                        window.open(`/resources/questions.html?topic=${topic.file}`, '_blank');
+                    } else {
+                        window.open(topic.file, '_blank');
+                    }
                 };
                 content.appendChild(card);
 
@@ -671,11 +681,14 @@
         }
 
         async function loadTopicProgress(card, topic) {
+            // Get total questions from the JSON file
             const totalQuestions = await getQuizTotalQuestions(topic.file);
+            
+            // Get progress from cookie (using normalized topic name without .json)
             const progress = getQuizProgress(topic.file);
             const progressData = calculateProgress(progress, totalQuestions);
 
-            const answeredCount = Object.keys(progress?.userAnswers || {}).length;
+            const answeredCount = progressData.answeredCount || 0;
             const correctCount = progress?.correctCount || 0;
             const percentage = progressData.percentage;
 
@@ -685,6 +698,8 @@
             let statsHTML = '';
             if (progressData.status !== 'not-started') {
                 const statusText = progressData.status === 'complete' ? 'Complete' : 'In Progress';
+                const accuracy = answeredCount > 0 ? Math.round((correctCount / answeredCount) * 100) : 0;
+                
                 statsHTML = `
                     <div class="quiz-stats">
                         <div class="quiz-stats-row">
@@ -701,7 +716,7 @@
                         </div>
                         <div class="quiz-stats-row">
                             <span>Accuracy:</span>
-                            <span>${answeredCount > 0 ? Math.round((correctCount / answeredCount) * 100) : 0}%</span>
+                            <span>${accuracy}%</span>
                         </div>
                         <div class="progress-bar-container">
                             <div class="progress-bar-fill ${progressData.status === 'complete' ? '' : 'incomplete'}" 
