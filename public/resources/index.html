@@ -529,24 +529,19 @@
             }
         }
 
-        // Cookie functions
+        // LocalStorage functions for progress tracking
         function getQuizProgress(topicFile) {
             // Normalize the topic name - remove .json if present
             const topic = topicFile.replace(/\.json$/, '');
             
-            const cookie = document.cookie
-                .split('; ')
-                .find(row => row.startsWith(`quizProgress_${topic}=`));
-
-            if (!cookie) return null;
-
             try {
-                const progress = JSON.parse(
-                    decodeURIComponent(cookie.split('=')[1])
-                );
+                const saved = localStorage.getItem(`quizProgress_${topic}`);
+                if (!saved) return null;
+
+                const progress = JSON.parse(saved);
                 return progress;
             } catch (e) {
-                console.warn('Corrupt quiz cookie for topic:', topic);
+                console.warn('Corrupt quiz data for topic:', topic, e);
                 return null;
             }
         }
@@ -684,7 +679,7 @@
             // Get total questions from the JSON file
             const totalQuestions = await getQuizTotalQuestions(topic.file);
             
-            // Get progress from cookie (using normalized topic name without .json)
+            // Get progress from localStorage (using normalized topic name without .json)
             const progress = getQuizProgress(topic.file);
             const progressData = calculateProgress(progress, totalQuestions);
 
