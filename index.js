@@ -711,40 +711,11 @@ app.get('/printQuiz', async (req, res) => {
         });
         currentY -= 40;
 
-        // Draw answer table
-        const cellHeight = 30;
-        const col1Width = 80;
-        const col2Width = contentWidth - col1Width;
+        // Build compact answer strings
+        let answerLine = '';
+        const lineHeight = 14;
+        const maxLineWidth = contentWidth;
         
-        // Header row
-        checkNewPage(cellHeight + 10);
-        currentPage.drawRectangle({
-            x: margin,
-            y: currentY - cellHeight,
-            width: contentWidth,
-            height: cellHeight,
-            color: COLOR_ACCENT
-        });
-        
-        currentPage.drawText('Question', {
-            x: margin + (col1Width - helveticaBold.widthOfTextAtSize('Question', 10)) / 2,
-            y: currentY - 18,
-            size: 10,
-            font: helveticaBold,
-            color: rgb(1, 1, 1)
-        });
-        
-        currentPage.drawText('Answer', {
-            x: margin + col1Width + 10,
-            y: currentY - 18,
-            size: 10,
-            font: helveticaBold,
-            color: rgb(1, 1, 1)
-        });
-        
-        currentY -= cellHeight;
-
-        // Answer rows
         for (let i = 0; i < quizData.length; i++) {
             const question = quizData[i];
             const qNum = i + 1;
@@ -752,85 +723,55 @@ app.get('/printQuiz', async (req, res) => {
             
             if (question.type === 'mcq' || question.options) {
                 const answerIdx = question.answer || 0;
-                const letter = String.fromCharCode(65 + answerIdx);
-                const optionText = cleanText((question.options[answerIdx] || '').substring(0, 80));
-                answerText = `${letter}) ${optionText}`;
+                const letter = String.fromCharCode(97 + answerIdx); // lowercase a, b, c, d
+                answerText = `Q${qNum}. ${letter}`;
             } else if (question.type === 'fib') {
                 const answer = question.answer;
-                answerText = cleanText(Array.isArray(answer) ? answer.join(' / ') : String(answer));
+                const answerStr = cleanText(Array.isArray(answer) ? answer[0] : String(answer));
+                answerText = `Q${qNum}. ${answerStr}`;
             } else if (question.type === 'passageFib') {
                 const answers = question.answer || {};
                 const parts = [];
                 for (const [key, val] of Object.entries(answers)) {
-                    const v = Array.isArray(val) ? val.join(' / ') : val;
-                    parts.push(`(${key}) ${v}`);
+                    if (key === '0') continue; // Skip example answer
+                    const v = Array.isArray(val) ? val[0] : val;
+                    parts.push(`(${key}) ${cleanText(v)}`);
                 }
-                answerText = cleanText(parts.join(', ').substring(0, 120));
+                answerText = `Q${qNum}. ${parts.join(', ')}`;
             }
             
-            const rowHeight = Math.max(cellHeight, Math.ceil(answerText.length / 60) * 15 + 15);
-            checkNewPage(rowHeight + 5);
+            // Check if adding this answer would exceed line width
+            const testLine = answerLine ? `${answerLine}; ${answerText}` : answerText;
+            const testWidth = helveticaFont.widthOfTextAtSize(testLine, 9);
             
-            // Alternating row colors
-            const bgColor = i % 2 === 0 ? COLOR_ANSWER_BG : rgb(1, 1, 1);
-            
-            currentPage.drawRectangle({
-                x: margin,
-                y: currentY - rowHeight,
-                width: contentWidth,
-                height: rowHeight,
-                color: bgColor,
-                borderColor: COLOR_BORDER,
-                borderWidth: 0.5
-            });
-            
-            // Question number (centered)
-            const qText = `Q${qNum}`;
-            const qTextWidth = helveticaBold.widthOfTextAtSize(qText, 9);
-            currentPage.drawText(qText, {
-                x: margin + (col1Width - qTextWidth) / 2,
-                y: currentY - 18,
-                size: 9,
-                font: helveticaBold,
-                color: COLOR_TEXT
-            });
-            
-            // Answer text (wrapped if needed)
-            const answerY = currentY - 18;
-            const words = answerText.split(' ');
-            let line = '';
-            let localY = answerY;
-            
-            for (const word of words) {
-                const testLine = line + word + ' ';
-                const testWidth = helveticaFont.widthOfTextAtSize(testLine, 9);
-                
-                if (testWidth > col2Width - 20 && line !== '') {
-                    currentPage.drawText(line.trim(), {
-                        x: margin + col1Width + 10,
-                        y: localY,
-                        size: 9,
-                        font: helveticaFont,
-                        color: COLOR_TEXT
-                    });
-                    localY -= 13;
-                    line = word + ' ';
-                } else {
-                    line = testLine;
-                }
-            }
-            
-            if (line.trim()) {
-                currentPage.drawText(line.trim(), {
-                    x: margin + col1Width + 10,
-                    y: localY,
+            if (testWidth > maxLineWidth && answerLine !== '') {
+                // Draw current line and start new one
+                checkNewPage(lineHeight + 5);
+                currentPage.drawText(answerLine, {
+                    x: margin,
+                    y: currentY,
                     size: 9,
                     font: helveticaFont,
                     color: COLOR_TEXT
                 });
+                currentY -= lineHeight;
+                answerLine = answerText;
+            } else {
+                answerLine = testLine;
             }
-            
-            currentY -= rowHeight;
+        }
+        
+        // Draw remaining line
+        if (answerLine) {
+            checkNewPage(lineHeight + 5);
+            currentPage.drawText(answerLine, {
+                x: margin,
+                y: currentY,
+                size: 9,
+                font: helveticaFont,
+                color: COLOR_TEXT
+            });
+            currentY -= lineHeight;
         }
 
         // Add footer to last page
