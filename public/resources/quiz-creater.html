@@ -884,9 +884,8 @@
                     </div>
 
                     <div id="passageAnswerInputs" style="display:flex; flex-direction:column; gap:12px;">
-                        <!-- dynamically generated -->
+                        <!-- dynamically generated from passage blanks -->
                     </div>
-                    <button class="btn-small" style="margin-top:12px;" onclick="addPassageBlank()"><span>+ Add Blank</span></button>
                 </div>
 
                 <div class="form-group">
@@ -1114,26 +1113,36 @@
         }
 
         function renderPassageAnswerInputs(existingData) {
-            // existingData: optional { hasZeroth: bool, blanks: [{blankIndex, answers:[]}] }
+            // existingData: optional flat array [{blankIndex, answers:[]}] used when loading a saved question
             const container = document.getElementById('passageAnswerInputs');
             const hasZeroth = document.getElementById('hasZerothBlank').checked;
 
-            // Determine how many blanks are in the passage
+            // Count blanks directly from the passage textarea
             const passageText = document.getElementById('passageText').value;
             const blanksInPassage = (passageText.match(/________/g) || []).length;
 
+            // Snapshot current answer values so we preserve them when re-rendering due to typing
+            const preserved = {};
+            container.querySelectorAll('.passage-answer-row').forEach(row => {
+                preserved[row.dataset.blankIndex] = Array.from(row.querySelectorAll('.pfib-answer')).map(i => i.value);
+            });
+
             container.innerHTML = '';
 
-            const startIdx = hasZeroth ? 0 : 1;
-            // Use existing data count, or blanks detected in passage, or at least 1
-            const totalBlanks = existingData
-                ? existingData.blanks.length
-                : (blanksInPassage > 0 ? blanksInPassage : (hasZeroth ? 1 : 2));
+            if (blanksInPassage === 0) {
+                container.innerHTML = '<div style="font-size:0.8rem;color:var(--text-muted);padding:8px 0;">No blanks detected yet — type <strong>________</strong> in the passage above.</div>';
+                return;
+            }
 
-            for (let i = 0; i < totalBlanks; i++) {
+            for (let i = 0; i < blanksInPassage; i++) {
                 const blankIdx = hasZeroth ? i : (i + 1);
-                const existingAnswers = existingData ? (existingData.blanks[i]?.answers || []) : [];
-                container.appendChild(createPassageAnswerRow(blankIdx, existingAnswers, hasZeroth && i === 0));
+                let answers;
+                if (existingData) {
+                    answers = existingData[i]?.answers || [];
+                } else {
+                    answers = preserved[String(blankIdx)] || [];
+                }
+                container.appendChild(createPassageAnswerRow(blankIdx, answers, hasZeroth && i === 0));
             }
         }
 
@@ -1179,29 +1188,14 @@
             div.querySelector('input').focus();
         }
 
-        function addPassageBlank() {
-            const container = document.getElementById('passageAnswerInputs');
-            const hasZeroth = document.getElementById('hasZerothBlank').checked;
-            const existingRows = container.querySelectorAll('.passage-answer-row');
-            const lastIdx = existingRows.length > 0
-                ? parseInt(existingRows[existingRows.length - 1].dataset.blankIndex)
-                : (hasZeroth ? -1 : 0);
-            container.appendChild(createPassageAnswerRow(lastIdx + 1, [], false));
-        }
-
         function toggleZerothBlank() {
             renderPassageAnswerInputs();
         }
 
-        // Sync passage blanks with textarea count when typing
-        document.addEventListener('DOMContentLoaded', () => {
-            const passageTextarea = document.getElementById('passageText');
-            if (passageTextarea) {
-                passageTextarea.addEventListener('input', () => {
-                    if (document.getElementById('questionType').value === 'passageFib') {
-                        renderPassageAnswerInputs();
-                    }
-                });
+        // Sync passage blank rows with textarea whenever user types
+        document.getElementById('passageText').addEventListener('input', () => {
+            if (document.getElementById('questionType').value === 'passageFib') {
+                renderPassageAnswerInputs();
             }
         });
 
@@ -1360,18 +1354,16 @@
                 const hasZeroth = question.answer && question.answer.hasOwnProperty('0');
                 document.getElementById('hasZerothBlank').checked = hasZeroth;
 
-                // Build blanks array from answer object
+                // Build blanks array from answer object (sorted by key, skipping 0 if no-zeroth)
                 const blankKeys = Object.keys(question.answer || {}).map(Number).sort((a,b)=>a-b);
-                const blanks = blankKeys.map(k => ({
+                const blanksData = blankKeys.map(k => ({
                     blankIndex: k,
                     answers: Array.isArray(question.answer[String(k)]) ? question.answer[String(k)] : [question.answer[String(k)]]
                 }));
 
-                const container = document.getElementById('passageAnswerInputs');
-                container.innerHTML = '';
-                blanks.forEach(b => {
-                    container.appendChild(createPassageAnswerRow(b.blankIndex, b.answers, hasZeroth && b.blankIndex === 0));
-                });
+                // renderPassageAnswerInputs reads blank COUNT from passage textarea (already set above)
+                // and uses existingData for pre-filling answers
+                renderPassageAnswerInputs(blanksData);
             } else {
                 document.getElementById('questionType').value = 'mcq';
                 updateQuestionTypeUI();
