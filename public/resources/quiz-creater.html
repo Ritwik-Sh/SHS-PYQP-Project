@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz JSON Creator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <style>
         :root {
             --bg: #040b15;
@@ -440,20 +442,27 @@
             overflow: hidden;
         }
 
-        /* JSON output with syntax highlighting feel */
+        /* JSON output with Prism syntax highlighting */
         .json-output {
-            background: rgba(4, 11, 21, 0.8);
-            padding: 24px;
-            border-radius: 16px;
-            font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
-            font-size: 0.85rem;
+            background: rgba(4, 11, 21, 0.8) !important;
+            padding: 24px !important;
+            border-radius: 16px !important;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace !important;
+            font-size: 0.85rem !important;
             max-height: 500px;
             overflow-y: auto;
-            white-space: pre-wrap;
+            white-space: pre-wrap !important;
             word-break: break-all;
-            border: 1.5px solid var(--border);
-            color: #a8d4ff;
-            line-height: 1.6;
+            border: 1.5px solid var(--border) !important;
+            line-height: 1.6 !important;
+            margin: 0 !important;
+        }
+        .json-output code {
+            background: transparent !important;
+            font-family: inherit !important;
+            font-size: inherit !important;
+            line-height: inherit !important;
+            white-space: pre-wrap !important;
         }
 
         .json-output::-webkit-scrollbar {
@@ -765,6 +774,32 @@
             flex: 1;
         }
 
+
+        /* Drag to reorder */
+        .drag-handle {
+            cursor: grab;
+            color: var(--text-muted);
+            padding: 4px 6px;
+            font-size: 0.9rem;
+            opacity: 0.5;
+            transition: opacity 0.2s;
+            flex-shrink: 0;
+        }
+        .drag-handle:hover { opacity: 1; }
+        .question-card { cursor: default; }
+        .question-card.dragging { opacity: 0.4; border-color: var(--primary); }
+        .question-card.drag-over { border-color: var(--accent); transform: translateX(8px); }
+        .option-item.dragging { opacity: 0.4; }
+        .option-item.drag-over { border-color: var(--accent); }
+        .option-drag-handle {
+            cursor: grab;
+            color: var(--text-muted);
+            padding: 0 4px;
+            font-size: 0.85rem;
+            opacity: 0.5;
+            transition: opacity 0.2s;
+        }
+        .option-drag-handle:hover { opacity: 1; }
         /* end passage FIB styles */
 
         @keyframes slideIn {
@@ -790,13 +825,13 @@
     <div class="container">
         <div class="header">
             <div class="header-left">
-                <div class="logo">📝</div>
+                <div class="logo"><i class="fa-solid fa-pen-to-square"></i></div>
                 <h1>Quiz JSON Creator</h1>
             </div>
             <div class="header-actions">
-                <button onclick="testQuiz()"><span>🧪 Test Quiz</span></button>
-                <button class="btn-secondary" onclick="copyJSON()"><span>📋 Copy JSON</span></button>
-                <button class="btn-primary" onclick="downloadJSON()"><span>⬇️ Download</span></button>
+                <button onclick="testQuiz()"><i class="fa-solid fa-flask-vial"></i> Test Quiz</button>
+                <button class="btn-secondary" onclick="copyJSON()"><i class="fa-solid fa-copy"></i> Copy JSON</button>
+                <button class="btn-primary" onclick="downloadJSON()"><i class="fa-solid fa-download"></i> Download</button>
             </div>
         </div>
 
@@ -805,7 +840,7 @@
             <div class="panel">
                 <div class="panel-header">
                     <h2 class="panel-title">Question Editor</h2>
-                    <button class="btn-primary" onclick="addQuestion()"><span>+ New Question</span></button>
+                    <button class="btn-primary" onclick="addQuestion()"><i class="fa-solid fa-plus"></i> New Question</button>
                 </div>
 
                 <div class="form-group">
@@ -825,29 +860,33 @@
                     </div>
                     <textarea id="questionText" rows="4" placeholder="Enter your question here..."></textarea>
                     <div class="code-help" id="questionCodeHelp" style="display: none;">
-                        💡 Wrap code with ```java or ``` for syntax highlighting
+                        <i class="fa-solid fa-lightbulb"></i> Wrap code with ```java or ``` for syntax highlighting. Use `code` for inline.
                     </div>
                 </div>
 
                 <div class="form-group" id="mcqOptions">
                     <label class="form-label">Options (Select correct answer)</label>
                     <div class="options-list">
-                        <div class="option-item">
+                        <div class="option-item" draggable="true">
+                            <span class="option-drag-handle"><i class="fa-solid fa-grip-vertical"></i></span>
                             <span class="option-label">A</span>
                             <input type="text" id="option0" placeholder="Option A">
                             <input type="radio" name="correctAnswer" value="0">
                         </div>
-                        <div class="option-item">
+                        <div class="option-item" draggable="true">
+                            <span class="option-drag-handle"><i class="fa-solid fa-grip-vertical"></i></span>
                             <span class="option-label">B</span>
                             <input type="text" id="option1" placeholder="Option B">
                             <input type="radio" name="correctAnswer" value="1">
                         </div>
-                        <div class="option-item">
+                        <div class="option-item" draggable="true">
+                            <span class="option-drag-handle"><i class="fa-solid fa-grip-vertical"></i></span>
                             <span class="option-label">C</span>
                             <input type="text" id="option2" placeholder="Option C">
                             <input type="radio" name="correctAnswer" value="2">
                         </div>
-                        <div class="option-item">
+                        <div class="option-item" draggable="true">
+                            <span class="option-drag-handle"><i class="fa-solid fa-grip-vertical"></i></span>
                             <span class="option-label">D</span>
                             <input type="text" id="option3" placeholder="Option D">
                             <input type="radio" name="correctAnswer" value="3">
@@ -864,14 +903,14 @@
                                     Alternative</span></button>
                         </div>
                     </div>
-                    <div class="code-help">💡 Add multiple answers for variations (e.g., "true", "True", "TRUE")</div>
+                    <div class="code-help"><i class="fa-solid fa-lightbulb"></i> Add multiple answers for variations (e.g., "true", "True", "TRUE")</div>
                 </div>
 
                 <!-- Passage FIB Section -->
                 <div class="form-group" id="passageFibSection" style="display: none;">
                     <label class="form-label">Passage Text</label>
                     <div class="code-help" style="display:block; margin-bottom:10px;">
-                        💡 Use <strong>________</strong> (8 underscores) for each blank. Blanks are auto-numbered 0, 1, 2… The 0th blank is the example answer (optionally revealed).
+                        <i class="fa-solid fa-lightbulb"></i> Use <strong>________</strong> (8 underscores) for each blank. Blanks are auto-numbered 0, 1, 2… The 0th blank is the example answer (optionally revealed).
                     </div>
                     <textarea id="passageText" rows="6" placeholder="Enter the passage here. Use ________ for each blank."></textarea>
 
@@ -896,15 +935,14 @@
                     </div>
                     <textarea id="explanation" rows="3" placeholder="Explain the correct answer..."></textarea>
                     <div class="code-help" id="explanationCodeHelp" style="display: none;">
-                        💡 Wrap code with ```java or ``` for syntax highlighting
+                        <i class="fa-solid fa-lightbulb"></i> Wrap code with ```java or ``` for syntax highlighting. Use `code` for inline.
                     </div>
                 </div>
 
                 <div class="fab-group">
-                    <button class="btn-primary" onclick="saveCurrentQuestion()" style="flex: 1;"><span>💾 Save
-                            Question</span></button>
+                    <button class="btn-primary" onclick="saveCurrentQuestion()" style="flex: 1;"><i class="fa-solid fa-floppy-disk"></i> Save Question</button>
                     <button class="delete-btn" onclick="deleteCurrentQuestion()" id="deleteBtn"
-                        style="display: none;"><span>🗑️ Delete</span></button>
+                        style="display: none;"><i class="fa-solid fa-trash"></i> Delete</button>
                 </div>
             </div>
 
@@ -913,11 +951,11 @@
                 <div class="panel" style="margin-bottom: 32px;">
                     <div class="panel-header">
                         <h2 class="panel-title">Questions (<span id="questionCount">0</span>)</h2>
-                        <button onclick="clearAll()"><span>Clear All</span></button>
+                        <button onclick="clearAll()"><i class="fa-solid fa-trash-can"></i> Clear All</button>
                     </div>
                     <div class="question-list" id="questionList">
                         <div class="empty-state">
-                            <div class="empty-state-icon">📋</div>
+                            <div class="empty-state-icon"><i class="fa-regular fa-clipboard"></i></div>
                             <p>No questions yet. Create your first question!</p>
                         </div>
                     </div>
@@ -930,15 +968,15 @@
                     
                     <div class="editor-mode-toggle">
                         <button class="editor-mode-btn active" onclick="switchEditorMode('view')">
-                            <span>👁️ View</span>
+                            <i class="fa-solid fa-eye"></i> View
                         </button>
                         <button class="editor-mode-btn" onclick="switchEditorMode('edit')">
-                            <span>✏️ Edit</span>
+                            <i class="fa-solid fa-pen"></i> Edit
                         </button>
                     </div>
 
                     <div id="jsonViewMode">
-                        <div class="json-output" id="jsonOutput">[]</div>
+                        <pre class="json-output language-json" style="margin:0;"><code class="language-json" id="jsonOutput">[]</code></pre>
                     </div>
 
                     <div id="jsonEditMode" style="display: none;">
@@ -947,10 +985,10 @@
                         <div class="success-message" id="jsonSuccess">JSON updated successfully!</div>
                         <div style="display: flex; gap: 12px; margin-top: 16px;">
                             <button class="btn-primary" onclick="applyJSONEdit()" style="flex: 1;">
-                                <span>✓ Apply Changes</span>
+                                <i class="fa-solid fa-check"></i> Apply Changes
                             </button>
                             <button onclick="cancelJSONEdit()">
-                                <span>✕ Cancel</span>
+                                <i class="fa-solid fa-xmark"></i> Cancel
                             </button>
                         </div>
                     </div>
@@ -1158,14 +1196,14 @@
                 <div class="passage-answer-row-header">
                     <span class="passage-blank-label">Blank (${blankIndex})${isExample ? ' ★' : ''}</span>
                     <input type="text" class="pfib-answer" placeholder="${isExample ? 'Example answer (revealed)' : 'Answer'}" value="${firstAnswer}" style="flex:1;">
-                    ${!isExample ? `<button class="btn-small delete-btn" onclick="this.closest('.passage-answer-row').remove()" title="Remove blank"><span>✕</span></button>` : ''}
+                    ${!isExample ? `<button class="btn-small delete-btn" onclick="this.closest('.passage-answer-row').remove()" title="Remove blank"><i class="fa-solid fa-xmark"></i></button>` : ''}
                 </div>
                 ${isExample ? '<div style="font-size:0.75rem;color:var(--accent);padding-left:70px;opacity:0.8;">This answer will be shown to the student as an example.</div>' : ''}
                 <div class="passage-alt-answers">
                     ${altAnswers.map(a => `
                         <div class="passage-alt-row">
                             <input type="text" class="pfib-answer" value="${a}" placeholder="Alternative answer">
-                            <button class="btn-small delete-btn" onclick="this.closest('.passage-alt-row').remove()"><span>✕</span></button>
+                            <button class="btn-small delete-btn" onclick="this.closest('.passage-alt-row').remove()"><i class="fa-solid fa-xmark"></i></button>
                         </div>
                     `).join('')}
                 </div>
@@ -1182,7 +1220,7 @@
             div.className = 'passage-alt-row';
             div.innerHTML = `
                 <input type="text" class="pfib-answer" placeholder="Alternative answer">
-                <button class="btn-small delete-btn" onclick="this.closest('.passage-alt-row').remove()"><span>✕</span></button>
+                <button class="btn-small delete-btn" onclick="this.closest('.passage-alt-row').remove()"><i class="fa-solid fa-xmark"></i></button>
             `;
             altsContainer.appendChild(div);
             div.querySelector('input').focus();
@@ -1207,7 +1245,7 @@
             newInput.className = 'answer-input-group';
             newInput.innerHTML = `
                 <input type="text" class="fib-answer" placeholder="Alternative answer">
-                <button class="btn-small delete-btn" onclick="this.parentElement.remove()"><span>✕</span></button>
+                <button class="btn-small delete-btn" onclick="this.parentElement.remove()"><i class="fa-solid fa-xmark"></i></button>
             `;
             container.appendChild(newInput);
         }
@@ -1339,7 +1377,7 @@
                         <input type="text" class="fib-answer" value="${ans}" placeholder="Answer">
                         ${i === 0
                             ? '<button class="btn-small" onclick="addAlternativeAnswer()"><span>+ Alternative</span></button>'
-                            : '<button class="btn-small delete-btn" onclick="this.parentElement.remove()"><span>✕</span></button>'
+                            : '<button class="btn-small delete-btn" onclick="this.parentElement.remove()"><i class="fa-solid fa-xmark"></i></button>'
                         }
                     `;
                     answerContainer.appendChild(group);
@@ -1414,7 +1452,7 @@
             if (questions.length === 0) {
                 list.innerHTML = `
                     <div class="empty-state">
-                        <div class="empty-state-icon">📋</div>
+                        <div class="empty-state-icon"><i class="fa-regular fa-clipboard"></i></div>
                         <p>No questions yet. Create your first question!</p>
                     </div>
                 `;
@@ -1433,12 +1471,14 @@
         }
 
         function updateJSON() {
+            const json = JSON.stringify(questions, null, 2);
             const output = document.getElementById('jsonOutput');
-            output.textContent = JSON.stringify(questions, null, 2);
+            output.textContent = json;
+            if (window.Prism) Prism.highlightElement(output);
             
             // Also update the editor if in edit mode
             if (editorMode === 'edit') {
-                document.getElementById('jsonEditor').value = JSON.stringify(questions, null, 2);
+                document.getElementById('jsonEditor').value = json;
             }
         }
 
@@ -1473,6 +1513,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Quiz Preview</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 <style>
 :root{--bg:#040b15;--bg-secondary:#0c1420;--primary:#93bbea;--secondary:#921e1c;--accent:#d6b329;--text:#e5f0fa}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -1490,6 +1532,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .question-text{font-size:1.15rem;font-weight:400;margin-bottom:28px}
 .question-text pre{background:var(--bg-secondary)!important;padding:16px;border-radius:8px;overflow-x:auto;margin:12px 0;font-size:.9rem;border-left:2px solid var(--primary)}
 .question-text code{color:var(--primary);font-family:'SF Mono',Monaco,monospace}
+.question-text pre code{color:inherit;font-family:inherit;background:transparent!important}
+.inline-code{background:rgba(147,187,234,.12);color:var(--primary);font-family:'SF Mono',Monaco,monospace;font-size:.88em;padding:2px 6px;border-radius:4px;border:1px solid rgba(147,187,234,.2)}
 .options{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
 .option{padding:14px 18px 14px 56px;background:var(--bg-secondary);border:1px solid transparent;border-radius:8px;cursor:pointer;transition:all .2s;font-size:.95rem;position:relative}
 .option:hover:not(.disabled){border-color:var(--primary)}
@@ -1547,9 +1591,9 @@ button:disabled{opacity:.3;cursor:not-allowed}
 <body>
 <div class="container">
   <div class="header">
-    <h1>🧪 Quiz Preview</h1>
+    <h1><i class="fa-solid fa-flask-vial"></i> Quiz Preview</h1>
     <span class="preview-badge">Preview Mode</span>
-    <button onclick="resetQuiz()">↺ Restart</button>
+    <button onclick="resetQuiz()"><i class="fa-solid fa-rotate-left"></i> Restart</button>
   </div>
   <div class="stats-bar">
     <div class="stat"><span class="stat-label">Accuracy</span><span class="stat-value" id="accuracy">--%</span></div>
@@ -1577,11 +1621,11 @@ button:disabled{opacity:.3;cursor:not-allowed}
       <div id="explanationText"></div>
     </div>
     <div class="controls">
-      <button id="prevBtn" onclick="previousQuestion()">← Previous</button>
+      <button id="prevBtn" onclick="previousQuestion()"><i class="fa-solid fa-arrow-left"></i> Previous</button>
       <button id="submitBtn" onclick="submitAnswer()" disabled style="flex:1">Submit</button>
-      <button id="nextBtn" onclick="nextQuestion()">Next →</button>
+      <button id="nextBtn" onclick="nextQuestion()">Next <i class="fa-solid fa-arrow-right"></i></button>
     </div>
-    <div class="keyboard-hint" id="keyboardHint"><kbd>←</kbd> Previous • <kbd>→</kbd> Next • <kbd>Enter</kbd> Submit/Next</div>
+    <div class="keyboard-hint" id="keyboardHint"><kbd><i class="fa-solid fa-arrow-left"></i></kbd> Previous • <kbd><i class="fa-solid fa-arrow-right"></i></kbd> Next • <kbd>Enter</kbd> Submit/Next</div>
   </div>
   <div class="results" id="results">
     <h2>Quiz Complete</h2>
@@ -1591,7 +1635,7 @@ button:disabled{opacity:.3;cursor:not-allowed}
       <div class="result-item"><div class="stat-label">Correct</div><div class="stat-value" id="finalCorrect"></div></div>
       <div class="result-item"><div class="stat-label">Incorrect</div><div class="stat-value" id="finalIncorrect"></div></div>
     </div>
-    <button class="btn-primary" onclick="resetQuiz()">↺ Restart</button>
+    <button class="btn-primary" onclick="resetQuiz()"><i class="fa-solid fa-rotate-left"></i> Restart</button>
   </div>
 </div>
 <script>
@@ -1600,8 +1644,9 @@ let cur = 0, selected = null, userAnswers = {}, correct = 0, incorrect = 0;
 
 function fmt(t){
   if(!t) return '';
-  return t.replace(/\`\`\`java\\n([\\s\\S]*?)\\n\`\`\`/g,'<pre><code>$1</code></pre>')
+  return t.replace(/\`\`\`java\\n([\\s\\S]*?)\\n\`\`\`/g,'<pre><code class=\"language-java\">$1</code></pre>')
           .replace(/\`\`\`([\\s\\S]*?)\`\`\`/g,'<pre><code>$1</code></pre>')
+          .replace(/\`([^\`]+)\`/g,'<code class=\"inline-code\">$1</code>')
           .replace(/\\n/g,'<br>');
 }
 function norm(s){ return (s||'').toString().trim().toLowerCase(); }
@@ -1635,7 +1680,7 @@ function loadQuestion(){
   document.getElementById('fibAnswer').classList.remove('show');
   document.getElementById('explanation').classList.remove('show');
   const hint=document.getElementById('keyboardHint');
-  hint.innerHTML=(isFib||isPFib)?'<kbd>←</kbd> Previous • <kbd>→</kbd> Next • <kbd>Enter</kbd> Submit':'<kbd>1-4</kbd> or <kbd>A-D</kbd> Select • <kbd>←</kbd> Previous • <kbd>→</kbd> Next • <kbd>Enter</kbd> Submit';
+  hint.innerHTML=(isFib||isPFib)?'<kbd><i class="fa-solid fa-arrow-left"></i></kbd> Previous • <kbd><i class="fa-solid fa-arrow-right"></i></kbd> Next • <kbd>Enter</kbd> Submit':'<kbd>1-4</kbd> or <kbd>A-D</kbd> Select • <kbd><i class="fa-solid fa-arrow-left"></i></kbd> Prev • <kbd><i class="fa-solid fa-arrow-right"></i></kbd> Next • <kbd>Enter</kbd> Submit';
 
   if(isPFib){
     document.getElementById('options').style.display='none';
@@ -1730,9 +1775,10 @@ function loadQuestion(){
     document.getElementById('nextBtn').classList.remove('btn-primary');
   }
   document.getElementById('prevBtn').disabled=cur===0;
-  document.getElementById('nextBtn').textContent=(cur===questions.length-1&&Object.keys(userAnswers).length===questions.length)?'View Results':'Next →';
+  document.getElementById('nextBtn').textContent=(cur===questions.length-1&&Object.keys(userAnswers).length===questions.length)?'View Results <i class="fa-solid fa-flag-checkered"></i>':'Next <i class="fa-solid fa-arrow-right"></i>';
   selected=null;
   document.getElementById('progressBar').style.width=((cur+1)/questions.length*100)+'%';
+  if(window.Prism)Prism.highlightAll();
 }
 
 function selectOption(i){
@@ -1811,6 +1857,9 @@ function resetQuiz(){
 }
 loadQuestion();
 <\/script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"><\/script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"><\/script>
+<script>if(window.Prism)Prism.highlightAll();<\/script>
 </body>
 </html>`;
 
@@ -1850,10 +1899,111 @@ loadQuestion();
             }
         }
 
+
+        // ── Drag to Reorder Questions ─────────────────────────────────────────
+        let dragSrcIndex = null;
+
+        function initQuestionDrag() {
+            const cards = document.querySelectorAll('#questionList .question-card');
+            cards.forEach(card => {
+                card.addEventListener('dragstart', e => {
+                    dragSrcIndex = parseInt(card.dataset.index);
+                    card.classList.add('dragging');
+                    e.dataTransfer.effectAllowed = 'move';
+                });
+                card.addEventListener('dragend', () => card.classList.remove('dragging'));
+                card.addEventListener('dragover', e => {
+                    e.preventDefault();
+                    e.dataTransfer.dropEffect = 'move';
+                    document.querySelectorAll('#questionList .question-card').forEach(c => c.classList.remove('drag-over'));
+                    card.classList.add('drag-over');
+                });
+                card.addEventListener('dragleave', () => card.classList.remove('drag-over'));
+                card.addEventListener('drop', e => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    card.classList.remove('drag-over');
+                    const targetIndex = parseInt(card.dataset.index);
+                    if (dragSrcIndex === null || dragSrcIndex === targetIndex) return;
+                    const moved = questions.splice(dragSrcIndex, 1)[0];
+                    questions.splice(targetIndex, 0, moved);
+                    if (currentEditIndex === dragSrcIndex) currentEditIndex = targetIndex;
+                    else if (currentEditIndex > dragSrcIndex && currentEditIndex <= targetIndex) currentEditIndex--;
+                    else if (currentEditIndex < dragSrcIndex && currentEditIndex >= targetIndex) currentEditIndex++;
+                    dragSrcIndex = null;
+                    saveToCookie();
+                    updateJSON();
+                    updateQuestionList();
+                });
+            });
+        }
+
+        // ── Drag to Reorder MCQ Options ───────────────────────────────────────
+        let optDragSrc = null;
+
+        function initOptionDrag() {
+            const list = document.querySelector('.options-list');
+            if (!list) return;
+            const items = list.querySelectorAll('.option-item');
+            items.forEach(item => {
+                item.addEventListener('dragstart', e => {
+                    optDragSrc = item;
+                    item.classList.add('dragging');
+                    e.dataTransfer.effectAllowed = 'move';
+                });
+                item.addEventListener('dragend', () => {
+                    item.classList.remove('dragging');
+                    // Re-label A/B/C/D and sync radio values
+                    syncOptionLabels();
+                });
+                item.addEventListener('dragover', e => {
+                    e.preventDefault();
+                    list.querySelectorAll('.option-item').forEach(i => i.classList.remove('drag-over'));
+                    item.classList.add('drag-over');
+                });
+                item.addEventListener('dragleave', () => item.classList.remove('drag-over'));
+                item.addEventListener('drop', e => {
+                    e.preventDefault();
+                    item.classList.remove('drag-over');
+                    if (!optDragSrc || optDragSrc === item) return;
+                    const allItems = [...list.querySelectorAll('.option-item')];
+                    const srcIdx = allItems.indexOf(optDragSrc);
+                    const tgtIdx = allItems.indexOf(item);
+                    if (srcIdx < tgtIdx) {
+                        list.insertBefore(optDragSrc, item.nextSibling);
+                    } else {
+                        list.insertBefore(optDragSrc, item);
+                    }
+                    syncOptionLabels();
+                    optDragSrc = null;
+                });
+            });
+        }
+
+        function syncOptionLabels() {
+            const list = document.querySelector('.options-list');
+            const labels = ['A','B','C','D'];
+            const items = list.querySelectorAll('.option-item');
+            items.forEach((item, i) => {
+                item.querySelector('.option-label').textContent = labels[i];
+                const input = item.querySelector('input[type="text"]');
+                const radio = item.querySelector('input[type="radio"]');
+                input.id = 'option' + i;
+                input.placeholder = 'Option ' + labels[i];
+                radio.value = i;
+            });
+        }
+
+        // Initialize option drag on page load
+        document.addEventListener('DOMContentLoaded', () => initOptionDrag());
         // Initialize
         updateQuestionTypeUI();
         updateJSON();
+        initOptionDrag();
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+    <script>if(window.Prism){const o=document.getElementById("jsonOutput");if(o)Prism.highlightElement(o);}</script>
 </body>
 
 </html>

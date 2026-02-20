@@ -294,6 +294,16 @@
             margin-bottom: 4px;
         }
 
+        .inline-code {
+            background: rgba(147, 187, 234, 0.12);
+            color: var(--primary);
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+            font-size: 0.88em;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid rgba(147, 187, 234, 0.2);
+        }
+
         /* Passage FIB */
         .passage-container {
             background: var(--bg-secondary);
@@ -641,27 +651,22 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css">
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <a id="back-btn" href="../resources/">↩</a>
+            <a id="back-btn" href="../resources/"><i class="fa-solid fa-arrow-left"></i></a>
             <h1>Quiz</h1>
             <div class="header-actions">
                 <button onclick="printQuiz()">
-                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
-                    </svg>
-                    Print
+                    <i class="fa-solid fa-print"></i> Print
                 </button>
                 <button onclick="toggleMenu()">
-                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
-                    All Questions
+                    <i class="fa-solid fa-bars"></i> All Questions
                 </button>
-                <button onclick="resetProgress()">Reset</button>
+                <button onclick="resetProgress()"><i class="fa-solid fa-rotate-left"></i> Reset</button>
             </div>
         </div>
 
@@ -704,12 +709,12 @@
                 <div id="explanationText"></div>
             </div>
             <div class="controls">
-                <button id="prevBtn" onclick="previousQuestion()">← Previous</button>
+                <button id="prevBtn" onclick="previousQuestion()"><i class="fa-solid fa-arrow-left"></i> Previous</button>
                 <button id="submitBtn" onclick="submitAnswer()" disabled style="flex: 1;">Submit</button>
-                <button class="" id="nextBtn" onclick="nextQuestion()">Next →</button>
+                <button class="" id="nextBtn" onclick="nextQuestion()">Next <i class="fa-solid fa-arrow-right"></i></button>
             </div>
             <div class="keyboard-hint" id="keyboardHint">
-                <kbd>←</kbd> Previous • <kbd>→</kbd> Next • <kbd>Enter</kbd> Submit/Next
+                <kbd><i class="fa-solid fa-arrow-left"></i></kbd> Previous • <kbd><i class="fa-solid fa-arrow-right"></i></kbd> Next • <kbd>Enter</kbd> Submit/Next
             </div>
         </div>
 
@@ -739,7 +744,7 @@
         <div class="menu-content">
             <div class="menu-header">
                 <h2>All Questions</h2>
-                <button class="close-menu" onclick="toggleMenu()">✕</button>
+                <button class="close-menu" onclick="toggleMenu()"><i class="fa-solid fa-xmark"></i></button>
             </div>
             <div class="question-grid" id="questionGrid"></div>
         </div>
@@ -920,6 +925,8 @@
                     '<pre><code class="language-java">$1</code></pre>')
                 .replace(/```([\s\S]*?)```/g,
                     '<pre><code class="language-none">$1</code></pre>')
+                .replace(/`([^`]+)`/g,
+                    '<code class="inline-code">$1</code>')
                 .replace("\n", "<br>")
                 .replace("\t", "&emsp;");
         }
@@ -959,9 +966,9 @@
             // Update keyboard hint
             const keyboardHint = document.getElementById('keyboardHint');
             if (isFIB || isPassageFib) {
-                keyboardHint.innerHTML = '<kbd>←</kbd> Previous • <kbd>→</kbd> Next • <kbd>Enter</kbd> Submit';
+                keyboardHint.innerHTML = '<kbd><i class="fa-solid fa-arrow-left"></i></kbd> Previous • <kbd><i class="fa-solid fa-arrow-right"></i></kbd> Next • <kbd>Enter</kbd> Submit';
             } else {
-                keyboardHint.innerHTML = '<kbd>1-4</kbd> or <kbd>A-D</kbd> Select • <kbd>←</kbd> Previous • <kbd>→</kbd> Next • <kbd>Enter</kbd> Submit';
+                keyboardHint.innerHTML = '<kbd>1-4</kbd> or <kbd>A-D</kbd> Select • <kbd><i class="fa-solid fa-arrow-left"></i></kbd> Prev • <kbd><i class="fa-solid fa-arrow-right"></i></kbd> Next • <kbd>Enter</kbd> Submit';
             }
             
             if (isPassageFib) {
@@ -1178,9 +1185,9 @@
             document.getElementById('prevBtn').disabled = currentQuestionIndex === 0;
             
             if (currentQuestionIndex === questions.length - 1 && Object.keys(userAnswers).length === questions.length) {
-                document.getElementById('nextBtn').textContent = 'View Results';
+                document.getElementById('nextBtn').innerHTML = 'View Results <i class="fa-solid fa-flag-checkered"></i>';
             } else {
-                document.getElementById('nextBtn').textContent = 'Next →';
+                document.getElementById('nextBtn').innerHTML = 'Next <i class="fa-solid fa-arrow-right"></i>';
             }
             
             selectedAnswer = null;
@@ -1322,7 +1329,7 @@
             document.getElementById('submitBtn').disabled = true;
             nextBtn.classList.add('btn-primary');
             if (currentQuestionIndex === questions.length - 1) {
-                document.getElementById('nextBtn').textContent = 'View Results';
+                document.getElementById('nextBtn').innerHTML = 'View Results <i class="fa-solid fa-flag-checkered"></i>';
             }
 
             updateQuestionGrid();
