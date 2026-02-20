@@ -800,6 +800,7 @@
             transition: opacity 0.2s;
         }
         .option-drag-handle:hover { opacity: 1; }
+        #saveIndicator.visible { opacity: 1; }
         /* end passage FIB styles */
 
         @keyframes slideIn {
@@ -835,6 +836,20 @@
             </div>
         </div>
 
+        <div id="saveIndicator" style="
+            position: fixed; bottom: 24px; right: 24px; z-index: 9999;
+            background: rgba(52, 211, 153, 0.15);
+            border: 1px solid rgba(52, 211, 153, 0.4);
+            color: #34d399;
+            padding: 10px 18px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            display: flex; align-items: center; gap: 8px;
+            opacity: 0; transition: opacity 0.3s ease;
+            pointer-events: none;
+        ">
+            <i class="fa-solid fa-cloud-arrow-up"></i> Saved
+        </div>
         <div class="main-grid">
             <!-- Question Editor -->
             <div class="panel">
@@ -1880,23 +1895,56 @@ loadQuestion();
         }
 
         function saveToCookie() {
-            document.cookie = `quizCreator=${encodeURIComponent(JSON.stringify(questions))}; max-age=${60 * 60 * 24 * 365}; path=/`;
+            // Renamed but kept for call-site compatibility — now uses localStorage
+            try {
+                localStorage.setItem('quizCreator', JSON.stringify(questions));
+                showSaveIndicator();
+            } catch (e) {
+                console.error('Failed to save to localStorage:', e);
+                alert('Save failed — your browser storage may be full.');
+            }
         }
 
         function loadFromCookie() {
-            const cookie = document.cookie
-                .split('; ')
-                .find(row => row.startsWith('quizCreator='));
+            // Try localStorage first, fall back to old cookie for migration
+            let data = null;
+            try {
+                data = localStorage.getItem('quizCreator');
+            } catch (e) {}
 
-            if (cookie) {
+            // Migrate from old cookie if localStorage is empty
+            if (!data) {
                 try {
-                    questions = JSON.parse(decodeURIComponent(cookie.split('=')[1]));
+                    const cookie = document.cookie
+                        .split('; ')
+                        .find(row => row.startsWith('quizCreator='));
+                    if (cookie) {
+                        data = decodeURIComponent(cookie.split('=')[1]);
+                        // Migrate to localStorage and clear the cookie
+                        localStorage.setItem('quizCreator', data);
+                        document.cookie = 'quizCreator=; max-age=0; path=/';
+                        console.log('Migrated quiz data from cookie to localStorage');
+                    }
+                } catch (e) {}
+            }
+
+            if (data) {
+                try {
+                    questions = JSON.parse(data);
                     updateJSON();
                     updateQuestionList();
                 } catch (e) {
                     console.warn('Failed to load saved questions');
                 }
             }
+        }
+
+        function showSaveIndicator() {
+            const indicator = document.getElementById('saveIndicator');
+            if (!indicator) return;
+            indicator.classList.add('visible');
+            clearTimeout(indicator._hideTimer);
+            indicator._hideTimer = setTimeout(() => indicator.classList.remove('visible'), 2000);
         }
 
 
