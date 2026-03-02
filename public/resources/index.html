@@ -439,13 +439,20 @@
     </footer>
 
     <script>
+        const TYPE_ICONS = {
+            'Quiz':     'fa-clipboard-list',
+            'Video':    'fa-video',
+            'Document': 'fa-file-lines',
+            'Website':  'fa-globe'
+        };
+
         const RESOURCES = [
             {
                 class: 10,
                 subject: 'Computer Applications',
                 icon: 'fa-code',
                 topics: [
-                    { name: 'Java MCQ', file: 'class-10-java' }
+                    { name: 'Java MCQ', file: 'class-10-java', type: 'Quiz' }
                 ]
             },
             {
@@ -453,7 +460,7 @@
                 subject: 'Chemistry',
                 icon: 'fa-flask',
                 topics: [
-                    { name: 'Mixed Bag MCQ', file: 'class-10-chem-mixed' }
+                    { name: 'Mixed Bag MCQ', file: 'class-10-chem-mixed', type: 'Quiz' }
                 ]
             },
             {
@@ -461,9 +468,9 @@
                 subject: 'Biology',
                 icon: 'fa-dna',
                 topics: [
-                    { name: 'Plant Physiology MCQ', file: 'class-10-bio-plant-physiology' },
-                    { name: 'Genetics MCQ', file: 'class-10-bio-genetics' },
-                    { name: 'Human Anatomy', file: 'class-10-bio-human-anatomy' }
+                    { name: 'Plant Physiology MCQ', file: 'class-10-bio-plant-physiology', type: 'Quiz' },
+                    { name: 'Genetics MCQ', file: 'class-10-bio-genetics', type: 'Quiz' },
+                    { name: 'Human Anatomy', file: 'class-10-bio-human-anatomy', type: 'Quiz' }
                 ]
             },
             {
@@ -471,7 +478,7 @@
                 subject: 'Physics',
                 icon: 'fa-magnet',
                 topics: [
-                    { name: 'Mixed MCQs', file: 'class-10-phy-mixed' }
+                    { name: 'Mixed MCQs', file: 'class-10-phy-mixed', type: 'Quiz' }
                 ]
             },
             {
@@ -479,7 +486,7 @@
                 subject: 'Environmental Science',
                 icon: 'fa-tree',
                 topics: [
-                    { name: 'Environmental Science MCQ', file: 'class-10-evs-mixed' }
+                    { name: 'Environmental Science MCQ', file: 'class-10-evs-mixed', type: 'Quiz' }
                 ]
             },
             {
@@ -487,8 +494,8 @@
                 subject: 'English Literature',
                 icon: 'fa-book',
                 topics: [
-                    { name: 'Julius Caesar MCQ', file: 'class-10-eng-lit-jc' },
-                    { name: 'With The Photographer MCQ', file: 'class-10-eng-lit-With-The-Photographer' }
+                    { name: 'Julius Caesar MCQ', file: 'class-10-eng-lit-jc', type: 'Quiz' },
+                    { name: 'With The Photographer MCQ', file: 'class-10-eng-lit-With-The-Photographer', type: 'Quiz' }
                 ]
             },
             {
@@ -496,11 +503,11 @@
                 subject: 'English Language',
                 icon: 'fa-pen-nib',
                 topics: [
-                    { name: 'Prepositions FIBs', file: 'class-10-eng-lang-prepositions' },
-                    { name: 'ICSE Preposition Gauntlet (For Final Practice)', file: 'class-10-eng-lang-preposition-gauntlet' },
-                    { name: 'Phrasal Prepositions FIBs', file: 'class-10-eng-lang-prepositions-phrasal' },
-                    { name: 'Direct Indirect Speech MCQ', file: 'class-10-eng-lang-direct-indirect' },
-                    { name: 'Verb Passage FIBs', file: 'class-10-eng-lang-verb-passages' }
+                    { name: 'Prepositions FIBs', file: 'class-10-eng-lang-prepositions', type: 'Quiz' },
+                    { name: 'ICSE Preposition Gauntlet (For Final Practice)', file: 'class-10-eng-lang-preposition-gauntlet', type: 'Quiz' },
+                    { name: 'Phrasal Prepositions FIBs', file: 'class-10-eng-lang-prepositions-phrasal', type: 'Quiz' },
+                    { name: 'Direct Indirect Speech MCQ', file: 'class-10-eng-lang-direct-indirect', type: 'Quiz' },
+                    { name: 'Verb Passage FIBs', file: 'class-10-eng-lang-verb-passages', type: 'Quiz' }
                 ]
             },
             {
@@ -508,7 +515,7 @@
                 subject: 'Mathematics',
                 icon: 'fa-square-root-variable',
                 topics: [
-                    { name: 'Mixed Bag', file: 'class-10-maths-mixed' }
+                    { name: 'Mixed Bag', file: 'class-10-maths-mixed', type: 'Quiz' }
                 ]
             }
         ];
@@ -650,19 +657,23 @@
 
             // Render cards with loading state
             for (const topic of subject.topics) {
+                const topicType = topic.type || 'Quiz';
+                const typeIcon = TYPE_ICONS[topicType] || 'fa-clipboard-list';
                 const card = document.createElement('div');
                 card.className = 'card topic-card';
-                card.innerHTML = `
-                    <i class="fa-solid fa-clipboard-list"></i>
-                    <h3>${topic.name}</h3>
+                const loadingStats = topicType === 'Quiz' ? `
                     <div class="quiz-stats">
                         <div class="quiz-stats-row">
                             <span>Loading...</span>
                         </div>
-                    </div>
+                    </div>` : '';
+                card.innerHTML = `
+                    <i class="fa-solid ${typeIcon}"></i>
+                    <h3>${topic.name}</h3>
+                    ${loadingStats}
                 `;
                 card.onclick = () => {
-                    if (!topic.file.startsWith('http')) {
+                    if (topicType === 'Quiz' && !topic.file.startsWith('http')) {
                         window.open(`/resources/questions.html?topic=${topic.file}`, '_blank');
                     } else {
                         window.open(topic.file, '_blank');
@@ -670,8 +681,10 @@
                 };
                 content.appendChild(card);
 
-                // Load progress asynchronously
-                loadTopicProgress(card, topic);
+                // Load progress asynchronously for Quiz type only
+                if (topicType === 'Quiz') {
+                    loadTopicProgress(card, topic);
+                }
             }
         }
 
