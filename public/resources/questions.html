@@ -752,6 +752,7 @@
     
     <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <script>
         let questions = [];
         let currentQuestionIndex = 0;
@@ -1381,6 +1382,15 @@
             document.getElementById('finalCorrect').textContent = correctCount;
             document.getElementById('finalIncorrect').textContent = incorrectCount;
             document.getElementById('percentage').textContent = percentage + '%';
+
+            if (typeof confetti !== 'undefined') {
+                confetti({
+                    particleCount: 250,
+                    spread: 120,
+                    scalar: 2,
+                    origin: { y: 0.6 }
+                });
+            }
         }
 
         function restartQuiz() {
