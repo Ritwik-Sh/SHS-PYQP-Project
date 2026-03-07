@@ -848,8 +848,8 @@
                     '<pre><code class="language-none">$1</code></pre>')
                 .replace(/`([^`]+)`/g,
                     '<code class="inline-code">$1</code>')
-                .replace(/\n/g, '<br>')
-                .replace(/\t/g, '&emsp;');
+                .replace("\n", "<br>")
+                .replace("\t", "&emsp;");
         }
 
         function normalizeAnswer(answer) {
