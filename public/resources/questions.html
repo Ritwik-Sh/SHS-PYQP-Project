@@ -666,6 +666,19 @@
         }
 
         /* Search Sidebar */
+        .search-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(4, 11, 21, 0.6);
+            backdrop-filter: blur(2px);
+            z-index: 1099;
+        }
+
+        .search-backdrop.active {
+            display: block;
+        }
+
         .search-sidebar {
             position: fixed;
             top: 0;
@@ -673,12 +686,12 @@
             width: 400px;
             height: 100vh;
             background: var(--bg-secondary);
-            border-left: 1px solid rgba(147, 187, 234, 0.15);
+            border-left: 1px solid rgba(147, 187, 234, 0.12);
             z-index: 1100;
             display: flex;
             flex-direction: column;
             transition: right 0.25s ease;
-            box-shadow: -4px 0 24px rgba(0, 0, 0, 0.4);
+            box-shadow: -8px 0 40px rgba(0, 0, 0, 0.6);
         }
 
         .search-sidebar.open {
@@ -690,8 +703,14 @@
             align-items: center;
             gap: 12px;
             padding: 16px 20px;
-            border-bottom: 1px solid rgba(147, 187, 234, 0.12);
+            border-bottom: 1px solid rgba(147, 187, 234, 0.1);
             flex-shrink: 0;
+        }
+
+        .search-sidebar-header > i {
+            color: var(--primary);
+            opacity: 0.8;
+            font-size: 0.9rem;
         }
 
         .search-sidebar-header h3 {
@@ -703,7 +722,7 @@
 
         .search-input-wrapper {
             padding: 12px 20px;
-            border-bottom: 1px solid rgba(147, 187, 234, 0.12);
+            border-bottom: 1px solid rgba(147, 187, 234, 0.1);
             flex-shrink: 0;
         }
 
@@ -742,15 +761,34 @@
             padding: 8px 0;
         }
 
+        .search-results::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .search-results::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .search-results::-webkit-scrollbar-thumb {
+            background: rgba(147, 187, 234, 0.2);
+            border-radius: 2px;
+        }
+
+        .search-results::-webkit-scrollbar-thumb:hover {
+            background: rgba(147, 187, 234, 0.35);
+        }
+
         .search-result-item {
             padding: 14px 20px;
             border-bottom: 1px solid rgba(147, 187, 234, 0.07);
+            border-left: 2px solid transparent;
             cursor: pointer;
-            transition: background 0.15s ease;
+            transition: background 0.15s ease, border-left-color 0.15s ease;
         }
 
         .search-result-item:hover {
             background: rgba(147, 187, 234, 0.07);
+            border-left-color: var(--primary);
         }
 
         .search-result-qnum {
@@ -770,7 +808,7 @@
         }
 
         .search-highlight {
-            background: rgba(214, 179, 41, 0.35);
+            background: rgba(214, 179, 41, 0.25);
             color: var(--accent);
             border-radius: 2px;
             padding: 0 2px;
@@ -816,7 +854,7 @@
                     <i class="fa-solid fa-print"></i> <span class="btn-label">Print</span>
                 </button>
                 <button onclick="toggleSearchSidebar()">
-                    <i class="fa-solid fa-magnifying-glass"></i> <span class="btn-label">Search</span>
+                    <i class="fa-solid fa-magnifying-glass"></i> <span class="btn-label">Find</span>
                 </button>
                 <button onclick="toggleMenu()">
                     <i class="fa-solid fa-bars"></i> <span class="btn-label">All Questions</span>
@@ -905,12 +943,15 @@
         </div>
     </div>
 
+    <!-- Search Backdrop -->
+    <div class="search-backdrop" id="searchBackdrop" onclick="closeSearchSidebar()"></div>
+
     <!-- Search Sidebar -->
     <div class="search-sidebar" id="searchSidebar">
         <div class="search-sidebar-header">
-            <i class="fa-solid fa-magnifying-glass" style="color: var(--primary); opacity: 0.8;"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
             <h3>Search Questions</h3>
-            <button class="search-sidebar-close" onclick="toggleSearchSidebar()" title="Close (Ctrl+F)" aria-label="Close search sidebar">
+            <button class="search-sidebar-close" onclick="toggleSearchSidebar()" title="Close (Escape)" aria-label="Close search sidebar">
                 <i class="fa-solid fa-xmark"></i>
             </button>
         </div>
@@ -1703,6 +1744,7 @@
                 closeSearchSidebar();
             } else {
                 sidebar.classList.add('open');
+                document.getElementById('searchBackdrop').classList.add('active');
                 setTimeout(() => document.getElementById('searchInput').focus(), 50);
             }
         }
@@ -1710,6 +1752,7 @@
         function closeSearchSidebar() {
             const sidebar = document.getElementById('searchSidebar');
             sidebar.classList.remove('open');
+            document.getElementById('searchBackdrop').classList.remove('active');
             document.getElementById('searchInput').value = '';
             document.getElementById('searchResults').innerHTML = '';
             document.getElementById('searchMeta').textContent = '';
