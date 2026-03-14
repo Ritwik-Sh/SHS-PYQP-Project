@@ -659,43 +659,96 @@
             .question-grid {
                 grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
             }
+        }
 
-            .search-sidebar {
-                width: 100vw;
-            }
+        /* Page layout: main content + search sidebar sit side by side */
+        .page-layout {
+            display: flex;
+            min-height: 100vh;
+            align-items: flex-start;
+        }
+
+        .page-layout > .container {
+            flex: 1;
+            min-width: 0;
         }
 
         /* Search Sidebar */
-        .search-backdrop {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(4, 11, 21, 0.6);
-            backdrop-filter: blur(2px);
-            z-index: 1099;
-        }
-
-        .search-backdrop.active {
-            display: block;
-        }
-
         .search-sidebar {
-            position: fixed;
-            top: 0;
-            right: -420px;
-            width: 400px;
+            width: 0;
+            flex-shrink: 0;
+            overflow: hidden;
             height: 100vh;
+            position: sticky;
+            top: 0;
             background: var(--bg-secondary);
             border-left: 1px solid rgba(147, 187, 234, 0.12);
-            z-index: 1100;
             display: flex;
             flex-direction: column;
-            transition: right 0.25s ease;
-            box-shadow: -8px 0 40px rgba(0, 0, 0, 0.6);
+            transition: width 0.25s ease;
         }
 
         .search-sidebar.open {
-            right: 0;
+            /* Width is set via JS (desktop) or 100% via media query (mobile) */
+        }
+
+        /* Drag-to-resize handle – sits on the left edge of the sidebar */
+        .sidebar-resize-handle {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 5px;
+            height: 100%;
+            cursor: col-resize;
+            z-index: 1;
+            background: transparent;
+            transition: background 0.2s;
+            flex-shrink: 0;
+        }
+
+        .sidebar-resize-handle:hover,
+        .sidebar-resize-handle.active {
+            background: rgba(147, 187, 234, 0.18);
+        }
+
+        /* Keep sidebar inner content from collapsing during width transition */
+        .search-sidebar-header,
+        .search-input-wrapper,
+        .search-meta,
+        .search-results {
+            min-width: 380px;
+        }
+
+        /* Mobile: full-screen sidebar overlay (must come after desktop styles) */
+        @media (max-width: 768px) {
+            .search-sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                z-index: 1100;
+                border-left: none;
+                /* Slide in from right instead of width-expand */
+                transform: translateX(100%);
+                transition: transform 0.25s ease;
+            }
+
+            .search-sidebar.open {
+                transform: translateX(0);
+            }
+
+            .search-sidebar-header,
+            .search-input-wrapper,
+            .search-meta,
+            .search-results {
+                min-width: 0;
+                width: 100%;
+            }
+
+            .sidebar-resize-handle {
+                display: none;
+            }
         }
 
         .search-sidebar-header {
@@ -845,7 +898,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css">
 </head>
 <body>
-    <div class="container">
+    <div class="page-layout">
+        <div class="container">
         <div class="header">
             <a id="back-btn" href="../resources/"><i class="fa-solid fa-arrow-left"></i></a>
             <h1>Quiz</h1>
@@ -930,6 +984,24 @@
             </div>
             <button class="btn-primary" onclick="restartQuiz()">Restart Quiz</button>
         </div>
+        </div><!-- end .container -->
+
+        <!-- Search Sidebar -->
+        <div class="search-sidebar" id="searchSidebar">
+            <div class="sidebar-resize-handle" id="sidebarResizeHandle" aria-hidden="true"></div>
+            <div class="search-sidebar-header">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <h3>Search Questions</h3>
+                <button class="search-sidebar-close" onclick="dismissSearchSidebar()" title="Close" aria-label="Close search sidebar">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="search-input-wrapper">
+                <input type="text" id="searchInput" placeholder="Search for keywords in questions…" autocomplete="off" oninput="runSearch()">
+            </div>
+            <div class="search-meta" id="searchMeta"></div>
+            <div class="search-results" id="searchResults"></div>
+        </div>
     </div>
 
     <!-- Menu Overlay -->
@@ -941,25 +1013,6 @@
             </div>
             <div class="question-grid" id="questionGrid"></div>
         </div>
-    </div>
-
-    <!-- Search Backdrop -->
-    <div class="search-backdrop" id="searchBackdrop" onclick="closeSearchSidebar()"></div>
-
-    <!-- Search Sidebar -->
-    <div class="search-sidebar" id="searchSidebar">
-        <div class="search-sidebar-header">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <h3>Search Questions</h3>
-            <button class="search-sidebar-close" onclick="toggleSearchSidebar()" title="Close (Escape)" aria-label="Close search sidebar">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-        </div>
-        <div class="search-input-wrapper">
-            <input type="text" id="searchInput" placeholder="Search for keywords in questions…" autocomplete="off" oninput="runSearch()">
-        </div>
-        <div class="search-meta" id="searchMeta"></div>
-        <div class="search-results" id="searchResults"></div>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
@@ -983,11 +1036,20 @@
                 return;
             }
 
+            // Escape dismisses the search sidebar from anywhere
+            if (e.key === 'Escape') {
+                const sidebar = document.getElementById('searchSidebar');
+                if (sidebar && sidebar.classList.contains('open')) {
+                    dismissSearchSidebar();
+                    return;
+                }
+            }
+
             // Don't interfere when typing in input
             if (e.target.tagName === 'INPUT') {
-                // Allow Escape to close search sidebar when search input is focused
+                // Allow Escape to dismiss search sidebar when search input is focused
                 if (e.key === 'Escape' && e.target.id === 'searchInput') {
-                    closeSearchSidebar();
+                    dismissSearchSidebar();
                     return;
                 }
                 if (e.key === 'Enter') {
@@ -1737,26 +1799,126 @@
             window.open(`/printQuiz?topic=${encodeURIComponent(topic)}`, '_blank');
         }
 
-        // Search Sidebar
+        // ── Search Sidebar ──────────────────────────────────────────────────
+
+        const SIDEBAR_MIN_W = 240;
+        const SIDEBAR_MAX_W = 600;
+        let sidebarWidth = (() => {
+            const stored = parseInt(localStorage.getItem('sidebarWidth'), 10);
+            return isNaN(stored) ? 380 : Math.min(SIDEBAR_MAX_W, Math.max(SIDEBAR_MIN_W, stored));
+        })();
+
+        function isMobile() {
+            return window.matchMedia('(max-width: 768px)').matches;
+        }
+
         function toggleSearchSidebar() {
             const sidebar = document.getElementById('searchSidebar');
             if (sidebar.classList.contains('open')) {
                 closeSearchSidebar();
             } else {
-                sidebar.classList.add('open');
-                document.getElementById('searchBackdrop').classList.add('active');
-                setTimeout(() => document.getElementById('searchInput').focus(), 50);
+                openSearchSidebar();
             }
         }
 
+        function openSearchSidebar() {
+            const sidebar = document.getElementById('searchSidebar');
+            if (!isMobile()) {
+                sidebar.style.width = sidebarWidth + 'px';
+                updateSidebarInnerMinWidths(sidebarWidth);
+            }
+            sidebar.classList.add('open');
+            setTimeout(() => document.getElementById('searchInput').focus(), 50);
+        }
+
+        /** Close sidebar but keep the search query intact. */
         function closeSearchSidebar() {
             const sidebar = document.getElementById('searchSidebar');
             sidebar.classList.remove('open');
-            document.getElementById('searchBackdrop').classList.remove('active');
+            if (!isMobile()) {
+                sidebar.style.removeProperty('width');
+            }
+        }
+
+        /** Close sidebar AND clear the query (X button / Escape). */
+        function dismissSearchSidebar() {
+            closeSearchSidebar();
             document.getElementById('searchInput').value = '';
             document.getElementById('searchResults').innerHTML = '';
             document.getElementById('searchMeta').textContent = '';
         }
+
+        function updateSidebarInnerMinWidths(w) {
+            document.querySelectorAll(
+                '.search-sidebar-header, .search-input-wrapper, .search-meta, .search-results'
+            ).forEach(el => { el.style.minWidth = w + 'px'; });
+        }
+
+        function initSidebarResize() {
+            const handle = document.getElementById('sidebarResizeHandle');
+            const sidebar = document.getElementById('searchSidebar');
+            if (!handle || !sidebar) return;
+
+            // Cache once to avoid repeated queries in the drag hot-path
+            const innerEls = Array.from(document.querySelectorAll(
+                '.search-sidebar-header, .search-input-wrapper, .search-meta, .search-results'
+            ));
+
+            handle.addEventListener('mousedown', (e) => {
+                if (isMobile()) return;
+                e.preventDefault();
+
+                const startX = e.clientX;
+                const startWidth = sidebar.offsetWidth;
+
+                handle.classList.add('active');
+                document.body.style.cursor = 'col-resize';
+                document.body.style.userSelect = 'none';
+                sidebar.style.transition = 'none';
+
+                function onMouseMove(e) {
+                    // Dragging left (smaller clientX) increases sidebar width
+                    const newWidth = Math.min(
+                        SIDEBAR_MAX_W,
+                        Math.max(SIDEBAR_MIN_W, startWidth + (startX - e.clientX))
+                    );
+                    sidebar.style.width = newWidth + 'px';
+                    sidebarWidth = newWidth;
+                    innerEls.forEach(el => { el.style.minWidth = newWidth + 'px'; });
+                }
+
+                function onMouseUp() {
+                    document.removeEventListener('mousemove', onMouseMove);
+                    document.removeEventListener('mouseup', onMouseUp);
+                    handle.classList.remove('active');
+                    document.body.style.cursor = '';
+                    document.body.style.userSelect = '';
+                    sidebar.style.removeProperty('transition');
+                    localStorage.setItem('sidebarWidth', sidebarWidth);
+                }
+
+                document.addEventListener('mousemove', onMouseMove);
+                document.addEventListener('mouseup', onMouseUp);
+            });
+        }
+
+        // Sync sidebar layout when viewport crosses the mobile breakpoint (debounced)
+        window.addEventListener('resize', (() => {
+            let t;
+            return () => {
+                clearTimeout(t);
+                t = setTimeout(() => {
+                    const sidebar = document.getElementById('searchSidebar');
+                    if (!sidebar.classList.contains('open')) return;
+                    if (isMobile()) {
+                        sidebar.style.removeProperty('width');
+                    } else {
+                        sidebar.style.width = sidebarWidth + 'px';
+                        updateSidebarInnerMinWidths(sidebarWidth);
+                    }
+                }, 100);
+            };
+        })());
 
         function escapeHtml(str) {
             return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -1864,7 +2026,10 @@
                     saveProgress();
                     loadQuestion();
                     updateQuestionGrid();
-                    closeSearchSidebar();
+                    // On mobile the sidebar is full-screen; close it (but keep query)
+                    if (isMobile()) {
+                        closeSearchSidebar();
+                    }
                 });
 
                 resultsContainer.appendChild(item);
@@ -1873,6 +2038,7 @@
 
         // Initialize
         loadQuestions();
+        initSidebarResize();
     </script>
 </body>
 </html>
