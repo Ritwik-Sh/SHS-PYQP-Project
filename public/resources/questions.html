@@ -659,17 +659,6 @@
             .question-grid {
                 grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
             }
-
-            .search-sidebar.open {
-                width: min(300px, 85vw);
-            }
-
-            .search-sidebar-header,
-            .search-input-wrapper,
-            .search-meta,
-            .search-results {
-                min-width: min(300px, 85vw);
-            }
         }
 
         /* Page layout: main content + search sidebar sit side by side */
@@ -700,7 +689,26 @@
         }
 
         .search-sidebar.open {
-            width: 380px;
+            /* Width is set via JS (desktop) or 100% via media query (mobile) */
+        }
+
+        /* Drag-to-resize handle – sits on the left edge of the sidebar */
+        .sidebar-resize-handle {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 5px;
+            height: 100%;
+            cursor: col-resize;
+            z-index: 1;
+            background: transparent;
+            transition: background 0.2s;
+            flex-shrink: 0;
+        }
+
+        .sidebar-resize-handle:hover,
+        .sidebar-resize-handle.active {
+            background: rgba(147, 187, 234, 0.18);
         }
 
         /* Keep sidebar inner content from collapsing during width transition */
@@ -709,6 +717,38 @@
         .search-meta,
         .search-results {
             min-width: 380px;
+        }
+
+        /* Mobile: full-screen sidebar overlay (must come after desktop styles) */
+        @media (max-width: 768px) {
+            .search-sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                z-index: 1100;
+                border-left: none;
+                /* Slide in from right instead of width-expand */
+                transform: translateX(100%);
+                transition: transform 0.25s ease;
+            }
+
+            .search-sidebar.open {
+                transform: translateX(0);
+            }
+
+            .search-sidebar-header,
+            .search-input-wrapper,
+            .search-meta,
+            .search-results {
+                min-width: 0;
+                width: 100%;
+            }
+
+            .sidebar-resize-handle {
+                display: none;
+            }
         }
 
         .search-sidebar-header {
@@ -948,10 +988,11 @@
 
         <!-- Search Sidebar -->
         <div class="search-sidebar" id="searchSidebar">
+            <div class="sidebar-resize-handle" id="sidebarResizeHandle" aria-hidden="true"></div>
             <div class="search-sidebar-header">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <h3>Search Questions</h3>
-                <button class="search-sidebar-close" onclick="toggleSearchSidebar()" title="Close (Esc)" aria-label="Close search sidebar">
+                <button class="search-sidebar-close" onclick="dismissSearchSidebar()" title="Close" aria-label="Close search sidebar">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
@@ -995,11 +1036,20 @@
                 return;
             }
 
+            // Escape dismisses the search sidebar from anywhere
+            if (e.key === 'Escape') {
+                const sidebar = document.getElementById('searchSidebar');
+                if (sidebar && sidebar.classList.contains('open')) {
+                    dismissSearchSidebar();
+                    return;
+                }
+            }
+
             // Don't interfere when typing in input
             if (e.target.tagName === 'INPUT') {
-                // Allow Escape to close search sidebar when search input is focused
+                // Allow Escape to dismiss search sidebar when search input is focused
                 if (e.key === 'Escape' && e.target.id === 'searchInput') {
-                    closeSearchSidebar();
+                    dismissSearchSidebar();
                     return;
                 }
                 if (e.key === 'Enter') {
@@ -1749,24 +1799,126 @@
             window.open(`/printQuiz?topic=${encodeURIComponent(topic)}`, '_blank');
         }
 
-        // Search Sidebar
+        // ── Search Sidebar ──────────────────────────────────────────────────
+
+        const SIDEBAR_MIN_W = 240;
+        const SIDEBAR_MAX_W = 600;
+        let sidebarWidth = (() => {
+            const stored = parseInt(localStorage.getItem('sidebarWidth'), 10);
+            return isNaN(stored) ? 380 : Math.min(SIDEBAR_MAX_W, Math.max(SIDEBAR_MIN_W, stored));
+        })();
+
+        function isMobile() {
+            return window.matchMedia('(max-width: 768px)').matches;
+        }
+
         function toggleSearchSidebar() {
             const sidebar = document.getElementById('searchSidebar');
             if (sidebar.classList.contains('open')) {
                 closeSearchSidebar();
             } else {
-                sidebar.classList.add('open');
-                setTimeout(() => document.getElementById('searchInput').focus(), 50);
+                openSearchSidebar();
             }
         }
 
+        function openSearchSidebar() {
+            const sidebar = document.getElementById('searchSidebar');
+            if (!isMobile()) {
+                sidebar.style.width = sidebarWidth + 'px';
+                updateSidebarInnerMinWidths(sidebarWidth);
+            }
+            sidebar.classList.add('open');
+            setTimeout(() => document.getElementById('searchInput').focus(), 50);
+        }
+
+        /** Close sidebar but keep the search query intact. */
         function closeSearchSidebar() {
             const sidebar = document.getElementById('searchSidebar');
             sidebar.classList.remove('open');
+            if (!isMobile()) {
+                sidebar.style.removeProperty('width');
+            }
+        }
+
+        /** Close sidebar AND clear the query (X button / Escape). */
+        function dismissSearchSidebar() {
+            closeSearchSidebar();
             document.getElementById('searchInput').value = '';
             document.getElementById('searchResults').innerHTML = '';
             document.getElementById('searchMeta').textContent = '';
         }
+
+        function updateSidebarInnerMinWidths(w) {
+            document.querySelectorAll(
+                '.search-sidebar-header, .search-input-wrapper, .search-meta, .search-results'
+            ).forEach(el => { el.style.minWidth = w + 'px'; });
+        }
+
+        function initSidebarResize() {
+            const handle = document.getElementById('sidebarResizeHandle');
+            const sidebar = document.getElementById('searchSidebar');
+            if (!handle || !sidebar) return;
+
+            // Cache once to avoid repeated queries in the drag hot-path
+            const innerEls = Array.from(document.querySelectorAll(
+                '.search-sidebar-header, .search-input-wrapper, .search-meta, .search-results'
+            ));
+
+            handle.addEventListener('mousedown', (e) => {
+                if (isMobile()) return;
+                e.preventDefault();
+
+                const startX = e.clientX;
+                const startWidth = sidebar.offsetWidth;
+
+                handle.classList.add('active');
+                document.body.style.cursor = 'col-resize';
+                document.body.style.userSelect = 'none';
+                sidebar.style.transition = 'none';
+
+                function onMouseMove(e) {
+                    // Dragging left (smaller clientX) increases sidebar width
+                    const newWidth = Math.min(
+                        SIDEBAR_MAX_W,
+                        Math.max(SIDEBAR_MIN_W, startWidth + (startX - e.clientX))
+                    );
+                    sidebar.style.width = newWidth + 'px';
+                    sidebarWidth = newWidth;
+                    innerEls.forEach(el => { el.style.minWidth = newWidth + 'px'; });
+                }
+
+                function onMouseUp() {
+                    document.removeEventListener('mousemove', onMouseMove);
+                    document.removeEventListener('mouseup', onMouseUp);
+                    handle.classList.remove('active');
+                    document.body.style.cursor = '';
+                    document.body.style.userSelect = '';
+                    sidebar.style.removeProperty('transition');
+                    localStorage.setItem('sidebarWidth', sidebarWidth);
+                }
+
+                document.addEventListener('mousemove', onMouseMove);
+                document.addEventListener('mouseup', onMouseUp);
+            });
+        }
+
+        // Sync sidebar layout when viewport crosses the mobile breakpoint (debounced)
+        window.addEventListener('resize', (() => {
+            let t;
+            return () => {
+                clearTimeout(t);
+                t = setTimeout(() => {
+                    const sidebar = document.getElementById('searchSidebar');
+                    if (!sidebar.classList.contains('open')) return;
+                    if (isMobile()) {
+                        sidebar.style.removeProperty('width');
+                    } else {
+                        sidebar.style.width = sidebarWidth + 'px';
+                        updateSidebarInnerMinWidths(sidebarWidth);
+                    }
+                }, 100);
+            };
+        })());
 
         function escapeHtml(str) {
             return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -1874,6 +2026,10 @@
                     saveProgress();
                     loadQuestion();
                     updateQuestionGrid();
+                    // On mobile the sidebar is full-screen; close it (but keep query)
+                    if (isMobile()) {
+                        closeSearchSidebar();
+                    }
                 });
 
                 resultsContainer.appendChild(item);
@@ -1882,6 +2038,7 @@
 
         // Initialize
         loadQuestions();
+        initSidebarResize();
     </script>
 </body>
 </html>
