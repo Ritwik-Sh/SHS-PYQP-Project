@@ -660,42 +660,55 @@
                 grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
             }
 
-            .search-sidebar {
-                width: 100vw;
+            .search-sidebar.open {
+                width: min(300px, 85vw);
+            }
+
+            .search-sidebar-header,
+            .search-input-wrapper,
+            .search-meta,
+            .search-results {
+                min-width: min(300px, 85vw);
             }
         }
 
+        /* Page layout: main content + search sidebar sit side by side */
+        .page-layout {
+            display: flex;
+            min-height: 100vh;
+            align-items: flex-start;
+        }
+
+        .page-layout > .container {
+            flex: 1;
+            min-width: 0;
+        }
+
         /* Search Sidebar */
-        .search-backdrop {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(4, 11, 21, 0.6);
-            backdrop-filter: blur(2px);
-            z-index: 1099;
-        }
-
-        .search-backdrop.active {
-            display: block;
-        }
-
         .search-sidebar {
-            position: fixed;
-            top: 0;
-            right: -420px;
-            width: 400px;
+            width: 0;
+            flex-shrink: 0;
+            overflow: hidden;
             height: 100vh;
+            position: sticky;
+            top: 0;
             background: var(--bg-secondary);
             border-left: 1px solid rgba(147, 187, 234, 0.12);
-            z-index: 1100;
             display: flex;
             flex-direction: column;
-            transition: right 0.25s ease;
-            box-shadow: -8px 0 40px rgba(0, 0, 0, 0.6);
+            transition: width 0.25s ease;
         }
 
         .search-sidebar.open {
-            right: 0;
+            width: 380px;
+        }
+
+        /* Keep sidebar inner content from collapsing during width transition */
+        .search-sidebar-header,
+        .search-input-wrapper,
+        .search-meta,
+        .search-results {
+            min-width: 380px;
         }
 
         .search-sidebar-header {
@@ -845,7 +858,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css">
 </head>
 <body>
-    <div class="container">
+    <div class="page-layout">
+        <div class="container">
         <div class="header">
             <a id="back-btn" href="../resources/"><i class="fa-solid fa-arrow-left"></i></a>
             <h1>Quiz</h1>
@@ -930,6 +944,23 @@
             </div>
             <button class="btn-primary" onclick="restartQuiz()">Restart Quiz</button>
         </div>
+        </div><!-- end .container -->
+
+        <!-- Search Sidebar -->
+        <div class="search-sidebar" id="searchSidebar">
+            <div class="search-sidebar-header">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <h3>Search Questions</h3>
+                <button class="search-sidebar-close" onclick="toggleSearchSidebar()" title="Close (Esc)" aria-label="Close search sidebar">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="search-input-wrapper">
+                <input type="text" id="searchInput" placeholder="Search for keywords in questions…" autocomplete="off" oninput="runSearch()">
+            </div>
+            <div class="search-meta" id="searchMeta"></div>
+            <div class="search-results" id="searchResults"></div>
+        </div>
     </div>
 
     <!-- Menu Overlay -->
@@ -941,25 +972,6 @@
             </div>
             <div class="question-grid" id="questionGrid"></div>
         </div>
-    </div>
-
-    <!-- Search Backdrop -->
-    <div class="search-backdrop" id="searchBackdrop" onclick="closeSearchSidebar()"></div>
-
-    <!-- Search Sidebar -->
-    <div class="search-sidebar" id="searchSidebar">
-        <div class="search-sidebar-header">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <h3>Search Questions</h3>
-            <button class="search-sidebar-close" onclick="toggleSearchSidebar()" title="Close (Escape)" aria-label="Close search sidebar">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-        </div>
-        <div class="search-input-wrapper">
-            <input type="text" id="searchInput" placeholder="Search for keywords in questions…" autocomplete="off" oninput="runSearch()">
-        </div>
-        <div class="search-meta" id="searchMeta"></div>
-        <div class="search-results" id="searchResults"></div>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
@@ -1744,7 +1756,6 @@
                 closeSearchSidebar();
             } else {
                 sidebar.classList.add('open');
-                document.getElementById('searchBackdrop').classList.add('active');
                 setTimeout(() => document.getElementById('searchInput').focus(), 50);
             }
         }
@@ -1752,7 +1763,6 @@
         function closeSearchSidebar() {
             const sidebar = document.getElementById('searchSidebar');
             sidebar.classList.remove('open');
-            document.getElementById('searchBackdrop').classList.remove('active');
             document.getElementById('searchInput').value = '';
             document.getElementById('searchResults').innerHTML = '';
             document.getElementById('searchMeta').textContent = '';
@@ -1864,7 +1874,6 @@
                     saveProgress();
                     loadQuestion();
                     updateQuestionGrid();
-                    closeSearchSidebar();
                 });
 
                 resultsContainer.appendChild(item);
