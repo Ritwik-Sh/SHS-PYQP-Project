@@ -407,7 +407,7 @@
 </head>
 
 <body>
-    <h1><a href="/../>SHS-PYQP-Project</a>: Resources</h1>
+    <h1><a href="/../">SHS-PYQP-Project</a>: Resources</h1>
     <main>
         <div id="left">
             <button id="back"><i style="font-size: 1.5rem;" class="fa-solid fa-arrow-left"></i> Back</button>
@@ -548,7 +548,7 @@
         function getQuizProgress(topicFile) {
             // Normalize the topic name - remove .json if present
             const topic = topicFile.replace(/\.json$/, '');
-            
+
             try {
                 const saved = localStorage.getItem(`quizProgress_${topic}`);
                 if (!saved) return null;
@@ -563,14 +563,14 @@
 
         function calculateProgress(progress, totalQuestions) {
             if (!progress) return { percentage: 0, status: 'not-started' };
-            
+
             const answeredCount = Object.keys(progress.userAnswers || {}).length;
             const percentage = totalQuestions > 0 ? (answeredCount / totalQuestions) * 100 : 0;
-            
+
             let status = 'not-started';
             if (percentage === 100) status = 'complete';
             else if (percentage > 0) status = 'incomplete';
-            
+
             return { percentage, status, answeredCount, ...progress };
         }
 
@@ -699,7 +699,7 @@
         async function loadTopicProgress(card, topic) {
             // Get total questions from the JSON file
             const totalQuestions = await getQuizTotalQuestions(topic.file);
-            
+
             // Get progress from localStorage (using normalized topic name without .json)
             const progress = getQuizProgress(topic.file);
             const progressData = calculateProgress(progress, totalQuestions);
@@ -715,7 +715,7 @@
             if (progressData.status !== 'not-started') {
                 const statusText = progressData.status === 'complete' ? 'Complete' : 'In Progress';
                 const accuracy = answeredCount > 0 ? Math.round((correctCount / answeredCount) * 100) : 0;
-                
+
                 statsHTML = `
                     <div class="quiz-stats">
                         <div class="quiz-stats-row">
@@ -735,7 +735,7 @@
                             <span>${accuracy}%</span>
                         </div>
                         <div class="progress-bar-container">
-                            <div class="progress-bar-fill ${progressData.status === 'complete' ? '' : 'incomplete'}" 
+                            <div class="progress-bar-fill ${progressData.status === 'complete' ? '' : 'incomplete'}"
                                  style="width: ${percentage}%"></div>
                         </div>
                     </div>
