@@ -50,7 +50,7 @@
             color: var(--text);
             text-decoration: none;
         }
-        
+
         .header h1 {
             align-self: start;
             font-size: 1.5rem;
@@ -338,7 +338,7 @@
             text-align: center;
             white-space: nowrap;
         }
-        
+
         .passage-blank-display.example {
             color: var(--text);
             background: rgba(147, 187, 234, 0.1);
@@ -651,7 +651,7 @@
             .controls {
                 flex-direction: column;
             }
-            
+
             .controls button {
                 width: 100%;
             }
@@ -1014,7 +1014,7 @@
             <div class="question-grid" id="questionGrid"></div>
         </div>
     </div>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
@@ -1121,7 +1121,7 @@
                 initQuestionGrid();
                 loadQuestion();
             } catch (error) {
-                document.getElementById('questionText').innerHTML = 
+                document.getElementById('questionText').innerHTML =
                     '<p style="color: var(--secondary);">Error loading questions. Topic Not Found.</p>';
             }
         }
@@ -1155,7 +1155,7 @@
 
         function loadProgress() {
             console.log('Loading progress for topic:', topic);
-            
+
             try {
                 const saved = localStorage.getItem(`quizProgress_${topic}`);
                 if (!saved) {
@@ -1208,14 +1208,13 @@
 
         function formatCode(text) {
             return text
-                .replace(/```java\n([\s\S]*?)\n```/g,
-                    '<pre><code class="language-java">$1</code></pre>')
-                .replace(/```([\s\S]*?)```/g,
-                    '<pre><code class="language-none">$1</code></pre>')
-                .replace(/`([^`]+)`/g,
-                    '<code class="inline-code">$1</code>')
+                .replace(/```java\n([\s\S]*?)\n```/g, '<pre><code class="language-java">$1</code></pre>')
+                .replace(/```([\s\S]*?)```/g, '<pre><code class="language-none">$1</code></pre>')
+                .replace(/`([^`]+)`/g, '<code class="inline-code">$1</code>')
                 .replace("\n", "<br>")
-                .replace("\t", "&emsp;");
+                .replace("\t", "&emsp;")
+                .replace(/\*\*([\s\S]*?)\*\*/g, '<b>$1</b>')
+            ;
         }
 
         function normalizeAnswer(answer) {
@@ -1235,11 +1234,11 @@
             const passageFibContainer = document.getElementById('passageFibContainer');
             const passageContent = document.getElementById('passageContent');
             const explanation = document.getElementById('explanation');
-            
+
             document.getElementById('questionNumber').textContent = `Question ${currentQuestionIndex + 1}`;
-            
+
             questionText.innerHTML = formatCode(question.question);
-            
+
             const isAnswered = userAnswers.hasOwnProperty(currentQuestionIndex);
             const isFIB = question.type === 'fib';
             const isPassageFib = question.type === 'passageFib';
@@ -1249,7 +1248,7 @@
             fibInput.value = '';
             fibInput.className = 'fib-input';
             fibAnswer.classList.remove('show');
-            
+
             // Update keyboard hint
             const keyboardHint = document.getElementById('keyboardHint');
             if (isFIB || isPassageFib) {
@@ -1257,112 +1256,112 @@
             } else {
                 keyboardHint.innerHTML = '<kbd>1-4</kbd> or <kbd>A-D</kbd> Select • <kbd><i class="fa-solid fa-arrow-left"></i></kbd> Prev • <kbd><i class="fa-solid fa-arrow-right"></i></kbd> Next • <kbd>Enter</kbd> Submit';
             }
-            
+
             if (isPassageFib) {
                 // Passage fill-in-the-blank question
                 optionsDiv.style.display = 'none';
                 fibContainer.style.display = 'none';
                 passageFibContainer.style.display = 'block';
-                
+
                 // Parse the passage and auto-number blanks
                 const passage = question.passage;
                 let passageHTML = passage;
                 let blankCounter = 0;
                 const blankNumbers = [];
-                
+
                 // Replace all ________ with numbered blanks
                 passageHTML = passageHTML.replace(/________/g, () => {
                     const num = blankCounter;
                     blankNumbers.push(num);
                     blankCounter++;
-                    
+
                     // For blank (0), check if there's an answer to pre-fill
                     if (num === 0 && question.answer && question.answer['0']) {
-                        const exampleAnswer = Array.isArray(question.answer['0']) 
-                            ? question.answer['0'][0] 
+                        const exampleAnswer = Array.isArray(question.answer['0'])
+                            ? question.answer['0'][0]
                             : question.answer['0'];
                         return `(<span style="color: rgba(229, 240, 250, 0.5);">${num}</span>) <span class="passage-blank-display example">${exampleAnswer}</span>`;
                     }
-                    
+
                     return `(<span style="color: rgba(229, 240, 250, 0.5);">${num}</span>) <span class="passage-blank-display">________</span>`;
                 });
-                
+
                 passageContent.innerHTML = passageHTML;
-                
+
                 // Create input fields below
                 const passageInputs = document.getElementById('passageInputs');
                 passageInputs.innerHTML = '';
-                
+
                 blankNumbers.forEach((blankNumber) => {
                     // Skip creating input for blank (0) - it's the example answer
                     if (blankNumber === 0) {
                         return;
                     }
-                    
+
                     // Skip creating input for this blank if it's not in the answer object (it's a hint)
                     if (!question.answer.hasOwnProperty(blankNumber.toString())) {
                         return;
                     }
-                    
+
                     const inputGroup = document.createElement('div');
                     inputGroup.className = 'passage-input-group';
-                    
+
                     const label = document.createElement('div');
                     label.className = 'passage-input-label';
                     label.textContent = `(${blankNumber})`;
-                    
+
                     const input = document.createElement('input');
                     input.type = 'text';
                     input.id = `passageBlank${blankNumber}`;
                     input.className = 'passage-blank';
                     input.dataset.index = blankNumber;
                     input.placeholder = '';
-                    
+
                     const answerDiv = document.createElement('div');
                     answerDiv.className = 'passage-blank-answer';
                     answerDiv.id = `passageAnswer${blankNumber}`;
-                    
+
                     inputGroup.appendChild(label);
                     inputGroup.appendChild(input);
                     inputGroup.appendChild(answerDiv);
                     passageInputs.appendChild(inputGroup);
                 });
-                
+
                 // Restore or set up inputs
                 if (isAnswered) {
                     const userAnswer = userAnswers[currentQuestionIndex];
                     const correctAnswers = question.answer;
-                    
+
                     blankNumbers.forEach((blankNumber) => {
                         // Skip blank (0) - it's the example answer
                         if (blankNumber === 0) {
                             return;
                         }
-                        
+
                         // Skip if this blank is not in the answer object (it's a hint)
                         if (!question.answer.hasOwnProperty(blankNumber.toString())) {
                             return;
                         }
-                        
+
                         const input = document.getElementById(`passageBlank${blankNumber}`);
                         const answerDiv = document.getElementById(`passageAnswer${blankNumber}`);
                         const userVal = userAnswer ? userAnswer[blankNumber] : '';
                         const correctVal = correctAnswers ? correctAnswers[blankNumber] : '';
-                        
+
                         input.value = userVal || '';
                         input.disabled = true;
-                        
+
                         if (!correctVal) {
                             // If no correct answer defined for this blank, skip validation
                             return;
                         }
-                        
+
                         const isCorrect = Array.isArray(correctVal)
                             ? correctVal.some(ans => normalizeAnswer(ans) === normalizeAnswer(userVal))
                             : normalizeAnswer(correctVal) === normalizeAnswer(userVal);
-                        
+
                         input.classList.add(isCorrect ? 'correct' : 'incorrect');
-                        
+
                         if (!isCorrect && correctVal) {
                             const displayAnswer = Array.isArray(correctVal) ? correctVal.join(' or ') : correctVal;
                             answerDiv.innerHTML = `<span class="passage-blank-answer-label">Correct: </span>${displayAnswer}`;
@@ -1376,12 +1375,12 @@
                         if (blankNumber === 0) {
                             return;
                         }
-                        
+
                         // Skip if this blank is not in the answer object (it's a hint)
                         if (!question.answer.hasOwnProperty(blankNumber.toString())) {
                             return;
                         }
-                        
+
                         const input = document.getElementById(`passageBlank${blankNumber}`);
                         input.oninput = () => {
                             // Check if all blanks are filled
@@ -1397,20 +1396,20 @@
                 optionsDiv.style.display = 'none';
                 fibContainer.style.display = 'block';
                 passageFibContainer.style.display = 'none';
-                
+
                 if (isAnswered) {
                     fibInput.value = userAnswers[currentQuestionIndex];
                     fibInput.disabled = true;
-                    
+
                     const correctAnswer = Array.isArray(question.answer) ? question.answer[0] : question.answer;
-                    const isCorrect = Array.isArray(question.answer) 
+                    const isCorrect = Array.isArray(question.answer)
                         ? question.answer.some(ans => normalizeAnswer(ans) === normalizeAnswer(userAnswers[currentQuestionIndex]))
                         : normalizeAnswer(correctAnswer) === normalizeAnswer(userAnswers[currentQuestionIndex]);
-                    
+
                     fibInput.classList.add(isCorrect ? 'correct' : 'incorrect');
-                    
+
                     if (!isCorrect) {
-                        document.getElementById('fibAnswerText').textContent = 
+                        document.getElementById('fibAnswerText').textContent =
                             Array.isArray(question.answer) ? question.answer.join(' or ') : correctAnswer;
                         fibAnswer.classList.add('show');
                     }
@@ -1427,12 +1426,12 @@
                 fibContainer.style.display = 'none';
                 passageFibContainer.style.display = 'none';
                 optionsDiv.style.display = 'flex';
-                
+
                 question.options.forEach((option, index) => {
                     const optionDiv = document.createElement('div');
                     optionDiv.className = 'option';
                     optionDiv.dataset.index = index;
-                    
+
                     if (isAnswered) {
                         optionDiv.classList.add('disabled');
                         if (index === question.answer) {
@@ -1442,17 +1441,17 @@
                             optionDiv.classList.add('incorrect');
                         }
                     }
-                    
+
                     optionDiv.innerHTML = `${option}`;
-                    
+
                     if (!isAnswered) {
                         optionDiv.onclick = () => selectOption(index);
                     }
-                    
+
                     optionsDiv.appendChild(optionDiv);
                 });
             }
-            
+
             if (isAnswered) {
                 // Show explanation only if it exists and is not empty
                 if (question.explanation && question.explanation.trim() !== '') {
@@ -1468,15 +1467,15 @@
                 document.getElementById('submitBtn').disabled = true;
                 nextBtn.classList.remove('btn-primary');
             }
-            
+
             document.getElementById('prevBtn').disabled = currentQuestionIndex === 0;
-            
+
             if (currentQuestionIndex === questions.length - 1 && Object.keys(userAnswers).length === questions.length) {
                 document.getElementById('nextBtn').innerHTML = 'View Results <i class="fa-solid fa-flag-checkered"></i>';
             } else {
                 document.getElementById('nextBtn').innerHTML = 'Next <i class="fa-solid fa-arrow-right"></i>';
             }
-            
+
             selectedAnswer = null;
             updateProgress();
 
@@ -1487,11 +1486,11 @@
 
         function selectOption(index) {
             if (userAnswers.hasOwnProperty(currentQuestionIndex)) return;
-            
+
             const options = document.querySelectorAll('.option');
             options.forEach(opt => opt.classList.remove('selected'));
             options[index].classList.add('selected');
-            
+
             selectedAnswer = index;
             document.getElementById('submitBtn').disabled = false;
 
@@ -1500,17 +1499,17 @@
 
         function submitAnswer() {
             if (userAnswers.hasOwnProperty(currentQuestionIndex)) return;
-            
+
             const question = questions[currentQuestionIndex];
             const isFIB = question.type === 'fib';
             const isPassageFib = question.type === 'passageFib';
-            
+
             if (isPassageFib) {
                 // Collect all passage blank answers
                 const blankInputs = document.querySelectorAll('.passage-blank');
                 const userAnswer = {};
                 let allFilled = true;
-                
+
                 blankInputs.forEach(input => {
                     const index = parseInt(input.dataset.index);
                     const value = input.value.trim();
@@ -1519,33 +1518,33 @@
                     }
                     userAnswer[index] = value;
                 });
-                
+
                 if (!allFilled) return;
-                
+
                 userAnswers[currentQuestionIndex] = userAnswer;
-                
+
                 // Check each blank
                 let allCorrect = true;
                 const correctAnswers = question.answer;
-                
+
                 blankInputs.forEach(input => {
                     const index = parseInt(input.dataset.index);
                     const userVal = userAnswer[index];
                     const correctVal = correctAnswers[index];
-                    
+
                     if (!correctVal) {
                         // If no correct answer defined for this blank, skip validation
                         input.disabled = true;
                         return;
                     }
-                    
+
                     const isCorrect = Array.isArray(correctVal)
                         ? correctVal.some(ans => normalizeAnswer(ans) === normalizeAnswer(userVal))
                         : normalizeAnswer(correctVal) === normalizeAnswer(userVal);
-                    
+
                     input.disabled = true;
                     input.classList.add(isCorrect ? 'correct' : 'incorrect');
-                    
+
                     if (!isCorrect) {
                         allCorrect = false;
                         const answerDiv = document.getElementById(`passageAnswer${index}`);
@@ -1554,7 +1553,7 @@
                         answerDiv.classList.add('show');
                     }
                 });
-                
+
                 if (allCorrect) {
                     correctCount++;
                 } else {
@@ -1563,34 +1562,34 @@
             } else if (isFIB) {
                 const fibInput = document.getElementById('fibInput');
                 const userAnswer = fibInput.value.trim();
-                
+
                 if (!userAnswer) return;
-                
+
                 userAnswers[currentQuestionIndex] = userAnswer;
-                
+
                 const correctAnswer = Array.isArray(question.answer) ? question.answer[0] : question.answer;
                 const isCorrect = Array.isArray(question.answer)
                     ? question.answer.some(ans => normalizeAnswer(ans) === normalizeAnswer(userAnswer))
                     : normalizeAnswer(correctAnswer) === normalizeAnswer(userAnswer);
-                
+
                 fibInput.disabled = true;
                 fibInput.classList.add(isCorrect ? 'correct' : 'incorrect');
-                
+
                 if (isCorrect) {
                     correctCount++;
                 } else {
                     incorrectCount++;
-                    document.getElementById('fibAnswerText').textContent = 
+                    document.getElementById('fibAnswerText').textContent =
                         Array.isArray(question.answer) ? question.answer.join(' or ') : correctAnswer;
                     document.getElementById('fibAnswer').classList.add('show');
                 }
             } else {
                 if (selectedAnswer === null) return;
-                
+
                 const options = document.querySelectorAll('.option');
                 userAnswers[currentQuestionIndex] = selectedAnswer;
                 options.forEach(opt => opt.classList.add('disabled'));
-                
+
                 if (selectedAnswer === question.answer) {
                     options[selectedAnswer].classList.add('correct');
                     correctCount++;
@@ -1600,10 +1599,10 @@
                     incorrectCount++;
                 }
             }
-            
+
             updateStats();
             saveProgress();
-            
+
             const explanation = document.getElementById('explanation');
             // Show explanation only if it exists and is not empty
             if (question.explanation && question.explanation.trim() !== '') {
@@ -1612,7 +1611,7 @@
             } else {
                 explanation.classList.remove('show');
             }
-            
+
             document.getElementById('submitBtn').disabled = true;
             nextBtn.classList.add('btn-primary');
             if (currentQuestionIndex === questions.length - 1) {
@@ -1643,7 +1642,7 @@
         function updateStats() {
             document.getElementById('correct').textContent = correctCount;
             document.getElementById('incorrect').textContent = incorrectCount;
-            
+
             // Calculate and display accuracy
             const totalAnswered = correctCount + incorrectCount;
             let accuracy = '--';
@@ -1661,9 +1660,9 @@
         function showResults() {
             document.getElementById('quizCard').style.display = 'none';
             document.getElementById('results').classList.add('show');
-            
+
             const percentage = Math.round((correctCount / questions.length) * 100);
-            
+
             document.getElementById('finalScore').textContent = `${correctCount}/${questions.length}`;
             document.getElementById('finalCorrect').textContent = correctCount;
             document.getElementById('finalIncorrect').textContent = incorrectCount;
@@ -1690,22 +1689,22 @@
         function initQuestionGrid() {
             const grid = document.getElementById('questionGrid');
             grid.innerHTML = '';
-            
+
             questions.forEach((_, index) => {
                 const item = document.createElement('div');
                 item.className = 'question-item';
                 item.textContent = index + 1;
-                
+
                 if (index === currentQuestionIndex) {
                     item.classList.add('current');
                 }
-                
+
                 if (userAnswers.hasOwnProperty(index)) {
                     const question = questions[index];
                     const isFIB = question.type === 'fib';
                     const isPassageFib = question.type === 'passageFib';
                     let isCorrect;
-                    
+
                     if (isPassageFib) {
                         // Check if all blanks are correct
                         const userAnswer = userAnswers[index];
@@ -1716,7 +1715,7 @@
                             isCorrect = Object.keys(correctAnswers).every(key => {
                                 // Skip blank 0 - it's the example answer, not a user input
                                 if (key === '0') return true;
-                                
+
                                 const correctVal = correctAnswers[key];
                                 const userVal = userAnswer[key];
                                 if (!userVal || !correctVal) return false; // Safety check
@@ -1732,10 +1731,10 @@
                     } else {
                         isCorrect = userAnswers[index] === question.answer;
                     }
-                    
+
                     item.classList.add(isCorrect ? 'correct' : 'incorrect');
                 }
-                
+
                 item.onclick = () => {
                     currentQuestionIndex = index;
                     saveProgress();
@@ -1743,7 +1742,7 @@
                     toggleMenu();
                     updateQuestionGrid();
                 };
-                
+
                 grid.appendChild(item);
             });
         }
@@ -1752,17 +1751,17 @@
             const items = document.querySelectorAll('.question-item');
             items.forEach((item, index) => {
                 item.classList.remove('current', 'correct', 'incorrect');
-                
+
                 if (index === currentQuestionIndex) {
                     item.classList.add('current');
                 }
-                
+
                 if (userAnswers.hasOwnProperty(index)) {
                     const question = questions[index];
                     const isFIB = question.type === 'fib';
                     const isPassageFib = question.type === 'passageFib';
                     let isCorrect;
-                    
+
                     if (isPassageFib) {
                         // Check if all blanks are correct
                         const userAnswer = userAnswers[index];
@@ -1773,7 +1772,7 @@
                             isCorrect = Object.keys(correctAnswers).every(key => {
                                 // Skip blank 0 - it's the example answer, not a user input
                                 if (key === '0') return true;
-                                
+
                                 const correctVal = correctAnswers[key];
                                 const userVal = userAnswer[key];
                                 if (!userVal || !correctVal) return false; // Safety check
@@ -1789,7 +1788,7 @@
                     } else {
                         isCorrect = userAnswers[index] === question.answer;
                     }
-                    
+
                     item.classList.add(isCorrect ? 'correct' : 'incorrect');
                 }
             });
