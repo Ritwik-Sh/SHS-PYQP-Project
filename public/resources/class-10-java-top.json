@@ -1,0 +1,717 @@
+[
+  {
+    "question": "Predict the output\n```java\nint i = 0;\nfor (; i++ < 5;);\nSystem.out.print(i);\n```",
+    "explanation": "Only the condition is mandatory in for-loop. \nThe loop is a null loop, not executing any code but updating the value of 'i'",
+    "options": [
+      "01234",
+      "4",
+      "5",
+      "Syntax Error"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "The extends keyword in Java is used to create a subclass that has all the properties of the class that it is extending, and allows us to moderate, and even add new properties to the existing properties of the class.\n\nWhich Principal of OOPs is the 'extends' based on?",
+    "explanation": "",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritence",
+      "More than 1"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "The method which returns a character at a particular index of a String is present in ________.",
+    "explanation": "The charAt() function is being referred to here, which belongs to the String Object. \nNot the String class because it must be non-static.\nNot java.lang class because it is a package, not a class.",
+    "options": [
+      "String Class",
+      "String Object",
+      "Character Class",
+      "java.lang Class"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which of the following condition is applicable for the outer loop (iterator: 'i') of bubble sort of the array 'arr'?",
+    "explanation": "We loop upto the second last element of the array, so that when we compare current element with next element, at last iteration it doesn't give ArrayIndexOutOfBounds error.\nIf an element has been swapped (boolean swapped is true), we want to continue the loop. If it has not, we can end the loop early.",
+    "options": [
+      "i < arr.length && swapped",
+      "i < arr.length-1 && swapped",
+      "i < arr.length && !swapped",
+      "i < arr.length-1 && !swapped"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Assertion: A Missing break statement, even in the default case can cause a fall-through.\nReason: The default case always must be the last case of a switch case block, otherwise it will give a syntax error.",
+    "explanation": "",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the Correct explanation of Assertion",
+      "Both Assertion and Reason are true and Reason is not the Correct explanation of Assertion",
+      "Assertion is true. Reason is false",
+      "Assertion is False. Reason is true"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "In the statement `System.out.println()`, what is 'out'?",
+    "explanation": "'out' is the object of Output Stream class, present in the System class. \nThis object is a static object (Hence we do not need to create an object of System class to access it).",
+    "options": [
+      "keyword",
+      "method/function",
+      "class",
+      "class object"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "What is the output of the following Java statement?\n`System.out.println(\"Server says: \\\"Error!\\\\tTry again.\\\"\");`",
+    "explanation": "",
+    "options": [
+      "Server says: \"Error!\\Try again.\"",
+      "Server says: \"Error!Try again.\"",
+      "Server says: \"Error!\\tTry again.\"",
+      "Server says: \"Error!\\    Try again.\""
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which of the following statements are NOT an example of composite data type.",
+    "explanation": "",
+    "options": [
+      "static int a",
+      "obj.input();",
+      "arr[3] = 5",
+      "String s"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is the file extension of object code?",
+    "explanation": "The Object code is the class file with extension .class",
+    "options": [
+      ".java",
+      ".byte",
+      ".class",
+      ".object"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "___ are reference types which hold the reference id of a memory location",
+    "explanation": "",
+    "options": [
+      "Composite Types",
+      "Primitive Types",
+      "Attribute Types",
+      "None of the Above"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Assertion: A for loop is a single parameter structure.\nReason: A for loop only requires the condition to run",
+    "explanation": "",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the Correct explanation of Assertion",
+      "Both Assertion and Reason are true and Reason is not the Correct explanation of Assertion",
+      "Assertion is True and Reason is False",
+      "Assertion is False and Reason is True"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Which of the following is NOT a feature of Java?",
+    "explanation": "",
+    "options": [
+      "Write Once, Run Anywhere capability",
+      "Dynamically typed language",
+      "Runtime method binding (dynamic polymorphism)",
+      "Direct manipulation of memory using pointers"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The private keyword is an access specifier that restricts access to variables or methods so that they can be used only within the same class.\n\nWhich principal of 'OOPs' does the 'private' keyword promote?",
+    "explanation": "",
+    "options": [
+      "Abstraction",
+      "Polymorphism",
+      "Inheritence",
+      "Encapsulation"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Which of the following cannot be declared as final?",
+    "explanation": "",
+    "options": [
+      "Variable",
+      "Method",
+      "Class",
+      "Constructor"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "What happens if a class is declared final?",
+    "explanation": "",
+    "options": [
+      "Its variables become constant",
+      "Its methods become static",
+      "It cannot be extended/inherited",
+      "Objects cannot be created of the class"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "The final keyword in Java is used to prevent modification of variables, methods, and classes. It restricts further changes and protects the internal implementation from being altered.\n\nWhich Principle of OOPs is the final keyword mainly based on?",
+    "explanation": "",
+    "options": [
+      "Abstraction",
+      "Encapsulation",
+      "Inheritence",
+      "Polymorphism"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "A/An ___ is an abstract description of a set of objects.",
+    "explanation": "",
+    "options": [
+      "abstract",
+      "encapsulation",
+      "polymorphism",
+      "class"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Public access specifier allows a class to expose its member variables and functions to other functions and objects. Any public member can be accessed from outside the class. Which of these access specifiers must be used for class so that it can be inherited by another subclass?",
+    "explanation": "",
+    "options": [
+      "public",
+      "private",
+      "protected",
+      "none of the above"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Predict the output.\n```java\nint size = 2;\nif (size < 0)\n\tSystem.out.print(\"Small\");\nif (size = = 2)\n\tSystem.out.print(\"Medium\");\nelse\n\tSystem.out.print(\"Large\");\n```",
+    "explanation": "the '= =' if the if statement",
+    "options": [
+      "Small",
+      "Medium",
+      "SmallMedium",
+      "Error"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Assertion: The conditional operator (?:) is the only ternary operator in Java.\nReason: Ternary operators require exactly three operands.",
+    "explanation": "",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the Correct explanation of Assertion",
+      "Both Assertion and Reason are true and Reason is not the Correct explanation of Assertion",
+      "Assertion is true and Reason is false",
+      "Assertion is False and Reason is true"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "In the statement `import java.util.Scanner`, what is `Scanner`?",
+    "explanation": "",
+    "options": [
+      "Package",
+      "Class",
+      "Object",
+      "None of the Above"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Name the method/function that converted a String to int.",
+    "explanation": "",
+    "options": [
+      "parseDouble",
+      "parseString",
+      "valueOf",
+      "None of the above"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "In Java, a constructor is a special method used to initialize objects. When a subclass constructor calls super(), it invokes the parent class constructor to initialize inherited properties.\n\nWhich Principle of OOPs does the use of super() in a constructor primarily relate to?",
+    "explanation": "",
+    "options": [
+      "Polymorphism",
+      "Encapsulation",
+      "Inheritance",
+      "Abstraction"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "The protected keyword in Java allows a member to be accessible within the same class, subclasses, and classes in the same package. It is more restrictive than public but less restrictive than private.\n\nWhich Principle of OOPs does the protected keyword primarily support?",
+    "explanation": "Rekha ma'am's Answer",
+    "options": [
+      "Polymorphism",
+      "Encapsulation",
+      "Abstraction",
+      "Inheritance"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "The new keyword in Java is used to create an instance of a class. It allocates memory for the object at runtime and calls the constructor to initialize it.\nWhich Principle of OOPs is the new keyword most closely associated with?",
+    "explanation": "",
+    "options": [
+      "Inheritance",
+      "Polymorphism",
+      "Encapsulation",
+      "Abstraction"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "The static keyword in Java is used to define class-level variables and methods that belong to the class itself rather than any specific instance. Static members are shared across all objects of the class.\n\nWhich Principle of OOPs does the static keyword <b>least</b> align with?",
+    "explanation": "",
+    "options": [
+      "Abstraction",
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "In Java, a class is a blueprint or template that defines the properties (variables) and behaviors (methods) of objects. Objects are created from this blueprint using the new keyword.\n\nWhich Principle of OOPs does the concept of a class primarily represent?",
+    "explanation": "A class is encapsulating multiple properties, methods, and variables and assigning it to objects.",
+    "options": [
+      "Inheritance",
+      "Polymorphism",
+      "Encapsulation",
+      "Abstraction"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Predict the output of the following code snippet.\n```java\nfloat a = -1.5;\nSystem.out.println(Math.abs(Math.floor(a)));\n```",
+    "explanation": "",
+    "options": [
+      "2",
+      "2.0",
+      "1.0",
+      "Error"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "What is the default value of an integer array in Java?",
+    "explanation": "",
+    "options": [
+      "null",
+      "0",
+      "Garbage Value",
+      "Depends on JVM"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which of these best defines a multidimensional array in Java?",
+    "explanation": "",
+    "options": [
+      "int arr[][]",
+      "int[] arr[]",
+      "Both A and B",
+      "{1, 2, 3}, {4, 5, 6}"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Predict the output\n```java\nclass Test {\n   public static void main(String args[]) {\n       System.out.println(fun());\n   }\n   static int fun() {\n       static int x= 0;\n       return ++x;\n   }\n}\n```",
+    "explanation": "Compiler Error Unlike C++, static local variables are not allowed in Java.",
+    "options": [
+      "1",
+      "0",
+      "Garbage Value",
+      "Error"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "When an expression consists of int, double, long, float, then the entire expression will get promoted into a data type that is:",
+    "explanation": "",
+    "options": [
+      "float",
+      "double",
+      "int",
+      "long"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Out of these packages, which one contains an abstract keyword?",
+    "explanation": "",
+    "options": [
+      "java.util",
+      "java.lang",
+      "java.system",
+      "java.io"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Number of primitive data types in Java are?",
+    "explanation": "",
+    "options": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Predict the output\n```java\npublic class Solution{\n       public static void main(String[] args){\n                     byte x = 127;\n                     x++;\n                     x++;\n                     System.out.print(x);\n       }\n}\n```",
+    "explanation": "Range of byte data in java is -128 to 127. But the byte data type in java is cyclic in nature.",
+    "options": [
+      "-127",
+      "127",
+      "129",
+      "Error"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Identify the modifier which cannot be used for constructor.",
+    "explanation": "Static cannot be used for constructor.",
+    "options": [
+      "public",
+      "protected",
+      "private",
+      "static"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Predict the output of the following code snippet.\n```java\nfor(i = 1; i < 6; i++)\n\\tif(i > 3) continue;\nSystem.out.print(i);\n```",
+    "explanation": "Since, the loop runs till 6, the value of i is 6.",
+    "options": [
+      "123",
+      "4",
+      "6",
+      "Error"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Assertion: In Java, `String s = \"Hello\";` and `String s = new String(\"Hello\")` always refer to the same memory location.\nReason: Java maintains a String Pool where identical string literals share the same reference.",
+    "explanation": "The literal uses the String Pool, but new String() always creates a new heap object — different memory locations.",
+    "options": [
+      "Both Assertion and Reason are true, and Reason is the correct explanation",
+      "Both Assertion and Reason are true, and Reason is not the correct explanation",
+      "Assertion is True, Reason is False",
+      "Assertion is False, Reason is True"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Predict the output\n```java\npublic class Test {\n    static int count = 0;\n    Test() { count++; }\n    public static void main(String[] args) {\n        Test t1 = new Test();\n        Test t2 = new Test();\n        Test t3 = new Test();\n        System.out.println(Test.count);\n    }\n}\n```",
+    "explanation": "'count' is static and shared across all instances — each constructor call increments it once.",
+    "options": [
+      "0",
+      "1",
+      "3",
+      "Error"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Assertion: If a static method is defined in a class, it can be called through an object of that class, but the method does not belong to the object.\nReason: Static methods belong to the class itself and are resolved at compile-time. When called via an object reference, Java simply traces back to the class the object was created from and executes the class-level method.",
+    "explanation": "",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true and Reason is not the correct explanation of Assertion",
+      "Assertion is True, Reason is False",
+      "Assertion is False, Reason is True"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Which of the following proves that Java is an Object Oriented Programming Language?",
+    "explanation": "",
+    "options": [
+      "Codes are executed top to bottom.",
+      "Codes are executed bottom to top.",
+      "It allows us to create methods/functions.",
+      "It allows us to loop easily using built-in methods."
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Predict the output of the following code\n```java\nint i = Math.random()*9+1;\nSystem.out.println(i);\n```",
+    "explanation": "Math.random() returns a double value which cannot be implicitly converted to an int.",
+    "options": [
+      "0",
+      "1",
+      "10",
+      "Error"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Predict the output of the following code\n```java\ndouble i = Math.random()*10;\nSystem.out.println((int) i%2);\n```",
+    "explanation": "Converting 0.xyz explicitly to int will always return a 0. After converting, the value (0) is then % by 2, and the returned value (0%2=0) is printed.",
+    "options": [
+      "0",
+      "1",
+      "10",
+      "Either A or B"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Assertion: Each item array of a 2D array must have the equal length in java.\nReason: It is not important to declare the length of each item array.",
+    "explanation": "",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation.",
+      "Both Assertion and Reason are true and Reason is not the correct explanation.",
+      "Assertion is True Reason is False",
+      "Assertion is False Reason is True"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Abdullah was trying to check if a single character String is the first letter of his name through java programming language. This was the logic he was applying.\n```java\ns.equals('A')\n```\nHis friend came, and pointed out that he would get an error.\nWhat do you think could be the fix?",
+    "explanation": "String.equals() first checks if the argument is an instance of String — since 'A' gets autoboxed to a Character (not a String), that check fails and it returns false immediately.",
+    "options": [
+      "s == 'A'",
+      "s.equals(\"A\")",
+      "s == \"A'",
+      "Abdullah's code was correct."
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Mayukh shared the code of his new Java project with his friend Ritwik. Ritwik made some changes, used the code at his School exhibition and won the first prize while Mayukh won second. Which code did Mayukh send Ritwik and which code should he have sent?",
+    "explanation": "**What Mayukh actually sent**\nMayukh shared the code and Ritwik was able to modify it.\nThat means he must have sent the source code.\nSource code → Human-readable (.java)\nAnyone can edit and change it.\n\n**What he should have sent**\nIf Mayukh didn't want Ritwik to modify it, he should have sent the object code.\nObject code → Compiled (.class)\nNot easily readable or editable.",
+    "options": [
+      "Object, Class",
+      "Source, Package",
+      "Source, Object",
+      "Package, Object"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which of the following is **NOT** a Unary operator?",
+    "explanation": "",
+    "options": [
+      "++",
+      "--",
+      "+",
+      "None of the above"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Vansh had coded a game in java, which was in the \"Game.java\" file.\nIn the terminal, he wrote `javac Game.java`, and a new file \"Game.class\" was created. Then, he wrote \"java Game\" in the terminal, and his Java code was executed. Which method did the execution of his code start from?",
+    "explanation": "Execution of code always starts from the main(String[] args) method",
+    "options": [
+      "First void method",
+      "Last void method",
+      "void main(String[] args) method",
+      "None of the above."
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which of the following is not a keyword?",
+    "explanation": "In java, null is considered a constant value, not a keyword.",
+    "options": [
+      "null",
+      "final",
+      "static",
+      "None of the above"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Which of the following statements are true?",
+    "explanation": "A — False. An abstract class can have final methods. Final methods in an abstract class are perfectly legal; they just can't be overridden by subclasses.\nB — True. A `final` class cannot be subclassed, and `abstract` methods require subclassing to be implemented. Having an abstract method in a final class would be a contradiction — the method could never be implemented — so Java prohibits this.\nC — False. Transient variables do not need to be static. Transient simply means the variable is excluded from serialization; it can be an instance variable (non-static).\nD — False. Since A and C are false, \"all of the above\" is incorrect.",
+    "options": [
+      "An abstract class may not have any final methods?",
+      "A final class may not have any abstracts methods.",
+      "Transient variables must be static.",
+      "All of the above"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Encapsulation means",
+    "explanation": "",
+    "options": [
+      "Binding of all functions together",
+      "Adding a function to a class",
+      "Deleting a method from a class",
+      "None of the above"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Which is odd in given options",
+    "explanation": "",
+    "options": [
+      "Polymorphism",
+      "Abstraction",
+      "Method Overloading",
+      "Inheritence"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Write the output\n```java\nlong series (int p) {\n\\tlong f=1;\n\\tfor(i=1;i<=p;i++) \n\\t\\tf=f*i\n\\treturn f;\n}\n```",
+    "explanation": "",
+    "options": [
+      "Factorial of a number",
+      "Difference of all Natural numbers upto that number",
+      "Sum of all Natural numbers up that number",
+      "None of the above"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "How many bytes are occupied by the below two-dimensional array?\n```\n+-----+-------+-----+-----+\n| 156 | 20    | 154 | 20  |\n| 130 | 20    | 130 | 20  |\n| 162 | 17.67 | 161 | 20  |\n| 158 | 17.5  | 154 | 20  |\n+-----+-------+-----+-----+\n```",
+    "explanation": "The given table represents a 4×4 two-dimensional array (4 rows and 4 columns), which means there are 16 elements in total. The values include both integers and decimal numbers, indicating that the array is of double data type (which can store both whole numbers and decimal numbers).\n\nIn Java, a double occupies 8 bytes.\nSo, total bytes = 16 elements × 8 bytes = 128 bytes.",
+    "options": [
+      "96",
+      "128",
+      "12",
+      "24"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Assertion: Every String array is technically a double dimensional Array of characters.\nReason: Every String is technically an array of characters.",
+    "explanation": "The correct answer is A — Both Assertion and Reason are true, and the Reason is the correct explanation.\nWhy:\n\nAssertion is TRUE: A String[] (String array) is indeed technically a 2D array of characters, since each String element is itself a char[].\nReason is TRUE: A String in Java is internally backed by a char[] array.\nReason correctly explains the Assertion: Because each String is a char array, an array of Strings forms a 2D structure of characters — making the Reason a direct and valid explanation of the Assertion.\n\nSo A is the right choice.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation",
+      "Both Assertion and Reason are true and Reason is not the correct explanation",
+      "Assertion is true, Reason is False",
+      "Assertion is False, Reason is true."
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Sam performs bubble sort on the following array to organise the elements in ascending order:\n`{5, 1, 8, 3}`\n\nAfter the first iteration of the outer loop, the array is:",
+    "explanation": "",
+    "options": [
+      "{1, 3, 5, 8}",
+      "{1, 5, 3, 8}",
+      "{1, 5, 3, 8}",
+      "None of the above"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which would be the correct declaration of `PI` in Math class?",
+    "explanation": "",
+    "options": [
+      "public static double PI = 3.14;",
+      "public static float PI = 3.14f;",
+      "public abstract float PI = 3.14f;",
+      "protected abstract double PI = 3.14;"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The isUpperCase() function belongs to?",
+    "explanation": "",
+    "options": [
+      "Character Class",
+      "Character Object",
+      "Character literal",
+      "Both B and C"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Lata's teacher, being impressed by her skills to cut a potato into a perfect cone, asked her to find the curved surface of a cone. Lata, however, was not very good with calculations, so she wrote a Java code where she could input the parameters and get the answer. This is the code she wrote\n```java\nclass area{\n\\tdouble area(double r, double h) {\n\\t\\tdouble l, a;\n\\t\\ta = 2.0/7*r*l;\n\\t\\tl = Math.sqrt(r*r+h*h);\n\\t\\treturn a;\n\\t}\n}\n```\nWhat kind of error did she make?",
+    "explanation": "The calculation of `l` must be done before using it to calculate `a`",
+    "options": [
+      "Syntax Error",
+      "Runtime Error",
+      "Logical Error",
+      "No Error"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the output of the following?\n```java\nboolean a = true;\nboolean b = false;\nboolean c = a || (b = true);\nSystem.out.println(b);\n```",
+    "explanation": "Short-circuit: a is true, so (b = true) is never evaluated. b remains false",
+    "options": [
+      "true",
+      "false",
+      "Compiletime error",
+      "Runtime error"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What will be the output of the following method?\n```java\nMath.round(2)\n```",
+    "explanation": "The Math.round() function is overloaded to also accept integers.",
+    "options": [
+      "2",
+      "2.0",
+      "Syntax Error",
+      "Runtime Error"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Assertion: A constructor can be overloaded in Java.\nReason: A class can have multiple constructors as long as their parameter lists are different.",
+    "explanation": "Constructor overloading follows the same rules as method overloading. Multiple constructors with different parameter lists are perfectly valid in Java.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true and Reason is not the correct explanation of Assertion",
+      "Assertion is True, Reason is False",
+      "Assertion is False, Reason is True"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Ronit wrote the following code to swap two numbers without a temporary variable but got unexpected results. What type of error is this?\n```java\nint a = 5, b = 3;\na = a + b;\nb = a + b;\na = a - b;\nSystem.out.println(a + \" \" + b);\n```",
+    "explanation": "The swap logic is wrong. The correct steps should be: a=a+b, b=a-b, a=a-b. Using b=a+b in step 2 gives b=8+3=11, then a=8-11=-3. So output is \"-3 8\", not \"3 5\". This is a logical error — code compiles and runs but gives wrong output.",
+    "options": [
+      "Syntax Error",
+      "Runtime Error",
+      "Logical Error",
+      "No Error"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Mr, Sanjay is an event manager he plans and alots duties to each of his subordinates to handle different events. In a program, a task is divided into simple methods. Name the feature used in this context.",
+    "explanation": "",
+    "options": [
+      "Complexity",
+      "Modularity",
+      "Reusability",
+      "Dynamic"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Vansh wrote a code to swap to variables in Java to sort 8 digit unique IDs in a public form. This is the code he wrote\n```java\na = a+b;\nb = a-b;\na = a-b;\n```\nHowever, when he ran the code with `a` and `b` as different variables of `int` datatypes, the code got an error. Identify the error.",
+    "explanation": "When two numbers of 8 digits are added, the sum could go higher than the maximum value of an Int literal.",
+    "options": [
+      "Compile Time Error",
+      "Runtime Error",
+      "Logical Error",
+      "No Error"
+    ],
+    "answer": 1
+  }
+]
