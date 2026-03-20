@@ -379,13 +379,13 @@
 		"answer": 3
 	},
 	{
-		"question": "Abdullah was trying to check if a single character String is the first letter of his name through java programming language. This was the logic he was applying.\n```java\ns.equals('A')\n```\nHis friend came, and pointed out that he would get an error.\nWhat do you think could be the fix?",
+		"question": "Abdullah was trying to check if a single character String is the first letter of his name through java programming language. This was the logic he was applying.\n```java\ns.equals('A')\n```\nHis friend came, and pointed out that he would get an error.\nHow Abdullah's testing however, the code did run, but with the code output. Predict the output.",
 		"explanation": "String.equals() first checks if the argument is an instance of String — since 'A' gets autoboxed to a Character (not a String), that check fails and it returns false immediately.",
 		"options": [
-			"s == 'A'",
-			"s.equals(\"A\")",
-			"s == \"A'",
-			"Abdullah's code was correct."
+			"true",
+			"false",
+			"Cannot compare a String to a Character.",
+			"None of the above"
 		],
 		"answer": 1
 	},
@@ -569,15 +569,14 @@
 		"answer": 1
 	},
 	{
-		"question": "Vansh wrote a code to swap to variables in Java to sort 8 digit unique IDs in a public form. This is the code he wrote\n```java\na = a+b;\nb = a-b;\na = a-b;\n```\nHowever, when he ran the code with `a` and `b` as different variables of `int` datatypes, the code got an error. Identify the error.",
-		"explanation": "When two numbers of 8 digits are added, the sum could go higher than the maximum value of an Int literal.",
+		"question": "Rudransh wrote a code to swap to variables in Java to sort 8 digit unique IDs in a public form. This is the code he wrote\n```java\na = a+b;\nb = a-b;\na = a-b;\n```\nHowever, when when his teacher inspected the code, she told him that the sum of the two numbers might exceed the maximum limit of the data type. Identify the type of error.",
 		"options": [
 			"Compile Time Error",
 			"Runtime Error",
 			"Logical Error",
 			"No Error"
 		],
-		"answer": 1
+		"answer": 3
 	},
 	{
 		"question": "Assertion: Arrays in Java store elements of the same datatype.\nReason: Java arrays are homomgenous.",
@@ -665,5 +664,21 @@
 		],
 		"answer": 0,
 		"explanation": "Math.random() always returns a number between 0 and 1 (inclusive), so the probability of receiving exactly 0 is 0%."
+	},
+	{
+		"question": "Predict the output of the following code\n```java\nint i = (int) Math.random()*9+1;\nSystem.out.println(i);\n```",
+		"explanation": "First, the Math.random() generates a double between 0.0 and 1.0. Then, it is cast to an int, which truncates the decimal part, resulting in 0. Finally, 0 * 9 + 1 gives 1.",
+		"options": ["0", "1", "10", "Either B or C"],
+		"answer": 1
+	},
+	{
+		"question": "Which of the following implicit conversions would indicate a lossy (with error) implicit conversion?",
+		"options": [
+			"int to long",
+			"float to double",
+			"short to char",
+			"char to double"
+		],
+		"answer": 2
 	}
 ]
