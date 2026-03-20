@@ -365,7 +365,7 @@
 		"question": "Predict the output of the following code\n```java\ndouble i = Math.random()*10;\nSystem.out.println((int) i%2);\n```",
 		"explanation": "Converting 0.xyz explicitly to int will always return a 0. After converting, the value (0) is then % by 2, and the returned value (0%2=0) is printed.",
 		"options": ["0", "1", "10", "Either A or B"],
-		"answer": 0
+		"answer": 3
 	},
 	{
 		"question": "Assertion: Each item array of a 2D array must have the equal length in java.\nReason: It is not important to declare the length of each item array.",
@@ -602,7 +602,7 @@
 		"answer": 0
 	},
 	{
-		"question": "Assertion: Recustion is a technique where a method calls itself.\nReason: Recursion must have a terminating condition",
+		"question": "Assertion: Recurtion is a technique where a method calls itself.\nReason: Recursion must have a terminating condition",
 		"options": [
 			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
 			"Both Assertion and Reason are true and Reason is not the correct explanation of Assertion",
@@ -632,5 +632,38 @@
 		],
 		"answer": 1,
 		"explanation": "Immutable classes have private final fields and no setters, ensuring objects cannot be modified after creation"
+	},
+	{
+		"question": "Identify the type of error in the following code:\n```java\nshort a = 65;\nchar c = a;\nSystem.out.println(Math.round(c));",
+		"options": [
+			"Syntax Error",
+			"Runtime Error",
+			"Logical Error",
+			"No Error"
+		],
+		"answer": 1,
+		"explanation": "This code will result in a compile-time error because a short cannot be directly assigned to a char without an explicit cast, even though they have the same size."
+	},
+	{
+		"question": "Identify the correct usage of Math.random() to print an integer between 1 and 10",
+		"options": [
+			"(int) Math.random() * 9 + 1",
+			"(int) Math.random() * 10 + 1",
+			"(int) (Math.random() * 9 + 1)",
+			"(int) (Math.random() * 10 + 1)"
+		],
+		"answer": 2,
+		"explanation": "The correct way to use `Math.random()` to generate a number is `Math.random() * Range + LowerLimit`."
+	},
+	{
+		"question": "What is the probability of recieving 0 in Math.random()",
+		"options": [
+			"0%",
+			"50%",
+			"100%",
+			"Cannot be determined"
+		],
+		"answer": 0,
+		"explanation": "Math.random() always returns a number between 0 and 1 (inclusive), so the probability of receiving exactly 0 is 0%."
 	}
 ]
