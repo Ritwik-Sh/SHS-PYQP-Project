@@ -2250,7 +2250,7 @@
 			"14",
 			"16"
 		],
-		"answer": 2,
+		"answer": 1,
 		"explanation": "Counts numbers divisible by 2 OR 5: evens(10) + 5,15(not counted as even already) = 14"
 	},
 	{
@@ -2342,14 +2342,14 @@
 		"explanation": "First 'b' at index 1, last 'b' at index 4. Difference = 4 - 1 = 3"
 	},
 	{
-		"question": "What is the result?\n```java\nboolean found = false;\nfor(int i = 1; i <= 10; i++) {\n  if(i * i == 49) {\n    found = true;\n    break;\n  }\n}\nSystem.out.println(found);\n```",
+		"question": "What is the result?\n```java\nboolean found = false;\nfor(double i = 1; i <= 10; i=i+1) {\n  if(i * i == 49) {\n    found = true;\n    break;\n  }\n}\nSystem.out.println(found);\n```",
 		"options": [
 			"true",
 			"false",
-			"49",
-			"7"
+			"7",
+			"Error"
 		],
-		"answer": 1,
+		"answer": 0,
 		"explanation": "Searches for perfect square of 49 in range 1-10. 7*7=49 but 7 is not in the loop range, so false"
 	},
 	{
@@ -2709,7 +2709,7 @@
 			"Declare all variables as public",
 			"Declare all variables as private and final, no setters",
 			"Use static variables only",
-			"Provide public setters"
+			"Declare the class as final"
 		],
 		"answer": 1,
 		"explanation": "Immutable classes have private final fields and no setters, ensuring objects cannot be modified after creation"
@@ -3690,8 +3690,8 @@
 			"Error",
 			"None of these"
 		],
-		"answer": 1,
-		"explanation": "False - while it's good practice, the question context suggests this can be omitted (though in Java it's required)."
+		"answer": 0,
+		"explanation": ""
 	},
 	{
 		"question": "A function in java can be written",
