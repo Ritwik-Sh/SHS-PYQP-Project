@@ -656,12 +656,7 @@
 	},
 	{
 		"question": "What is the probability of recieving 0 in Math.random()",
-		"options": [
-			"0%",
-			"50%",
-			"100%",
-			"Cannot be determined"
-		],
+		"options": ["0%", "50%", "100%", "Cannot be determined"],
 		"answer": 0,
 		"explanation": "Math.random() always returns a number between 0 and 1 (inclusive), so the probability of receiving exactly 0 is 0%."
 	},
@@ -680,5 +675,56 @@
 			"char to double"
 		],
 		"answer": 2
-	}
+	},
+	{
+		"question": "Assertion: Java compiler automatically creates a default constructor in case no constructor is present in the java class.\nReason: The constructer is automatically invoked when an object of that class is created.",
+		"options": [
+			"Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+			"Both Assertion and Reason are true and Reason is not the correct explanation of Assertion",
+			"Assertion is True, Reason is False",
+			"Assertion is False, Reason is True"
+		],
+		"answer": 1
+	},
+	{
+		"question": "___ Allows a class to use the properties and methods of another class",
+		"options": [
+			"Inheritance",
+			"Polymorphism",
+			"Encapsulation",
+			"None of the above"
+		],
+		"answer": 0
+	},
+	{
+		"question": "Which of the following methods do not belong to the Character class?",
+		"options": [
+			"valueOf()",
+			"isDigit()",
+			"isDigitOrLetter()",
+			"toUpperCase()"
+		],
+		"answer": 2
+	},
+	{
+		"question": "Choose the odd one out. Which of the following is NOT a feature of Java?",
+		"options": [
+			"Robust",
+			"Platform Independent",
+			"Inheritance",
+			"Multithreading"
+		],
+		"answer": 2
+	},
+	{
+    "question": "Predict the output of the following code:\n```java\nchar c = 'g';\nswitch(Character.toUpperCase(c)) {\n    case 'M':\n        System.out.print(\"Microsoft Teams\");\n        break;\n    case 'G':\n        System.out.print(\"Google Meet\");\n    default:\n        System.out.print(\"Any software\");\n        break;\n    case 'W':\n        System.out.print(\"Web Ex\");\n        break;\n}\n```",
+    "explanation": "Character.toUpperCase('g') returns 'G', so the switch matches case 'G' and prints \"Google Meet\". However, there is no break after case 'G', so execution falls through to the default case and prints \"Any software\" as well. The output is \"Google MeetAny software\".",
+    "options": [
+        "Google Meet",
+        "Any software",
+        "Google MeetAny software",
+        "Error"
+    ],
+    "answer": 2
+}
 ]
