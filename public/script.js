@@ -39,15 +39,15 @@ async function fetchFiles(userSubject) {
 
         const response = await fetch(`/files?path=${encodeURIComponent(folderPath)}`);
         const files = await response.json();
-             
+
         files.forEach(file => {
             const fileName = file.name.split("()");
             const subject = fileName[0];
             const session = fileName[1];
             const testType = fileName[2];
             const link = file.download_link;
-             
-             
+
+
             if (subject === userSubject) {
                 loader.style.display = "none";
                 // 'link' is now a server route (/watermarked?id=...) that does not expose the original Dropbox URL
@@ -64,13 +64,13 @@ async function fetchFiles(userSubject) {
             loader.style.display = "none";
             left.innerHTML += `<h1 id="noContribution">No Contributions Yet!</h1>`;
         }
-        
+
     } catch (error) {
         console.error("Error fetching files:", error);
     }
     loader.style.display = "none";
 }
-  
+
 
 // Example usage: fetchDownloadLinks(9);
 
