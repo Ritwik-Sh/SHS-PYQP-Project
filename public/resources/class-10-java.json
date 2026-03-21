@@ -6838,7 +6838,7 @@
 		"answer": 2
 	},
 	{
-		"question": "State the output of the following program segment:\nclass loop\n{\n    public static void main()\n    {\n        int sum=23;\n        for(int i=2; i<=5; i++)\n        {\n            for(int j=7; j<=9; j++)\n                sum+=(i*j);\n        }\n        System.out.println(\"sum=\" + sum);\n    }\n}",
+		"question": "State the output of the following program segment:\n```java\nclass loop\n{\n    public static void main() {\n        int sum=23;\n        for(int i=2; i<=5; i++)\n        {\n            for(int j=7; j<=9; j++)\n                sum+=(i*j);\n        }\n        System.out.println(\"sum=\" + sum);\n    }\n}\n```",
 		"options": ["sum=336", "sum=359", "sum=45", "compilation error"],
 		"answer": 1
 	},
