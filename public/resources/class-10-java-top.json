@@ -107,7 +107,7 @@
 			"Write Once, Run Anywhere capability",
 			"Dynamically typed language",
 			"Runtime method binding (dynamic polymorphism)",
-			"Direct manipulation of memory using pointers"
+			"Pass-by-Value Parameter passing."
 		],
 		"answer": 1
 	},
