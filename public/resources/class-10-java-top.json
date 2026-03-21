@@ -717,14 +717,45 @@
 		"answer": 2
 	},
 	{
-    "question": "Predict the output of the following code:\n```java\nchar c = 'g';\nswitch(Character.toUpperCase(c)) {\n    case 'M':\n        System.out.print(\"Microsoft Teams\");\n        break;\n    case 'G':\n        System.out.print(\"Google Meet\");\n    default:\n        System.out.print(\"Any software\");\n        break;\n    case 'W':\n        System.out.print(\"Web Ex\");\n        break;\n}\n```",
-    "explanation": "Character.toUpperCase('g') returns 'G', so the switch matches case 'G' and prints \"Google Meet\". However, there is no break after case 'G', so execution falls through to the default case and prints \"Any software\" as well. The output is \"Google MeetAny software\".",
-    "options": [
-        "Google Meet",
-        "Any software",
-        "Google MeetAny software",
-        "Error"
-    ],
-    "answer": 2
-}
+	    "question": "Predict the output of the following code:\n```java\nchar c = 'g';\nswitch(Character.toUpperCase(c)) {\n    case 'M':\n        System.out.print(\"Microsoft Teams\");\n        break;\n    case 'G':\n        System.out.print(\"Google Meet\");\n    default:\n        System.out.print(\"Any software\");\n        break;\n    case 'W':\n        System.out.print(\"Web Ex\");\n        break;\n}\n```",
+	    "explanation": "Character.toUpperCase('g') returns 'G', so the switch matches case 'G' and prints \"Google Meet\". However, there is no break after case 'G', so execution falls through to the default case and prints \"Any software\" as well. The output is \"Google MeetAny software\".",
+	    "options": [
+	        "Google Meet",
+	        "Any software",
+	        "Google MeetAny software",
+	        "Error"
+	    ],
+	    "answer": 2
+	},
+	{
+		"question": "Which of the following would be the correct method signature for the Math.round() function.",
+		"options": [
+			"public static int round(double a)",
+			"public static int round(float a)",
+			"public static double round(double a)",
+			"public static long round(float a)"
+		],
+		"answer": 1,
+		"explanation": "Math.round(a) will always return - long when 'a' is double - int when 'a' is float - int 'a' is int"
+	},
+	{
+		"question": "___ statement transfers the control to another segment in the program from within a loop block.",
+		"options": ["continue", "switch", "break", "goto"],
+		"answer": 0
+	},
+	{
+		"question": "___ of a variable is the part of the program where the variable is accessible.",
+		"options": ["scope", "limit", "assignment", "none of these"],
+		"answer": 0
+	},
+	{
+		"question": "Name the types of errors that can be handled by a try-catch block",
+		"options": [
+			"Syntax Error",
+			"Runtime Error",
+			"Logical Error",
+			"Both A and B"
+		],
+		"answer": 1
+	}
 ]
