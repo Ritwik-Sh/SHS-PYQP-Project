@@ -1036,6 +1036,13 @@
                 return;
             }
 
+            // Trigger Print with Ctrl+P
+            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+            	e.preventDefault();
+				printQuiz();
+				return;
+            }
+
             // Escape dismisses the search sidebar from anywhere
             if (e.key === 'Escape') {
                 const sidebar = document.getElementById('searchSidebar');
