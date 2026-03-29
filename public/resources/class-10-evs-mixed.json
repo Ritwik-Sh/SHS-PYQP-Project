@@ -857,10 +857,10 @@
 	{
 		"question": "Which one of the following is an incorrect pair:",
 		"options": [
-			"HYV → Better yield",
-			"Chemical fertiliser → Eco friendly",
-			"Vermicomposting → Earth worms",
-			"Farmyard manure → Cattle dung"
+			"HYV -> Better yield",
+			"Chemical fertiliser -> Eco friendly",
+			"Vermicomposting -> Earth worms",
+			"Farmyard manure -> Cattle dung"
 		],
 		"answer": 1
 	},
