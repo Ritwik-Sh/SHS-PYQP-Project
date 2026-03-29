@@ -272,7 +272,7 @@
 	{
 		"question": "Assertion (A): Windbreaks usually consist of alternate rows of trees and shrubs.\nReason (R): Windbreaks around a field can raise the cost of heating and cooling and save energy.",
 		"options": [
-			"A is true, and R is false.",
+			"A is false, and R is true.",
 			"A is true, and R is false.",
 			"Both A and R are true, and R is the correct explanation of A.",
 			"Both A and R are true, and A is the correct explanation of R."
