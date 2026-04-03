@@ -757,5 +757,25 @@
 			"Both A and B"
 		],
 		"answer": 1
+	},
+	{
+		"question": "In a statement `c = c + (x * d + e);` which variable is an accumulator?",
+		"options": ["d", "c", "e", "x"],
+		"answer": 1
+	},
+	{
+		"question": "What is the output of the statement `Math.pow(36, 6/5);` ?",
+		"options": ["36.0", "1.0", "73.71", "6.0"],
+		"answer": 1
+	},
+	{
+		"question": "In the following method prototype to accept a character, an integer and return YES or NO, fill in the blank to complete the method prototype.\n```public ___ someMethod(char ch, int n)```",
+		"options": ["void", "String", "boolean", "int"],
+		"answer": 1
+	},
+	{
+		"question": "Which of the following is not a valid identifier in Java?",
+		"options": ["_myVar", "2ndVar", "$amount", "varName"],
+		"answer": 1
 	}
 ]
