@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ISC Class XII — Computer Science Notes</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../../../logo.png"/>
+</head>
+<body>
+<header>
+	<a id="back-btn" href="../" style="font-size: 1.5rem; color: var(--text); text-decoration: none; display: flex; align-items: center;">
+		<i class="fa-solid fa-arrow-left"></i>
+	</a>
+	<h1>Class XII — Computer Science</h1>
+	<div class="header-actions">
+		<button id="lightModeBtn" title="Toggle light mode">
+			<i class="fa-solid fa-sun"></i>
+			<span class="btn-label">Light</span>
+		</button>
+		<button id="printBtn" title="Print this page" onclick="window.print()">
+			<i class="fa-solid fa-print"></i>
+			<span class="btn-label">Print</span>
+		</button>
+	</div>
+	<ul></ul>
+</header>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"></script>
+<script>
+	// Light mode toggle
+	const lightModeBtn = document.getElementById('lightModeBtn');
+
+	// Check for saved preference or system preference
+	const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+	if (savedTheme === 'light') {
+		document.documentElement.style.colorScheme = 'light';
+		lightModeBtn.innerHTML = '<i class="fa-solid fa-moon"></i><span class="btn-label">Dark</span>';
+	}
+
+	lightModeBtn.addEventListener('click', () => {
+		const currentTheme = document.documentElement.style.colorScheme || 'dark';
+		const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+		document.documentElement.style.colorScheme = newTheme;
+		localStorage.setItem('theme', newTheme);
+		lightModeBtn.innerHTML = newTheme === 'light'
+			? '<i class="fa-solid fa-moon"></i><span class="btn-label">Dark</span>'
+			: '<i class="fa-solid fa-sun"></i><span class="btn-label">Light</span>';
+	});
+</script>
+
+<!-- ══════════════ COVER ══════════════ -->
+<div class="cover">
+  <div class="cover-label">CISCE · ISC Examination 2028</div>
+  <h1>Computer Science<br>Class XII</h1>
+  <div class="cover-sub">Complete Theory &amp; Coding Notes — Paper I &amp; II</div>
+  <div class="cover-badges">
+    <span class="badge orange">Section A — Hardware</span>
+    <span class="badge blue">Section B — Java</span>
+    <span class="badge green">Section C — Python</span>
+    <span class="badge purple">Data Structures</span>
+  </div>
+</div>
+
+<!-- ══════════════ TOC ══════════════ -->
+<nav class="toc">
+  <h2>Table of Contents</h2>
+  <ol>
+    <h3 class="toc-section"><strong>Section A — Hardware</strong></h3>
+    <li><a href="#bool-alg">1. Boolean Algebra</a></li>
+    <li><a href="#hardware">2. Computer Hardware — Gates &amp; Applications</a></li>
+    <h3 class="toc-section"><strong>Section B — Java</strong></h3>
+    <li><a href="#recap">Recap — Class XI Java</a></li>
+    <li><a href="#methods-obj">3. Methods — Object as Parameter &amp; Return Type</a></li>
+    <li><a href="#arrays-str">4. Arrays &amp; String Handling</a></li>
+    <li><a href="#recursion">5. Recursion</a></li>
+    <li><a href="#inheritance">6. Inheritance &amp; Interfaces</a></li>
+    <h3 class="toc-section"><strong>Section C — Python &amp; Conceptual</strong></h3>
+    <li><a href="#python-adv">7. Programming in Python (Advanced)</a></li>
+    <li><a href="#data-struct">8. Data Structures — Binary Trees</a></li>
+    <li><a href="#complexity">9. Complexity &amp; Big O Notation</a></li>
+  </ol>
+</nav>
+
+<!-- ══════════════ SECTION A ══════════════ -->
+<div class="part-header" id="sec-a">
+  <span class="part-tag hardware">Section A</span>
+  <span class="part-title">Hardware</span>
+</div>
+
+<!-- ─── 1. BOOLEAN ALGEBRA ─── -->
+<h2 class="topic" id="bool-alg">1. Boolean Algebra</h2>
+
+<h3 class="sub">1a. Propositional Logic — Advanced</h3>
+
+<h4 class="subsub">Key Equivalence Laws</h4>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Law</th><th>AND Form</th><th>OR Form</th></tr></thead>
+<tbody>
+<tr><td>Identity</td><td>A · 1 = A</td><td>A + 0 = A</td></tr>
+<tr><td>Null/Dominance</td><td>A · 0 = 0</td><td>A + 1 = 1</td></tr>
+<tr><td>Idempotent</td><td>A · A = A</td><td>A + A = A</td></tr>
+<tr><td>Complement</td><td>A · Ā = 0</td><td>A + Ā = 1</td></tr>
+<tr><td>Double Negation</td><td colspan="2">~~A = A</td></tr>
+<tr><td>Commutative</td><td>A · B = B · A</td><td>A + B = B + A</td></tr>
+<tr><td>Associative</td><td>A·(B·C)=(A·B)·C</td><td>A+(B+C)=(A+B)+C</td></tr>
+<tr><td>Distributive</td><td>A·(B+C)=A·B+A·C</td><td>A+(B·C)=(A+B)·(A+C)</td></tr>
+<tr><td>Absorption</td><td>A·(A+B)=A</td><td>A+(A·B)=A</td></tr>
+<tr><td>De Morgan's</td><td><span style="text-decoration:overline">A·B</span>=Ā+B̄</td><td><span style="text-decoration:overline">A+B</span>=Ā·B̄</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="callout new">
+  <div class="callout-title">★ Exam Focus — De Morgan's Laws</div>
+  De Morgan's is asked every year. To negate an expression: <strong>flip the operator</strong> (AND↔OR) and <strong>negate all variables</strong>.<br>
+  <code>NOT(A AND B) = (NOT A) OR (NOT B)</code><br>
+  <code>NOT(A OR B)  = (NOT A) AND (NOT B)</code>
+</div>
+
+<h4 class="subsub">Implication &amp; Other Laws</h4>
+<ul>
+  <li><strong>Implication</strong>: p⇒q ≡ ¬p ∨ q</li>
+  <li><strong>Biconditional</strong>: p⇔q ≡ (p⇒q) ∧ (q⇒p)</li>
+  <li><strong>Converse of p⇒q</strong>: q⇒p</li>
+  <li><strong>Inverse of p⇒q</strong>: ¬p⇒¬q</li>
+  <li><strong>Contrapositive of p⇒q</strong>: ¬q⇒¬p (logically equivalent to original)</li>
+  <li><strong>Modus Ponens</strong>: If p⇒q is true and p is true, then q is true.</li>
+  <li><strong>Chain Rule</strong>: (p⇒q) ∧ (q⇒r) ⇒ (p⇒r)</li>
+</ul>
+
+<h3 class="sub">1b. Boolean Algebra for Digital Circuits</h3>
+
+<p>Boolean variables take values 0 (FALSE) and 1 (TRUE). Three operations: AND (·), OR (+), NOT (̄).</p>
+
+<h4 class="subsub">SOP &amp; POS Forms</h4>
+<dl>
+  <dt>Minterm</dt>
+  <dd>A product (AND) of all variables in complemented or uncomplemented form. Each minterm = 1 for exactly one input combination.</dd>
+  <dt>Maxterm</dt>
+  <dd>A sum (OR) of all variables. Each maxterm = 0 for exactly one input combination.</dd>
+  <dt>Sum of Products (SOP)</dt>
+  <dd>OR of minterms. Canonical SOP = sum of all minterms for which the function = 1.</dd>
+  <dt>Product of Sums (POS)</dt>
+  <dd>AND of maxterms. Canonical POS = product of all maxterms for which the function = 0.</dd>
+</dl>
+
+<pre><code><span class="cm">// Example: F(A,B) where F=1 when: AB=01, 10, 11</span>
+Minterms (F=1):  m1(01), m2(10), m3(11)
+Canonical SOP:   F = ĀB + AB̄ + AB
+
+Maxterms (F=0):  M0(00) only
+Canonical POS:   F = (A + B)   <span class="cm">// only one maxterm</span></code></pre>
+
+<h3 class="sub">1c. Karnaugh Maps (K-Maps)</h3>
+
+<div class="callout new">
+  <div class="callout-title">★ New Topic — K-Map Reduction</div>
+  K-maps are the most efficient method to simplify Boolean expressions. Up to 4 variables (16 cells) are in syllabus.
+</div>
+
+<h4 class="subsub">K-Map Layout Rules</h4>
+<ul>
+  <li>Adjacent cells differ in exactly 1 variable (Gray code ordering: 00, 01, 11, 10).</li>
+  <li>Groups (quads/pairs) must be powers of 2: 1, 2, 4, 8, 16.</li>
+  <li>Form the <strong>largest possible groups</strong>.</li>
+  <li>Groups can wrap around edges (the map is a torus).</li>
+  <li>A cell may belong to multiple groups.</li>
+  <li>The simplified expression eliminates variables that change within a group.</li>
+</ul>
+
+<h4 class="subsub">3-Variable K-Map (AB vs C)</h4>
+<div class="table-wrap">
+<table class="truth">
+<thead><tr><th>AB \ C</th><th>0</th><th>1</th></tr></thead>
+<tbody>
+<tr><td>00</td><td>m0</td><td>m1</td></tr>
+<tr><td>01</td><td>m2</td><td>m3</td></tr>
+<tr><td>11</td><td>m6</td><td>m7</td></tr>
+<tr><td>10</td><td>m4</td><td>m5</td></tr>
+</tbody>
+</table>
+</div>
+
+<h4 class="subsub">4-Variable K-Map (AB vs CD)</h4>
+<div class="table-wrap">
+<table class="truth">
+<thead><tr><th>AB\CD</th><th>00</th><th>01</th><th>11</th><th>10</th></tr></thead>
+<tbody>
+<tr><td>00</td><td>m0</td><td>m1</td><td>m3</td><td>m2</td></tr>
+<tr><td>01</td><td>m4</td><td>m5</td><td>m7</td><td>m6</td></tr>
+<tr><td>11</td><td>m12</td><td>m13</td><td>m15</td><td>m14</td></tr>
+<tr><td>10</td><td>m8</td><td>m9</td><td>m11</td><td>m10</td></tr>
+</tbody>
+</table>
+</div>
+
+<h4 class="subsub">K-Map Worked Example</h4>
+<pre><code><span class="cm">// F(A,B,C,D) = Σm(0,1,2,3,4,5,6,7,8,10,12,14)</span>
+<span class="cm">// Place 1s at those minterm positions in the K-map</span>
+<span class="cm">// Group: 8-cell group covers minterms 0,1,2,3,4,5,6,7 → A=0 (Ā)</span>
+<span class="cm">// Group: 4-cell group covers 0,2,8,10 → B=0,D=0 (B̄D̄)</span>
+<span class="cm">// Group: 4-cell group covers 0,4,12,8 → C=0,D=0 — already covered above</span>
+<span class="cm">// Check 12,14: covers CD=10 rows where A=1 (if applicable)</span>
+<span class="cm">// Final simplified: F = Ā + B̄D̄ + BD̄  (verify against original)</span></code></pre>
+
+<div class="callout tip">
+  <div class="callout-title">💡 K-Map Steps</div>
+  1. Fill the K-map with 0s and 1s from truth table.<br>
+  2. Identify all 1-cells (and don't-care X cells — treat as 1 for grouping).<br>
+  3. Form largest valid groups (powers of 2).<br>
+  4. For each group, write a term with only variables that don't change.<br>
+  5. OR all terms together.
+</div>
+
+<!-- ─── 2. COMPUTER HARDWARE ─── -->
+<h2 class="topic" id="hardware">2. Computer Hardware</h2>
+
+<h3 class="sub">Logic Gates — Complete Reference</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Gate</th><th>Expression</th><th>Truth (A=1,B=1)</th><th>Note</th></tr></thead>
+<tbody>
+<tr><td>NOT</td><td>Ā</td><td>0</td><td>Inverts</td></tr>
+<tr><td>AND</td><td>A·B</td><td>1</td><td>All must be 1</td></tr>
+<tr><td>OR</td><td>A+B</td><td>1</td><td>At least one 1</td></tr>
+<tr><td>NAND</td><td><span style="text-decoration:overline">A·B</span></td><td>0</td><td>Universal gate</td></tr>
+<tr><td>NOR</td><td><span style="text-decoration:overline">A+B</span></td><td>0</td><td>Universal gate</td></tr>
+<tr><td>XOR</td><td>A⊕B</td><td>0</td><td>Output 1 when inputs differ</td></tr>
+<tr><td>XNOR</td><td><span style="text-decoration:overline">A⊕B</span></td><td>1</td><td>Output 1 when inputs same</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3 class="sub">Combinational Circuits</h3>
+
+<h4 class="subsub">Half Subtractor</h4>
+<pre><code>Difference = A ⊕ B
+Borrow     = Ā · B</code></pre>
+
+<h4 class="subsub">Full Subtractor</h4>
+<pre><code>Difference = A ⊕ B ⊕ Bin
+Borrow     = Ā·B + Ā·Bin + B·Bin</code></pre>
+
+<h4 class="subsub">Encoder</h4>
+<p>Converts 2ⁿ inputs → n-bit binary output. Only one input is active (HIGH) at a time.</p>
+<pre><code><span class="cm">// 4-to-2 Priority Encoder</span>
+<span class="cm">// Input: D3 D2 D1 D0 (exactly one HIGH)</span>
+<span class="cm">// Output: A1 A0</span>
+A1 = D3 + D2
+A0 = D3 + D1</code></pre>
+
+<h4 class="subsub">Decoder</h4>
+<p>Converts n-bit binary → 2ⁿ unique output lines. Exactly one output is HIGH.</p>
+<pre><code><span class="cm">// 2-to-4 Decoder (with enable E)</span>
+D0 = E·Ā·B̄
+D1 = E·Ā·B
+D2 = E·A·B̄
+D3 = E·A·B</code></pre>
+
+<h4 class="subsub">Multiplexer (MUX)</h4>
+<p>2ⁿ data inputs + n select lines → 1 output. Routes selected input to output.</p>
+<pre><code><span class="cm">// 4-to-1 MUX: S1S0 selects which input (I0..I3) goes to Y</span>
+Y = S̄1·S̄0·I0 + S̄1·S0·I1 + S1·S̄0·I2 + S1·S0·I3</code></pre>
+
+<!-- ══════════════ SECTION B ══════════════ -->
+<div class="part-header" id="sec-b">
+  <span class="part-tag java">Section B</span>
+  <span class="part-title">Java Programming</span>
+</div>
+
+<h2 class="topic" id="recap">Recap — Class XI Java (Higher Order)</h2>
+<p>All Class XI topics are assumed. Ensure you can: write complete classes with constructors, use all String methods, sort/search arrays, handle files, and handle exceptions.</p>
+
+<!-- ─── 3. METHODS ─── -->
+<h2 class="topic" id="methods-obj">3. Methods — Object as Parameter &amp; Return Type</h2>
+
+<h3 class="sub">Passing Objects to Methods</h3>
+<p>When an object is passed, the <strong>reference</strong> is passed (pass by reference). Changes to the object's fields inside the method ARE reflected outside.</p>
+
+<pre><code><span class="kw">class</span> <span class="ty">Point</span> {
+    <span class="kw">int</span> x, y;
+    <span class="ty">Point</span>(<span class="kw">int</span> x, <span class="kw">int</span> y) { <span class="kw">this</span>.x = x; <span class="kw">this</span>.y = y; }
+
+    <span class="cm">// Method takes an object as parameter</span>
+    <span class="kw">double</span> <span class="fn">distanceTo</span>(<span class="ty">Point</span> other) {
+        <span class="kw">int</span> dx = <span class="kw">this</span>.x - other.x;
+        <span class="kw">int</span> dy = <span class="kw">this</span>.y - other.y;
+        <span class="kw">return</span> <span class="ty">Math</span>.<span class="fn">sqrt</span>(dx*dx + dy*dy);
+    }
+
+    <span class="cm">// Method RETURNS an object</span>
+    <span class="ty">Point</span> <span class="fn">midpoint</span>(<span class="ty">Point</span> other) {
+        <span class="kw">return</span> <span class="kw">new</span> <span class="ty">Point</span>((x + other.x)/2, (y + other.y)/2);
+    }
+}
+
+<span class="ty">Point</span> p1 = <span class="kw">new</span> <span class="ty">Point</span>(<span class="nm">0</span>, <span class="nm">0</span>);
+<span class="ty">Point</span> p2 = <span class="kw">new</span> <span class="ty">Point</span>(<span class="nm">3</span>, <span class="nm">4</span>);
+<span class="ty">System</span>.out.<span class="fn">println</span>(p1.<span class="fn">distanceTo</span>(p2));   <span class="cm">// 5.0</span>
+<span class="ty">Point</span> mid = p1.<span class="fn">midpoint</span>(p2);              <span class="cm">// (1, 2)</span></code></pre>
+
+<h3 class="sub">Returning Arrays from Methods</h3>
+<pre><code><span class="kw">int</span>[] <span class="fn">generateFibs</span>(<span class="kw">int</span> n) {
+    <span class="kw">int</span>[] fibs = <span class="kw">new int</span>[n];
+    fibs[<span class="nm">0</span>] = <span class="nm">0</span>; fibs[<span class="nm">1</span>] = <span class="nm">1</span>;
+    <span class="kw">for</span> (<span class="kw">int</span> i = <span class="nm">2</span>; i < n; i++)
+        fibs[i] = fibs[i-<span class="nm">1</span>] + fibs[i-<span class="nm">2</span>];
+    <span class="kw">return</span> fibs;      <span class="cm">// returns array reference</span>
+}
+
+<span class="kw">int</span>[] result = <span class="fn">generateFibs</span>(<span class="nm">10</span>);
+<span class="ty">System</span>.out.<span class="fn">println</span>(result[<span class="nm">9</span>]);   <span class="cm">// 34</span></code></pre>
+
+<h3 class="sub">Static vs Instance Methods</h3>
+<div class="table-wrap">
+<table class="diff-table">
+<thead><tr><th>Static Methods</th><th>Instance Methods</th></tr></thead>
+<tbody>
+<tr><td>Belong to the class</td><td>Belong to an object instance</td></tr>
+<tr><td>Called via class name: <code>ClassName.method()</code></td><td>Called via object: <code>obj.method()</code></td></tr>
+<tr><td>Cannot access instance variables directly</td><td>Can access all class members</td></tr>
+<tr><td>Use for utility functions</td><td>Use for object-specific behaviour</td></tr>
+<tr><td><code>Math.sqrt()</code>, <code>Arrays.sort()</code></td><td><code>str.length()</code>, <code>obj.display()</code></td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- ─── 4. ARRAYS ─── -->
+<h2 class="topic" id="arrays-str">4. Arrays &amp; String Handling</h2>
+
+<h3 class="sub">Double-Dimensional Arrays</h3>
+<pre><code><span class="cm">// Declaration and allocation</span>
+<span class="kw">int</span>[][] matrix = <span class="kw">new int</span>[<span class="nm">3</span>][<span class="nm">4</span>];    <span class="cm">// 3 rows, 4 columns</span>
+
+<span class="cm">// Initializer</span>
+<span class="kw">int</span>[][] mat = {
+    {<span class="nm">1</span>, <span class="nm">2</span>, <span class="nm">3</span>},
+    {<span class="nm">4</span>, <span class="nm">5</span>, <span class="nm">6</span>},
+    {<span class="nm">7</span>, <span class="nm">8</span>, <span class="nm">9</span>}
+};
+
+<span class="cm">// Access: mat[row][col]</span>
+<span class="cm">// Traverse</span>
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="nm">0</span>; i < mat.length; i++)          <span class="cm">// rows</span>
+    <span class="kw">for</span> (<span class="kw">int</span> j = <span class="nm">0</span>; j < mat[i].length; j++)    <span class="cm">// cols</span>
+        <span class="ty">System</span>.out.<span class="fn">print</span>(mat[i][j] + <span class="st">" "</span>);</code></pre>
+
+<h3 class="sub">Address Calculation</h3>
+<div class="callout new">
+  <div class="callout-title">★ New — Address Calculation</div>
+  Given base address, calculate address of any element. Appears in every board exam.
+</div>
+
+<pre><code><span class="cm">// Row Major (C, Java): row elements stored contiguously</span>
+Address(A[i][j]) = Base + (i × N + j) × W
+<span class="cm">// where N = number of columns, W = element size in bytes</span>
+
+<span class="cm">// Column Major (Fortran, MATLAB):</span>
+Address(A[i][j]) = Base + (j × M + i) × W
+<span class="cm">// where M = number of rows</span>
+
+<span class="cm">// Example: int A[4][5], Base=1000, W=2 bytes</span>
+<span class="cm">// Address of A[2][3] (row major):</span>
+= 1000 + (2×5 + 3) × 2 = 1000 + 13×2 = <span class="nm">1026</span></code></pre>
+
+<h3 class="sub">Matrix Operations</h3>
+<pre><code><span class="cm">// Matrix multiplication: (m×n) × (n×p) = (m×p)</span>
+<span class="kw">int</span>[][] <span class="fn">multiply</span>(<span class="kw">int</span>[][] A, <span class="kw">int</span>[][] B) {
+    <span class="kw">int</span> m = A.length, n = B.length, p = B[<span class="nm">0</span>].length;
+    <span class="kw">int</span>[][] C = <span class="kw">new int</span>[m][p];
+    <span class="kw">for</span> (<span class="kw">int</span> i=<span class="nm">0</span>; i<m; i++)
+        <span class="kw">for</span> (<span class="kw">int</span> j=<span class="nm">0</span>; j<p; j++)
+            <span class="kw">for</span> (<span class="kw">int</span> k=<span class="nm">0</span>; k<n; k++)
+                C[i][j] += A[i][k] * B[k][j];
+    <span class="kw">return</span> C;
+}
+
+<span class="cm">// Transpose: swap A[i][j] with A[j][i]</span>
+<span class="kw">for</span> (<span class="kw">int</span> i=<span class="nm">0</span>; i<n; i++)
+    <span class="kw">for</span> (<span class="kw">int</span> j=i+<span class="nm">1</span>; j<n; j++) {
+        <span class="kw">int</span> t = A[i][j]; A[i][j] = A[j][i]; A[j][i] = t;
+    }</code></pre>
+
+<h3 class="sub">StringBuffer</h3>
+<p><code>StringBuffer</code> (and <code>StringBuilder</code>) is <strong>mutable</strong> — no new object is created on modification. Use when building strings in loops.</p>
+
+<pre><code><span class="ty">StringBuffer</span> sb = <span class="kw">new</span> <span class="ty">StringBuffer</span>(<span class="st">"Hello"</span>);
+
+sb.<span class="fn">append</span>(<span class="st">" World"</span>);       <span class="cm">// "Hello World"</span>
+sb.<span class="fn">insert</span>(<span class="nm">5</span>, <span class="st">","</span>);          <span class="cm">// "Hello, World"</span>
+sb.<span class="fn">delete</span>(<span class="nm">5</span>, <span class="nm">6</span>);           <span class="cm">// "Hello World"</span>
+sb.<span class="fn">reverse</span>();              <span class="cm">// "dlroW olleH"</span>
+sb.<span class="fn">replace</span>(<span class="nm">0</span>, <span class="nm">5</span>, <span class="st">"Hi"</span>);   <span class="cm">// "Hi World"</span>
+<span class="ty">String</span> s = sb.<span class="fn">toString</span>();  <span class="cm">// convert to String</span>
+
+<span class="cm">// Length and capacity</span>
+sb.<span class="fn">length</span>();               <span class="cm">// number of chars</span>
+sb.<span class="fn">capacity</span>();             <span class="cm">// allocated buffer size</span>
+sb.<span class="fn">charAt</span>(<span class="nm">0</span>);              <span class="cm">// char at index</span>
+sb.<span class="fn">setCharAt</span>(<span class="nm">0</span>, <span class="st">'h'</span>);     <span class="cm">// mutate in place</span></code></pre>
+
+<div class="table-wrap">
+<table class="diff-table">
+<thead><tr><th>String</th><th>StringBuffer</th></tr></thead>
+<tbody>
+<tr><td>Immutable</td><td>Mutable</td></tr>
+<tr><td>New object on each operation</td><td>Same object modified</td></tr>
+<tr><td>Faster for fixed strings</td><td>Faster for repeated modifications</td></tr>
+<tr><td>Thread-safe (immutable)</td><td>Thread-safe (synchronized)</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- ─── 5. RECURSION ─── -->
+<h2 class="topic" id="recursion">5. Recursion</h2>
+
+<div class="callout new">
+  <div class="callout-title">★ New Topic — Recursion</div>
+  Recursion is a powerful technique where a method calls itself. Every recursive solution must have a <strong>base case</strong> (termination condition) and a <strong>recursive case</strong>. Without a base case → infinite recursion → <code>StackOverflowError</code>.
+</div>
+
+<h3 class="sub">How Recursion Works</h3>
+<p>Each call pushes a <strong>stack frame</strong> (local variables + return address) onto the call stack. When the base case is reached, frames unwind in LIFO order.</p>
+
+<h3 class="sub">Classic Examples</h3>
+
+<h4 class="subsub">Factorial</h4>
+<pre><code><span class="cm">// Recursive definition: n! = n × (n-1)!,  0! = 1</span>
+<span class="kw">int</span> <span class="fn">factorial</span>(<span class="kw">int</span> n) {
+    <span class="kw">if</span> (n == <span class="nm">0</span>) <span class="kw">return</span> <span class="nm">1</span>;        <span class="cm">// base case</span>
+    <span class="kw">return</span> n * <span class="fn">factorial</span>(n - <span class="nm">1</span>);  <span class="cm">// recursive case</span>
+}
+<span class="cm">// factorial(4): 4×3×2×1×1 = 24</span></code></pre>
+
+<h4 class="subsub">GCD (Euclid's Algorithm)</h4>
+<pre><code><span class="cm">// gcd(a,b) = gcd(b, a%b),  gcd(a,0) = a</span>
+<span class="kw">int</span> <span class="fn">gcd</span>(<span class="kw">int</span> a, <span class="kw">int</span> b) {
+    <span class="kw">if</span> (b == <span class="nm">0</span>) <span class="kw">return</span> a;
+    <span class="kw">return</span> <span class="fn">gcd</span>(b, a % b);
+}
+<span class="cm">// gcd(48,18): gcd(18,12) → gcd(12,6) → gcd(6,0) = 6</span></code></pre>
+
+<h4 class="subsub">Fibonacci</h4>
+<pre><code><span class="cm">// fib(n) = fib(n-1)+fib(n-2),  fib(0)=0, fib(1)=1</span>
+<span class="kw">int</span> <span class="fn">fib</span>(<span class="kw">int</span> n) {
+    <span class="kw">if</span> (n <= <span class="nm">1</span>) <span class="kw">return</span> n;
+    <span class="kw">return</span> <span class="fn">fib</span>(n-<span class="nm">1</span>) + <span class="fn">fib</span>(n-<span class="nm">2</span>);
+}
+<span class="cm">// NOTE: This is O(2^n) — exponential! Not efficient for large n.</span></code></pre>
+
+<h4 class="subsub">Binary Search (Recursive)</h4>
+<pre><code><span class="kw">int</span> <span class="fn">binarySearch</span>(<span class="kw">int</span>[] arr, <span class="kw">int</span> target, <span class="kw">int</span> low, <span class="kw">int</span> high) {
+    <span class="kw">if</span> (low > high) <span class="kw">return</span> -<span class="nm">1</span>;       <span class="cm">// base: not found</span>
+    <span class="kw">int</span> mid = (low + high) / <span class="nm">2</span>;
+    <span class="kw">if</span> (arr[mid] == target) <span class="kw">return</span> mid;
+    <span class="kw">if</span> (arr[mid] < target)
+        <span class="kw">return</span> <span class="fn">binarySearch</span>(arr, target, mid+<span class="nm">1</span>, high);
+    <span class="kw">return</span> <span class="fn">binarySearch</span>(arr, target, low, mid-<span class="nm">1</span>);
+}</code></pre>
+
+<h4 class="subsub">Power (Base Conversion)</h4>
+<pre><code><span class="cm">// Decimal to Binary using recursion</span>
+<span class="kw">void</span> <span class="fn">decToBin</span>(<span class="kw">int</span> n) {
+    <span class="kw">if</span> (n == <span class="nm">0</span>) <span class="kw">return</span>;            <span class="cm">// base</span>
+    <span class="fn">decToBin</span>(n / <span class="nm">2</span>);               <span class="cm">// recurse first (prints MSB first)</span>
+    <span class="ty">System</span>.out.<span class="fn">print</span>(n % <span class="nm">2</span>);       <span class="cm">// print remainder on return</span>
+}</code></pre>
+
+<h4 class="subsub">Tower of Hanoi</h4>
+<pre><code><span class="cm">// Move n disks from 'from' peg to 'to' peg using 'aux'</span>
+<span class="kw">void</span> <span class="fn">hanoi</span>(<span class="kw">int</span> n, <span class="kw">char</span> from, <span class="kw">char</span> to, <span class="kw">char</span> aux) {
+    <span class="kw">if</span> (n == <span class="nm">1</span>) {
+        <span class="ty">System</span>.out.<span class="fn">println</span>(<span class="st">"Move disk 1 from "</span> + from + <span class="st">" to "</span> + to);
+        <span class="kw">return</span>;
+    }
+    <span class="fn">hanoi</span>(n-<span class="nm">1</span>, from, aux, to);   <span class="cm">// move n-1 to auxiliary</span>
+    <span class="ty">System</span>.out.<span class="fn">println</span>(<span class="st">"Move disk "</span> + n + <span class="st">" from "</span> + from + <span class="st">" to "</span> + to);
+    <span class="fn">hanoi</span>(n-<span class="nm">1</span>, aux, to, from);   <span class="cm">// move n-1 from aux to dest</span>
+}
+<span class="cm">// Minimum moves for n disks = 2^n − 1</span></code></pre>
+
+<div class="callout warn">
+  <div class="callout-title">⚠ Recursion vs Iteration</div>
+  Recursion is elegant but uses more memory (stack frames). For large inputs, prefer iterative solutions. Always trace through small examples (n=1, n=2, n=3) to verify correctness.
+</div>
+
+<!-- ─── 6. INHERITANCE ─── -->
+<h2 class="topic" id="inheritance">6. Inheritance &amp; Interfaces</h2>
+
+<div class="callout new">
+  <div class="callout-title">★ New Topic — Inheritance</div>
+  Inheritance lets a class acquire properties and methods of another class. It models IS-A relationships. e.g., a <code>Dog</code> IS-A <code>Animal</code>.
+</div>
+
+<h3 class="sub">Basic Inheritance</h3>
+<pre><code><span class="kw">class</span> <span class="ty">Animal</span> {                    <span class="cm">// Superclass</span>
+    <span class="ty">String</span> name;
+    <span class="kw">int</span> age;
+
+    <span class="ty">Animal</span>(<span class="ty">String</span> n, <span class="kw">int</span> a) { name = n; age = a; }
+
+    <span class="kw">void</span> <span class="fn">speak</span>() {
+        <span class="ty">System</span>.out.<span class="fn">println</span>(<span class="st">"..."</span>);
+    }
+    <span class="kw">void</span> <span class="fn">display</span>() {
+        <span class="ty">System</span>.out.<span class="fn">println</span>(name + <span class="st">" age:"</span> + age);
+    }
+}
+
+<span class="kw">class</span> <span class="ty">Dog</span> <span class="kw">extends</span> <span class="ty">Animal</span> {        <span class="cm">// Subclass</span>
+    <span class="ty">String</span> breed;
+
+    <span class="ty">Dog</span>(<span class="ty">String</span> n, <span class="kw">int</span> a, <span class="ty">String</span> b) {
+        <span class="kw">super</span>(n, a);              <span class="cm">// calls superclass constructor</span>
+        breed = b;
+    }
+
+    @Override
+    <span class="kw">void</span> <span class="fn">speak</span>() {               <span class="cm">// METHOD OVERRIDING</span>
+        <span class="ty">System</span>.out.<span class="fn">println</span>(<span class="st">"Woof!"</span>);
+    }
+
+    <span class="kw">void</span> <span class="fn">fetch</span>() {               <span class="cm">// new method in subclass</span>
+        <span class="ty">System</span>.out.<span class="fn">println</span>(name + <span class="st">" fetches the ball!"</span>);
+    }
+}
+
+<span class="ty">Dog</span> d = <span class="kw">new</span> <span class="ty">Dog</span>(<span class="st">"Rex"</span>, <span class="nm">3</span>, <span class="st">"Labrador"</span>);
+d.<span class="fn">display</span>();    <span class="cm">// inherited from Animal</span>
+d.<span class="fn">speak</span>();     <span class="cm">// Dog's version — OVERRIDDEN</span>
+d.<span class="fn">fetch</span>();     <span class="cm">// Dog's own method</span></code></pre>
+
+<h3 class="sub">Access in Inheritance</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Modifier</th><th>Same Class</th><th>Same Package</th><th>Subclass</th><th>Other</th></tr></thead>
+<tbody>
+<tr><td><code>public</code></td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>protected</code></td><td>✓</td><td>✓</td><td>✓</td><td>✗</td></tr>
+<tr><td><em>default</em> (friendly)</td><td>✓</td><td>✓</td><td>✗</td><td>✗</td></tr>
+<tr><td><code>private</code></td><td>✓</td><td>✗</td><td>✗</td><td>✗</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="callout note">
+  <div class="callout-title">protected in Inheritance</div>
+  <code>protected</code> members are accessible in the subclass even if it's in a different package. This is the ideal modifier for fields that subclasses should access but outside code shouldn't.
+</div>
+
+<h3 class="sub">super Keyword</h3>
+<pre><code><span class="ty">Dog</span>(<span class="ty">String</span> n, <span class="kw">int</span> a, <span class="ty">String</span> b) {
+    <span class="kw">super</span>(n, a);          <span class="cm">// call superclass constructor (MUST be first line)</span>
+    breed = b;
+}
+
+<span class="kw">void</span> <span class="fn">display</span>() {
+    <span class="kw">super</span>.<span class="fn">display</span>();      <span class="cm">// call superclass version of an overridden method</span>
+    <span class="ty">System</span>.out.<span class="fn">println</span>(<span class="st">"Breed: "</span> + breed);
+}</code></pre>
+
+<h3 class="sub">Abstract Classes</h3>
+<pre><code><span class="kw">abstract class</span> <span class="ty">Shape</span> {
+    <span class="ty">String</span> color;
+
+    <span class="ty">Shape</span>(<span class="ty">String</span> c) { color = c; }
+
+    <span class="kw">abstract double</span> <span class="fn">area</span>();    <span class="cm">// abstract — no body, MUST be overridden</span>
+    <span class="kw">abstract double</span> <span class="fn">perimeter</span>();
+
+    <span class="kw">void</span> <span class="fn">display</span>() {            <span class="cm">// concrete method — can be inherited</span>
+        <span class="ty">System</span>.out.<span class="fn">println</span>(<span class="st">"Color: "</span> + color + <span class="st">", Area: "</span> + <span class="fn">area</span>());
+    }
+}
+
+<span class="kw">class</span> <span class="ty">Circle</span> <span class="kw">extends</span> <span class="ty">Shape</span> {
+    <span class="kw">double</span> r;
+    <span class="ty">Circle</span>(<span class="ty">String</span> c, <span class="kw">double</span> r) { <span class="kw">super</span>(c); <span class="kw">this</span>.r = r; }
+
+    @Override <span class="kw">double</span> <span class="fn">area</span>()      { <span class="kw">return</span> <span class="ty">Math</span>.PI * r * r; }
+    @Override <span class="kw">double</span> <span class="fn">perimeter</span>() { <span class="kw">return</span> <span class="nm">2</span> * <span class="ty">Math</span>.PI * r; }
+}
+
+<span class="cm">// Cannot instantiate abstract class:</span>
+<span class="cm">// Shape s = new Shape("red"); // ERROR</span>
+<span class="ty">Shape</span> s = <span class="kw">new</span> <span class="ty">Circle</span>(<span class="st">"red"</span>, <span class="nm">5.0</span>);   <span class="cm">// OK — polymorphism</span></code></pre>
+
+<h3 class="sub">Polymorphism &amp; Dynamic Binding</h3>
+<pre><code><span class="cm">// Superclass reference → subclass object (upcasting)</span>
+<span class="ty">Animal</span> a = <span class="kw">new</span> <span class="ty">Dog</span>(<span class="st">"Rex"</span>, <span class="nm">3</span>, <span class="st">"Lab"</span>);
+a.<span class="fn">speak</span>();    <span class="cm">// calls Dog's speak() — DYNAMIC/LATE BINDING at runtime</span>
+<span class="cm">// a.fetch(); // COMPILE ERROR — Animal reference doesn't know fetch()</span>
+
+<span class="cm">// Array of base type — polymorphic</span>
+<span class="ty">Shape</span>[] shapes = { <span class="kw">new</span> <span class="ty">Circle</span>(<span class="st">"r"</span>, <span class="nm">3</span>), <span class="kw">new</span> <span class="ty">Rectangle</span>(<span class="st">"b"</span>, <span class="nm">4</span>, <span class="nm">5</span>) };
+<span class="kw">for</span> (<span class="ty">Shape</span> sh : shapes)
+    <span class="ty">System</span>.out.<span class="fn">println</span>(sh.<span class="fn">area</span>());  <span class="cm">// each calls its own area()</span></code></pre>
+
+<h3 class="sub">Interfaces (Conceptual)</h3>
+<pre><code><span class="cm">// Interface: 100% abstract contract — all methods are implicitly public abstract</span>
+<span class="kw">interface</span> <span class="ty">Drawable</span> {
+    <span class="kw">void</span> <span class="fn">draw</span>();            <span class="cm">// no body</span>
+    <span class="kw">double</span> <span class="fn">area</span>();          <span class="cm">// no body</span>
+}
+
+<span class="cm">// Implementing class MUST implement ALL interface methods</span>
+<span class="kw">class</span> <span class="ty">Triangle</span> <span class="kw">implements</span> <span class="ty">Drawable</span> {
+    <span class="kw">public void</span> <span class="fn">draw</span>()    { <span class="ty">System</span>.out.<span class="fn">println</span>(<span class="st">"Drawing triangle"</span>); }
+    <span class="kw">public double</span> <span class="fn">area</span>() { <span class="kw">return</span> <span class="nm">0.5</span> * base * height; }
+}
+
+<span class="cm">// A class can implement MULTIPLE interfaces (unlike extends — single only)</span>
+<span class="kw">class</span> <span class="ty">Square</span> <span class="kw">implements</span> <span class="ty">Drawable</span>, <span class="ty">Resizable</span> { ... }</code></pre>
+
+<div class="table-wrap">
+<table class="diff-table">
+<thead><tr><th>Abstract Class</th><th>Interface</th></tr></thead>
+<tbody>
+<tr><td>Can have concrete methods</td><td>All methods abstract (Java 7)</td></tr>
+<tr><td>Can have fields</td><td>Only constants (public static final)</td></tr>
+<tr><td>Single inheritance only</td><td>Multiple interfaces implementable</td></tr>
+<tr><td>Use for IS-A with shared code</td><td>Use for CAN-DO capability contracts</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- ══════════════ SECTION C ══════════════ -->
+<div class="part-header" id="sec-c">
+  <span class="part-tag python">Section C</span>
+  <span class="part-title">Python (Advanced) &amp; Conceptual</span>
+</div>
+
+<!-- ─── 7. PYTHON ─── -->
+<h2 class="topic" id="python-adv">7. Programming in Python — Advanced</h2>
+
+<h3 class="sub">Strings in Python</h3>
+<pre><code>s = <span class="st">"Hello, World!"</span>
+
+<span class="cm"># Slicing: s[start:stop:step]  (stop is exclusive)</span>
+s[<span class="nm">0</span>:<span class="nm">5</span>]      <span class="cm"># "Hello"</span>
+s[<span class="nm">7</span>:]       <span class="cm"># "World!"</span>
+s[:<span class="nm">5</span>]       <span class="cm"># "Hello"</span>
+s[::-<span class="nm">1</span>]     <span class="cm"># "!dlroW ,olleH"  (reverse)</span>
+s[<span class="nm">0</span>:<span class="nm">10</span>:<span class="nm">2</span>]   <span class="cm"># "Hlo o"</span>
+
+<span class="cm"># String operations</span>
+<span class="st">"Hi"</span> + <span class="st">" There"</span>   <span class="cm"># concatenation → "Hi There"</span>
+<span class="st">"Ha"</span> * <span class="nm">3</span>          <span class="cm"># repetition → "HaHaHa"</span>
+<span class="st">'l'</span> <span class="kw">in</span> s           <span class="cm"># membership → True</span>
+
+<span class="cm"># Key built-in methods</span>
+s.<span class="fn">lower</span>()          <span class="cm"># "hello, world!"</span>
+s.<span class="fn">upper</span>()          <span class="cm"># "HELLO, WORLD!"</span>
+s.<span class="fn">capitalize</span>()     <span class="cm"># "Hello, world!"</span>
+s.<span class="fn">title</span>()          <span class="cm"># "Hello, World!" (each word capitalised)</span>
+s.<span class="fn">count</span>(<span class="st">'l'</span>)       <span class="cm"># 3</span>
+s.<span class="fn">find</span>(<span class="st">'World'</span>)    <span class="cm"># 7 (returns -1 if not found)</span>
+s.<span class="fn">index</span>(<span class="st">'World'</span>)   <span class="cm"># 7 (raises ValueError if not found)</span>
+s.<span class="fn">replace</span>(<span class="st">'l'</span>,<span class="st">'L'</span>)<span class="cm"># "HeLLo, WorLd!"</span>
+s.<span class="fn">split</span>(<span class="st">','</span>)       <span class="cm"># ['Hello', ' World!']</span>
+<span class="st">'-'</span>.<span class="fn">join</span>([<span class="st">'a'</span>,<span class="st">'b'</span>])<span class="cm"># 'a-b'</span>
+s.<span class="fn">strip</span>()          <span class="cm"># removes leading and trailing whitespace</span>
+s.<span class="fn">lstrip</span>()         <span class="cm"># strip left only</span>
+s.<span class="fn">rstrip</span>()         <span class="cm"># strip right only</span>
+s.<span class="fn">startswith</span>(<span class="st">'He'</span>)<span class="cm"># True</span>
+s.<span class="fn">endswith</span>(<span class="st">'!'</span>)   <span class="cm"># True</span>
+s.<span class="fn">isalpha</span>()        <span class="cm"># False (has comma, space)</span>
+s.<span class="fn">isdigit</span>()        <span class="cm"># False</span>
+s.<span class="fn">isalnum</span>()        <span class="cm"># False</span>
+s.<span class="fn">islower</span>()        <span class="cm"># False</span>
+s.<span class="fn">isupper</span>()        <span class="cm"># False</span>
+s.<span class="fn">isspace</span>()        <span class="cm"># False</span>
+s.<span class="fn">partition</span>(<span class="st">','</span>)   <span class="cm"># ('Hello', ',', ' World!')</span></code></pre>
+
+<h3 class="sub">Lists in Python</h3>
+<pre><code>nums = [<span class="nm">3</span>, <span class="nm">1</span>, <span class="nm">4</span>, <span class="nm">1</span>, <span class="nm">5</span>, <span class="nm">9</span>]
+
+<span class="cm"># Indexing and slicing (same as strings)</span>
+nums[<span class="nm">0</span>]          <span class="cm"># 3</span>
+nums[-<span class="nm">1</span>]         <span class="cm"># 9</span>
+nums[<span class="nm">1</span>:<span class="nm">4</span>]        <span class="cm"># [1, 4, 1]</span>
+
+<span class="cm"># Operations</span>
+[<span class="nm">1</span>,<span class="nm">2</span>] + [<span class="nm">3</span>,<span class="nm">4</span>]    <span class="cm"># [1,2,3,4]</span>
+[<span class="nm">0</span>] * <span class="nm">5</span>           <span class="cm"># [0,0,0,0,0]</span>
+<span class="nm">5</span> <span class="kw">in</span> nums          <span class="cm"># True</span>
+
+<span class="cm"># Mutation methods</span>
+nums.<span class="fn">append</span>(<span class="nm">2</span>)           <span class="cm"># add at end</span>
+nums.<span class="fn">insert</span>(<span class="nm">0</span>, <span class="nm">99</span>)       <span class="cm"># insert at index 0</span>
+nums.<span class="fn">extend</span>([<span class="nm">7</span>, <span class="nm">8</span>])      <span class="cm"># append all items of another list</span>
+nums.<span class="fn">remove</span>(<span class="nm">1</span>)           <span class="cm"># remove first occurrence of 1</span>
+popped = nums.<span class="fn">pop</span>()      <span class="cm"># remove and return last element</span>
+nums.<span class="fn">pop</span>(<span class="nm">2</span>)               <span class="cm"># remove at index 2</span>
+nums.<span class="fn">sort</span>()               <span class="cm"># in-place ascending sort</span>
+nums.<span class="fn">sort</span>(reverse=<span class="cn">True</span>)  <span class="cm"># descending</span>
+nums.<span class="fn">reverse</span>()            <span class="cm"># in-place reverse</span>
+
+<span class="cm"># Non-mutating</span>
+<span class="fn">sorted</span>(nums)              <span class="cm"># returns new sorted list</span>
+<span class="fn">len</span>(nums)                 <span class="cm"># number of elements</span>
+<span class="fn">min</span>(nums)                 <span class="cm"># minimum value</span>
+<span class="fn">max</span>(nums)                 <span class="cm"># maximum value</span>
+<span class="fn">sum</span>(nums)                 <span class="cm"># sum of all elements</span>
+nums.<span class="fn">count</span>(<span class="nm">1</span>)             <span class="cm"># frequency of 1</span>
+nums.<span class="fn">index</span>(<span class="nm">9</span>)             <span class="cm"># index of first 9</span>
+
+<span class="cm"># Nested lists</span>
+matrix = [[<span class="nm">1</span>,<span class="nm">2</span>],[<span class="nm">3</span>,<span class="nm">4</span>]]
+matrix[<span class="nm">0</span>][<span class="nm">1</span>]   <span class="cm"># 2</span></code></pre>
+
+<h3 class="sub">Tuples in Python</h3>
+<pre><code>t = (<span class="nm">1</span>, <span class="nm">2</span>, <span class="nm">3</span>, <span class="nm">2</span>, <span class="nm">4</span>)
+
+<span class="cm"># Immutable — cannot change elements</span>
+<span class="cm"># t[0] = 99  → TypeError</span>
+
+<span class="cm"># All read operations same as list</span>
+t[<span class="nm">1</span>:<span class="nm">3</span>]          <span class="cm"># (2, 3)</span>
+<span class="nm">2</span> <span class="kw">in</span> t           <span class="cm"># True</span>
+<span class="fn">len</span>(t)           <span class="cm"># 5</span>
+t.<span class="fn">count</span>(<span class="nm">2</span>)       <span class="cm"># 2</span>
+t.<span class="fn">index</span>(<span class="nm">4</span>)       <span class="cm"># 4</span>
+
+<span class="cm"># Tuple assignment (packing/unpacking)</span>
+a, b, c = (<span class="nm">1</span>, <span class="nm">2</span>, <span class="nm">3</span>)    <span class="cm"># a=1, b=2, c=3</span>
+x, y = y, x             <span class="cm"># swap values</span>
+
+<span class="cm"># Single-element tuple needs trailing comma</span>
+single = (<span class="nm">42</span>,)    <span class="cm"># not (42) which is just int</span></code></pre>
+
+<div class="table-wrap">
+<table class="diff-table">
+<thead><tr><th>List</th><th>Tuple</th></tr></thead>
+<tbody>
+<tr><td>Mutable</td><td>Immutable</td></tr>
+<tr><td><code>[]</code> syntax</td><td><code>()</code> syntax</td></tr>
+<tr><td>Has append, remove, sort…</td><td>Only count(), index()</td></tr>
+<tr><td>Slightly slower</td><td>Faster (fixed size)</td></tr>
+<tr><td>Can be used as dict value</td><td>Can be used as dict KEY</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- ─── 8. DATA STRUCTURES ─── -->
+<h2 class="topic" id="data-struct">8. Data Structures — Binary Trees (Conceptual)</h2>
+
+<div class="callout new">
+  <div class="callout-title">★ New Topic — Binary Trees</div>
+  Binary trees are the first non-linear data structure in the syllabus. This topic is <em>conceptual only</em> — no coding required, but you must know all terminology and traversals.
+</div>
+
+<h3 class="sub">Tree Terminology</h3>
+<dl>
+  <dt>Root</dt>
+  <dd>The topmost node. It has no parent. Every tree has exactly one root.</dd>
+  <dt>Node</dt>
+  <dd>Each element in the tree. Contains data + references to children.</dd>
+  <dt>Edge</dt>
+  <dd>Link between a parent and child node.</dd>
+  <dt>Leaf / External Node</dt>
+  <dd>Node with NO children. Both left and right subtrees are null.</dd>
+  <dt>Internal Node</dt>
+  <dd>Node with at least one child.</dd>
+  <dt>Degree of a node</dt>
+  <dd>Number of children of that node. In a binary tree: 0, 1, or 2.</dd>
+  <dt>Height of a node</dt>
+  <dd>Length of the longest path from that node to a leaf. Height of a leaf = 0.</dd>
+  <dt>Height of a tree</dt>
+  <dd>Height of the root node.</dd>
+  <dt>Depth of a node</dt>
+  <dd>Length of path from root to that node. Depth of root = 0.</dd>
+  <dt>Level</dt>
+  <dd>Set of all nodes at the same depth. Root is at level 0 (or 1 in some conventions).</dd>
+  <dt>Size</dt>
+  <dd>Total number of nodes in the tree.</dd>
+  <dt>Sibling</dt>
+  <dd>Nodes sharing the same parent.</dd>
+  <dt>Subtree</dt>
+  <dd>A node and all its descendants form a subtree.</dd>
+</dl>
+
+<h3 class="sub">Binary Tree Definition</h3>
+<p>A tree where each node has <strong>at most two children</strong>: left child and right child.</p>
+
+<pre><code><span class="cm">/* Example tree:</span>
+<span class="cm">         10           ← Root, depth 0, height 2</span>
+        /  \</span>
+<span class="cm">       5   15         ← Level 1</span>
+      / \    \</span>
+<span class="cm">     3   7   20       ← Level 2 (leaves)</span>
+</span>
+Size = 6
+Height = 2
+Degree of 10 = 2 (two children)
+Degree of 15 = 1 (one child: 20)
+Siblings: (5,15), (3,7) */</span></code></pre>
+
+<h3 class="sub">Tree Traversals</h3>
+<p>Three standard depth-first traversals — differ only in when the root is visited relative to subtrees:</p>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th>Traversal</th><th>Order</th><th>Mnemonic</th><th>Result on example</th></tr></thead>
+<tbody>
+<tr><td><strong>In-order</strong></td><td>Left → Root → Right</td><td>LNR</td><td>3, 5, 7, 10, 15, 20</td></tr>
+<tr><td><strong>Pre-order</strong></td><td>Root → Left → Right</td><td>NLR</td><td>10, 5, 3, 7, 15, 20</td></tr>
+<tr><td><strong>Post-order</strong></td><td>Left → Right → Root</td><td>LRN</td><td>3, 7, 5, 20, 15, 10</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="callout tip">
+  <div class="callout-title">💡 BST In-order = Sorted</div>
+  For a Binary Search Tree (BST), in-order traversal always produces elements in <strong>ascending sorted order</strong>. This is a key property to remember.
+</div>
+
+<h3 class="sub">Binary Search Tree (BST) Properties</h3>
+<ul>
+  <li>Left subtree contains only nodes with values <strong>less than</strong> the root.</li>
+  <li>Right subtree contains only nodes with values <strong>greater than</strong> the root.</li>
+  <li>Both left and right subtrees are also BSTs.</li>
+  <li>Search in a BST is O(log n) on average.</li>
+</ul>
+
+<!-- ─── 9. COMPLEXITY ─── -->
+<h2 class="topic" id="complexity">9. Complexity &amp; Big O Notation</h2>
+
+<div class="callout new">
+  <div class="callout-title">★ New Topic — Complexity Analysis</div>
+  Big O measures how runtime/space <em>scales</em> as input size n grows. Ignore constants and lower-order terms — only the dominant term matters.
+</div>
+
+<h3 class="sub">Big O Notation</h3>
+<p>f(n) = O(g(n)) means: for large n, f(n) grows no faster than c·g(n) for some constant c. We care about the <strong>worst-case</strong> scenario.</p>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th>Notation</th><th>Name</th><th>Example</th><th>Growth</th></tr></thead>
+<tbody>
+<tr><td><code>O(1)</code></td><td>Constant</td><td>Array index, push/pop</td><td>No change with n</td></tr>
+<tr><td><code>O(log n)</code></td><td>Logarithmic</td><td>Binary search</td><td>Doubles n → +1 step</td></tr>
+<tr><td><code>O(n)</code></td><td>Linear</td><td>Linear search, single loop</td><td>Proportional to n</td></tr>
+<tr><td><code>O(n log n)</code></td><td>Linearithmic</td><td>Merge sort, Heap sort</td><td>Slightly worse than linear</td></tr>
+<tr><td><code>O(n²)</code></td><td>Quadratic</td><td>Bubble/Selection/Insertion sort, nested loops</td><td>n=100 → 10,000 ops</td></tr>
+<tr><td><code>O(2ⁿ)</code></td><td>Exponential</td><td>Naive Fibonacci, subsets</td><td>n=30 → billion ops</td></tr>
+<tr><td><code>O(n!)</code></td><td>Factorial</td><td>Brute-force TSP</td><td>Unusable for n &gt; 12</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3 class="sub">Algorithm Complexity Summary</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Algorithm</th><th>Best</th><th>Average</th><th>Worst</th></tr></thead>
+<tbody>
+<tr><td>Linear Search</td><td>O(1)</td><td>O(n)</td><td>O(n)</td></tr>
+<tr><td>Binary Search</td><td>O(1)</td><td>O(log n)</td><td>O(log n)</td></tr>
+<tr><td>Bubble Sort</td><td>O(n)</td><td>O(n²)</td><td>O(n²)</td></tr>
+<tr><td>Selection Sort</td><td>O(n²)</td><td>O(n²)</td><td>O(n²)</td></tr>
+<tr><td>Insertion Sort</td><td>O(n)</td><td>O(n²)</td><td>O(n²)</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3 class="sub">How to Calculate Complexity</h3>
+<pre><code><span class="cm">// O(1): single operation, no loop</span>
+<span class="kw">int</span> x = arr[<span class="nm">5</span>];
+
+<span class="cm">// O(n): single loop of n iterations</span>
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="nm">0</span>; i < n; i++) { ... }
+
+<span class="cm">// O(n²): nested loops, each n iterations</span>
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="nm">0</span>; i < n; i++)
+    <span class="kw">for</span> (<span class="kw">int</span> j = <span class="nm">0</span>; j < n; j++) { ... }
+
+<span class="cm">// O(log n): loop divides n by constant each time</span>
+<span class="kw">while</span> (n > <span class="nm">1</span>) { n = n / <span class="nm">2</span>; }
+
+<span class="cm">// O(n log n): outer loop n, inner loop log n (or vice versa)</span>
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="nm">0</span>; i < n; i++)           <span class="cm">// n times</span>
+    <span class="kw">for</span> (<span class="kw">int</span> j = <span class="nm">1</span>; j < n; j *= <span class="nm">2</span>) { ... } <span class="cm">// log n times</span>
+
+<span class="cm">// To find dominant term: keep only the fastest-growing term</span>
+<span class="cm">// 3n² + 5n + 100 → O(n²)</span>
+<span class="cm">// n log n + n   → O(n log n)</span></code></pre>
+
+<h3 class="sub">Cases of Analysis</h3>
+<dl>
+  <dt>Best Case (Ω — Omega)</dt>
+  <dd>Minimum operations on the most favourable input. e.g., Linear search: target is first element → O(1).</dd>
+  <dt>Average Case (Θ — Theta)</dt>
+  <dd>Expected operations for random input. e.g., Linear search: target is in the middle → O(n/2) = O(n).</dd>
+  <dt>Worst Case (O — Big O)</dt>
+  <dd>Maximum operations on the worst input. e.g., Linear search: target is last or absent → O(n). <strong>Big O typically refers to worst case.</strong></dd>
+</dl>
+
+<hr>
+<p style="text-align:center; color: var(--text-dim); font-family: var(--font-head); font-size:.8rem; letter-spacing:.1em;">
+  ISC CLASS XII · COMPUTER SCIENCE NOTES · CISCE EXAMINATION 2028<br>
+  Covers all topics from the official CISCE syllabus
+</p>
+
+</body>
+</html>

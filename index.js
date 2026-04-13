@@ -292,6 +292,7 @@ app.get("/printQuiz", async (req, res) => {
       __dirname,
       "public",
       "resources",
+      "quizes",
       `${topic}.json`,
     );
     const quizData = JSON.parse(await fs.readFile(quizFilePath, "utf8"));
@@ -954,7 +955,7 @@ app.get("/printQuiz", async (req, res) => {
                     </div>
                     <p>Please ensure:</p>
                     <ul>
-                        <li>The quiz file exists at: <code>/public/resources/${topic}.json</code></li>
+                        <li>The quiz file exists at: <code>/public/resources/quizes/${topic}.json</code></li>
                         <li>All required packages are installed: <code>pdf-lib</code></li>
                     </ul>
                     <p><a href="/resources/">← Back to Resources</a></p>

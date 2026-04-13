@@ -1,0 +1,2234 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ISC Class XI — Computer Science Notes</title>
+		<link rel="stylesheet" href="../style.css" />
+		<link rel="icon" href="../../../logo.png"/>
+	</head>
+	<body>
+		<header>
+			<a
+				id="back-btn"
+				href="../"
+				style="
+					font-size: 1.5rem;
+					color: var(--text);
+					text-decoration: none;
+					display: flex;
+					align-items: center;
+				"
+			>
+				<i class="fa-solid fa-arrow-left"></i>
+			</a>
+			<h1>Class XI — Computer Science</h1>
+			<div class="header-actions">
+				<button id="lightModeBtn" title="Toggle light mode">
+					<i class="fa-solid fa-sun"></i>
+					<span class="btn-label">Light</span>
+				</button>
+				<button
+					id="printBtn"
+					title="Print this page"
+					onclick="window.print()"
+				>
+					<i class="fa-solid fa-print"></i>
+					<span class="btn-label">Print</span>
+				</button>
+			</div>
+			<ul></ul>
+		</header>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"></script>
+		<script>
+			// Light mode toggle
+			const lightModeBtn = document.getElementById("lightModeBtn");
+
+			// Check for saved preference or system preference
+			const savedTheme =
+				localStorage.getItem("theme") ||
+				(window.matchMedia("(prefers-color-scheme: light)").matches
+					? "light"
+					: "dark");
+			if (savedTheme === "light") {
+				document.documentElement.style.colorScheme = "light";
+				lightModeBtn.innerHTML =
+					'<i class="fa-solid fa-moon"></i><span class="btn-label">Dark</span>';
+			}
+
+			lightModeBtn.addEventListener("click", () => {
+				const currentTheme =
+					document.documentElement.style.colorScheme || "dark";
+				const newTheme = currentTheme === "light" ? "dark" : "light";
+				document.documentElement.style.colorScheme = newTheme;
+				localStorage.setItem("theme", newTheme);
+				lightModeBtn.innerHTML =
+					newTheme === "light"
+						? '<i class="fa-solid fa-moon"></i><span class="btn-label">Dark</span>'
+						: '<i class="fa-solid fa-sun"></i><span class="btn-label">Light</span>';
+			});
+		</script>
+		<!-- ══════════════ COVER ══════════════ -->
+		<div class="cover">
+			<div class="cover-label">CISCE · ISC Examination 2028</div>
+			<h1>Computer Science<br />Class XI</h1>
+			<div class="cover-sub">
+				Complete Theory &amp; Coding Notes — Paper I &amp; II
+			</div>
+			<div class="cover-badges">
+				<span class="badge blue">Section A — Hardware</span>
+				<span class="badge blue">Section B — Java</span>
+				<span class="badge green">Section C — Python</span>
+				<span class="badge orange">Trends &amp; Ethics</span>
+			</div>
+		</div>
+
+		<!-- ══════════════ TOC ══════════════ -->
+		<nav class="toc">
+			<h2>Table of Contents</h2>
+			<ol>
+				<h3 class="toc-section">
+					<strong>Section A — Hardware</strong>
+				</h3>
+				<li><a href="#numeration">System of Numeration</a></li>
+				<li><a href="#encodings">Encodings</a></li>
+				<li>
+					<a href="#proplogic"
+						>Propositional Logic, Gates &amp; Arithmetic</a
+					>
+				</li>
+				<h3 class="toc-section"><strong>Section B — Java</strong></h3>
+				<li><a href="#oop-intro">Introduction to OOP using Java</a></li>
+				<li><a href="#objects">Objects &amp; Classes</a></li>
+				<li>
+					<a href="#primitives"
+						>Primitive Types, Wrapper Classes &amp; Casting</a
+					>
+				</li>
+				<li><a href="#variables">Variables &amp; Expressions</a></li>
+				<li><a href="#statements">Statements &amp; Scope</a></li>
+				<li><a href="#methods">Methods &amp; Constructors</a></li>
+				<li><a href="#arrays">Arrays &amp; Strings</a></li>
+				<li><a href="#fileio">Basic I/O &amp; File Handling</a></li>
+				<h3 class="toc-section"><strong>Section C — Python</strong></h3>
+				<li><a href="#python">Introduction to Python</a></li>
+				<li>
+					<a href="#ethics"
+						>Trends in Computing &amp; Ethical Issues</a
+					>
+				</li>
+			</ol>
+		</nav>
+
+		<!-- ══════════════ SECTION A ══════════════ -->
+		<div class="part-header" id="sec-a">
+			<span class="part-tag hardware">Section A</span>
+			<span class="part-title">Hardware</span>
+		</div>
+
+		<!-- ─── 1. NUMERATION ─── -->
+		<h2 class="topic" id="numeration">1. System of Numeration</h2>
+
+		<p>
+			A <strong>number system</strong> defines how numbers are represented
+			using a set of symbols (digits) and a base (radix). The
+			<em>positional value</em> of each digit depends on its position and
+			the base.
+		</p>
+
+		<h3 class="sub">Bases Covered</h3>
+		<div class="table-wrap">
+			<table>
+				<thead>
+					<tr>
+						<th>System</th>
+						<th>Base</th>
+						<th>Digits</th>
+						<th>Prefix</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Binary</td>
+						<td>2</td>
+						<td>0, 1</td>
+						<td><code>0b</code></td>
+					</tr>
+					<tr>
+						<td>Octal</td>
+						<td>8</td>
+						<td>0–7</td>
+						<td><code>0</code></td>
+					</tr>
+					<tr>
+						<td>Decimal</td>
+						<td>10</td>
+						<td>0–9</td>
+						<td>—</td>
+					</tr>
+					<tr>
+						<td>Hexadecimal</td>
+						<td>16</td>
+						<td>0–9, A–F</td>
+						<td><code>0x</code></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<h3 class="sub">Conversions</h3>
+
+		<h4 class="subsub">Decimal → Binary (Repeated Division)</h4>
+		<p>Divide by 2 repeatedly; collect remainders bottom-up.</p>
+		<pre><code><span class="cm">// Example: 45 → binary</span>
+45 ÷ 2 = 22 R <span class="nm">1</span>
+22 ÷ 2 = 11 R <span class="nm">0</span>
+11 ÷ 2 =  5 R <span class="nm">1</span>
+ 5 ÷ 2 =  2 R <span class="nm">1</span>
+ 2 ÷ 2 =  1 R <span class="nm">0</span>
+ 1 ÷ 2 =  0 R <span class="nm">1</span>   ← MSB
+Result: <span class="nm">101101</span></code></pre>
+
+		<h4 class="subsub">Binary → Decimal (Positional Weights)</h4>
+		<pre><code>101101 = 1×2⁵ + 0×2⁴ + 1×2³ + 1×2² + 0×2¹ + 1×2⁰
+       = 32 + 0 + 8 + 4 + 0 + 1 = <span class="nm">45</span></code></pre>
+
+		<h4 class="subsub">Binary ↔ Octal (Groups of 3)</h4>
+		<pre><code>Binary:   101 101
+Groups:    5    5   → Octal: <span class="nm">55</span>
+
+Octal 73: 7 = 111,  3 = 011  → Binary: <span class="nm">111011</span></code></pre>
+
+		<h4 class="subsub">Binary ↔ Hex (Groups of 4)</h4>
+		<pre><code>Binary: 1010 1101
+Hex:      A    D   → <span class="nm">0xAD</span>
+
+Hex B4: B = 1011, 4 = 0100 → Binary: <span class="nm">10110100</span></code></pre>
+
+		<h3 class="sub">Arithmetic in Different Bases</h3>
+
+		<h4 class="subsub">Binary Addition</h4>
+		<div class="table-wrap">
+			<table>
+				<thead>
+					<tr>
+						<th>A</th>
+						<th>B</th>
+						<th>Sum</th>
+						<th>Carry</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>0</td>
+						<td>1</td>
+						<td>1</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>0</td>
+						<td>1</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>1</td>
+						<td>0</td>
+						<td>1</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<h4 class="subsub">1's Complement Subtraction</h4>
+		<p>
+			Invert all bits of the subtrahend, then add. If carry-out occurs,
+			add it back (end-around carry). If no carry, result is negative →
+			take 1's complement and prefix minus.
+		</p>
+		<pre><code><span class="cm">// 7 - 5 in 4-bit</span>
+ 7 = 0111
+~5 = 1010   <span class="cm">// 1's complement of 5 (0101)</span>
+     ────
+    10001   <span class="cm">// carry = 1</span>
++       1   <span class="cm">// end-around carry</span>
+    = 0010  = <span class="nm">2</span> ✓</code></pre>
+
+		<h4 class="subsub">2's Complement Subtraction</h4>
+		<p>
+			<mark>2's complement = 1's complement + 1</mark>. This is the
+			standard method used in modern hardware.
+		</p>
+		<pre><code><span class="cm">// 7 - 5</span>
+ 7 = 0111
+-5 = 1011   <span class="cm">// 2's complement of 5</span>
+     ────
+  1 0010   <span class="cm">// discard carry</span>
+    = 0010 = <span class="nm">2</span> ✓</code></pre>
+
+		<div class="callout note">
+			<div class="callout-title">📌 Exam Tip</div>
+			For subtraction questions: always show step-by-step complement
+			calculation, carry analysis, and final answer. Mention end-around
+			carry explicitly for 1's complement.
+		</div>
+
+		<!-- ─── 2. ENCODINGS ─── -->
+		<h2 class="topic" id="encodings">2. Encodings</h2>
+
+		<dl>
+			<dt>ASCII</dt>
+			<dd>
+				7-bit encoding (128 characters). Covers English letters, digits,
+				punctuation, control codes. <strong>Cannot</strong> represent
+				most non-Latin scripts.
+			</dd>
+			<dt>ISCII</dt>
+			<dd>
+				Indian Standard Code for Information Interchange. 8-bit. Covers
+				Devanagari and other Indian scripts by extending ASCII.
+			</dd>
+			<dt>Unicode</dt>
+			<dd>
+				Universal encoding standard supporting 140,000+ characters from
+				all world scripts. Java strings are internally Unicode (UTF-16).
+			</dd>
+			<dt>UTF-8</dt>
+			<dd>
+				Variable-width (1–4 bytes). Backward-compatible with ASCII. The
+				most common encoding on the web.
+			</dd>
+			<dt>UTF-16</dt>
+			<dd>
+				Fixed-width 2 bytes for BMP; 4 bytes for supplementary. Used
+				internally by Java and Windows.
+			</dd>
+		</dl>
+
+		<div class="callout note">
+			<div class="callout-title">Java &amp; Unicode</div>
+			<code>char</code> in Java is a 16-bit unsigned integer representing
+			a UTF-16 code unit. <code>'A'</code> = U+0041. You can write
+			<code>char c = '\u0041';</code> to assign 'A'. String literals can
+			include any Unicode character directly.
+		</div>
+
+		<!-- ─── 3. PROP LOGIC ─── -->
+		<h2 class="topic" id="proplogic">
+			3. Propositional Logic, Hardware Implementation &amp; Arithmetic
+			Operations
+		</h2>
+
+		<div class="callout new">
+			<div class="callout-title">
+				★ New for Class XI — Study Carefully
+			</div>
+			Propositional logic, gates, and adder circuits are new topics.
+			Master truth tables and gate expressions — they appear in both
+			theory and hardware sections every year.
+		</div>
+
+		<h3 class="sub">3a. Propositional Logic</h3>
+
+		<p>
+			A <strong>proposition</strong> is a statement that is either
+			<span style="color: var(--accent2)">TRUE (T/1)</span> or
+			<span style="color: var(--accent3)">FALSE (F/0)</span>.
+		</p>
+
+		<h4 class="subsub">Logical Connectives</h4>
+		<div class="table-wrap">
+			<table>
+				<thead>
+					<tr>
+						<th>Symbol</th>
+						<th>Name</th>
+						<th>Read as</th>
+						<th>True when…</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><code>¬ / ~</code></td>
+						<td>Negation</td>
+						<td>NOT p</td>
+						<td>p is false</td>
+					</tr>
+					<tr>
+						<td><code>∧</code></td>
+						<td>Conjunction</td>
+						<td>p AND q</td>
+						<td>both are true</td>
+					</tr>
+					<tr>
+						<td><code>∨</code></td>
+						<td>Disjunction</td>
+						<td>p OR q</td>
+						<td>at least one is true</td>
+					</tr>
+					<tr>
+						<td><code>⇒</code></td>
+						<td>Implication</td>
+						<td>p implies q</td>
+						<td>p is false OR q is true</td>
+					</tr>
+					<tr>
+						<td><code>⇔</code></td>
+						<td>Biconditional</td>
+						<td>p iff q</td>
+						<td>both have same truth value</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<h4 class="subsub">Master Truth Table</h4>
+		<div class="table-wrap">
+			<table class="truth">
+				<thead>
+					<tr>
+						<th>p</th>
+						<th>q</th>
+						<th>¬p</th>
+						<th>p∧q</th>
+						<th>p∨q</th>
+						<th>p⇒q</th>
+						<th>p⇔q</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="T">T</td>
+						<td class="T">T</td>
+						<td class="F">F</td>
+						<td class="T">T</td>
+						<td class="T">T</td>
+						<td class="T">T</td>
+						<td class="T">T</td>
+					</tr>
+					<tr>
+						<td class="T">T</td>
+						<td class="F">F</td>
+						<td class="F">F</td>
+						<td class="F">F</td>
+						<td class="T">T</td>
+						<td class="F">F</td>
+						<td class="F">F</td>
+					</tr>
+					<tr>
+						<td class="F">F</td>
+						<td class="T">T</td>
+						<td class="T">T</td>
+						<td class="F">F</td>
+						<td class="T">T</td>
+						<td class="T">T</td>
+						<td class="F">F</td>
+					</tr>
+					<tr>
+						<td class="F">F</td>
+						<td class="F">F</td>
+						<td class="T">T</td>
+						<td class="F">F</td>
+						<td class="F">F</td>
+						<td class="T">T</td>
+						<td class="T">T</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="callout warn">
+			<div class="callout-title">⚠ Common Mistake</div>
+			<strong>Implication (p⇒q)</strong> is only FALSE when p is TRUE and
+			q is FALSE. A false premise makes the implication vacuously TRUE —
+			this is counterintuitive but correct.
+		</div>
+
+		<h4 class="subsub">Well-Formed Formulae (WFF)</h4>
+		<p>
+			A WFF is any proposition formed by combining propositional variables
+			with connectives using proper parentheses. Key classifications:
+		</p>
+		<ul>
+			<li>
+				<strong>Tautology</strong>: Always TRUE for every
+				interpretation. e.g., <code>p ∨ ¬p</code>
+			</li>
+			<li>
+				<strong>Contradiction</strong>: Always FALSE. e.g.,
+				<code>p ∧ ¬p</code>
+			</li>
+			<li>
+				<strong>Satisfiable</strong>: TRUE for at least one
+				interpretation.
+			</li>
+			<li><strong>Unsatisfiable</strong>: Same as contradiction.</li>
+		</ul>
+
+		<h3 class="sub">3b. Logic Gates — Hardware Implementation</h3>
+
+		<div class="callout new">
+			<div class="callout-title">★ New Topic — Gates</div>
+			Logic gates are the physical implementation of Boolean operations.
+			Every gate has a symbol, truth table, and Boolean expression — know
+			all three.
+		</div>
+
+		<h4 class="subsub">Basic Gates</h4>
+		<div class="gate-grid">
+			<div class="gate-card">
+				<div class="gate-name">NOT</div>
+				<div class="gate-expr">Y = Ā</div>
+				<div class="gate-desc">Inverts input. 1 input.</div>
+			</div>
+			<div class="gate-card">
+				<div class="gate-name">AND</div>
+				<div class="gate-expr">Y = A·B</div>
+				<div class="gate-desc">
+					Output 1 only when ALL inputs are 1.
+				</div>
+			</div>
+			<div class="gate-card">
+				<div class="gate-name">OR</div>
+				<div class="gate-expr">Y = A+B</div>
+				<div class="gate-desc">Output 1 when ANY input is 1.</div>
+			</div>
+			<div class="gate-card">
+				<div class="gate-name">NAND</div>
+				<div class="gate-expr">
+					Y = <span style="text-decoration: overline">A·B</span>
+				</div>
+				<div class="gate-desc">NOT of AND. Universal gate.</div>
+			</div>
+			<div class="gate-card">
+				<div class="gate-name">NOR</div>
+				<div class="gate-expr">
+					Y = <span style="text-decoration: overline">A+B</span>
+				</div>
+				<div class="gate-desc">NOT of OR. Universal gate.</div>
+			</div>
+			<div class="gate-card">
+				<div class="gate-name">XOR</div>
+				<div class="gate-expr">Y = A⊕B</div>
+				<div class="gate-desc">Output 1 when inputs DIFFER.</div>
+			</div>
+			<div class="gate-card">
+				<div class="gate-name">XNOR</div>
+				<div class="gate-expr">
+					Y = <span style="text-decoration: overline">A⊕B</span>
+				</div>
+				<div class="gate-desc">Output 1 when inputs are SAME.</div>
+			</div>
+		</div>
+
+		<h4 class="subsub">Why NAND &amp; NOR are Universal</h4>
+		<p>
+			Any Boolean function can be implemented using only NAND gates (or
+			only NOR gates). This is economically significant — a single type of
+			IC can build any circuit.
+		</p>
+		<pre><code><span class="cm">// NOT using NAND: connect both inputs together</span>
+NOT A = NAND(A, A)
+
+<span class="cm">// AND using NAND:</span>
+AND(A,B) = NOT(NAND(A,B)) = NAND(NAND(A,B), NAND(A,B))
+
+<span class="cm">// OR using NAND:</span>
+OR(A,B) = NAND(NOT A, NOT B) = NAND(NAND(A,A), NAND(B,B))</code></pre>
+
+		<h4 class="subsub">Complete Truth Tables for All Gates</h4>
+		<div class="table-wrap">
+			<table class="truth">
+				<thead>
+					<tr>
+						<th>A</th>
+						<th>B</th>
+						<th>AND</th>
+						<th>OR</th>
+						<th>NAND</th>
+						<th>NOR</th>
+						<th>XOR</th>
+						<th>XNOR</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="F">0</td>
+						<td class="F">0</td>
+						<td class="F">0</td>
+						<td class="F">0</td>
+						<td class="T">1</td>
+						<td class="T">1</td>
+						<td class="F">0</td>
+						<td class="T">1</td>
+					</tr>
+					<tr>
+						<td class="F">0</td>
+						<td class="T">1</td>
+						<td class="F">0</td>
+						<td class="T">1</td>
+						<td class="T">1</td>
+						<td class="F">0</td>
+						<td class="T">1</td>
+						<td class="F">0</td>
+					</tr>
+					<tr>
+						<td class="T">1</td>
+						<td class="F">0</td>
+						<td class="F">0</td>
+						<td class="T">1</td>
+						<td class="T">1</td>
+						<td class="F">0</td>
+						<td class="T">1</td>
+						<td class="F">0</td>
+					</tr>
+					<tr>
+						<td class="T">1</td>
+						<td class="T">1</td>
+						<td class="T">1</td>
+						<td class="T">1</td>
+						<td class="F">0</td>
+						<td class="F">0</td>
+						<td class="F">0</td>
+						<td class="T">1</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<h4 class="subsub">Half Adder</h4>
+		<p>
+			Adds two 1-bit numbers. Produces <strong>Sum</strong> and
+			<strong>Carry</strong>.
+		</p>
+		<pre><code>Sum   = A ⊕ B        (XOR)
+Carry = A · B        (AND)</code></pre>
+		<div class="table-wrap">
+			<table class="truth">
+				<thead>
+					<tr>
+						<th>A</th>
+						<th>B</th>
+						<th>Sum</th>
+						<th>Carry</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="F">0</td>
+						<td class="F">0</td>
+						<td class="F">0</td>
+						<td class="F">0</td>
+					</tr>
+					<tr>
+						<td class="F">0</td>
+						<td class="T">1</td>
+						<td class="T">1</td>
+						<td class="F">0</td>
+					</tr>
+					<tr>
+						<td class="T">1</td>
+						<td class="F">0</td>
+						<td class="T">1</td>
+						<td class="F">0</td>
+					</tr>
+					<tr>
+						<td class="T">1</td>
+						<td class="T">1</td>
+						<td class="F">0</td>
+						<td class="T">1</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<h4 class="subsub">Full Adder</h4>
+		<p>
+			Adds three 1-bit numbers (A, B, and Carry-in Cin). Produces Sum and
+			Carry-out.
+		</p>
+		<pre><code>Sum    = A ⊕ B ⊕ Cin
+Carry  = (A·B) + (B·Cin) + (A·Cin)</code></pre>
+		<div class="table-wrap">
+			<table class="truth">
+				<thead>
+					<tr>
+						<th>A</th>
+						<th>B</th>
+						<th>Cin</th>
+						<th>Sum</th>
+						<th>Cout</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="F">0</td>
+						<td class="F">0</td>
+					</tr>
+					<tr>
+						<td>0</td>
+						<td>0</td>
+						<td>1</td>
+						<td class="T">1</td>
+						<td class="F">0</td>
+					</tr>
+					<tr>
+						<td>0</td>
+						<td>1</td>
+						<td>0</td>
+						<td class="T">1</td>
+						<td class="F">0</td>
+					</tr>
+					<tr>
+						<td>0</td>
+						<td>1</td>
+						<td>1</td>
+						<td class="F">0</td>
+						<td class="T">1</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="T">1</td>
+						<td class="F">0</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>0</td>
+						<td>1</td>
+						<td class="F">0</td>
+						<td class="T">1</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>1</td>
+						<td>0</td>
+						<td class="F">0</td>
+						<td class="T">1</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td class="T">1</td>
+						<td class="T">1</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="callout tip">
+			<div class="callout-title">💡 Two Half Adders = One Full Adder</div>
+			A full adder can be built by chaining two half adders. HA1 adds A
+			and B → intermediate Sum and Carry1. HA2 adds intermediate Sum with
+			Cin → final Sum and Carry2. Final Cout = Carry1 OR Carry2.
+		</div>
+
+		<!-- ══════════════ SECTION B ══════════════ -->
+		<div class="part-header" id="sec-b">
+			<span class="part-tag java">Section B</span>
+			<span class="part-title">Java Programming</span>
+		</div>
+
+		<!-- ─── 4. OOP INTRO ─── -->
+		<h2 class="topic" id="oop-intro">4. Introduction to OOP using Java</h2>
+
+		<h3 class="sub">Programming Paradigms</h3>
+		<div class="table-wrap">
+			<table class="diff-table">
+				<thead>
+					<tr>
+						<th>Procedural (POP)</th>
+						<th>Object-Oriented (OOP)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Emphasis on functions/procedures</td>
+						<td>Emphasis on data + behaviour</td>
+					</tr>
+					<tr>
+						<td>Top-down design</td>
+						<td>Bottom-up design around objects</td>
+					</tr>
+					<tr>
+						<td>Data exposed to functions</td>
+						<td>Data encapsulated inside objects</td>
+					</tr>
+					<tr>
+						<td>e.g., C, Pascal, COBOL</td>
+						<td>e.g., Java, C++, Python</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<h3 class="sub">Four Pillars of OOP</h3>
+		<div class="card-grid">
+			<div class="card">
+				<div class="card-head" style="color: var(--accent1)">
+					Abstraction
+				</div>
+				<div class="card-body">
+					Hiding implementation details; exposing only the essential
+					interface. e.g., <code>Math.sqrt()</code> — you use it
+					without knowing the algorithm.
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-head" style="color: var(--accent2)">
+					Encapsulation
+				</div>
+				<div class="card-body">
+					Bundling data (fields) and behaviour (methods) in one unit.
+					Controlled access via access modifiers
+					(<code>private</code>, <code>public</code>).
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-head" style="color: var(--accent4)">
+					Inheritance
+				</div>
+				<div class="card-body">
+					A class (subclass) inherits properties and methods from
+					another (superclass). Promotes code reuse. Done with
+					<code>extends</code> in Java.
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-head" style="color: var(--accent5)">
+					Polymorphism
+				</div>
+				<div class="card-body">
+					One interface, multiple implementations. Achieved via method
+					overloading (compile-time) and overriding (run-time) in
+					Java.
+				</div>
+			</div>
+		</div>
+
+		<h3 class="sub">Java Compilation Pipeline</h3>
+		<pre><code>Source (.java) → javac → Bytecode (.class) → JVM → Machine Code
+
+<span class="cm">// JVM = Java Virtual Machine — interprets bytecode</span>
+<span class="cm">// JIT (Just-In-Time) compiler inside JVM compiles hot bytecode to native</span>
+<span class="cm">// WORA: Write Once, Run Anywhere — .class files run on any platform with JVM</span></code></pre>
+
+		<h3 class="sub">Compile-Time vs Runtime Errors</h3>
+		<div class="table-wrap">
+			<table>
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>When Detected</th>
+						<th>Examples</th>
+						<th>Recovery</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><strong>Syntax Error</strong></td>
+						<td>Compile time</td>
+						<td>Missing <code>;</code>, wrong type</td>
+						<td>Fix code</td>
+					</tr>
+					<tr>
+						<td><strong>Runtime Error</strong></td>
+						<td>At execution</td>
+						<td>
+							<code>NullPointerException</code>,
+							<code>ArrayIndexOutOfBoundsException</code>
+						</td>
+						<td>try-catch</td>
+					</tr>
+					<tr>
+						<td><strong>Logical Error</strong></td>
+						<td>At execution (wrong output)</td>
+						<td>Wrong formula, off-by-one</td>
+						<td>Debug</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<h3 class="sub">Exception Handling</h3>
+		<pre><code><span class="kw">try</span> {
+    <span class="kw">int</span> result = <span class="nm">10</span> / <span class="nm">0</span>;          <span class="cm">// throws ArithmeticException</span>
+} <span class="kw">catch</span> (<span class="ty">ArithmeticException</span> e) {
+    <span class="ty">System</span>.out.<span class="fn">println</span>(<span class="st">"Cannot divide by zero: "</span> + e.<span class="fn">getMessage</span>());
+} <span class="kw">catch</span> (<span class="ty">Exception</span> e) {          <span class="cm">// catch-all</span>
+    <span class="ty">System</span>.out.<span class="fn">println</span>(<span class="st">"Error: "</span> + e);
+} <span class="kw">finally</span> {
+    <span class="ty">System</span>.out.<span class="fn">println</span>(<span class="st">"Always executes"</span>);
+}
+
+<span class="cm">// throw: manually throw an exception</span>
+<span class="kw">throw</span> <span class="kw">new</span> <span class="ty">IllegalArgumentException</span>(<span class="st">"Invalid input"</span>);
+
+<span class="cm">// throws: declare checked exceptions in method signature</span>
+<span class="kw">void</span> <span class="fn">readFile</span>() <span class="kw">throws</span> <span class="ty">IOException</span> { ... }</code></pre>
+
+		<!-- ─── 5. OBJECTS ─── -->
+		<h2 class="topic" id="objects">5. Objects &amp; Classes</h2>
+
+		<p>
+			A <strong>class</strong> is a blueprint/template. An
+			<strong>object</strong> is an instance — a concrete realization of
+			that blueprint with its own state.
+		</p>
+
+		<pre><code><span class="kw">class</span> <span class="ty">Student</span> {
+    <span class="cm">// Instance variables (state)</span>
+    <span class="ty">String</span> name;
+    <span class="kw">int</span> rollNo;
+    <span class="kw">double</span> marks;
+
+    <span class="cm">// Constructor</span>
+    <span class="ty">Student</span>(<span class="ty">String</span> n, <span class="kw">int</span> r) {
+        <span class="kw">this</span>.name = n;
+        <span class="kw">this</span>.rollNo = r;
+    }
+
+    <span class="cm">// Method (behaviour)</span>
+    <span class="kw">void</span> <span class="fn">display</span>() {
+        <span class="ty">System</span>.out.<span class="fn">println</span>(name + <span class="st">" - Roll: "</span> + rollNo);
+    }
+}
+
+<span class="cm">// Creating objects</span>
+<span class="ty">Student</span> s1 = <span class="kw">new</span> <span class="ty">Student</span>(<span class="st">"Aanya"</span>, <span class="nm">1</span>);
+<span class="ty">Student</span> s2 = <span class="kw">new</span> <span class="ty">Student</span>(<span class="st">"Rishi"</span>, <span class="nm">2</span>);
+s1.<span class="fn">display</span>();   <span class="cm">// dot operator accesses members</span></code></pre>
+
+		<!-- ─── 6. PRIMITIVES ─── -->
+		<h2 class="topic" id="primitives">
+			6. Primitive Types, Wrapper Classes &amp; Casting
+		</h2>
+
+		<h3 class="sub">Primitive Data Types</h3>
+		<div class="table-wrap">
+			<table>
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Size</th>
+						<th>Range</th>
+						<th>Default</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><code>byte</code></td>
+						<td>1 byte</td>
+						<td>–128 to 127</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td><code>short</code></td>
+						<td>2 bytes</td>
+						<td>–32,768 to 32,767</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td><code>int</code></td>
+						<td>4 bytes</td>
+						<td>–2,147,483,648 to 2,147,483,647</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td><code>long</code></td>
+						<td>8 bytes</td>
+						<td>–9.2×10¹⁸ to 9.2×10¹⁸</td>
+						<td>0L</td>
+					</tr>
+					<tr>
+						<td><code>float</code></td>
+						<td>4 bytes</td>
+						<td>~6–7 decimal digits</td>
+						<td>0.0f</td>
+					</tr>
+					<tr>
+						<td><code>double</code></td>
+						<td>8 bytes</td>
+						<td>~15 decimal digits</td>
+						<td>0.0d</td>
+					</tr>
+					<tr>
+						<td><code>char</code></td>
+						<td>2 bytes</td>
+						<td>'\u0000' to '\uffff'</td>
+						<td>'\u0000'</td>
+					</tr>
+					<tr>
+						<td><code>boolean</code></td>
+						<td>1 bit</td>
+						<td>true / false</td>
+						<td>false</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<h3 class="sub">Wrapper Classes</h3>
+		<p>
+			Wrapper classes wrap primitives into objects — needed for
+			collections, type conversion, and utility methods.
+		</p>
+		<div class="table-wrap">
+			<table>
+				<thead>
+					<tr>
+						<th>Primitive</th>
+						<th>Wrapper Class</th>
+						<th>Key Methods</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><code>int</code></td>
+						<td><code>Integer</code></td>
+						<td>
+							<code>parseInt(s)</code>, <code>valueOf(s)</code>,
+							<code>toString(n)</code>, <code>MAX_VALUE</code>,
+							<code>MIN_VALUE</code>
+						</td>
+					</tr>
+					<tr>
+						<td><code>double</code></td>
+						<td><code>Double</code></td>
+						<td>
+							<code>parseDouble(s)</code>, <code>isNaN(d)</code>
+						</td>
+					</tr>
+					<tr>
+						<td><code>char</code></td>
+						<td><code>Character</code></td>
+						<td>
+							<code>isLetter(c)</code>, <code>isDigit(c)</code>,
+							<code>toUpperCase(c)</code>,
+							<code>toLowerCase(c)</code>,
+							<code>isWhitespace(c)</code>
+						</td>
+					</tr>
+					<tr>
+						<td><code>boolean</code></td>
+						<td><code>Boolean</code></td>
+						<td><code>parseBoolean(s)</code></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<pre><code><span class="cm">// String to int</span>
+<span class="kw">int</span> x = <span class="ty">Integer</span>.<span class="fn">parseInt</span>(<span class="st">"42"</span>);
+
+<span class="cm">// int to String</span>
+<span class="ty">String</span> s = <span class="ty">Integer</span>.<span class="fn">toString</span>(<span class="nm">42</span>);   <span class="cm">// or String.valueOf(42)</span>
+
+<span class="cm">// Autoboxing (auto-wrapping)</span>
+<span class="ty">Integer</span> obj = <span class="nm">42</span>;      <span class="cm">// int → Integer automatically</span>
+<span class="kw">int</span> val = obj;         <span class="cm">// Integer → int (unboxing)</span></code></pre>
+
+		<h3 class="sub">Type Casting</h3>
+		<pre><code><span class="cm">// Widening (implicit) — safe, no data loss</span>
+<span class="kw">int</span> i = <span class="nm">100</span>;
+<span class="kw">double</span> d = i;           <span class="cm">// int → double automatically</span>
+<span class="cm">// Hierarchy: byte → short → int → long → float → double</span>
+
+<span class="cm">// Narrowing (explicit) — may lose data</span>
+<span class="kw">double</span> pi = <span class="nm">3.14159</span>;
+<span class="kw">int</span> n = (<span class="kw">int</span>) pi;      <span class="cm">// n = 3  (decimal truncated)</span>
+
+<span class="cm">// char ↔ int</span>
+<span class="kw">char</span> c = <span class="st">'A'</span>;
+<span class="kw">int</span> ascii = c;          <span class="cm">// = 65</span>
+<span class="kw">char</span> back = (<span class="kw">char</span>)(<span class="nm">65</span> + <span class="nm">1</span>);  <span class="cm">// = 'B'</span></code></pre>
+
+		<!-- ─── 7. VARIABLES ─── -->
+		<h2 class="topic" id="variables">7. Variables &amp; Expressions</h2>
+
+		<h3 class="sub">Variable Types</h3>
+		<ul>
+			<li>
+				<strong>Local variable</strong>: Declared inside a method/block.
+				No default value — must initialise before use.
+			</li>
+			<li>
+				<strong>Instance variable</strong>: Declared in class body
+				(non-static). Each object has its own copy. Gets default value.
+			</li>
+			<li>
+				<strong>Static (class) variable</strong>: Declared with
+				<code>static</code>. Shared across all instances.
+			</li>
+		</ul>
+
+		<h3 class="sub">Operators &amp; Precedence</h3>
+		<div class="table-wrap">
+			<table>
+				<thead>
+					<tr>
+						<th>Precedence</th>
+						<th>Operators</th>
+						<th>Associativity</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Highest</td>
+						<td><code>() [] .</code></td>
+						<td>Left → Right</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><code>++ -- ! ~ (cast)</code></td>
+						<td>Right → Left</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><code>* / %</code></td>
+						<td>Left → Right</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><code>+ -</code></td>
+						<td>Left → Right</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><code>&lt; &lt;= &gt; &gt;=</code></td>
+						<td>Left → Right</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><code>== !=</code></td>
+						<td>Left → Right</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><code>&amp;&amp;</code></td>
+						<td>Left → Right</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><code>||</code></td>
+						<td>Left → Right</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><code>? :</code> (ternary)</td>
+						<td>Right → Left</td>
+					</tr>
+					<tr>
+						<td>Lowest</td>
+						<td><code>= += -= *= /= %=</code></td>
+						<td>Right → Left</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<pre><code><span class="cm">// Tricky increment/decrement expressions — exam favourites</span>
+<span class="kw">int</span> a = <span class="nm">5</span>;
+<span class="kw">int</span> b = a++;   <span class="cm">// b = 5, then a becomes 6  (post-increment)</span>
+<span class="kw">int</span> c = ++a;   <span class="cm">// a becomes 7 first, c = 7 (pre-increment)</span>
+
+<span class="cm">// String concatenation with +</span>
+<span class="ty">System</span>.out.<span class="fn">println</span>(<span class="nm">1</span> + <span class="nm">2</span> + <span class="st">"3"</span>);   <span class="cm">// "33" (left-to-right, 1+2=3 then "3"+"3")</span>
+<span class="ty">System</span>.out.<span class="fn">println</span>(<span class="st">"1"</span> + <span class="nm">2</span> + <span class="nm">3</span>);   <span class="cm">// "123"</span></code></pre>
+
+		<!-- ─── 8. STATEMENTS ─── -->
+		<h2 class="topic" id="statements">8. Statements &amp; Scope</h2>
+
+		<h3 class="sub">Conditional Statements</h3>
+		<pre><code><span class="cm">// if-else if chain</span>
+<span class="kw">if</span> (marks >= <span class="nm">90</span>)      grade = <span class="st">"A+"</span>;
+<span class="kw">else if</span> (marks >= <span class="nm">80</span>) grade = <span class="st">"A"</span>;
+<span class="kw">else if</span> (marks >= <span class="nm">70</span>) grade = <span class="st">"B"</span>;
+<span class="kw">else</span>                   grade = <span class="st">"C"</span>;
+
+<span class="cm">// Ternary operator</span>
+<span class="ty">String</span> result = (score >= <span class="nm">40</span>) ? <span class="st">"Pass"</span> : <span class="st">"Fail"</span>;
+
+<span class="cm">// switch (char/int/String only in Java 7+)</span>
+<span class="kw">switch</span> (day) {
+    <span class="kw">case</span> <span class="nm">1</span>:  <span class="ty">System</span>.out.<span class="fn">println</span>(<span class="st">"Mon"</span>); <span class="kw">break</span>;
+    <span class="kw">case</span> <span class="nm">2</span>:  <span class="ty">System</span>.out.<span class="fn">println</span>(<span class="st">"Tue"</span>); <span class="kw">break</span>;
+    <span class="kw">default</span>: <span class="ty">System</span>.out.<span class="fn">println</span>(<span class="st">"Other"</span>);
+}</code></pre>
+
+		<div class="callout warn">
+			<div class="callout-title">⚠ Fall-through in switch</div>
+			Without <code>break</code>, execution <em>falls through</em> to
+			subsequent cases. This is a common source of bugs — always use
+			<code>break</code> unless fall-through is intentional.
+		</div>
+
+		<h3 class="sub">Looping Statements</h3>
+		<pre><code><span class="cm">// for loop — use when count is known</span>
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="nm">0</span>; i < <span class="nm">10</span>; i++) {
+    <span class="ty">System</span>.out.<span class="fn">print</span>(i + <span class="st">" "</span>);
+}
+
+<span class="cm">// while loop — entry controlled</span>
+<span class="kw">while</span> (condition) { ... }
+
+<span class="cm">// do-while — exit controlled, executes at least once</span>
+<span class="kw">do</span> { ... } <span class="kw">while</span> (condition);
+
+<span class="cm">// break: exits the innermost loop immediately</span>
+<span class="cm">// continue: skips rest of current iteration, goes to next</span></code></pre>
+
+		<div class="table-wrap">
+			<table class="diff-table">
+				<thead>
+					<tr>
+						<th>while</th>
+						<th>do-while</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Entry controlled</td>
+						<td>Exit controlled</td>
+					</tr>
+					<tr>
+						<td>May execute 0 times</td>
+						<td>Always executes ≥1 time</td>
+					</tr>
+					<tr>
+						<td>Condition checked first</td>
+						<td>Condition checked after body</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<h3 class="sub">Scope Rules</h3>
+		<pre><code><span class="kw">class</span> <span class="ty">ScopeDemo</span> {
+    <span class="kw">static int</span> classVar = <span class="nm">10</span>;       <span class="cm">// class scope</span>
+    <span class="kw">int</span> instanceVar = <span class="nm">20</span>;           <span class="cm">// object scope</span>
+
+    <span class="kw">void</span> <span class="fn">method</span>() {
+        <span class="kw">int</span> localVar = <span class="nm">30</span>;           <span class="cm">// method scope</span>
+        {
+            <span class="kw">int</span> blockVar = <span class="nm">40</span>;       <span class="cm">// block scope — invisible outside {}</span>
+        }
+        <span class="cm">// blockVar is NOT accessible here</span>
+    }
+}</code></pre>
+
+		<!-- ─── 9. METHODS ─── -->
+		<h2 class="topic" id="methods">9. Methods &amp; Constructors</h2>
+
+		<h3 class="sub">Method Anatomy</h3>
+		<pre><code><span class="cm">// Full syntax</span>
+&lt;access-modifier&gt; [<span class="kw">static</span>] &lt;return-type&gt; <span class="fn">methodName</span>(&lt;parameter-list&gt;) {
+    <span class="cm">// body</span>
+    <span class="kw">return</span> value;   <span class="cm">// if return-type != void</span>
+}
+
+<span class="cm">// Example</span>
+<span class="kw">public static int</span> <span class="fn">add</span>(<span class="kw">int</span> a, <span class="kw">int</span> b) {
+    <span class="kw">return</span> a + b;
+}
+
+<span class="cm">// Calling</span>
+<span class="kw">int</span> sum = <span class="fn">add</span>(<span class="nm">3</span>, <span class="nm">4</span>);   <span class="cm">// 3, 4 are actual parameters</span></code></pre>
+
+		<h3 class="sub">Constructors</h3>
+		<pre><code><span class="kw">class</span> <span class="ty">Box</span> {
+    <span class="kw">double</span> width, height, depth;
+
+    <span class="cm">// Non-parameterised constructor</span>
+    <span class="ty">Box</span>() {
+        width = height = depth = <span class="nm">1.0</span>;
+    }
+
+    <span class="cm">// Parameterised constructor</span>
+    <span class="ty">Box</span>(<span class="kw">double</span> w, <span class="kw">double</span> h, <span class="kw">double</span> d) {
+        <span class="kw">this</span>.width = w;   <span class="cm">// 'this' disambiguates field vs parameter</span>
+        <span class="kw">this</span>.height = h;
+        <span class="kw">this</span>.depth = d;
+    }
+
+    <span class="kw">double</span> <span class="fn">volume</span>() { <span class="kw">return</span> width * height * depth; }
+}</code></pre>
+
+		<div class="callout note">
+			<div class="callout-title">Constructor Rules</div>
+			<ul>
+				<li>Same name as the class</li>
+				<li>No return type (not even <code>void</code>)</li>
+				<li>Called automatically on <code>new</code></li>
+				<li>
+					Can be overloaded (multiple constructors with different
+					parameters)
+				</li>
+				<li>
+					If you write no constructor, Java provides a default one
+				</li>
+			</ul>
+		</div>
+
+		<h3 class="sub">Pass by Value vs Pass by Reference</h3>
+		<div class="table-wrap">
+			<table class="diff-table">
+				<thead>
+					<tr>
+						<th>Pass by Value (primitives)</th>
+						<th>Pass by Reference (objects/arrays)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>A copy of the value is passed</td>
+						<td>Reference (address) is passed</td>
+					</tr>
+					<tr>
+						<td>Changes inside method don't affect original</td>
+						<td>Changes inside method affect original object</td>
+					</tr>
+					<tr>
+						<td><code>swap(int a, int b)</code> — doesn't work</td>
+						<td>Modifying array elements works</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<h3 class="sub">Method Overloading</h3>
+		<pre><code><span class="cm">// Same name, different parameter lists — resolved at COMPILE TIME</span>
+<span class="kw">int</span>    <span class="fn">area</span>(<span class="kw">int</span> side)              { <span class="kw">return</span> side * side; }
+<span class="kw">double</span> <span class="fn">area</span>(<span class="kw">double</span> r)             { <span class="kw">return</span> <span class="nm">3.14</span> * r * r; }
+<span class="kw">int</span>    <span class="fn">area</span>(<span class="kw">int</span> l, <span class="kw">int</span> b)         { <span class="kw">return</span> l * b; }
+<span class="cm">// Return type alone does NOT make overloading valid</span></code></pre>
+
+		<!-- ─── 10. ARRAYS ─── -->
+		<h2 class="topic" id="arrays">10. Arrays &amp; Strings</h2>
+
+		<h3 class="sub">Single-Dimensional Arrays</h3>
+		<pre><code><span class="cm">// Declaration + allocation</span>
+<span class="kw">int</span>[] arr = <span class="kw">new int</span>[<span class="nm">5</span>];           <span class="cm">// arr[0..4], default 0</span>
+
+<span class="cm">// Initializer syntax</span>
+<span class="kw">int</span>[] primes = {<span class="nm">2</span>, <span class="nm">3</span>, <span class="nm">5</span>, <span class="nm">7</span>, <span class="nm">11</span>};
+
+<span class="cm">// Traverse</span>
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="nm">0</span>; i < arr.length; i++)
+    <span class="ty">System</span>.out.<span class="fn">print</span>(arr[i] + <span class="st">" "</span>);
+
+<span class="cm">// Enhanced for</span>
+<span class="kw">for</span> (<span class="kw">int</span> x : primes)
+    <span class="ty">System</span>.out.<span class="fn">print</span>(x + <span class="st">" "</span>);</code></pre>
+
+		<h3 class="sub">Sorting Algorithms</h3>
+		<pre><code><span class="cm">// Bubble Sort O(n²) — swaps adjacent elements</span>
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="nm">0</span>; i < n-<span class="nm">1</span>; i++)
+    <span class="kw">for</span> (<span class="kw">int</span> j = <span class="nm">0</span>; j < n-<span class="nm">1</span>-i; j++)
+        <span class="kw">if</span> (arr[j] > arr[j+<span class="nm">1</span>]) { <span class="kw">int</span> t=arr[j]; arr[j]=arr[j+<span class="nm">1</span>]; arr[j+<span class="nm">1</span>]=t; }
+
+<span class="cm">// Selection Sort O(n²) — find min, place at front</span>
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="nm">0</span>; i < n-<span class="nm">1</span>; i++) {
+    <span class="kw">int</span> minIdx = i;
+    <span class="kw">for</span> (<span class="kw">int</span> j = i+<span class="nm">1</span>; j < n; j++)
+        <span class="kw">if</span> (arr[j] < arr[minIdx]) minIdx = j;
+    <span class="kw">int</span> t = arr[i]; arr[i] = arr[minIdx]; arr[minIdx] = t;
+}
+
+<span class="cm">// Insertion Sort O(n²) — like sorting cards in hand</span>
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="nm">1</span>; i < n; i++) {
+    <span class="kw">int</span> key = arr[i], j = i - <span class="nm">1</span>;
+    <span class="kw">while</span> (j >= <span class="nm">0</span> && arr[j] > key) { arr[j+<span class="nm">1</span>] = arr[j]; j--; }
+    arr[j+<span class="nm">1</span>] = key;
+}</code></pre>
+
+		<h3 class="sub">Searching</h3>
+		<pre><code><span class="cm">// Linear Search O(n) — works on any array</span>
+<span class="kw">int</span> <span class="fn">linearSearch</span>(<span class="kw">int</span>[] arr, <span class="kw">int</span> target) {
+    <span class="kw">for</span> (<span class="kw">int</span> i = <span class="nm">0</span>; i < arr.length; i++)
+        <span class="kw">if</span> (arr[i] == target) <span class="kw">return</span> i;
+    <span class="kw">return</span> -<span class="nm">1</span>;
+}
+
+<span class="cm">// Binary Search O(log n) — REQUIRES SORTED array</span>
+<span class="kw">int</span> <span class="fn">binarySearch</span>(<span class="kw">int</span>[] arr, <span class="kw">int</span> target) {
+    <span class="kw">int</span> low = <span class="nm">0</span>, high = arr.length - <span class="nm">1</span>;
+    <span class="kw">while</span> (low <= high) {
+        <span class="kw">int</span> mid = (low + high) / <span class="nm">2</span>;
+        <span class="kw">if</span> (arr[mid] == target) <span class="kw">return</span> mid;
+        <span class="kw">else if</span> (arr[mid] < target) low = mid + <span class="nm">1</span>;
+        <span class="kw">else</span> high = mid - <span class="nm">1</span>;
+    }
+    <span class="kw">return</span> -<span class="nm">1</span>;
+}</code></pre>
+
+		<h3 class="sub">String Methods (java.lang.String)</h3>
+		<div class="table-wrap">
+			<table>
+				<thead>
+					<tr>
+						<th>Method</th>
+						<th>Return Type</th>
+						<th>Description</th>
+						<th>Example (str="HELLO")</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><code>length()</code></td>
+						<td>int</td>
+						<td>Number of characters</td>
+						<td><code>5</code></td>
+					</tr>
+					<tr>
+						<td><code>charAt(i)</code></td>
+						<td>char</td>
+						<td>Character at index i</td>
+						<td><code>charAt(1)</code> → <code>'E'</code></td>
+					</tr>
+					<tr>
+						<td><code>substring(s)</code></td>
+						<td>String</td>
+						<td>From index s to end</td>
+						<td><code>substring(2)</code> → <code>"LLO"</code></td>
+					</tr>
+					<tr>
+						<td><code>substring(s,e)</code></td>
+						<td>String</td>
+						<td>s inclusive, e exclusive</td>
+						<td><code>substring(1,3)</code> → <code>"EL"</code></td>
+					</tr>
+					<tr>
+						<td><code>indexOf(ch)</code></td>
+						<td>int</td>
+						<td>First occurrence index</td>
+						<td><code>indexOf('L')</code> → <code>2</code></td>
+					</tr>
+					<tr>
+						<td><code>lastIndexOf(ch)</code></td>
+						<td>int</td>
+						<td>Last occurrence index</td>
+						<td><code>lastIndexOf('L')</code> → <code>3</code></td>
+					</tr>
+					<tr>
+						<td><code>toLowerCase()</code></td>
+						<td>String</td>
+						<td>All lowercase</td>
+						<td><code>"hello"</code></td>
+					</tr>
+					<tr>
+						<td><code>toUpperCase()</code></td>
+						<td>String</td>
+						<td>All uppercase</td>
+						<td><code>"HELLO"</code></td>
+					</tr>
+					<tr>
+						<td><code>trim()</code></td>
+						<td>String</td>
+						<td>Removes leading/trailing spaces</td>
+						<td><code>" hi "</code>→<code>"hi"</code></td>
+					</tr>
+					<tr>
+						<td><code>replace(a,b)</code></td>
+						<td>String</td>
+						<td>Replace a with b</td>
+						<td>
+							<code>replace('L','X')</code> → <code>"HEXXO"</code>
+						</td>
+					</tr>
+					<tr>
+						<td><code>equals(s2)</code></td>
+						<td>boolean</td>
+						<td>Case-sensitive equality</td>
+						<td><code>equals("HELLO")</code> → true</td>
+					</tr>
+					<tr>
+						<td><code>equalsIgnoreCase(s2)</code></td>
+						<td>boolean</td>
+						<td>Case-insensitive equality</td>
+						<td>—</td>
+					</tr>
+					<tr>
+						<td><code>compareTo(s2)</code></td>
+						<td>int</td>
+						<td>Lexicographic: 0/neg/pos</td>
+						<td>—</td>
+					</tr>
+					<tr>
+						<td><code>concat(s2)</code></td>
+						<td>String</td>
+						<td>Joins two strings</td>
+						<td><code>concat(" WORLD")</code></td>
+					</tr>
+					<tr>
+						<td><code>startsWith(pre)</code></td>
+						<td>boolean</td>
+						<td>Prefix check</td>
+						<td><code>startsWith("HE")</code> → true</td>
+					</tr>
+					<tr>
+						<td><code>endsWith(suf)</code></td>
+						<td>boolean</td>
+						<td>Suffix check</td>
+						<td>—</td>
+					</tr>
+					<tr>
+						<td><code>isEmpty()</code></td>
+						<td>boolean</td>
+						<td>Length == 0</td>
+						<td>—</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="callout warn">
+			<div class="callout-title">⚠ String Immutability</div>
+			Strings in Java are <strong>immutable</strong> — methods return new
+			strings; the original is unchanged. Use <code>StringBuilder</code> /
+			<code>StringBuffer</code> for heavy manipulation.
+		</div>
+
+		<!-- ─── 11. FILE I/O ─── -->
+		<h2 class="topic" id="fileio">11. Basic I/O &amp; File Handling</h2>
+
+		<div class="callout new">
+			<div class="callout-title">
+				★ New Topic — FileReader &amp; FileWriter
+			</div>
+			File handling is brand new in Class XI. Understand streams
+			conceptually, then learn the API patterns below thoroughly.
+		</div>
+
+		<h3 class="sub">Scanner for Console Input</h3>
+		<pre><code><span class="kw">import</span> java.util.<span class="ty">Scanner</span>;
+
+<span class="ty">Scanner</span> sc = <span class="kw">new</span> <span class="ty">Scanner</span>(<span class="ty">System</span>.in);
+
+<span class="kw">int</span>    n   = sc.<span class="fn">nextInt</span>();
+<span class="kw">double</span> d   = sc.<span class="fn">nextDouble</span>();
+<span class="ty">String</span> word = sc.<span class="fn">next</span>();          <span class="cm">// reads one token (no spaces)</span>
+<span class="ty">String</span> line = sc.<span class="fn">nextLine</span>();      <span class="cm">// reads whole line</span>
+
+sc.<span class="fn">close</span>();   <span class="cm">// always close when done</span></code></pre>
+
+		<div class="callout warn">
+			<div class="callout-title">⚠ nextInt() + nextLine() Bug</div>
+			After <code>nextInt()</code>, calling <code>nextLine()</code> reads
+			the leftover newline. Fix: call <code>sc.nextLine()</code> once to
+			consume it before the actual <code>nextLine()</code>.
+		</div>
+
+		<h3 class="sub">Stream Concepts</h3>
+		<dl>
+			<dt>Stream</dt>
+			<dd>
+				A sequence of data. Java I/O is stream-based. Two directions:
+				<em>InputStream</em> (reading) and
+				<em>OutputStream</em> (writing).
+			</dd>
+			<dt>Byte Stream</dt>
+			<dd>
+				Works with raw bytes (binary data). Classes:
+				<code>FileInputStream</code>, <code>FileOutputStream</code>.
+			</dd>
+			<dt>Character Stream</dt>
+			<dd>
+				Works with Unicode characters.
+				<strong>Preferred for text files</strong>. Classes:
+				<code>FileReader</code>, <code>FileWriter</code>,
+				<code>BufferedReader</code>, <code>BufferedWriter</code>.
+			</dd>
+		</dl>
+
+		<h3 class="sub">FileWriter — Writing to a File</h3>
+		<pre><code><span class="kw">import</span> java.io.<span class="ty">FileWriter</span>;
+<span class="kw">import</span> java.io.<span class="ty">IOException</span>;
+
+<span class="kw">try</span> {
+    <span class="cm">// FileWriter(name)        → OVERWRITES existing file</span>
+    <span class="cm">// FileWriter(name, true)  → APPENDS to existing file</span>
+    <span class="ty">FileWriter</span> fw = <span class="kw">new</span> <span class="ty">FileWriter</span>(<span class="st">"output.txt"</span>);
+
+    fw.<span class="fn">write</span>(<span class="st">"Hello, File!\n"</span>);
+    fw.<span class="fn">write</span>(<span class="st">"Second line.\n"</span>);
+
+    fw.<span class="fn">flush</span>();   <span class="cm">// flushes buffer to disk</span>
+    fw.<span class="fn">close</span>();   <span class="cm">// ALWAYS close — releases OS resources</span>
+
+    <span class="ty">System</span>.out.<span class="fn">println</span>(<span class="st">"File written successfully."</span>);
+} <span class="kw">catch</span> (<span class="ty">IOException</span> e) {
+    <span class="ty">System</span>.out.<span class="fn">println</span>(<span class="st">"Error: "</span> + e.<span class="fn">getMessage</span>());
+}</code></pre>
+
+		<h3 class="sub">FileReader — Reading from a File</h3>
+		<pre><code><span class="kw">import</span> java.io.<span class="ty">FileReader</span>;
+<span class="kw">import</span> java.io.<span class="ty">IOException</span>;
+
+<span class="kw">try</span> {
+    <span class="ty">FileReader</span> fr = <span class="kw">new</span> <span class="ty">FileReader</span>(<span class="st">"output.txt"</span>);
+
+    <span class="kw">int</span> ch;
+    <span class="kw">while</span> ((ch = fr.<span class="fn">read</span>()) != -<span class="nm">1</span>) {   <span class="cm">// read() returns -1 at EOF</span>
+        <span class="ty">System</span>.out.<span class="fn">print</span>((<span class="kw">char</span>) ch);
+    }
+
+    fr.<span class="fn">close</span>();
+} <span class="kw">catch</span> (<span class="ty">IOException</span> e) {
+    <span class="ty">System</span>.out.<span class="fn">println</span>(<span class="st">"Error: "</span> + e.<span class="fn">getMessage</span>());
+}</code></pre>
+
+		<h3 class="sub">BufferedReader/Writer — Efficient Line-by-Line I/O</h3>
+		<pre><code><span class="kw">import</span> java.io.*;
+
+<span class="cm">// Buffered reading (recommended)</span>
+<span class="ty">BufferedReader</span> br = <span class="kw">new</span> <span class="ty">BufferedReader</span>(<span class="kw">new</span> <span class="ty">FileReader</span>(<span class="st">"data.txt"</span>));
+<span class="ty">String</span> line;
+<span class="kw">while</span> ((line = br.<span class="fn">readLine</span>()) != <span class="kw">null</span>) {  <span class="cm">// null at EOF</span>
+    <span class="ty">System</span>.out.<span class="fn">println</span>(line);
+}
+br.<span class="fn">close</span>();
+
+<span class="cm">// Buffered writing</span>
+<span class="ty">BufferedWriter</span> bw = <span class="kw">new</span> <span class="ty">BufferedWriter</span>(<span class="kw">new</span> <span class="ty">FileWriter</span>(<span class="st">"data.txt"</span>, <span class="kw">true</span>));
+bw.<span class="fn">write</span>(<span class="st">"Appended line"</span>);
+bw.<span class="fn">newLine</span>();   <span class="cm">// platform-independent newline</span>
+bw.<span class="fn">close</span>();</code></pre>
+
+		<h3 class="sub">File Operations Summary</h3>
+		<div class="table-wrap">
+			<table>
+				<thead>
+					<tr>
+						<th>Operation</th>
+						<th>Class</th>
+						<th>Key Method</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Write (overwrite)</td>
+						<td><code>FileWriter("f.txt")</code></td>
+						<td><code>write(str)</code></td>
+					</tr>
+					<tr>
+						<td>Write (append)</td>
+						<td><code>FileWriter("f.txt", true)</code></td>
+						<td><code>write(str)</code></td>
+					</tr>
+					<tr>
+						<td>Read char by char</td>
+						<td><code>FileReader</code></td>
+						<td><code>read()</code> returns int (−1 = EOF)</td>
+					</tr>
+					<tr>
+						<td>Read line by line</td>
+						<td><code>BufferedReader</code></td>
+						<td><code>readLine()</code> returns null at EOF</td>
+					</tr>
+					<tr>
+						<td>Search in file</td>
+						<td><code>BufferedReader</code></td>
+						<td>
+							Read each line, use <code>contains()</code> or
+							<code>indexOf()</code>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="callout tip">
+			<div class="callout-title">💡 try-with-resources (Java 7+)</div>
+			Automatically closes the resource — cleaner code, no risk of
+			forgetting <code>close()</code>.
+			<pre
+				style="margin-top: 0.6rem"
+			><code><span class="kw">try</span> (<span class="ty">BufferedReader</span> br = <span class="kw">new</span> <span class="ty">BufferedReader</span>(<span class="kw">new</span> <span class="ty">FileReader</span>(<span class="st">"f.txt"</span>))) {
+    <span class="ty">String</span> line;
+    <span class="kw">while</span> ((line = br.<span class="fn">readLine</span>()) != <span class="kw">null</span>)
+        <span class="ty">System</span>.out.<span class="fn">println</span>(line);
+}  <span class="cm">// br auto-closed here</span></code></pre>
+		</div>
+
+		<!-- ══════════════ SECTION C ══════════════ -->
+		<div class="part-header" id="sec-c">
+			<span class="part-tag python">Section C</span>
+			<span class="part-title">Python &amp; Conceptual Aspects</span>
+		</div>
+
+		<!-- ─── 12. PYTHON ─── -->
+		<h2 class="topic" id="python">12. Introduction to Python</h2>
+
+		<div class="callout new">
+			<div class="callout-title">★ New Language — Python</div>
+			Python is introduced in Class XI. Focus on syntax differences from
+			Java, dynamic typing, and indentation-based blocks. Python 3.13+ is
+			the required version.
+		</div>
+
+		<h3 class="sub">Why Python?</h3>
+		<div class="card-grid">
+			<div class="card">
+				<div class="card-head" style="color: var(--accent2)">
+					Simple Syntax
+				</div>
+				<div class="card-body">
+					Readable, close to pseudocode. No braces or semicolons.
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-head" style="color: var(--accent2)">
+					Dynamically Typed
+				</div>
+				<div class="card-body">
+					No need to declare types. Variables take type of assigned
+					value.
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-head" style="color: var(--accent2)">
+					Interpreter Based
+				</div>
+				<div class="card-body">
+					Executes line by line. Faster for prototyping.
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-head" style="color: var(--accent2)">
+					Large Library
+				</div>
+				<div class="card-body">
+					Rich standard library + packages (numpy, pandas, etc.)
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-head" style="color: var(--accent2)">
+					Platform Independent
+				</div>
+				<div class="card-body">
+					Runs on Windows, Mac, Linux unchanged.
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-head" style="color: var(--accent2)">
+					Open Source
+				</div>
+				<div class="card-body">
+					Free to use, modify, and distribute.
+				</div>
+			</div>
+		</div>
+
+		<h3 class="sub">Execution Modes</h3>
+		<pre><code><span class="cm"># Interactive mode: type in IDLE or terminal >>> prompt, instant result</span>
+>>> <span class="nm">2</span> + <span class="nm">3</span>
+<span class="nm">5</span>
+
+<span class="cm"># Script mode: save as .py file, run with: python filename.py</span></code></pre>
+
+		<h3 class="sub">Tokens in Python</h3>
+		<div class="table-wrap">
+			<table>
+				<thead>
+					<tr>
+						<th>Token</th>
+						<th>Examples</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Keywords</td>
+						<td>
+							<code
+								>if elif else for while def class import return
+								True False None and or not in is</code
+							>
+						</td>
+					</tr>
+					<tr>
+						<td>Identifiers</td>
+						<td>
+							Variable/function names. Must start with letter or
+							<code>_</code>. Case-sensitive.
+						</td>
+					</tr>
+					<tr>
+						<td>Literals</td>
+						<td>
+							<code>42</code>, <code>3.14</code>,
+							<code>'hello'</code>, <code>True</code>,
+							<code>None</code>
+						</td>
+					</tr>
+					<tr>
+						<td>Operators</td>
+						<td>
+							<code
+								>+ - * ** / // % == != &lt; &gt; and or not in
+								is</code
+							>
+						</td>
+					</tr>
+					<tr>
+						<td>Punctuators</td>
+						<td><code>: , . () [] {} @</code></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<h3 class="sub">Data Types</h3>
+		<div class="table-wrap">
+			<table>
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Mutable?</th>
+						<th>Examples</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><code>int</code></td>
+						<td>Immutable</td>
+						<td><code>42, -7, 0b1010, 0xFF</code></td>
+					</tr>
+					<tr>
+						<td><code>float</code></td>
+						<td>Immutable</td>
+						<td><code>3.14, 2.5e-3</code></td>
+					</tr>
+					<tr>
+						<td><code>complex</code></td>
+						<td>Immutable</td>
+						<td><code>3+4j</code></td>
+					</tr>
+					<tr>
+						<td><code>bool</code></td>
+						<td>Immutable</td>
+						<td><code>True, False</code> (subclass of int)</td>
+					</tr>
+					<tr>
+						<td><code>str</code></td>
+						<td>Immutable</td>
+						<td><code>'hello', "world"</code></td>
+					</tr>
+					<tr>
+						<td><code>list</code></td>
+						<td><strong>Mutable</strong></td>
+						<td><code>[1, 2, 3]</code></td>
+					</tr>
+					<tr>
+						<td><code>tuple</code></td>
+						<td>Immutable</td>
+						<td><code>(1, 2, 3)</code></td>
+					</tr>
+					<tr>
+						<td><code>dict</code></td>
+						<td><strong>Mutable</strong></td>
+						<td><code>{'key': 'val'}</code></td>
+					</tr>
+					<tr>
+						<td><code>NoneType</code></td>
+						<td>Immutable</td>
+						<td><code>None</code></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<h3 class="sub">Operators</h3>
+		<pre><code><span class="cm"># Arithmetic</span>
+<span class="nm">7</span> + <span class="nm">3</span>   <span class="cm"># 10</span>
+<span class="nm">7</span> - <span class="nm">3</span>   <span class="cm"># 4</span>
+<span class="nm">7</span> * <span class="nm">3</span>   <span class="cm"># 21</span>
+<span class="nm">7</span> ** <span class="nm">3</span>  <span class="cm"># 343   (exponentiation)</span>
+<span class="nm">7</span> / <span class="nm">3</span>   <span class="cm"># 2.333 (true division, always float)</span>
+<span class="nm">7</span> // <span class="nm">3</span>  <span class="cm"># 2     (floor division)</span>
+<span class="nm">7</span> % <span class="nm">3</span>   <span class="cm"># 1     (modulus)</span>
+
+<span class="cm"># Comparison</span>
+<span class="nm">5</span> == <span class="nm">5</span>   <span class="cm"># True</span>
+<span class="nm">5</span> != <span class="nm">3</span>   <span class="cm"># True</span>
+
+<span class="cm"># Logical</span>
+<span class="cn">True</span> <span class="kw">and</span> <span class="cn">False</span>   <span class="cm"># False</span>
+<span class="cn">True</span> <span class="kw">or</span>  <span class="cn">False</span>   <span class="cm"># True</span>
+<span class="kw">not</span> <span class="cn">True</span>         <span class="cm"># False</span>
+
+<span class="cm"># Identity</span>
+x <span class="kw">is</span> y       <span class="cm"># True if same object in memory</span>
+x <span class="kw">is not</span> y   <span class="cm"># True if different objects</span>
+
+<span class="cm"># Membership</span>
+<span class="nm">3</span> <span class="kw">in</span> [<span class="nm">1</span>,<span class="nm">2</span>,<span class="nm">3</span>]     <span class="cm"># True</span>
+<span class="st">'a'</span> <span class="kw">not in</span> <span class="st">'cat'</span>  <span class="cm"># False</span>
+
+<span class="cm"># Augmented assignment</span>
+x += <span class="nm">5</span>  <span class="cm"># x = x + 5</span>
+x **= <span class="nm">2</span> <span class="cm"># x = x ** 2</span>
+x //= <span class="nm">3</span> <span class="cm"># x = x // 3</span></code></pre>
+
+		<div class="callout warn">
+			<div class="callout-title">⚠ Python vs Java — Key Differences</div>
+			<ul>
+				<li>
+					<code>/</code> in Python always returns float. In Java it
+					returns int for int operands.
+				</li>
+				<li>
+					Python has no <code>++</code> or <code>--</code> operators.
+					Use <code>x += 1</code>.
+				</li>
+				<li>
+					<code>**</code> for exponent in Python; Java uses
+					<code>Math.pow()</code>.
+				</li>
+				<li>
+					<code>and</code>, <code>or</code>, <code>not</code> are
+					keywords in Python (not <code>&amp;&amp;</code>,
+					<code>||</code>, <code>!</code>).
+				</li>
+			</ul>
+		</div>
+
+		<h3 class="sub">Input &amp; Output</h3>
+		<pre><code><span class="cm"># Output</span>
+<span class="fn">print</span>(<span class="st">"Hello"</span>)
+<span class="fn">print</span>(<span class="st">"a ="</span>, a, <span class="st">"b ="</span>, b)
+<span class="fn">print</span>(<span class="fn">f</span><span class="st">"Sum = {a + b}"</span>)     <span class="cm"># f-string (Python 3.6+)</span>
+<span class="fn">print</span>(<span class="st">"line 1"</span>, end=<span class="st">""</span>)     <span class="cm"># no newline at end</span>
+<span class="fn">print</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, sep=<span class="st">"-"</span>)    <span class="cm"># custom separator → a-b</span>
+
+<span class="cm"># Input (always returns string)</span>
+name = <span class="fn">input</span>(<span class="st">"Enter name: "</span>)
+age  = <span class="fn">int</span>(<span class="fn">input</span>(<span class="st">"Enter age: "</span>))     <span class="cm"># explicit cast to int</span>
+gpa  = <span class="fn">float</span>(<span class="fn">input</span>(<span class="st">"Enter GPA: "</span>))   <span class="cm"># explicit cast to float</span></code></pre>
+
+		<h3 class="sub">Flow of Control</h3>
+		<pre><code><span class="cm"># if-elif-else (INDENTATION IS MANDATORY)</span>
+marks = <span class="nm">85</span>
+<span class="kw">if</span> marks >= <span class="nm">90</span>:
+    <span class="fn">print</span>(<span class="st">"A+"</span>)
+<span class="kw">elif</span> marks >= <span class="nm">80</span>:
+    <span class="fn">print</span>(<span class="st">"A"</span>)
+<span class="kw">elif</span> marks >= <span class="nm">70</span>:
+    <span class="fn">print</span>(<span class="st">"B"</span>)
+<span class="kw">else</span>:
+    <span class="fn">print</span>(<span class="st">"C"</span>)
+
+<span class="cm"># for loop with range()</span>
+<span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span class="nm">5</span>):        <span class="cm"># 0,1,2,3,4</span>
+    <span class="fn">print</span>(i)
+<span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span class="nm">2</span>, <span class="nm">10</span>, <span class="nm">2</span>): <span class="cm"># 2,4,6,8 (start, stop, step)</span>
+    <span class="fn">print</span>(i)
+
+<span class="cm"># while loop</span>
+n = <span class="nm">10</span>
+<span class="kw">while</span> n > <span class="nm">0</span>:
+    <span class="fn">print</span>(n, end=<span class="st">" "</span>)
+    n -= <span class="nm">1</span>
+
+<span class="cm"># break and continue work the same as Java</span>
+<span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span class="nm">10</span>):
+    <span class="kw">if</span> i == <span class="nm">5</span>: <span class="kw">break</span>         <span class="cm"># exits loop</span>
+    <span class="kw">if</span> i % <span class="nm">2</span> == <span class="nm">0</span>: <span class="kw">continue</span> <span class="cm"># skip even</span>
+    <span class="fn">print</span>(i)
+
+<span class="cm"># Nested loop</span>
+<span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span class="nm">3</span>):
+    <span class="kw">for</span> j <span class="kw">in</span> <span class="fn">range</span>(<span class="nm">3</span>):
+        <span class="fn">print</span>(i, j)</code></pre>
+
+		<h3 class="sub">Type Conversion</h3>
+		<pre><code><span class="cm"># Implicit (automatic)</span>
+x = <span class="nm">3</span> + <span class="nm">2.5</span>   <span class="cm"># int + float → float = 5.5</span>
+
+<span class="cm"># Explicit (manual casting)</span>
+<span class="fn">int</span>(<span class="nm">3.9</span>)     <span class="cm"># 3  (truncates)</span>
+<span class="fn">float</span>(<span class="nm">5</span>)     <span class="cm"># 5.0</span>
+<span class="fn">str</span>(<span class="nm">42</span>)      <span class="cm"># '42'</span>
+<span class="fn">bool</span>(<span class="nm">0</span>)      <span class="cm"># False  (0, '', [], None → False)</span>
+<span class="fn">bool</span>(<span class="nm">42</span>)     <span class="cm"># True</span></code></pre>
+
+		<h3 class="sub">Errors in Python</h3>
+		<ul>
+			<li>
+				<strong>SyntaxError</strong>: Bad syntax. e.g., missing colon
+				after <code>if</code>.
+			</li>
+			<li>
+				<strong>RuntimeError</strong>: e.g., division by zero, index out
+				of range.
+			</li>
+			<li>
+				<strong>LogicalError</strong>: Program runs but gives wrong
+				output.
+			</li>
+		</ul>
+
+		<!-- ─── 13. TRENDS ─── -->
+		<h2 class="topic" id="ethics">
+			13. Trends in Computing &amp; Ethical Issues
+		</h2>
+
+		<h3 class="sub">Emerging Technologies</h3>
+		<div class="card-grid">
+			<div class="card">
+				<div class="card-head" style="color: var(--accent4)">
+					Artificial Intelligence
+				</div>
+				<div class="card-body">
+					Machines simulating human intelligence. Includes ML, deep
+					learning, NLP. Applications: recommendation systems, medical
+					diagnosis, self-driving cars.
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-head" style="color: var(--accent4)">
+					Internet of Things (IoT)
+				</div>
+				<div class="card-body">
+					Network of physical devices embedded with sensors and
+					software to exchange data. Examples: smart homes, wearables,
+					industrial sensors.
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-head" style="color: var(--accent4)">
+					Virtual Reality (VR)
+				</div>
+				<div class="card-body">
+					Fully immersive digital environment. User wears headset and
+					is fully in the virtual world. No real-world perception.
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-head" style="color: var(--accent4)">
+					Augmented Reality (AR)
+				</div>
+				<div class="card-body">
+					Overlays digital information onto the real world. e.g.,
+					Pokémon GO, Google Lens, surgery assistance systems.
+				</div>
+			</div>
+		</div>
+
+		<h3 class="sub">Cyber Security &amp; Ethics</h3>
+		<div class="card-grid">
+			<div class="card">
+				<div class="card-head" style="color: var(--accent4)">
+					Cyber Secuirity
+				</div>
+				<div class="card-body">
+					Protection of computer systems, networks, and data from
+					digital attacks.
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-head" style="color: var(--accent4">
+					Privacy
+				</div>
+				<div class="card-body">
+					Right to control personal information. Risks: data
+					harvesting, surveillance
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-head" style="color: var(--accent4)">
+					Netiquette
+				</div>
+				<div class="card-body">
+					Etiquette for internet behaviour: respectful communication,
+					no cyberbullying.
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-head" style="color: var(--accent4)">Spam</div>
+				<div class="card-body">
+					Unsolicited bulk messages, usually commercial or malicious.
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-head" style="color: var(--accent4)">
+					Phishing
+				</div>
+				<div class="card-body">
+					Fraudulent attempt to obtain sensitive information by
+					impersonating a trusted entity.
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-head" style="color: var(--accent4)">
+					Digital Arrest
+				</div>
+				<div class="card-body">
+					A cyber fraud where scammers pose as law enforcement,
+					threaten victims, and extort money.
+				</div>
+			</div>
+		</div>
+
+		<h3 class="sub">Intellectual Property &amp; Licensing</h3>
+		<div class="card-grid">
+			<div class="card">
+				<div class="card-head" style="color: var(--accent4)">
+					Intellectual Property (IP)
+				</div>
+				<div class="card-body">
+					Creations of the mind protected by law: patents, copyrights,
+					trademarks.
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-head" style="color: var(--accent4)">
+					Software Copyright
+				</div>
+				<div class="card-body">
+					Gives the author exclusive rights to reproduce, distribute,
+					and modify the software.
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-head" style="color: var(--accent4)">
+					Software Patent
+				</div>
+				<div class="card-body">
+					Protects an invention/algorithm, not just code. More
+					controversial than copyright.
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-head" style="color: var(--accent4)">
+					Software Piracy
+				</div>
+				<div class="card-body">
+					Unauthorized copying or distribution of copyrighted
+					software.
+				</div>
+			</div>
+		</div>
+
+		<h3 class="sub">Software Licenses</h3>
+		<div class="card-grid">
+			<div class="card">
+				<div class="card-head" style="color: var(--accent4)">
+					Open Source Software
+				</div>
+				<div class="card-body">
+					Source code is freely available. Examples: Linux, Python,
+					Firefox.
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-head" style="color: var(--accent4)">
+					GPL (GNU General Public License)
+				</div>
+				<div class="card-body">
+					Free to use, modify, distribute — but derived works must
+					also be GPL (copyleft).
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-head" style="color: var(--accent4)">
+					BSD License
+				</div>
+				<div class="card-body">
+					Very permissive. Can be used in proprietary software without
+					GPL obligations.
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-head" style="color: var(--accent4)">
+					Free Software Foundation (FSF)
+				</div>
+				<div class="card-body">
+					Organisation promoting free software. Defines 4 freedoms:
+					run, study, redistribute, improve.
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-head" style="color: var(--accent4)">
+					MIT License
+				</div>
+				<div class="card-body">
+					Very permissive. Allows reuse, modification, and
+					distribution with minimal restrictions, only requiring
+					attribution.
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="card-head" style="color: var(--accent4)">
+					Apache License 2.0
+				</div>
+				<div class="card-body">
+					Permissive license that allows use, modification, and
+					distribution with added protection against patent claims.
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="card-head" style="color: var(--accent4)">
+					Mozilla Public License (MPL)
+				</div>
+				<div class="card-body">
+					Weak copyleft license. Modified files must stay open source,
+					but can be combined with proprietary code.
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="card-head" style="color: var(--accent4)">
+					LGPL (Lesser General Public License)
+				</div>
+				<div class="card-body">
+					Allows linking to proprietary software while keeping
+					modifications to the original library open source.
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="card-head" style="color: var(--accent4)">
+					Creative Commons (CC)
+				</div>
+				<div class="card-body">
+					Licenses for creative works. Allows sharing with conditions
+					like attribution, non-commercial use, or no derivatives.
+				</div>
+			</div>
+		</div>
+
+		<hr />
+		<p
+			style="
+				text-align: center;
+				color: var(--text-dim);
+				font-family: var(--font-head);
+				font-size: 0.8rem;
+				letter-spacing: 0.1em;
+			"
+		>
+			ISC CLASS XI · COMPUTER SCIENCE NOTES · CISCE EXAMINATION 2028<br />
+			Covers all topics from the official CISCE syllabus<br />
+			Prepared by Ritwik Sharma<br />
+			We will not be responsible for any loss of marks due to errors in
+			these notes. Always cross-check with the official syllabus and
+			textbooks.
+		</p>
+	</body>
+</html>

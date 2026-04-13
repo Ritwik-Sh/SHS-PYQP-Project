@@ -452,6 +452,22 @@
         };
 
         const RESOURCES = [
+        	{
+         		class: 11,
+           		subject: 'Computer Science',
+				icon: 'fa-code',
+				topics: [
+					{ name: 'Full Notes', file: 'notes/computer-science/isc-class-11.html', type: 'Document'}
+				]
+         	},
+         	{
+          		class: 12,
+            		subject: 'Computer Science',
+				icon: 'fa-code',
+				topics: [
+					{ name: 'Full Notes', file: 'notes/computer-science/isc-class-12.html', type: 'Document' }
+				]
+          	},
             {
                 class: 10,
                 subject: 'Computer Applications',
@@ -509,7 +525,7 @@
                 ]
             },
             {
-                class: 10,
+                class: [9, 10],
                 subject: 'English Language',
                 icon: 'fa-pen-nib',
                 topics: [
@@ -589,7 +605,7 @@
             try {
                 // Ensure the file has .json extension for fetching
                 const jsonFile = topicFile.endsWith('.json') ? topicFile : `${topicFile}.json`;
-                const response = await fetch(jsonFile);
+                const response = await fetch(`quizes/${jsonFile}`);
                 if (!response.ok) {
                     console.warn('Could not load quiz questions:', jsonFile, 'Status:', response.status);
                     return 0;
@@ -613,7 +629,12 @@
                 currentSubject: null
             };
 
-            const classes = [...new Set(RESOURCES.map(q => q.class))].sort((a, b) => a - b);
+            const classSet = new Set();
+            RESOURCES.forEach(q => {
+                const classList = Array.isArray(q.class) ? q.class : [q.class];
+                classList.forEach(cls => classSet.add(cls));
+            });
+            const classes = [...classSet].sort((a, b) => a - b);
 
             if (classes.length === 0) {
                 content.innerHTML = '<h1 id="noContent">No Classes Available!</h1>';
@@ -640,7 +661,10 @@
                 currentSubject: null
             };
 
-            const subjects = RESOURCES.filter(q => q.class === cls);
+            const subjects = RESOURCES.filter(q => {
+                const classList = Array.isArray(q.class) ? q.class : [q.class];
+                return classList.includes(cls);
+            });
 
             if (subjects.length === 0) {
                 content.innerHTML = '<h1 id="noContent">No Subjects Available!</h1>';

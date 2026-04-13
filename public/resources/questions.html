@@ -1122,7 +1122,7 @@
                 topic = topic.replace('.json', '');
                 document.title = topic + " Quiz";
                 document.querySelector('.header h1').textContent = topic + " Quiz";
-                const response = await fetch(topic+".json");
+                const response = await fetch("quizes/"+topic+".json");
                 questions = await response.json();
                 loadProgress();
                 initQuestionGrid();
