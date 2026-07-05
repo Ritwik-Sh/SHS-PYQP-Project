@@ -766,7 +766,7 @@
 	{
 		"question": "What is the output of the statement `Math.pow(36, 6/5);` ?",
 		"options": ["36.0", "1.0", "73.71", "6.0"],
-		"answer": 1
+		"answer": 0
 	},
 	{
 		"question": "In the following method prototype to accept a character, an integer and return YES or NO, fill in the blank to complete the method prototype.\n```public ___ someMethod(char ch, int n)```",

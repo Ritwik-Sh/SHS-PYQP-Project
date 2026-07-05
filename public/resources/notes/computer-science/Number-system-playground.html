@@ -1,0 +1,1794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Number Systems Playground — ISC Class 10</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --text: #eff2f6;
+    --background: #030507;
+    --primary: #4366a8;
+    --secondary: #243d6b;
+    --accent: #274c90;
+    --text-muted: #6b7a94;
+    --border: rgba(67, 102, 168, 0.18);
+    --surface: rgba(255,255,255,0.03);
+    --surface-hover: rgba(255,255,255,0.06);
+    --error: #e05c5c;
+    --success: #4caf88;
+    --warn: #e0a04a;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--background);
+    color: var(--text);
+    font-family: 'Syne', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Subtle grid background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(67,102,168,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(67,102,168,0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Glow orb */
+  body::after {
+    content: '';
+    position: fixed;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(67,102,168,0.12) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── HEADER ── */
+  header {
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .brand {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .brand-title {
+    font-size: 1.55rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    line-height: 1;
+  }
+
+  .brand-title span {
+    color: var(--primary);
+  }
+
+  .brand-sub {
+    font-size: 0.72rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .header-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.08em;
+  }
+
+  /* ── MAIN LAYOUT ── */
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 24px;
+    align-items: start;
+  }
+
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; }
+  }
+
+  /* ── CARD ── */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    backdrop-filter: blur(6px);
+  }
+
+  .card-title {
+    font-size: 0.72rem;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .card-title::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--primary);
+    box-shadow: 0 0 8px var(--primary);
+  }
+
+  /* ── MODE TABS ── */
+  .mode-tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 28px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 4px;
+    flex-wrap: wrap;
+  }
+
+  .mode-tab {
+    flex: 1;
+    min-width: 100px;
+    padding: 8px 14px;
+    border-radius: 9px;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-family: 'Syne', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .mode-tab.active {
+    background: var(--accent);
+    color: var(--text);
+    box-shadow: 0 2px 12px rgba(39,76,144,0.5);
+  }
+
+  .mode-tab:hover:not(.active) {
+    background: var(--surface-hover);
+    color: var(--text);
+  }
+
+  /* ── PANELS ── */
+  .panel { display: none; animation: fadeIn 0.25s ease; }
+  .panel.active { display: block; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── INPUTS ── */
+  .field-group { margin-bottom: 18px; }
+
+  label {
+    display: block;
+    font-size: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+  }
+
+  input[type="text"], input[type="number"], select {
+    width: 100%;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 11px 14px;
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  input[type="text"]:focus, input[type="number"]:focus, select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(67,102,168,0.15);
+  }
+
+  input.error { border-color: var(--error); box-shadow: 0 0 0 3px rgba(224,92,92,0.12); }
+
+  select option { background: #0a0f18; color: var(--text); }
+
+  .base-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  /* ── BTN ── */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 22px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    letter-spacing: 0.02em;
+  }
+
+  .btn-primary {
+    background: var(--primary);
+    color: var(--text);
+    box-shadow: 0 4px 18px rgba(67,102,168,0.3);
+  }
+
+  .btn-primary:hover {
+    background: #4f79c0;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 24px rgba(67,102,168,0.4);
+  }
+
+  .btn-primary:active { transform: translateY(0); }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+  }
+
+  .btn-ghost:hover {
+    background: var(--surface-hover);
+    color: var(--text);
+    border-color: rgba(67,102,168,0.3);
+  }
+
+  .btn-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+  }
+
+  /* ── RESULT ── */
+  .result-box {
+    margin-top: 24px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    display: none;
+  }
+
+  .result-box.visible { display: block; animation: fadeIn 0.3s ease; }
+
+  .result-header {
+    background: rgba(67,102,168,0.1);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--primary);
+  }
+
+  .result-body { padding: 18px; }
+
+  .result-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 0.05em;
+    word-break: break-all;
+  }
+
+  .result-label {
+    font-size: 0.72rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-muted);
+    margin-top: 4px;
+    letter-spacing: 0.08em;
+  }
+
+  .result-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .result-chip {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px;
+  }
+
+  .result-chip-val {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text);
+    word-break: break-all;
+  }
+
+  .result-chip-lbl {
+    font-size: 0.65rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-muted);
+    margin-top: 3px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .error-msg {
+    color: var(--error);
+    font-size: 0.78rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-top: 8px;
+    display: none;
+  }
+
+  /* ── STEPS VIEW ── */
+  .steps-container {
+    margin-top: 20px;
+    display: none;
+  }
+
+  .steps-container.visible { display: block; animation: fadeIn 0.3s ease; }
+
+  .steps-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 0.76rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--primary);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    user-select: none;
+  }
+
+  .steps-toggle .arrow {
+    transition: transform 0.2s;
+    display: inline-block;
+  }
+
+  .steps-toggle.open .arrow { transform: rotate(90deg); }
+
+  .steps-inner {
+    display: none;
+  }
+
+  .steps-inner.open { display: block; }
+
+  .step-tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+
+  .step-tab {
+    padding: 5px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.05em;
+  }
+
+  .step-tab.active {
+    background: var(--secondary);
+    color: var(--text);
+    border-color: var(--accent);
+  }
+
+  .step-tab:hover:not(.active) { background: var(--surface-hover); color: var(--text); }
+
+  .step-panel { display: none; }
+  .step-panel.active { display: block; animation: fadeIn 0.2s; }
+
+  .step-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .step-row:last-child { border-bottom: none; }
+
+  .step-num {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--secondary);
+    border: 1px solid var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-top: 1px;
+  }
+
+  .step-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  .step-text .hl { color: var(--primary); font-weight: 700; }
+  .step-text .hl2 { color: var(--warn); }
+  .step-text .hl3 { color: var(--success); }
+
+  /* Subtraction table for borrow method */
+  .sub-table {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  .sub-table td {
+    padding: 6px 10px;
+    text-align: center;
+    border: 1px solid var(--border);
+  }
+
+  .sub-table .row-label {
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: left;
+    width: 90px;
+  }
+
+  .sub-table .borrow-row td { color: var(--warn); font-size: 0.75rem; }
+  .sub-table .result-row td { color: var(--success); font-weight: 700; }
+
+  /* ── SIDEBAR ── */
+  .sidebar { display: flex; flex-direction: column; gap: 18px; }
+
+  /* ── QUICK REF ── */
+  .ref-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+  }
+
+  .ref-table th {
+    color: var(--text-muted);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    padding: 6px 8px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+  }
+
+  .ref-table td {
+    padding: 7px 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    color: var(--text);
+  }
+
+  .ref-table td:first-child { color: var(--primary); }
+  .ref-table tr:last-child td { border-bottom: none; }
+  .ref-table tr:hover td { background: var(--surface-hover); }
+
+  /* ── SETTINGS ── */
+  .settings-group { margin-bottom: 16px; }
+
+  .settings-label {
+    font-size: 0.68rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .toggle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+  }
+
+  .toggle-label {
+    font-size: 0.82rem;
+    color: var(--text);
+  }
+
+  .toggle {
+    position: relative;
+    width: 36px;
+    height: 20px;
+  }
+
+  .toggle input { opacity: 0; width: 0; height: 0; }
+
+  .toggle-slider {
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .toggle-slider::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: var(--text-muted);
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transition: 0.2s;
+  }
+
+  .toggle input:checked + .toggle-slider { background: var(--primary); }
+  .toggle input:checked + .toggle-slider::after { transform: translateX(16px); background: var(--text); }
+
+  /* Custom base */
+  .custom-base-section {
+    display: none;
+    margin-top: 12px;
+    padding: 14px;
+    background: rgba(67,102,168,0.07);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+
+  .custom-base-section.visible { display: block; animation: fadeIn 0.2s; }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center;
+    padding: 40px 0 28px;
+    position: relative;
+    z-index: 1;
+  }
+
+  footer p {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  footer p span { color: var(--primary); }
+
+  /* ── NOTIFICATION ── */
+  .notif {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--secondary);
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    padding: 12px 18px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--text);
+    z-index: 999;
+    transform: translateY(80px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+
+  .notif.show { transform: translateY(0); opacity: 1; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .result-value { font-size: 1.4rem; }
+    .brand-title { font-size: 1.2rem; }
+    .card { padding: 18px; }
+  }
+
+  /* Divider */
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 16px 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-title">Number<span>Systems</span> Playground</div>
+        <div class="brand-sub">ISC Class 10 · Computer Science</div>
+      </div>
+      <div class="header-badge"><a style="all: unset; cursor: pointer" href="https://shs-pyqp-project.vercel.app" >shs-pyqp-project</a></div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- MAIN PANEL -->
+    <main>
+      <div class="mode-tabs" id="modeTabs">
+        <button class="mode-tab active" data-mode="convert">Convert</button>
+        <button class="mode-tab" data-mode="arithmetic">Arithmetic</button>
+        <button class="mode-tab" data-mode="subtract">Subtraction</button>
+        <button class="mode-tab" data-mode="complement">Complement</button>
+      </div>
+
+      <!-- CONVERT -->
+      <div class="panel active" id="panel-convert">
+        <div class="card">
+          <div class="card-title">Base Conversion</div>
+          <div class="field-group">
+            <label>Input Number</label>
+            <input type="text" id="convInput" placeholder="e.g. 1010, FF, 777" autocomplete="off" spellcheck="false">
+            <div class="error-msg" id="convErr">Invalid digits for selected base.</div>
+          </div>
+          <div class="base-row">
+            <div class="field-group">
+              <label>From Base</label>
+              <select id="convFrom">
+                <option value="2">Binary (2)</option>
+                <option value="8">Octal (8)</option>
+                <option value="10" selected>Decimal (10)</option>
+                <option value="16">Hexadecimal (16)</option>
+                <option value="custom">Custom…</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label>To Base</label>
+              <select id="convTo">
+                <option value="2">Binary (2)</option>
+                <option value="8">Octal (8)</option>
+                <option value="10">Decimal (10)</option>
+                <option value="16" selected>Hexadecimal (16)</option>
+                <option value="custom">Custom…</option>
+              </select>
+            </div>
+          </div>
+          <div id="convCustomFromWrap" class="custom-base-section">
+            <div class="settings-label">Custom From-Base</div>
+            <input type="number" id="convCustomFrom" min="2" max="36" value="12" placeholder="2–36">
+          </div>
+          <div id="convCustomToWrap" class="custom-base-section">
+            <div class="settings-label">Custom To-Base</div>
+            <input type="number" id="convCustomTo" min="2" max="36" value="12" placeholder="2–36">
+          </div>
+          <div class="btn-row">
+            <button class="btn btn-primary" onclick="doConvert()">Convert</button>
+            <button class="btn btn-ghost" onclick="doConvertAll()">Show All</button>
+            <button class="btn btn-ghost" onclick="clearConvert()">Clear</button>
+          </div>
+
+          <div class="result-box" id="convResult">
+            <div class="result-header">Result</div>
+            <div class="result-body">
+              <div class="result-value" id="convResultVal">—</div>
+              <div class="result-label" id="convResultLbl"></div>
+              <div class="result-grid" id="convResultAll"></div>
+            </div>
+          </div>
+
+          <div class="steps-container" id="convSteps">
+            <div class="steps-toggle" id="convStepsToggle" onclick="toggleSteps('conv')">
+              <span class="arrow">▶</span> Step-by-step Workings
+            </div>
+            <div class="steps-inner" id="convStepsInner">
+              <div id="convStepsBody"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ARITHMETIC -->
+      <div class="panel" id="panel-arithmetic">
+        <div class="card">
+          <div class="card-title">Binary / Hex Arithmetic</div>
+          <div class="base-row">
+            <div class="field-group">
+              <label>Number A</label>
+              <input type="text" id="arithA" placeholder="e.g. 1010" spellcheck="false">
+            </div>
+            <div class="field-group">
+              <label>Number B</label>
+              <input type="text" id="arithB" placeholder="e.g. 0110" spellcheck="false">
+            </div>
+          </div>
+          <div class="base-row">
+            <div class="field-group">
+              <label>Base</label>
+              <select id="arithBase">
+                <option value="2" selected>Binary (2)</option>
+                <option value="8">Octal (8)</option>
+                <option value="10">Decimal (10)</option>
+                <option value="16">Hexadecimal (16)</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label>Operation</label>
+              <select id="arithOp">
+                <option value="add">Addition (+)</option>
+                <option value="mul">Multiplication (×)</option>
+              </select>
+            </div>
+          </div>
+          <div class="error-msg" id="arithErr">Invalid input for selected base.</div>
+          <div class="btn-row">
+            <button class="btn btn-primary" onclick="doArith()">Calculate</button>
+            <button class="btn btn-ghost" onclick="clearArith()">Clear</button>
+          </div>
+
+          <div class="result-box" id="arithResult">
+            <div class="result-header">Result</div>
+            <div class="result-body">
+              <div class="result-value" id="arithResultVal">—</div>
+              <div class="result-label" id="arithResultLbl"></div>
+            </div>
+          </div>
+
+          <div class="steps-container" id="arithSteps">
+            <div class="steps-toggle" id="arithStepsToggle" onclick="toggleSteps('arith')">
+              <span class="arrow">▶</span> Step-by-step Workings
+            </div>
+            <div class="steps-inner" id="arithStepsInner">
+              <div id="arithStepsBody"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUBTRACTION -->
+      <div class="panel" id="panel-subtract">
+        <div class="card">
+          <div class="card-title">Subtraction Methods</div>
+          <div class="base-row">
+            <div class="field-group">
+              <label>Minuend (A)</label>
+              <input type="text" id="subA" placeholder="e.g. 1010" spellcheck="false">
+            </div>
+            <div class="field-group">
+              <label>Subtrahend (B)</label>
+              <input type="text" id="subB" placeholder="e.g. 0110" spellcheck="false">
+            </div>
+          </div>
+          <div class="field-group">
+            <label>Base</label>
+            <select id="subBase">
+              <option value="2" selected>Binary (2)</option>
+              <option value="8">Octal (8)</option>
+              <option value="10">Decimal (10)</option>
+              <option value="16">Hexadecimal (16)</option>
+            </select>
+          </div>
+          <div class="error-msg" id="subErr">Invalid input for selected base.</div>
+          <div class="btn-row">
+            <button class="btn btn-primary" onclick="doSubtract()">Calculate</button>
+            <button class="btn btn-ghost" onclick="clearSub()">Clear</button>
+          </div>
+
+          <div class="result-box" id="subResult">
+            <div class="result-header">Result</div>
+            <div class="result-body">
+              <div class="result-value" id="subResultVal">—</div>
+              <div class="result-label" id="subResultLbl"></div>
+            </div>
+          </div>
+
+          <div class="steps-container" id="subSteps">
+            <div class="steps-toggle" id="subStepsToggle" onclick="toggleSteps('sub')">
+              <span class="arrow">▶</span> Step-by-step Workings
+            </div>
+            <div class="steps-inner" id="subStepsInner">
+              <div class="step-tabs" id="subMethodTabs">
+                <button class="step-tab active" data-sub-tab="borrow">Borrow Method</button>
+                <button class="step-tab" data-sub-tab="comp-r">r's Complement</button>
+                <button class="step-tab" data-sub-tab="comp-r1">r-1's Complement</button>
+              </div>
+              <div id="subStepsBody"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMPLEMENT -->
+      <div class="panel" id="panel-complement">
+        <div class="card">
+          <div class="card-title">Complement Calculator</div>
+          <div class="field-group">
+            <label>Input Number</label>
+            <input type="text" id="compInput" placeholder="e.g. 1011, A3F" spellcheck="false">
+          </div>
+          <div class="field-group">
+            <label>Base</label>
+            <select id="compBase" onchange="updateCompTabs()">
+              <option value="2" selected>Binary (2)</option>
+              <option value="8">Octal (8)</option>
+              <option value="16">Hexadecimal (16)</option>
+            </select>
+          </div>
+          <div class="error-msg" id="compErr">Invalid input for selected base.</div>
+          <div class="btn-row">
+            <button class="btn btn-primary" onclick="doComplement()">Calculate</button>
+            <button class="btn btn-ghost" onclick="clearComp()">Clear</button>
+          </div>
+
+          <div class="steps-container visible" id="compSteps" style="margin-top:20px;">
+            <div class="step-tabs" id="compMethodTabs">
+              <button class="step-tab active" data-comp-tab="r1">1's Complement</button>
+              <button class="step-tab" data-comp-tab="r">2's Complement</button>
+            </div>
+            <div class="result-box" id="compResult" style="margin-top:14px;">
+              <div class="result-header">Results</div>
+              <div class="result-body" id="compResultBody">
+                <div style="color:var(--text-muted);font-family:'JetBrains Mono',monospace;font-size:0.82rem;">Enter a number and press Calculate.</div>
+              </div>
+            </div>
+            <div class="steps-toggle" id="compStepsToggle" onclick="toggleSteps('comp')" style="margin-top:16px;">
+              <span class="arrow">▶</span> Step-by-step Workings
+            </div>
+            <div class="steps-inner" id="compStepsInner">
+              <div id="compStepsBody"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <!-- Settings -->
+      <div class="card">
+        <div class="card-title">Settings</div>
+
+        <div class="settings-group">
+          <div class="settings-label">Display</div>
+          <div class="toggle-row">
+            <span class="toggle-label">Show Steps by Default</span>
+            <label class="toggle">
+              <input type="checkbox" id="settAutoSteps" onchange="saveSetting('autoSteps', this.checked)">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <div class="toggle-row">
+            <span class="toggle-label">Uppercase Hex</span>
+            <label class="toggle">
+              <input type="checkbox" id="settUpperHex" checked onchange="saveSetting('upperHex', this.checked)">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <div class="toggle-row">
+            <span class="toggle-label">Group by 4 Bits</span>
+            <label class="toggle">
+              <input type="checkbox" id="settGroupBits" onchange="saveSetting('groupBits', this.checked)">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Advanced -->
+        <div class="settings-group">
+          <div class="settings-label">Advanced</div>
+          <div class="toggle-row">
+            <span class="toggle-label">Custom Base Mode</span>
+            <label class="toggle">
+              <input type="checkbox" id="settCustomBase" onchange="toggleCustomBase(this.checked)">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <div class="custom-base-section" id="customBasePanel">
+            <div class="settings-label" style="margin-bottom:8px;">Global Custom Base</div>
+            <input type="number" id="globalCustomBase" min="2" max="36" value="12" placeholder="2–36" style="margin-bottom:8px;">
+            <div style="font-size:0.68rem;color:var(--text-muted);font-family:'JetBrains Mono',monospace;">
+              Supports bases 2–36 using digits 0–9 and A–Z
+            </div>
+          </div>
+          <div class="toggle-row" style="margin-top:8px;">
+            <span class="toggle-label">Show Decimal Equivalent</span>
+            <label class="toggle">
+              <input type="checkbox" id="settShowDec" checked onchange="saveSetting('showDec', this.checked)">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Reference -->
+      <div class="card">
+        <div class="card-title">Quick Reference</div>
+        <table class="ref-table">
+          <thead>
+            <tr>
+              <th>Dec</th><th>Bin</th><th>Oct</th><th>Hex</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>0</td><td>0000</td><td>0</td><td>0</td></tr>
+            <tr><td>1</td><td>0001</td><td>1</td><td>1</td></tr>
+            <tr><td>2</td><td>0010</td><td>2</td><td>2</td></tr>
+            <tr><td>3</td><td>0011</td><td>3</td><td>3</td></tr>
+            <tr><td>4</td><td>0100</td><td>4</td><td>4</td></tr>
+            <tr><td>5</td><td>0101</td><td>5</td><td>5</td></tr>
+            <tr><td>6</td><td>0110</td><td>6</td><td>6</td></tr>
+            <tr><td>7</td><td>0111</td><td>7</td><td>7</td></tr>
+            <tr><td>8</td><td>1000</td><td>10</td><td>8</td></tr>
+            <tr><td>9</td><td>1001</td><td>11</td><td>9</td></tr>
+            <tr><td>10</td><td>1010</td><td>12</td><td>A</td></tr>
+            <tr><td>11</td><td>1011</td><td>13</td><td>B</td></tr>
+            <tr><td>12</td><td>1100</td><td>14</td><td>C</td></tr>
+            <tr><td>13</td><td>1101</td><td>15</td><td>D</td></tr>
+            <tr><td>14</td><td>1110</td><td>16</td><td>E</td></tr>
+            <tr><td>15</td><td>1111</td><td>17</td><td>F</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p>Made with care by <span>shs-pyqp-project</span> · ISC Class 10 · Number Systems</p>
+  </div>
+</footer>
+
+<div class="notif" id="notif"></div>
+
+<script>
+// ─────────────────────────────────────────────
+//  SETTINGS (localStorage)
+// ─────────────────────────────────────────────
+const SETTINGS = {
+  autoSteps: false,
+  upperHex: true,
+  groupBits: false,
+  showDec: true,
+  customBase: false,
+  globalCustomBase: 12
+};
+
+function loadSettings() {
+  try {
+    const s = JSON.parse(localStorage.getItem('nsp_settings') || '{}');
+    Object.assign(SETTINGS, s);
+  } catch(e) {}
+  document.getElementById('settAutoSteps').checked = SETTINGS.autoSteps;
+  document.getElementById('settUpperHex').checked = SETTINGS.upperHex;
+  document.getElementById('settGroupBits').checked = SETTINGS.groupBits;
+  document.getElementById('settShowDec').checked = SETTINGS.showDec;
+  document.getElementById('settCustomBase').checked = SETTINGS.customBase;
+  document.getElementById('globalCustomBase').value = SETTINGS.globalCustomBase;
+  if (SETTINGS.customBase) document.getElementById('customBasePanel').classList.add('visible');
+}
+
+function saveSetting(key, val) {
+  SETTINGS[key] = val;
+  localStorage.setItem('nsp_settings', JSON.stringify(SETTINGS));
+}
+
+function toggleCustomBase(on) {
+  saveSetting('customBase', on);
+  document.getElementById('customBasePanel').classList.toggle('visible', on);
+  syncCustomBaseUI();
+}
+
+document.getElementById('globalCustomBase').addEventListener('change', function() {
+  const base = normalizeBase(parseInt(this.value, 10));
+  this.value = base;
+  saveSetting('globalCustomBase', base);
+  syncCustomBaseUI();
+});
+
+loadSettings();
+
+// ─────────────────────────────────────────────
+//  TABS
+// ─────────────────────────────────────────────
+document.querySelectorAll('.mode-tab').forEach(tab => {
+  tab.addEventListener('click', function() {
+    document.querySelectorAll('.mode-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    this.classList.add('active');
+    document.getElementById('panel-' + this.dataset.mode).classList.add('active');
+  });
+});
+
+// Sub-method tabs (subtraction)
+document.querySelectorAll('[data-sub-tab]').forEach(tab => {
+  tab.addEventListener('click', function() {
+    document.querySelectorAll('[data-sub-tab]').forEach(t => t.classList.remove('active'));
+    this.classList.add('active');
+    if (document.getElementById('subResult').classList.contains('visible')) {
+      renderSubSteps();
+    }
+  });
+});
+
+// Complement tabs
+document.querySelectorAll('[data-comp-tab]').forEach(tab => {
+  tab.addEventListener('click', function() {
+    document.querySelectorAll('[data-comp-tab]').forEach(t => t.classList.remove('active'));
+    this.classList.add('active');
+    if (document.getElementById('compResult').classList.contains('visible')) {
+      renderCompSteps();
+    }
+  });
+});
+
+// ─────────────────────────────────────────────
+//  UTILITIES
+// ─────────────────────────────────────────────
+function fmt(num, base) {
+  let s = num.toString(base);
+  if (base === 16 && SETTINGS.upperHex) s = s.toUpperCase();
+  if (base === 2 && SETTINGS.groupBits) {
+    while (s.length % 4 !== 0) s = '0' + s;
+    s = s.match(/.{1,4}/g).join(' ');
+  }
+  return s;
+}
+
+function parseNum(str, base) {
+  str = str.trim().replace(/\s+/g, '');
+  if (!str) return NaN;
+  const n = parseInt(str, base);
+  // Validate digits
+  const valid = [...str.toUpperCase()].every(c => {
+    const v = parseInt(c, 36);
+    return !isNaN(v) && v < base;
+  });
+  return valid ? n : NaN;
+}
+
+function baseName(b) {
+  return {2:'Binary', 8:'Octal', 10:'Decimal', 16:'Hexadecimal'}[b] || `Base-${b}`;
+}
+
+function normalizeBase(base) {
+  if (!Number.isInteger(base)) return 10;
+  return Math.min(36, Math.max(2, base));
+}
+
+function getEffectiveBase(selectId) {
+  if (SETTINGS.customBase) return normalizeBase(SETTINGS.globalCustomBase);
+  const selected = parseInt(document.getElementById(selectId).value, 10);
+  return normalizeBase(selected);
+}
+
+function syncCustomBaseUI() {
+  const base = normalizeBase(SETTINGS.globalCustomBase);
+  SETTINGS.globalCustomBase = base;
+  document.getElementById('globalCustomBase').value = base;
+  ['arithBase', 'subBase', 'compBase'].forEach(id => {
+    const select = document.getElementById(id);
+    if (!select) return;
+    select.disabled = SETTINGS.customBase;
+    select.title = SETTINGS.customBase ? `Custom Base Mode ON: using base ${base}` : '';
+  });
+  updateCompTabs();
+}
+
+function notify(msg) {
+  const n = document.getElementById('notif');
+  n.textContent = msg;
+  n.classList.add('show');
+  setTimeout(() => n.classList.remove('show'), 2200);
+}
+
+function showErr(id, msg) {
+  const el = document.getElementById(id);
+  el.textContent = msg;
+  el.style.display = 'block';
+}
+function hideErr(id) { document.getElementById(id).style.display = 'none'; }
+
+// ─────────────────────────────────────────────
+//  STEPS TOGGLE
+// ─────────────────────────────────────────────
+function toggleSteps(prefix) {
+  const toggle = document.getElementById(prefix + 'StepsToggle');
+  const inner = document.getElementById(prefix + 'StepsInner');
+  const open = toggle.classList.toggle('open');
+  inner.classList.toggle('open', open);
+}
+
+function openSteps(prefix) {
+  const toggle = document.getElementById(prefix + 'StepsToggle');
+  const inner = document.getElementById(prefix + 'StepsInner');
+  toggle.classList.add('open');
+  inner.classList.add('open');
+}
+
+// ─────────────────────────────────────────────
+//  CONVERSION
+// ─────────────────────────────────────────────
+let lastConvNum = null;
+let lastConvFromBase = 10;
+let lastConvToBase = 16;
+
+document.getElementById('convFrom').addEventListener('change', function() {
+  document.getElementById('convCustomFromWrap').classList.toggle('visible', this.value === 'custom');
+});
+document.getElementById('convTo').addEventListener('change', function() {
+  document.getElementById('convCustomToWrap').classList.toggle('visible', this.value === 'custom');
+});
+
+function getConvBases() {
+  let from = document.getElementById('convFrom').value;
+  let to = document.getElementById('convTo').value;
+  if (from === 'custom') from = parseInt(document.getElementById('convCustomFrom').value) || 10;
+  else from = parseInt(from);
+  if (to === 'custom') to = parseInt(document.getElementById('convCustomTo').value) || 10;
+  else to = parseInt(to);
+  return { from, to };
+}
+
+function doConvert() {
+  hideErr('convErr');
+  const { from, to } = getConvBases();
+  const raw = document.getElementById('convInput').value.trim();
+  if (!raw) return;
+  const n = parseNum(raw, from);
+  if (isNaN(n)) {
+    showErr('convErr', `Invalid digits for base-${from}.`);
+    document.getElementById('convInput').classList.add('error');
+    return;
+  }
+  document.getElementById('convInput').classList.remove('error');
+  lastConvNum = n;
+  lastConvFromBase = from;
+  lastConvToBase = to;
+
+  const result = fmt(n, to);
+  document.getElementById('convResultVal').textContent = result;
+  document.getElementById('convResultLbl').textContent =
+    `${baseName(from)} ${raw.toUpperCase()} = ${baseName(to)} ${result}` +
+    (SETTINGS.showDec && to !== 10 ? `  (Decimal: ${n})` : '');
+  document.getElementById('convResultAll').innerHTML = '';
+  document.getElementById('convResult').classList.add('visible');
+
+  document.getElementById('convSteps').classList.add('visible');
+  buildConvSteps(n, raw.toUpperCase(), from, to);
+  if (SETTINGS.autoSteps) openSteps('conv');
+}
+
+function doConvertAll() {
+  hideErr('convErr');
+  const { from } = getConvBases();
+  const raw = document.getElementById('convInput').value.trim();
+  if (!raw) return;
+  if (raw.includes('.')) {
+    showErr('convErr', 'Show All supports integer inputs only (no decimal point).');
+    document.getElementById('convInput').classList.add('error');
+    return;
+  }
+  const n = parseNum(raw, from);
+  if (isNaN(n)) {
+    showErr('convErr', `Invalid digits for base-${from}.`);
+    document.getElementById('convInput').classList.add('error');
+    return;
+  }
+  document.getElementById('convInput').classList.remove('error');
+  lastConvNum = n;
+  lastConvFromBase = from;
+
+  document.getElementById('convResultVal').textContent = '';
+  const bases = SETTINGS.customBase
+    ? Array.from({ length: 35 }, (_, i) => i + 2)
+    : [2, 8, 10, 16];
+  document.getElementById('convResultLbl').textContent = SETTINGS.customBase
+    ? `${baseName(from)} ${raw.toUpperCase()} in all bases (2–36)`
+    : `${baseName(from)} ${raw.toUpperCase()} in all bases`;
+  const grid = document.getElementById('convResultAll');
+  grid.innerHTML = bases.map(b => `
+    <div class="result-chip">
+      <div class="result-chip-val">${fmt(n, b)}</div>
+      <div class="result-chip-lbl">${baseName(b)} (${b})</div>
+    </div>`).join('');
+  document.getElementById('convResult').classList.add('visible');
+}
+
+function clearConvert() {
+  document.getElementById('convInput').value = '';
+  document.getElementById('convResult').classList.remove('visible');
+  document.getElementById('convSteps').classList.remove('visible');
+  document.getElementById('convResultAll').innerHTML = '';
+  hideErr('convErr');
+}
+
+function buildConvSteps(decVal, rawInput, from, to) {
+  const body = document.getElementById('convStepsBody');
+  let html = '';
+
+  // Step 1: to decimal if not decimal
+  if (from !== 10) {
+    html += `<div style="margin-bottom:10px;font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;">Phase 1 — ${baseName(from)} → Decimal</div>`;
+    const digits = rawInput.replace(/\s/g,'').split('').reverse();
+    digits.forEach((d, i) => {
+      const dv = parseInt(d, from);
+      html += `<div class="step-row"><div class="step-num">${i+1}</div><div class="step-text">
+        Position <span class="hl">${i}</span>: digit <span class="hl">${d}</span> × ${from}<sup>${i}</sup> = <span class="hl">${dv}</span> × <span class="hl2">${Math.pow(from,i)}</span> = <span class="hl3">${dv * Math.pow(from,i)}</span>
+      </div></div>`;
+    });
+    const parts = digits.map((d,i) => parseInt(d,from) * Math.pow(from,i));
+    html += `<div class="step-row"><div class="step-num">Σ</div><div class="step-text">Sum: ${parts.join(' + ')} = <span class="hl3">${decVal}</span> (Decimal)</div></div>`;
+  }
+
+  // Step 2: decimal to target
+  if (to !== 10) {
+    html += `<div style="margin:14px 0 10px;font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;">Phase 2 — Decimal → ${baseName(to)}</div>`;
+    let n = decVal;
+    let remainders = [];
+    let step = 0;
+    while (n > 0) {
+      step++;
+      const q = Math.floor(n / to);
+      const r = n % to;
+      const rd = r.toString(to).toUpperCase();
+      html += `<div class="step-row"><div class="step-num">${step}</div><div class="step-text">
+        <span class="hl">${n}</span> ÷ ${to} = <span class="hl2">${q}</span> remainder <span class="hl3">${rd}</span>
+      </div></div>`;
+      remainders.push(rd);
+      n = q;
+    }
+    html += `<div class="step-row"><div class="step-num">↑</div><div class="step-text">
+      Reading remainders bottom-up: <span class="hl3">${remainders.slice().reverse().join('')}</span>
+    </div></div>`;
+  }
+
+  if (from === 10 && to === 10) {
+    html = `<div class="step-row"><div class="step-num">1</div><div class="step-text">Already in decimal: <span class="hl3">${decVal}</span></div></div>`;
+  }
+
+  body.innerHTML = html;
+}
+
+// ─────────────────────────────────────────────
+//  ARITHMETIC
+// ─────────────────────────────────────────────
+let lastArithA = 0, lastArithB = 0, lastArithBase = 2, lastArithOp = 'add';
+
+function doArith() {
+  hideErr('arithErr');
+  const base = getEffectiveBase('arithBase');
+  const op = document.getElementById('arithOp').value;
+  const rawA = document.getElementById('arithA').value.trim();
+  const rawB = document.getElementById('arithB').value.trim();
+  const a = parseNum(rawA, base);
+  const b = parseNum(rawB, base);
+  if (isNaN(a) || isNaN(b)) {
+    showErr('arithErr', `Invalid digits for base-${base}.`);
+    return;
+  }
+  const result = op === 'add' ? a + b : a * b;
+  lastArithA = a; lastArithB = b; lastArithBase = base; lastArithOp = op;
+
+  document.getElementById('arithResultVal').textContent = fmt(result, base);
+  document.getElementById('arithResultLbl').textContent =
+    `${rawA.toUpperCase()} ${op === 'add' ? '+' : '×'} ${rawB.toUpperCase()} = ${fmt(result, base)}` +
+    (SETTINGS.showDec ? `  (Decimal: ${result})` : '');
+  document.getElementById('arithResult').classList.add('visible');
+
+  document.getElementById('arithSteps').classList.add('visible');
+  buildArithSteps(a, b, rawA.toUpperCase(), rawB.toUpperCase(), base, op, result);
+  if (SETTINGS.autoSteps) openSteps('arith');
+}
+
+function clearArith() {
+  document.getElementById('arithA').value = '';
+  document.getElementById('arithB').value = '';
+  document.getElementById('arithResult').classList.remove('visible');
+  document.getElementById('arithSteps').classList.remove('visible');
+  hideErr('arithErr');
+}
+
+function buildArithSteps(a, b, rA, rB, base, op, result) {
+  const body = document.getElementById('arithStepsBody');
+  let html = '';
+  if (op === 'add') {
+    // Column addition
+    const sa = fmt(a, base).replace(/\s/g,'');
+    const sb = fmt(b, base).replace(/\s/g,'');
+    const len = Math.max(sa.length, sb.length) + 1;
+    const pa = sa.padStart(len, '0');
+    const pb = sb.padStart(len, '0');
+    let carry = 0;
+    let carries = new Array(len).fill(0);
+    let digits = [];
+    for (let i = len - 1; i >= 0; i--) {
+      const da = parseInt(pa[i], base) || 0;
+      const db = parseInt(pb[i], base) || 0;
+      const sum = da + db + carry;
+      carries[i] = carry;
+      carry = Math.floor(sum / base);
+      digits[i] = sum % base;
+    }
+    // Render carries
+    html += `<div class="step-row"><div class="step-num">—</div><div class="step-text" style="width:100%">
+      <div style="font-family:'JetBrains Mono';margin-bottom:6px;">Column-by-column addition in base ${base}:</div>
+      <table class="sub-table">
+        <tr class="borrow-row"><td class="row-label">Carries</td>${carries.map((c,i)=>`<td>${c||''}</td>`).join('')}</tr>
+        <tr><td class="row-label">A</td>${pa.split('').map(d=>`<td>${d}</td>`).join('')}</tr>
+        <tr><td class="row-label">B</td>${pb.split('').map(d=>`<td>${d}</td>`).join('')}</tr>
+        <tr class="result-row"><td class="row-label">Sum</td>${digits.map(d=>`<td>${d.toString(base).toUpperCase()}</td>`).join('')}</tr>
+      </table>
+    </div></div>`;
+    // Steps per column
+    for (let i = len - 1; i >= 0; i--) {
+      const da = parseInt(pa[i], base) || 0;
+      const db = parseInt(pb[i], base) || 0;
+      const c = carries[i];
+      const sum = da + db + c;
+      const dig = sum % base;
+      const nc = Math.floor(sum / base);
+      html += `<div class="step-row"><div class="step-num">${len - i}</div><div class="step-text">
+        Col ${len - 1 - i}: <span class="hl">${da.toString(base).toUpperCase()}</span> + <span class="hl">${db.toString(base).toUpperCase()}</span>${c?` + carry <span class="hl2">${c}</span>`:''} = <span class="hl2">${sum}</span>
+        → write <span class="hl3">${dig.toString(base).toUpperCase()}</span>${nc ? `, carry <span class="hl2">${nc}</span>` : ''}
+      </div></div>`;
+    }
+    html += `<div class="step-row"><div class="step-num">✓</div><div class="step-text">Result: <span class="hl3">${fmt(result, base)}</span>${SETTINGS.showDec ? ` = ${result} in decimal` : ''}</div></div>`;
+  } else {
+    // Multiplication steps
+    const sa = fmt(a, base).replace(/\s/g,'');
+    const sb = fmt(b, base).replace(/\s/g,'');
+    html += `<div style="margin-bottom:10px;font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--text-muted);">Partial products (base ${base}):</div>`;
+    let partials = [];
+    for (let i = sb.length - 1; i >= 0; i--) {
+      const d = parseInt(sb[i], base);
+      const partial = a * d;
+      const shift = sb.length - 1 - i;
+      partials.push({ val: partial, shift });
+      html += `<div class="step-row"><div class="step-num">${sb.length - i}</div><div class="step-text">
+        <span class="hl">${rA}</span> × <span class="hl">${sb[i].toUpperCase()}</span> (pos ${shift}) = <span class="hl2">${partial}</span> (dec) = <span class="hl3">${fmt(partial, base)}</span> shifted ${shift} place(s)
+      </div></div>`;
+    }
+    html += `<div class="step-row"><div class="step-num">Σ</div><div class="step-text">Sum of partials = <span class="hl3">${fmt(result, base)}</span>${SETTINGS.showDec ? ` = ${result} decimal` : ''}</div></div>`;
+  }
+  body.innerHTML = html;
+}
+
+// ─────────────────────────────────────────────
+//  SUBTRACTION
+// ─────────────────────────────────────────────
+let lastSubA = 0, lastSubB = 0, lastSubBase = 2;
+
+function doSubtract() {
+  hideErr('subErr');
+  const base = getEffectiveBase('subBase');
+  const rawA = document.getElementById('subA').value.trim();
+  const rawB = document.getElementById('subB').value.trim();
+  const a = parseNum(rawA, base);
+  const b = parseNum(rawB, base);
+  if (isNaN(a) || isNaN(b)) {
+    showErr('subErr', `Invalid digits for base-${base}.`);
+    return;
+  }
+  const result = a - b;
+  lastSubA = a; lastSubB = b; lastSubBase = base;
+
+  const sign = result < 0 ? '-' : '';
+  document.getElementById('subResultVal').textContent = sign + fmt(Math.abs(result), base);
+  document.getElementById('subResultLbl').textContent =
+    `${rawA.toUpperCase()} − ${rawB.toUpperCase()} = ${sign}${fmt(Math.abs(result), base)}` +
+    (SETTINGS.showDec ? `  (Decimal: ${result})` : '');
+  document.getElementById('subResult').classList.add('visible');
+
+  document.getElementById('subSteps').classList.add('visible');
+  renderSubSteps();
+  if (SETTINGS.autoSteps) openSteps('sub');
+}
+
+function renderSubSteps() {
+  const activeTab = document.querySelector('[data-sub-tab].active')?.dataset.subTab || 'borrow';
+  const body = document.getElementById('subStepsBody');
+  const a = lastSubA, b = lastSubB, base = lastSubBase;
+  const sa = fmt(a, base).replace(/\s/g,'').toUpperCase();
+  const sb = fmt(b, base).replace(/\s/g,'').toUpperCase();
+
+  if (activeTab === 'borrow') {
+    body.innerHTML = buildBorrowSteps(a, b, sa, sb, base);
+  } else if (activeTab === 'comp-r') {
+    body.innerHTML = buildRCompSteps(a, b, sa, sb, base);
+  } else {
+    body.innerHTML = buildR1CompSteps(a, b, sa, sb, base);
+  }
+}
+
+function buildBorrowSteps(a, b, sa, sb, base) {
+  const len = Math.max(sa.length, sb.length);
+  const pa = sa.padStart(len, '0');
+  const pb = sb.padStart(len, '0');
+  let borrow = 0;
+  let borrows = new Array(len).fill(0);
+  let result = [];
+
+  for (let i = len - 1; i >= 0; i--) {
+    let da = parseInt(pa[i], base);
+    const db = parseInt(pb[i], base);
+    da -= borrow;
+    borrows[i] = borrow;
+    borrow = 0;
+    if (da < db) { borrow = 1; da += base; }
+    result[i] = da - db;
+  }
+
+  let html = `<div class="step-row"><div class="step-num">—</div><div class="step-text" style="width:100%">
+    <div style="margin-bottom:6px;font-family:'JetBrains Mono';font-size:0.8rem;">Borrow Method — column subtraction (base ${base}):</div>
+    <table class="sub-table">
+      <tr class="borrow-row"><td class="row-label">Borrows</td>${borrows.map(b=>`<td>${b||''}</td>`).join('')}</tr>
+      <tr><td class="row-label">A</td>${pa.split('').map(d=>`<td>${d}</td>`).join('')}</tr>
+      <tr><td class="row-label">B</td>${pb.split('').map(d=>`<td>${d}</td>`).join('')}</tr>
+      <tr class="result-row"><td class="row-label">Result</td>${result.map(d=>`<td>${d.toString(base).toUpperCase()}</td>`).join('')}</tr>
+    </table>
+  </div></div>`;
+
+  let borrow2 = 0;
+  for (let i = len - 1; i >= 0; i--) {
+    let da = parseInt(pa[i], base) - (i > 0 ? borrows[i] : 0);
+    const db = parseInt(pb[i], base);
+    const borrowed = da < db;
+    html += `<div class="step-row"><div class="step-num">${len - i}</div><div class="step-text">
+      Col ${len-1-i}: ${borrowed?`Borrow! <span class="hl2">${da + base}</span> - <span class="hl">${db}</span>`:`<span class="hl">${da}</span> - <span class="hl">${db}</span>`} = <span class="hl3">${result[i].toString(base).toUpperCase()}</span>${borrowed?' (borrow 1 from next)':''}
+    </div></div>`;
+  }
+  html += `<div class="step-row"><div class="step-num">✓</div><div class="step-text">Result: <span class="hl3">${result.map(d=>d.toString(base).toUpperCase()).join('')}</span></div></div>`;
+  return html;
+}
+
+function buildRCompSteps(a, b, sa, sb, base) {
+  const n = Math.max(sa.length, sb.length);
+  // r's complement of B = r^n - B
+  const rn = Math.pow(base, n);
+  const compB = rn - b;
+  const compBStr = fmt(compB, base).replace(/\s/g,'').toUpperCase().padStart(n, '0');
+  const sum = a + compB;
+  const sumStr = fmt(sum, base).replace(/\s/g,'').toUpperCase();
+  const result = a - b;
+
+  let html = `
+  <div class="step-row"><div class="step-num">1</div><div class="step-text">
+    Find the <span class="hl">${base}'s complement</span> of B (<span class="hl">${sb}</span>)<br>
+    ${base}<sup>${n}</sup> = <span class="hl2">${rn}</span> (decimal)<br>
+    ${rn} − ${b} = <span class="hl3">${compB}</span> (decimal) = <span class="hl3">${compBStr}</span> (base ${base})
+  </div></div>
+  <div class="step-row"><div class="step-num">2</div><div class="step-text">
+    Add A + ${base}'s complement of B:<br>
+    <span class="hl">${sa}</span> + <span class="hl">${compBStr}</span> = <span class="hl2">${sumStr}</span>
+  </div></div>
+  <div class="step-row"><div class="step-num">3</div><div class="step-text">
+    ${sum >= rn
+      ? `Result has ${n+1} digits → discard end-around carry<br>Final result = <span class="hl3">${fmt(result, base).replace(/\s/g,'').toUpperCase()}</span>`
+      : `No end-around carry → result is negative!<br>Take ${base}'s complement of <span class="hl2">${sumStr}</span> = <span class="hl3">${fmt(rn - sum, base).replace(/\s/g,'').toUpperCase()}</span>, answer is negative`
+    }
+  </div></div>`;
+  return html;
+}
+
+function buildR1CompSteps(a, b, sa, sb, base) {
+  const n = Math.max(sa.length, sb.length);
+  // (r-1)'s complement of B
+  const maxVal = Math.pow(base, n) - 1;
+  const compB = maxVal - b;
+  const compBStr = fmt(compB, base).replace(/\s/g,'').toUpperCase().padStart(n,'0');
+  const sum = a + compB;
+  const sumStr = fmt(sum, base).replace(/\s/g,'').toUpperCase();
+  const rn = Math.pow(base, n);
+  const result = a - b;
+
+  const compName = base === 16 ? "15's Complement" : base === 2 ? "1's Complement" : `${base-1}'s Complement`;
+
+  let html = `
+  <div class="step-row"><div class="step-num">1</div><div class="step-text">
+    Find the <span class="hl">${compName}</span> of B (<span class="hl">${sb}</span>)<br>
+    Max value for ${n} digits = <span class="hl2">${maxVal}</span> (decimal)<br>
+    ${maxVal} − ${b} = <span class="hl3">${compB}</span> (dec) = <span class="hl3">${compBStr}</span> (base ${base})
+  </div></div>
+  <div class="step-row"><div class="step-num">2</div><div class="step-text">
+    Add A + ${compName} of B:<br>
+    <span class="hl">${sa}</span> + <span class="hl">${compBStr}</span> = <span class="hl2">${sumStr}</span>
+  </div></div>
+  <div class="step-row"><div class="step-num">3</div><div class="step-text">
+    ${sum >= rn
+      ? `Carry generated → add 1 to result (end-around carry)<br>
+         <span class="hl2">${fmt(sum - rn, base).replace(/\s/g,'').toUpperCase()}</span> + 1 = <span class="hl3">${fmt(result, base).replace(/\s/g,'').toUpperCase()}</span>`
+      : `No carry → result is negative<br>Take ${compName} of <span class="hl2">${sumStr}</span> and negate`
+    }
+  </div></div>`;
+  return html;
+}
+
+function clearSub() {
+  document.getElementById('subA').value = '';
+  document.getElementById('subB').value = '';
+  document.getElementById('subResult').classList.remove('visible');
+  document.getElementById('subSteps').classList.remove('visible');
+  hideErr('subErr');
+}
+
+// ─────────────────────────────────────────────
+//  COMPLEMENT
+// ─────────────────────────────────────────────
+let lastCompInput = 0, lastCompBase = 2;
+
+function updateCompTabs() {
+  const base = getEffectiveBase('compBase');
+  const tabs = document.getElementById('compMethodTabs');
+  if (base === 2) {
+    tabs.innerHTML = `
+      <button class="step-tab active" data-comp-tab="r1">1's Complement</button>
+      <button class="step-tab" data-comp-tab="r">2's Complement</button>`;
+  } else if (base === 16) {
+    tabs.innerHTML = `
+      <button class="step-tab active" data-comp-tab="r1">15's Complement</button>
+      <button class="step-tab" data-comp-tab="r">16's Complement</button>`;
+  } else if (base === 8) {
+    tabs.innerHTML = `
+      <button class="step-tab active" data-comp-tab="r1">7's Complement</button>
+      <button class="step-tab" data-comp-tab="r">8's Complement</button>`;
+  } else {
+    tabs.innerHTML = `
+      <button class="step-tab active" data-comp-tab="r1">(r-1)'s Comp</button>
+      <button class="step-tab" data-comp-tab="r">r's Comp</button>`;
+  }
+  // Re-attach listeners
+  tabs.querySelectorAll('[data-comp-tab]').forEach(t => {
+    t.addEventListener('click', function() {
+      tabs.querySelectorAll('[data-comp-tab]').forEach(x => x.classList.remove('active'));
+      this.classList.add('active');
+      if (lastCompInput !== null) renderCompSteps();
+    });
+  });
+}
+
+updateCompTabs();
+
+function doComplement() {
+  hideErr('compErr');
+  const base = getEffectiveBase('compBase');
+  const raw = document.getElementById('compInput').value.trim();
+  const n = parseNum(raw, base);
+  if (isNaN(n)) {
+    showErr('compErr', `Invalid digits for base-${base}.`);
+    return;
+  }
+  lastCompInput = n;
+  lastCompBase = base;
+
+  document.getElementById('compResult').classList.add('visible');
+  renderCompResult(n, raw.toUpperCase(), base);
+  renderCompSteps();
+  if (SETTINGS.autoSteps) openSteps('comp');
+}
+
+function renderCompResult(n, raw, base) {
+  const digits = raw.replace(/\s/g,'').length;
+  const maxVal = Math.pow(base, digits) - 1;
+  const rn = Math.pow(base, digits);
+  const r1comp = maxVal - n;
+  const rcomp = rn - n;
+
+  const r1name = base === 16 ? "15's" : base === 2 ? "1's" : `${base-1}'s`;
+  const rname = base === 16 ? "16's" : base === 2 ? "2's" : `${base}'s`;
+
+  document.getElementById('compResultBody').innerHTML = `
+    <div style="margin-bottom:12px;font-family:'JetBrains Mono',monospace;font-size:0.8rem;color:var(--text-muted);">
+      Input: <span style="color:var(--text)">${raw}</span> (base ${base}, decimal ${n})
+    </div>
+    <div class="result-grid">
+      <div class="result-chip">
+        <div class="result-chip-val">${fmt(r1comp, base).toUpperCase().replace(/\s/g,'').padStart(digits,'0')}</div>
+        <div class="result-chip-lbl">${r1name} Complement</div>
+      </div>
+      <div class="result-chip">
+        <div class="result-chip-val">${fmt(rcomp % rn, base).toUpperCase().replace(/\s/g,'').padStart(digits,'0')}</div>
+        <div class="result-chip-lbl">${rname} Complement</div>
+      </div>
+    </div>`;
+}
+
+function renderCompSteps() {
+  const tab = document.querySelector('#compMethodTabs [data-comp-tab].active')?.dataset.compTab || 'r1';
+  const body = document.getElementById('compStepsBody');
+  const n = lastCompInput, base = lastCompBase;
+  const raw = fmt(n, base).replace(/\s/g,'').toUpperCase();
+  const digits = raw.length;
+  const maxVal = Math.pow(base, digits) - 1;
+  const rn = Math.pow(base, digits);
+
+  const r1name = base === 16 ? "15's" : base === 2 ? "1's" : `${base-1}'s`;
+  const rname  = base === 16 ? "16's" : base === 2 ? "2's" : `${base}'s`;
+
+  let html = '';
+  if (tab === 'r1') {
+    const comp = maxVal - n;
+    const compStr = fmt(comp, base).replace(/\s/g,'').toUpperCase().padStart(digits,'0');
+    if (base === 2) {
+      // Bit-flip method
+      html += `<div class="step-row"><div class="step-num">1</div><div class="step-text">
+        For binary 1's complement, <span class="hl">flip every bit</span> (0→1, 1→0):
+      </div></div>`;
+      [...raw].forEach((bit, i) => {
+        html += `<div class="step-row"><div class="step-num">${i+1}</div><div class="step-text">
+          Bit ${i}: <span class="hl">${bit}</span> → <span class="hl3">${bit==='0'?'1':'0'}</span>
+        </div></div>`;
+      });
+    } else {
+      html += `<div class="step-row"><div class="step-num">1</div><div class="step-text">
+        ${r1name} complement = (${base}<sup>${digits}</sup> − 1) − N<br>
+        = <span class="hl2">${maxVal}</span> − <span class="hl">${n}</span> = <span class="hl3">${comp}</span> (decimal)
+      </div></div>`;
+      // digit-by-digit for hex
+      if (base === 16) {
+        html += `<div class="step-row"><div class="step-num">2</div><div class="step-text">
+          Digit-by-digit: subtract each digit from F (15):
+        </div></div>`;
+        [...raw].forEach((d, i) => {
+          const dv = parseInt(d, 16);
+          const rv = 15 - dv;
+          html += `<div class="step-row"><div class="step-num">2.${i+1}</div><div class="step-text">
+            F − <span class="hl">${d}</span> = <span class="hl3">${rv.toString(16).toUpperCase()}</span>
+          </div></div>`;
+        });
+      }
+    }
+    html += `<div class="step-row"><div class="step-num">✓</div><div class="step-text">
+      ${r1name} Complement = <span class="hl3">${compStr}</span>
+    </div></div>`;
+  } else {
+    const r1comp = maxVal - n;
+    const rcomp = (rn - n) % rn;
+    const r1str = fmt(r1comp, base).replace(/\s/g,'').toUpperCase().padStart(digits,'0');
+    const rstr  = fmt(rcomp, base).replace(/\s/g,'').toUpperCase().padStart(digits,'0');
+
+    html += `<div class="step-row"><div class="step-num">1</div><div class="step-text">
+      Method 1: ${rname} = ${r1name} + 1<br>
+      ${r1name} of <span class="hl">${raw}</span> = <span class="hl2">${r1str}</span>
+    </div></div>
+    <div class="step-row"><div class="step-num">2</div><div class="step-text">
+      <span class="hl2">${r1str}</span> + 1 = <span class="hl3">${rstr}</span>
+    </div></div>`;
+    if (base === 2) {
+      html += `<div class="step-row"><div class="step-num">alt</div><div class="step-text">
+        Method 2 (shortcut): from right, <span class="hl">keep all 0s and first 1</span>, then flip remaining bits.
+      </div></div>`;
+      let kept = false;
+      let shortResult = '';
+      for (let i = raw.length - 1; i >= 0; i--) {
+        if (!kept) {
+          shortResult = raw[i] + shortResult;
+          if (raw[i] === '1') kept = true;
+        } else {
+          shortResult = (raw[i] === '0' ? '1' : '0') + shortResult;
+        }
+      }
+      [...raw].forEach((b, i) => {
+        const kept2 = shortResult[i];
+        html += `<div class="step-row"><div class="step-num">↳${i+1}</div><div class="step-text">
+          Bit ${i}: <span class="hl">${b}</span> → <span class="hl3">${kept2}</span>
+        </div></div>`;
+      });
+    } else if (base === 16) {
+      html += `<div class="step-row"><div class="step-num">alt</div><div class="step-text">
+        Method 2: Subtract directly from 10<sup>${digits}</sup>₁₆ (i.e., subtract each digit from 10₁₆ with borrow)
+      </div></div>`;
+    }
+    html += `<div class="step-row"><div class="step-num">✓</div><div class="step-text">
+      ${rname} Complement = <span class="hl3">${rstr}</span>
+    </div></div>`;
+  }
+
+  body.innerHTML = html;
+  // Show steps container
+  document.getElementById('compStepsInner').classList.add('open');
+  document.getElementById('compStepsToggle').classList.add('open');
+}
+
+function clearComp() {
+  document.getElementById('compInput').value = '';
+  document.getElementById('compResult').classList.remove('visible');
+  document.getElementById('compStepsInner').classList.remove('open');
+  document.getElementById('compStepsToggle').classList.remove('open');
+  hideErr('compErr');
+  document.getElementById('compResultBody').innerHTML =
+    `<div style="color:var(--text-muted);font-family:'JetBrains Mono',monospace;font-size:0.82rem;">Enter a number and press Calculate.</div>`;
+}
+
+// ─────────────────────────────────────────────
+//  KEYBOARD SHORTCUTS
+// ─────────────────────────────────────────────
+document.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    const activePanel = document.querySelector('.panel.active');
+    if (activePanel?.id === 'panel-convert') doConvert();
+    else if (activePanel?.id === 'panel-arithmetic') doArith();
+    else if (activePanel?.id === 'panel-subtract') doSubtract();
+    else if (activePanel?.id === 'panel-complement') doComplement();
+  }
+});
+
+// ─────────────────────────────────────────────
+//  INLINE STEP RENDERING for complement (already open)
+// ─────────────────────────────────────────────
+// Ensure result box starts as class="result-box" not visible by default for complement
+document.getElementById('compResult').classList.remove('visible');
+</script>
+</body>
+</html>
