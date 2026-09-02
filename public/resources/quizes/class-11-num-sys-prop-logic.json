@@ -1,0 +1,255 @@
+[
+  {
+    "question": "Assertion (A): In Boolean Algebra, dual of the Boolean expression (A+B)'.1 is equal to 0.\nReason (R): In Boolean Algebra, the complement of an OR operation is equal to the AND operation of complement of the individual variables. [CFQ-ISC-Computer-Science-XII.pdf]",
+    "explanation": "The dual of (A+B)'.1 is (A.B)'+0, making Assertion A false. Reason R correctly states De Morgan's Law.",
+    "options": [
+      "Both A and R are true, and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "A is false, but R is true."
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Assertion (A): The truth table for the XOR gate shows that the output is HIGH only when an odd number of inputs are HIGH.\nReason (R): The XOR gate performs addition modulo 2, thus producing a HIGH output when the number of HIGH inputs is odd. [CFQ-ISC-Computer-Science-XII.pdf]",
+    "options": [
+      "Both A and R are true, and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "A is false, but R is true."
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Assertion (A): The contrapositive of p'=>q is q'=>p.\nReason (R): Contrapositive is the conditional statement, obtained after interchanging antecedent and consequent. [CFQ-ISC-Computer-Science-XII.pdf]",
+    "explanation": "Assertion A is true. Reason R defines the converse, not the contrapositive, making R false.",
+    "options": [
+      "Both A and R are true, and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "A is false, but R is true."
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the cardinal Product-of-Sum (POS) expression for the sum and carry of a full adder? [CFQ-ISC-Computer-Science-XII.pdf]",
+    "options": [
+      "Sum = Π(0,3,5,6), Carry = Π(0,1,2,4)",
+      "Sum = Σ(1,2,4,7), Carry = Σ(3,5,6,7)",
+      "Sum = Π(1,2,4,7), Carry = Π(3,5,6,7)",
+      "Sum = Σ(0,3,5,6), Carry = Σ(0,1,2,4)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "According to the Principle of duality, the Boolean equation (A + B') . (A + 1) = A + B' will be equivalent to: [9.-Computer-Science-24.pdf]",
+    "options": [
+      "(A' + B) . (A' + 1) = A' + B",
+      "(A . B') + (A . 0) = A . B'",
+      "(A' . B) + (A' . 1) = A' . B",
+      "(A' . B) + (A' . 0) = A' . B"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "When a sequence of OR, NOT, NOR are connected in series, the logic gate obtained is: [9.-Computer-Science-24.pdf]",
+    "options": [
+      "AND",
+      "NOT",
+      "OR",
+      "XOR"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Idempotence Law states that: [9.-Computer-Science-24.pdf]",
+    "options": [
+      "X + X = X",
+      "X + X' = 0",
+      "X + X = 1",
+      "X + X' = X"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The complement of the Boolean expression (P' . Q) + (R . S') is: [9.-Computer-Science-24.pdf]",
+    "options": [
+      "(P' + Q) . (R' + S)",
+      "(P + Q') . (R' + S)",
+      "(P' + Q) . (R + S')",
+      "(P + Q') . (R + S')"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Write the cardinal form of the maxterm X + Y' + Z. [9.-Computer-Science-24.pdf]",
+    "options": [
+      "M2",
+      "M5",
+      "m2",
+      "m5"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Write the canonical SOP expression for F(A,B) = A <=> B. [9.-Computer-Science-24.pdf]",
+    "options": [
+      "A . B + A' . B'",
+      "A . B' + A' . B",
+      "A + B",
+      "A' + B'"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The complement of the Boolean expression (A . B') + (B' . C) is: [9.-ISC-Computer-Science.pdf]",
+    "options": [
+      "(A + B') . (B' + C)",
+      "(A' . B) + (B . C')",
+      "(A' + B) . (B + C')",
+      "(A . B') + (B . C')"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "According to the Principle of Duality, the Boolean equation (1 + Y) . (X + Y) = Y + X' will be equivalent to: [9.-ISC-Computer-Science.pdf]",
+    "options": [
+      "(1 + Y') . (X' + Y') = Y' + X",
+      "(0 . Y) + (X . Y) = Y . X'",
+      "(0 + Y) . (X + Y) = Y + X'",
+      "(1 . Y) + (X . Y) = Y . X'"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The Associative Law states that: [9.-ISC-Computer-Science.pdf]",
+    "options": [
+      "A . B = B . A",
+      "A + B = B + A",
+      "A . (B + C) = A . B + A . C",
+      "A + (B + C) = (A + B) + C"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "The canonical expression of F(P,Q,R) = π(2,5,7) is: [9.-ISC-Computer-Science.pdf]",
+    "options": [
+      "(P + Q' + R) . (P' + Q + R') . (P' + Q' + R')",
+      "(P . Q' . R) + (P' . Q . R') + (P' . Q' . R')",
+      "(P' + Q + R') . (P + Q' + R) . (P + Q + R)",
+      "(P' . Q . R') + (P . Q' . R) + (P . Q . R)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Assertion: The expression ~(X V Y) is logically equivalent to (~X ^ ~Y).\nReason: The commutative property of logical operators states that the order of the operands does not change the result of a binary operation. [9.-ISC-Computer-Science.pdf]",
+    "explanation": "Both statements are true individually, but the Reason (Commutative Law) does not explain the Assertion (De Morgan's Law).",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation for Assertion.",
+      "Both Assertion and Reason are true but Reason is not the correct explanation for Assertion.",
+      "Assertion is true and Reason is false.",
+      "Both Assertion and Reason are false."
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Find the complement of the following Boolean expression using De Morgan's law: F(P,Q,R) = P + (Q' . R) [Computer-Science2.pdf]",
+    "options": [
+      "P' . (Q + R')",
+      "P' . (Q' + R')",
+      "P' + (Q . R')",
+      "P' . (Q . R')"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Find the dual of: (A' + 0) . (B' + 1) = A' [Computer-Science2.pdf]",
+    "options": [
+      "(A' . 1) + (B' . 0) = A'",
+      "(A . 1) + (B . 0) = A",
+      "(A' + 1) . (B' + 0) = A'",
+      "(A + 0) . (B + 1) = A"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "State whether the following proposition is a tautology, contradiction or a contingency: F = (P => Q) V (Q => ~P) [Computer-Science2.pdf]",
+    "options": [
+      "Tautology",
+      "Contradiction",
+      "Contingency",
+      "Invalid"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Write the canonical POS expression of: F(P,Q) = Π(0,2) [Computer-Science.pdf]",
+    "options": [
+      "(P + Q) . (P' + Q)",
+      "(P' + Q') . (P + Q')",
+      "(P . Q) + (P' . Q)",
+      "(P + Q) . (P' + Q')"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Find the dual of: X . Y + X . Y' = X + 0 [Computer-Science.pdf]",
+    "options": [
+      "(X + Y) . (X + Y') = X . 1",
+      "(X' + Y') . (X' + Y) = X' . 1",
+      "(X + Y) . (X + Y') = X + 1",
+      "X . Y + X . Y' = X . 0"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "If F(A,B,C) = A' . B' . C' + A' . B . C' then find F' using De Morgan's Law. [Computer-Science.pdf]",
+    "options": [
+      "(A + B + C) . (A + B' + C)",
+      "(A' + B' + C') + (A' + B + C')",
+      "(A + B + C) + (A + B' + C)",
+      "(A . B . C) . (A . B' . C)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "If A = \"It is cloudy\" and B = \"It is raining\", then write the proposition for the Contrapositive of A => B. [Computer-Science.pdf]",
+    "options": [
+      "If it is not raining, then it is not cloudy",
+      "If it is raining, then it is cloudy",
+      "If it is not cloudy, then it is not raining",
+      "If it is cloudy, then it is raining"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Convert the following expression into its canonical POS form: F(X,Y,Z) = (X + Y') . (Y' + Z) [Computer-Science1.pdf]",
+    "options": [
+      "(X + Y' + Z) . (X + Y' + Z') . (X' + Y' + Z)",
+      "(X + Y + Z) . (X + Y' + Z') . (X' + Y + Z)",
+      "(X' + Y + Z') . (X' + Y + Z) . (X + Y + Z')",
+      "(X + Y' + Z) . (X' + Y' + Z)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Find the dual of: (A' + B) . (1 + B') = A' + B [Computer-Science1.pdf]",
+    "options": [
+      "(A' . B) + (0 . B') = A' . B",
+      "(A . B') + (0 . B) = A . B'",
+      "(A' + B) + (0 + B') = A' + B",
+      "(A' . B) . (0 + B') = A' . B"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "If F(A,B,C) = A' . (B . C' + B' . C) then find F'. [Computer-Science1.pdf]",
+    "options": [
+      "A + (B' + C) . (B + C')",
+      "A + (B + C') . (B' + C)",
+      "A . (B' + C) + (B + C')",
+      "A' + (B' + C) . (B + C')"
+    ],
+    "answer": 0
+  }
+]
