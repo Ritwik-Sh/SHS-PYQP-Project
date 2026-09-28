@@ -13,6 +13,8 @@
             --secondary: #921e1c;
             --accent: #d6b329;
             --text: #e5f0fa;
+            --text-muted: rgba(229, 240, 250, 0.5);
+            --border: rgba(147, 187, 234, 0.25);
         }
 
         * {
@@ -28,6 +30,25 @@
             min-height: 100vh;
             line-height: 1.6;
         }
+        
+        
+
+/*	body::before {
+	  content: '';
+	  position: fixed;
+	  inset: 0;
+	
+	  background-image: linear-gradient(rgba(67,102,168,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(67,102,168,0.04) 1px, transparent 1px);
+	  background-size: 48px 48px;
+	  pointer-events: none;
+	  z-index: 0;
+	}
+	*, ::before, ::after {
+	  box-sizing: border-box;
+	  margin: 0;
+	  padding: 0;
+	
+	}*/
 
         .container {
             max-width: 1000px;
@@ -62,6 +83,16 @@
         .header-actions {
             display: flex;
             gap: 12px;
+        }
+
+        .header-badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.68rem;
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+            padding: 4px 10px;
+            border-radius: 20px;
+            letter-spacing: 0.08em;
         }
 
         @media (max-width: 540px) {
@@ -122,6 +153,9 @@
         }
 
         .question-number {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             font-size: 0.875rem;
             color: rgba(229, 240, 250, 0.4);
             margin-bottom: 24px;
@@ -937,7 +971,12 @@
         </div>
 
         <div class="quiz-card" id="quizCard">
-            <div class="question-number" id="questionNumber">Question 1</div>
+            <div class="question-number" id="questionNumber">
+                <span id="questionNumberText">Question 1</span>
+                <div class="header-badge" id="sourceBadge" hidden>
+                    <a style="all: unset; cursor: pointer" href="https://shs-pyqp-project.vercel.app"></a>
+                </div>
+            </div>
             <div class="question-text" id="questionText"></div>
             <div class="options" id="options"></div>
             <div class="fib-container" id="fibContainer" style="display: none;">
@@ -1119,10 +1158,12 @@
             try {
                 const urlParams = new URLSearchParams(window.location.search);
                 topic = urlParams.get('quiz') || urlParams.get('topic') || 'default';
-                topic = topic.replace('.json', '');
-                document.title = topic + " Quiz";
-                document.querySelector('.header h1').textContent = topic + " Quiz";
-                const response = await fetch("quizes/"+topic+".json");
+                topic = topic.replace(/\\/g, '/').replace(/\.json$/, '');
+                const topicName = topic.split('/').pop();
+                document.title = topicName + " Quiz";
+                document.querySelector('.header h1').textContent = topicName + " Quiz";
+                const quizPath = topic.split('/').map(encodeURIComponent).join('/');
+                const response = await fetch("quizes/"+quizPath+".json");
                 questions = await response.json();
                 loadProgress();
                 initQuestionGrid();
@@ -1229,6 +1270,20 @@
             return answer.toString().trim().toLowerCase();
         }
 
+        function updateSourceBadge(question) {
+            const badge = document.getElementById('sourceBadge');
+            const link = badge.querySelector('a');
+            const source = typeof question.source === 'string' ? question.source.trim() : '';
+
+            if (source) {
+                link.textContent = source;
+                badge.hidden = false;
+            } else {
+                link.textContent = '';
+                badge.hidden = true;
+            }
+        }
+
         function loadQuestion() {
             if (questions.length === 0) return;
 
@@ -1242,7 +1297,8 @@
             const passageContent = document.getElementById('passageContent');
             const explanation = document.getElementById('explanation');
 
-            document.getElementById('questionNumber').textContent = `Question ${currentQuestionIndex + 1}`;
+            document.getElementById('questionNumberText').textContent = `Question ${currentQuestionIndex + 1}`;
+            updateSourceBadge(question);
 
             questionText.innerHTML = formatCode(question.question);
 

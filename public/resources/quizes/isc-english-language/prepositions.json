@@ -1,0 +1,1368 @@
+[
+	{
+		"question": "She is very fond <u>at</u> classical music.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "The villagers are proud <u>for</u> their ancient temple.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "The little boy is afraid <u>from</u> the dark.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "Meera is very good <u>in</u> painting.",
+		"type": "fib",
+		"answer": "at"
+	},
+	{
+		"question": "He was jealous <u>for</u> his brother's success.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "The teacher was angry <u>on</u> the students for their carelessness.",
+		"type": "fib",
+		"answer": "with"
+	},
+	{
+		"question": "Rohan is deeply interested <u>on</u> astronomy.",
+		"type": "fib",
+		"answer": "in"
+	},
+	{
+		"question": "He is capable <u>for</u> handling any crisis.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "Are you aware <u>about</u> the consequences of your actions?",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "The jury found the accused guilty <u>for</u> murder.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "My sister is keen <u>at</u> learning French.",
+		"type": "fib",
+		"answer": "on"
+	},
+	{
+		"question": "She was married <u>with</u> a doctor last year.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "He remained devoted <u>for</u> his duty till the end.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "Kanpur is famous <u>as</u> its leather industry.",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "His opinion is quite different <u>than</u> mine.",
+		"type": "fib",
+		"answer": "from"
+	},
+	{
+		"question": "This fabric is far superior <u>than</u> that one.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "Rahul is senior <u>from</u> me by two years.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "She is junior <u>than</u> me in the office.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "The boy became addicted <u>with</u> video games.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "He is not accustomed <u>with</u> such rough treatment.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "The manager is responsible <u>of</u> the safety of the workers.",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "Some children are highly sensitive <u>for</u> criticism.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "The government seemed indifferent <u>for</u> the plight of farmers.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "I am tired <u>from</u> hearing the same excuses.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "We are short <u>on</u> time, so let us begin at once.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "The room was full <u>with</u> smoke.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "He is ignorant <u>about</u> the basic rules of grammar.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "She is content <u>in</u> a simple life.",
+		"type": "fib",
+		"answer": "with"
+	},
+	{
+		"question": "In the eyes of the law, all citizens are equal <u>with</u> each other.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "Her handwriting is similar <u>with</u> her mother's.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "Our success depends <u>from</u> our hard work.",
+		"type": "fib",
+		"answer": "on"
+	},
+	{
+		"question": "You can rely <u>at</u> him in times of need.",
+		"type": "fib",
+		"answer": "on"
+	},
+	{
+		"question": "The captain insisted <u>for</u> a fresh election.",
+		"type": "fib",
+		"answer": "on"
+	},
+	{
+		"question": "I do not agree <u>to</u> you on this matter.",
+		"type": "fib",
+		"answer": "with"
+	},
+	{
+		"question": "He apologised <u>of</u> his rude behaviour.",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "We congratulated her <u>for</u> winning the gold medal.",
+		"type": "fib",
+		"answer": "on"
+	},
+	{
+		"question": "The residents complained <u>for</u> the noise from the factory.",
+		"type": "fib",
+		"answer": "about"
+	},
+	{
+		"question": "It is wrong to laugh <u>on</u> the misfortune of others.",
+		"type": "fib",
+		"answer": "at"
+	},
+	{
+		"question": "The students listened <u>at</u> the speaker with great attention.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "We have been waiting <u>to</u> the bus for an hour.",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "She looks <u>on</u> her younger brother while her parents are at work.",
+		"type": "fib",
+		"answer": "after"
+	},
+	{
+		"question": "Heavy rain prevented the match <u>against</u> being played.",
+		"type": "fib",
+		"answer": "from"
+	},
+	{
+		"question": "My grandfather suffers <u>with</u> chronic asthma.",
+		"type": "fib",
+		"answer": "from"
+	},
+	{
+		"question": "The prisoner begged <u>of</u> forgiveness.",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "Farmers are hoping <u>on</u> a good monsoon this year.",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "The police are searching <u>of</u> the missing child.",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "Please translate this passage <u>in</u> Hindi.",
+		"type": "fib",
+		"answer": "into"
+	},
+	{
+		"question": "Thieves broke <u>in</u> the house last night and stole the jewellery.",
+		"type": "fib",
+		"answer": "into"
+	},
+	{
+		"question": "Carelessness often results <u>into</u> accidents.",
+		"type": "fib",
+		"answer": "in"
+	},
+	{
+		"question": "My parents do not approve <u>for</u> late-night parties.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "She succeeded <u>at</u> winning the scholarship.",
+		"type": "fib",
+		"answer": "in"
+	},
+	{
+		"question": "Do you believe <u>on</u> ghosts?",
+		"type": "fib",
+		"answer": "in"
+	},
+	{
+		"question": "Every student should participate <u>at</u> the annual sports meet.",
+		"type": "fib",
+		"answer": "in"
+	},
+	{
+		"question": "The residents objected <u>against</u> the construction of the mall.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "The lawyer referred <u>at</u> several earlier judgments.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "This wallet belongs <u>at</u> my uncle.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "She has not yet replied <u>for</u> my letter.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "Most people prefer tea <u>than</u> coffee.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "The NGO provided the flood victims <u>by</u> blankets and food.",
+		"type": "fib",
+		"answer": "with"
+	},
+	{
+		"question": "The coach blamed the weather <u>of</u> the defeat.",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "The principal thanked the guests <u>of</u> their kind presence.",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "The teacher punished him <u>of</u> cheating in the test.",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "The coach praised the team <u>of</u> its fighting spirit.",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "He was accused <u>for</u> bribery by his colleagues.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "The clerk was charged <u>of</u> embezzlement.",
+		"type": "fib",
+		"answer": "with"
+	},
+	{
+		"question": "The court convicted him <u>for</u> fraud.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "The police suspected the servant <u>for</u> the theft.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "Mother is worried <u>for</u> my final examinations.",
+		"type": "fib",
+		"answer": "about"
+	},
+	{
+		"question": "He quarrelled <u>to</u> his neighbour over the boundary wall.",
+		"type": "fib",
+		"answer": "with"
+	},
+	{
+		"question": "The freedom fighters struggled <u>to</u> independence for decades.",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "Rajesh was born <u>in</u> 5 May 1990.",
+		"type": "fib",
+		"answer": "on"
+	},
+	{
+		"question": "I usually go for a walk <u>at</u> the morning.",
+		"type": "fib",
+		"answer": "in"
+	},
+	{ "question": "Owls hunt <u>in</u> night.", "type": "fib", "answer": "at" },
+	{
+		"question": "Her birthday falls <u>on</u> July.",
+		"type": "fib",
+		"answer": "in"
+	},
+	{
+		"question": "The meeting has been scheduled <u>in</u> Monday.",
+		"type": "fib",
+		"answer": "on"
+	},
+	{
+		"question": "The sun is at its peak <u>in</u> noon.",
+		"type": "fib",
+		"answer": "at"
+	},
+	{
+		"question": "He has been living in Lucknow <u>for</u> 2010.",
+		"type": "fib",
+		"answer": "since"
+	},
+	{
+		"question": "She has been learning the violin <u>since</u> five years.",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "The train will arrive <u>till</u> six o'clock at the latest.",
+		"type": "fib",
+		"answer": "by"
+	},
+	{
+		"question": "She stayed awake <u>by</u> midnight to finish her project.",
+		"type": "fib",
+		"answer": "until"
+	},
+	{
+		"question": "He fell asleep <u>in</u> the lecture.",
+		"type": "fib",
+		"answer": "during"
+	},
+	{
+		"question": "My grandfather retired <u>on</u> the age of sixty.",
+		"type": "fib",
+		"answer": "at"
+	},
+	{
+		"question": "Families gather together <u>in</u> Christmas.",
+		"type": "fib",
+		"answer": "at"
+	},
+	{
+		"question": "The national flag is hoisted <u>in</u> Independence Day.",
+		"type": "fib",
+		"answer": "on"
+	},
+	{
+		"question": "Great advances in medicine were made <u>on</u> the twentieth century.",
+		"type": "fib",
+		"answer": "in"
+	},
+	{
+		"question": "He is busy <u>in</u> present.",
+		"type": "fib",
+		"answer": "at"
+	},
+	{
+		"question": "My cousin lives <u>at</u> Kanpur.",
+		"type": "fib",
+		"answer": "in"
+	},
+	{
+		"question": "We were waiting <u>in</u> the bus stop.",
+		"type": "fib",
+		"answer": "at"
+	},
+	{
+		"question": "A portrait of Gandhiji was hanging <u>at</u> the wall.",
+		"type": "fib",
+		"answer": "on"
+	},
+	{
+		"question": "The book is lying <u>in</u> the table.",
+		"type": "fib",
+		"answer": "on"
+	},
+	{
+		"question": "I read about the accident <u>on</u> the newspaper.",
+		"type": "fib",
+		"answer": "in"
+	},
+	{
+		"question": "We watched the cricket match <u>in</u> television.",
+		"type": "fib",
+		"answer": "on"
+	},
+	{
+		"question": "They travelled to Agra <u>with</u> bus.",
+		"type": "fib",
+		"answer": "by"
+	},
+	{
+		"question": "The pilgrims went to the shrine <u>by</u> foot.",
+		"type": "fib",
+		"answer": "on"
+	},
+	{
+		"question": "A parrot was sitting <u>at</u> the branch of the mango tree.",
+		"type": "fib",
+		"answer": "on"
+	},
+	{
+		"question": "The property was divided <u>between</u> the three brothers.",
+		"type": "fib",
+		"answer": "among"
+	},
+	{
+		"question": "You must choose <u>among</u> these two options.",
+		"type": "fib",
+		"answer": "between"
+	},
+	{
+		"question": "The thief hid <u>between</u> the crowd.",
+		"type": "fib",
+		"answer": "among"
+	},
+	{
+		"question": "The old man sat <u>besides</u> me on the bench.",
+		"type": "fib",
+		"answer": "beside"
+	},
+	{
+		"question": "<u>Beside</u> being a doctor, he is also a gifted poet.",
+		"type": "fib",
+		"answer": "Besides"
+	},
+	{
+		"question": "The boys swam <u>through</u> the river.",
+		"type": "fib",
+		"answer": "across"
+	},
+	{
+		"question": "The train passed <u>across</u> a long tunnel.",
+		"type": "fib",
+		"answer": "through"
+	},
+	{
+		"question": "A new bridge has been built <u>on</u> the river Ganga.",
+		"type": "fib",
+		"answer": "over"
+	},
+	{
+		"question": "The aeroplane flew <u>on</u> the clouds.",
+		"type": "fib",
+		"answer": "above"
+	},
+	{
+		"question": "The boy jumped <u>in</u> the swimming pool.",
+		"type": "fib",
+		"answer": "into"
+	},
+	{
+		"question": "She took the keys <u>off</u> her bag.",
+		"type": "fib",
+		"answer": "out of"
+	},
+	{
+		"question": "Wine is made <u>of</u> grapes.",
+		"type": "fib",
+		"answer": "from"
+	},
+	{
+		"question": "The statue is made <u>from</u> marble.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "Who is <u>on</u> charge of the science department?",
+		"type": "fib",
+		"answer": "in"
+	},
+	{
+		"question": "He broke the window <u>by</u> purpose.",
+		"type": "fib",
+		"answer": "on"
+	},
+	{
+		"question": "In spite <u>for</u> heavy rain, the match continued.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "Because <u>from</u> the dense fog, many flights were delayed.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "Owing <u>of</u> ill health, he resigned from his post.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "According <u>with</u> the weather report, it will rain tomorrow.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "Instead <u>from</u> complaining, you should try to help.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "There is a garden in front <u>to</u> our school.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "I am speaking on behalf <u>from</u> the entire class.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "With regard <u>of</u> your application, we will inform you shortly.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "In addition <u>of</u> English, she speaks German and French.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "Thanks <u>for</u> his timely help, we won the case.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "The message was conveyed by means <u>from</u> a special messenger.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "Most members were in favour <u>to</u> the new proposal.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "The school was closed on account <u>from</u> the strike.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "The old rule was replaced; a new one came in place <u>to</u> it.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "He went abroad with a view <u>for</u> improving his career.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "For the sake <u>to</u> peace, the two nations signed a treaty.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "In case <u>for</u> fire, use the emergency exit.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "He saved his friend at the cost <u>from</u> his own life.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "Act in accordance <u>to</u> the rules of the school.",
+		"type": "fib",
+		"answer": "with"
+	},
+	{
+		"question": "In the event <u>to</u> rain, the fair will be postponed.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "We have run <u>off</u> sugar; please buy some.",
+		"type": "fib",
+		"answer": "out of"
+	},
+	{
+		"question": "I am looking forward <u>for</u> meeting you next week.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "It is time to get rid <u>from</u> old and useless things.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "Please take care <u>for</u> your health during the exams.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "How will you make up <u>to</u> the loss of so many working days?",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "I cannot put up <u>to</u> such rude behaviour any longer.",
+		"type": "fib",
+		"answer": "with"
+	},
+	{
+		"question": "The slow students found it difficult to keep up <u>to</u> the class.",
+		"type": "fib",
+		"answer": "with"
+	},
+	{
+		"question": "She gets along <u>to</u> everyone in the neighbourhood.",
+		"type": "fib",
+		"answer": "with"
+	},
+	{
+		"question": "While cleaning the attic, she came <u>against</u> an old photograph.",
+		"type": "fib",
+		"answer": "across"
+	},
+	{
+		"question": "Romeo fell in love <u>to</u> Juliet at first sight.",
+		"type": "fib",
+		"answer": "with"
+	},
+	{
+		"question": "Rita takes <u>up</u> her mother in looks and manner.",
+		"type": "fib",
+		"answer": "after"
+	},
+	{
+		"question": "We should never look down <u>at</u> the poor.",
+		"type": "fib",
+		"answer": "on"
+	},
+	{
+		"question": "It is hard to cope <u>to</u> so much stress.",
+		"type": "fib",
+		"answer": "with"
+	},
+	{
+		"question": "The committee will deal <u>to</u> the complaint tomorrow.",
+		"type": "fib",
+		"answer": "with"
+	},
+	{
+		"question": "The old man died <u>by</u> cancer last winter.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "We sympathise <u>to</u> the families of the victims.",
+		"type": "fib",
+		"answer": "with"
+	},
+	{
+		"question": "The archer aimed <u>to</u> the target and released the arrow.",
+		"type": "fib",
+		"answer": "at"
+	},
+	{
+		"question": "The angry farmer shouted <u>to</u> the trespassers and drove them away.",
+		"type": "fib",
+		"answer": "at"
+	},
+	{
+		"question": "The boy threw a stone <u>to</u> the dog and hurt it.",
+		"type": "fib",
+		"answer": "at"
+	},
+	{
+		"question": "The baby smiled <u>to</u> the stranger.",
+		"type": "fib",
+		"answer": "at"
+	},
+	{
+		"question": "She glanced <u>on</u> the clock and rushed out.",
+		"type": "fib",
+		"answer": "at"
+	},
+	{
+		"question": "The children stared <u>on</u> the magician in amazement.",
+		"type": "fib",
+		"answer": "at"
+	},
+	{
+		"question": "The scientists are engaged <u>at</u> important research.",
+		"type": "fib",
+		"answer": "in"
+	},
+	{
+		"question": "He was so absorbed <u>with</u> his book that he did not hear the bell.",
+		"type": "fib",
+		"answer": "in"
+	},
+	{
+		"question": "The project failed because of lack <u>in</u> funds.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "The voters have great confidence <u>on</u> the new leader.",
+		"type": "fib",
+		"answer": "in"
+	},
+	{
+		"question": "Nobody could give a reason <u>of</u> his absence.",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "Speeding is the main cause <u>for</u> road accidents.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "Honesty is the key <u>of</u> success.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "There is a growing demand <u>of</u> electric vehicles.",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "What was his reaction <u>on</u> the news?",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "His attitude <u>for</u> elders is commendable.",
+		"type": "fib",
+		"answer": "towards"
+	},
+	{
+		"question": "We must show respect <u>to</u> our teachers.",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "Scientists are trying to find a cure <u>of</u> cancer.",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "I received an invitation <u>for</u> her wedding.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "Every citizen should have access <u>at</u> clean drinking water.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "The storm caused serious damage <u>on</u> the crops.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "Parents have a strong influence <u>to</u> their children.",
+		"type": "fib",
+		"answer": "on"
+	},
+	{
+		"question": "Pollution has a harmful effect <u>to</u> our health.",
+		"type": "fib",
+		"answer": "on"
+	},
+	{
+		"question": "There is a mistake <u>at</u> the calculation.",
+		"type": "fib",
+		"answer": "in"
+	},
+	{
+		"question": "There has been a sharp increase <u>of</u> the price of vegetables.",
+		"type": "fib",
+		"answer": "in"
+	},
+	{
+		"question": "We were surprised <u>for</u> her sudden decision.",
+		"type": "fib",
+		"answer": "at"
+	},
+	{
+		"question": "The coach was disappointed <u>from</u> the team's performance.",
+		"type": "fib",
+		"answer": "with"
+	},
+	{
+		"question": "The customer was not satisfied <u>by</u> the service.",
+		"type": "fib",
+		"answer": "with"
+	},
+	{
+		"question": "The host was pleased <u>from</u> the guests' response.",
+		"type": "fib",
+		"answer": "with"
+	},
+	{
+		"question": "The students were bored <u>from</u> the long lecture.",
+		"type": "fib",
+		"answer": "with"
+	},
+	{
+		"question": "The market was crowded <u>by</u> shoppers.",
+		"type": "fib",
+		"answer": "with"
+	},
+	{
+		"question": "The old furniture was covered <u>by</u> dust.",
+		"type": "fib",
+		"answer": "with"
+	},
+	{
+		"question": "Sachin is very popular <u>to</u> young cricketers.",
+		"type": "fib",
+		"answer": "with"
+	},
+	{
+		"question": "One should always be kind <u>with</u> animals.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "It is wrong to be cruel <u>with</u> children.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "He was rude <u>with</u> the guests.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "The soldiers remained loyal <u>with</u> their country.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "I am grateful <u>with</u> you for your generous help.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "The two neighbouring tribes were hostile <u>with</u> each other.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "Once you recover, you become immune <u>from</u> the disease.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "Many people are allergic <u>with</u> dust.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "This kind of behaviour is typical <u>for</u> him.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "Is he conscious <u>for</u> his own faults?",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "She is sure <u>for</u> her success in the examination.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "The shopkeeper was suspicious <u>on</u> the strange customer.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "He was ashamed <u>from</u> his conduct.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "The victims were finally free <u>with</u> fear.",
+		"type": "fib",
+		"answer": "from"
+	},
+	{
+		"question": "The village is safe <u>of</u> floods now.",
+		"type": "fib",
+		"answer": "from"
+	},
+	{
+		"question": "Charitable institutions are exempt <u>of</u> income tax.",
+		"type": "fib",
+		"answer": "from"
+	},
+	{
+		"question": "Rita has been absent <u>at</u> school for three days.",
+		"type": "fib",
+		"answer": "from"
+	},
+	{
+		"question": "He was late <u>to</u> school because of the traffic jam.",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "Are you ready <u>to</u> the examination?",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "She is eligible <u>to</u> the merit scholarship.",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "This film is not suitable <u>to</u> young children.",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "The committee consists <u>in</u> twelve members.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "This melody reminds me <u>for</u> my childhood days.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "Vaccines protect people <u>to</u> dangerous diseases.",
+		"type": "fib",
+		"answer": "from"
+	},
+	{
+		"question": "The lifeguard saved the child <u>of</u> drowning.",
+		"type": "fib",
+		"answer": "from"
+	},
+	{
+		"question": "The doctor advised him to abstain <u>of</u> smoking.",
+		"type": "fib",
+		"answer": "from"
+	},
+	{
+		"question": "Please refrain <u>of</u> making noise in the library.",
+		"type": "fib",
+		"answer": "from"
+	},
+	{
+		"question": "Two prisoners escaped <u>of</u> the jail last night.",
+		"type": "fib",
+		"answer": "from"
+	},
+	{
+		"question": "She is slowly recovering <u>of</u> her illness.",
+		"type": "fib",
+		"answer": "from"
+	},
+	{
+		"question": "This edition differs <u>with</u> the earlier one in many respects.",
+		"type": "fib",
+		"answer": "from"
+	},
+	{
+		"question": "It is difficult to distinguish <u>among</u> the twin sisters.",
+		"type": "fib",
+		"answer": "between"
+	},
+	{
+		"question": "In his speech, he alluded <u>on</u> the recent scandal.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "Every member must adhere <u>with</u> the code of conduct.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "The delay only added <u>on</u> our worries.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "Many people have contributed <u>for</u> the relief fund.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "I have subscribed <u>for</u> a science magazine.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "Hard work leads <u>for</u> success.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "The total expenses amount <u>at</u> ten thousand rupees.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "The rebels finally resorted <u>for</u> violence.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "The tired workers refused to yield <u>with</u> the management's demands.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "The defeated general had to submit <u>for</u> the enemy.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "The old man succumbed <u>from</u> the pressure of the disease.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "The child clung <u>at</u> his mother's arm.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "Stick <u>on</u> your decision, whatever others say.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "Immigrants often find it hard to adapt <u>with</u> a new culture.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "She applied <u>to</u> a scholarship abroad.",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "The beggar asked <u>of</u> a glass of water.",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "Exiles always long <u>of</u> their homeland.",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "Who will pay <u>of</u> the damaged books?",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "The nurse cares <u>to</u> the elderly patients with great affection.",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "The court sentenced the criminal <u>for</u> ten years of imprisonment.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "All the students took part <u>at</u> the debate.",
+		"type": "fib",
+		"answer": "in"
+	},
+	{
+		"question": "The flood victims are in need <u>for</u> food and shelter.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "The police are in search <u>for</u> the escaped convict.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "He is in the habit <u>to</u> rising early.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "The company is on the verge <u>to</u> bankruptcy.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "The sailors were at the mercy <u>from</u> the stormy sea.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "By virtue <u>to</u> his position, he was allowed to attend the meeting.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "In the interest <u>for</u> public health, smoking is banned here.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "The lift is <u>off</u> order today.",
+		"type": "fib",
+		"answer": "out of"
+	},
+	{
+		"question": "The new flyover is <u>in</u> construction.",
+		"type": "fib",
+		"answer": "under"
+	},
+	{
+		"question": "I was <u>in</u> the impression that the shop closed at nine.",
+		"type": "fib",
+		"answer": "under"
+	},
+	{
+		"question": "The fire is now <u>in</u> control.",
+		"type": "fib",
+		"answer": "under"
+	},
+	{
+		"question": "The old bridge is <u>over</u> repair.",
+		"type": "fib",
+		"answer": "beyond"
+	},
+	{
+		"question": "His honesty is <u>over</u> doubt.",
+		"type": "fib",
+		"answer": "beyond"
+	},
+	{
+		"question": "Victory is now <u>in</u> our reach.",
+		"type": "fib",
+		"answer": "within"
+	},
+	{
+		"question": "The godown was <u>in</u> fire when the firemen arrived.",
+		"type": "fib",
+		"answer": "on"
+	},
+	{
+		"question": "She was <u>with</u> tears when she heard the sad news.",
+		"type": "fib",
+		"answer": "in"
+	},
+	{
+		"question": "He left the house <u>with</u> a hurry.",
+		"type": "fib",
+		"answer": "in"
+	},
+	{
+		"question": "He learnt the whole poem <u>with</u> heart.",
+		"type": "fib",
+		"answer": "by"
+	},
+	{
+		"question": "I met my old friend <u>with</u> chance at the airport.",
+		"type": "fib",
+		"answer": "by"
+	},
+	{
+		"question": "The Principal spoke <u>on</u> the students about the importance of discipline.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "He is very weak <u>at</u> Mathematics.",
+		"type": "fib",
+		"answer": "in"
+	},
+	{
+		"question": "Dr. Sen is an authority <u>in</u> Indian history.",
+		"type": "fib",
+		"answer": "on"
+	},
+	{
+		"question": "She has a great passion <u>to</u> dancing.",
+		"type": "fib",
+		"answer": "for"
+	},
+	{
+		"question": "There is no point <u>of</u> arguing with him.",
+		"type": "fib",
+		"answer": "in"
+	},
+	{
+		"question": "I have no objection <u>for</u> your leaving early.",
+		"type": "fib",
+		"answer": "to"
+	},
+	{
+		"question": "The bride was dressed <u>with</u> a red silk sari.",
+		"type": "fib",
+		"answer": "in"
+	},
+	{
+		"question": "He has been living in this city <u>from</u> 2015.",
+		"type": "fib",
+		"answer": "since"
+	},
+	{
+		"question": "She cut the cake <u>by</u> a sharp knife.",
+		"type": "fib",
+		"answer": "with"
+	},
+	{
+		"question": "The letter was written <u>by</u> a blue pen.",
+		"type": "fib",
+		"answer": "with"
+	},
+	{
+		"question": "The tiger was shot <u>with</u> the hunter.",
+		"type": "fib",
+		"answer": "by"
+	},
+	{
+		"question": "Gitanjali was written <u>from</u> Rabindranath Tagore.",
+		"type": "fib",
+		"answer": "by"
+	},
+	{
+		"question": "Ravi is the tallest <u>of</u> his class.",
+		"type": "fib",
+		"answer": "in"
+	},
+	{
+		"question": "She is the best singer <u>in</u> all the contestants.",
+		"type": "fib",
+		"answer": "of"
+	},
+	{
+		"question": "My uncle lives <u>in</u> 12 Park Street.",
+		"type": "fib",
+		"answer": "at"
+	},
+	{
+		"question": "A stranger was standing <u>on</u> the door.",
+		"type": "fib",
+		"answer": "at"
+	},
+	{
+		"question": "The Prime Minister arrived <u>to</u> Delhi this morning.",
+		"type": "fib",
+		"answer": "in"
+	},
+	{
+		"question": "The chief guest arrived <u>to</u> the venue at noon.",
+		"type": "fib",
+		"answer": "at"
+	},
+	{
+		"question": "The poor boy was born <u>with</u> a very poor family.",
+		"type": "fib",
+		"answer": "into"
+	},
+	{
+		"question": "The child burst <u>in</u> tears on seeing the doctor.",
+		"type": "fib",
+		"answer": "into"
+	},
+	{
+		"question": "The labourer lives <u>with</u> a meagre daily wage.",
+		"type": "fib",
+		"answer": "on"
+	},
+	{
+		"question": "Divide twenty <u>with</u> four to get the answer.",
+		"type": "fib",
+		"answer": "by"
+	},
+	{
+		"question": "Multiply seven <u>with</u> six to get forty-two.",
+		"type": "fib",
+		"answer": "by"
+	},
+	{
+		"question": "The examination will begin <u>from</u> Monday.",
+		"type": "fib",
+		"answer": "on"
+	}
+]

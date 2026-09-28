@@ -250,7 +250,7 @@ app.get("/view", async (req, res) => {
 
 // Print Quiz endpoint: generates a printable PDF version of a quiz
 // Query params:
-// - topic: the quiz filename (without .json extension)
+// - topic: the quiz path relative to public/resources/quizes (without .json extension)
 app.get("/printQuiz", async (req, res) => {
   const topic = req.query.topic;
 
@@ -277,32 +277,56 @@ app.get("/printQuiz", async (req, res) => {
                 </head>
                 <body>
                     <h1>Error: Missing topic parameter</h1>
-                    <p>Please specify a quiz topic using <code>?topic=filename</code></p>
-                    <p>Example: <code>/printQuiz?topic=class-10-java</code></p>
+                    <p>Please specify a quiz topic using <code>?topic=path/to/filename</code></p>
+                    <p>Example: <code>/printQuiz?topic=class-10/java</code></p>
                 </body>
             </html>
         `);
   }
 
   try {
+    if (typeof topic !== "string" || !topic.trim()) {
+      return res.status(400).send("Invalid quiz topic");
+    }
+
     console.log("🔄 Generating quiz PDF:", topic);
 
     // Read the quiz JSON file
-    const quizFilePath = path.join(
+    const quizDirectory = path.resolve(
       __dirname,
       "public",
       "resources",
       "quizes",
-      `${topic}.json`,
     );
+    const normalizedTopic = topic.replace(/\\/g, "/").replace(/\.json$/, "");
+    const quizFilePath = path.join(
+      quizDirectory,
+      `${normalizedTopic}.json`,
+    );
+    if (
+      !quizFilePath.startsWith(`${quizDirectory}${path.sep}`) ||
+      path.extname(quizFilePath).toLowerCase() !== ".json"
+    ) {
+      return res.status(400).send("Invalid quiz topic");
+    }
     const quizData = JSON.parse(await fs.readFile(quizFilePath, "utf8"));
 
     // Create a new PDF document
     const pdfDoc = await PDFDocument.create();
+    pdfDoc.registerFontkit(fontkit);
 
-    // Embed fonts
-    const helveticaFont = await pdfDoc.embedFont(StandardFonts.Helvetica);
-    const helveticaBold = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
+    // Standard PDF fonts use WinAnsi encoding and cannot render many Unicode
+    // characters. Embed a Unicode-capable font for all quiz text instead.
+    const unicodeFontPath = path.join(
+      __dirname,
+      "resources",
+      "NotoSans.ttf",
+    );
+    const unicodeFont = await pdfDoc.embedFont(
+      await fs.readFile(unicodeFontPath),
+    );
+    const helveticaFont = unicodeFont;
+    const helveticaBold = unicodeFont;
     const courierFont = await pdfDoc.embedFont(StandardFonts.Courier);
 
     // Try to load custom font
