@@ -130,6 +130,7 @@
 				font-family: 'JetBrains Mono', monospace;
 			}
 			.workspace {
+				--list-width: 50%;
 				display: flex;
 				align-items: stretch;
 				gap: 20px;
@@ -141,7 +142,37 @@
 				transition: width 0.3s ease;
 			}
 			.workspace.has-selection .list-pane {
-				width: 50%;
+				flex: 0 0 var(--list-width);
+				width: var(--list-width);
+			}
+			.resize-handle {
+				display: none;
+				flex: 0 0 12px;
+				align-items: center;
+				justify-content: center;
+				margin: 0 -6px;
+				border: 0;
+				color: var(--muted);
+				background: transparent;
+				cursor: col-resize;
+				touch-action: none;
+				user-select: none;
+			}
+			.workspace.has-selection .resize-handle {
+				display: flex;
+			}
+			.resize-handle::before {
+				content: "";
+				width: 3px;
+				height: 52px;
+				border-radius: 999px;
+				background: var(--line);
+				transition: background 0.2s ease, height 0.2s ease;
+			}
+			.resize-handle:hover::before,
+			.resize-handle.is-dragging::before {
+				height: 76px;
+				background: var(--primary);
 			}
 			.list-header {
 				display: flex;
@@ -237,6 +268,10 @@
 				margin-bottom: 9px;
 				font-weight: 600;
 			}
+			.question-card-text {
+				margin-bottom: 9px;
+				font-weight: 600;
+			}
 			.question-preview {
 				display: block;
 				overflow: hidden;
@@ -281,6 +316,7 @@
 				width: 0;
 				min-width: 0;
 				overflow: hidden;
+				overflow-y: scroll;
 				opacity: 0;
 				transform: translateX(20px);
 				border: 1px solid var(--line);
@@ -292,7 +328,8 @@
 					transform 0.3s ease;
 			}
 			.workspace.has-selection .detail-pane {
-				width: 50%;
+				flex: 1 1 auto;
+				width: auto;
 				opacity: 1;
 				transform: translateX(0);
 			}
@@ -317,7 +354,7 @@
 			}
 			.detail-pane h2 {
 				margin: 8px 0 24px;
-				font-size: clamp(1.45rem, 3vw, 2.15rem);
+				font-size: clamp(1.2rem, 1.5vw, 2.15rem);
 				line-height: 1.25;
 			}
 			.detail-source {
@@ -390,6 +427,9 @@
 				.workspace.has-selection .detail-pane {
 					width: 100%;
 				}
+				.resize-handle {
+					display: none !important;
+				}
 				.detail-scroll {
 					height: 100%;
 					min-height: calc(100vh - 105px);
@@ -434,6 +474,13 @@
 						<div class="empty">Loading question bank...</div>
 					</div>
 				</div>
+				<button
+					class="resize-handle"
+					id="resizeHandle"
+					type="button"
+					aria-label="Resize question list and detail panel"
+					title="Drag to resize"
+				></button>
 				<aside
 					class="detail-pane"
 					id="detailPane"
@@ -484,7 +531,21 @@
 							? relativePath
 							: `question-bank/${relativePath}`;
 					}),
-				state = { questions: [], selectedQuestionId: null };
+				state = {
+					questions: [],
+					selectedQuestionId: null,
+					listWidth: 50,
+				};
+			const splitterStorageKey = "questionBankListWidth";
+			try {
+				const savedWidth = Number(
+					localStorage.getItem(splitterStorageKey),
+				);
+				if (Number.isFinite(savedWidth))
+					state.listWidth = Math.min(75, Math.max(25, savedWidth));
+			} catch (error) {
+				console.warn("Could not restore question bank panel width.", error);
+			}
 			const $ = (id) => document.getElementById(id),
 				escapeHtml = (value) =>
 					String(value ?? "")
@@ -493,6 +554,64 @@
 						.replace(/>/g, "&gt;")
 						.replace(/"/g, "&quot;")
 						.replace(/'/g, "&#039;");
+			function formatAnswer(value) {
+				const container = document.createElement("div");
+				const normalized = String(value ?? "Answer not available yet")
+					.replace(/\\n/g, "\n")
+					.replace(/\r\n?/g, "\n")
+					.replace(/\n/g, "<br>");
+				container.innerHTML = normalized;
+				const allowedTags = new Set([
+					"A",
+					"B",
+					"BLOCKQUOTE",
+					"BR",
+					"CODE",
+					"DEL",
+					"EM",
+					"I",
+					"LI",
+					"OL",
+					"P",
+					"PRE",
+					"S",
+					"STRONG",
+					"SUB",
+					"SUP",
+					"SPAN",
+					"U",
+					"UL",
+				]);
+				container.querySelectorAll("*").forEach((element) => {
+					if (!allowedTags.has(element.tagName)) {
+						element.replaceWith(...element.childNodes);
+						return;
+					}
+					[...element.attributes].forEach((attribute) => {
+						const attributeName = attribute.name.toLowerCase();
+						const isEventAttribute = attributeName.startsWith("on");
+						const isUnsafeValue =
+							/url\s*\(|expression\s*\(|javascript:|vbscript:|data:/i.test(
+								attribute.value,
+							);
+						const isAllowedAttribute =
+							attributeName === "class" ||
+							attributeName === "title" ||
+							attributeName === "style" ||
+							(attributeName === "href" &&
+								/^(?:https?:|mailto:|#)/i.test(
+									attribute.value.trim(),
+								));
+						if (
+							isEventAttribute ||
+							isUnsafeValue ||
+							!isAllowedAttribute
+						)
+							element.removeAttribute(attribute.name);
+					});
+				});
+				return container.innerHTML;
+			}
 			function displayName(url) {
 				const file = decodeURIComponent(
 					url.split("/").pop() || "Question Bank",
@@ -576,14 +695,9 @@
 						),
 					);
 				$("detailContent").innerHTML =
-					`<h2>${escapeHtml(questionText || "Untitled question")}</h2>${selected.source && String(selected.source).trim() ? `<div class="detail-source"><i class="fa-solid fa-book-open"></i><span>Source: ${escapeHtml(String(selected.source).trim())}</span></div>` : ""}<div class="answer">${String(
-						selected.answer || "Answer not available yet",
-					)
-						.split(/\n+/)
-						.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
-						.join(
-							"",
-						)}</div>${selected.provider && selected.provider.trim() ? `<div class="provider"><i class="fa-solid fa-user"></i><span>Provider: ${escapeHtml(selected.provider.trim())}</span></div>` : ""}`;
+					`<h2>${formatAnswer(questionText || "Untitled question")}</h2>${selected.source && String(selected.source).trim() ? `<div class="detail-source"><i class="fa-solid fa-book-open"></i><span>Source: ${escapeHtml(String(selected.source).trim())}</span></div>` : ""}<div class="answer">${formatAnswer(
+						selected.answer,
+					)}</div>${selected.provider && selected.provider.trim() ? `<div class="provider"><i class="fa-solid fa-user"></i><span>Provider: ${escapeHtml(selected.provider.trim())}</span></div>` : ""}`;
 				$("detailPane").querySelector(".detail-scroll").scrollTop = 0;
 			}
 			function render() {
@@ -601,7 +715,7 @@
 					);
 				}
 				function questionMarkup(question, id) {
-					return `<button class="question-card" type="button" data-id="${escapeHtml(id)}"><p>${escapeHtml(question.question || question.prompt || "Untitled question")}</p>${question.provider || question.source ? `<span class="question-meta"><span class="meta-tag"><i class="fa-solid fa-book-open"></i> ${escapeHtml(question.provider || question.source)}</span></span>` : ""}</button>`;
+					return `<button class="question-card" type="button" data-id="${escapeHtml(id)}"><div class="question-card-text">${formatAnswer(question.question || question.prompt || "Untitled question")}</div>${question.provider || question.source ? `<span class="question-meta"><span class="meta-tag"><i class="fa-solid fa-book-open"></i> ${escapeHtml(question.provider || question.source)}</span></span>` : ""}</button>`;
 				}
 				function nodeMarkup(node) {
 					const nodeId = node.path.join("-");
@@ -655,8 +769,48 @@
 					.querySelectorAll(".question-card")
 					.forEach((card) => card.classList.remove("is-selected"));
 			}
+			function setListWidth(width) {
+				state.listWidth = Math.min(75, Math.max(25, width));
+				$("workspace").style.setProperty(
+					"--list-width",
+					`${state.listWidth}%`,
+				);
+				try {
+					localStorage.setItem(
+						splitterStorageKey,
+						String(state.listWidth),
+					);
+				} catch (error) {
+					console.warn("Could not save question bank panel width.", error);
+				}
+			}
+			function startResize(event) {
+				if (!window.matchMedia("(min-width: 768px)").matches) return;
+				event.preventDefault();
+				const handle = $("resizeHandle");
+				const workspace = $("workspace");
+				const workspaceRect = workspace.getBoundingClientRect();
+				const availableWidth = workspaceRect.width - 20;
+				handle.classList.add("is-dragging");
+				const move = (moveEvent) => {
+					const pointerX = moveEvent.clientX - workspaceRect.left;
+					setListWidth((pointerX / availableWidth) * 100);
+				};
+				const stop = () => {
+					handle.classList.remove("is-dragging");
+					window.removeEventListener("pointermove", move);
+					window.removeEventListener("pointerup", stop);
+				};
+				window.addEventListener("pointermove", move);
+				window.addEventListener("pointerup", stop, { once: true });
+			}
 			$("closeDetail").addEventListener("click", closeDetail);
 			$("mobileBack").addEventListener("click", closeDetail);
+			$("resizeHandle").addEventListener("pointerdown", startResize);
+			$("workspace").style.setProperty(
+				"--list-width",
+				`${state.listWidth}%`,
+			);
 			if (!dataUrls.length) {
 				$("pageSubtitle").textContent = "No question files supplied";
 				$("sourcePill").textContent = "Add ?url=...";
