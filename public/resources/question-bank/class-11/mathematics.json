@@ -1,0 +1,205 @@
+{
+  "Sets": [
+    {
+      "question": "Write all the proper subsets of $\\{a, b, c, d\\}$.",
+      "answer": "A set with 4 elements has $2^4 = 16$ subsets. Leaving out the set itself gives $2^4 - 1 = 15$ proper subsets.\n0 elements: $\\emptyset$\n1 element: $\\{a\\}, \\{b\\}, \\{c\\}, \\{d\\}$\n2 elements: $\\{a,b\\}, \\{a,c\\}, \\{a,d\\}, \\{b,c\\}, \\{b,d\\}, \\{c,d\\}$\n3 elements: $\\{a,b,c\\}, \\{a,b,d\\}, \\{a,c,d\\}, \\{b,c,d\\}$\nTotal $= 1 + 4 + 6 + 4 = 15$.",
+      "source": ""
+    },
+    {
+      "question": "$n(\\xi) = 100,\\ n(A) = 40,\\ n(A \\cap B) = 22,\\ n(A \\cup B)' = 20$. Find $n(B)$ and $n(B - A)$.",
+      "answer": "$n(A \\cup B) = n(\\xi) - n(A \\cup B)' = 100 - 20 = 80$\n$n(A \\cup B) = n(A) + n(B) - n(A \\cap B) \\Rightarrow 80 = 40 + n(B) - 22 \\Rightarrow n(B) = 62$\n$n(B - A) = n(B) - n(A \\cap B) = 62 - 22 = 40$",
+      "source": ""
+    }
+  ],
+  "Trigonometric Functions": [
+    {
+      "question": "Find the angle in radians through which a pendulum swings if its length is $75$ cm and its tip describes an arc of length $15$ cm.",
+      "answer": "Use $\\theta = \\dfrac{s}{r}$, where $s = 15$ cm is the arc length and $r = 75$ cm is the length of the pendulum.\n$\\theta = \\dfrac{15}{75} = \\dfrac{1}{5}$ radian",
+      "source": ""
+    },
+    {
+      "question": "Draw the graph of $f(x) = 2\\sin 2x$.",
+      "answer": "Answer not Available yet",
+      "source": ""
+    },
+    {
+      "question": "Evaluate $\\sin 195^\\circ$.",
+      "answer": "$\\sin 195^\\circ = \\sin(180^\\circ + 15^\\circ) = -\\sin 15^\\circ$\n$\\sin 15^\\circ = \\sin(45^\\circ - 30^\\circ) = \\sin 45^\\circ \\cos 30^\\circ - \\cos 45^\\circ \\sin 30^\\circ = \\dfrac{\\sqrt{3}-1}{2\\sqrt{2}} = \\dfrac{\\sqrt{6}-\\sqrt{2}}{4}$\n$\\therefore \\sin 195^\\circ = -\\dfrac{\\sqrt{6}-\\sqrt{2}}{4} = \\dfrac{\\sqrt{2}-\\sqrt{6}}{4}$",
+      "source": ""
+    },
+    {
+      "question": "If $\\sin A = \\dfrac{1}{\\sqrt{5}}$ and $\\cos B = \\dfrac{3}{\\sqrt{10}}$, where $A$ and $B$ lie in the first quadrant, prove that $A + B = 45^\\circ$.",
+      "answer": "$A$ in Q1: $\\cos A = \\sqrt{1 - \\dfrac{1}{5}} = \\dfrac{2}{\\sqrt{5}}$\n$B$ in Q1: $\\sin B = \\sqrt{1 - \\dfrac{9}{10}} = \\dfrac{1}{\\sqrt{10}}$\n$\\cos(A+B) = \\cos A \\cos B - \\sin A \\sin B = \\dfrac{2}{\\sqrt{5}} \\cdot \\dfrac{3}{\\sqrt{10}} - \\dfrac{1}{\\sqrt{5}} \\cdot \\dfrac{1}{\\sqrt{10}} = \\dfrac{6-1}{\\sqrt{50}} = \\dfrac{5}{5\\sqrt{2}} = \\dfrac{1}{\\sqrt{2}}$\nSince $A$ and $B$ are acute, $0^\\circ < A + B < 180^\\circ$, so $A + B = 45^\\circ$. Hence proved.",
+      "source": ""
+    },
+    {
+      "question": "Prove that $\\sin 20^\\circ \\sin 40^\\circ \\sin 60^\\circ \\sin 80^\\circ = \\dfrac{3}{16}$.",
+      "answer": "$\\sin 40^\\circ \\sin 80^\\circ = \\dfrac{1}{2}\\left[\\cos 40^\\circ - \\cos 120^\\circ\\right] = \\dfrac{1}{2}\\left[\\cos 40^\\circ + \\dfrac{1}{2}\\right]$\n$\\sin 20^\\circ \\cdot \\sin 40^\\circ \\sin 80^\\circ = \\dfrac{1}{2}\\left[\\sin 20^\\circ \\cos 40^\\circ + \\dfrac{1}{2}\\sin 20^\\circ\\right]$\n$\\sin 20^\\circ \\cos 40^\\circ = \\dfrac{1}{2}\\left[\\sin 60^\\circ - \\sin 20^\\circ\\right]$\nSo $\\sin 20^\\circ \\sin 40^\\circ \\sin 80^\\circ = \\dfrac{1}{2}\\left[\\dfrac{1}{2}\\sin 60^\\circ - \\dfrac{1}{2}\\sin 20^\\circ + \\dfrac{1}{2}\\sin 20^\\circ\\right] = \\dfrac{1}{4}\\sin 60^\\circ = \\dfrac{\\sqrt{3}}{8}$\nMultiplying by $\\sin 60^\\circ = \\dfrac{\\sqrt{3}}{2}$: $\\dfrac{\\sqrt{3}}{8} \\cdot \\dfrac{\\sqrt{3}}{2} = \\dfrac{3}{16}$. Hence proved.",
+      "source": ""
+    },
+    {
+      "question": "Find $\\cos(-2070^\\circ)$.",
+      "answer": "$\\cos(-\\theta) = \\cos\\theta$, so $\\cos(-2070^\\circ) = \\cos 2070^\\circ$\n$2070^\\circ = 5 \\times 360^\\circ + 270^\\circ$, so $\\cos 2070^\\circ = \\cos 270^\\circ = 0$\nAnswer: $0$",
+      "source": ""
+    },
+    {
+      "question": "Find the least value of $\\tan^2 x + \\cot^2 x$.",
+      "answer": "By AM $\\geq$ GM: $\\dfrac{\\tan^2 x + \\cot^2 x}{2} \\geq \\sqrt{\\tan^2 x \\cdot \\cot^2 x} = 1$\nSo $\\tan^2 x + \\cot^2 x \\geq 2$, with equality when $\\tan^2 x = \\cot^2 x = 1$, i.e. $x = \\dfrac{\\pi}{4}$.\nLeast value $= 2$",
+      "source": ""
+    }
+  ],
+  "Complex Numbers and Quadratic Equations": [
+    {
+      "question": "Express in polar form: $\\dfrac{1+2i}{1-3i}$.",
+      "answer": "$\\dfrac{1+2i}{1-3i} \\times \\dfrac{1+3i}{1+3i} = \\dfrac{1 + 3i + 2i + 6i^2}{1 + 9} = \\dfrac{-5+5i}{10} = -\\dfrac{1}{2} + \\dfrac{1}{2}i$\n$r = \\sqrt{\\dfrac{1}{4} + \\dfrac{1}{4}} = \\dfrac{1}{\\sqrt{2}}$\nThe point $\\left(-\\dfrac{1}{2}, \\dfrac{1}{2}\\right)$ lies in Q2: $\\tan\\alpha = 1 \\Rightarrow \\alpha = \\dfrac{\\pi}{4}$, so $\\theta = \\pi - \\dfrac{\\pi}{4} = \\dfrac{3\\pi}{4}$\nPolar form: $\\dfrac{1}{\\sqrt{2}}\\left[\\cos\\dfrac{3\\pi}{4} + i\\sin\\dfrac{3\\pi}{4}\\right]$",
+      "source": ""
+    },
+    {
+      "question": "Find the square root of $5 - 12i$.",
+      "answer": "Let $\\sqrt{5 - 12i} = a + bi$. Then $a^2 - b^2 = 5$ and $2ab = -12$, so $ab = -6$.\n$|5 - 12i| = 13$, so $a^2 + b^2 = 13$.\nAdding: $2a^2 = 18 \\Rightarrow a = \\pm 3$; subtracting: $2b^2 = 8 \\Rightarrow b = \\pm 2$. Since $ab < 0$, $a$ and $b$ have opposite signs.\nSquare roots: $\\pm(3 - 2i)$",
+      "source": ""
+    },
+    {
+      "question": "Find the modulus of $\\dfrac{(2-3i)^2}{4+3i}$.",
+      "answer": "$\\left|\\dfrac{(2-3i)^2}{4+3i}\\right| = \\dfrac{|2-3i|^2}{|4+3i|} = \\dfrac{(\\sqrt{13})^2}{5} = \\dfrac{13}{5}$",
+      "source": ""
+    },
+    {
+      "question": "Solve: $2z = |z| + 2i$.",
+      "answer": "Let $z = x + iy$. Then $2x + 2iy = \\sqrt{x^2 + y^2} + 2i$.\nImaginary parts: $2y = 2 \\Rightarrow y = 1$\nReal parts: $2x = \\sqrt{x^2 + 1} \\Rightarrow 4x^2 = x^2 + 1 \\Rightarrow x^2 = \\dfrac{1}{3}$. Since $2x = \\sqrt{\\cdots} \\geq 0$, $x = \\dfrac{1}{\\sqrt{3}}$.\n$z = \\dfrac{1}{\\sqrt{3}} + i$",
+      "source": ""
+    },
+    {
+      "question": "Evaluate: $(-1 + i\\sqrt{3})^{100} + (-1 - i\\sqrt{3})^{100}$.",
+      "answer": "Let $\\omega = \\dfrac{-1 + i\\sqrt{3}}{2}$, so $\\omega^3 = 1$ and $1 + \\omega + \\omega^2 = 0$. Then $-1 + i\\sqrt{3} = 2\\omega$ and $-1 - i\\sqrt{3} = 2\\omega^2$.\n$(2\\omega)^{100} = 2^{100}\\omega^{100} = 2^{100}\\omega$ (since $100 = 3 \\times 33 + 1$)\n$(2\\omega^2)^{100} = 2^{100}\\omega^{200} = 2^{100}\\omega^2$ (since $200 = 3 \\times 66 + 2$)\nSum $= 2^{100}(\\omega + \\omega^2) = 2^{100}(-1) = -2^{100}$",
+      "source": ""
+    },
+    {
+      "question": "Draw the graph of $x^2 - 3x - 4$. Discuss its sign also.",
+      "answer": "Answer not Available yet",
+      "source": ""
+    },
+    {
+      "question": "If the roots of the equation $x^2 - kx + m = 0$ differ by $1$, prove that $k^2 = 4m + 1$.",
+      "answer": "Let the roots be $\\alpha$ and $\\beta$. Then $\\alpha + \\beta = k$ and $\\alpha\\beta = m$, and $\\alpha - \\beta = 1$.\n$(\\alpha - \\beta)^2 = (\\alpha + \\beta)^2 - 4\\alpha\\beta \\Rightarrow 1 = k^2 - 4m$\n$\\therefore k^2 = 4m + 1$. Hence proved.",
+      "source": ""
+    },
+    {
+      "question": "Solve: $\\left(x + \\dfrac{1}{x}\\right)^2 - 2\\left(x - \\dfrac{1}{x} + 4\\right) = 11$.",
+      "answer": "Expand: $x^2 + 2 + \\dfrac{1}{x^2} - 2\\left(x - \\dfrac{1}{x}\\right) - 8 = 11 \\Rightarrow x^2 + \\dfrac{1}{x^2} - 2\\left(x - \\dfrac{1}{x}\\right) - 17 = 0$\nLet $t = x - \\dfrac{1}{x}$. Then $x^2 + \\dfrac{1}{x^2} = t^2 + 2$, so $t^2 + 2 - 2t - 17 = 0 \\Rightarrow t^2 - 2t - 15 = 0 \\Rightarrow (t-5)(t+3) = 0 \\Rightarrow t = 5$ or $t = -3$.\n$t = 5$: $x^2 - 5x - 1 = 0 \\Rightarrow x = \\dfrac{5 \\pm \\sqrt{29}}{2}$\n$t = -3$: $x^2 + 3x - 1 = 0 \\Rightarrow x = \\dfrac{-3 \\pm \\sqrt{13}}{2}$",
+      "source": ""
+    },
+    {
+      "question": "Find $\\theta$ such that $\\dfrac{1 + i\\cos\\theta}{1 - 2i\\cos\\theta}$ is purely imaginary.",
+      "answer": "Multiply by the conjugate $(1 + 2i\\cos\\theta)$:\n$\\dfrac{(1 + i\\cos\\theta)(1 + 2i\\cos\\theta)}{1 + 4\\cos^2\\theta} = \\dfrac{(1 - 2\\cos^2\\theta) + 3i\\cos\\theta}{1 + 4\\cos^2\\theta}$\nPurely imaginary $\\Rightarrow$ real part $= 0$: $1 - 2\\cos^2\\theta = 0 \\Rightarrow \\cos^2\\theta = \\dfrac{1}{2} \\Rightarrow \\cos 2\\theta = 0$\n$2\\theta = (2n+1)\\dfrac{\\pi}{2} \\Rightarrow \\theta = (2n+1)\\dfrac{\\pi}{4},\\ n \\in \\mathbb{Z}$. (The imaginary part $3\\cos\\theta \\neq 0$ here, so this is valid.)",
+      "source": ""
+    },
+    {
+      "question": "If $3x^2 + kx + 2 = 0$ and $2x^2 + 3x - 2 = 0$ have one root in common, find $k$.",
+      "answer": "$2x^2 + 3x - 2 = (2x - 1)(x + 2) = 0 \\Rightarrow x = \\dfrac{1}{2}$ or $x = -2$.\nThe common root satisfies the first equation too.\n$x = \\dfrac{1}{2}$: $\\dfrac{3}{4} + \\dfrac{k}{2} + 2 = 0 \\Rightarrow k = -\\dfrac{11}{2}$\n$x = -2$: $12 - 2k + 2 = 0 \\Rightarrow k = 7$\n$k = 7$ or $k = -\\dfrac{11}{2}$",
+      "source": ""
+    },
+    {
+      "question": "If $x$ is real, prove that $\\dfrac{2x^2 - 2x + 4}{x^2 - 4x + 3}$ cannot lie between $-7$ and $1$.",
+      "answer": "Let $y = \\dfrac{2x^2 - 2x + 4}{x^2 - 4x + 3}$. Then $(y-2)x^2 + (2 - 4y)x + (3y - 4) = 0$.\n$x$ is real $\\Rightarrow$ discriminant $\\geq 0$: $(2 - 4y)^2 - 4(y-2)(3y-4) \\geq 0$\n$16y^2 - 16y + 4 - 4(3y^2 - 10y + 8) \\geq 0 \\Rightarrow 4y^2 + 24y - 28 \\geq 0 \\Rightarrow y^2 + 6y - 7 \\geq 0 \\Rightarrow (y+7)(y-1) \\geq 0$\nSo $y \\leq -7$ or $y \\geq 1$, i.e. $y$ cannot lie between $-7$ and $1$. Hence proved.",
+      "source": ""
+    }
+  ],
+  "Linear Inequalities": [
+    {
+      "question": "Solve for $x$: $\\dfrac{x^2 + 6x - 11}{x + 3} < -1$.",
+      "answer": "$\\dfrac{x^2 + 6x - 11}{x + 3} + 1 < 0 \\Rightarrow \\dfrac{x^2 + 7x - 8}{x + 3} < 0 \\Rightarrow \\dfrac{(x+8)(x-1)}{x+3} < 0$\nCritical points: $-8, -3, 1$. Checking the sign in each interval:\n$x < -8$: negative $\\checkmark$; $-8 < x < -3$: positive; $-3 < x < 1$: negative $\\checkmark$; $x > 1$: positive\nSolution: $x \\in (-\\infty, -8) \\cup (-3, 1)$",
+      "source": ""
+    },
+    {
+      "question": "Solve (i) $5x - 7 < 3(x + 3)$   (ii) $\\dfrac{1 - 3x}{2} > x - 4$",
+      "answer": "(i) $5x - 7 < 3x + 9 \\Rightarrow 2x < 16 \\Rightarrow x < 8$, i.e. $x \\in (-\\infty, 8)$\n(ii) $1 - 3x > 2x - 8 \\Rightarrow 9 > 5x \\Rightarrow x < \\dfrac{9}{5}$, i.e. $x \\in \\left(-\\infty, \\dfrac{9}{5}\\right)$\nIf both must hold together, the common solution is $x < \\dfrac{9}{5}$.",
+      "source": ""
+    }
+  ],
+  "Binomial Theorem": [
+    {
+      "question": "Find the 10th term of $\\left(2x^2 + \\dfrac{1}{x}\\right)^{12}$.",
+      "answer": "$T_{r+1} = {}^{12}C_r (2x^2)^{12-r}\\left(\\dfrac{1}{x}\\right)^r$. For the 10th term, $r = 9$:\n$T_{10} = {}^{12}C_9 (2x^2)^3 \\left(\\dfrac{1}{x}\\right)^9 = 220 \\times 8x^6 \\times x^{-9} = 1760x^{-3} = \\dfrac{1760}{x^3}$",
+      "source": ""
+    },
+    {
+      "question": "Find the middle term of $\\left(\\dfrac{x}{3} + ay\\right)^{10}$.",
+      "answer": "$n = 10$ is even, so there is one middle term: the $\\left(\\dfrac{10}{2} + 1\\right) = 6$th term.\n$T_6 = {}^{10}C_5 \\left(\\dfrac{x}{3}\\right)^5 (ay)^5 = 252 \\times \\dfrac{x^5}{243} \\times a^5y^5 = \\dfrac{28}{27}a^5x^5y^5$",
+      "source": ""
+    },
+    {
+      "question": "Three consecutive coefficients in the expansion of $(1 + x)^n$ are $220$, $495$ and $792$. Find $n$.",
+      "answer": "Let ${}^nC_{r-1} = 220$, ${}^nC_r = 495$, ${}^nC_{r+1} = 792$.\n$\\dfrac{{}^nC_r}{{}^nC_{r-1}} = \\dfrac{n-r+1}{r} = \\dfrac{495}{220} = \\dfrac{9}{4} \\Rightarrow 4n + 4 = 13r$\n$\\dfrac{{}^nC_{r+1}}{{}^nC_r} = \\dfrac{n-r}{r+1} = \\dfrac{792}{495} = \\dfrac{8}{5} \\Rightarrow 5n - 8 = 13r$\nEquating: $4n + 4 = 5n - 8 \\Rightarrow n = 12$ (and $r = 4$).\nCheck: ${}^{12}C_3 = 220$, ${}^{12}C_4 = 495$, ${}^{12}C_5 = 792$ $\\checkmark$",
+      "source": ""
+    }
+  ],
+  "Sequences and Series": [
+    {
+      "question": "Find the sum of $n$ terms of the series $3 + 5 + 11 + 29 + \\cdots$",
+      "answer": "Differences between terms: $2, 6, 18, \\ldots$ (a GP with ratio $3$).\nGeneral term: $a_k = 3 + \\dfrac{2(3^{k-1} - 1)}{3 - 1} = 3^{k-1} + 2$. (Check: $3, 5, 11, 29$ $\\checkmark$)\n$S_n = \\sum 3^{k-1} + 2n = \\dfrac{3^n - 1}{2} + 2n$",
+      "source": ""
+    },
+    {
+      "question": "Find the sum of $n$ terms of $1^2 + 4^2 + 7^2 + \\cdots$",
+      "answer": "General term: $(3k - 2)^2$. So $S_n = \\sum(9k^2 - 12k + 4) = 9 \\cdot \\dfrac{n(n+1)(2n+1)}{6} - 12 \\cdot \\dfrac{n(n+1)}{2} + 4n$\n$= n\\left[\\dfrac{3}{2}(2n^2 + 3n + 1) - 6n - 6 + 4\\right] = \\dfrac{n(6n^2 - 3n - 1)}{2}$\nCheck: $n = 2 \\Rightarrow \\dfrac{2(24 - 6 - 1)}{2} = 17 = 1 + 16$ $\\checkmark$",
+      "source": ""
+    },
+    {
+      "question": "Find two numbers whose AM is $34$ and GM is $16$.",
+      "answer": "Let the numbers be $a$ and $b$. $\\dfrac{a+b}{2} = 34 \\Rightarrow a + b = 68$, and $\\sqrt{ab} = 16 \\Rightarrow ab = 256$.\nThe numbers are roots of $x^2 - 68x + 256 = 0 \\Rightarrow x = \\dfrac{68 \\pm \\sqrt{4624 - 1024}}{2} = \\dfrac{68 \\pm 60}{2}$\nThe numbers are $64$ and $4$.",
+      "source": ""
+    },
+    {
+      "question": "Find the sum of $2^m + m$.  [read as $\\sum_{m=1}^{n}(2^m + m)$]",
+      "answer": "$\\sum_{m=1}^{n}(2^m + m) = (2 + 2^2 + \\cdots + 2^n) + (1 + 2 + \\cdots + n)$\n$= 2(2^n - 1) + \\dfrac{n(n+1)}{2} = 2^{n+1} - 2 + \\dfrac{n(n+1)}{2}$",
+      "source": ""
+    }
+  ],
+  "Three Dimensional Geometry": [
+    {
+      "question": "In what ratio does the point with $y$-coordinate $3$ divide the line joining $(3, -1, 4)$ and $(2, 5, -3)$?",
+      "answer": "Let $P$ divide $AB$ in the ratio $m : n$, with $A(3, -1, 4)$ and $B(2, 5, -3)$.\n$y$-coordinate: $\\dfrac{5m + n(-1)}{m + n} = 3 \\Rightarrow 5m - n = 3m + 3n \\Rightarrow 2m = 4n \\Rightarrow m : n = 2 : 1$\nThe ratio is positive, so $P$ divides $AB$ internally in the ratio $2 : 1$.\n$P = \\left(\\dfrac{2(2) + 1(3)}{3},\\ 3,\\ \\dfrac{2(-3) + 1(4)}{3}\\right) = \\left(\\dfrac{7}{3},\\ 3,\\ -\\dfrac{2}{3}\\right)$",
+      "source": ""
+    }
+  ],
+  "Limits and Derivatives": [
+    {
+      "question": "Evaluate: $\\displaystyle\\lim_{x \\to 0} \\dfrac{(1 - x)^n - 1}{x}$",
+      "answer": "$(1 - x)^n = 1 - nx + {}^nC_2 x^2 - \\cdots$\nSo $\\dfrac{(1 - x)^n - 1}{x} = -n + {}^nC_2 x - \\cdots \\to -n$ as $x \\to 0$.\nLimit $= -n$",
+      "source": ""
+    },
+    {
+      "question": "Evaluate: $\\displaystyle\\lim_{x \\to 0} \\dfrac{\\sqrt{1 + x^3} - \\sqrt{1 - x^3}}{x^2}$",
+      "answer": "Multiply and divide by the conjugate $\\sqrt{1 + x^3} + \\sqrt{1 - x^3}$:\nNumerator becomes $(1 + x^3) - (1 - x^3) = 2x^3$\nExpression $= \\dfrac{2x^3}{x^2\\left(\\sqrt{1 + x^3} + \\sqrt{1 - x^3}\\right)} = \\dfrac{2x}{\\sqrt{1 + x^3} + \\sqrt{1 - x^3}}$\nAs $x \\to 0$: $\\dfrac{0}{2} = 0$\nLimit $= 0$",
+      "source": ""
+    },
+    {
+      "question": "$f(x) = \\begin{cases} 3x - 1, & x < 0 \\\\ 0, & x = 0 \\\\ 2x + 5, & x > 0 \\end{cases}$. Does $\\displaystyle\\lim_{x \\to 0} f(x)$ exist?",
+      "answer": "Left-hand limit: $\\displaystyle\\lim_{x \\to 0^-}(3x - 1) = -1$\nRight-hand limit: $\\displaystyle\\lim_{x \\to 0^+}(2x + 5) = 5$\nSince LHL $\\neq$ RHL, the limit does not exist. Answer: No.",
+      "source": ""
+    },
+    {
+      "question": "Evaluate: $\\displaystyle\\lim_{x \\to 0} \\dfrac{3^{2+x} - 9}{\\sin x}$",
+      "answer": "$3^{2+x} - 9 = 9(3^x - 1)$\nLimit $= 9 \\cdot \\displaystyle\\lim_{x \\to 0}\\dfrac{3^x - 1}{x} \\cdot \\lim_{x \\to 0}\\dfrac{x}{\\sin x} = 9 \\cdot \\ln 3 \\cdot 1$\nLimit $= 9\\ln 3$",
+      "source": ""
+    },
+    {
+      "question": "Find the derivative of $f(x) = 1 - 4x^2$ using first principles.",
+      "answer": "$f'(x) = \\displaystyle\\lim_{h \\to 0}\\dfrac{f(x+h) - f(x)}{h}$\n$= \\displaystyle\\lim_{h \\to 0}\\dfrac{1 - 4(x+h)^2 - 1 + 4x^2}{h} = \\lim_{h \\to 0}\\dfrac{-4(2xh + h^2)}{h} = \\lim_{h \\to 0}(-8x - 4h)$\n$f'(x) = -8x$",
+      "source": ""
+    },
+    {
+      "question": "Differentiate: $\\dfrac{\\cos x}{1 + \\sin x}$.",
+      "answer": "Quotient rule: $\\dfrac{d}{dx} = \\dfrac{(-\\sin x)(1 + \\sin x) - \\cos x \\cdot \\cos x}{(1 + \\sin x)^2}$\n$= \\dfrac{-\\sin x - \\sin^2 x - \\cos^2 x}{(1 + \\sin x)^2} = \\dfrac{-(1 + \\sin x)}{(1 + \\sin x)^2}$\n$= -\\dfrac{1}{1 + \\sin x}$",
+      "source": ""
+    }
+  ],
+  "Statistics": [
+    {
+      "question": "Find the mean and standard deviation of the following:\nClass: $0$–$10$, $10$–$20$, $20$–$30$, $30$–$40$\nFrequency: $4, 3, 1, 2$",
+      "answer": "Mid-values $x$: $5, 15, 25, 35$; $\\sum f = 10$\n$\\sum fx = 4(5) + 3(15) + 1(25) + 2(35) = 20 + 45 + 25 + 70 = 160$\nMean $= \\dfrac{160}{10} = 16$\n$\\sum fx^2 = 4(25) + 3(225) + 1(625) + 2(1225) = 100 + 675 + 625 + 2450 = 3850$\nVariance $= \\dfrac{3850}{10} - 16^2 = 385 - 256 = 129$\nStandard deviation $= \\sqrt{129} \\approx 11.36$",
+      "source": ""
+    }
+  ]
+}
