@@ -12,6 +12,27 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 		/>
+		<script>
+			window.MathJax = {
+				tex: {
+					inlineMath: [
+						["$", "$"],
+						["\\(", "\\)"],
+					],
+					displayMath: [
+						["$$", "$$"],
+						["\\[", "\\]"],
+					],
+				},
+				options: {
+					skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"],
+				},
+			};
+		</script>
+		<script
+			async
+			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+		></script>
 		<style>
 			:root {
 				--bg: #040b15;
@@ -613,6 +634,19 @@
 				});
 				return container.innerHTML;
 			}
+			function typesetMath(element) {
+				if (!element || !window.MathJax) return;
+				const typeset = () => {
+					window.MathJax.typesetClear?.([element]);
+					return window.MathJax.typesetPromise([element]);
+				};
+				const pendingTypeset = window.MathJax.typesetPromise
+					? typeset()
+					: window.MathJax.startup?.promise?.then(typeset);
+				pendingTypeset?.catch((error) => {
+					console.warn("Could not render LaTeX content.", error);
+				});
+			}
 			function displayName(url) {
 				const file = decodeURIComponent(
 					url.split("/").pop() || "Question Bank",
@@ -700,6 +734,7 @@
 						selected.answer,
 					)}</div>${selected.provider && selected.provider.trim() ? `<div class="provider"><i class="fa-solid fa-user"></i><span>Provider: ${escapeHtml(selected.provider.trim())}</span></div>` : ""}`;
 				$("detailPane").querySelector(".detail-scroll").scrollTop = 0;
+				typesetMath($("detailContent"));
 			}
 			function render() {
 				const roots = state.questions.flatMap((payload) =>
@@ -739,6 +774,7 @@
 				$("categories").innerHTML =
 					roots.map(nodeMarkup).join("") ||
 					'<div class="empty">No questions were found in this file.</div>';
+				typesetMath($("categories"));
 				state.questions = allQuestions;
 				$("listCount").textContent =
 					`${state.questions.length} question${state.questions.length === 1 ? "" : "s"}`;
