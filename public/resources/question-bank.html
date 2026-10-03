@@ -202,6 +202,13 @@
 				gap: 16px;
 				margin-bottom: 16px;
 			}
+			.list-actions {
+				flex-wrap: wrap;
+				justify-content: flex-end;
+			}
+			.list-action span {
+				display: none;
+			}
 			.list-header h2 {
 				margin-bottom: 0;
 				font-size: 1.15rem;
@@ -209,6 +216,85 @@
 			.list-count {
 				color: var(--muted);
 				font-size: 0.88rem;
+			}
+			.list-actions {
+				display: flex;
+				align-items: center;
+				gap: 8px;
+			}
+			.list-action {
+				display: inline-flex;
+				align-items: center;
+				gap: 7px;
+				padding: 8px 11px;
+				border: 1px solid var(--line);
+				border-radius: 10px;
+				color: var(--text);
+				background: var(--primary-faint);
+				cursor: pointer;
+				transition: 0.2s ease;
+			}
+			.list-action:hover,
+			.list-action.is-active {
+				border-color: var(--primary);
+				color: var(--primary);
+				background: var(--primary-subtle);
+			}
+			.filter-anchor {
+				position: relative;
+				display: none;
+			}
+			.list-actions.shuffle-enabled .filter-anchor {
+				display: block;
+			}
+			.filter-menu {
+				position: absolute;
+				z-index: 20;
+				top: calc(100% + 8px);
+				right: 0;
+				display: none;
+				width: min(310px, 80vw);
+				max-height: 60vh;
+				overflow-y: auto;
+				padding: 10px;
+				border: 1px solid var(--line);
+				border-radius: 14px;
+				background: var(--surface-raised);
+				box-shadow: 0 16px 36px var(--shadow-color);
+			}
+			.filter-anchor.is-open .filter-menu {
+				display: block;
+			}
+			.filter-tree {
+				display: grid;
+				gap: 4px;
+			}
+			.filter-node {
+				display: flex;
+				align-items: center;
+				gap: 8px;
+				padding: 7px 8px;
+				border-radius: 8px;
+				color: var(--text);
+				cursor: pointer;
+			}
+			.filter-node:hover {
+				background: var(--primary-faint);
+			}
+			.filter-node input {
+				accent-color: var(--primary);
+			}
+			.filter-node-label {
+				flex: 1;
+				font-size: 0.84rem;
+			}
+			.filter-node-count {
+				color: var(--muted);
+				font-size: 0.75rem;
+			}
+			.filter-children {
+				margin-left: 18px;
+				border-left: 1px solid var(--line);
 			}
 			.categories {
 				display: grid;
@@ -490,7 +576,20 @@
 				<div class="list-pane">
 					<div class="list-header">
 						<h2>Question list</h2>
-						<span class="list-count" id="listCount"></span>
+						<div class="list-actions">
+							<span class="list-count" id="listCount"></span>
+							<button class="list-action" id="shuffleButton" type="button" aria-pressed="false">
+								<i class="fa-solid fa-shuffle"></i><span>Shuffle</span>
+							</button>
+							<div class="filter-anchor" id="filterAnchor">
+								<button class="list-action" id="filterButton" type="button" aria-expanded="false">
+									<i class="fa-solid fa-filter"></i><span>Filter</span>
+								</button>
+								<div class="filter-menu" id="filterMenu" role="menu">
+									<div class="filter-tree" id="filterTree"></div>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="categories" id="categories">
 						<div class="empty">Loading question bank...</div>
@@ -557,6 +656,10 @@
 					questions: [],
 					selectedQuestionId: null,
 					listWidth: 50,
+					payloads: [],
+					shuffleEnabled: false,
+					shuffleOrder: null,
+					filterPaths: new Set(),
 				};
 			const splitterStorageKey = "questionBankListWidth";
 			try {
@@ -736,11 +839,125 @@
 				$("detailPane").querySelector(".detail-scroll").scrollTop = 0;
 				typesetMath($("detailContent"));
 			}
+			function renderFilterTree(roots) {
+				function nodeMarkup(node) {
+					const path = node.path.join("/");
+					const descendantPaths = getNodePaths(node);
+					const isSelected = descendantPaths.every((nodePath) =>
+						state.filterPaths.has(nodePath),
+					);
+					return `<label class="filter-node"><input type="checkbox" data-filter-path="${escapeHtml(path)}" ${isSelected ? "checked" : ""}><span class="filter-node-label">${escapeHtml(node.name)}</span><span class="filter-node-count">${countNodeQuestions(node)}</span></label>${node.children.length ? `<div class="filter-children">${node.children.map(nodeMarkup).join("")}</div>` : ""}`;
+				}
+				function getNodePaths(node) {
+					return [
+						node.path.join("/"),
+						...node.children.flatMap(getNodePaths),
+					];
+				}
+				function countNodeQuestions(node) {
+					return node.questions.length + node.children.reduce((total, child) => total + countNodeQuestions(child), 0);
+				}
+				$("filterTree").innerHTML = roots.map(nodeMarkup).join("");
+				$("filterTree").querySelectorAll("[data-filter-path]").forEach((input) => {
+					input.addEventListener("change", () => {
+						const path = input.dataset.filterPath;
+						const node = findNodeByPath(roots, path);
+						const affectedPaths = node ? getNodePaths(node) : [path];
+						affectedPaths.forEach((affectedPath) => {
+							if (input.checked) state.filterPaths.add(affectedPath);
+							else state.filterPaths.delete(affectedPath);
+						});
+						render();
+					});
+				});
+				function findNodeByPath(nodes, path) {
+					for (const node of nodes) {
+						if (node.path.join("/") === path) return node;
+						const match = findNodeByPath(node.children, path);
+						if (match) return match;
+					}
+					return null;
+				}
+			}
+			function setShuffle(enabled) {
+				state.shuffleEnabled = enabled;
+				$("shuffleButton").classList.toggle("is-active", enabled);
+				$("shuffleButton").setAttribute("aria-pressed", String(enabled));
+				$("shuffleButton").closest(".list-actions").classList.toggle("shuffle-enabled", enabled);
+				if (!enabled) {
+					state.shuffleOrder = null;
+					state.filterPaths.clear();
+					$("filterAnchor").classList.remove("is-open");
+					$("filterButton").setAttribute("aria-expanded", "false");
+				}
+				render();
+			}
 			function render() {
-				const roots = state.questions.flatMap((payload) =>
+				const roots = state.payloads.flatMap((payload) =>
 						normalizeQuestions(payload),
 					),
 					allQuestions = [];
+				function collectQuestions(nodes, collected = []) {
+					nodes.forEach((node) => {
+						node.questions.forEach((question) =>
+							collected.push({
+								...question,
+								__filterPath: node.path.join("/"),
+							}),
+						);
+						collectQuestions(node.children, collected);
+					});
+					return collected;
+				}
+				function cloneNode(node) {
+					const cloned = {
+						...node,
+						questions: [...node.questions],
+						children: node.children.map(cloneNode),
+					};
+					if (state.shuffleEnabled) {
+						for (let index = cloned.questions.length - 1; index > 0; index--) {
+							const randomIndex = Math.floor(Math.random() * (index + 1));
+							[cloned.questions[index], cloned.questions[randomIndex]] = [cloned.questions[randomIndex], cloned.questions[index]];
+						}
+						for (let index = cloned.children.length - 1; index > 0; index--) {
+							const randomIndex = Math.floor(Math.random() * (index + 1));
+							[cloned.children[index], cloned.children[randomIndex]] = [cloned.children[randomIndex], cloned.children[index]];
+						}
+					}
+					return cloned;
+				}
+				if (state.shuffleEnabled && !state.shuffleOrder) {
+					state.shuffleOrder = collectQuestions(roots);
+					for (let index = state.shuffleOrder.length - 1; index > 0; index--) {
+						const randomIndex = Math.floor(Math.random() * (index + 1));
+						[state.shuffleOrder[index], state.shuffleOrder[randomIndex]] = [
+							state.shuffleOrder[randomIndex],
+							state.shuffleOrder[index],
+						];
+					}
+				}
+				const displayRoots = state.shuffleEnabled
+					? [
+							{
+								name: "Shuffled questions",
+								questions: state.shuffleOrder,
+								children: [],
+								path: ["Shuffled questions"],
+							},
+						]
+					: roots.map(cloneNode);
+				function isPathVisible(path) {
+					return !state.filterPaths.size ||
+						[...state.filterPaths].some(
+							(selectedPath) =>
+								path === selectedPath ||
+								path.startsWith(`${selectedPath}/`),
+						);
+				}
+				function isVisible(node) {
+					return isPathVisible(node.path.join("/"));
+				}
 				function countQuestions(node) {
 					return (
 						node.questions.length +
@@ -754,13 +971,19 @@
 					return `<button class="question-card" type="button" data-id="${escapeHtml(id)}"><div class="question-card-text">${formatAnswer(question.question || question.prompt || "Untitled question")}</div>${question.provider || question.source ? `<span class="question-meta"><span class="meta-tag"><i class="fa-solid fa-book-open"></i> ${escapeHtml(question.provider || question.source)}</span></span>` : ""}</button>`;
 				}
 				function nodeMarkup(node) {
+					if (!state.shuffleEnabled && !isVisible(node)) return "";
 					const nodeId = node.path.join("-");
 					const questions = node.questions
+						.filter((question) =>
+							state.shuffleEnabled
+								? isPathVisible(question.__filterPath)
+								: true,
+						)
 						.map((question, index) => {
 							const id = `${nodeId}-${index}`;
 							allQuestions.push({
 								...question,
-								category: node.name,
+								category: question.__filterPath || node.name,
 								id,
 							});
 							return questionMarkup(question, id);
@@ -769,10 +992,11 @@
 					const children = node.children
 						.map((child) => nodeMarkup(child))
 						.join("");
+					if (!questions && !children) return "";
 					return `<section class="category"><button class="category-toggle" type="button" aria-expanded="true"><span class="category-name">${escapeHtml(node.name)}</span><span class="count-badge">${countQuestions(node)}</span><i class="chevron fa-solid fa-chevron-down"></i></button><div class="category-items">${questions}${children ? `<div class="tree-children">${children}</div>` : ""}</div></section>`;
 				}
 				$("categories").innerHTML =
-					roots.map(nodeMarkup).join("") ||
+					displayRoots.map(nodeMarkup).join("") ||
 					'<div class="empty">No questions were found in this file.</div>';
 				typesetMath($("categories"));
 				state.questions = allQuestions;
@@ -798,6 +1022,7 @@
 							selectQuestion(card.dataset.id),
 						),
 					);
+				renderFilterTree(roots);
 			}
 			function closeDetail() {
 				state.selectedQuestionId = null;
@@ -843,6 +1068,36 @@
 			}
 			$("closeDetail").addEventListener("click", closeDetail);
 			$("mobileBack").addEventListener("click", closeDetail);
+			$("shuffleButton").addEventListener("click", () =>
+				setShuffle(!state.shuffleEnabled),
+			);
+			$("filterButton").addEventListener("click", () => {
+				const anchor = $("filterAnchor");
+				const isOpen = anchor.classList.toggle("is-open");
+				$("filterButton").setAttribute("aria-expanded", String(isOpen));
+			});
+			document.addEventListener("click", (event) => {
+				if (!$("filterAnchor").contains(event.target)) {
+					$("filterAnchor").classList.remove("is-open");
+					$("filterButton").setAttribute("aria-expanded", "false");
+				}
+			});
+			document.addEventListener("keydown", (event) => {
+				if (
+					event.target instanceof HTMLElement &&
+					(event.target.matches("input, textarea, select") ||
+						event.target.isContentEditable)
+				)
+					return;
+				if (event.key.toLowerCase() === "s") {
+					event.preventDefault();
+					setShuffle(!state.shuffleEnabled);
+				} else if (event.key === "Escape") {
+					$("filterAnchor").classList.remove("is-open");
+					$("filterButton").setAttribute("aria-expanded", "false");
+					if (state.selectedQuestionId) closeDetail();
+				}
+			});
 			$("resizeHandle").addEventListener("pointerdown", startResize);
 			$("workspace").style.setProperty(
 				"--list-width",
@@ -873,7 +1128,7 @@
 					),
 				)
 					.then((payloads) => {
-						state.questions = payloads;
+						state.payloads = payloads;
 						render();
 					})
 					.catch((error) => {
