@@ -265,10 +265,10 @@
 		"answer": ["BE53", "BE53₁₆"]
 	},
 	{
-		"question": "Examine the following numbers written in different number systems and identify which one is not valid for its specified base: 101₂, 239₁₀, 128₈, 1AF₁₆.",
+		"question": "Examine the following numbers written in different number systems and identify which one is not valid for its specified base.",
 		"source": "CFQ 2026, Class XI",
-		"type": "fib",
-		"answer": ["128₈", "128 (base 8)"]
+		"options": ["101₂", "239₁₀", "128₈", "1AF₁₆"],
+		"answer": 2
 	},
 	{
 		"question": "Simplify the logical expression (P ⇒ Q) ∧ (Q ⇒ P) and identify the single logical connective that represents the equivalent statement.",
@@ -278,14 +278,16 @@
 			"Biconditional",
 			"P ⇔ Q",
 			"Double implication",
-			"If and only if"
+			"If and only if",
+			"P Biconditional Q",
+			"P Bi-conditional Q"
 		]
 	},
 	{
 		"question": "Verify if the logical expression P ∨ ~P is a Contradiction, Tautology or Contingency.",
 		"source": "CFQ 2026, Class XI",
-		"type": "fib",
-		"answer": ["Tautology"]
+		"options": ["Contradiction", "Tautology", "Contingency"],
+		"answer": 1
 	},
 	{
 		"question": "If P is false, what is the truth value of P ⇒ Q regardless of Q?",
