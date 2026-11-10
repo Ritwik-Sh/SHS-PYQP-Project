@@ -521,6 +521,12 @@
             background: rgba(147, 187, 234, 0.05);
         }
 
+        button.active {
+            border-color: var(--primary);
+            background: rgba(147, 187, 234, 0.12);
+            color: var(--primary);
+        }
+
         button.btn-primary, button#submitBtn:enabled {
             background: var(--primary);
             color: var(--bg);
@@ -947,6 +953,9 @@
                 <button onclick="toggleMenu()">
                     <i class="fa-solid fa-bars"></i> <span class="btn-label">All Questions</span>
                 </button>
+                <button id="shuffleBtn" onclick="toggleShuffle()" title="Shuffle navigation" aria-pressed="false">
+                    <i class="fa-solid fa-shuffle"></i> <span class="btn-label">Shuffle</span>
+                </button>
                 <button onclick="resetProgress()"><i class="fa-solid fa-rotate-left"></i> <span class="btn-label">Reset</span></button>
             </div>
         </div>
@@ -1065,6 +1074,8 @@
         let correctCount = 0;
         let incorrectCount = 0;
         let topic = 'default';
+        let shuffleEnabled = false;
+        let navigationOrder = [];
 
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
@@ -1165,6 +1176,7 @@
                 const quizPath = topic.split('/').map(encodeURIComponent).join('/');
                 const response = await fetch("quizes/"+quizPath+".json");
                 questions = await response.json();
+                navigationOrder = questions.map((_, index) => index);
                 loadProgress();
                 initQuestionGrid();
                 loadQuestion();
@@ -1233,6 +1245,9 @@
                 userAnswers = {};
                 correctCount = 0;
                 incorrectCount = 0;
+                if (shuffleEnabled) {
+                    buildShuffledNavigationOrder();
+                }
                 document.getElementById('results').classList.remove('show');
                 document.getElementById('quizCard').style.display = 'block';
                 updateStats();
@@ -1531,9 +1546,10 @@
                 nextBtn.classList.remove('btn-primary');
             }
 
-            document.getElementById('prevBtn').disabled = currentQuestionIndex === 0;
+            const navigationPosition = getNavigationPosition();
+            document.getElementById('prevBtn').disabled = navigationPosition === 0;
 
-            if (currentQuestionIndex === questions.length - 1 && Object.keys(userAnswers).length === questions.length) {
+            if (navigationPosition === navigationOrder.length - 1 && Object.keys(userAnswers).length === questions.length) {
                 document.getElementById('nextBtn').innerHTML = 'View Results <i class="fa-solid fa-flag-checkered"></i>';
             } else {
                 document.getElementById('nextBtn').innerHTML = 'Next <i class="fa-solid fa-arrow-right"></i>';
@@ -1665,6 +1681,9 @@
 
             updateStats();
             saveProgress();
+            if (shuffleEnabled) {
+                buildShuffledNavigationOrder();
+            }
 
             const explanation = document.getElementById('explanation');
             // Show explanation only if it exists and is not empty
@@ -1677,16 +1696,58 @@
 
             document.getElementById('submitBtn').disabled = true;
             nextBtn.classList.add('btn-primary');
-            if (currentQuestionIndex === questions.length - 1) {
+            if (getNavigationPosition() === navigationOrder.length - 1) {
                 document.getElementById('nextBtn').innerHTML = 'View Results <i class="fa-solid fa-flag-checkered"></i>';
             }
 
             updateQuestionGrid();
         }
 
+        function getNavigationPosition() {
+            const position = navigationOrder.indexOf(currentQuestionIndex);
+            return position === -1 ? 0 : position;
+        }
+
+        function shuffleArray(array) {
+            const shuffled = [...array];
+            for (let index = shuffled.length - 1; index > 0; index--) {
+                const randomIndex = Math.floor(Math.random() * (index + 1));
+                [shuffled[index], shuffled[randomIndex]] = [shuffled[randomIndex], shuffled[index]];
+            }
+            return shuffled;
+        }
+
+        function buildShuffledNavigationOrder() {
+            const answered = [];
+            const unanswered = [];
+
+            questions.forEach((_, index) => {
+                (userAnswers.hasOwnProperty(index) ? answered : unanswered).push(index);
+            });
+
+            navigationOrder = [...shuffleArray(answered), ...shuffleArray(unanswered)];
+        }
+
+        function toggleShuffle() {
+            shuffleEnabled = !shuffleEnabled;
+
+            if (shuffleEnabled) {
+                buildShuffledNavigationOrder();
+            } else {
+                navigationOrder = questions.map((_, index) => index);
+            }
+
+            const shuffleButton = document.getElementById('shuffleBtn');
+            shuffleButton.classList.toggle('active', shuffleEnabled);
+            shuffleButton.setAttribute('aria-pressed', shuffleEnabled.toString());
+            shuffleButton.title = shuffleEnabled ? 'Use normal navigation' : 'Shuffle navigation';
+            loadQuestion();
+        }
+
         function nextQuestion() {
-            if (currentQuestionIndex < questions.length - 1) {
-                currentQuestionIndex++;
+            const navigationPosition = getNavigationPosition();
+            if (navigationPosition < navigationOrder.length - 1) {
+                currentQuestionIndex = navigationOrder[navigationPosition + 1];
                 saveProgress();
                 loadQuestion();
             } else if (Object.keys(userAnswers).length === questions.length) {
@@ -1695,8 +1756,9 @@
         }
 
         function previousQuestion() {
-            if (currentQuestionIndex > 0) {
-                currentQuestionIndex--;
+            const navigationPosition = getNavigationPosition();
+            if (navigationPosition > 0) {
+                currentQuestionIndex = navigationOrder[navigationPosition - 1];
                 saveProgress();
                 loadQuestion();
             }
@@ -1716,7 +1778,7 @@
         }
 
         function updateProgress() {
-            const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
+            const progress = ((getNavigationPosition() + 1) / questions.length) * 100;
             document.getElementById('progressBar').style.width = progress + '%';
         }
 
