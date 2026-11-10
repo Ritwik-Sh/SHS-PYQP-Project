@@ -1,748 +1,344 @@
 [
 	{
-		"question": "Intergenerational equity involves:",
+		"question": "Which of the following is a disadvantage of using CNG?",
 		"options": [
-			"minimising the risk to future generations.",
-			"reducing financial risk to future generations.",
-			"maximising freedom of choice.",
-			"all of the above."
+			"Eco-friendly",
+			"Cheaper than fossil fuels",
+			"Gives less mileage",
+			"Low maintenance"
 		],
-		"answer": 3
+		"answer": 2,
+		"source": "ICSE 2026 Reexamination"
 	},
 	{
-		"question": "Which of the following is INCORRECT in the case of fair trade?",
+		"question": "Assertion (A): Education plays a fundamental role in empowering women.\nReason (R): Access to education misguides women to make informed choices about their lives and future.",
 		"options": [
-			"They create equal opportunities for economically disadvantaged producers.",
-			"They help in the creation of social projects like education and housing.",
-			"Both & (b).",
-			"None of the above."
+			"(A) is true and (R) is false.",
+			"(A) is false and (R) is true.",
+			"Both (A) and (R) are true and (A) is the correct explanation of (R).",
+			"Both (A) and (R) are true, but (R) is not the correct explanation of (A)."
 		],
-		"answer": 3
+		"answer": 0,
+		"source": "ICSE 2026 Reexamination"
 	},
 	{
-		"question": "Remote sensing satellites include:",
+		"question": "A city designed to balance economic growth, environmental protection, and social well-being is referred to as a:",
 		"options": [
-			"observation by the naked eye.",
-			"photography by a camera.",
-			"photography from aircraft.",
-			"sensing by sensors from space satellites."
+			"Secondary city",
+			"Sustainable city",
+			"Smart city",
+			"Sprawling city"
 		],
-		"answer": 3
+		"answer": 1,
+		"source": "ICSE 2026 Reexamination"
 	},
 	{
-		"question": "Assertion (A): Environmental ethics is the application of ethical study to environmental concerns\nReason (R): A key aspect of environmental ethics is developing and justifying the theory of the moral relations between humans, non-human species and the natural environment.",
+		"question": "Match Column 1 with Column 2 and choose the correct option from those given below.\nColumn 1\n1. National Park\n2. Wildlife Sanctuaries\n3. Biosphere Reserves\n4. Small dams\nColumn 2\nA. Check Dams\nB. Great Nicobar Island\nC. Gir\nD. Kanha",
 		"options": [
-			"Both (A) and (R) are true, and (R) is the correct explanation for (A).",
-			"Both (A) and (R) are true, but (R) is not the correct explanation for (A).",
-			"(A) is true, and (R) is false.",
-			"Both the (A) and (R) are false."
+			"1-C, 2-D, 3-A, 4-B",
+			"1-D, 2-C, 3-B, 4-A",
+			"1-A, 2-C, 3-B, 4-D",
+			"1-B, 2-A, 3-C, 4-D"
 		],
-		"answer": 0
+		"answer": 1,
+		"source": "ICSE 2026 Reexamination"
 	},
 	{
-		"question": "Name the process of application of biotechnology for the treatment of waste.",
+		"question": "Which of the following is a problem that has emerged with the overuse of pesticides?",
 		"options": [
-			"Eutrophication",
-			"Mineralisation",
-			"Carbonification",
-			"Bioremediation"
+			"Better crop yield",
+			"Soil aeration",
+			"Pesticide-resistant pests",
+			"Lesser crop failure"
 		],
-		"answer": 3
+		"answer": 2,
+		"source": "ICSE 2026 Reexamination"
 	},
 	{
-		"question": "Match the following:\nColumn A\nI. Montreal Protocol\nII. Kyoto Protocol\nIII. Geneva Protocol\nIV. Earth Summit\nColumn B\nA. Reduction in Volatile organic compounds\nB. Reduction of CFCs\nC. Reduction in greenhouse gases\nD. Sustainable development",
+		"question": "An area for conservation of species that may not survive in the wild.",
 		"options": [
-			"I-B, II-C, III-A, IV-D",
-			"I-C, II-B, III-D, IV-A",
-			"I-B, II-C, III-D, IV-A",
-			"I-B, II-A, III-D, IV-C"
+			"Wildlife Sanctuary",
+			"Captive Breeding",
+			"Biosphere Reserve",
+			"National Park"
 		],
-		"answer": 0
+		"answer": 1,
+		"source": "ICSE 2026 Reexamination"
 	},
 	{
-		"question": "Some international environmental agreements are themselves trade agreements.\nWhich of the following best supports the above statement?",
+		"question": "Waste such as old or broken CPUs, laptops, printers, etc. can be categorised as:",
 		"options": [
-			"Convention on International Trade in Endangered Species (CITES)",
-			"Earth Summit",
-			"Biodiversity Act",
-			"Wildlife Protection Act"
+			"Industrial waste",
+			"Agricultural waste",
+			"Domestic waste",
+			"Electronic waste"
 		],
-		"answer": 0
+		"answer": 3,
+		"source": "ICSE 2026 Reexamination"
 	},
 	{
-		"question": "The increasing demand for food by the growing population leads to:",
+		"question": "India has operational branches of Amazon, hence it is called a:",
 		"options": [
-			"conversion of forest into expanding infrastructure.",
-			"conversion of forest into agricultural land.",
-			"migration of rural people into cities.",
-			"Escalation of the use of fossil fuels."
+			"Home country",
+			"Host country",
+			"Developing country",
+			"Third-world country"
 		],
-		"answer": 1
+		"answer": 1,
+		"source": "ICSE 2026 Reexamination"
 	},
 	{
-		"question": "Women-centred development does NOT focus on:",
+		"question": "Which of the following air pollution control devices has maximum efficiency?",
 		"options": [
-			"improving girl child's education.",
-			"empowering women to earn and have control over resources.",
-			"dismantling the caste system.",
-			"reducing violence against women."
+			"Cyclone separators",
+			"Fabric filters",
+			"Wet scrubbers",
+			"Electrostatic precipitators"
 		],
-		"answer": 2
+		"answer": 3,
+		"source": "ICSE 2026 Reexamination"
 	},
 	{
-		"question": "Which of these is an advantage of HYV seeds?",
+		"question": "Which of the following is NOT an effect of the population explosion?",
 		"options": [
-			"Yields more under proper irrigation.",
-			"Higher doses of fertilisers are effective.",
-			"Easily attacked by pests.",
-			"Gives better yield of crops."
+			"Increase in the demand for food",
+			"Decrease in infant mortality",
+			"Depletion of natural resources",
+			"Increase in waste generation"
 		],
-		"answer": 3
+		"answer": 1,
+		"source": "ICSE 2026 Reexamination"
 	},
 	{
-		"question": "Biofertilisers are composed of:",
+		"question": "To make the construction activities more environmentally friendly, which of the following should NOT be undertaken?",
 		"options": [
-			"crop residue after harvesting.",
-			"animal dung.",
-			"living microorganisms like bacteria and protozoa.",
-			"earthworm castings."
+			"Reducing construction waste",
+			"Using eco-friendly construction material",
+			"Using timber for construction",
+			"Efficiently using water resources"
 		],
-		"answer": 2
+		"answer": 2,
+		"source": "ICSE 2026 Reexamination"
 	},
 	{
-		"question": "Statement A: Presently, chemical fertilisers are more popular as compared to organic manure.\nStatement B: Chemical fertilisers are easier to apply, cost-effective and contain three main elements: phosphorus, potassium & nitrogen.",
+		"question": "Narmada Bachao Andolan : Medha Patkar : : Sukhomajri : ___________",
 		"options": [
-			"Both Statements A & B are incorrect.",
-			"Statement A is correct, and Statement B is incorrect.",
-			"Statement A is correct, and Statement B is the reason for A.",
-			"Statement A is correct, and Statement B is not the reason for A."
+			"P.R.Mishra",
+			"Aamir Khan",
+			"Anna Hazare",
+			"Amrita Devi"
 		],
-		"answer": 2
+		"answer": 0,
+		"source": "ICSE 2026 Reexamination"
 	},
 	{
-		"question": "Conservation tillage improves soil health and limits the extent of soil erosion. Which of the following criteria makes conservation more important?",
+		"question": "When we read about Asian Elephant, Red Panda, Blue Whale, we are referring to:",
 		"options": [
-			"Reduces runoff.",
-			"The severity of some diseases can increase.",
-			"Perennial weeds may appear.",
-			"Pest attack increases."
+			"Endangered species",
+			"Endemic species",
+			"Vulnerable species",
+			"Extinct species"
 		],
-		"answer": 0
+		"answer": 0,
+		"source": "ICSE 2026 Reexamination"
 	},
 	{
-		"question": "Match each item in Column I with one item in Column II and choose the correct answer from the options below:\nColumn I\nA. Dry farming\nB. Cutting furrows into the slope of land.\nC. Alternate rows of heavy-rooted & loose-rooted plants.\nD. Planting seedlings over deforested areas.\nColumn II\nI. Contour farming\nII. Strip cropping\nIII. Tree cropping\nIV. Drought intensive crops",
+		"question": "Identify the incorrect pair:",
 		"options": [
-			"A-I, B-II, C-III, D-IV",
-			"A-II, B-III, C-IV, D-I",
-			"A-IV, B-I, C-II, D-III",
-			"A-III, B-I, C-II, D-IV"
+			"CITES – 1975",
+			"IUCN – 1948",
+			"Project Tiger – 1974",
+			"Ramsar Convention – 1971"
 		],
-		"answer": 2
+		"answer": 2,
+		"source": "ICSE 2026 Reexamination"
 	},
 	{
-		"question": "Around 25 large trees by the side of a water body in the Nalban fisheries area near Salt Lake, Kolkata, have allegedly been chopped down. (Source: The Times of India, Kolkata, 19 February 2024.) The above incident may have been caused by:",
+		"question": "The term used for the increase in population, which leads to the growth and expansion of cities is:",
 		"options": [
-			"poor land management.",
-			"the enormous increase in population.",
-			"the roots of the trees become weak due to soil erosion.",
-			"termite infestation at the roots of the trees."
+			"Deurbanisation",
+			"Counter urbanisation",
+			"Urbanisation",
+			"Ruralisation"
 		],
-		"answer": 1
+		"answer": 2,
+		"source": "ICSE 2026"
 	},
 	{
-		"question": "The alternate energy that can be used directly from the source is:",
+		"question": "Assertion (A): Education plays a key role in women’s empowerment.\nReason (R): Access to education empowers women to make their own decision.",
 		"options": [
-			"solar energy.",
-			"wind energy.",
-			"geothermal energy.",
-			"biomass energy."
+			"(A) is true and (R) is false.",
+			"(A) is false and (R) is true.",
+			"Both (A) and (R) are true and (R) is the correct explanation of (A).",
+			"Both (A) and (R) are true but (R) is not the correct explanation of (A)."
 		],
-		"answer": 2
+		"answer": 2,
+		"source": "ICSE 2026"
 	},
 	{
-		"question": "Wildlife sanctuaries are NOT:",
+		"question": "The principle of 3Rs in waste management stands for:",
 		"options": [
-			"habitat centric.",
-			"species centric.",
-			"under private land ownership.",
-			"accessible to human activities."
+			"Reduce, Regain, Recycle",
+			"Reduce, Reuse, Regain",
+			"Reuse, Retain, Regain",
+			"Reuse, Reduce, Recycle"
 		],
-		"answer": 0
+		"answer": 3,
+		"source": "ICSE 2026"
 	},
 	{
-		"question": "Gasohol is an alternative fuel consisting of a mixture of:",
+		"question": "Which of following is NOT related to land use planning?",
 		"options": [
-			"90% gasoline & 10% ethanol.",
-			"90% gasoline & 10% methanol.",
-			"10% gasoline & 90% methanol.",
-			"10% gasoline & 90% ethanol."
+			"Systematic assessment of land",
+			"Unplanned drainage system",
+			"Complete infrastructure planning",
+			"Developed transport facility"
 		],
-		"answer": 0
+		"answer": 1,
+		"source": "ICSE 2026"
 	},
 	{
-		"question": "In situ conservation does NOT allow:",
+		"question": "Identify the best method to make the soil fertile.",
 		"options": [
-			"protection of indigenous species in natural habitats.",
-			"captive breeding.",
-			"natural selection and community evolution.",
-			"better conservation on a long-term period."
+			"Spraying pesticides",
+			"Burning grass cover",
+			"Using trickle drip irrigation",
+			"Adding farmyard manure"
 		],
-		"answer": 1
+		"answer": 3,
+		"source": "ICSE 2026"
 	},
 	{
-		"question": "To curb pollution, Delhi bus transport system has become the biggest CNG-run transport system in the world. The main reason for using CNG is:",
+		"question": "Match Column I with Column II.\nColumn I\n1. Planting rows of trees and shrubs.\n2. Cutting the fields at a right angle to the slope.\n3. Dry leaves are spread on soil.\n4. Reduce the speed of water flow.\nColumn II\nA. Check Dams\nB. Mulching\nC. Terrace Farming\nD. Wind Breakers",
 		"options": [
-			"CNG is easily available",
-			"CNG is more efficient, & less polluting",
-			"CNG fuel tanks are bulky",
-			"CNG gives less mileage."
+			"1-C, 2-D, 3-A, 4-B",
+			"1-D, 2-C, 3-B, 4-A",
+			"1-A, 2-C, 3-B, 4-D",
+			"1-B, 2-A, 3-C, 4-D"
 		],
-		"answer": 1
+		"answer": 1,
+		"source": "ICSE 2026"
 	},
 	{
-		"question": "Statement A: Wind energy is a renewable source of energy, free of greenhouse gases but not reliable.\nStatement B: The amount of electricity produced by wind energy varies with wind velocity between zero and storm velocity.",
+		"question": "Which one of the following statements is NOT correct?",
 		"options": [
-			"Both Statement A & Statement B are incorrect.",
-			"Statement A is correct & Statement B is the correct explanation of Statement A.",
-			"Statement A is correct, but Statement B is not the correct explanation of Statement A.",
-			"Statement A is correct & Statement B is incorrect."
+			"Ozone depletion benefits the earth.",
+			"Eutrophication is due to the dissolved phosphate in water bodies.",
+			"Global warming is the rise in the average temperature of the earth.",
+			"Greenhouse effect is due to deforestation."
 		],
-		"answer": 1
+		"answer": 0,
+		"source": "ICSE 2026"
 	},
 	{
-		"question": "Match each item in Column I with one item in Column II and choose the correct answer from the options given below:\nColumn I\nA. Gene Banks\nB. IUCN\nC. Nuclear Energy\nD. Energy Plantation\nColumn II\nI. Red list of threatened species\nII. Biomass energy\nIII. Prevents genetic erosion\nIV. A significant quantity of electricity",
+		"question": "To reduce the environmental impact of construction activities, which of the following methods should be undertaken?",
 		"options": [
-			"A-III, B-I, C-IV, D-II",
-			"A-II, B-III, C-I, D-IV",
-			"A-IV, B-II, C-III, D-I",
-			"A-I, B-III, C-IV, D-II"
+			"Increasing construction waste",
+			"Using eco-friendly construction material",
+			"Using timber for construction",
+			"Inefficient use of water resources"
 		],
-		"answer": 0
+		"answer": 1,
+		"source": "ICSE 2026"
 	},
 	{
-		"question": "Alpine plants may alter height or leaf size to cope with early snow melt conditions. (Source: MONGABAY, by T. V. Padma, 4th January 2024) What could be the MOST plausible cause?",
+		"question": "Fukushima : Release of radioactive materials : : Bhopal Gas Tragedy : ___________",
 		"options": [
-			"Land degradation",
-			"Global warming",
-			"Desertification",
-			"Intensive agriculture"
+			"Leakage of Methyl Isocyanate",
+			"Leakage of oil",
+			"Flash floods due to cloud burst",
+			"Dumping of Cobalt 60"
 		],
-		"answer": 1
+		"answer": 0,
+		"source": "ICSE 2026"
 	},
 	{
-		"question": "With reference to the above Venn diagram, name a renewable bio-energy source that is combustible.",
-		"options": ["Biogas", "Wave energy", "Coal", "Petroleum"],
-		"answer": 0
-	},
-	{
-		"question": "The aim of land reforms is:",
-		"options": [
-			"escalating poverty.",
-			"increasing agricultural productivity.",
-			"declining co-operative farming.",
-			"encouraging land fragmentation."
-		],
-		"answer": 1
-	},
-	{
-		"question": "Terrace farming contributes to sustainable agriculture by:",
-		"options": [
-			"promoting monoculture.",
-			"maximising landslides.",
-			"reducing wastage of irrigation water.",
-			"increasing surface runoff."
-		],
-		"answer": 2
-	},
-	{
-		"question": "The long-term impact of uncontrolled e-waste on the environment are:\nI. loss of valuable raw materials\nII. decreasing carbon print.\nIII. contamination of groundwater.\nIV. safeguarding the habitats.\nChoose the correct options:",
-		"options": ["I and III.", "II and IV", "I and IV", "II and III"],
-		"answer": 0
-	},
-	{
-		"question": "Ram performed a waste audit in his local community and found that it could pose a risk to human health.\nWhich of the following four tenets (4R's) did he implement to manage the waste?",
-		"options": [
-			"Rewrite, Reuse, Reduce, Rewarm",
-			"Rejoice, Reduce, Rewrite, Reuse",
-			"Rewarm, Recycle, Refuse, Rejoice",
-			"Refuse, Reuse, Recycle, Reduce"
-		],
-		"answer": 3
-	},
-	{
-		"question": "Assertion (A): Windbreaks usually consist of alternate rows of trees and shrubs.\nReason (R): Windbreaks around a field can raise the cost of heating and cooling and save energy.",
-		"options": [
-			"A is false, and R is true.",
-			"A is true, and R is false.",
-			"Both A and R are true, and R is the correct explanation of A.",
-			"Both A and R are true, and A is the correct explanation of R."
-		],
-		"answer": 1
-	},
-	{
-		"question": "Integrated Rural Development Programme is a self-employment programme of the Government of India to raise the income generation capacity of the poor.\nWhich scheme is undertaken under this programme?",
-		"options": [
-			"Urban Sanitation Programme.",
-			"International Food for Work Programme.",
-			"Training of pensioners for self-employment.",
-			"Development of Women and Children in Rural areas."
-		],
-		"answer": 3
-	},
-	{
-		"question": "Dengue cases in India have reached nearly 95,000 between January and July 31, 2023, with numbers spiking after excessive rains caused water logging. (Source: The Economic Times, Sept 27, 2023) Water logging occurs because of:",
-		"options": [
-			"proper public sanitation.",
-			"over-irrigation of fields.",
-			"adequate drainage.",
-			"soil impermeability."
-		],
-		"answer": 1
-	},
-	{
-		"question": "Match each item in Column I with one item in Column II and choose the correct answer from the code given below:\nColumn I\nA. Terracing\nB. Contour Ploughing\nC. Bunds\nD. Tree planting\nColumn II\n(i) Furrows\n(ii) Reforestation\n(iii) Stepped platforms\n(iv) Embankments",
-		"options": [
-			"A-(i), B-(iii), C-(ii), D-(iv)",
-			"A -(iii), B-(ii), C-(iv), D-(i)",
-			"A-(ii), B-(iv), C-(i), D-(iii)",
-			"A-(iii), B-(i), C-(iv), D-(ii)"
-		],
-		"answer": 3
-	},
-	{
-		"question": "What is the purpose of constructing green buildings in urban areas?",
-		"options": [
-			"To create awareness about money matters in the urban poor.",
-			"To use less water and renewable sources of energy.",
-			"To reduce the indoor temperature of rooms.",
-			"To provide job opportunities for urban youth."
-		],
-		"answer": 1
-	},
-	{
-		"question": "Assertion (A): We lose productive time due to traffic jams on roads.\nReason(R): Increasing the number of public transportation in cities can reduce traffic congestion.",
-		"options": [
-			"A is true, and R is false.",
-			"A is false, and R is true.",
-			"Both A and R are true.",
-			"Both A and R are false."
-		],
-		"answer": 2
-	},
-	{
-		"question": "Which of the following is NOT a component of the urban environment?",
-		"options": [
-			"Waste management",
-			"Transportation planning",
-			"Agricultural development",
-			"Water Resources Management"
-		],
-		"answer": 2
-	},
-	{
-		"question": "Statement I: Battery-operated vehicles reduce air pollution\nStatement II: Battery-operated vehicles are popular in urban areas.\nWhich of the statements is true?",
-		"options": [
-			"Statements I and II are true.",
-			"Statement I is true, and Statement II is the correct reason for I.",
-			"Statement I is false, and Statement II is correct.",
-			"Statement I is true, and Statement II is the correct reason for I."
-		],
-		"answer": 1
-	},
-	{
-		"question": "Which approach is more beneficial to develop existing urban areas?",
-		"options": [
-			"Encroaching forest area near the city.",
-			"Redeveloping slums and old buildings to accommodate more houses.",
-			"Providing civic amenities to slums.",
-			"Converting agricultural lands to residential areas."
-		],
-		"answer": 1
-	},
-	{
-		"question": "Which one of the following helps to reduce urban vehicular pollution?",
-		"options": [
-			"Encouraging carpooling and use of public transport.",
-			"Replacing kerosene with LPG.",
-			"Using electrostatic precipitators in industries.",
-			"Encouraging community forestry."
-		],
-		"answer": 0
-	},
-	{
-		"question": "Mr. X bought a motorbike with a four-stroke engine. Mr. Y bought a motorbike with a two-stroke engine. Mr. Z bought a car with a catalytic converter.\nName the persons who are likely to contribute less to air pollution.",
-		"options": ["Only X.", "Only Y.", "X and Z.", "Z and Y."],
-		"answer": 2
-	},
-	{
-		"question": "One of every six people in developing countries is not getting enough food to eat.\"\nState any two reasons for the statement above.",
-		"options": [
-			"Unequal distribution due to differences in soil, climate, political and economic power.",
-			"Too much food production in developed countries.",
-			"Low population in developing countries.",
-			"Excessive exports from developing countries."
-		],
-		"answer": 0
-	},
-	{
-		"question": "International aid from agencies has been flowing from developed countries to developing countries.\nName any two international aid-giving agencies.",
-		"options": [
-			"World Bank and IMF",
-			"CITES and IUCN",
-			"GEF and UN",
-			"WHO and UNICEF"
-		],
-		"answer": 0
-	},
-	{
-		"question": "State any two ways of supporting developing countries to follow the Montreal Protocol.",
-		"options": [
-			"Providing financial and technical assistance, granting a period of 10-15 years to adapt.",
-			"Banning all trade with them.",
-			"Imposing sanctions.",
-			"Reducing their aid."
-		],
-		"answer": 0
-	},
-	{
-		"question": "The population planning policy has succeeded only marginally. State whether the statement is true or false. Give an appropriate reason for your answer.",
-		"options": [
-			"False, population has increased.",
-			"True, percent of population in age group 0-9 is reduced.",
-			"False, no change.",
-			"True, no reason."
-		],
-		"answer": 1
-	},
-	{
-		"question": "Chinese manufacturers discovered a market for their plastic toys in India, where the price point for toys is higher. With their creative designs and lower pricing, these plastic toys made in China have now become more popular in Indian markets. Regarding the information given above, is it an example of an unfair trade? Why?",
-		"options": [
-			"Yes, it affects India's overall production.",
-			"No, it's fair trade.",
-			"Yes, it increases employment.",
-			"No, it reduces pollution."
-		],
-		"answer": 0
-	},
-	{
-		"question": "Suggest any two methods of growing food by copying nature.",
-		"options": [
-			"Polyculture and crop rotation.",
-			"Monoculture and chemical pesticides.",
-			"Deforestation and mining.",
-			"Urban farming and industrial agriculture."
-		],
-		"answer": 0
-	},
-	{
-		"question": "List two ways in which human lifestyle directly degrades wetlands.",
-		"options": [
-			"Drained or filled to grow crops or covered with concrete, asphalt and buildings.",
-			"Protected and conserved.",
-			"Increased biodiversity.",
-			"Reduced pollution."
-		],
-		"answer": 0
-	},
-	{
-		"question": "Name a pest control method that uses predator insects. Give an advantage of it.",
-		"options": [
-			"Biological pest control, Gambusia fish eat mosquito larvae in a pond.",
-			"Chemical pesticides, kills all insects.",
-			"Mechanical traps, cheap.",
-			"Genetic modification, fast."
-		],
-		"answer": 0
-	},
-	{
-		"question": "Mention two constraints faced by the farmers in the implementation of integrated plant nutrient programmes.",
-		"options": [
-			"Non-availability of farmyard manure in sufficient quantity.",
-			"Too much manure.",
-			"Low cost.",
-			"Easy access."
-		],
-		"answer": 0
-	},
-	{
-		"question": "What role do gene banks play in biodiversity conservation? Give an example of a gene bank.",
-		"options": [
-			"Bio-repositories which store genetic material, Pollen bank.",
-			"Places for animals, Zoo.",
-			"Forests, National park.",
-			"Lakes, Wetland."
-		],
-		"answer": 0
-	},
-	{
-		"question": "Analyse the role of small-scale industries in providing employment opportunities in rural and urban areas. How does this contribute to poverty alleviation?",
-		"options": [
-			"They create employment opportunities, ensure equitable distribution of income.",
-			"They increase poverty.",
-			"They reduce employment.",
-			"They promote large industries."
-		],
-		"answer": 0
-	},
-	{
-		"question": "Mention two advantages of this device used in sustainable agriculture. (sprinkler)",
-		"options": [
-			"Saves gallons of water, prevents soil erosion.",
-			"Increases water usage, causes erosion.",
-			"Expensive, ineffective.",
-			"Pollutes water, harms crops."
-		],
-		"answer": 0
-	},
-	{
-		"question": "Mention the significance of the core & buffer zone of the Nilgiri Biosphere Reserve.",
-		"options": [
-			"Core legally protected, buffer for research.",
-			"Both for tourism.",
-			"Core for mining, buffer for farming.",
-			"No significance."
-		],
-		"answer": 0
-	},
-	{
-		"question": "Imagine you are a wildlife conservationist tasked with protecting endangered species. Analyse the specific challenges faced by critically endangered species compared to vulnerable species.",
-		"options": [
-			"Critically endangered at very high risk, vulnerable at high risk.",
-			"No difference.",
-			"Vulnerable at higher risk.",
-			"Both same."
-		],
-		"answer": 0
-	},
-	{
-		"question": "The Convention on Biological Diversity is an agreement adopted at the Earth Summit, Rio de Janeiro, in 1992. Mention two of its main objectives.",
-		"options": [
-			"Conserve biodiversity, sustainable use of components.",
-			"Increase pollution, reduce biodiversity.",
-			"Promote hunting, destroy habitats.",
-			"No objectives."
-		],
-		"answer": 0
-	},
-	{
-		"question": "Overconsumption is an important reason for loss of biodiversity Give two reasons in support of the above statement.",
-		"options": [
-			"Leads to deforestation, overconsumption leads to waste generation & pollution.",
-			"Increases biodiversity.",
-			"No effect.",
-			"Reduces pollution."
-		],
-		"answer": 0
-	},
-	{
-		"question": "Paper recycling is the process of turning waste into new paper products. Highlight two of its uses.",
-		"options": [
-			"Handmade recycled paper, used in packaging.",
-			"Burning, throwing.",
-			"No uses.",
-			"Only for writing."
-		],
-		"answer": 0
-	},
-	{
-		"question": "Study the following image and answer the questions that follow: (dry farming)",
-		"options": [
-			"Dry farming, suitable for low precipitation.",
-			"Irrigation, high water.",
-			"Monoculture, chemicals.",
-			"Mining, no farming."
-		],
-		"answer": 0
-	},
-	{
-		"question": "What are the key aspects of forest harvesting of NTFPs?",
-		"options": [
-			"Sustainability, diverse product range.",
-			"Destruction, monoculture.",
-			"Pollution, industrial.",
-			"No aspects."
-		],
-		"answer": 0
-	},
-	{
-		"question": "According to the given flowchart, which process is used to treat solid waste? Why is this method suitable?",
-		"options": [
-			"Incineration, suitable for non-degradable and hazardous wastes.",
-			"Landfill, cheap.",
-			"Recycling, all wastes.",
-			"Dumping, easy."
-		],
-		"answer": 0
-	},
-	{
-		"question": "What is the purpose of land use planning in urban development?",
-		"options": [
-			"Allocate land for different purposes, ensure sustainable use.",
-			"Destroy land.",
-			"Increase pollution.",
-			"Reduce green spaces."
-		],
-		"answer": 0
-	},
-	{
-		"question": "A display board in a busy square of a city showed 'Campaign for Clean City' by the local citizens. This refers to Community participation. How does this help in urban management?",
-		"options": [
-			"Helps in generating less waste, creates awareness.",
-			"Increases waste.",
-			"No help.",
-			"Reduces participation."
-		],
-		"answer": 0
-	},
-	{
-		"question": "A developing nation is aiming to reduce its dependence on imported fossil fuels while improving air quality. Evaluate the feasibility and effectiveness of transitioning the public transportation system to CNG in achieving these goals compared to other alternative fuels.",
-		"options": [
-			"Eco-friendly, good for engine, cheaper.",
-			"Expensive, polluting.",
-			"No effectiveness.",
-			"Same as fossil fuels."
-		],
-		"answer": 0
-	},
-	{
-		"question": "A community living in close proximity to a brick kiln has reported a significant increase in respiratory illnesses among its residents. Analyse the potential health hazards and other environmental issues associated with brick kiln emissions.",
-		"options": [
-			"Air pollution, heavy load affects bones, heat stress.",
-			"No hazards.",
-			"Only noise.",
-			"Water pollution."
-		],
-		"answer": 0
-	},
-	{
-		"question": "The Bengaluru traffic police aim to maximise data analytics solutions to optimise vehicular movement in the city and reduce congestion. In the context of the given information, what are two possible measures the Bengaluru traffic police can encourage to reduce traffic congestion in the city?",
-		"options": [
-			"Promote mass transport, improve infrastructure.",
-			"Increase cars.",
-			"Reduce roads.",
-			"No measures."
-		],
-		"answer": 0
-	},
-	{
-		"question": "Poverty is not only the lack of money but the lack of access to basic human needs like food, shelter, clothing, education, healthcare, etc. Analyse the impacts of poverty that hinder development and growth within a country.",
-		"options": [
-			"High child mortality, nutritional deficiency.",
-			"Increases development.",
-			"No impact.",
-			"Reduces poverty."
-		],
-		"answer": 0
-	},
-	{
-		"question": "Hydropower can protect communities & their livelihood by supplying water that is managed efficiently & safely. Give five ways in which hydropower is advantageous to people & also safeguards the environment.",
-		"options": [
-			"Controls floods, breeding fish, recharge groundwater.",
-			"Causes floods, kills fish.",
-			"No advantages.",
-			"Pollutes water."
-		],
-		"answer": 0
-	},
-	{
-		"question": "Man must realise that in order to survive, he must handle nature with care. Based on the statement given above, analyse any five ways in which humans are responsible for the loss of biodiversity.",
-		"options": [
-			"Overpopulation, deforestation, overexploitation.",
-			"Conservation, protection.",
-			"No responsibility.",
-			"Increases biodiversity."
-		],
-		"answer": 0
-	},
-	{
-		"question": "Energy is essential for development & sustainable energy consumption is needed for sustainable development. Give five ways in which energy can be used sustainably at home.",
-		"options": [
-			"Switch off lights, use fluorescent lamps, ventilation.",
-			"Waste energy, use old bulbs.",
-			"No ways.",
-			"Increase consumption."
-		],
-		"answer": 0
-	},
-	{
-		"question": "Which model of community forestry can be initiated for the development of green pastures?",
+		"question": "One positive impact of MNCs on the local economy of the host country is:",
 		"options": [
-			"Social Forestry, reduce pressure on forests.",
-			"Commercial forestry, increase pressure.",
-			"No model.",
-			"Deforestation."
+			"drain of wealth",
+			"destruction of culture",
+			"employment generation",
+			"introduction of government policies"
 		],
-		"answer": 0
+		"answer": 2,
+		"source": "ICSE 2026"
 	},
 	{
-		"question": "Read the passage and answer the following questions: Vermiculture...",
+		"question": "According to IUCN, Dodos have been classified as ___________.",
 		"options": [
-			"Important to farmer as nutrient-rich, nutrients phosphorous.",
-			"Not important.",
-			"Only for waste.",
-			"Harmful."
+			"Endangered species",
+			"Endemic species",
+			"Vulnerable species",
+			"Extinct species"
 		],
-		"answer": 0
+		"answer": 3,
+		"source": "ICSE 2026"
 	},
 	{
-		"question": "The large MNCs with worldwide networks look for the cheapest goods in order to maximise their profits. How does this statement impact the developing countries?",
+		"question": "Microbial breakdown of biomass in the absence of oxygen produces __________ gases.",
 		"options": [
-			"Choice of goods rises, foreign investment rising.",
-			"No impact.",
-			"Negative impact only.",
-			"Reduces investment."
+			"Chlorine and fluorine",
+			"Methane and carbon dioxide",
+			"Nitrogen and hydrogen",
+			"Oxygen and nitrogen"
 		],
-		"answer": 0
+		"answer": 1,
+		"source": "ICSE 2026"
 	},
 	{
-		"question": "Today, the GEF is an independently operating financial organisation that is working to improve the global environment. Enlist the objective of the Global Environmental Facility that supports the statement above.",
+		"question": "Identify the incorrect pair from the following:",
 		"options": [
-			"Global environmental benefits in climate change, biodiversity.",
-			"Local benefits only.",
-			"No objectives.",
-			"Economic only."
+			"Solar energy – Solar panels",
+			"Leguminous crop – Wheat",
+			"Ethanol – Fuel efficiency",
+			"Rare species – One horned rhino"
 		],
-		"answer": 0
+		"answer": 1,
+		"source": "ICSE 2026"
 	},
 	{
-		"question": "Illustrate the role of NGOs towards Sustainable Development.",
+		"question": "Which of the following issues was addressed by the Earth Summit held in Rio (1992)?",
 		"options": [
-			"Mobilising people, network among NGOs, provides information.",
-			"No role.",
-			"Negative role.",
-			"Only government."
+			"Biodiversity and climate change",
+			"Transboundary air pollution",
+			"Poverty alleviation",
+			"International trade regulation"
 		],
-		"answer": 0
+		"answer": 0,
+		"source": "ICSE 2026"
 	},
 	{
-		"question": " Vehicular pollution : : __________; Industrial Pollution : : Cyclone Separator",
+		"question": "Vehicular pollution : : __________; Industrial Pollution : : Cyclone Separator",
 		"options": [
-			"Wood ",
+			"Wood",
 			"Smokeless Chullah",
 			"Catalytic converter",
 			"Diesel"
 		],
-		"answer": 2
+		"answer": 2,
+		"source": "ICSE 2025 Reexamination"
 	},
 	{
-		"question": "Assertion (A):  The economy of a family depends on the size of it. \nReason (R):   The children can get better education and health care.",
+		"question": "Assertion (A): The economy of a family depends on the size of it.\nReason (R): The children can get better education and health care.",
 		"options": [
-			"(A) is True but (R) is False. ",
-			"(A) is False but (R) is True. ",
-			"Both (A) and (R) are True but (R) is not the correct explanation of (A). ",
-			"Both (A) and (R) are True and (R) is the correct explanation of (A). "
+			"(A) is True but (R) is False.",
+			"(A) is False but (R) is True.",
+			"Both (A) and (R) are True but (R) is not the correct explanation of (A).",
+			"Both (A) and (R) are True and (R) is the correct explanation of (A)."
 		],
-		"answer": 2
+		"answer": 3,
+		"source": "ICSE 2025 Reexamination"
 	},
 	{
 		"question": "The statistical study of Population of a country is known as:",
 		"options": [
-			" Birth rate",
-			" Demography  ",
-			" Growth Rate",
-			" Death rate"
+			"Birth rate",
+			"Demography",
+			"Growth Rate",
+			"Death rate"
 		],
-		"answer": 1
+		"answer": 1,
+		"source": "ICSE 2025 Reexamination"
 	},
 	{
 		"question": "Which one of the following is eco-friendly?",
@@ -752,7 +348,8 @@
 			"Using diesel in vehicles",
 			"Use chemical pesticides in agriculture."
 		],
-		"answer": 0
+		"answer": 0,
+		"source": "ICSE 2025 Reexamination"
 	},
 	{
 		"question": "The two forms of fossil fuels are:",
@@ -762,7 +359,8 @@
 			"Biomass and Petrol",
 			"Diesel and Methanol"
 		],
-		"answer": 3
+		"answer": 1,
+		"source": "ICSE 2025 Reexamination"
 	},
 	{
 		"question": "In-situ conservation is keeping animals and plants in:",
@@ -772,7 +370,8 @@
 			"Conserving in Botanical gardens",
 			"Keeping them in Zoo"
 		],
-		"answer": 1
+		"answer": 1,
+		"source": "ICSE 2025 Reexamination"
 	},
 	{
 		"question": "The Dal Lake in Srinagar is covered with algal bloom and aquatic plants leading to reduced oxygen level in the lake. Which one of the following is a reason for this?",
@@ -782,7 +381,8 @@
 			"The lake gets covered with snow during winter.",
 			"The lake has lot of sunlight."
 		],
-		"answer": 0
+		"answer": 0,
+		"source": "ICSE 2025 Reexamination"
 	},
 	{
 		"question": "Rearrange the following steps in the Ascending order for implementing mixed cropping:\nStep 1: Plant the main crop\nStep 2: Prepare the soil with organic matter and fertilisers\nStep 3: Select compatible crops for intercropping\nStep 4: Harvest the crops",
@@ -792,7 +392,8 @@
 			"Step 1, Step 2, Step 3, Step 4",
 			"Step 3, Step 1, Step 4, Step 2"
 		],
-		"answer": 0
+		"answer": 0,
+		"source": "ICSE 2025 Reexamination"
 	},
 	{
 		"question": "Integrated Pest Management reduces the application of ___________.",
@@ -802,7 +403,8 @@
 			"Pesticides",
 			"Fertilisers"
 		],
-		"answer": 2
+		"answer": 2,
+		"source": "ICSE 2025 Reexamination"
 	},
 	{
 		"question": "Assertion (A): Sustainable development requires a multidisciplinary approach.\nReason (R): It involves balancing economic, social, and environmental considerations.",
@@ -812,37 +414,41 @@
 			"Both (A) and (R) are true and (A) is the correct explanation of (R).",
 			"Both (A) and (R) are true but (R) is the correct explanation of (A)."
 		],
-		"answer": 3
+		"answer": 3,
+		"source": "ICSE 2025 Reexamination"
 	},
 	{
-		"question": "In relation to IUCN classification of species match each item in COLUMN I with one item in COLUMN II and choose the correct answer:\nCOLUMN I\n1. PETA\n2. Buffer zone\n3. Seed banks or gene banks\n4. Red Data book\nCOLUMN II\nA.  Documentation of species\nB.  Vegetative and gene are preserved\nC. Education and other activities are carried out\nD.  To protect the rights of animals.",
+		"question": "In relation to IUCN classification of species match each item in COLUMN I with one item in COLUMN II and choose the correct answer:\nCOLUMN I\n1. PETA\n2. Buffer zone\n3. Seed banks or gene banks\n4. Red Data book\nCOLUMN II\nA. Documentation of species\nB. Vegetative and gene are preserved\nC. Education and other activities are carried out\nD. To protect the rights of animals.",
 		"options": [
 			"1–A, 2–B, 3–C, 4–D",
 			"1–D, 2–C, 3–B, 4–A",
 			"1–B, 2–D, 3–A, 4–C",
 			"1–C, 2–A, 3–D, 4–B"
 		],
-		"answer": 1
+		"answer": 1,
+		"source": "ICSE 2025 Reexamination"
 	},
 	{
 		"question": "Which of these is NOT a method of soil conservation?",
 		"options": [
-			" Intercropping",
-			" Mulching",
-			" Weathering",
-			" Contour ploughing"
+			"Intercropping",
+			"Mulching",
+			"Weathering",
+			"Contour ploughing"
 		],
-		"answer": 2
+		"answer": 2,
+		"source": "ICSE 2025 Reexamination"
 	},
 	{
 		"question": "The main objective of sustainable methods of modern conservation is to:",
 		"options": [
-			" maintain essential ecological process and life support system.",
-			" reduce the vehicular pollution.",
-			" use natural resources judiciously",
-			" increase the powerful species."
+			"maintain essential ecological process and life support system.",
+			"reduce the vehicular pollution.",
+			"use natural resources judiciously",
+			"increase the powerful species."
 		],
-		"answer": 0
+		"answer": 0,
+		"source": "ICSE 2025 Reexamination"
 	},
 	{
 		"question": "Which of the following is INCORRECT in the case of unfair trade?",
@@ -852,37 +458,41 @@
 			"Developing countries want to trade reserves of wildlife to earn money.",
 			"Developed countries want to conserve reserves of wildlife and restrict the trade."
 		],
-		"answer": 0
+		"answer": 0,
+		"source": "ICSE 2025 Reexamination"
 	},
 	{
 		"question": "Which one of the following is an incorrect pair:",
 		"options": [
-			"HYV -> Better yield",
-			"Chemical fertiliser -> Eco friendly",
-			"Vermicomposting -> Earth worms",
-			"Farmyard manure -> Cattle dung"
+			"HYV → Better yield",
+			"Chemical fertiliser → Eco friendly",
+			"Vermicomposting → Earth worms",
+			"Farmyard manure → Cattle dung"
 		],
-		"answer": 1
+		"answer": 1,
+		"source": "ICSE 2025 Reexamination"
 	},
 	{
 		"question": "Four Stroke Engine : Vehicular Pollution : : Electrostatic Precipitator : ___________",
 		"options": [
-			" Domestic Combustion",
-			" Industrial Pollution",
-			" Taj Trapezium Zone",
-			" Effective Traffic Management"
+			"Domestic Combustion",
+			"Industrial Pollution",
+			"Taj Trapezium Zone",
+			"Effective Traffic Management"
 		],
-		"answer": 1
+		"answer": 1,
+		"source": "ICSE 2025"
 	},
 	{
-		"question": "Assertion (A):  Population control is necessary to maintain the natural resource of country.\nReason (R):   The rising population exhausts the resources at a fast rate.",
+		"question": "Assertion (A): Population control is necessary to maintain the natural resource of country.\nReason (R): The rising population exhausts the resources at a fast rate.",
 		"options": [
 			"(A) is true and (R) is false.",
 			"(A) is false and (R) is true.",
 			"Both (A) and (R) are true and (A) is the correct explanation of (R).",
 			"Both (A) and (R) are true but (R) is not the correct explanation of (A)."
 		],
-		"answer": 2
+		"answer": 2,
+		"source": "ICSE 2025"
 	},
 	{
 		"question": "Birth rate is also known as:",
@@ -892,37 +502,41 @@
 			"Demographic transition",
 			"Mortality"
 		],
-		"answer": 0
+		"answer": 0,
+		"source": "ICSE 2025"
 	},
 	{
 		"question": "Which of the following is an eco-friendly activity that can be practised?",
 		"options": [
-			"Utilising fossil fuel vehicle for shorter distances.",
+			"Utilising fossil fuel vehicles for shorter distances.",
 			"Using plastic bags for shopping.",
 			"Carrying cloth bags for shopping.",
 			"Using excess pesticides."
 		],
-		"answer": 2
+		"answer": 2,
+		"source": "ICSE 2025"
 	},
 	{
 		"question": "The town planning committee has asked you, as a student representative, to create awareness about land use amongst citizens.\nWhich one of the following suggestions would you give for proper land use?",
 		"options": [
-			" Construct more green buildings.",
-			" Increase mining and forest activity for maximum use of land resources.",
-			" Taking measures to reduce degradation and exploitation of land resources.",
-			" Make land available for more buildings."
+			"Construct more green buildings.",
+			"Increase mining and forest activity for maximum use of land resources.",
+			"Taking measures to reduce degradation and exploitation of land resources.",
+			"Make land available for more buildings."
 		],
-		"answer": 2
+		"answer": 2,
+		"source": "ICSE 2025"
 	},
 	{
-		"question": "Match the following columns correctly.\nColumn I\n1.  IUCN\n2.  Ramsar Convention\n3.  Extinct species\n4.  CITES\nColumn II\nA.  Totally wiped-out species \nB. Checks International trading of wildlife\nC. Wetland conservation \nD. Red Data book listing endangered species",
+		"question": "Match the following columns correctly.\nColumn I\n1. IUCN\n2. Ramsar Convention\n3. Extinct species\n4. CITES\nColumn II\nA. Totally wiped-out species\nB. Checks International trading of wildlife\nC. Wetland conservation\nD. Red Data book listing endangered species",
 		"options": [
-			"1-A,  2-B,  3-C,  4-D",
+			"1-A, 2-B, 3-C, 4-D",
 			"1-B, 2-C, 3-D, 4-A",
 			"1-C, 2-B, 3-A, 4-D",
 			"1-D, 2-C, 3-A, 4-B"
 		],
-		"answer": 3
+		"answer": 3,
+		"source": "ICSE 2025"
 	},
 	{
 		"question": "Recycling timber is eco-friendly because:",
@@ -930,19 +544,21 @@
 			"more landfill waste is generated.",
 			"it uses more energy.",
 			"it decreases deforestation.",
-			"recycled timer has more moisture."
+			"recycled timber has more moisture."
 		],
-		"answer": 2
+		"answer": 2,
+		"source": "ICSE 2025"
 	},
 	{
 		"question": "Soil erosion can be prevented by:",
 		"options": [
 			"Deforestation",
-			"Drip irrigation ",
+			"Drip irrigation",
 			"Contour ploughing",
 			"Removal of vegetation"
 		],
-		"answer": 2
+		"answer": 2,
+		"source": "ICSE 2025"
 	},
 	{
 		"question": "Seeds of new plant varieties obtained by breeding of closely related plants are:",
@@ -952,17 +568,19 @@
 			"Open-pollinated seeds",
 			"Monocotyledonous seeds"
 		],
-		"answer": 1
+		"answer": 1,
+		"source": "ICSE 2025"
 	},
 	{
 		"question": "Which of the following is an ecological approach to pest control?",
 		"options": [
-			"Integrated Pest Management ",
+			"Integrated Pest Management",
 			"Use of Biofertilizers",
 			"Integrated Nutrient Supply Programme",
 			"Bioremediation"
 		],
-		"answer": 0
+		"answer": 0,
+		"source": "ICSE 2025"
 	},
 	{
 		"question": "Which of the following is an example of Ex-situ conservation?",
@@ -972,27 +590,19 @@
 			"Bharatpur Bird Sanctuary",
 			"Byculla Zoo in Mumbai"
 		],
-		"answer": 3
+		"answer": 3,
+		"source": "ICSE 2025"
 	},
 	{
-		"question": "The Chernobyl disaster occurred on 26th April, 1986 in ________ releasing ________ particles into the atmosphere.",
+		"question": "The Chernobyl disaster occurred on 26th April, 1986 in __________ releasing ____________ particles into the atmosphere.",
 		"options": [
 			"Brazil : SPM",
 			"Ukraine : Radioactive",
 			"Canada : Ultrafine",
 			"Russia : VOC"
 		],
-		"answer": 1
-	},
-	{
-		"question": "Identify the process of waste disposal shown through a flowchart given below:",
-		"options": [
-			"Sanitary Landfill",
-			"Incineration",
-			"Open dumping",
-			"Mulching"
-		],
-		"answer": 1
+		"answer": 1,
+		"source": "ICSE 2025"
 	},
 	{
 		"question": "Identify the incorrect pair.",
@@ -1002,12 +612,1273 @@
 			"Multinational companies - operate in multiple countries",
 			"Biotechnology - genetically modified organisms"
 		],
-		"answer": 0
+		"answer": 0,
+		"source": "ICSE 2025"
 	},
 	{
-		"question": "Follow the 3 Rs and repair the Earth. On the basis of this statement, identify which of the following ‘R’ is followed when fly ash from power plants is used as a cement substitute.",
-		"options": ["Reduce", "Reuse", "Recycle", "Recharge"],
-		"answer": 2
+		"question": "“Follow the 3 Rs and repair the Earth.” On the basis of this statement, identify which of the following ‘R’ is followed when fly ash from power plants is used as a cement substitute.",
+		"options": [
+			"Reduce",
+			"Reuse",
+			"Recycle",
+			"Recharge"
+		],
+		"answer": 1,
+		"source": "ICSE 2025"
+	},
+	{
+		"question": "Water pollution : Eutrophication : : Air pollution : __________",
+		"options": [
+			"Desalination.",
+			"Acid Rain.",
+			"Desertification.",
+			"Natural calamities."
+		],
+		"answer": 1,
+		"source": "Specimen 2025"
+	},
+	{
+		"question": "A suitable strategy for controlling population growth in India is :",
+		"options": [
+			"Encouraging early marriage.",
+			"Allowing people of other countries to settle in India.",
+			"Implementing family planning programs.",
+			"Accelerating birth rate."
+		],
+		"answer": 2,
+		"source": "Specimen 2025"
+	},
+	{
+		"question": "A satellite city is a:",
+		"options": [
+			"Smaller municipality that is a part of larger metropolitan area.",
+			"Larger municipality that is a part of larger metropolitan area.",
+			"Smaller municipality that is a part of smaller metropolitan area.",
+			"Larger municipality that is a part of smaller metropolitan area."
+		],
+		"answer": 0,
+		"source": "Specimen 2025"
+	},
+	{
+		"question": "Which of the following practices is most effective in preventing soil erosion?",
+		"options": [
+			"Mulching.",
+			"Monoculture farming.",
+			"Jhumming.",
+			"Trickle drip irrigation."
+		],
+		"answer": 0,
+		"source": "Specimen 2025"
+	},
+	{
+		"question": "The city council is planning to address issues of traffic congestion in urban area. As a student representative, which strategy would you recommend for traffic management?",
+		"options": [
+			"Constructing more parking lots to accommodate increasing vehicle members.",
+			"Expanding National highways to connect different cities.",
+			"Promoting public transportation and building dedicated lanes for buses.",
+			"Encouraging more private vehicle ownership."
+		],
+		"answer": 2,
+		"source": "Specimen 2025"
+	},
+	{
+		"question": "Rearrange the following steps in the ascending order that trace the rate of solid waste management:\nStep i : Transportation of waste.\nStep ii : Collection of waste.\nStep iii : Waste disposal.\nStep iv : Segregation of waste.",
+		"options": [
+			"Step iv, Step iii, Step ii, Step i.",
+			"Step i, Step ii, Step iii, Step iv.",
+			"Step ii, Step iv, Step i, Step iii.",
+			"Step iii, Step i, Step iv, Step ii."
+		],
+		"answer": 2,
+		"source": "Specimen 2025"
+	},
+	{
+		"question": "Biogas plants are popular in rural area because:",
+		"options": [
+			"There is plenty of organic raw materials in rural areas.",
+			"It increases the reliance on fossil fuels.",
+			"The farmers are dependent on the manure produced in biogas plant.",
+			"It is a non-renewable source of energy."
+		],
+		"answer": 0,
+		"source": "Specimen 2025"
+	},
+	{
+		"question": "Biosphere is an example of:",
+		"options": [
+			"Environmental conservation.",
+			"Ex-situ conservation",
+			"Animal conservation.",
+			"In-situ conservation."
+		],
+		"answer": 3,
+		"source": "Specimen 2025"
+	},
+	{
+		"question": "Incineration is used to dispose:",
+		"options": [
+			"Non-toxic recyclable waste.",
+			"Organic domestic waste.",
+			"Toxic inorganic waste.",
+			"Inorganic recyclable waste."
+		],
+		"answer": 2,
+		"source": "Specimen 2025"
+	},
+	{
+		"question": "Assertion (A): Cooperation can be achieved by the International Treaties and Agreements.\nReason (R): Global pollution can be resolved by cooperation among Nations.",
+		"options": [
+			"A is True R is False.",
+			"A is False R is True.",
+			"Both A and R are True and A is the correct explanation of R.",
+			"Both A and R are True and R is the correct explanation of A."
+		],
+		"answer": 3,
+		"source": "Specimen 2025"
+	},
+	{
+		"question": "Green manure acts as a solidifying matter that:",
+		"options": [
+			"Increases alkalinity of the soil.",
+			"Decreases alkalinity of the soil.",
+			"Increases acidity of the soil.",
+			"Decreases acidity of the soil."
+		],
+		"answer": 1,
+		"source": "Specimen 2025"
+	},
+	{
+		"question": "Pick out the incorrect pair from the following:",
+		"options": [
+			"Vermicompost – Earthworms.",
+			"Farm compost – Farm waste.",
+			"Farmyard manure – Cattle dung.",
+			"Green manure – Chemical compound."
+		],
+		"answer": 3,
+		"source": "Specimen 2025"
+	},
+	{
+		"question": "Match the following Columns correctly:\nColumn A\n(A) Alternative in paper industry\n(B) CITES\n(C) Recycled wood\n(D) Taj Mahal\nColumn B\n(i) Horticulture mulches.\n(ii) Acid rain\n(iii) Stop illegal trading in animals.\n(iv) Scrap paper.",
+		"options": [
+			"A – i, B – ii, C – iii, D – iv",
+			"A – ii, B – iii, C – iv, D – i",
+			"A – iv, B – iii, C – i, D – ii",
+			"A – iii, B – iv, C – i, D – ii"
+		],
+		"answer": 2,
+		"source": "Specimen 2025"
+	},
+	{
+		"question": "Think good to wildlife,\nBe good to wildlife, and\nDo good to wildlife.\nAccording to the slogan, which of the following is not associated in conserving wildlife:",
+		"options": [
+			"Wildlife Management.",
+			"Afforestation.",
+			"Poaching of animals.",
+			"Educating for wildlife protection."
+		],
+		"answer": 2,
+		"source": "Specimen 2025"
+	},
+	{
+		"question": "Intergenerational equity involves:",
+		"options": [
+			"minimising the risk to future generations.",
+			"reducing financial risk to future generations.",
+			"maximising freedom of choice.",
+			"all of the above."
+		],
+		"answer": 3,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Which of the following is INCORRECT in the case of fair trade?",
+		"options": [
+			"They create equal opportunities for economically disadvantaged producers.",
+			"They help in the creation of social projects like education and housing",
+			"Both (a) & (b).",
+			"None of the above."
+		],
+		"answer": 3,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Remote sensing satellites include:",
+		"options": [
+			"observation by the naked eye.",
+			"photography by a camera.",
+			"photography from aircraft.",
+			"sensing by sensors from space satellites."
+		],
+		"answer": 3,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Assertion (A): Environmental ethics is the application of ethical study to environmental concerns\nReason (R): A key aspect of environmental ethics is developing and justifying the theory of the moral relations between humans, non-human species and the natural environment.",
+		"options": [
+			"Both (A) and (R) are true, and (R) is the correct explanation for (A).",
+			"Both (A) and (R) are true, but (R) is not the correct explanation for (A).",
+			"(A) is true, and (R) is false.",
+			"Both the (A) and (R) are false."
+		],
+		"answer": 0,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Name the process of application of biotechnology for the treatment of waste.",
+		"options": [
+			"Eutrophication",
+			"Mineralisation",
+			"Carbonification",
+			"Bioremediation"
+		],
+		"answer": 3,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Match the following:\nColumn A\nI. Montreal Protocol\nII. Kyoto Protocol\nIII. Geneva Protocol\nIV. Earth Summit\nColumn B\nA. Reduction in Volatile organic compounds\nB. Reduction of CFCs\nC. Reduction in greenhouse gases\nD. Sustainable development",
+		"options": [
+			"I-B, II-C, III-A, IV-D",
+			"I-C, II-B, III-D, IV-A",
+			"I-B, II-C, III-D, IV-A",
+			"I-B, II-A, III-D, IV-C"
+		],
+		"answer": 0,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Some international environmental agreements are themselves trade agreements. Which of the following best supports the above statement?",
+		"options": [
+			"Convention on International Trade in Endangered Species (CITES)",
+			"Earth Summit",
+			"Biodiversity Act",
+			"Wildlife Protection Act"
+		],
+		"answer": 0,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "The increasing demand for food by the growing population leads to:",
+		"options": [
+			"conversion of forest into expanding infrastructure.",
+			"conversion of forest into agricultural land.",
+			"migration of rural people into cities.",
+			"Escalation of the use of fossil fuels."
+		],
+		"answer": 1,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Women-centred development does NOT focus on:",
+		"options": [
+			"improving girl child’s education.",
+			"empowering women to earn and have control over resources.",
+			"dismantling the caste system.",
+			"reducing violence against women."
+		],
+		"answer": 2,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Which of these is an advantage of HYV seeds?",
+		"options": [
+			"Yields more under proper irrigation.",
+			"Higher doses of fertilisers are effective.",
+			"Easily attacked by pests.",
+			"Gives better yield of crops."
+		],
+		"answer": 3,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Biofertilisers are composed of:",
+		"options": [
+			"crop residue after harvesting.",
+			"animal dung.",
+			"living microorganisms like bacteria and protozoa.",
+			"earthworm castings."
+		],
+		"answer": 2,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Statement A: Presently, chemical fertilisers are more popular as compared to organic manure.\nStatement B: Chemical fertilisers are easier to apply, cost-effective and contain three main elements: phosphorus, potassium & nitrogen.",
+		"options": [
+			"Both Statements A & B are incorrect.",
+			"Statement A is correct, and Statement B is incorrect.",
+			"Statement A is correct, and Statement B is the reason for A.",
+			"Statement A is correct, and Statement B is not the reason for A."
+		],
+		"answer": 2,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Conservation tillage improves soil health and limits the extent of soil erosion. Which of the following criteria makes conservation more important?",
+		"options": [
+			"Reduces runoff.",
+			"The severity of some diseases can increase.",
+			"Perennial weeds may appear.",
+			"Pest attack increases."
+		],
+		"answer": 0,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Match each item in Column I with one item in Column II and choose the correct answer from the options below:\nColumn I\nA. Dry farming\nB. Cutting furrows into the slope of land.\nC. Alternate rows of heavy-rooted & loose-rooted plants.\nD. Planting seedlings over deforested areas.\nColumn II\nI. Contour farming\nII. Strip cropping\nIII. Tree cropping\nIV. Drought intensive crops",
+		"options": [
+			"A-I, B-II, C-III, D-IV",
+			"A-II, B-III, C-IV, D-I",
+			"A-IV, B-I, C-II, D-III",
+			"A-III, B-I, C-II, D-IV"
+		],
+		"answer": 2,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Around 25 large trees by the side of a water body in the Nalban fisheries area near Salt Lake, Kolkata, have allegedly been chopped down. The above incident may have been caused by:",
+		"options": [
+			"poor land management.",
+			"the enormous increase in population.",
+			"the roots of the trees become weak due to soil erosion.",
+			"termite infestation at the roots of the trees."
+		],
+		"answer": 1,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "The alternate energy that can be used directly from the source is:",
+		"options": [
+			"solar energy.",
+			"wind energy.",
+			"geothermal energy.",
+			"biomass energy."
+		],
+		"answer": 2,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Wildlife sanctuaries are NOT:",
+		"options": [
+			"habitat centric.",
+			"species centric.",
+			"under private land ownership.",
+			"accessible to human activities."
+		],
+		"answer": 0,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Gasohol is an alternative fuel consisting of a mixture of:",
+		"options": [
+			"90% gasoline & 10% ethanol.",
+			"90% gasoline & 10% methanol.",
+			"10% gasoline & 90% methanol.",
+			"10% gasoline & 90% ethanol."
+		],
+		"answer": 0,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "In situ conservation does NOT allow:",
+		"options": [
+			"protection of indigenous species in natural habitats.",
+			"captive breeding.",
+			"natural selection and community evolution.",
+			"better conservation on a long-term period."
+		],
+		"answer": 1,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "To curb pollution, Delhi bus transport system has become the biggest CNG-run transport system in the world. The main reason for using CNG is:",
+		"options": [
+			"CNG is easily available",
+			"CNG is more efficient, & less polluting",
+			"CNG fuel tanks are bulky",
+			"CNG gives less mileage."
+		],
+		"answer": 1,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Statement A: Wind energy is a renewable source of energy, free of greenhouse gases but not reliable.\nStatement B: The amount of electricity produced by wind energy varies with wind velocity between zero and storm velocity.",
+		"options": [
+			"Both Statement A & Statement B are incorrect.",
+			"Statement A is correct & Statement B is the correct explanation of Statement A.",
+			"Statement A is correct, but Statement B is not the correct explanation of Statement A.",
+			"Statement A is correct & Statement B is incorrect."
+		],
+		"answer": 1,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Match each item in Column I with one item in Column II and choose the correct answer from the options given below:\nColumn I\nA. Gene Banks\nB. IUCN\nC. Nuclear Energy\nD. Energy Plantation\nColumn II\nI. Red list of threatened species\nII. Biomass energy\nIII. Prevents genetic erosion\nIV. A significant quantity of electricity",
+		"options": [
+			"A-III, B-I, C-IV, D-II",
+			"A-II, B-III, C-I, D-IV",
+			"A-IV, B-II, C-III, D-I",
+			"A-I, B-III, C-IV, D-II"
+		],
+		"answer": 0,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Alpine plants may alter height or leaf size to cope with early snow melt conditions. What could be the MOST plausible cause?",
+		"options": [
+			"Land degradation",
+			"Global warming",
+			"Desertification",
+			"Intensive agriculture"
+		],
+		"answer": 1,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "The aim of land reforms is:",
+		"options": [
+			"escalating poverty.",
+			"increasing agricultural productivity.",
+			"declining co-operative farming.",
+			"encouraging land fragmentation."
+		],
+		"answer": 1,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Terrace farming contributes to sustainable agriculture by:",
+		"options": [
+			"promoting monoculture.",
+			"maximising landslides.",
+			"reducing wastage of irrigation water.",
+			"increasing surface runoff."
+		],
+		"answer": 2,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "The long-term impact of uncontrolled e-waste on the environment are:\nI. loss of valuable raw materials\nII. decreasing carbon print.\nIII. contamination of groundwater.\nIV. safeguarding the habitats.\nChoose the correct options:",
+		"options": [
+			"I and III.",
+			"II and IV",
+			"I and IV",
+			"II and III"
+		],
+		"answer": 0,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Ram performed a waste audit in his local community and found that it could pose a risk to human health. Which of the following four tenets (4R’s) did he implement to manage the waste?",
+		"options": [
+			"Rewrite, Reuse, Reduce, Rewarm",
+			"Rejoice, Reduce, Rewrite, Reuse",
+			"Rewarm, Recycle, Refuse, Rejoice",
+			"Refuse, Reuse, Recycle, Reduce"
+		],
+		"answer": 3,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Assertion (A): Windbreaks usually consist of alternate rows of trees and shrubs.\nReason (R): Windbreaks around a field can raise the cost of heating and cooling and save energy.",
+		"options": [
+			"A is true, and R is false.",
+			"A is true, and R is false.",
+			"Both A and R are true, and R is the correct explanation of A.",
+			"Both A and R are true, and A is the correct explanation of R."
+		],
+		"answer": 1,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Integrated Rural Development Programme is a self-employment programme of the Government of India to raise the income generation capacity of the poor. Which scheme is undertaken under this programme?",
+		"options": [
+			"Urban Sanitation Programme.",
+			"International Food for Work Programme.",
+			"Training of pensioners for self-employment.",
+			"Development of Women and Children in Rural areas."
+		],
+		"answer": 3,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Dengue cases in India have reached nearly 95,000 between January and July 31, 2023, with numbers spiking after excessive rains caused water logging. Water logging occurs because of:",
+		"options": [
+			"proper public sanitation.",
+			"over-irrigation of fields.",
+			"adequate drainage.",
+			"soil impermeability."
+		],
+		"answer": 1,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Match each item in Column I with one item in Column II and choose the correct answer from the code given below:\nColumn I\nA. Terracing\nB. Contour Ploughing\nC. Bunds\nD. Tree planting\nColumn II\n(i) Furrows\n(ii) Reforestation\n(iii) Stepped platforms\n(iv) Embankments",
+		"options": [
+			"A-(i), B-(iii), C-(ii), D-(iv)",
+			"A-(iii), B-(ii), C-(iv), D-(i)",
+			"A-(ii), B-(iv), C-(i), D-(iii)",
+			"A-(iii), B-(i), C-(iv), D-(ii)"
+		],
+		"answer": 3,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "What is the purpose of constructing green buildings in urban areas?",
+		"options": [
+			"To create awareness about money matters in the urban poor.",
+			"To use less water and renewable sources of energy.",
+			"To reduce the indoor temperature of rooms.",
+			"To provide job opportunities for urban youth."
+		],
+		"answer": 1,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Assertion (A): We lose productive time due to traffic jams on roads.\nReason (R): Increasing the number of public transportation in cities can reduce traffic congestion.",
+		"options": [
+			"A is true, and R is false.",
+			"A is false, and R is true.",
+			"Both A and R are true.",
+			"Both A and R are false."
+		],
+		"answer": 2,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Which of the following is NOT a component of the urban environment?",
+		"options": [
+			"Waste management",
+			"Transportation planning",
+			"Agricultural development",
+			"Water Resources Management"
+		],
+		"answer": 2,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Statement I: Battery-operated vehicles reduce air pollution\nStatement II: Battery-operated vehicles are popular in urban areas.\nWhich of the statements is true?",
+		"options": [
+			"Statements I and II are true.",
+			"Statement I is true, and Statement II is the correct reason for I.",
+			"Statement I is false, and Statement II is correct.",
+			"Statement I is true, and Statement II is the correct reason for I."
+		],
+		"answer": 3,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Which approach is more beneficial to develop existing urban areas?",
+		"options": [
+			"Encroaching forest area near the city.",
+			"Redeveloping slums and old buildings to accommodate more houses.",
+			"Providing civic amenities to slums.",
+			"Converting agricultural lands to residential areas."
+		],
+		"answer": 1,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Which one of the following helps to reduce urban vehicular pollution?",
+		"options": [
+			"Encouraging carpooling and use of public transport.",
+			"Replacing kerosene with LPG.",
+			"Using electrostatic precipitators in industries.",
+			"Encouraging community forestry."
+		],
+		"answer": 0,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "Mr. X bought a motorbike with a four-stroke engine. Mr. Y bought a motorbike with a two-stroke engine. Mr. Z bought a car with a catalytic converter.\nName the persons who are likely to contribute less to air pollution.",
+		"options": [
+			"Only X.",
+			"Only Y.",
+			"X and Z.",
+			"Z and Y."
+		],
+		"answer": 2,
+		"source": "CFQ, 2024"
+	},
+	{
+		"question": "The mechanical device which reduces air pollution from industries is:",
+		"options": [
+			"Two stroke engines",
+			"Catalytic converter",
+			"Solar panels",
+			"Electrostatic precipitator"
+		],
+		"answer": 3,
+		"source": "ICSE 2024"
+	},
+	{
+		"question": "Captive breeding is a means:",
+		"options": [
+			"to protect wild animals in forests",
+			"to restore extinct species",
+			"to breed wild animals in zoos and botanical gardens",
+			"to allow animals to breed in natural habitat"
+		],
+		"answer": 2,
+		"source": "ICSE 2024"
+	},
+	{
+		"question": "Choose the incorrect pair from the following:",
+		"options": [
+			"Organic fertilizers → Agricultural residue",
+			"Composting → Organic wastes",
+			"Vermicomposting → Earthworms",
+			"Green manure → Chemical compounds"
+		],
+		"answer": 3,
+		"source": "ICSE 2024"
+	},
+	{
+		"question": "An ecocity is:",
+		"options": [
+			"a satellite city of an urban area",
+			"a rural area linked to a city",
+			"a less populated city",
+			"a sustainable city"
+		],
+		"answer": 3,
+		"source": "ICSE 2024"
+	},
+	{
+		"question": "Match each item in COLUMN I with one item in COLUMN II and choose the correct answer:\nCOLUMN I\n1. Montreal Protocol\n2. Cairo Conference\n3. Global Environmental Facility\n4. CITES\nCOLUMN II\nA. Empowerment of women\nB. Protection of animals\nC. Funds for climate change\nD. Ozone depleted substances",
+		"options": [
+			"1-A 2-B 3-C 4-D",
+			"1-B 2-A 3-D 4-C",
+			"1-D 2-A 3-C 4-B",
+			"1-C 2-B 3-A 4-D"
+		],
+		"answer": 2,
+		"source": "ICSE 2024"
+	},
+	{
+		"question": "The reason for poor standard of living and malnutrition in India is:",
+		"options": [
+			"Over population",
+			"Environmental conditions",
+			"Absence of natural resources",
+			"Poor economy of rural India"
+		],
+		"answer": 0,
+		"source": "ICSE 2024"
+	},
+	{
+		"question": "Assertion (A): MNC’s made better infrastructures, brought employment and reduced the gap between the developed and developing nations.\nReason (R): MNC’s exploited the resources and acquired land, thus destroying the ecology.",
+		"options": [
+			"A is True and R is False",
+			"A is False and R is True",
+			"Both A and R are True and R is the correct explanation of A",
+			"Both A and R are True but R is not the correct explanation of A"
+		],
+		"answer": 2,
+		"source": "ICSE 2024"
+	},
+	{
+		"question": "Which source of electricity generation is least harmful to the environment?",
+		"options": [
+			"Coal",
+			"Nuclear energy",
+			"Gasoline",
+			"Diesel"
+		],
+		"answer": 1,
+		"source": "ICSE 2024"
+	},
+	{
+		"question": "Biomass refers to:",
+		"options": [
+			"Plant waste, animal waste and agricultural residue",
+			"Industrial waste",
+			"Biogas plant",
+			"Fertilizers and pesticides"
+		],
+		"answer": 0,
+		"source": "ICSE 2024"
+	},
+	{
+		"question": "Assertion (A): The satellite imagery is used for collecting data on environmental damage.\nReason (R): This data collection helps in marketing and selling of forest products.",
+		"options": [
+			"Both A and R are true statements",
+			"A is false and R is true",
+			"Both A and R are true and R is the correct reason for A",
+			"A is true but R is not the correct reason for A"
+		],
+		"answer": 3,
+		"source": "ICSE 2024"
+	},
+	{
+		"question": "The main objective of IRDP is:",
+		"options": [
+			"Improvement in banking",
+			"Alleviation of rural poverty",
+			"Development of rural youth",
+			"Employment to retired persons"
+		],
+		"answer": 1,
+		"source": "ICSE 2024"
+	},
+	{
+		"question": "‘Many urban centres have landfill sites, and often, waste is not disposed in these sites.’ In this context which of the following improves solid waste management:",
+		"options": [
+			"Teaching people the importance of segregation",
+			"Hospital waste to be gathered collectively",
+			"Composting is a bad option",
+			"Staff handling the wastes should be discouraged"
+		],
+		"answer": 0,
+		"source": "ICSE 2024"
+	},
+	{
+		"question": "Extensive planting of trees on barren land to increase forest cover is called:",
+		"options": [
+			"Reforestation",
+			"Afforestation",
+			"Deforestation",
+			"Energy plantations"
+		],
+		"answer": 1,
+		"source": "ICSE 2024"
+	},
+	{
+		"question": "Given below are few methods of conservation of resources. Choose the correct method of soil conservation:",
+		"options": [
+			"Metal recycling",
+			"Triple drip irrigation",
+			"Mulching and dry farming",
+			"Shifting cultivation"
+		],
+		"answer": 2,
+		"source": "ICSE 2024"
+	},
+	{
+		"question": "Which one of the following is a technique for controlling soil erosion?",
+		"options": [
+			"Contour ploughing",
+			"Reforestation",
+			"Energy Plantation",
+			"Use of inorganic fertilizers."
+		],
+		"answer": 0,
+		"source": "Specimen 2024"
+	},
+	{
+		"question": "The device which reduces air pollution from vehicles is:",
+		"options": [
+			"Spark plug",
+			"Catalytic converter",
+			"Scrubber",
+			"Plate Tower"
+		],
+		"answer": 1,
+		"source": "Specimen 2024"
+	},
+	{
+		"question": "The objective of community forestry is:",
+		"options": [
+			"planting trees on the slopes of mountains",
+			"forming self-help groups",
+			"planting of trees by villagers on common lands and share the products",
+			"replacing use of wood with other products."
+		],
+		"answer": 2,
+		"source": "Specimen 2024"
+	},
+	{
+		"question": "In-situ conservation is a means:",
+		"options": [
+			"to provide a habitat for animals in the zoo.",
+			"to protect and restore species in National parks and Sanctuaries.",
+			"to conserve species that do not survive in the wild.",
+			"to maintain endangered plants and animals under artificial conditions."
+		],
+		"answer": 1,
+		"source": "Specimen 2024"
+	},
+	{
+		"question": "The statistical study of human population with reference to size, density and other statistics is known as:",
+		"options": [
+			"Population ratio",
+			"Demography",
+			"Census",
+			"Anthropology"
+		],
+		"answer": 1,
+		"source": "Specimen 2024"
+	},
+	{
+		"question": "Choose the correct pair from the following:",
+		"options": [
+			"Tarun Bharat Sangha → Gajendra Singh",
+			"Ralegaon Siddhi → Anna Hazare",
+			"Chipko Movement → Durga Bai",
+			"Sukhomajri → Anna Hazare"
+		],
+		"answer": 1,
+		"source": "Specimen 2024"
+	},
+	{
+		"question": "Which form of electricity generation causes the most environmental damage?",
+		"options": [
+			"nuclear energy",
+			"solar energy",
+			"thermal energy from coal",
+			"geothermal energy"
+		],
+		"answer": 2,
+		"source": "Specimen 2024"
+	},
+	{
+		"question": "The organisms responsible for composting and breaking down of dead organic matter are:",
+		"options": [
+			"Earth worms",
+			"Microorganisms",
+			"Scavengers",
+			"Tape worms"
+		],
+		"answer": 1,
+		"source": "Specimen 2024"
+	},
+	{
+		"question": "Statement A: The Multinational Companies can be controlled by NGOs to take responsibility of the environmental issues.\nStatement B: NGOS are profitable organizations.",
+		"options": [
+			"Both statements A and B are correct.",
+			"Statement A is correct, and Statement B is incorrect",
+			"Statement A is incorrect and Statement B is correct",
+			"Both statements A and B are incorrect."
+		],
+		"answer": 1,
+		"source": "Specimen 2024"
+	},
+	{
+		"question": "Match Column 1 with Column 2 and choose the correct option from those given below?\nCOLUMN 1\n1. Montreal Protocol\n2. CITES\n3. GEF\n4. Kyoto Protocol\nCOLUMN 2\nA. Focuses on International waters and its diversion.\nB. Check on greenhouse gases emission.\nC. Conservation of endangered species.\nD. Control of CFCs to prevent Ozone depletion.",
+		"options": [
+			"1 – A 2 – B 3 – C 4 – D",
+			"1 – B 2 – C 3 – B 4 – A",
+			"1 – D 2 – C 3 – A 4 – B",
+			"1 – C 2 – A 3 – D 4 – C"
+		],
+		"answer": 2,
+		"source": "Specimen 2024"
+	},
+	{
+		"question": "Core and buffer zone is present in:",
+		"options": [
+			"National Parks",
+			"Botanical Gardens",
+			"Biosphere Reserves",
+			"Sanctuaries"
+		],
+		"answer": 2,
+		"source": "ICSE 2023"
+	},
+	{
+		"question": "Catalytic converter in vehicles is used for controlling:",
+		"options": [
+			"Soil pollution",
+			"Air pollution",
+			"Water pollution",
+			"Noise pollution"
+		],
+		"answer": 1,
+		"source": "ICSE 2023"
+	},
+	{
+		"question": "The species of animals which are at high risk of endangerment in the wild are called:",
+		"options": [
+			"Vulnerable species",
+			"Rare species",
+			"Extinct species",
+			"Critically endangered species"
+		],
+		"answer": 3,
+		"source": "ICSE 2023"
+	},
+	{
+		"question": "The Ramsar Convention, 1971, an International Treaty was held for the conservation of:",
+		"options": [
+			"Soil",
+			"Forests",
+			"Threatened species",
+			"Wetlands"
+		],
+		"answer": 3,
+		"source": "ICSE 2023"
+	},
+	{
+		"question": "The agency that regulates International Trade is:",
+		"options": [
+			"IMF",
+			"WTO",
+			"World Bank",
+			"GEF"
+		],
+		"answer": 1,
+		"source": "ICSE 2023"
+	},
+	{
+		"question": "The energy generated from the earth is called:",
+		"options": [
+			"Tidal energy",
+			"Wind energy",
+			"Geothermal energy",
+			"Solar energy"
+		],
+		"answer": 2,
+		"source": "ICSE 2023"
+	},
+	{
+		"question": "__________ was the movement started by village women to save the trees.",
+		"options": [
+			"Greenery Development Project",
+			"Beej Bachao Andolan",
+			"Chipko Movement",
+			"Green Revolution"
+		],
+		"answer": 2,
+		"source": "ICSE 2023"
+	},
+	{
+		"question": "Growing of two or more crops in the same field is called:",
+		"options": [
+			"Monoculture",
+			"Intercropping",
+			"Inter-varietal cropping",
+			"Intracropping"
+		],
+		"answer": 1,
+		"source": "ICSE 2023"
+	},
+	{
+		"question": "The main aim of secondary cities is to reduce:",
+		"options": [
+			"Tourism",
+			"Congestion",
+			"Consumption",
+			"Cooperation"
+		],
+		"answer": 1,
+		"source": "ICSE 2023"
+	},
+	{
+		"question": "___________ helps people to understand the need for controlling population.",
+		"options": [
+			"Education",
+			"Superstition",
+			"Sanitation",
+			"Urbanisation"
+		],
+		"answer": 0,
+		"source": "ICSE 2023"
+	},
+	{
+		"question": "Which of the following is not an ingredient of vehicular pollution?",
+		"options": [
+			"Nitrogen oxides",
+			"Carbon monoxide",
+			"Sulphur dioxide",
+			"LPG"
+		],
+		"answer": 3,
+		"source": "ICSE 2023"
+	},
+	{
+		"question": "Global food imbalance is due to:",
+		"options": [
+			"Over cultivation",
+			"Monocropping",
+			"Crop rotation",
+			"Inequality in distribution of surplus produce"
+		],
+		"answer": 3,
+		"source": "ICSE 2023"
+	},
+	{
+		"question": "GEF work focuses on:",
+		"options": [
+			"Biodiversity",
+			"Climatic change",
+			"Land degradation",
+			"All of the above"
+		],
+		"answer": 3,
+		"source": "ICSE 2023"
+	},
+	{
+		"question": "Terrace farming is an effective method of soil conservation in the:",
+		"options": [
+			"Plains",
+			"Deserts",
+			"Hills",
+			"Delta"
+		],
+		"answer": 2,
+		"source": "ICSE 2023"
+	},
+	{
+		"question": "Soil erosion can be prevented by:",
+		"options": [
+			"Afforestation",
+			"Deforestation",
+			"Over grazing",
+			"Removal of vegetation"
+		],
+		"answer": 0,
+		"source": "Specimen 2023"
+	},
+	{
+		"question": "A four stroke engine is:",
+		"options": [
+			"More durable",
+			"Produce more sound",
+			"Create more emissions",
+			"All the above"
+		],
+		"answer": 0,
+		"source": "Specimen 2023"
+	},
+	{
+		"question": "Planting of trees on road side land and canal banks is called __________.",
+		"options": [
+			"Community forestry",
+			"Farm forestry",
+			"Extension forestry",
+			"Agroforestry"
+		],
+		"answer": 2,
+		"source": "Specimen 2023"
+	},
+	{
+		"question": "__________ is not an example of in situ conservation.",
+		"options": [
+			"National Parks",
+			"Botanical Gardens",
+			"Wildlife Sanctuaries",
+			"Biosphere Reserves"
+		],
+		"answer": 1,
+		"source": "Specimen 2023"
+	},
+	{
+		"question": "Which of the following restricts the use of drip irrigation?",
+		"options": [
+			"Clogged drippers",
+			"Salting increases",
+			"Initial cost of drip irrigation system is very high",
+			"All the above"
+		],
+		"answer": 3,
+		"source": "Specimen 2023"
+	},
+	{
+		"question": "Water logging is a phenomenon in which:",
+		"options": [
+			"Crop patterns are rotated",
+			"Erosion of soil takes place",
+			"Soil root zone becomes saturated due to over irrigation",
+			"None of the above"
+		],
+		"answer": 2,
+		"source": "Specimen 2023"
+	},
+	{
+		"question": "The Earth Summit was held in Rio de Janeiro in the year:",
+		"options": [
+			"1987",
+			"1990",
+			"1992",
+			"2002"
+		],
+		"answer": 2,
+		"source": "Specimen 2023"
+	},
+	{
+		"question": "The burning of solid waste is not recommended because:",
+		"options": [
+			"It is very costly",
+			"It requires a lot of space",
+			"It requires modern technologies",
+			"It causes several environmental issues"
+		],
+		"answer": 3,
+		"source": "Specimen 2023"
+	},
+	{
+		"question": "Rural development is important to:",
+		"options": [
+			"Counter urban migration",
+			"Counter rural development",
+			"Counter urban employment",
+			"Counter rural employment"
+		],
+		"answer": 0,
+		"source": "Specimen 2023"
+	},
+	{
+		"question": "The benefit of satellite images is:",
+		"options": [
+			"It has a permanent record",
+			"The data is difficult to collect",
+			"The data is processed very slowly by the computer",
+			"Images cannot be analysed in the laboratory"
+		],
+		"answer": 0,
+		"source": "Specimen 2023"
+	},
+	{
+		"question": "Squatter settlements develop due to:",
+		"options": [
+			"Slow increase in rural population",
+			"Rapid increase in rural population",
+			"Rapid increase in urban population",
+			"Slow increase in urban population"
+		],
+		"answer": 2,
+		"source": "Specimen 2023"
+	},
+	{
+		"question": "Rebuilding of soil and restoring ecosystems is called __________.",
+		"options": [
+			"Forest harvesting",
+			"Regenerative farming",
+			"Reforestation",
+			"Non timber forest"
+		],
+		"answer": 1,
+		"source": "Specimen 2023"
+	},
+	{
+		"question": "When was Swachh Bharat Abhiyan launched?",
+		"options": [
+			"2nd October 2013",
+			"2nd October 2014",
+			"2nd October 2015",
+			"2nd October 2016"
+		],
+		"answer": 1,
+		"source": "Specimen 2023"
+	},
+	{
+		"question": "A healthy environment depends upon a:",
+		"options": [
+			"Healthy economy",
+			"Healthy biodiversity",
+			"Healthy human beings",
+			"Healthy animals"
+		],
+		"answer": 1,
+		"source": "Specimen 2023"
+	},
+	{
+		"question": "The significant features of a pandemic are:",
+		"options": [
+			"Affects nearly the whole world.",
+			"Spreads quickly in humans",
+			"Caused by an infectious agent that can spread rapidly.",
+			"All the above"
+		],
+		"answer": 3,
+		"source": "ICSE 2021 Semester 2"
+	},
+	{
+		"question": "Example of in-situ conservation is:",
+		"options": [
+			"Zoological parks",
+			"Gene banks",
+			"Biosphere Reserves",
+			"None of the above"
+		],
+		"answer": 2,
+		"source": "ICSE 2021 Semester 2"
+	},
+	{
+		"question": "Liquid fuel obtained from biomass is:",
+		"options": [
+			"Kerosene",
+			"Ethanol",
+			"Solar energy",
+			"Electricity"
+		],
+		"answer": 1,
+		"source": "ICSE 2021 Semester 2"
+	},
+	{
+		"question": "Geothermal energy is used for:",
+		"options": [
+			"Cooking",
+			"Bathing",
+			"Space heating",
+			"All the above"
+		],
+		"answer": 3,
+		"source": "ICSE 2021 Semester 2"
+	},
+	{
+		"question": "Composting is:\nStatement 1: Breakdown of organic waste by microorganism.\nStatement 2: Sustainable method of waste management.",
+		"options": [
+			"Statement 1",
+			"Statement 2",
+			"Statement 1 and 2",
+			"Only statement 2"
+		],
+		"answer": 2,
+		"source": "ICSE 2021 Semester 2"
+	},
+	{
+		"question": "Multinational companies in India:",
+		"options": [
+			"Microsoft",
+			"Infosys",
+			"IBM",
+			"All of the above"
+		],
+		"answer": 3,
+		"source": "ICSE 2021 Semester 2"
+	},
+	{
+		"question": "Bhopal Gas Tragedy occurred due to:",
+		"options": [
+			"Nuclear explosion",
+			"Castor bean",
+			"LPG",
+			"Methyl Iso Cyanate"
+		],
+		"answer": 3,
+		"source": "ICSE 2021 Semester 2"
+	},
+	{
+		"question": "Global environmental Facility focuses on:",
+		"options": [
+			"Conservation of loss on biodiversity",
+			"Empowerment of women",
+			"Family planning",
+			"None of the above"
+		],
+		"answer": 0,
+		"source": "ICSE 2021 Semester 2"
+	},
+	{
+		"question": "Adopting alternative technology:",
+		"options": [
+			"Lavish lifestyle",
+			"Use of material that are recyclable",
+			"Survey of waste land",
+			"Genetic engineering"
+		],
+		"answer": 1,
+		"source": "ICSE 2021 Semester 2"
+	},
+	{
+		"question": "The G20 Summit held in October 2021 was held in _____________.",
+		"options": [
+			"Rome",
+			"Argentina",
+			"Riyadh",
+			"None of the above"
+		],
+		"answer": 0,
+		"source": "ICSE 2021 Semester 2"
 	},
 	{
 		"question": "Which of the following air pollution control devices has maximum efficiency?",
@@ -1015,9 +1886,10 @@
 			"Electrostatic precipitator.",
 			"Cyclone separator.",
 			"Fabric filter.",
-			"Wet scrubber."
+			"Wet scrubber"
 		],
-		"answer": 0
+		"answer": 0,
+		"source": "ICSE 2021 Semester 1"
 	},
 	{
 		"question": "Which among the following is not a manmade cause for climate change?",
@@ -1027,7 +1899,8 @@
 			"Volcanoes.",
 			"Burning of fossil fuels."
 		],
-		"answer": 2
+		"answer": 2,
+		"source": "ICSE 2021 Semester 1"
 	},
 	{
 		"question": "The full form of MHADA is:",
@@ -1037,7 +1910,8 @@
 			"Maharashtra housing and area development authority.",
 			"Minimum housing and authority development area."
 		],
-		"answer": 2
+		"answer": 2,
+		"source": "ICSE 2021 Semester 1"
 	},
 	{
 		"question": "The direct effects of soil erosion are:",
@@ -1047,7 +1921,8 @@
 			"Reduces irrigation.",
 			"Reduces navigability."
 		],
-		"answer": 1
+		"answer": 1,
+		"source": "ICSE 2021 Semester 1"
 	},
 	{
 		"question": "An example of bio fertilizer is:",
@@ -1057,7 +1932,8 @@
 			"Praying mantis.",
 			"Rhizobium."
 		],
-		"answer": 3
+		"answer": 3,
+		"source": "ICSE 2021 Semester 1"
 	},
 	{
 		"question": "Satellite cities are also called:",
@@ -1067,7 +1943,8 @@
 			"Eco cities.",
 			"Secondary cities."
 		],
-		"answer": 3
+		"answer": 3,
+		"source": "ICSE 2021 Semester 1"
 	},
 	{
 		"question": "Which of the following is not a cause of soil erosion?",
@@ -1077,7 +1954,8 @@
 			"Overgrazing.",
 			"Heavy rainfall."
 		],
-		"answer": 1
+		"answer": 1,
+		"source": "ICSE 2021 Semester 1"
 	},
 	{
 		"question": "Which of the following gases is responsible for yellowing of the Taj Mahal?",
@@ -1087,7 +1965,8 @@
 			"Sulphur.",
 			"Nitrogen dioxide."
 		],
-		"answer": 0
+		"answer": 0,
+		"source": "ICSE 2021 Semester 1"
 	},
 	{
 		"question": "Which one of the following is not a regenerative farming practice?",
@@ -1095,34 +1974,32 @@
 			"Intercropping.",
 			"Agroforestry.",
 			"Use of chemical pesticides.",
-			"Crop rotation."
+			"Crop rotation"
 		],
-		"answer": 2
+		"answer": 2,
+		"source": "ICSE 2021 Semester 1"
 	},
 	{
-		"question": "The medium population projections for 2020 made by the UN are:",
+		"question": "Sericulture is the practice of rearing",
 		"options": [
-			"10 million.",
-			"12.5 billion.",
-			"10 billion.",
-			"7.8 billion."
+			"Fish.",
+			"Goats.",
+			"Sheep.",
+			"Silkworms."
 		],
-		"answer": 3
-	},
-	{
-		"question": "Sericulture is the practice of rearing:",
-		"options": ["Fish.", "Goats.", "Sheep.", "Silkworms."],
-		"answer": 3
+		"answer": 3,
+		"source": "ICSE 2021 Semester 1"
 	},
 	{
 		"question": "Biomass refers to:",
 		"options": [
-			"Plant waste.",
-			"Animal waste.",
-			"Agricultural residue.",
-			"All of the above."
+			"Plant waste",
+			"Animal waste",
+			"Agricultural residue",
+			"All of the above"
 		],
-		"answer": 3
+		"answer": 3,
+		"source": "ICSE 2021 Semester 1"
 	},
 	{
 		"question": "PNG stands for:",
@@ -1132,7 +2009,8 @@
 			"Piped nitrogen gas.",
 			"Piped nature gas."
 		],
-		"answer": 1
+		"answer": 1,
+		"source": "ICSE 2021 Semester 1"
 	},
 	{
 		"question": "Counter urbanization is the movement of:",
@@ -1140,24 +2018,32 @@
 			"People from major cities to less urban and rural areas.",
 			"People from secondary cities to a Metropolitan.",
 			"People from one urban city to another.",
-			"None of the above."
+			"None of the above"
 		],
-		"answer": 0
+		"answer": 0,
+		"source": "ICSE 2021 Semester 1"
 	},
 	{
-		"question": "An example of a secondary city in India:",
-		"options": ["Mumbai.", "Noida.", "Gujarat.", "Mysore."],
-		"answer": 3
+		"question": "An example of a secondary city in India.",
+		"options": [
+			"Mumbai.",
+			"Noida.",
+			"Gujarat.",
+			"Mysore."
+		],
+		"answer": 3,
+		"source": "ICSE 2021 Semester 1"
 	},
 	{
 		"question": "The effects of urbanization are:",
 		"options": [
-			"Increased levels of carbon-dioxide.",
+			"Increased levels of carbon- dioxide.",
 			"Water pollution.",
 			"Proliferation of slums.",
 			"All of the above."
 		],
-		"answer": 3
+		"answer": 3,
+		"source": "ICSE 2021 Semester 1"
 	},
 	{
 		"question": "Which among the following is not an ecological impact of population growth:",
@@ -1167,17 +2053,19 @@
 			"Loss of biodiversity.",
 			"Increase in informal sector."
 		],
-		"answer": 3
+		"answer": 3,
+		"source": "ICSE 2021 Semester 1"
 	},
 	{
-		"question": "Which strategy among the following is used to control population:",
+		"question": "Which strategy among the following is used to control population is:",
 		"options": [
 			"Illiteracy.",
 			"Education.",
 			"Superstition.",
 			"Desire for a male child."
 		],
-		"answer": 1
+		"answer": 1,
+		"source": "ICSE 2021 Semester 1"
 	},
 	{
 		"question": "The leader for the Ralegaon story is:",
@@ -1187,66 +2075,154 @@
 			"Anna Hazare.",
 			"Medha Patkar."
 		],
-		"answer": 2
+		"answer": 2,
+		"source": "ICSE 2021 Semester 1"
 	},
 	{
 		"question": "Silviculture means:",
 		"options": [
 			"Cultivating forest crops.",
-			"Cultivating ornamental plants.",
+			"Cultivating ornamental plants",
 			"Cultivating fruit crops.",
 			"Cultivating cereals."
 		],
-		"answer": 0
+		"answer": 0,
+		"source": "ICSE 2021 Semester 1"
 	},
 	{
-		"question": "SPCB stands for:",
+		"question": "SPCB stands for _______.",
 		"options": [
 			"State pollution control board.",
-			"State pollutant control board.",
+			"State pollutant control board",
 			"Special pollution control board.",
 			"State preservation control board."
 		],
-		"answer": 0
+		"answer": 0,
+		"source": "ICSE 2021 Semester 1"
 	},
 	{
-		"question": "Taj Mahal is losing its shine due to:",
+		"question": "Taj Mahal is losing its shine due to ________.",
 		"options": [
 			"Water pollution.",
 			"Air pollution.",
 			"Sound pollution.",
 			"Radiation pollution."
 		],
-		"answer": 1
+		"answer": 1,
+		"source": "ICSE 2021 Semester 1"
 	},
 	{
-		"question": "An eco-city is also called a _________ city.",
+		"question": "An eco-city is also called a _________city.",
 		"options": [
 			"Sustainable.",
 			"Secondary.",
 			"Satellite.",
-			"None of the above."
+			"None of the above"
 		],
-		"answer": 0
+		"answer": 0,
+		"source": "ICSE 2021 Semester 1"
 	},
 	{
-		"question": "Extensive planting of trees on barren land to increase forest cover is called:",
+		"question": "Extensive planting of trees on barren land to increase forest cover is called ______.",
 		"options": [
 			"Reforestation.",
 			"Afforestation.",
 			"Deforestation.",
 			"Energy plantations."
 		],
-		"answer": 1
+		"answer": 1,
+		"source": "ICSE 2021 Semester 1"
 	},
 	{
-		"question": "The aim of Chipko movement was:",
+		"question": "The aim of Chipko movement was _______.",
 		"options": [
 			"Forest conservation.",
 			"Human rights.",
 			"Providing employment.",
 			"All of the above."
 		],
-		"answer": 0
+		"answer": 0,
+		"source": "ICSE 2021 Semester 1"
+	},
+	{
+		"question": "Organic food is not healthier since it is not contaminated by harmful pesticides.",
+		"options": [
+			"True",
+			"False"
+		],
+		"answer": 1,
+		"source": "ICSE 2021 Semester 1"
+	},
+	{
+		"question": "Natality is the number of live births per 100 people of population per year.",
+		"options": [
+			"True",
+			"False"
+		],
+		"answer": 1,
+		"source": "ICSE 2021 Semester 1"
+	},
+	{
+		"question": "CNG is an alternate fuel.",
+		"options": [
+			"True",
+			"False"
+		],
+		"answer": 0,
+		"source": "ICSE 2021 Semester 1"
+	},
+	{
+		"question": "Green buildings are made using eco-friendly material.",
+		"options": [
+			"True",
+			"False"
+		],
+		"answer": 0,
+		"source": "ICSE 2021 Semester 1"
+	},
+	{
+		"question": "In developed countries the major problem is overconsumption.",
+		"options": [
+			"True",
+			"False"
+		],
+		"answer": 0,
+		"source": "ICSE 2021 Semester 1"
+	},
+	{
+		"question": "Social forestry is planting of trees on unused and fallow land without the involvement of local communities.",
+		"options": [
+			"True",
+			"False"
+		],
+		"answer": 1,
+		"source": "ICSE 2021 Semester 1"
+	},
+	{
+		"question": "Gasohol is a mixture of ethanol and diesel.",
+		"options": [
+			"True",
+			"False"
+		],
+		"answer": 1,
+		"source": "ICSE 2021 Semester 1"
+	},
+	{
+		"question": "Concrete sleepers can replace the wooden sleepers in railways.",
+		"options": [
+			"True",
+			"False"
+		],
+		"answer": 0,
+		"source": "ICSE 2021 Semester 1"
+	},
+	{
+		"question": "Conservation tillage is defined as any tillage and planting systems that leaves at least half of the soil surface covered by residue after planting.",
+		"options": [
+			"True",
+			"False"
+		],
+		"answer": 1,
+		"source": "ICSE 2021 Semester 1"
 	}
 ]
