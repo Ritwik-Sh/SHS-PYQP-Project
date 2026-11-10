@@ -1717,7 +1717,7 @@
             return shuffled;
         }
 
-        function buildShuffledNavigationOrder() {
+        function buildShuffledNavigationOrder(firstUnansweredIndex = null) {
             const answered = [];
             const unanswered = [];
 
@@ -1725,14 +1725,31 @@
                 (userAnswers.hasOwnProperty(index) ? answered : unanswered).push(index);
             });
 
-            navigationOrder = [...shuffleArray(answered), ...shuffleArray(unanswered)];
+            const shuffledUnanswered = shuffleArray(unanswered);
+            if (firstUnansweredIndex !== null) {
+                const preferredPosition = shuffledUnanswered.indexOf(firstUnansweredIndex);
+                if (preferredPosition > 0) {
+                    shuffledUnanswered.splice(preferredPosition, 1);
+                    shuffledUnanswered.unshift(firstUnansweredIndex);
+                }
+            }
+
+            navigationOrder = [...shuffleArray(answered), ...shuffledUnanswered];
+            return answered.length;
         }
 
         function toggleShuffle() {
             shuffleEnabled = !shuffleEnabled;
 
             if (shuffleEnabled) {
-                buildShuffledNavigationOrder();
+                const currentIsUnanswered = !userAnswers.hasOwnProperty(currentQuestionIndex);
+                const answeredCount = buildShuffledNavigationOrder(
+                    currentIsUnanswered ? currentQuestionIndex : null
+                );
+                const firstUnansweredIndex = navigationOrder[answeredCount];
+                if (firstUnansweredIndex !== undefined) {
+                    currentQuestionIndex = firstUnansweredIndex;
+                }
             } else {
                 navigationOrder = questions.map((_, index) => index);
             }
